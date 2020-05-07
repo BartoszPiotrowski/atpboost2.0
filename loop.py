@@ -1,71 +1,41 @@
+from train import train
+from predict import predict
+from prove import prove
+from mining import mining
+from deps import merge_deps, collect_deps
+from shutil import copyfile
+from logger import Logger
 
 
-
-if __name__ == '__main__':
-
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        '--conjectures',
-        type=str)
-    parser.add_argument(
-        '--training_dependencies',
-        type=str)
-    parser.add_argument(
-        '--statements',
-        type=str)
-    parser.add_argument(
-        '--features',
-        type=str)
-    parser.add_argument(
-        '--chronology',
-        type=str,
-        default=None)
-    parser.add_argument(
-        '--iterations',
-        default=10,
-        type=int)
-    parser.add_argument(
-        '--prover',
-        type=str,
-        default='E')
-    parser.add_argument(
-        '--ml_methods',
-        default='xgboost,gnn,rnn,knn',
-        type=str)
-    parser.add_argument(
-        '--logfile',
-        default='loop.log',
-        type=str)
-    parser.add_argument(
-        '--n_jobs',
-        default=10,
-        type=int)
-    args = parser.parse_args()
-
-#print(args)
-
-args.logger = Logger(args.logfile)
-
-for i in range(args.iterations):
-
-    models = train(args)
-    predictions = predict(models, args)
-    proofs_of_conjectures = prove(predictions, args)
-    dependencies_of_conjectures = collect_dependencies(proofs_of_conjectures)
-    args.training_dependencies = merge_dependencies(args.training_dependencies,
-                                                   dependencies_of_conjectures)
-    if args.mining:
-        pos_deps, neg_deps = mining(models, args)
-        args.training_dependencies = \
-                merge_dependencies(args.training_dependencies, pos_deps)
-        args.negative_dependencies = neg_deps
+def loop(args):
+    args.logger = Logger(args.logfile)
+    args.train_deps = copyfile(args.train_deps, args.data_dir + '/train_deps')
+    for i in range(args.iterations):
+        args.logger.print(f'Iteration {i + 1}')
+        models = train(args)
+        predictions = predict(models, args)
+        proofs_of_conjectures = prove(predictions, args)
+        deps_of_conjectures = collect_deps(proofs_of_conjectures)
+        args.train_deps = merge_deps([args.train_deps, deps_of_conjectures])
+        if args.mining:
+            pos_deps, neg_deps = mining(models, args)
+            args.train_deps = merge_deps(args.train_deps, pos_deps)
+            args.train_neg_deps = neg_deps
 
 
-
-
-
-
-
-
-
+if __name__=='__main__':
+    # tests
+    class args: pass
+    args.conjectures = 'data/test/conjectures'
+    args.statements = 'data/test/statements'
+    args.features = 'data/test/feat_enigma'
+    args.chronology = 'data/test/chronology'
+    args.train_deps = 'data/test/deps'
+    args.train_neg_deps = 'data/test/deps_negative'
+    args.ml_models = 'xgboost'
+    args.logfile = 'loop.log'
+    args.data_dir = 'loop_data'
+    args.mining = True
+    args.iterations = 3
+    args.n_jobs = 1
+    loop(args)
