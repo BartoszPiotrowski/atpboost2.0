@@ -3,6 +3,8 @@ import pickle
 import gzip
 from time import strftime
 from glob import glob
+from math import log
+from sys import getsizeof
 
 
 def read_lines(filename):
@@ -50,6 +52,9 @@ def humanbytes(B):
       return '{0:.2f} GB'.format(B/GB)
    elif TB <= B:
       return '{0:.2f} TB'.format(B/TB)
+
+def size(obj):
+    return humanbytes(getsizeof(obj))
 
 def partition(lst, n):
     '''
@@ -108,6 +113,19 @@ def read_features(path):
         features[t] = f
     return features
 
+
+def read_statements(file):
+    '''
+    file should contain lines of the form:
+        fof(name,type,formula).
+    '''
+    stms = {}
+    for line in read_lines(file):
+        name = line.split('(')[1].split(',')[0]
+        assert name not in stms
+        stms[name] = line
+    return stms
+
 def read_rankings(path):
     rankings = {}
     rankings_lines = read_lines(path)
@@ -126,3 +144,49 @@ def read_stms(path):
     stms = [l.replace(' ', '').replace(',axiom,', ',conjecture,')
                  for l in stms_lines]
     return dict(zip(names, stms))
+
+
+
+def dict_features_flas(features):
+    "Formulas associated with a given feature."
+    dict_features_flas = {}
+    for fla in features:
+        for f in features[fla]:
+            try: dict_features_flas[f].add(fla)
+            except: dict_features_flas[f] = {fla}
+    return dict_features_flas
+
+def dict_features_numbers(features):
+    "How many theorems with a given feature we have."
+    dft = dict_features_flas(features)
+    return {f:len(dft[f]) for f in dft}
+
+
+def similarity(thm1, thm2, dict_features_numbers, n_of_theorems, power=2):
+    ftrs1 = set(thm1[1])
+    ftrs2 = set(thm2[1])
+    ftrsI = ftrs1 & ftrs2
+    # we need to add unseen features to our dict with numbers
+    for f in (ftrs1 | ftrs2):
+        if not f in dict_features_numbers:
+            dict_features_numbers[f] = 1
+    trans = lambda l,n: log(l / n) ** power
+    s1 = sum([trans(n_of_theorems, dict_features_numbers[f]) for f in ftrs1])
+    s2 = sum([trans(n_of_theorems, dict_features_numbers[f]) for f in ftrs2])
+    sI = sum([trans(n_of_theorems, dict_features_numbers[f]) for f in ftrsI])
+    return (sI / (s1 + s2 - sI)) ** (1 / power) # Jaccard index
+
+def merge_predictions(predictions_paths_list):
+    predictions_lines = []
+    for p in predictions_paths_list:
+        predictions_lines.extend(read_lines(p))
+    predictions = []
+    for l in predictions_lines:
+        conj, deps = l.split(':')
+        deps = set(deps.split(' '))
+        conj_deps = conj, deps
+        if not conj_deps in predictions:
+            predictions.append(conj_deps)
+    return predictions
+
+

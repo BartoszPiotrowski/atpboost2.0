@@ -1,7 +1,8 @@
 import os
 from prepare_data import deps_to_train_array, pairs_to_array
 from importlib import import_module
-from utils import mkdir_if_not_exists, read_lines, write_lines, read_features
+from utils import read_lines, write_lines, read_features, read_deps, size, size
+from utils import mkdir_if_not_exists, dict_features_numbers, similarity
 
 
 class Model:
@@ -37,7 +38,7 @@ class XGBoost(Model):
         self.features = kwargs['features']
         self.model_path = os.path.join(self.save_dir, 'model.xgb')
         self.predictions_path = os.path.join(self.save_dir, 'predictions.xgb')
-        self.train_params['rounds'] = rounds
+        self.train_params_rounds = rounds
         self.train_params['max_depth'] = 10
         self.train_params['eta'] = learning_rate
         self.train_params['booster'] = 'gbtree'
@@ -53,29 +54,53 @@ class XGBoost(Model):
         labels, array = self.prepare()
         dtrain = self.xgb.DMatrix(array, label=labels)
         model = self.xgb.train(self.train_params, dtrain,
-                          num_boost_round=self.train_params['rounds'])
+                          num_boost_round=self.train_params_rounds)
                           #evals=evals_list, verbose_eval=50, TODO
         self.save(model)
 
+
     def predict(self, conjs_path):
         conjs = read_lines(conjs_path)
-        chronology = read_lines(self.chronology)
-        avail_premises = {c: chronology[:chronology.index(c)] for c in conjs}
-        # TODO prefilter with knn
-        scored_premises = {c: self.score_premises(c, avail_premises[c])
+        candidate_premises = self.knn_prefilter(conjs)
+        model = self.load()
+        scored_premises = {c: self.score_premises(c, candidate_premises[c], model)
                                for c in conjs}
         self.predictions_path = self.make_predictions(scored_premises)
         return self.predictions_path
 
 
-    def score_premises(self, conj, premises):
+    def knn_prefilter(self, conjs, N_prms=2048, N_thms=1024):
+        chronology = read_lines(self.chronology)
+        features = read_features(self.features)
+        features_numbers = dict_features_numbers(features)
+        deps = read_deps(self.train_deps)
+        candidate_premises = {}
+        for conj in conjs:
+            available_premises = set(chronology[:chronology.index(conj)])
+            if len(available_premises) < N_prms:
+                candidate_premises[conj] = available_premises
+            else:
+                simils = {thm: similarity((conj, features[conj]),
+                                          (thm,  features[thm]),
+                                          features_numbers, len(chronology))
+                                    for thm in deps}
+                simils_sorted = sorted(simils.values(), reverse=True)
+                N_thresh = simils_sorted[min(N_thms, len(simils) - 1)]
+                N_nearest_thms = {t for t in simils if simils[t] >= N_thresh}
+                candidate_premises[conj] = set()
+                for thm in N_nearest_thms:
+                    for prm in deps[thm]:
+                        candidate_premises[conj].update(prm)
+        return candidate_premises
+
+
+    def score_premises(self, conj, premises, xgb_model):
         pairs = [(conj, p) for p in premises]
         features = read_features(self.features)
         array = pairs_to_array(pairs, features)
         array = self.xgb.DMatrix(array)
-        model = self.load()
-        scores = model.predict(array)
-        premises_scores = tuple(zip(premises, scores))
+        scores = xgb_model.predict(array)
+        premises_scores = list(zip(premises, scores))
         return premises_scores
 
 

@@ -86,7 +86,7 @@ def pairs_to_array(pairs, features):
         else:
             raise TypeError
         featurised_pairs.append(fea_pair)
-    hasher = FeatureHasher(n_features=2**15, input_type='string') # 2**15 == 32768
+    hasher = FeatureHasher(n_features=2**13, input_type='string') # 2**15 == 32768
     array = hasher.transform(featurised_pairs)
     return array
 
