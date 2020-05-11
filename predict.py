@@ -1,9 +1,9 @@
 
 
-def predict(models, args):
+def predict(models, conjectures):
     predictions = []
     for model in models:
-        predictions.append(model.predict(**vars(args)))
+        predictions.append(model.predict(conjectures))
     return predictions
 
 

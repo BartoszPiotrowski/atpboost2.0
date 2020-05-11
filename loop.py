@@ -13,8 +13,11 @@ def loop(args):
     for i in range(args.iterations):
         args.logger.print(f'Iteration {i + 1}')
         models = train(args)
-        predictions = predict(models, args)
+        print('train done')
+        predictions = predict(models, args.conjectures)
+        print('predict done')
         proofs_of_conjectures = prove(predictions, args)
+        print('prove done')
         deps_of_conjectures = collect_deps(proofs_of_conjectures)
         args.train_deps = merge_deps([args.train_deps, deps_of_conjectures])
         if args.mining:
@@ -34,8 +37,8 @@ if __name__=='__main__':
     args.train_neg_deps = 'data/test/deps_negative'
     args.ml_models = 'xgboost'
     args.logfile = 'loop.log'
-    args.data_dir = 'loop_data'
-    args.mining = True
+    args.data_dir = 'loop_data/test'
+    args.mining = False
     args.iterations = 3
     args.n_jobs = 1
     loop(args)

@@ -7,7 +7,7 @@ class Logger():
 
     def print(self, message):
         t = strftime('%Y-%m-%d--%H:%M:%S')
-        m = f"[{t}] {message}\n"
+        m = f"[{t}] {message}"
         print(m)
         with open(self.logfile, 'a') as f:
-            f.write(m)
+            f.write(m + '\n')
