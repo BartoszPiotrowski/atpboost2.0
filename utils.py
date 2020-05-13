@@ -19,6 +19,10 @@ def append_lines(list_of_lines, filename):
     with open(filename, encoding ='utf-8', mode='a') as f:
         f.write('\n'.join(list_of_lines) + '\n')
 
+def append_line(line, filename):
+    with open(filename, encoding ='utf-8', mode='a') as f:
+        f.write(line + '\n')
+
 def save_obj(obj, filename, gzip=False):
     if not gzip:
         with open(filename, 'wb') as f:
