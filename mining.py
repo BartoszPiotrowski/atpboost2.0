@@ -13,6 +13,8 @@ def mining(models, args):
     mining_thms = sample(train_thms, num_mining_thms)
     preds = [model.predict(mining_thms) for model in models]
     proofs = prove(preds, args)
+    if not proofs:
+        return None, None
     deps = collect_deps(proofs)
     pos_deps, neg_deps = _mining(preds, deps)
     pos_deps_path = os.path.join(args.data_dir, 'mined_pos_deps')

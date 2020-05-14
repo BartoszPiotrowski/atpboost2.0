@@ -4,8 +4,8 @@ OUTPUT=$2
 eprover \
 	-sRp \
 	--auto-schedule \
-	--cpu-limit=5 \
-	--soft-cpu-limit=4 \
+	--cpu-limit=11 \
+	--soft-cpu-limit=10 \
 	--free-numbers \
 	--memory-limit=2000 \
 	--print-statistics \

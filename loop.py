@@ -11,7 +11,7 @@ def loop(args):
     args.logger = Logger(args.logfile)
     args.train_deps = copyfile(args.train_deps, args.data_dir + '/train_deps')
     for i in range(args.iterations):
-        args.logger.print(f'\nLoop iteration no. {i + 1}')
+        args.logger.print(f'Loop iteration no. {i + 1}', newline=True)
         models = train(args)
         predictions = predict(models, args.conjectures)
         proofs_of_conjectures = prove(predictions, args)
@@ -19,8 +19,9 @@ def loop(args):
         args.train_deps = merge_deps([args.train_deps, deps_of_conjectures])
         if args.mining:
             pos_deps, neg_deps = mining(models, args)
-            args.train_deps = merge_deps([args.train_deps, pos_deps])
-            args.train_neg_deps = neg_deps
+            if pos_deps:
+                args.train_deps = merge_deps([args.train_deps, pos_deps])
+                args.train_neg_deps = neg_deps
 
 
 if __name__=='__main__':
@@ -36,7 +37,7 @@ if __name__=='__main__':
     args.ml_models = 'xgboost'
     args.logfile = 'loop.log'
     args.data_dir = 'loop_data/test'
-    args.mining = 0.1
+    args.mining = 0.001
     args.iterations = 3
     args.n_jobs = 4
     loop(args)
