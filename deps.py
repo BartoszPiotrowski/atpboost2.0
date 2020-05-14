@@ -12,10 +12,11 @@ def merge_deps(list_of_files):
     write_lines(deps, output_file)
     return output_file
 
-def collect_deps(proof_dir): # TODO parallelize
-    output_file = proof_dir + '.deps'
-    for f in os.listdir(proof_dir):
-        conjecture_premises = collect_deps_from_proof(os.path.join(proof_dir, f))
+
+def collect_deps(proofs):
+    output_file=os.path.dirname(proofs[0]) + '.deps'
+    for p in proofs:
+        conjecture_premises = collect_deps_from_proof(p)
         if conjecture_premises:
             conjecture, premises = conjecture_premises
             append_line(f"{conjecture}:{' '.join(premises)}", output_file)

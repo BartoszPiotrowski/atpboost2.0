@@ -29,7 +29,9 @@ if __name__ == '__main__':
         default=None)
     parser.add_argument(
         '--mining',
-        action='store_true')
+        type=float,
+        default=0.1,
+        help='Fraction of proved theorems used for mining; 0 means no mining.')
     parser.add_argument(
         '--iterations',
         default=10,

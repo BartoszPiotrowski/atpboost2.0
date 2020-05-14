@@ -99,6 +99,18 @@ def read_deps(path, unions=False):
                 deps[thm] = [ds]
     return deps
 
+def save_deps(deps, filename):
+    for thm in deps:
+        if type(deps[thm]) == list:
+            for ds in deps[thm]:
+                append_line(f"{thm}:{' '.join(ds)}", filename)
+        elif type(deps[thm]) == set:
+            append_line(f"{thm}:{' '.join(deps[thm])}", filename)
+        else:
+            print('Error: wrong format of dependencies.')
+
+
+
 def read_features(path):
     '''
     Assumed format:
@@ -181,6 +193,7 @@ def similarity(thm1, thm2, dict_features_numbers, n_of_theorems, power=2):
     return (sI / (s1 + s2 - sI)) ** (1 / power) # Jaccard index
 
 def merge_predictions(predictions_paths_list):
+    assert type(predictions_paths_list) == list
     predictions_lines = []
     for p in predictions_paths_list:
         predictions_lines.extend(read_lines(p))
@@ -192,5 +205,14 @@ def merge_predictions(predictions_paths_list):
         if not conj_deps in predictions:
             predictions.append(conj_deps)
     return predictions
+
+def unify_predictions(predictions):
+    predictions_unified = {}
+    for conj, deps in predictions:
+        if not conj in predictions_unified:
+            predictions_unified[conj] = set(deps)
+        else:
+            predictions_unified[conj].update(deps)
+    return predictions_unified
 
 

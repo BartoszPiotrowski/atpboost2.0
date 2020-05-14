@@ -5,7 +5,7 @@ from random import sample
 from sklearn.feature_extraction import FeatureHasher
 from utils import read_features, read_deps, read_lines, load_obj, save_obj
 from utils import partition
-
+from tqdm import tqdm
 
 
 def deps_to_train_array(train_deps=None, n_jobs=10, **kwargs):
@@ -14,7 +14,7 @@ def deps_to_train_array(train_deps=None, n_jobs=10, **kwargs):
     with Parallel(n_jobs=n_jobs) as parallel:
         labels_arrays = parallel(delayed(deps_to_train_array_1_job)(
             i_thms=i_thms, deps=train_deps, **kwargs) \
-            for i_thms in enumerate(split))
+            for i_thms in tqdm(list(enumerate(split))))
     labels, array = merge_saved_arrays(labels_arrays)
     return labels, array
 
