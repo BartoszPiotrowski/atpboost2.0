@@ -37,7 +37,7 @@ if __name__ == '__main__':
         default=10,
         type=int)
     parser.add_argument(
-        '--prover',
+        '--proving_script',
         type=str,
         default='prove.sh')
     parser.add_argument(
