@@ -28,7 +28,7 @@ class Model:
 
 class XGBoost(Model):
     def __init__(self,
-                 rounds=100,
+                 rounds=1000,
                  learning_rate=0.1,
                  **kwargs):
         super(XGBoost, self).__init__(**kwargs)
