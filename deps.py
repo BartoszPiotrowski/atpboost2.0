@@ -1,28 +1,29 @@
-import sys, os
-from utils import read_lines, write_lines, append_line, write_empty
+import os
+from utils import read_lines, write_lines, write_line
 
 
-def merge_deps(list_of_files):
-    output_file = list_of_files[0]
+def merge_deps(file_0, *files, output_file=None):
+    if not output_file:
+        output_file = file_0
     deps = set()
-    for f in list_of_files:
+    for f in [file_0] + list(files):
         deps.update(read_lines(f))
     write_lines(deps, output_file)
     return output_file
 
 
-def collect_deps(proofs):
-    output_file=os.path.dirname(proofs[0]) + '.deps'
-    write_empty(output_file)
+def extract_deps(proofs):
+    output_files = []
     for p in proofs:
-        conjecture_premises = collect_deps_from_proof(p)
-        if conjecture_premises:
-            conjecture, premises = conjecture_premises
-            append_line(f"{conjecture}:{' '.join(premises)}", output_file)
-    return output_file
+        conjecture_premises = extract_deps_from_proof(p)
+        conjecture, premises = conjecture_premises
+        output_file = p + '.deps'
+        output_files.append(output_file)
+        write_line(f"{conjecture}:{' '.join(premises)}", output_file)
+    return output_files
 
 
-def collect_deps_from_proof(file_with_proof, linearized_by_prover=True):
+def extract_deps_from_proof(file_with_proof, linearized_by_prover=True):
     '''
     Extracts dependecies (axioms/premises) from a given proof file.
     The order of extracted premises is induced by the order of appearance

@@ -21,14 +21,14 @@ def stats_init(train_deps, conjs, padding=' ' * 25):
 
     return message
 
-def stats(train_deps, conjs, conjs_deps=None, padding=' ' * 25):
+def stats(train_deps, conjs, conjs_proved=None, padding=' ' * 25):
     train_deps = read_deps(train_deps)
-    conjs_deps = read_deps(conjs_deps) if conjs_deps else []
+    conjs_proved = [read_lines(d)[0].split(':')[0] for d in conjs_proved]
     conjs = read_lines(conjs)
-    assert set(conjs_deps) <= set(conjs), set(conjs_deps) - set(conjs)
-    assert set(conjs_deps) <= set(train_deps), set(conjs_deps) - set(train_deps)
+    assert set(conjs_proved) <= set(conjs), set(conjs_proved) - set(conjs)
+    assert set(conjs_proved) <= set(train_deps), set(conjs_proved) - set(train_deps)
     n_conjs_proved_total = len(set(train_deps) & set(conjs))
-    n_conjs_proved_now = len(set(conjs_deps))
+    n_conjs_proved_now = len(set(conjs_proved))
     n_all_deps = sum([len(train_deps[t]) for t in train_deps])
     n_thms_in_deps = len(train_deps)
 

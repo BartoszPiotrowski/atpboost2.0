@@ -18,6 +18,10 @@ def write_lines(list_of_lines, filename, backup=False):
     with open(filename, encoding ='utf-8', mode='wt') as f:
         f.write('\n'.join(list_of_lines) + '\n')
 
+def write_line(line, filename):
+    with open(filename, encoding ='utf-8', mode='wt') as f:
+        f.write(line + '\n')
+
 def write_empty(filename):
     with open(filename, encoding ='utf-8', mode='wt') as f:
         f.write('')
@@ -107,6 +111,7 @@ def read_deps(path, unions=False):
     return deps
 
 def save_deps(deps, filename):
+    write_empty(filename)
     for thm in deps:
         if type(deps[thm]) == list:
             for ds in deps[thm]:

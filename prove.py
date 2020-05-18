@@ -14,16 +14,17 @@ def prove(predictions, args):
     with Parallel(n_jobs=n_jobs) as parallel:
         prove_one_d = delayed(prove_one)
         proofs = parallel(prove_one_d(conj, deps, args.statements, proofs_dir,
-                             args.logger) for conj, deps in tqdm(predictions))
+                             args.proving_script, args.logger) \
+                          for conj, deps in tqdm(predictions))
     proofs_found = [p for p in proofs if p]
     args.logger.print(f'Proving done ({len(proofs_found)} proofs found).')
     return proofs_found
 
-def prove_one(conj, deps, statements_path, dir_path, logger):
+def prove_one(conj, deps, statements_path, dir_path, proving_script, logger):
     assert not conj in set(deps), (conj, deps)
     input_filename = problem_file(conj, deps, statements_path, dir_path)
     output_filename = input_filename.replace('.p', '.out')
-    run_prover(input_filename, output_filename)
+    run_prover(input_filename, output_filename, proving_script)
     if "# Proof found!" in read_lines(output_filename):
         logger.print('PROVED#' + conj + ':' + ' '.join(deps) \
                      + '#Output: ' + output_filename, only_to_file=True)
@@ -45,8 +46,8 @@ def problem_file(conj, list_of_deps, statements_path, dir_path):
     return input_filename
 
 
-def run_prover(input_filename, output_filename):
-    os.popen(f'./prove.sh {input_filename} {output_filename}').read()
+def run_prover(input_filename, output_filename, proving_script):
+    os.popen(f'./{proving_script} {input_filename} {output_filename}').read()
 
 
 #CPU_TIME=10

@@ -1,3 +1,3 @@
 - cleaning deps
 - integrate gnn
-- print progress bar for xgb training
+- describe parameters

@@ -16,7 +16,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--data_dir',
         type=str,
-        default='loop_data')
+        default='atpboost_data')
     parser.add_argument(
         '--statements',
         type=str)
@@ -39,14 +39,14 @@ if __name__ == '__main__':
     parser.add_argument(
         '--prover',
         type=str,
-        default='E')
+        default='prove.sh')
     parser.add_argument(
         '--ml_models',
         default='xgboost,gnn,rnn,knn',
         type=str)
     parser.add_argument(
         '--logfile',
-        default='loop.log',
+        default='atpboost.log',
         type=str)
     parser.add_argument(
         '--n_jobs',
