@@ -6,9 +6,7 @@ def merge_deps(list_of_files):
     output_file = list_of_files[0]
     deps = set()
     for f in list_of_files:
-        lines = read_lines(f)
-        for l in lines:
-            deps.add(l)
+        deps.update(read_lines(f))
     write_lines(deps, output_file)
     return output_file
 

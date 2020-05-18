@@ -5,24 +5,26 @@ from mining import mining
 from deps import merge_deps, collect_deps
 from shutil import copyfile
 from logger import Logger
+from stats import stats, stats_init
 
 
 def loop(args):
     args.logger = Logger(args.logfile)
+    args.logger.print(stats_init(args.train_deps, args.conjectures))
     args.train_deps = copyfile(args.train_deps, args.data_dir + '/train_deps')
     for i in range(args.iterations):
-        args.logger.print(f'Loop iteration no. {i + 1}', newline=True)
+        args.logger.print(f'### Loop iteration no. {i + 1} ###', newline=True)
         models = train(args)
-        predictions = predict(models, args.conjectures)
-        proofs_of_conjectures = prove(predictions, args)
-        deps_of_conjectures = collect_deps(proofs_of_conjectures)
-        args.train_deps = merge_deps([args.train_deps, deps_of_conjectures])
+        preds = predict(models, args.conjectures)
+        conjs_proofs = prove(preds, args)
+        conjs_deps = collect_deps(conjs_proofs)
+        args.train_deps = merge_deps([args.train_deps, conjs_deps])
         if args.mining:
             pos_deps, neg_deps = mining(models, args)
             if pos_deps:
                 args.train_deps = merge_deps([args.train_deps, pos_deps])
                 args.train_neg_deps = neg_deps
-
+        args.logger.print(stats(args.train_deps, args.conjectures, conjs_deps))
 
 if __name__=='__main__':
     # tests
