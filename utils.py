@@ -5,15 +5,22 @@ from time import strftime
 from glob import glob
 from math import log
 from sys import getsizeof
+from shutil import copyfile
 
 
 def read_lines(filename):
     with open(filename, encoding ='utf-8') as f:
         return f.read().splitlines()
 
-def write_lines(list_of_lines, filename):
+def write_lines(list_of_lines, filename, backup=False):
+    if backup:
+        copyfile(filename, filename + '.bcp')
     with open(filename, encoding ='utf-8', mode='wt') as f:
         f.write('\n'.join(list_of_lines) + '\n')
+
+def write_empty(filename):
+    with open(filename, encoding ='utf-8', mode='wt') as f:
+        f.write('')
 
 def append_lines(list_of_lines, filename):
     with open(filename, encoding ='utf-8', mode='a') as f:

@@ -136,17 +136,21 @@ class XGBoost(Model):
         return model
 
 
+class GNN(Model):
+    def __init__(self, **kwargs):
+        super(GNN, self).__init__(**kwargs)
+        pass
+
+
 class LightGBM(Model):
     def __init__(self, **kwargs):
         pass
+
 
 class KNN(Model):
     def __init__(self, **kwargs):
         pass
 
-class GNN(Model):
-    def __init__(self, **kwargs):
-        pass
 
 class RNN(Model):
     def __init__(self, **kwargs):

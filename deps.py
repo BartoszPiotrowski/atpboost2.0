@@ -1,5 +1,5 @@
 import sys, os
-from utils import read_lines, write_lines, append_line
+from utils import read_lines, write_lines, append_line, write_empty
 
 
 def merge_deps(list_of_files):
@@ -13,6 +13,7 @@ def merge_deps(list_of_files):
 
 def collect_deps(proofs):
     output_file=os.path.dirname(proofs[0]) + '.deps'
+    write_empty(output_file)
     for p in proofs:
         conjecture_premises = collect_deps_from_proof(p)
         if conjecture_premises:

@@ -15,7 +15,7 @@ def stats_init(train_deps, conjs, padding=' ' * 25):
     message += padding
     message += f'Number of conjectures                : {len(conjs)}\n'
     message += padding
-    message += f'Conjectures with dependencies : ' + \
+    message += f'Conjectures with dependencies        : ' + \
                f'{n_conjs_proved} ' + \
                f'({100 * n_conjs_proved / len(conjs):.2f}%)'
 
