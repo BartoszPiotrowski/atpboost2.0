@@ -37,6 +37,9 @@ if __name__=='__main__':
     args.features = 'data/example/features'
     args.chronology = 'data/example/chronology'
     args.train_deps = 'data/example/train_deps'
+    args.xgb_knn_prefiltering = 100
+    args.xgb_rounds = 10
+    args.xgb_eta = 0.1
     #args.train_neg_deps = 'data/example/train_neg_deps'
     args.ml_models = 'xgboost'
     args.logfile = 'loop.log'

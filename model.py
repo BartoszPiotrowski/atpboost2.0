@@ -27,10 +27,7 @@ class Model:
 
 
 class XGBoost(Model):
-    def __init__(self,
-                 rounds=1000,
-                 learning_rate=0.1,
-                 **kwargs):
+    def __init__(self, **kwargs):
         super(XGBoost, self).__init__(**kwargs)
         self.xgb = import_module('xgboost')
         self.kwargs = kwargs
@@ -38,9 +35,10 @@ class XGBoost(Model):
         self.features = kwargs['features']
         self.model_path = os.path.join(self.save_dir, 'model.xgb')
         self.predictions_path = os.path.join(self.save_dir, 'predictions.xgb')
-        self.train_params_rounds = rounds
+        self.knn_prefiltering = kwargs['xgb_knn_prefiltering']
+        self.train_params_rounds = kwargs['xgb_rounds']
         self.train_params['max_depth'] = 10
-        self.train_params['eta'] = learning_rate
+        self.train_params['eta'] = kwargs['xgb_eta']
         self.train_params['booster'] = 'gbtree'
         self.train_params['objective'] = 'binary:logistic'
         self.train_params['n_jobs'] = self.n_jobs
@@ -64,7 +62,9 @@ class XGBoost(Model):
         self.logger.print(f'Model saved to {self.model_path}')
 
 
-    def predict(self, conjs, max_num_prems=1024):
+    def predict(self, conjs, max_num_prems=None):
+        if max_num_prems == None:
+            max_num_prems = self.knn_prefiltering
         conjs = read_lines(conjs) if type(conjs) == str else conjs
         chronology = read_lines(self.chronology)
         features = read_features(self.features)
@@ -74,7 +74,7 @@ class XGBoost(Model):
         scored_prems = {}
         for conj in conjs:
             available_prems = set(chronology[:chronology.index(conj)])
-            if len(available_prems) < max_num_prems:
+            if max_num_prems and len(available_prems) < max_num_prems:
                 candidate_prems = available_prems
             else:
                 candidate_prems = self.knn_prefilter(conj,

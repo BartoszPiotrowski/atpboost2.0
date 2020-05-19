@@ -52,6 +52,18 @@ if __name__ == '__main__':
         '--n_jobs',
         default=10,
         type=int)
+    parser.add_argument(
+        '--xgb_knn_prefiltering',
+        default=1024,
+        type=int)
+    parser.add_argument(
+        '--xgb_rounds',
+        default=1024,
+        type=int)
+    parser.add_argument(
+        '--xgb_eta',
+        default=0.1,
+        type=float)
     args = parser.parse_args()
 
 loop(args)

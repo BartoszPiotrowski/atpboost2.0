@@ -1,9 +1,9 @@
 
 
-def predict(models, conjectures):
-    predictions = []
+def predict(models, conjs):
+    preds = []
     for model in models:
-        predictions.append(model.predict(conjectures))
-    return predictions
+        preds.append(model.predict(conjs))
+    return preds
 
 
