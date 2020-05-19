@@ -1,7 +1,7 @@
 PROBLEM=$1
 OUTPUT=$2
 
-eprover \
+../E/PROVER/eprover \
 	-sRp \
 	--auto-schedule \
 	--cpu-limit=11 \

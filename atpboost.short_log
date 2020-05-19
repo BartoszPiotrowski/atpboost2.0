@@ -1,0 +1,530 @@
+[2020-05-18--22:32:12] ### Loop iteration no. 1 ###
+                         Conjectures proved (all iterations)  : 233 / 342 (68.13%)
+                         Conjectures proved (this interation) : 233 / 342 (68.13%)
+                         All training dependencies            : 1728
+                         Theorems in training dependencies    : 1233
+[2020-05-18--22:38:23] ### Loop iteration no. 2 ###
+                         Conjectures proved (all iterations)  : 239 / 342 (69.88%)
+                         Conjectures proved (this interation) : 230 / 342 (67.25%)
+                         All training dependencies            : 2214
+                         Theorems in training dependencies    : 1239
+[2020-05-18--22:44:29] ### Loop iteration no. 3 ###
+                         Conjectures proved (all iterations)  : 241 / 342 (70.47%)
+                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         All training dependencies            : 2600
+                         Theorems in training dependencies    : 1241
+[2020-05-18--22:50:39] ### Loop iteration no. 4 ###
+                         Conjectures proved (all iterations)  : 241 / 342 (70.47%)
+                         Conjectures proved (this interation) : 214 / 342 (62.57%)
+                         All training dependencies            : 2935
+                         Theorems in training dependencies    : 1241
+[2020-05-18--22:56:46] ### Loop iteration no. 5 ###
+                         Conjectures proved (all iterations)  : 242 / 342 (70.76%)
+                         Conjectures proved (this interation) : 218 / 342 (63.74%)
+                         All training dependencies            : 3231
+                         Theorems in training dependencies    : 1242
+[2020-05-18--23:03:39] ### Loop iteration no. 6 ###
+                         Theorems in training dependencies    : 1000
+                         All training dependencies            : 1000
+                         Number of conjectures                : 342
+                         Conjectures with dependencies        : 0 (0.00%)
+[2020-05-18--23:10:19] ### Loop iteration no. 1 ###
+                         Conjectures proved (all iterations)  : 240 / 342 (70.18%)
+                         Conjectures proved (this interation) : 240 / 342 (70.18%)
+                         All training dependencies            : 1837
+                         Theorems in training dependencies    : 1240
+[2020-05-18--23:16:34] ### Loop iteration no. 2 ###
+                         Conjectures proved (all iterations)  : 250 / 342 (73.10%)
+                         Conjectures proved (this interation) : 245 / 342 (71.64%)
+                         All training dependencies            : 2436
+                         Theorems in training dependencies    : 1250
+[2020-05-18--23:22:47] ### Loop iteration no. 3 ###
+                         Conjectures proved (all iterations)  : 251 / 342 (73.39%)
+                         Conjectures proved (this interation) : 239 / 342 (69.88%)
+                         All training dependencies            : 2899
+                         Theorems in training dependencies    : 1251
+[2020-05-18--23:28:54] ### Loop iteration no. 4 ###
+                         Conjectures proved (all iterations)  : 252 / 342 (73.68%)
+                         Conjectures proved (this interation) : 237 / 342 (69.30%)
+                         All training dependencies            : 3313
+                         Theorems in training dependencies    : 1252
+[2020-05-18--23:35:18] ### Loop iteration no. 5 ###
+                         Conjectures proved (all iterations)  : 252 / 342 (73.68%)
+                         Conjectures proved (this interation) : 235 / 342 (68.71%)
+                         All training dependencies            : 3662
+                         Theorems in training dependencies    : 1252
+[2020-05-18--23:41:46] ### Loop iteration no. 6 ###
+                         Conjectures proved (all iterations)  : 252 / 342 (73.68%)
+                         Conjectures proved (this interation) : 235 / 342 (68.71%)
+                         All training dependencies            : 3961
+                         Theorems in training dependencies    : 1252
+[2020-05-18--23:48:09] ### Loop iteration no. 7 ###
+                         Conjectures proved (all iterations)  : 253 / 342 (73.98%)
+                         Conjectures proved (this interation) : 232 / 342 (67.84%)
+                         All training dependencies            : 4235
+                         Theorems in training dependencies    : 1253
+[2020-05-18--23:54:39] ### Loop iteration no. 8 ###
+                         Conjectures proved (all iterations)  : 253 / 342 (73.98%)
+                         Conjectures proved (this interation) : 229 / 342 (66.96%)
+                         All training dependencies            : 4500
+                         Theorems in training dependencies    : 1253
+[2020-05-19--00:00:59] ### Loop iteration no. 9 ###
+                         Conjectures proved (all iterations)  : 253 / 342 (73.98%)
+                         Conjectures proved (this interation) : 234 / 342 (68.42%)
+                         All training dependencies            : 4759
+                         Theorems in training dependencies    : 1253
+[2020-05-19--00:07:19] ### Loop iteration no. 10 ###
+                         Conjectures proved (all iterations)  : 253 / 342 (73.98%)
+                         Conjectures proved (this interation) : 227 / 342 (66.37%)
+                         All training dependencies            : 4984
+                         Theorems in training dependencies    : 1253
+[2020-05-19--00:14:03] ### Loop iteration no. 11 ###
+                         Conjectures proved (all iterations)  : 253 / 342 (73.98%)
+                         Conjectures proved (this interation) : 231 / 342 (67.54%)
+                         All training dependencies            : 5190
+                         Theorems in training dependencies    : 1253
+[2020-05-19--00:20:38] ### Loop iteration no. 12 ###
+                         Conjectures proved (all iterations)  : 253 / 342 (73.98%)
+                         Conjectures proved (this interation) : 227 / 342 (66.37%)
+                         All training dependencies            : 5408
+                         Theorems in training dependencies    : 1253
+[2020-05-19--00:27:10] ### Loop iteration no. 13 ###
+                         Conjectures proved (all iterations)  : 253 / 342 (73.98%)
+                         Conjectures proved (this interation) : 231 / 342 (67.54%)
+                         All training dependencies            : 5642
+                         Theorems in training dependencies    : 1253
+[2020-05-19--00:34:11] ### Loop iteration no. 14 ###
+                         Conjectures proved (all iterations)  : 253 / 342 (73.98%)
+                         Conjectures proved (this interation) : 233 / 342 (68.13%)
+                         All training dependencies            : 5852
+                         Theorems in training dependencies    : 1253
+[2020-05-19--00:41:20] ### Loop iteration no. 15 ###
+                         Conjectures proved (all iterations)  : 254 / 342 (74.27%)
+                         Conjectures proved (this interation) : 230 / 342 (67.25%)
+                         All training dependencies            : 6050
+                         Theorems in training dependencies    : 1254
+[2020-05-19--00:47:48] ### Loop iteration no. 16 ###
+                         Conjectures proved (all iterations)  : 254 / 342 (74.27%)
+                         Conjectures proved (this interation) : 231 / 342 (67.54%)
+                         All training dependencies            : 6246
+                         Theorems in training dependencies    : 1254
+[2020-05-19--00:54:21] ### Loop iteration no. 17 ###
+                         Conjectures proved (all iterations)  : 254 / 342 (74.27%)
+                         Conjectures proved (this interation) : 231 / 342 (67.54%)
+                         All training dependencies            : 6430
+                         Theorems in training dependencies    : 1254
+[2020-05-19--01:01:00] ### Loop iteration no. 18 ###
+                         Conjectures proved (all iterations)  : 254 / 342 (74.27%)
+                         Conjectures proved (this interation) : 224 / 342 (65.50%)
+                         All training dependencies            : 6601
+                         Theorems in training dependencies    : 1254
+[2020-05-19--01:07:26] ### Loop iteration no. 19 ###
+                         Conjectures proved (all iterations)  : 254 / 342 (74.27%)
+                         Conjectures proved (this interation) : 229 / 342 (66.96%)
+                         All training dependencies            : 6767
+                         Theorems in training dependencies    : 1254
+[2020-05-19--01:14:40] ### Loop iteration no. 20 ###
+                         Conjectures proved (all iterations)  : 254 / 342 (74.27%)
+                         Conjectures proved (this interation) : 232 / 342 (67.84%)
+                         All training dependencies            : 6946
+                         Theorems in training dependencies    : 1254
+[2020-05-19--01:21:20] ### Loop iteration no. 21 ###
+                         Conjectures proved (all iterations)  : 254 / 342 (74.27%)
+                         Conjectures proved (this interation) : 232 / 342 (67.84%)
+                         All training dependencies            : 7130
+                         Theorems in training dependencies    : 1254
+[2020-05-19--01:27:51] ### Loop iteration no. 22 ###
+                         Conjectures proved (all iterations)  : 254 / 342 (74.27%)
+                         Conjectures proved (this interation) : 227 / 342 (66.37%)
+                         All training dependencies            : 7298
+                         Theorems in training dependencies    : 1254
+[2020-05-19--01:34:22] ### Loop iteration no. 23 ###
+                         Conjectures proved (all iterations)  : 254 / 342 (74.27%)
+                         Conjectures proved (this interation) : 227 / 342 (66.37%)
+                         All training dependencies            : 7485
+                         Theorems in training dependencies    : 1254
+[2020-05-19--01:41:04] ### Loop iteration no. 24 ###
+                         Conjectures proved (all iterations)  : 254 / 342 (74.27%)
+                         Conjectures proved (this interation) : 234 / 342 (68.42%)
+                         All training dependencies            : 7640
+                         Theorems in training dependencies    : 1254
+[2020-05-19--01:47:37] ### Loop iteration no. 25 ###
+                         Conjectures proved (all iterations)  : 254 / 342 (74.27%)
+                         Conjectures proved (this interation) : 231 / 342 (67.54%)
+                         All training dependencies            : 7792
+                         Theorems in training dependencies    : 1254
+[2020-05-19--01:54:03] ### Loop iteration no. 26 ###
+                         Conjectures proved (all iterations)  : 254 / 342 (74.27%)
+                         Conjectures proved (this interation) : 230 / 342 (67.25%)
+                         All training dependencies            : 7944
+                         Theorems in training dependencies    : 1254
+[2020-05-19--02:00:49] ### Loop iteration no. 27 ###
+                         Conjectures proved (all iterations)  : 254 / 342 (74.27%)
+                         Conjectures proved (this interation) : 227 / 342 (66.37%)
+                         All training dependencies            : 8106
+                         Theorems in training dependencies    : 1254
+[2020-05-19--02:07:28] ### Loop iteration no. 28 ###
+                         Conjectures proved (all iterations)  : 255 / 342 (74.56%)
+                         Conjectures proved (this interation) : 226 / 342 (66.08%)
+                         All training dependencies            : 8258
+                         Theorems in training dependencies    : 1255
+[2020-05-19--02:14:01] ### Loop iteration no. 29 ###
+                         Conjectures proved (all iterations)  : 255 / 342 (74.56%)
+                         Conjectures proved (this interation) : 234 / 342 (68.42%)
+                         All training dependencies            : 8408
+                         Theorems in training dependencies    : 1255
+[2020-05-19--02:20:43] ### Loop iteration no. 30 ###
+                         Conjectures proved (all iterations)  : 255 / 342 (74.56%)
+                         Conjectures proved (this interation) : 221 / 342 (64.62%)
+                         All training dependencies            : 8542
+                         Theorems in training dependencies    : 1255
+[2020-05-19--02:27:27] ### Loop iteration no. 31 ###
+                         Conjectures proved (all iterations)  : 255 / 342 (74.56%)
+                         Conjectures proved (this interation) : 230 / 342 (67.25%)
+                         All training dependencies            : 8700
+                         Theorems in training dependencies    : 1255
+[2020-05-19--02:33:59] ### Loop iteration no. 32 ###
+                         Conjectures proved (all iterations)  : 255 / 342 (74.56%)
+                         Conjectures proved (this interation) : 229 / 342 (66.96%)
+                         All training dependencies            : 8821
+                         Theorems in training dependencies    : 1255
+[2020-05-19--02:41:13] ### Loop iteration no. 33 ###
+                         Conjectures proved (all iterations)  : 255 / 342 (74.56%)
+                         Conjectures proved (this interation) : 227 / 342 (66.37%)
+                         All training dependencies            : 8973
+                         Theorems in training dependencies    : 1255
+[2020-05-19--02:47:53] ### Loop iteration no. 34 ###
+                         Conjectures proved (all iterations)  : 255 / 342 (74.56%)
+                         Conjectures proved (this interation) : 228 / 342 (66.67%)
+                         All training dependencies            : 9105
+                         Theorems in training dependencies    : 1255
+[2020-05-19--02:54:34] ### Loop iteration no. 35 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 233 / 342 (68.13%)
+                         All training dependencies            : 9234
+                         Theorems in training dependencies    : 1256
+[2020-05-19--03:01:13] ### Loop iteration no. 36 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 223 / 342 (65.20%)
+                         All training dependencies            : 9358
+                         Theorems in training dependencies    : 1256
+[2020-05-19--03:07:49] ### Loop iteration no. 37 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 229 / 342 (66.96%)
+                         All training dependencies            : 9504
+                         Theorems in training dependencies    : 1256
+[2020-05-19--03:16:20] ### Loop iteration no. 38 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         All training dependencies            : 9625
+                         Theorems in training dependencies    : 1256
+[2020-05-19--03:23:24] ### Loop iteration no. 39 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 231 / 342 (67.54%)
+                         All training dependencies            : 9760
+                         Theorems in training dependencies    : 1256
+[2020-05-19--03:30:11] ### Loop iteration no. 40 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 227 / 342 (66.37%)
+                         All training dependencies            : 9900
+                         Theorems in training dependencies    : 1256
+[2020-05-19--03:36:53] ### Loop iteration no. 41 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 227 / 342 (66.37%)
+                         All training dependencies            : 10029
+                         Theorems in training dependencies    : 1256
+[2020-05-19--03:43:41] ### Loop iteration no. 42 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 231 / 342 (67.54%)
+                         All training dependencies            : 10170
+                         Theorems in training dependencies    : 1256
+[2020-05-19--03:50:30] ### Loop iteration no. 43 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         All training dependencies            : 10305
+                         Theorems in training dependencies    : 1256
+[2020-05-19--03:57:31] ### Loop iteration no. 44 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 227 / 342 (66.37%)
+                         All training dependencies            : 10424
+                         Theorems in training dependencies    : 1256
+[2020-05-19--04:04:29] ### Loop iteration no. 45 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         All training dependencies            : 10554
+                         Theorems in training dependencies    : 1256
+[2020-05-19--04:12:12] ### Loop iteration no. 46 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 229 / 342 (66.96%)
+                         All training dependencies            : 10678
+                         Theorems in training dependencies    : 1256
+[2020-05-19--04:20:50] ### Loop iteration no. 47 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 232 / 342 (67.84%)
+                         All training dependencies            : 10804
+                         Theorems in training dependencies    : 1256
+[2020-05-19--04:27:48] ### Loop iteration no. 48 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 223 / 342 (65.20%)
+                         All training dependencies            : 10908
+                         Theorems in training dependencies    : 1256
+[2020-05-19--04:34:24] ### Loop iteration no. 49 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         All training dependencies            : 11027
+                         Theorems in training dependencies    : 1256
+[2020-05-19--04:41:08] ### Loop iteration no. 50 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 229 / 342 (66.96%)
+                         All training dependencies            : 11155
+                         Theorems in training dependencies    : 1256
+[2020-05-19--04:52:16] ### Loop iteration no. 51 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         All training dependencies            : 11280
+                         Theorems in training dependencies    : 1256
+[2020-05-19--04:59:06] ### Loop iteration no. 52 ###
+                         Conjectures proved (all iterations)  : 256 / 342 (74.85%)
+                         Conjectures proved (this interation) : 228 / 342 (66.67%)
+                         All training dependencies            : 11390
+                         Theorems in training dependencies    : 1256
+[2020-05-19--05:05:59] ### Loop iteration no. 53 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 226 / 342 (66.08%)
+                         All training dependencies            : 11514
+                         Theorems in training dependencies    : 1257
+[2020-05-19--05:12:54] ### Loop iteration no. 54 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         All training dependencies            : 11625
+                         Theorems in training dependencies    : 1257
+[2020-05-19--05:20:05] ### Loop iteration no. 55 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 220 / 342 (64.33%)
+                         All training dependencies            : 11739
+                         Theorems in training dependencies    : 1257
+[2020-05-19--05:26:59] ### Loop iteration no. 56 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 227 / 342 (66.37%)
+                         All training dependencies            : 11853
+                         Theorems in training dependencies    : 1257
+[2020-05-19--05:34:00] ### Loop iteration no. 57 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 223 / 342 (65.20%)
+                         All training dependencies            : 11961
+                         Theorems in training dependencies    : 1257
+[2020-05-19--05:40:53] ### Loop iteration no. 58 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 232 / 342 (67.84%)
+                         All training dependencies            : 12071
+                         Theorems in training dependencies    : 1257
+[2020-05-19--05:47:36] ### Loop iteration no. 59 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 221 / 342 (64.62%)
+                         All training dependencies            : 12172
+                         Theorems in training dependencies    : 1257
+[2020-05-19--05:54:34] ### Loop iteration no. 60 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 227 / 342 (66.37%)
+                         All training dependencies            : 12279
+                         Theorems in training dependencies    : 1257
+[2020-05-19--06:01:37] ### Loop iteration no. 61 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         All training dependencies            : 12394
+                         Theorems in training dependencies    : 1257
+[2020-05-19--06:08:26] ### Loop iteration no. 62 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         All training dependencies            : 12511
+                         Theorems in training dependencies    : 1257
+[2020-05-19--06:15:15] ### Loop iteration no. 63 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 223 / 342 (65.20%)
+                         All training dependencies            : 12612
+                         Theorems in training dependencies    : 1257
+[2020-05-19--06:22:04] ### Loop iteration no. 64 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 231 / 342 (67.54%)
+                         All training dependencies            : 12720
+                         Theorems in training dependencies    : 1257
+[2020-05-19--06:29:27] ### Loop iteration no. 65 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 224 / 342 (65.50%)
+                         All training dependencies            : 12824
+                         Theorems in training dependencies    : 1257
+[2020-05-19--06:36:32] ### Loop iteration no. 66 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 228 / 342 (66.67%)
+                         All training dependencies            : 12949
+                         Theorems in training dependencies    : 1257
+[2020-05-19--06:43:23] ### Loop iteration no. 67 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 222 / 342 (64.91%)
+                         All training dependencies            : 13054
+                         Theorems in training dependencies    : 1257
+[2020-05-19--06:50:21] ### Loop iteration no. 68 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 226 / 342 (66.08%)
+                         All training dependencies            : 13147
+                         Theorems in training dependencies    : 1257
+[2020-05-19--06:57:07] ### Loop iteration no. 69 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         All training dependencies            : 13256
+                         Theorems in training dependencies    : 1257
+[2020-05-19--07:03:56] ### Loop iteration no. 70 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 227 / 342 (66.37%)
+                         All training dependencies            : 13362
+                         Theorems in training dependencies    : 1257
+[2020-05-19--07:10:52] ### Loop iteration no. 71 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 226 / 342 (66.08%)
+                         All training dependencies            : 13468
+                         Theorems in training dependencies    : 1257
+[2020-05-19--07:17:47] ### Loop iteration no. 72 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 226 / 342 (66.08%)
+                         All training dependencies            : 13556
+                         Theorems in training dependencies    : 1257
+[2020-05-19--07:24:38] ### Loop iteration no. 73 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 224 / 342 (65.50%)
+                         All training dependencies            : 13645
+                         Theorems in training dependencies    : 1257
+[2020-05-19--07:32:08] ### Loop iteration no. 74 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 222 / 342 (64.91%)
+                         All training dependencies            : 13749
+                         Theorems in training dependencies    : 1257
+[2020-05-19--07:39:17] ### Loop iteration no. 75 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 217 / 342 (63.45%)
+                         All training dependencies            : 13845
+                         Theorems in training dependencies    : 1257
+[2020-05-19--07:46:13] ### Loop iteration no. 76 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 222 / 342 (64.91%)
+                         All training dependencies            : 13941
+                         Theorems in training dependencies    : 1257
+[2020-05-19--07:53:06] ### Loop iteration no. 77 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 229 / 342 (66.96%)
+                         All training dependencies            : 14051
+                         Theorems in training dependencies    : 1257
+[2020-05-19--07:59:55] ### Loop iteration no. 78 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 222 / 342 (64.91%)
+                         All training dependencies            : 14144
+                         Theorems in training dependencies    : 1257
+[2020-05-19--08:06:48] ### Loop iteration no. 79 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 220 / 342 (64.33%)
+                         All training dependencies            : 14219
+                         Theorems in training dependencies    : 1257
+[2020-05-19--08:14:17] ### Loop iteration no. 80 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 222 / 342 (64.91%)
+                         All training dependencies            : 14320
+                         Theorems in training dependencies    : 1257
+[2020-05-19--08:21:15] ### Loop iteration no. 81 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 224 / 342 (65.50%)
+                         All training dependencies            : 14423
+                         Theorems in training dependencies    : 1257
+[2020-05-19--08:28:11] ### Loop iteration no. 82 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 223 / 342 (65.20%)
+                         All training dependencies            : 14503
+                         Theorems in training dependencies    : 1257
+[2020-05-19--08:35:18] ### Loop iteration no. 83 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 222 / 342 (64.91%)
+                         All training dependencies            : 14601
+                         Theorems in training dependencies    : 1257
+[2020-05-19--08:42:14] ### Loop iteration no. 84 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         All training dependencies            : 14692
+                         Theorems in training dependencies    : 1257
+[2020-05-19--08:49:19] ### Loop iteration no. 85 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 222 / 342 (64.91%)
+                         All training dependencies            : 14790
+                         Theorems in training dependencies    : 1257
+[2020-05-19--08:56:22] ### Loop iteration no. 86 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 223 / 342 (65.20%)
+                         All training dependencies            : 14871
+                         Theorems in training dependencies    : 1257
+[2020-05-19--09:03:12] ### Loop iteration no. 87 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 223 / 342 (65.20%)
+                         All training dependencies            : 14968
+                         Theorems in training dependencies    : 1257
+[2020-05-19--09:10:03] ### Loop iteration no. 88 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 224 / 342 (65.50%)
+                         All training dependencies            : 15058
+                         Theorems in training dependencies    : 1257
+[2020-05-19--09:16:54] ### Loop iteration no. 89 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 220 / 342 (64.33%)
+                         All training dependencies            : 15135
+                         Theorems in training dependencies    : 1257
+[2020-05-19--09:23:40] ### Loop iteration no. 90 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 220 / 342 (64.33%)
+                         All training dependencies            : 15222
+                         Theorems in training dependencies    : 1257
+[2020-05-19--09:30:37] ### Loop iteration no. 91 ###
+                         Conjectures proved (all iterations)  : 257 / 342 (75.15%)
+                         Conjectures proved (this interation) : 221 / 342 (64.62%)
+                         All training dependencies            : 15330
+                         Theorems in training dependencies    : 1257
+[2020-05-19--09:37:28] ### Loop iteration no. 92 ###
+                         Conjectures proved (all iterations)  : 258 / 342 (75.44%)
+                         Conjectures proved (this interation) : 222 / 342 (64.91%)
+                         All training dependencies            : 15425
+                         Theorems in training dependencies    : 1258
+[2020-05-19--09:44:23] ### Loop iteration no. 93 ###
+                         Conjectures proved (all iterations)  : 258 / 342 (75.44%)
+                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         All training dependencies            : 15535
+                         Theorems in training dependencies    : 1258
+[2020-05-19--09:51:32] ### Loop iteration no. 94 ###
+                         Conjectures proved (all iterations)  : 258 / 342 (75.44%)
+                         Conjectures proved (this interation) : 221 / 342 (64.62%)
+                         All training dependencies            : 15626
+                         Theorems in training dependencies    : 1258
+[2020-05-19--09:58:19] ### Loop iteration no. 95 ###
+                         Conjectures proved (all iterations)  : 258 / 342 (75.44%)
+                         Conjectures proved (this interation) : 220 / 342 (64.33%)
+                         All training dependencies            : 15719
+                         Theorems in training dependencies    : 1258
+[2020-05-19--10:05:11] ### Loop iteration no. 96 ###
+                         Conjectures proved (all iterations)  : 259 / 342 (75.73%)
+                         Conjectures proved (this interation) : 223 / 342 (65.20%)
+                         All training dependencies            : 15824
+                         Theorems in training dependencies    : 1259
+[2020-05-19--10:12:07] ### Loop iteration no. 97 ###
+                         Conjectures proved (all iterations)  : 259 / 342 (75.73%)
+                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         All training dependencies            : 15914
+                         Theorems in training dependencies    : 1259
+[2020-05-19--10:18:58] ### Loop iteration no. 98 ###
+                         Conjectures proved (all iterations)  : 259 / 342 (75.73%)
+                         Conjectures proved (this interation) : 229 / 342 (66.96%)
+                         All training dependencies            : 16008
+                         Theorems in training dependencies    : 1259
+[2020-05-19--10:26:01] ### Loop iteration no. 99 ###
+                         Conjectures proved (all iterations)  : 259 / 342 (75.73%)
+                         Conjectures proved (this interation) : 222 / 342 (64.91%)
+                         All training dependencies            : 16101
+                         Theorems in training dependencies    : 1259
+[2020-05-19--10:33:57] ### Loop iteration no. 100 ###
+                         Conjectures proved (all iterations)  : 259 / 342 (75.73%)
+                         Conjectures proved (this interation) : 226 / 342 (66.08%)
+                         All training dependencies            : 16200
+                         Theorems in training dependencies    : 1259
