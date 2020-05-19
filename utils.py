@@ -228,3 +228,16 @@ def unify_predictions(predictions):
     return predictions_unified
 
 
+def remove_supersets(list_of_sets):
+    '''Removes supersets from the list of sets'''
+    list_of_sets_clean = []
+    list_of_sets = [set(s) for s in list_of_sets] # in case we have lists
+    l = len(list_of_sets)
+    for i1 in range(l):
+        for i2 in range(l):
+            if list_of_sets[i1] > list_of_sets[i2]:
+                break
+        else:
+            if list_of_sets[i1] not in list_of_sets_clean:
+                list_of_sets_clean.append(list_of_sets[i1])
+    return list_of_sets_clean

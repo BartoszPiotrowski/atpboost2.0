@@ -5,11 +5,12 @@ from random import sample
 from sklearn.feature_extraction import FeatureHasher
 from utils import read_features, read_deps, read_lines, load_obj, save_obj
 from utils import partition
+from deps import clean_deps, unify_deps
 from tqdm import tqdm
 
 
 def deps_to_train_array(train_deps=None, n_jobs=10, **kwargs):
-    thms = list(read_deps(train_deps))
+    thms = list(set(read_deps(train_deps)))
     split = partition(thms, max(1, len(thms) // 100))
     with Parallel(n_jobs=n_jobs) as parallel:
         labels_arrays = parallel(delayed(deps_to_train_array_1_job)(
@@ -23,7 +24,7 @@ def deps_to_train_array_1_job(i_thms=None, deps=None, deps_negative=None,
                               chronology=None, features=None, data_dir=None,
                               **kwargs):
     i, thms = i_thms
-    deps = read_deps(deps, unions=True)
+    deps = unify_deps(clean_deps(read_deps(deps)))
     chronology = read_lines(chronology)
     features = read_features(features)
     if deps_negative:

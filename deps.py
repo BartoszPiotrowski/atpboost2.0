@@ -1,5 +1,17 @@
 import os
-from utils import read_lines, write_lines, write_line
+from utils import read_lines, write_lines, write_line, remove_supersets
+
+
+def clean_deps(deps):
+    for thm in deps:
+        deps[thm] = remove_supersets(deps[thm])
+    return deps
+
+
+def unify_deps(deps):
+    for thm in deps:
+        deps[thm] = set().union(*deps[thm])
+    return deps
 
 
 def merge_deps(file_0, *files, output_file=None):

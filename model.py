@@ -113,7 +113,7 @@ class XGBoost(Model):
 
 
     def make_predictions(self, scored_prems,
-                         slices_lens=[4,8,16,32,64,128,256,512]):
+                         slices_lens=[4,8,16,32,64,128,256,512,1024]):
         all_predictions = []
         for conj in scored_prems:
             sp = scored_prems[conj]
