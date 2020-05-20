@@ -53,11 +53,17 @@ class XGBoost(Model):
         labels, array = self.prepare()
         dtrain = self.xgb.DMatrix(array, label=labels)
         self.logger.print('Training data prepared')
-        self.logger.print('Training...')
+        self.logger.print('Training XGBoost model...')
         model = self.xgb.train(self.train_params, dtrain,
-                          num_boost_round=self.train_params_rounds)
-                          #evals=evals_list, verbose_eval=50, TODO
-        self.logger.print('Training done')
+                          num_boost_round=self.train_params_rounds,
+                          evals=[(dtrain, 'train')], verbose_eval=100)
+        self.logger.print('Training XGBoost model done')
+        self.logger.print('Parameters of the XGBoost model:')
+        self.logger.print(f"rounds: {self.train_params_rounds}")
+        self.logger.print(f"eta: {self.train_params['eta']}")
+        self.logger.print(f"max_depth: {self.train_params['max_depth']}")
+        self.logger.print(f"booster: {self.train_params['booster']}")
+        self.logger.print(f"objective: {self.train_params['objective']}")
         self.save(model)
         self.logger.print(f'Model saved to {self.model_path}')
 

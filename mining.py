@@ -4,12 +4,13 @@ from prove import prove
 from deps import merge_deps, extract_deps
 from utils import write_lines, merge_predictions, unify_predictions
 from utils import read_deps, save_deps
+from utils import read_lines
 
 def mining(models, args):
     args.logger.print('Mining...')
     pos_deps, neg_deps = [], []
     train_thms = set(read_deps(args.train_deps))
-    num_mining_thms = round(args.mining * len(train_thms))
+    num_mining_thms = max(round(args.mining * len(train_thms)), 1)
     mining_thms = sample(train_thms, num_mining_thms)
     preds = [model.predict(mining_thms) for model in models]
     proofs = prove(preds, args)
