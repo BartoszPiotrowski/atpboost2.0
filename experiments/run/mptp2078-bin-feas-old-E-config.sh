@@ -13,4 +13,5 @@ python3 atpboost.py \
 	--n_jobs 70 \
 	--data_dir data/MPTP2078/atpboost_data \
 	--proving_script prove-old.sh \
+	--logfile `echo $0 | rev | cut -d. -f2- | rev`.log
 
