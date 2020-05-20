@@ -124,6 +124,14 @@ def save_deps(deps, filename):
 
 
 def read_features(path):
+    features_lines = read_lines(path)
+    if ':"' in features_lines[0]:
+        return read_features_binary(features_lines)
+    else:
+        return read_features_enigma(features_lines)
+
+def read_features_enigma(features_lines):
+    print('enigma features')
     '''
     Assumed format:
 
@@ -133,12 +141,32 @@ def read_features(path):
 
     '''
     features = {}
-    features_lines = read_lines(path)
     for l in features_lines:
         t, f = l.split(':', 1)
         f = f.split(' ')
         f = dict([(i.split(':')[0], int(i.split(':')[1])) for i in f])
         features[t] = f
+    return features
+
+
+def read_features_binary(features_lines):
+    print('binary features')
+    '''
+    Assumed format:
+
+    abstractness_v1_cfuncdom:"fea_1", "fea_2", "fea_3", ...
+    abstractness_v1_cat_1:"fea_8", "fea_5", "fea_1", ...
+    ...
+
+    '''
+    features = {}
+    for l in features_lines:
+        t, ff = l.split(':')
+        ff = ff.split(', ')
+        t = t.strip(' "')
+        ff = [f.strip(' "') for f in ff]
+        ff = set(ff)
+        features[t] = ff
     return features
 
 

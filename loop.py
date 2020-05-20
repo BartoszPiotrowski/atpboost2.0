@@ -34,7 +34,8 @@ if __name__=='__main__':
     class args: pass
     args.conjectures = 'data/example/conjectures'
     args.statements = 'data/example/statements'
-    args.features = 'data/example/features'
+    #args.features = 'data/example/features'
+    args.features = 'data/example/features_binary'
     args.chronology = 'data/example/chronology'
     args.train_deps = 'data/example/train_deps'
     args.xgb_knn_prefiltering = 100
