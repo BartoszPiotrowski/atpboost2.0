@@ -5,8 +5,8 @@ python3 atpboost.py \
     --features data/MPTP2078/features \
     --chronology data/MPTP2078/chronology \
 	--ml_models xgboost \
+	--xgb_knn_prefiltering 0 \
     --mining 0.1 \
     --iterations 100 \
 	--n_jobs 50 \
 	--data_dir data/MPTP2078/atpboost_data \
-	--xgb_knn_prefiltering 0
