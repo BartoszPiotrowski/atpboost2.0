@@ -27,11 +27,11 @@ def prove_one(conj, deps, statements_path, dir_path, proving_script, logger):
     run_prover(input_filename, output_filename, proving_script)
     if "# Proof found!" in read_lines(output_filename):
         logger.print('PROVED#' + conj + ':' + ' '.join(deps) \
-                     + '#Output: ' + output_filename, only_to_file=True)
+                     + '#Output: ' + output_filename, verb_level=7)
         return output_filename
     else:
         logger.print('NOT proved#' + conj + ':' + ' '.join(deps) \
-                     + '#Output: ' + output_filename, only_to_file=True)
+                     + '#Output: ' + output_filename, verb_level=7)
         return None
 
 
