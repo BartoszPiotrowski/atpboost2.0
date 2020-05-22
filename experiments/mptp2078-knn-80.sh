@@ -6,11 +6,10 @@ python3 atpboost.py \
 	--features data/MPTP2078/features_binary \
 	--chronology data/MPTP2078/chronology \
 	--proving_script prove.sh \
-	--ml_models xgboost \
+	--ml_models knn \
+	--knn_neighbours 80 \
 	--mining 0 \
-	--n_jobs 50 \
-	--xgb_rounds 1000 \
-	--xgb_knn_prefiltering 10000 \
+	--n_jobs 70 \
 	--data_dir data/MPTP2078/atpboost_data \
 	--logfile `echo $0 | sed 's/\.sh/.log/g'`
 

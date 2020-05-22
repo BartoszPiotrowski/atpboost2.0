@@ -53,8 +53,8 @@ if __name__ == '__main__':
         default=10,
         type=int)
     parser.add_argument(
-        '--xgb_knn_prefiltering',
-        default=10000,
+        '--knn_neighbours',
+        default=100,
         type=int)
     parser.add_argument(
         '--xgb_rounds',
@@ -64,6 +64,10 @@ if __name__ == '__main__':
         '--xgb_eta',
         default=0.1,
         type=float)
+    parser.add_argument(
+        '--xgb_knn_prefiltering',
+        default=10000,
+        type=int)
     args = parser.parse_args()
 
 loop(args)
