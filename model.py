@@ -78,10 +78,10 @@ class XGBoost(Model):
 
 
     def predict(self, conjs, max_num_prems=None):
-        self.logger.print(f'Making predictions for {len(conjs)} conjectures...')
         if max_num_prems == None:
             max_num_prems = self.knn_prefiltering
         conjs = read_lines(conjs) if type(conjs) == str else conjs
+        self.logger.print(f'Making predictions for {len(conjs)} conjectures...')
         chronology = read_lines(self.chronology)
         features = read_features(self.features)
         features_numbers = dict_features_numbers(features) # for knn prefilering
