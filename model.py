@@ -78,6 +78,7 @@ class XGBoost(Model):
 
 
     def predict(self, conjs, max_num_prems=None):
+        self.logger.print(f'Making predictions for {len(conjs)} conjectures...')
         if max_num_prems == None:
             max_num_prems = self.knn_prefiltering
         conjs = read_lines(conjs) if type(conjs) == str else conjs
@@ -98,6 +99,7 @@ class XGBoost(Model):
             scored_prems[conj] = self.score_prems(conj, candidate_prems,
                                                   model, features)
         self.predictions_path = self.make_predictions(scored_prems)
+        self.logger.print(f'Predictions saved to {self.predictions_path}')
         return self.predictions_path
 
 
