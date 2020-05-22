@@ -11,5 +11,5 @@ python3 atpboost.py \
 	--xgb_rounds 5000 \
 	--xgb_knn_prefiltering 0 \
     --data_dir data/MPTP2078/atpboost_data \
-	--logfile `echo $0 sed 's/\.sh/.log/g'`
+	--logfile `echo $0 | sed 's/\.sh/.log/g'`
 
