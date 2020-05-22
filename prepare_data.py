@@ -9,7 +9,7 @@ from deps import clean_deps, unify_deps
 from tqdm import tqdm
 
 
-def deps_to_train_array(train_deps=None, n_jobs=10, **kwargs):
+def deps_to_train_array(train_deps=None, n_jobs=1, **kwargs):
     thms = list(set(read_deps(train_deps)))
     split = partition(thms, max(1, len(thms) // 100))
     with Parallel(n_jobs=n_jobs) as parallel:
@@ -86,7 +86,7 @@ def pairs_to_array(pairs, features):
         else:
             raise TypeError
         featurised_pairs.append(fea_pair)
-    hasher = FeatureHasher(n_features=2**15, input_type='string') # 2**15 == 32768
+    hasher = FeatureHasher(n_features=2**14, input_type='string') # 2**15 == 32768
     array = hasher.transform(featurised_pairs)
     return array
 

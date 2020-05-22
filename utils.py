@@ -150,7 +150,6 @@ def read_features_enigma(features_lines):
 
 
 def read_features_binary(features_lines):
-    print('binary features')
     '''
     Assumed format:
 
@@ -192,6 +191,7 @@ def read_rankings(path):
         assert thm not in rankings
         rankings[thm] = rk
     return rankings
+
 
 def read_stms(path):
     stms_lines = read_lines(path)
