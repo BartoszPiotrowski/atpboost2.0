@@ -94,8 +94,8 @@ class XGBoost(Model):
             else:
                 candidate_prems = self.knn_prefilter(conj,
                     available_prems, deps, features, features_numbers)
-            scored_prems[conj] = self.score_prems(conj,
-                    candidate_prems, model, features)
+            scored_prems[conj] = self.score_prems(conj, candidate_prems,
+                                                  model, features)
         self.predictions_path = self.make_predictions(scored_prems)
         return self.predictions_path
 
@@ -124,6 +124,7 @@ class XGBoost(Model):
         array = self.xgb.DMatrix(array)
         scores = xgb_model.predict(array)
         premises_scores = list(zip(premises, scores))
+        write_lines([f'{p} {s}' for p, s in premises_scores], '_scores/' + conj)
         return premises_scores
 
 
