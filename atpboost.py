@@ -54,7 +54,7 @@ if __name__ == '__main__':
         type=int)
     parser.add_argument(
         '--knn_neighbours',
-        default=40,
+        default=100,
         type=int)
     parser.add_argument(
         '--xgb_rounds',
