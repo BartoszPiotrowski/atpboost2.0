@@ -1,4 +1,4 @@
 - cleaning deps
 - integrate gnn
 - describe parameters
-- shuffling premises when preparing input files for a prover
+- max_num_prems, knn_prefiltering: check this carefully
