@@ -23,6 +23,7 @@ def prove(predictions, args):
 
 def prove_one(conj, deps, statements_path, dir_path, proving_script, logger):
     assert not conj in set(deps), (conj, deps)
+    deps = list(deps)
     shuffle(deps)
     input_filename = problem_file(conj, deps, statements_path, dir_path)
     output_filename = input_filename.replace('.p', '.out')
