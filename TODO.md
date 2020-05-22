@@ -1,3 +1,4 @@
 - cleaning deps
 - integrate gnn
 - describe parameters
+- shuffling premises when preparing input files for a prover
