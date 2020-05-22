@@ -1,4 +1,4 @@
-import os
+import os, sys
 from prepare_data import deps_to_train_array, pairs_to_array
 from importlib import import_module
 from utils import read_lines, write_lines, read_features, read_deps, size, size
@@ -89,13 +89,14 @@ class XGBoost(Model):
         scored_prems = {}
         for conj in conjs:
             available_prems = set(chronology[:chronology.index(conj)])
-            if max_num_prems and len(available_prems) < max_num_prems:
+            if len(available_prems) < max_num_prems:
                 candidate_prems = available_prems
             else:
-                candidate_prems = self.knn_prefilter(conj,
-                    available_prems, deps, features, features_numbers)
-            scored_prems[conj] = self.score_prems(conj,
-                    candidate_prems, model, features)
+                candidate_prems = self.knn_prefilter(conj, available_prems,
+                                                     deps, features,
+                                                     features_numbers)
+            scored_prems[conj] = self.score_prems(conj, candidate_prems,
+                                                  model, features)
         self.predictions_path = self.make_predictions(scored_prems)
         return self.predictions_path
 
@@ -128,7 +129,7 @@ class XGBoost(Model):
 
 
     def make_predictions(self, scored_prems,
-                         slices_lens=[4,8,16,32,64,128,256,512,1024]):
+                         slices_lens=[4,8,16,32,64,128,256,512]):
         all_predictions = []
         for conj in scored_prems:
             sp = scored_prems[conj]

@@ -9,7 +9,7 @@ from deps import clean_deps, unify_deps
 from tqdm import tqdm
 
 
-def deps_to_train_array(train_deps=None, n_jobs=10, **kwargs):
+def deps_to_train_array(train_deps=None, n_jobs=1, **kwargs):
     thms = list(set(read_deps(train_deps)))
     split = partition(thms, max(1, len(thms) // 100))
     with Parallel(n_jobs=n_jobs) as parallel:
@@ -26,7 +26,6 @@ def deps_to_train_array_1_job(i_thms=None, deps=None, deps_negative=None,
     i, thms = i_thms
     deps = unify_deps(clean_deps(read_deps(deps)))
     chronology = read_lines(chronology)
-    features = read_features(features)
     if deps_negative:
         deps_negative = read_deps(deps_negative, unions=True)
     labels, pairs = [], []
@@ -41,7 +40,7 @@ def deps_to_train_array_1_job(i_thms=None, deps=None, deps_negative=None,
                                 available_premises, neg_premises, **kwargs)
         labels.extend(labels_thm)
         pairs.extend(pairs_thm)
-    array = pairs_to_array(pairs, features)
+    array = pairs_to_array(pairs, read_features(features))
     assert len(labels) == array.shape[0]
     labels_path = os.path.join(data_dir, 'labels_' + str(i) + '.pickle')
     array_path = os.path.join(data_dir, 'array_' + str(i) + '.pickle')
@@ -51,7 +50,7 @@ def deps_to_train_array_1_job(i_thms=None, deps=None, deps_negative=None,
 
 
 def thm_to_labels_and_pairs(thm, pos_premises, available_premises,
-                            neg_premises=set(), ratio_neg_pos=10, **kwars):
+                            neg_premises=set(), ratio_neg_pos=16, **kwars):
     not_pos_premises = set(available_premises) - pos_premises
     assert not pos_premises & not_pos_premises
     if len(not_pos_premises) == 0:
@@ -74,11 +73,11 @@ def pairs_to_array(pairs, features):
     for thm, prm in pairs:
         thm_f = features[thm]
         prm_f = features[prm]
-        if type(thm_f) == list:
+        if type(thm_f) == set: # 'binary' features
             thm_f_appended = ['T' + f for f in thm_f]
             prm_f_appended = ['P' + f for f in prm_f]
             fea_pair = thm_f_appended + prm_f_appended
-        elif type(thm_f) == dict:
+        elif type(thm_f) == dict: # 'enigma' features
             fea_pair = {}
             for f in thm_f:
                 fea_pair['T' + f] = thm_f[f]
@@ -87,7 +86,7 @@ def pairs_to_array(pairs, features):
         else:
             raise TypeError
         featurised_pairs.append(fea_pair)
-    hasher = FeatureHasher(n_features=2**13, input_type='string') # 2**15 == 32768
+    hasher = FeatureHasher(n_features=2**14, input_type='string') # 2**15 == 32768
     array = hasher.transform(featurised_pairs)
     return array
 
@@ -113,10 +112,11 @@ def merge_saved_arrays(labels_arrays):
 
 if __name__=='__main__':
     # tests
-    deps = 'data/test/deps'
-    deps_negative = 'data/test/deps_negative'
-    features = 'data/test/feat_enigma'
-    chronology = 'data/test/chronology'
+    deps = 'data/example/train_deps'
+    deps_negative = 'data/example/train_neg_deps'
+    features = 'data/example/features_binary'
+    #features = 'data/example/features'
+    chronology = 'data/example/chronology'
     #labels_path, array_path = deps_to_train_array_1_job(
     #    i_thms=(3, ['l100_finseq_1', 'l100_modelc_2', 'l100_sincos10']),
     #    deps=deps,
@@ -127,9 +127,10 @@ if __name__=='__main__':
     #)
 
     labels, array = deps_to_train_array(
-        deps=deps,
+        train_deps=deps,
         features=features,
         chronology=chronology,
         deps_negative=deps_negative,
-        data_dir='tmp/data'
+        data_dir='tmp/data',
+        n_jobs=1
     )
