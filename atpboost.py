@@ -54,11 +54,11 @@ if __name__ == '__main__':
         type=int)
     parser.add_argument(
         '--xgb_knn_prefiltering',
-        default=1024,
+        default=10000,
         type=int)
     parser.add_argument(
         '--xgb_rounds',
-        default=1024,
+        default=1000,
         type=int)
     parser.add_argument(
         '--xgb_eta',
