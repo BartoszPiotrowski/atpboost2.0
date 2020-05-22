@@ -1,0 +1,3391 @@
+"fof_lexer.ml" 8 90 94 "fof_lexer.ml" 8 90 112
+type(
+  Lexing.lex_tables
+)
+ident(
+  def __ocaml_lex_tables "fof_lexer.ml" 243 15353 15353 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.ml" 10 138 141 "fof_lexer.ml" 16 558 587
+type(
+  string
+)
+"fof_lexer.ml" 18 613 616 "fof_lexer.ml" 24 1033 1062
+type(
+  string
+)
+"fof_lexer.ml" 26 1088 1091 "fof_lexer.ml" 32 1508 1537
+type(
+  string
+)
+"fof_lexer.ml" 34 1561 1564 "fof_lexer.ml" 130 8281 8342
+type(
+  string
+)
+"fof_lexer.ml" 132 8366 8369 "fof_lexer.ml" 228 15086 15147
+type(
+  string
+)
+"fof_lexer.ml" 230 15175 15178 "fof_lexer.ml" 230 15175 15180
+type(
+  string
+)
+"fof_lexer.ml" 232 15211 15214 "fof_lexer.ml" 232 15211 15216
+type(
+  string
+)
+"fof_lexer.ml" 234 15247 15250 "fof_lexer.ml" 234 15247 15252
+type(
+  string
+)
+"fof_lexer.ml" 236 15281 15284 "fof_lexer.ml" 236 15281 15286
+type(
+  string
+)
+"fof_lexer.ml" 238 15315 15318 "fof_lexer.ml" 238 15315 15320
+type(
+  string
+)
+"fof_lexer.ml" 240 15343 15346 "fof_lexer.ml" 240 15343 15348
+type(
+  string
+)
+"fof_lexer.ml" 8 90 115 "fof_lexer.ml" 241 15350 15351
+type(
+  Lexing.lex_tables
+)
+"fof_lexer.ml" 243 15353 15361 "fof_lexer.ml" 243 15353 15366
+type(
+  Lexing.lexbuf -> Fof_parse.token
+)
+ident(
+  def hhlex "fof_lexer.ml" 243 15353 15353 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.ml" 243 15353 15367 "fof_lexer.ml" 243 15353 15373
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "fof_lexer.ml" 244 15376 15380 "fof_lexer.ml" 244 15376 15410
+)
+"fof_lexer.ml" 244 15376 15380 "fof_lexer.ml" 244 15376 15401
+type(
+  Lexing.lexbuf -> int -> Fof_parse.token
+)
+ident(
+  int_ref __ocaml_lex_hhlex_rec "fof_lexer.ml" 245 15411 15415 "fof_lexer.ml" 245 15411 15436
+)
+"fof_lexer.ml" 244 15376 15402 "fof_lexer.ml" 244 15376 15408
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 243 15353 15367 "fof_lexer.ml" 243 15353 15373
+)
+"fof_lexer.ml" 244 15376 15409 "fof_lexer.ml" 244 15376 15410
+type(
+  int
+)
+"fof_lexer.ml" 244 15376 15380 "fof_lexer.ml" 244 15376 15410
+call(
+  tail
+)
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 245 15411 15415 "fof_lexer.ml" 245 15411 15436
+type(
+  Lexing.lexbuf -> int -> Fof_parse.token
+)
+ident(
+  def __ocaml_lex_hhlex_rec "fof_lexer.ml" 243 15353 15353 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "fof_lexer.ml" 245 15411 15444 "fof_lexer.ml" 367 17880 17985
+)
+"fof_lexer.ml" 245 15411 15444 "fof_lexer.ml" 245 15411 15461
+type(
+  int
+)
+ident(
+  def __ocaml_lex_state "fof_lexer.ml" 246 15464 15466 "fof_lexer.ml" 367 17880 17985
+)
+"fof_lexer.ml" 246 15464 15472 "fof_lexer.ml" 246 15464 15485
+type(
+  Lexing.lex_tables -> int -> Lexing.lexbuf -> int
+)
+ident(
+  ext_ref Lexing.engine
+)
+"fof_lexer.ml" 246 15464 15486 "fof_lexer.ml" 246 15464 15504
+type(
+  Lexing.lex_tables
+)
+ident(
+  int_ref __ocaml_lex_tables "fof_lexer.ml" 8 90 94 "fof_lexer.ml" 8 90 112
+)
+"fof_lexer.ml" 246 15464 15505 "fof_lexer.ml" 246 15464 15522
+type(
+  int
+)
+ident(
+  int_ref __ocaml_lex_state "fof_lexer.ml" 245 15411 15444 "fof_lexer.ml" 245 15411 15461
+)
+"fof_lexer.ml" 246 15464 15523 "fof_lexer.ml" 246 15464 15529
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+)
+"fof_lexer.ml" 246 15464 15472 "fof_lexer.ml" 246 15464 15529
+call(
+  stack
+)
+type(
+  int
+)
+"fof_lexer.ml" 247 15535 15543 "fof_lexer.ml" 247 15535 15544
+type(
+  int
+)
+"fof_lexer.mll" 13 15569 15591 "fof_lexer.mll" 13 15569 15596
+type(
+  Lexing.lexbuf -> Fof_parse.token
+)
+ident(
+  int_ref hhlex "fof_lexer.ml" 243 15353 15361 "fof_lexer.ml" 243 15353 15366
+)
+"fof_lexer.mll" 13 15569 15597 "fof_lexer.mll" 13 15569 15603
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+)
+"fof_lexer.mll" 13 15569 15590 "fof_lexer.mll" 13 15569 15604
+call(
+  tail
+)
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 252 15627 15631 "fof_lexer.ml" 252 15627 15632
+type(
+  int
+)
+"fof_lexer.mll" 14 15657 15679 "fof_lexer.mll" 14 15657 15684
+type(
+  Lexing.lexbuf -> Fof_parse.token
+)
+ident(
+  int_ref hhlex "fof_lexer.ml" 243 15353 15361 "fof_lexer.ml" 243 15353 15366
+)
+"fof_lexer.mll" 14 15657 15685 "fof_lexer.mll" 14 15657 15691
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+)
+"fof_lexer.mll" 14 15657 15678 "fof_lexer.mll" 14 15657 15692
+call(
+  tail
+)
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 257 15715 15719 "fof_lexer.ml" 257 15715 15720
+type(
+  int
+)
+"fof_lexer.mll" 15 15745 15792 "fof_lexer.mll" 15 15745 15797
+type(
+  Lexing.lexbuf -> Fof_parse.token
+)
+ident(
+  int_ref hhlex "fof_lexer.ml" 243 15353 15361 "fof_lexer.ml" 243 15353 15366
+)
+"fof_lexer.mll" 15 15745 15798 "fof_lexer.mll" 15 15745 15804
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+)
+"fof_lexer.mll" 15 15745 15766 "fof_lexer.mll" 15 15745 15805
+call(
+  tail
+)
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 262 15828 15832 "fof_lexer.ml" 262 15828 15833
+type(
+  int
+)
+"fof_lexer.mll" 16 15858 15879 "fof_lexer.mll" 16 15858 15884
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 267 15907 15911 "fof_lexer.ml" 267 15907 15912
+type(
+  int
+)
+"fof_lexer.mll" 17 15937 15958 "fof_lexer.mll" 17 15937 15990
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 272 16013 16017 "fof_lexer.ml" 272 16013 16018
+type(
+  int
+)
+"fof_lexer.mll" 18 16043 16064 "fof_lexer.mll" 18 16043 16097
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 277 16120 16124 "fof_lexer.ml" 277 16120 16125
+type(
+  int
+)
+"fof_lexer.mll" 19 16150 16171 "fof_lexer.mll" 19 16150 16176
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 282 16199 16203 "fof_lexer.ml" 282 16199 16204
+type(
+  int
+)
+"fof_lexer.mll" 20 16229 16250 "fof_lexer.mll" 20 16229 16257
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 287 16280 16284 "fof_lexer.ml" 287 16280 16285
+type(
+  int
+)
+"fof_lexer.mll" 21 16310 16362 "fof_lexer.mll" 21 16310 16369
+type(
+  Lexing.lexbuf -> string list
+)
+ident(
+  int_ref lex_ids "fof_lexer.ml" 421 19406 19410 "fof_lexer.ml" 421 19406 19417
+)
+"fof_lexer.mll" 21 16310 16370 "fof_lexer.mll" 21 16310 16376
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+)
+"fof_lexer.mll" 21 16310 16361 "fof_lexer.mll" 21 16310 16377
+call(
+  stack
+)
+type(
+  string list
+)
+"fof_lexer.mll" 21 16310 16331 "fof_lexer.mll" 21 16310 16378
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 292 16401 16405 "fof_lexer.ml" 292 16401 16406
+type(
+  int
+)
+"fof_lexer.mll" 22 16431 16457 "fof_lexer.mll" 22 16431 16464
+type(
+  Lexing.lexbuf -> string list
+)
+ident(
+  int_ref lex_ids "fof_lexer.ml" 421 19406 19410 "fof_lexer.ml" 421 19406 19417
+)
+"fof_lexer.mll" 22 16431 16465 "fof_lexer.mll" 22 16431 16471
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+)
+"fof_lexer.mll" 22 16431 16456 "fof_lexer.mll" 22 16431 16472
+call(
+  stack
+)
+type(
+  string list
+)
+"fof_lexer.mll" 22 16431 16452 "fof_lexer.mll" 22 16431 16473
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 297 16496 16500 "fof_lexer.ml" 297 16496 16502
+type(
+  int
+)
+"fof_lexer.mll" 23 16527 16548 "fof_lexer.mll" 23 16527 16552
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 302 16575 16579 "fof_lexer.ml" 302 16575 16581
+type(
+  int
+)
+"fof_lexer.mll" 24 16606 16627 "fof_lexer.mll" 24 16606 16632
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 307 16655 16659 "fof_lexer.ml" 307 16655 16661
+type(
+  int
+)
+"fof_lexer.mll" 25 16686 16707 "fof_lexer.mll" 25 16686 16714
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 312 16737 16741 "fof_lexer.ml" 312 16737 16743
+type(
+  int
+)
+"fof_lexer.mll" 26 16768 16789 "fof_lexer.mll" 26 16768 16795
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 317 16818 16822 "fof_lexer.ml" 317 16818 16824
+type(
+  int
+)
+"fof_lexer.mll" 27 16849 16870 "fof_lexer.mll" 27 16849 16876
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 322 16899 16903 "fof_lexer.ml" 322 16899 16905
+type(
+  int
+)
+"fof_lexer.mll" 28 16930 16951 "fof_lexer.mll" 28 16930 16958
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 327 16981 16985 "fof_lexer.ml" 327 16981 16987
+type(
+  int
+)
+"fof_lexer.mll" 29 17012 17033 "fof_lexer.mll" 29 17012 17064
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 332 17087 17091 "fof_lexer.ml" 332 17087 17093
+type(
+  int
+)
+"fof_lexer.mll" 30 17118 17139 "fof_lexer.mll" 30 17118 17173
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 337 17196 17200 "fof_lexer.ml" 337 17196 17202
+type(
+  int
+)
+"fof_lexer.mll" 31 17227 17248 "fof_lexer.mll" 31 17227 17278
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 342 17301 17305 "fof_lexer.ml" 342 17301 17307
+type(
+  int
+)
+"fof_lexer.mll" 32 17332 17353 "fof_lexer.mll" 32 17332 17357
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 347 17380 17384 "fof_lexer.ml" 347 17380 17386
+type(
+  int
+)
+"fof_lexer.mll" 33 17411 17439 "fof_lexer.mll" 33 17411 17452
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  ext_ref Lexing.lexeme
+)
+"fof_lexer.mll" 33 17411 17453 "fof_lexer.mll" 33 17411 17459
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+)
+"fof_lexer.mll" 33 17411 17438 "fof_lexer.mll" 33 17411 17460
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 33 17411 17432 "fof_lexer.mll" 33 17411 17461
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 352 17484 17488 "fof_lexer.ml" 352 17484 17490
+type(
+  int
+)
+"fof_lexer.mll" 34 17515 17566 "fof_lexer.mll" 34 17515 17567
+type(
+  string
+)
+ident(
+  def s "fof_lexer.mll" 34 17515 17594 "fof_lexer.mll" 34 17515 17629
+)
+"fof_lexer.mll" 34 17515 17570 "fof_lexer.mll" 34 17515 17583
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  ext_ref Lexing.lexeme
+)
+"fof_lexer.mll" 34 17515 17584 "fof_lexer.mll" 34 17515 17590
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+)
+"fof_lexer.mll" 34 17515 17570 "fof_lexer.mll" 34 17515 17590
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 34 17515 17603 "fof_lexer.mll" 34 17515 17604
+type(
+  string
+)
+ident(
+  int_ref s "fof_lexer.mll" 34 17515 17566 "fof_lexer.mll" 34 17515 17567
+)
+"fof_lexer.mll" 34 17515 17605 "fof_lexer.mll" 34 17515 17606
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fof_lexer.mll" 34 17515 17607 "fof_lexer.mll" 34 17515 17610
+type(
+  string
+)
+"fof_lexer.mll" 34 17515 17603 "fof_lexer.mll" 34 17515 17610
+type(
+  bool
+)
+"fof_lexer.mll" 34 17515 17616 "fof_lexer.mll" 34 17515 17621
+type(
+  string
+)
+"fof_lexer.mll" 34 17515 17627 "fof_lexer.mll" 34 17515 17628
+type(
+  string
+)
+ident(
+  int_ref s "fof_lexer.mll" 34 17515 17566 "fof_lexer.mll" 34 17515 17567
+)
+"fof_lexer.mll" 34 17515 17599 "fof_lexer.mll" 34 17515 17629
+type(
+  string
+)
+"fof_lexer.mll" 34 17515 17594 "fof_lexer.mll" 34 17515 17629
+type(
+  Fof_parse.token
+)
+"fof_lexer.mll" 34 17515 17536 "fof_lexer.mll" 34 17515 17631
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 357 17654 17658 "fof_lexer.ml" 357 17654 17660
+type(
+  int
+)
+"fof_lexer.mll" 35 17685 17713 "fof_lexer.mll" 35 17685 17716
+type(
+  string
+)
+"fof_lexer.mll" 35 17685 17717 "fof_lexer.mll" 35 17685 17718
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"fof_lexer.mll" 35 17685 17719 "fof_lexer.mll" 35 17685 17728
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  int_ref lex_squot "fof_lexer.ml" 369 17987 17991 "fof_lexer.ml" 369 17987 18000
+)
+"fof_lexer.mll" 35 17685 17729 "fof_lexer.mll" 35 17685 17735
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+)
+"fof_lexer.mll" 35 17685 17719 "fof_lexer.mll" 35 17685 17735
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 35 17685 17736 "fof_lexer.mll" 35 17685 17737
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"fof_lexer.mll" 35 17685 17738 "fof_lexer.mll" 35 17685 17741
+type(
+  string
+)
+"fof_lexer.mll" 35 17685 17719 "fof_lexer.mll" 35 17685 17741
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 35 17685 17712 "fof_lexer.mll" 35 17685 17742
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 35 17685 17706 "fof_lexer.mll" 35 17685 17743
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 362 17766 17770 "fof_lexer.ml" 362 17766 17772
+type(
+  int
+)
+"fof_lexer.mll" 36 17797 17825 "fof_lexer.mll" 36 17797 17829
+type(
+  string
+)
+"fof_lexer.mll" 36 17797 17830 "fof_lexer.mll" 36 17797 17831
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"fof_lexer.mll" 36 17797 17832 "fof_lexer.mll" 36 17797 17841
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  int_ref lex_dquot "fof_lexer.ml" 395 18696 18700 "fof_lexer.ml" 395 18696 18709
+)
+"fof_lexer.mll" 36 17797 17842 "fof_lexer.mll" 36 17797 17848
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+)
+"fof_lexer.mll" 36 17797 17832 "fof_lexer.mll" 36 17797 17848
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 36 17797 17849 "fof_lexer.mll" 36 17797 17850
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"fof_lexer.mll" 36 17797 17851 "fof_lexer.mll" 36 17797 17855
+type(
+  string
+)
+"fof_lexer.mll" 36 17797 17832 "fof_lexer.mll" 36 17797 17855
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 36 17797 17824 "fof_lexer.mll" 36 17797 17856
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 36 17797 17818 "fof_lexer.mll" 36 17797 17857
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 367 17880 17884 "fof_lexer.ml" 367 17880 17901
+type(
+  int
+)
+ident(
+  def __ocaml_lex_state "fof_lexer.ml" 367 17880 17905 "fof_lexer.ml" 367 17880 17985
+)
+"fof_lexer.ml" 367 17880 17905 "fof_lexer.ml" 367 17880 17911
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+)
+"fof_lexer.ml" 367 17880 17905 "fof_lexer.ml" 367 17880 17930
+type(
+  Lexing.lexbuf -> unit
+)
+"fof_lexer.ml" 367 17880 17931 "fof_lexer.ml" 367 17880 17937
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+)
+"fof_lexer.ml" 367 17880 17905 "fof_lexer.ml" 367 17880 17937
+call(
+  stack
+)
+type(
+  unit
+)
+"fof_lexer.ml" 367 17880 17939 "fof_lexer.ml" 367 17880 17960
+type(
+  Lexing.lexbuf -> int -> Fof_parse.token
+)
+ident(
+  int_ref __ocaml_lex_hhlex_rec "fof_lexer.ml" 245 15411 15415 "fof_lexer.ml" 245 15411 15436
+)
+"fof_lexer.ml" 367 17880 17961 "fof_lexer.ml" 367 17880 17967
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 245 15411 15437 "fof_lexer.ml" 245 15411 15443
+)
+"fof_lexer.ml" 367 17880 17968 "fof_lexer.ml" 367 17880 17985
+type(
+  int
+)
+ident(
+  int_ref __ocaml_lex_state "fof_lexer.ml" 367 17880 17884 "fof_lexer.ml" 367 17880 17901
+)
+"fof_lexer.ml" 367 17880 17939 "fof_lexer.ml" 367 17880 17985
+call(
+  tail
+)
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 367 17880 17905 "fof_lexer.ml" 367 17880 17985
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 246 15464 15466 "fof_lexer.ml" 367 17880 17985
+type(
+  Fof_parse.token
+)
+"fof_lexer.ml" 369 17987 17991 "fof_lexer.ml" 369 17987 18000
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  def lex_squot "fof_lexer.ml" 243 15353 15353 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.ml" 369 17987 18001 "fof_lexer.ml" 369 17987 18007
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "fof_lexer.ml" 370 18010 18014 "fof_lexer.ml" 370 18010 18049
+)
+"fof_lexer.ml" 370 18010 18014 "fof_lexer.ml" 370 18010 18039
+type(
+  Lexing.lexbuf -> int -> string
+)
+ident(
+  int_ref __ocaml_lex_lex_squot_rec "fof_lexer.ml" 371 18050 18054 "fof_lexer.ml" 371 18050 18079
+)
+"fof_lexer.ml" 370 18010 18040 "fof_lexer.ml" 370 18010 18046
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 369 17987 18001 "fof_lexer.ml" 369 17987 18007
+)
+"fof_lexer.ml" 370 18010 18047 "fof_lexer.ml" 370 18010 18049
+type(
+  int
+)
+"fof_lexer.ml" 370 18010 18014 "fof_lexer.ml" 370 18010 18049
+call(
+  tail
+)
+type(
+  string
+)
+"fof_lexer.ml" 371 18050 18054 "fof_lexer.ml" 371 18050 18079
+type(
+  Lexing.lexbuf -> int -> string
+)
+ident(
+  def __ocaml_lex_lex_squot_rec "fof_lexer.ml" 243 15353 15353 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.ml" 371 18050 18080 "fof_lexer.ml" 371 18050 18086
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "fof_lexer.ml" 371 18050 18087 "fof_lexer.ml" 393 18585 18694
+)
+"fof_lexer.ml" 371 18050 18087 "fof_lexer.ml" 371 18050 18104
+type(
+  int
+)
+ident(
+  def __ocaml_lex_state "fof_lexer.ml" 372 18107 18109 "fof_lexer.ml" 393 18585 18694
+)
+"fof_lexer.ml" 372 18107 18115 "fof_lexer.ml" 372 18107 18128
+type(
+  Lexing.lex_tables -> int -> Lexing.lexbuf -> int
+)
+ident(
+  ext_ref Lexing.engine
+)
+"fof_lexer.ml" 372 18107 18129 "fof_lexer.ml" 372 18107 18147
+type(
+  Lexing.lex_tables
+)
+ident(
+  int_ref __ocaml_lex_tables "fof_lexer.ml" 8 90 94 "fof_lexer.ml" 8 90 112
+)
+"fof_lexer.ml" 372 18107 18148 "fof_lexer.ml" 372 18107 18165
+type(
+  int
+)
+ident(
+  int_ref __ocaml_lex_state "fof_lexer.ml" 371 18050 18087 "fof_lexer.ml" 371 18050 18104
+)
+"fof_lexer.ml" 372 18107 18166 "fof_lexer.ml" 372 18107 18172
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 371 18050 18080 "fof_lexer.ml" 371 18050 18086
+)
+"fof_lexer.ml" 372 18107 18115 "fof_lexer.ml" 372 18107 18172
+call(
+  stack
+)
+type(
+  int
+)
+"fof_lexer.ml" 373 18178 18186 "fof_lexer.ml" 373 18178 18187
+type(
+  int
+)
+"fof_lexer.mll" 39 18212 18233 "fof_lexer.mll" 39 18212 18237
+type(
+  string
+)
+"fof_lexer.ml" 378 18260 18264 "fof_lexer.ml" 378 18260 18265
+type(
+  int
+)
+"fof_lexer.mll" 40 18290 18312 "fof_lexer.mll" 40 18290 18316
+type(
+  string
+)
+"fof_lexer.mll" 40 18290 18317 "fof_lexer.mll" 40 18290 18318
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"fof_lexer.mll" 40 18290 18319 "fof_lexer.mll" 40 18290 18328
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  int_ref lex_squot "fof_lexer.ml" 369 17987 17991 "fof_lexer.ml" 369 17987 18000
+)
+"fof_lexer.mll" 40 18290 18329 "fof_lexer.mll" 40 18290 18335
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 371 18050 18080 "fof_lexer.ml" 371 18050 18086
+)
+"fof_lexer.mll" 40 18290 18319 "fof_lexer.mll" 40 18290 18335
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 40 18290 18311 "fof_lexer.mll" 40 18290 18336
+call(
+  tail
+)
+type(
+  string
+)
+"fof_lexer.ml" 383 18359 18363 "fof_lexer.ml" 383 18359 18364
+type(
+  int
+)
+"fof_lexer.mll" 41 18389 18411 "fof_lexer.mll" 41 18389 18414
+type(
+  string
+)
+"fof_lexer.mll" 41 18389 18415 "fof_lexer.mll" 41 18389 18416
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"fof_lexer.mll" 41 18389 18417 "fof_lexer.mll" 41 18389 18426
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  int_ref lex_squot "fof_lexer.ml" 369 17987 17991 "fof_lexer.ml" 369 17987 18000
+)
+"fof_lexer.mll" 41 18389 18427 "fof_lexer.mll" 41 18389 18433
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 371 18050 18080 "fof_lexer.ml" 371 18050 18086
+)
+"fof_lexer.mll" 41 18389 18417 "fof_lexer.mll" 41 18389 18433
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 41 18389 18410 "fof_lexer.mll" 41 18389 18434
+call(
+  tail
+)
+type(
+  string
+)
+"fof_lexer.ml" 388 18457 18461 "fof_lexer.ml" 388 18457 18462
+type(
+  int
+)
+"fof_lexer.mll" 42 18487 18513 "fof_lexer.mll" 42 18487 18514
+type(
+  string
+)
+ident(
+  def s "fof_lexer.mll" 42 18487 18541 "fof_lexer.mll" 42 18487 18561
+)
+"fof_lexer.mll" 42 18487 18517 "fof_lexer.mll" 42 18487 18530
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  ext_ref Lexing.lexeme
+)
+"fof_lexer.mll" 42 18487 18531 "fof_lexer.mll" 42 18487 18537
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 371 18050 18080 "fof_lexer.ml" 371 18050 18086
+)
+"fof_lexer.mll" 42 18487 18517 "fof_lexer.mll" 42 18487 18537
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 42 18487 18541 "fof_lexer.mll" 42 18487 18542
+type(
+  string
+)
+ident(
+  int_ref s "fof_lexer.mll" 42 18487 18513 "fof_lexer.mll" 42 18487 18514
+)
+"fof_lexer.mll" 42 18487 18543 "fof_lexer.mll" 42 18487 18544
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"fof_lexer.mll" 42 18487 18545 "fof_lexer.mll" 42 18487 18554
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  int_ref lex_squot "fof_lexer.ml" 369 17987 17991 "fof_lexer.ml" 369 17987 18000
+)
+"fof_lexer.mll" 42 18487 18555 "fof_lexer.mll" 42 18487 18561
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 371 18050 18080 "fof_lexer.ml" 371 18050 18086
+)
+"fof_lexer.mll" 42 18487 18545 "fof_lexer.mll" 42 18487 18561
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 42 18487 18541 "fof_lexer.mll" 42 18487 18561
+call(
+  tail
+)
+type(
+  string
+)
+"fof_lexer.mll" 42 18487 18508 "fof_lexer.mll" 42 18487 18562
+type(
+  string
+)
+"fof_lexer.ml" 393 18585 18589 "fof_lexer.ml" 393 18585 18606
+type(
+  int
+)
+ident(
+  def __ocaml_lex_state "fof_lexer.ml" 393 18585 18610 "fof_lexer.ml" 393 18585 18694
+)
+"fof_lexer.ml" 393 18585 18610 "fof_lexer.ml" 393 18585 18616
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 371 18050 18080 "fof_lexer.ml" 371 18050 18086
+)
+"fof_lexer.ml" 393 18585 18610 "fof_lexer.ml" 393 18585 18635
+type(
+  Lexing.lexbuf -> unit
+)
+"fof_lexer.ml" 393 18585 18636 "fof_lexer.ml" 393 18585 18642
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 371 18050 18080 "fof_lexer.ml" 371 18050 18086
+)
+"fof_lexer.ml" 393 18585 18610 "fof_lexer.ml" 393 18585 18642
+call(
+  stack
+)
+type(
+  unit
+)
+"fof_lexer.ml" 393 18585 18644 "fof_lexer.ml" 393 18585 18669
+type(
+  Lexing.lexbuf -> int -> string
+)
+ident(
+  int_ref __ocaml_lex_lex_squot_rec "fof_lexer.ml" 371 18050 18054 "fof_lexer.ml" 371 18050 18079
+)
+"fof_lexer.ml" 393 18585 18670 "fof_lexer.ml" 393 18585 18676
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 371 18050 18080 "fof_lexer.ml" 371 18050 18086
+)
+"fof_lexer.ml" 393 18585 18677 "fof_lexer.ml" 393 18585 18694
+type(
+  int
+)
+ident(
+  int_ref __ocaml_lex_state "fof_lexer.ml" 393 18585 18589 "fof_lexer.ml" 393 18585 18606
+)
+"fof_lexer.ml" 393 18585 18644 "fof_lexer.ml" 393 18585 18694
+call(
+  tail
+)
+type(
+  string
+)
+"fof_lexer.ml" 393 18585 18610 "fof_lexer.ml" 393 18585 18694
+type(
+  string
+)
+"fof_lexer.ml" 372 18107 18109 "fof_lexer.ml" 393 18585 18694
+type(
+  string
+)
+"fof_lexer.ml" 395 18696 18700 "fof_lexer.ml" 395 18696 18709
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  def lex_dquot "fof_lexer.ml" 243 15353 15353 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.ml" 395 18696 18710 "fof_lexer.ml" 395 18696 18716
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "fof_lexer.ml" 396 18719 18723 "fof_lexer.ml" 396 18719 18758
+)
+"fof_lexer.ml" 396 18719 18723 "fof_lexer.ml" 396 18719 18748
+type(
+  Lexing.lexbuf -> int -> string
+)
+ident(
+  int_ref __ocaml_lex_lex_dquot_rec "fof_lexer.ml" 397 18759 18763 "fof_lexer.ml" 397 18759 18788
+)
+"fof_lexer.ml" 396 18719 18749 "fof_lexer.ml" 396 18719 18755
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 395 18696 18710 "fof_lexer.ml" 395 18696 18716
+)
+"fof_lexer.ml" 396 18719 18756 "fof_lexer.ml" 396 18719 18758
+type(
+  int
+)
+"fof_lexer.ml" 396 18719 18723 "fof_lexer.ml" 396 18719 18758
+call(
+  tail
+)
+type(
+  string
+)
+"fof_lexer.ml" 397 18759 18763 "fof_lexer.ml" 397 18759 18788
+type(
+  Lexing.lexbuf -> int -> string
+)
+ident(
+  def __ocaml_lex_lex_dquot_rec "fof_lexer.ml" 243 15353 15353 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.ml" 397 18759 18789 "fof_lexer.ml" 397 18759 18795
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "fof_lexer.ml" 397 18759 18796 "fof_lexer.ml" 419 19295 19404
+)
+"fof_lexer.ml" 397 18759 18796 "fof_lexer.ml" 397 18759 18813
+type(
+  int
+)
+ident(
+  def __ocaml_lex_state "fof_lexer.ml" 398 18816 18818 "fof_lexer.ml" 419 19295 19404
+)
+"fof_lexer.ml" 398 18816 18824 "fof_lexer.ml" 398 18816 18837
+type(
+  Lexing.lex_tables -> int -> Lexing.lexbuf -> int
+)
+ident(
+  ext_ref Lexing.engine
+)
+"fof_lexer.ml" 398 18816 18838 "fof_lexer.ml" 398 18816 18856
+type(
+  Lexing.lex_tables
+)
+ident(
+  int_ref __ocaml_lex_tables "fof_lexer.ml" 8 90 94 "fof_lexer.ml" 8 90 112
+)
+"fof_lexer.ml" 398 18816 18857 "fof_lexer.ml" 398 18816 18874
+type(
+  int
+)
+ident(
+  int_ref __ocaml_lex_state "fof_lexer.ml" 397 18759 18796 "fof_lexer.ml" 397 18759 18813
+)
+"fof_lexer.ml" 398 18816 18875 "fof_lexer.ml" 398 18816 18881
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 397 18759 18789 "fof_lexer.ml" 397 18759 18795
+)
+"fof_lexer.ml" 398 18816 18824 "fof_lexer.ml" 398 18816 18881
+call(
+  stack
+)
+type(
+  int
+)
+"fof_lexer.ml" 399 18887 18895 "fof_lexer.ml" 399 18887 18896
+type(
+  int
+)
+"fof_lexer.mll" 45 18921 18942 "fof_lexer.mll" 45 18921 18946
+type(
+  string
+)
+"fof_lexer.ml" 404 18969 18973 "fof_lexer.ml" 404 18969 18974
+type(
+  int
+)
+"fof_lexer.mll" 46 18999 19021 "fof_lexer.mll" 46 18999 19025
+type(
+  string
+)
+"fof_lexer.mll" 46 18999 19026 "fof_lexer.mll" 46 18999 19027
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"fof_lexer.mll" 46 18999 19028 "fof_lexer.mll" 46 18999 19037
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  int_ref lex_dquot "fof_lexer.ml" 395 18696 18700 "fof_lexer.ml" 395 18696 18709
+)
+"fof_lexer.mll" 46 18999 19038 "fof_lexer.mll" 46 18999 19044
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 397 18759 18789 "fof_lexer.ml" 397 18759 18795
+)
+"fof_lexer.mll" 46 18999 19028 "fof_lexer.mll" 46 18999 19044
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 46 18999 19020 "fof_lexer.mll" 46 18999 19045
+call(
+  tail
+)
+type(
+  string
+)
+"fof_lexer.ml" 409 19068 19072 "fof_lexer.ml" 409 19068 19073
+type(
+  int
+)
+"fof_lexer.mll" 47 19098 19120 "fof_lexer.mll" 47 19098 19124
+type(
+  string
+)
+"fof_lexer.mll" 47 19098 19125 "fof_lexer.mll" 47 19098 19126
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"fof_lexer.mll" 47 19098 19127 "fof_lexer.mll" 47 19098 19136
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  int_ref lex_dquot "fof_lexer.ml" 395 18696 18700 "fof_lexer.ml" 395 18696 18709
+)
+"fof_lexer.mll" 47 19098 19137 "fof_lexer.mll" 47 19098 19143
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 397 18759 18789 "fof_lexer.ml" 397 18759 18795
+)
+"fof_lexer.mll" 47 19098 19127 "fof_lexer.mll" 47 19098 19143
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 47 19098 19119 "fof_lexer.mll" 47 19098 19144
+call(
+  tail
+)
+type(
+  string
+)
+"fof_lexer.ml" 414 19167 19171 "fof_lexer.ml" 414 19167 19172
+type(
+  int
+)
+"fof_lexer.mll" 48 19197 19223 "fof_lexer.mll" 48 19197 19224
+type(
+  string
+)
+ident(
+  def s "fof_lexer.mll" 48 19197 19251 "fof_lexer.mll" 48 19197 19271
+)
+"fof_lexer.mll" 48 19197 19227 "fof_lexer.mll" 48 19197 19240
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  ext_ref Lexing.lexeme
+)
+"fof_lexer.mll" 48 19197 19241 "fof_lexer.mll" 48 19197 19247
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 397 18759 18789 "fof_lexer.ml" 397 18759 18795
+)
+"fof_lexer.mll" 48 19197 19227 "fof_lexer.mll" 48 19197 19247
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 48 19197 19251 "fof_lexer.mll" 48 19197 19252
+type(
+  string
+)
+ident(
+  int_ref s "fof_lexer.mll" 48 19197 19223 "fof_lexer.mll" 48 19197 19224
+)
+"fof_lexer.mll" 48 19197 19253 "fof_lexer.mll" 48 19197 19254
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"fof_lexer.mll" 48 19197 19255 "fof_lexer.mll" 48 19197 19264
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  int_ref lex_dquot "fof_lexer.ml" 395 18696 18700 "fof_lexer.ml" 395 18696 18709
+)
+"fof_lexer.mll" 48 19197 19265 "fof_lexer.mll" 48 19197 19271
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 397 18759 18789 "fof_lexer.ml" 397 18759 18795
+)
+"fof_lexer.mll" 48 19197 19255 "fof_lexer.mll" 48 19197 19271
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 48 19197 19251 "fof_lexer.mll" 48 19197 19271
+call(
+  tail
+)
+type(
+  string
+)
+"fof_lexer.mll" 48 19197 19218 "fof_lexer.mll" 48 19197 19272
+type(
+  string
+)
+"fof_lexer.ml" 419 19295 19299 "fof_lexer.ml" 419 19295 19316
+type(
+  int
+)
+ident(
+  def __ocaml_lex_state "fof_lexer.ml" 419 19295 19320 "fof_lexer.ml" 419 19295 19404
+)
+"fof_lexer.ml" 419 19295 19320 "fof_lexer.ml" 419 19295 19326
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 397 18759 18789 "fof_lexer.ml" 397 18759 18795
+)
+"fof_lexer.ml" 419 19295 19320 "fof_lexer.ml" 419 19295 19345
+type(
+  Lexing.lexbuf -> unit
+)
+"fof_lexer.ml" 419 19295 19346 "fof_lexer.ml" 419 19295 19352
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 397 18759 18789 "fof_lexer.ml" 397 18759 18795
+)
+"fof_lexer.ml" 419 19295 19320 "fof_lexer.ml" 419 19295 19352
+call(
+  stack
+)
+type(
+  unit
+)
+"fof_lexer.ml" 419 19295 19354 "fof_lexer.ml" 419 19295 19379
+type(
+  Lexing.lexbuf -> int -> string
+)
+ident(
+  int_ref __ocaml_lex_lex_dquot_rec "fof_lexer.ml" 397 18759 18763 "fof_lexer.ml" 397 18759 18788
+)
+"fof_lexer.ml" 419 19295 19380 "fof_lexer.ml" 419 19295 19386
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 397 18759 18789 "fof_lexer.ml" 397 18759 18795
+)
+"fof_lexer.ml" 419 19295 19387 "fof_lexer.ml" 419 19295 19404
+type(
+  int
+)
+ident(
+  int_ref __ocaml_lex_state "fof_lexer.ml" 419 19295 19299 "fof_lexer.ml" 419 19295 19316
+)
+"fof_lexer.ml" 419 19295 19354 "fof_lexer.ml" 419 19295 19404
+call(
+  tail
+)
+type(
+  string
+)
+"fof_lexer.ml" 419 19295 19320 "fof_lexer.ml" 419 19295 19404
+type(
+  string
+)
+"fof_lexer.ml" 398 18816 18818 "fof_lexer.ml" 419 19295 19404
+type(
+  string
+)
+"fof_lexer.ml" 421 19406 19410 "fof_lexer.ml" 421 19406 19417
+type(
+  Lexing.lexbuf -> string list
+)
+ident(
+  def lex_ids "fof_lexer.ml" 243 15353 15353 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.ml" 421 19406 19418 "fof_lexer.ml" 421 19406 19424
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "fof_lexer.ml" 422 19427 19431 "fof_lexer.ml" 422 19427 19464
+)
+"fof_lexer.ml" 422 19427 19431 "fof_lexer.ml" 422 19427 19454
+type(
+  Lexing.lexbuf -> int -> string list
+)
+ident(
+  int_ref __ocaml_lex_lex_ids_rec "fof_lexer.ml" 423 19465 19469 "fof_lexer.ml" 423 19465 19492
+)
+"fof_lexer.ml" 422 19427 19455 "fof_lexer.ml" 422 19427 19461
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 421 19406 19418 "fof_lexer.ml" 421 19406 19424
+)
+"fof_lexer.ml" 422 19427 19462 "fof_lexer.ml" 422 19427 19464
+type(
+  int
+)
+"fof_lexer.ml" 422 19427 19431 "fof_lexer.ml" 422 19427 19464
+call(
+  tail
+)
+type(
+  string list
+)
+"fof_lexer.ml" 423 19465 19469 "fof_lexer.ml" 423 19465 19492
+type(
+  Lexing.lexbuf -> int -> string list
+)
+ident(
+  def __ocaml_lex_lex_ids_rec "fof_lexer.ml" 243 15353 15353 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.ml" 423 19465 19493 "fof_lexer.ml" 423 19465 19499
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "fof_lexer.ml" 423 19465 19500 "fof_lexer.ml" 436 19841 19948
+)
+"fof_lexer.ml" 423 19465 19500 "fof_lexer.ml" 423 19465 19517
+type(
+  int
+)
+ident(
+  def __ocaml_lex_state "fof_lexer.ml" 424 19520 19522 "fof_lexer.ml" 436 19841 19948
+)
+"fof_lexer.ml" 424 19520 19528 "fof_lexer.ml" 424 19520 19541
+type(
+  Lexing.lex_tables -> int -> Lexing.lexbuf -> int
+)
+ident(
+  ext_ref Lexing.engine
+)
+"fof_lexer.ml" 424 19520 19542 "fof_lexer.ml" 424 19520 19560
+type(
+  Lexing.lex_tables
+)
+ident(
+  int_ref __ocaml_lex_tables "fof_lexer.ml" 8 90 94 "fof_lexer.ml" 8 90 112
+)
+"fof_lexer.ml" 424 19520 19561 "fof_lexer.ml" 424 19520 19578
+type(
+  int
+)
+ident(
+  int_ref __ocaml_lex_state "fof_lexer.ml" 423 19465 19500 "fof_lexer.ml" 423 19465 19517
+)
+"fof_lexer.ml" 424 19520 19579 "fof_lexer.ml" 424 19520 19585
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 423 19465 19493 "fof_lexer.ml" 423 19465 19499
+)
+"fof_lexer.ml" 424 19520 19528 "fof_lexer.ml" 424 19520 19585
+call(
+  stack
+)
+type(
+  int
+)
+"fof_lexer.ml" 425 19591 19599 "fof_lexer.ml" 425 19591 19600
+type(
+  int
+)
+"fof_lexer.mll" 51 19625 19647 "fof_lexer.mll" 51 19625 19654
+type(
+  Lexing.lexbuf -> string list
+)
+ident(
+  int_ref lex_ids "fof_lexer.ml" 421 19406 19410 "fof_lexer.ml" 421 19406 19417
+)
+"fof_lexer.mll" 51 19625 19655 "fof_lexer.mll" 51 19625 19661
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 423 19465 19493 "fof_lexer.ml" 423 19465 19499
+)
+"fof_lexer.mll" 51 19625 19646 "fof_lexer.mll" 51 19625 19662
+call(
+  tail
+)
+type(
+  string list
+)
+"fof_lexer.ml" 430 19685 19689 "fof_lexer.ml" 430 19685 19690
+type(
+  int
+)
+"fof_lexer.mll" 52 19715 19741 "fof_lexer.mll" 52 19715 19742
+type(
+  string
+)
+ident(
+  def i "fof_lexer.mll" 53 19769 19791 "fof_lexer.mll" 53 19769 19817
+)
+"fof_lexer.mll" 52 19715 19745 "fof_lexer.mll" 52 19715 19758
+type(
+  Lexing.lexbuf -> string
+)
+ident(
+  ext_ref Lexing.lexeme
+)
+"fof_lexer.mll" 52 19715 19759 "fof_lexer.mll" 52 19715 19765
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 423 19465 19493 "fof_lexer.ml" 423 19465 19499
+)
+"fof_lexer.mll" 52 19715 19745 "fof_lexer.mll" 52 19715 19765
+call(
+  stack
+)
+type(
+  string
+)
+"fof_lexer.mll" 53 19769 19791 "fof_lexer.mll" 53 19769 19792
+type(
+  string
+)
+ident(
+  int_ref i "fof_lexer.mll" 52 19715 19741 "fof_lexer.mll" 52 19715 19742
+)
+"fof_lexer.mll" 53 19769 19797 "fof_lexer.mll" 53 19769 19809
+type(
+  Lexing.lexbuf -> string list
+)
+ident(
+  int_ref lex_ids_more "fof_lexer.ml" 438 19950 19954 "fof_lexer.ml" 438 19950 19966
+)
+"fof_lexer.mll" 53 19769 19810 "fof_lexer.mll" 53 19769 19816
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 423 19465 19493 "fof_lexer.ml" 423 19465 19499
+)
+"fof_lexer.mll" 53 19769 19796 "fof_lexer.mll" 53 19769 19817
+call(
+  stack
+)
+type(
+  string list
+)
+"fof_lexer.mll" 53 19769 19791 "fof_lexer.mll" 53 19769 19817
+type(
+  string list
+)
+"fof_lexer.mll" 52 19715 19736 "fof_lexer.mll" 53 19769 19818
+type(
+  string list
+)
+"fof_lexer.ml" 436 19841 19845 "fof_lexer.ml" 436 19841 19862
+type(
+  int
+)
+ident(
+  def __ocaml_lex_state "fof_lexer.ml" 436 19841 19866 "fof_lexer.ml" 436 19841 19948
+)
+"fof_lexer.ml" 436 19841 19866 "fof_lexer.ml" 436 19841 19872
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 423 19465 19493 "fof_lexer.ml" 423 19465 19499
+)
+"fof_lexer.ml" 436 19841 19866 "fof_lexer.ml" 436 19841 19891
+type(
+  Lexing.lexbuf -> unit
+)
+"fof_lexer.ml" 436 19841 19892 "fof_lexer.ml" 436 19841 19898
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 423 19465 19493 "fof_lexer.ml" 423 19465 19499
+)
+"fof_lexer.ml" 436 19841 19866 "fof_lexer.ml" 436 19841 19898
+call(
+  stack
+)
+type(
+  unit
+)
+"fof_lexer.ml" 436 19841 19900 "fof_lexer.ml" 436 19841 19923
+type(
+  Lexing.lexbuf -> int -> string list
+)
+ident(
+  int_ref __ocaml_lex_lex_ids_rec "fof_lexer.ml" 423 19465 19469 "fof_lexer.ml" 423 19465 19492
+)
+"fof_lexer.ml" 436 19841 19924 "fof_lexer.ml" 436 19841 19930
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 423 19465 19493 "fof_lexer.ml" 423 19465 19499
+)
+"fof_lexer.ml" 436 19841 19931 "fof_lexer.ml" 436 19841 19948
+type(
+  int
+)
+ident(
+  int_ref __ocaml_lex_state "fof_lexer.ml" 436 19841 19845 "fof_lexer.ml" 436 19841 19862
+)
+"fof_lexer.ml" 436 19841 19900 "fof_lexer.ml" 436 19841 19948
+call(
+  tail
+)
+type(
+  string list
+)
+"fof_lexer.ml" 436 19841 19866 "fof_lexer.ml" 436 19841 19948
+type(
+  string list
+)
+"fof_lexer.ml" 424 19520 19522 "fof_lexer.ml" 436 19841 19948
+type(
+  string list
+)
+"fof_lexer.ml" 438 19950 19954 "fof_lexer.ml" 438 19950 19966
+type(
+  Lexing.lexbuf -> string list
+)
+ident(
+  def lex_ids_more "fof_lexer.ml" 243 15353 15353 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.ml" 438 19950 19967 "fof_lexer.ml" 438 19950 19973
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "fof_lexer.ml" 439 19976 19980 "fof_lexer.ml" 439 19976 20018
+)
+"fof_lexer.ml" 439 19976 19980 "fof_lexer.ml" 439 19976 20008
+type(
+  Lexing.lexbuf -> int -> string list
+)
+ident(
+  int_ref __ocaml_lex_lex_ids_more_rec "fof_lexer.ml" 440 20019 20023 "fof_lexer.ml" 440 20019 20051
+)
+"fof_lexer.ml" 439 19976 20009 "fof_lexer.ml" 439 19976 20015
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 438 19950 19967 "fof_lexer.ml" 438 19950 19973
+)
+"fof_lexer.ml" 439 19976 20016 "fof_lexer.ml" 439 19976 20018
+type(
+  int
+)
+"fof_lexer.ml" 439 19976 19980 "fof_lexer.ml" 439 19976 20018
+call(
+  tail
+)
+type(
+  string list
+)
+"fof_lexer.ml" 440 20019 20023 "fof_lexer.ml" 440 20019 20051
+type(
+  Lexing.lexbuf -> int -> string list
+)
+ident(
+  def __ocaml_lex_lex_ids_more_rec "fof_lexer.ml" 243 15353 15353 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.ml" 440 20019 20052 "fof_lexer.ml" 440 20019 20058
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexbuf "fof_lexer.ml" 440 20019 20059 "fof_lexer.ml" 457 20417 20529
+)
+"fof_lexer.ml" 440 20019 20059 "fof_lexer.ml" 440 20019 20076
+type(
+  int
+)
+ident(
+  def __ocaml_lex_state "fof_lexer.ml" 441 20079 20081 "fof_lexer.ml" 457 20417 20529
+)
+"fof_lexer.ml" 441 20079 20087 "fof_lexer.ml" 441 20079 20100
+type(
+  Lexing.lex_tables -> int -> Lexing.lexbuf -> int
+)
+ident(
+  ext_ref Lexing.engine
+)
+"fof_lexer.ml" 441 20079 20101 "fof_lexer.ml" 441 20079 20119
+type(
+  Lexing.lex_tables
+)
+ident(
+  int_ref __ocaml_lex_tables "fof_lexer.ml" 8 90 94 "fof_lexer.ml" 8 90 112
+)
+"fof_lexer.ml" 441 20079 20120 "fof_lexer.ml" 441 20079 20137
+type(
+  int
+)
+ident(
+  int_ref __ocaml_lex_state "fof_lexer.ml" 440 20019 20059 "fof_lexer.ml" 440 20019 20076
+)
+"fof_lexer.ml" 441 20079 20138 "fof_lexer.ml" 441 20079 20144
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 440 20019 20052 "fof_lexer.ml" 440 20019 20058
+)
+"fof_lexer.ml" 441 20079 20087 "fof_lexer.ml" 441 20079 20144
+call(
+  stack
+)
+type(
+  int
+)
+"fof_lexer.ml" 442 20150 20158 "fof_lexer.ml" 442 20150 20159
+type(
+  int
+)
+"fof_lexer.mll" 56 20184 20206 "fof_lexer.mll" 56 20184 20218
+type(
+  Lexing.lexbuf -> string list
+)
+ident(
+  int_ref lex_ids_more "fof_lexer.ml" 438 19950 19954 "fof_lexer.ml" 438 19950 19966
+)
+"fof_lexer.mll" 56 20184 20219 "fof_lexer.mll" 56 20184 20225
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 440 20019 20052 "fof_lexer.ml" 440 20019 20058
+)
+"fof_lexer.mll" 56 20184 20205 "fof_lexer.mll" 56 20184 20226
+call(
+  tail
+)
+type(
+  string list
+)
+"fof_lexer.ml" 447 20249 20253 "fof_lexer.ml" 447 20249 20254
+type(
+  int
+)
+"fof_lexer.mll" 57 20279 20301 "fof_lexer.mll" 57 20279 20308
+type(
+  Lexing.lexbuf -> string list
+)
+ident(
+  int_ref lex_ids "fof_lexer.ml" 421 19406 19410 "fof_lexer.ml" 421 19406 19417
+)
+"fof_lexer.mll" 57 20279 20309 "fof_lexer.mll" 57 20279 20315
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 440 20019 20052 "fof_lexer.ml" 440 20019 20058
+)
+"fof_lexer.mll" 57 20279 20300 "fof_lexer.mll" 57 20279 20316
+call(
+  tail
+)
+type(
+  string list
+)
+"fof_lexer.ml" 452 20339 20343 "fof_lexer.ml" 452 20339 20344
+type(
+  int
+)
+"fof_lexer.mll" 58 20369 20390 "fof_lexer.mll" 58 20369 20394
+type(
+  string list
+)
+"fof_lexer.ml" 457 20417 20421 "fof_lexer.ml" 457 20417 20438
+type(
+  int
+)
+ident(
+  def __ocaml_lex_state "fof_lexer.ml" 457 20417 20442 "fof_lexer.ml" 457 20417 20529
+)
+"fof_lexer.ml" 457 20417 20442 "fof_lexer.ml" 457 20417 20448
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 440 20019 20052 "fof_lexer.ml" 440 20019 20058
+)
+"fof_lexer.ml" 457 20417 20442 "fof_lexer.ml" 457 20417 20467
+type(
+  Lexing.lexbuf -> unit
+)
+"fof_lexer.ml" 457 20417 20468 "fof_lexer.ml" 457 20417 20474
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 440 20019 20052 "fof_lexer.ml" 440 20019 20058
+)
+"fof_lexer.ml" 457 20417 20442 "fof_lexer.ml" 457 20417 20474
+call(
+  stack
+)
+type(
+  unit
+)
+"fof_lexer.ml" 457 20417 20476 "fof_lexer.ml" 457 20417 20504
+type(
+  Lexing.lexbuf -> int -> string list
+)
+ident(
+  int_ref __ocaml_lex_lex_ids_more_rec "fof_lexer.ml" 440 20019 20023 "fof_lexer.ml" 440 20019 20051
+)
+"fof_lexer.ml" 457 20417 20505 "fof_lexer.ml" 457 20417 20511
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexbuf "fof_lexer.ml" 440 20019 20052 "fof_lexer.ml" 440 20019 20058
+)
+"fof_lexer.ml" 457 20417 20512 "fof_lexer.ml" 457 20417 20529
+type(
+  int
+)
+ident(
+  int_ref __ocaml_lex_state "fof_lexer.ml" 457 20417 20421 "fof_lexer.ml" 457 20417 20438
+)
+"fof_lexer.ml" 457 20417 20476 "fof_lexer.ml" 457 20417 20529
+call(
+  tail
+)
+type(
+  string list
+)
+"fof_lexer.ml" 457 20417 20442 "fof_lexer.ml" 457 20417 20529
+type(
+  string list
+)
+"fof_lexer.ml" 441 20079 20081 "fof_lexer.ml" 457 20417 20529
+type(
+  string list
+)
+"fof_lexer.mll" 61 20558 20562 "fof_lexer.mll" 61 20558 20566
+type(
+  string -> (string * string * Cnf.form) list
+)
+ident(
+  def file "fof_lexer.mll" 75 20892 20892 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.mll" 61 20558 20567 "fof_lexer.mll" 61 20558 20572
+type(
+  string
+)
+ident(
+  def fname "fof_lexer.mll" 62 20575 20577 "fof_lexer.mll" 73 20880 20888
+)
+"fof_lexer.mll" 62 20575 20581 "fof_lexer.mll" 62 20575 20584
+type(
+  in_channel
+)
+ident(
+  def inc "fof_lexer.mll" 63 20635 20637 "fof_lexer.mll" 73 20880 20888
+)
+"fof_lexer.mll" 62 20575 20590 "fof_lexer.mll" 62 20575 20595
+type(
+  string
+)
+ident(
+  int_ref fname "fof_lexer.mll" 61 20558 20567 "fof_lexer.mll" 61 20558 20572
+)
+"fof_lexer.mll" 62 20575 20596 "fof_lexer.mll" 62 20575 20597
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fof_lexer.mll" 62 20575 20598 "fof_lexer.mll" 62 20575 20601
+type(
+  string
+)
+"fof_lexer.mll" 62 20575 20590 "fof_lexer.mll" 62 20575 20601
+type(
+  bool
+)
+"fof_lexer.mll" 62 20575 20607 "fof_lexer.mll" 62 20575 20612
+type(
+  in_channel
+)
+ident(
+  ext_ref Pervasives.stdin
+)
+"fof_lexer.mll" 62 20575 20618 "fof_lexer.mll" 62 20575 20625
+type(
+  string -> in_channel
+)
+ident(
+  ext_ref Pervasives.open_in
+)
+"fof_lexer.mll" 62 20575 20626 "fof_lexer.mll" 62 20575 20631
+type(
+  string
+)
+ident(
+  int_ref fname "fof_lexer.mll" 61 20558 20567 "fof_lexer.mll" 61 20558 20572
+)
+"fof_lexer.mll" 62 20575 20618 "fof_lexer.mll" 62 20575 20631
+call(
+  stack
+)
+type(
+  in_channel
+)
+"fof_lexer.mll" 62 20575 20587 "fof_lexer.mll" 62 20575 20631
+type(
+  in_channel
+)
+"fof_lexer.mll" 63 20635 20641 "fof_lexer.mll" 63 20635 20645
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexb "fof_lexer.mll" 64 20675 20677 "fof_lexer.mll" 73 20880 20888
+)
+"fof_lexer.mll" 63 20635 20648 "fof_lexer.mll" 63 20635 20667
+type(
+  in_channel -> Lexing.lexbuf
+)
+ident(
+  ext_ref Lexing.from_channel
+)
+"fof_lexer.mll" 63 20635 20668 "fof_lexer.mll" 63 20635 20671
+type(
+  in_channel
+)
+ident(
+  int_ref inc "fof_lexer.mll" 62 20575 20581 "fof_lexer.mll" 62 20575 20584
+)
+"fof_lexer.mll" 63 20635 20648 "fof_lexer.mll" 63 20635 20671
+call(
+  stack
+)
+type(
+  Lexing.lexbuf
+)
+"fof_lexer.mll" 64 20675 20685 "fof_lexer.mll" 64 20675 20688
+type(
+  (string * string * Cnf.form) list -> (string * string * Cnf.form) list
+)
+ident(
+  def prf "fof_lexer.mll" 64 20675 20677 "fof_lexer.mll" 73 20880 20888
+)
+"fof_lexer.mll" 64 20675 20689 "fof_lexer.mll" 64 20675 20692
+type(
+  (string * string * Cnf.form) list
+)
+ident(
+  def acc "fof_lexer.mll" 65 20695 20699 "fof_lexer.mll" 71 20833 20874
+)
+"fof_lexer.mll" 66 20703 20713 "fof_lexer.mll" 66 20703 20714
+type(
+  string * string * Cnf.form
+)
+ident(
+  def v "fof_lexer.mll" 70 20812 20818 "fof_lexer.mll" 70 20812 20832
+)
+"fof_lexer.mll" 67 20717 20729 "fof_lexer.mll" 67 20717 20746
+type(
+  (Lexing.lexbuf -> Fof_parse.token) ->
+  Lexing.lexbuf -> string * string * Cnf.form
+)
+ident(
+  ext_ref Fof_parse.fof_top
+)
+"fof_lexer.mll" 67 20717 20747 "fof_lexer.mll" 67 20717 20752
+type(
+  Lexing.lexbuf -> Fof_parse.token
+)
+ident(
+  int_ref hhlex "fof_lexer.ml" 243 15353 15361 "fof_lexer.ml" 243 15353 15366
+)
+"fof_lexer.mll" 67 20717 20753 "fof_lexer.mll" 67 20717 20757
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexb "fof_lexer.mll" 63 20635 20641 "fof_lexer.mll" 63 20635 20645
+)
+"fof_lexer.mll" 67 20717 20729 "fof_lexer.mll" 67 20717 20757
+call(
+  stack
+)
+type(
+  string * string * Cnf.form
+)
+"fof_lexer.mll" 68 20758 20786 "fof_lexer.mll" 68 20758 20787
+type(
+  Obj.t
+)
+ident(
+  def a "fof_lexer.mll" 68 20758 20791 "fof_lexer.mll" 68 20758 20802
+)
+"fof_lexer.mll" 68 20758 20771 "fof_lexer.mll" 68 20758 20787
+type(
+  exn
+)
+"fof_lexer.mll" 68 20758 20791 "fof_lexer.mll" 68 20758 20800
+type(
+  Obj.t -> string * string * Cnf.form
+)
+ident(
+  ext_ref Obj.magic
+)
+"fof_lexer.mll" 68 20758 20801 "fof_lexer.mll" 68 20758 20802
+type(
+  Obj.t
+)
+ident(
+  int_ref a "fof_lexer.mll" 68 20758 20786 "fof_lexer.mll" 68 20758 20787
+)
+"fof_lexer.mll" 68 20758 20791 "fof_lexer.mll" 68 20758 20802
+type(
+  string * string * Cnf.form
+)
+"fof_lexer.mll" 67 20717 20725 "fof_lexer.mll" 68 20758 20802
+type(
+  string * string * Cnf.form
+)
+"fof_lexer.mll" 70 20812 20818 "fof_lexer.mll" 70 20812 20821
+type(
+  (string * string * Cnf.form) list -> (string * string * Cnf.form) list
+)
+ident(
+  int_ref prf "fof_lexer.mll" 64 20675 20685 "fof_lexer.mll" 64 20675 20688
+)
+"fof_lexer.mll" 70 20812 20823 "fof_lexer.mll" 70 20812 20824
+type(
+  string * string * Cnf.form
+)
+ident(
+  int_ref v "fof_lexer.mll" 66 20703 20713 "fof_lexer.mll" 66 20703 20714
+)
+"fof_lexer.mll" 70 20812 20828 "fof_lexer.mll" 70 20812 20831
+type(
+  (string * string * Cnf.form) list
+)
+ident(
+  int_ref acc "fof_lexer.mll" 64 20675 20689 "fof_lexer.mll" 64 20675 20692
+)
+"fof_lexer.mll" 70 20812 20822 "fof_lexer.mll" 70 20812 20832
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 70 20812 20818 "fof_lexer.mll" 70 20812 20832
+call(
+  stack
+)
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 66 20703 20709 "fof_lexer.mll" 70 20812 20832
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 71 20833 20842 "fof_lexer.mll" 71 20833 20853
+type(
+  exn
+)
+"fof_lexer.mll" 71 20833 20857 "fof_lexer.mll" 71 20833 20865
+type(
+  in_channel -> unit
+)
+ident(
+  ext_ref Pervasives.close_in
+)
+"fof_lexer.mll" 71 20833 20866 "fof_lexer.mll" 71 20833 20869
+type(
+  in_channel
+)
+ident(
+  int_ref inc "fof_lexer.mll" 62 20575 20581 "fof_lexer.mll" 62 20575 20584
+)
+"fof_lexer.mll" 71 20833 20857 "fof_lexer.mll" 71 20833 20869
+call(
+  stack
+)
+type(
+  unit
+)
+"fof_lexer.mll" 71 20833 20871 "fof_lexer.mll" 71 20833 20874
+type(
+  (string * string * Cnf.form) list
+)
+ident(
+  int_ref acc "fof_lexer.mll" 64 20675 20689 "fof_lexer.mll" 64 20675 20692
+)
+"fof_lexer.mll" 71 20833 20857 "fof_lexer.mll" 71 20833 20874
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 65 20695 20699 "fof_lexer.mll" 71 20833 20874
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 73 20880 20882 "fof_lexer.mll" 73 20880 20885
+type(
+  (string * string * Cnf.form) list -> (string * string * Cnf.form) list
+)
+ident(
+  int_ref prf "fof_lexer.mll" 64 20675 20685 "fof_lexer.mll" 64 20675 20688
+)
+"fof_lexer.mll" 73 20880 20886 "fof_lexer.mll" 73 20880 20888
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 73 20880 20882 "fof_lexer.mll" 73 20880 20888
+call(
+  tail
+)
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 64 20675 20677 "fof_lexer.mll" 73 20880 20888
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 63 20635 20637 "fof_lexer.mll" 73 20880 20888
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 62 20575 20577 "fof_lexer.mll" 73 20880 20888
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 75 20892 20896 "fof_lexer.mll" 75 20892 20905
+type(
+  string ->
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+ident(
+  def data_file "fof_lexer.mll" 89 21258 21258 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.mll" 75 20892 20906 "fof_lexer.mll" 75 20892 20911
+type(
+  string
+)
+ident(
+  def fname "fof_lexer.mll" 76 20914 20916 "fof_lexer.mll" 87 21246 21254
+)
+"fof_lexer.mll" 76 20914 20920 "fof_lexer.mll" 76 20914 20923
+type(
+  in_channel
+)
+ident(
+  def inc "fof_lexer.mll" 77 20974 20976 "fof_lexer.mll" 87 21246 21254
+)
+"fof_lexer.mll" 76 20914 20929 "fof_lexer.mll" 76 20914 20934
+type(
+  string
+)
+ident(
+  int_ref fname "fof_lexer.mll" 75 20892 20906 "fof_lexer.mll" 75 20892 20911
+)
+"fof_lexer.mll" 76 20914 20935 "fof_lexer.mll" 76 20914 20936
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fof_lexer.mll" 76 20914 20937 "fof_lexer.mll" 76 20914 20940
+type(
+  string
+)
+"fof_lexer.mll" 76 20914 20929 "fof_lexer.mll" 76 20914 20940
+type(
+  bool
+)
+"fof_lexer.mll" 76 20914 20946 "fof_lexer.mll" 76 20914 20951
+type(
+  in_channel
+)
+ident(
+  ext_ref Pervasives.stdin
+)
+"fof_lexer.mll" 76 20914 20957 "fof_lexer.mll" 76 20914 20964
+type(
+  string -> in_channel
+)
+ident(
+  ext_ref Pervasives.open_in
+)
+"fof_lexer.mll" 76 20914 20965 "fof_lexer.mll" 76 20914 20970
+type(
+  string
+)
+ident(
+  int_ref fname "fof_lexer.mll" 75 20892 20906 "fof_lexer.mll" 75 20892 20911
+)
+"fof_lexer.mll" 76 20914 20957 "fof_lexer.mll" 76 20914 20970
+call(
+  stack
+)
+type(
+  in_channel
+)
+"fof_lexer.mll" 76 20914 20926 "fof_lexer.mll" 76 20914 20970
+type(
+  in_channel
+)
+"fof_lexer.mll" 77 20974 20980 "fof_lexer.mll" 77 20974 20984
+type(
+  Lexing.lexbuf
+)
+ident(
+  def lexb "fof_lexer.mll" 78 21014 21016 "fof_lexer.mll" 87 21246 21254
+)
+"fof_lexer.mll" 77 20974 20987 "fof_lexer.mll" 77 20974 21006
+type(
+  in_channel -> Lexing.lexbuf
+)
+ident(
+  ext_ref Lexing.from_channel
+)
+"fof_lexer.mll" 77 20974 21007 "fof_lexer.mll" 77 20974 21010
+type(
+  in_channel
+)
+ident(
+  int_ref inc "fof_lexer.mll" 76 20914 20920 "fof_lexer.mll" 76 20914 20923
+)
+"fof_lexer.mll" 77 20974 20987 "fof_lexer.mll" 77 20974 21010
+call(
+  stack
+)
+type(
+  Lexing.lexbuf
+)
+"fof_lexer.mll" 78 21014 21024 "fof_lexer.mll" 78 21014 21027
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list ->
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+ident(
+  def prf "fof_lexer.mll" 78 21014 21016 "fof_lexer.mll" 87 21246 21254
+)
+"fof_lexer.mll" 78 21014 21028 "fof_lexer.mll" 78 21014 21031
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+ident(
+  def acc "fof_lexer.mll" 79 21034 21038 "fof_lexer.mll" 85 21209 21240
+)
+"fof_lexer.mll" 80 21044 21060 "fof_lexer.mll" 80 21044 21078
+type(
+  (Lexing.lexbuf -> Fof_parse.token) ->
+  Lexing.lexbuf ->
+  bool *
+  ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+   (int * Cnf.term list) list * (int * Cnf.term list) *
+   (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+   int list * (float * int * int * Cnf.form) list)
+)
+ident(
+  ext_ref Fof_parse.fof_data
+)
+"fof_lexer.mll" 80 21044 21079 "fof_lexer.mll" 80 21044 21084
+type(
+  Lexing.lexbuf -> Fof_parse.token
+)
+ident(
+  int_ref hhlex "fof_lexer.ml" 243 15353 15361 "fof_lexer.ml" 243 15353 15366
+)
+"fof_lexer.mll" 80 21044 21085 "fof_lexer.mll" 80 21044 21089
+type(
+  Lexing.lexbuf
+)
+ident(
+  int_ref lexb "fof_lexer.mll" 77 20974 20980 "fof_lexer.mll" 77 20974 20984
+)
+"fof_lexer.mll" 80 21044 21059 "fof_lexer.mll" 80 21044 21090
+call(
+  stack
+)
+type(
+  bool *
+  ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+   (int * Cnf.term list) list * (int * Cnf.term list) *
+   (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+   int list * (float * int * int * Cnf.form) list)
+)
+"fof_lexer.mll" 80 21044 21054 "fof_lexer.mll" 80 21044 21090
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  option
+)
+"fof_lexer.mll" 81 21091 21117 "fof_lexer.mll" 81 21091 21118
+type(
+  Obj.t
+)
+ident(
+  def a "fof_lexer.mll" 81 21091 21122 "fof_lexer.mll" 81 21091 21140
+)
+"fof_lexer.mll" 81 21091 21102 "fof_lexer.mll" 81 21091 21118
+type(
+  exn
+)
+"fof_lexer.mll" 81 21091 21128 "fof_lexer.mll" 81 21091 21137
+type(
+  Obj.t ->
+  bool *
+  ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+   (int * Cnf.term list) list * (int * Cnf.term list) *
+   (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+   int list * (float * int * int * Cnf.form) list)
+)
+ident(
+  ext_ref Obj.magic
+)
+"fof_lexer.mll" 81 21091 21138 "fof_lexer.mll" 81 21091 21139
+type(
+  Obj.t
+)
+ident(
+  int_ref a "fof_lexer.mll" 81 21091 21117 "fof_lexer.mll" 81 21091 21118
+)
+"fof_lexer.mll" 81 21091 21127 "fof_lexer.mll" 81 21091 21140
+type(
+  bool *
+  ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+   (int * Cnf.term list) list * (int * Cnf.term list) *
+   (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+   int list * (float * int * int * Cnf.form) list)
+)
+"fof_lexer.mll" 81 21091 21122 "fof_lexer.mll" 81 21091 21140
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  option
+)
+"fof_lexer.mll" 82 21141 21149 "fof_lexer.mll" 82 21141 21160
+type(
+  exn
+)
+"fof_lexer.mll" 82 21141 21164 "fof_lexer.mll" 82 21141 21168
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  option
+)
+"fof_lexer.mll" 80 21044 21050 "fof_lexer.mll" 82 21141 21168
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  option
+)
+"fof_lexer.mll" 84 21178 21189 "fof_lexer.mll" 84 21178 21190
+type(
+  bool *
+  ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+   (int * Cnf.term list) list * (int * Cnf.term list) *
+   (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+   int list * (float * int * int * Cnf.form) list)
+)
+ident(
+  def v "fof_lexer.mll" 84 21178 21194 "fof_lexer.mll" 84 21178 21208
+)
+"fof_lexer.mll" 84 21178 21184 "fof_lexer.mll" 84 21178 21190
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  option
+)
+"fof_lexer.mll" 84 21178 21194 "fof_lexer.mll" 84 21178 21197
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list ->
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+ident(
+  int_ref prf "fof_lexer.mll" 78 21014 21024 "fof_lexer.mll" 78 21014 21027
+)
+"fof_lexer.mll" 84 21178 21199 "fof_lexer.mll" 84 21178 21200
+type(
+  bool *
+  ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+   (int * Cnf.term list) list * (int * Cnf.term list) *
+   (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+   int list * (float * int * int * Cnf.form) list)
+)
+ident(
+  int_ref v "fof_lexer.mll" 84 21178 21189 "fof_lexer.mll" 84 21178 21190
+)
+"fof_lexer.mll" 84 21178 21204 "fof_lexer.mll" 84 21178 21207
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+ident(
+  int_ref acc "fof_lexer.mll" 78 21014 21028 "fof_lexer.mll" 78 21014 21031
+)
+"fof_lexer.mll" 84 21178 21198 "fof_lexer.mll" 84 21178 21208
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+"fof_lexer.mll" 84 21178 21194 "fof_lexer.mll" 84 21178 21208
+call(
+  tail
+)
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+"fof_lexer.mll" 85 21209 21215 "fof_lexer.mll" 85 21209 21219
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  option
+)
+"fof_lexer.mll" 85 21209 21223 "fof_lexer.mll" 85 21209 21231
+type(
+  in_channel -> unit
+)
+ident(
+  ext_ref Pervasives.close_in
+)
+"fof_lexer.mll" 85 21209 21232 "fof_lexer.mll" 85 21209 21235
+type(
+  in_channel
+)
+ident(
+  int_ref inc "fof_lexer.mll" 76 20914 20920 "fof_lexer.mll" 76 20914 20923
+)
+"fof_lexer.mll" 85 21209 21223 "fof_lexer.mll" 85 21209 21235
+call(
+  stack
+)
+type(
+  unit
+)
+"fof_lexer.mll" 85 21209 21237 "fof_lexer.mll" 85 21209 21240
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+ident(
+  int_ref acc "fof_lexer.mll" 78 21014 21028 "fof_lexer.mll" 78 21014 21031
+)
+"fof_lexer.mll" 85 21209 21223 "fof_lexer.mll" 85 21209 21240
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+"fof_lexer.mll" 79 21034 21038 "fof_lexer.mll" 85 21209 21240
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+"fof_lexer.mll" 87 21246 21248 "fof_lexer.mll" 87 21246 21251
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list ->
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+ident(
+  int_ref prf "fof_lexer.mll" 78 21014 21024 "fof_lexer.mll" 78 21014 21027
+)
+"fof_lexer.mll" 87 21246 21252 "fof_lexer.mll" 87 21246 21254
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+"fof_lexer.mll" 87 21246 21248 "fof_lexer.mll" 87 21246 21254
+call(
+  tail
+)
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+"fof_lexer.mll" 78 21014 21016 "fof_lexer.mll" 87 21246 21254
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+"fof_lexer.mll" 77 20974 20976 "fof_lexer.mll" 87 21246 21254
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+"fof_lexer.mll" 76 20914 20916 "fof_lexer.mll" 87 21246 21254
+type(
+  (bool *
+   ((int * Cnf.term list) * (int * Cnf.term list) list * Cnf.form list *
+    (int * Cnf.term list) list * (int * Cnf.term list) *
+    (int * Cnf.term list) list * Cnf.form list * (int * Cnf.term list) list *
+    int list * (float * int * int * Cnf.form) list))
+  list
+)
+"fof_lexer.mll" 89 21258 21262 "fof_lexer.mll" 89 21258 21269
+type(
+  string -> Cnf.form list * Cnf.form
+)
+ident(
+  def problem "fof_lexer.mll" 97 21834 21891 "fof_lexer.ml" 1 0 -1
+)
+"fof_lexer.mll" 89 21258 21270 "fof_lexer.mll" 89 21258 21275
+type(
+  string
+)
+ident(
+  def fname "fof_lexer.mll" 90 21278 21280 "fof_lexer.mll" 97 21834 21891
+)
+"fof_lexer.mll" 90 21278 21284 "fof_lexer.mll" 90 21278 21288
+type(
+  (string * string * Cnf.form) list
+)
+ident(
+  def fofs "fof_lexer.mll" 91 21305 21307 "fof_lexer.mll" 97 21834 21891
+)
+"fof_lexer.mll" 90 21278 21291 "fof_lexer.mll" 90 21278 21295
+type(
+  string -> (string * string * Cnf.form) list
+)
+ident(
+  int_ref file "fof_lexer.mll" 61 20558 20562 "fof_lexer.mll" 61 20558 20566
+)
+"fof_lexer.mll" 90 21278 21296 "fof_lexer.mll" 90 21278 21301
+type(
+  string
+)
+ident(
+  int_ref fname "fof_lexer.mll" 89 21258 21270 "fof_lexer.mll" 89 21258 21275
+)
+"fof_lexer.mll" 90 21278 21291 "fof_lexer.mll" 90 21278 21301
+call(
+  stack
+)
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 91 21305 21311 "fof_lexer.mll" 91 21305 21314
+type(
+  Cnf.form list
+)
+ident(
+  def ths "fof_lexer.mll" 92 21485 21487 "fof_lexer.mll" 97 21834 21891
+)
+"fof_lexer.mll" 91 21305 21317 "fof_lexer.mll" 91 21305 21325
+type(
+  (string * string * Cnf.form -> Cnf.form) ->
+  (string * string * Cnf.form) list -> Cnf.form list
+)
+ident(
+  ext_ref List.map
+)
+"fof_lexer.mll" 91 21305 21332 "fof_lexer.mll" 91 21305 21333
+type(
+  string
+)
+"fof_lexer.mll" 91 21305 21334 "fof_lexer.mll" 91 21305 21335
+type(
+  string
+)
+"fof_lexer.mll" 91 21305 21336 "fof_lexer.mll" 91 21305 21337
+type(
+  Cnf.form
+)
+ident(
+  def x "fof_lexer.mll" 91 21305 21342 "fof_lexer.mll" 91 21305 21343
+)
+"fof_lexer.mll" 91 21305 21331 "fof_lexer.mll" 91 21305 21338
+type(
+  string * string * Cnf.form
+)
+"fof_lexer.mll" 91 21305 21342 "fof_lexer.mll" 91 21305 21343
+type(
+  Cnf.form
+)
+ident(
+  int_ref x "fof_lexer.mll" 91 21305 21336 "fof_lexer.mll" 91 21305 21337
+)
+"fof_lexer.mll" 91 21305 21326 "fof_lexer.mll" 91 21305 21344
+type(
+  string * string * Cnf.form -> Cnf.form
+)
+"fof_lexer.mll" 91 21305 21346 "fof_lexer.mll" 91 21305 21357
+type(
+  (string * string * Cnf.form -> bool) ->
+  (string * string * Cnf.form) list -> (string * string * Cnf.form) list
+)
+ident(
+  ext_ref List.filter
+)
+"fof_lexer.mll" 91 21305 21364 "fof_lexer.mll" 91 21305 21365
+type(
+  string
+)
+"fof_lexer.mll" 91 21305 21367 "fof_lexer.mll" 91 21305 21368
+type(
+  string
+)
+ident(
+  def x "fof_lexer.mll" 91 21305 21376 "fof_lexer.mll" 91 21305 21474
+)
+"fof_lexer.mll" 91 21305 21370 "fof_lexer.mll" 91 21305 21371
+type(
+  Cnf.form
+)
+"fof_lexer.mll" 91 21305 21363 "fof_lexer.mll" 91 21305 21372
+type(
+  string * string * Cnf.form
+)
+"fof_lexer.mll" 91 21305 21376 "fof_lexer.mll" 91 21305 21377
+type(
+  string
+)
+ident(
+  int_ref x "fof_lexer.mll" 91 21305 21367 "fof_lexer.mll" 91 21305 21368
+)
+"fof_lexer.mll" 91 21305 21378 "fof_lexer.mll" 91 21305 21379
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fof_lexer.mll" 91 21305 21380 "fof_lexer.mll" 91 21305 21387
+type(
+  string
+)
+"fof_lexer.mll" 91 21305 21376 "fof_lexer.mll" 91 21305 21387
+type(
+  bool
+)
+"fof_lexer.mll" 91 21305 21388 "fof_lexer.mll" 91 21305 21390
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"fof_lexer.mll" 91 21305 21391 "fof_lexer.mll" 91 21305 21392
+type(
+  string
+)
+ident(
+  int_ref x "fof_lexer.mll" 91 21305 21367 "fof_lexer.mll" 91 21305 21368
+)
+"fof_lexer.mll" 91 21305 21393 "fof_lexer.mll" 91 21305 21394
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fof_lexer.mll" 91 21305 21395 "fof_lexer.mll" 91 21305 21407
+type(
+  string
+)
+"fof_lexer.mll" 91 21305 21391 "fof_lexer.mll" 91 21305 21407
+type(
+  bool
+)
+"fof_lexer.mll" 91 21305 21408 "fof_lexer.mll" 91 21305 21410
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"fof_lexer.mll" 91 21305 21411 "fof_lexer.mll" 91 21305 21412
+type(
+  string
+)
+ident(
+  int_ref x "fof_lexer.mll" 91 21305 21367 "fof_lexer.mll" 91 21305 21368
+)
+"fof_lexer.mll" 91 21305 21413 "fof_lexer.mll" 91 21305 21414
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fof_lexer.mll" 91 21305 21415 "fof_lexer.mll" 91 21305 21427
+type(
+  string
+)
+"fof_lexer.mll" 91 21305 21411 "fof_lexer.mll" 91 21305 21427
+type(
+  bool
+)
+"fof_lexer.mll" 91 21305 21428 "fof_lexer.mll" 91 21305 21430
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"fof_lexer.mll" 91 21305 21431 "fof_lexer.mll" 91 21305 21432
+type(
+  string
+)
+ident(
+  int_ref x "fof_lexer.mll" 91 21305 21367 "fof_lexer.mll" 91 21305 21368
+)
+"fof_lexer.mll" 91 21305 21433 "fof_lexer.mll" 91 21305 21434
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fof_lexer.mll" 91 21305 21435 "fof_lexer.mll" 91 21305 21442
+type(
+  string
+)
+"fof_lexer.mll" 91 21305 21431 "fof_lexer.mll" 91 21305 21442
+type(
+  bool
+)
+"fof_lexer.mll" 91 21305 21443 "fof_lexer.mll" 91 21305 21445
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"fof_lexer.mll" 91 21305 21446 "fof_lexer.mll" 91 21305 21447
+type(
+  string
+)
+ident(
+  int_ref x "fof_lexer.mll" 91 21305 21367 "fof_lexer.mll" 91 21305 21368
+)
+"fof_lexer.mll" 91 21305 21448 "fof_lexer.mll" 91 21305 21449
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fof_lexer.mll" 91 21305 21450 "fof_lexer.mll" 91 21305 21459
+type(
+  string
+)
+"fof_lexer.mll" 91 21305 21446 "fof_lexer.mll" 91 21305 21459
+type(
+  bool
+)
+"fof_lexer.mll" 91 21305 21460 "fof_lexer.mll" 91 21305 21462
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"fof_lexer.mll" 91 21305 21463 "fof_lexer.mll" 91 21305 21464
+type(
+  string
+)
+ident(
+  int_ref x "fof_lexer.mll" 91 21305 21367 "fof_lexer.mll" 91 21305 21368
+)
+"fof_lexer.mll" 91 21305 21465 "fof_lexer.mll" 91 21305 21466
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fof_lexer.mll" 91 21305 21467 "fof_lexer.mll" 91 21305 21474
+type(
+  string
+)
+"fof_lexer.mll" 91 21305 21463 "fof_lexer.mll" 91 21305 21474
+type(
+  bool
+)
+"fof_lexer.mll" 91 21305 21446 "fof_lexer.mll" 91 21305 21474
+type(
+  bool
+)
+"fof_lexer.mll" 91 21305 21431 "fof_lexer.mll" 91 21305 21474
+type(
+  bool
+)
+"fof_lexer.mll" 91 21305 21411 "fof_lexer.mll" 91 21305 21474
+type(
+  bool
+)
+"fof_lexer.mll" 91 21305 21391 "fof_lexer.mll" 91 21305 21474
+type(
+  bool
+)
+"fof_lexer.mll" 91 21305 21376 "fof_lexer.mll" 91 21305 21474
+type(
+  bool
+)
+"fof_lexer.mll" 91 21305 21358 "fof_lexer.mll" 91 21305 21475
+type(
+  string * string * Cnf.form -> bool
+)
+"fof_lexer.mll" 91 21305 21476 "fof_lexer.mll" 91 21305 21480
+type(
+  (string * string * Cnf.form) list
+)
+ident(
+  int_ref fofs "fof_lexer.mll" 90 21278 21284 "fof_lexer.mll" 90 21278 21288
+)
+"fof_lexer.mll" 91 21305 21345 "fof_lexer.mll" 91 21305 21481
+call(
+  stack
+)
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 91 21305 21317 "fof_lexer.mll" 91 21305 21481
+call(
+  stack
+)
+type(
+  Cnf.form list
+)
+"fof_lexer.mll" 92 21485 21493 "fof_lexer.mll" 92 21485 21501
+type(
+  (string * string * Cnf.form -> Cnf.form) ->
+  (string * string * Cnf.form) list -> Cnf.form list
+)
+ident(
+  ext_ref List.map
+)
+"fof_lexer.mll" 92 21485 21508 "fof_lexer.mll" 92 21485 21509
+type(
+  string
+)
+"fof_lexer.mll" 92 21485 21510 "fof_lexer.mll" 92 21485 21511
+type(
+  string
+)
+"fof_lexer.mll" 92 21485 21512 "fof_lexer.mll" 92 21485 21513
+type(
+  Cnf.form
+)
+ident(
+  def x "fof_lexer.mll" 92 21485 21518 "fof_lexer.mll" 92 21485 21519
+)
+"fof_lexer.mll" 92 21485 21507 "fof_lexer.mll" 92 21485 21514
+type(
+  string * string * Cnf.form
+)
+"fof_lexer.mll" 92 21485 21518 "fof_lexer.mll" 92 21485 21519
+type(
+  Cnf.form
+)
+ident(
+  int_ref x "fof_lexer.mll" 92 21485 21512 "fof_lexer.mll" 92 21485 21513
+)
+"fof_lexer.mll" 92 21485 21502 "fof_lexer.mll" 92 21485 21520
+type(
+  string * string * Cnf.form -> Cnf.form
+)
+"fof_lexer.mll" 92 21485 21522 "fof_lexer.mll" 92 21485 21533
+type(
+  (string * string * Cnf.form -> bool) ->
+  (string * string * Cnf.form) list -> (string * string * Cnf.form) list
+)
+ident(
+  ext_ref List.filter
+)
+"fof_lexer.mll" 92 21485 21540 "fof_lexer.mll" 92 21485 21541
+type(
+  string
+)
+"fof_lexer.mll" 92 21485 21543 "fof_lexer.mll" 92 21485 21544
+type(
+  string
+)
+ident(
+  def x "fof_lexer.mll" 92 21485 21552 "fof_lexer.mll" 92 21485 21568
+)
+"fof_lexer.mll" 92 21485 21546 "fof_lexer.mll" 92 21485 21547
+type(
+  Cnf.form
+)
+"fof_lexer.mll" 92 21485 21539 "fof_lexer.mll" 92 21485 21548
+type(
+  string * string * Cnf.form
+)
+"fof_lexer.mll" 92 21485 21552 "fof_lexer.mll" 92 21485 21553
+type(
+  string
+)
+ident(
+  int_ref x "fof_lexer.mll" 92 21485 21543 "fof_lexer.mll" 92 21485 21544
+)
+"fof_lexer.mll" 92 21485 21554 "fof_lexer.mll" 92 21485 21555
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fof_lexer.mll" 92 21485 21556 "fof_lexer.mll" 92 21485 21568
+type(
+  string
+)
+"fof_lexer.mll" 92 21485 21552 "fof_lexer.mll" 92 21485 21568
+type(
+  bool
+)
+"fof_lexer.mll" 92 21485 21534 "fof_lexer.mll" 92 21485 21569
+type(
+  string * string * Cnf.form -> bool
+)
+"fof_lexer.mll" 92 21485 21570 "fof_lexer.mll" 92 21485 21574
+type(
+  (string * string * Cnf.form) list
+)
+ident(
+  int_ref fofs "fof_lexer.mll" 90 21278 21284 "fof_lexer.mll" 90 21278 21288
+)
+"fof_lexer.mll" 92 21485 21521 "fof_lexer.mll" 92 21485 21575
+call(
+  stack
+)
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 92 21485 21493 "fof_lexer.mll" 92 21485 21575
+call(
+  stack
+)
+type(
+  Cnf.form list
+)
+"fof_lexer.mll" 93 21581 21585 "fof_lexer.mll" 93 21581 21586
+type(
+  Cnf.form
+)
+ident(
+  def h "fof_lexer.mll" 93 21581 21595 "fof_lexer.mll" 93 21581 21645
+)
+"fof_lexer.mll" 93 21581 21590 "fof_lexer.mll" 93 21581 21591
+type(
+  Cnf.form list
+)
+ident(
+  def t "fof_lexer.mll" 93 21581 21595 "fof_lexer.mll" 93 21581 21645
+)
+"fof_lexer.mll" 93 21581 21585 "fof_lexer.mll" 93 21581 21591
+type(
+  Cnf.form list
+)
+"fof_lexer.mll" 93 21581 21596 "fof_lexer.mll" 93 21581 21599
+type(
+  Cnf.form list
+)
+ident(
+  int_ref ths "fof_lexer.mll" 91 21305 21311 "fof_lexer.mll" 91 21305 21314
+)
+"fof_lexer.mll" 93 21581 21601 "fof_lexer.mll" 93 21581 21615
+type(
+  (Cnf.form -> Cnf.form -> Cnf.form) -> Cnf.form -> Cnf.form list -> Cnf.form
+)
+ident(
+  ext_ref List.fold_left
+)
+"fof_lexer.mll" 93 21581 21621 "fof_lexer.mll" 93 21581 21622
+type(
+  Cnf.form
+)
+ident(
+  def a "fof_lexer.mll" 93 21581 21623 "fof_lexer.mll" 93 21581 21639
+)
+"fof_lexer.mll" 93 21581 21623 "fof_lexer.mll" 93 21581 21624
+type(
+  Cnf.form
+)
+ident(
+  def b "fof_lexer.mll" 93 21581 21628 "fof_lexer.mll" 93 21581 21639
+)
+"fof_lexer.mll" 93 21581 21634 "fof_lexer.mll" 93 21581 21635
+type(
+  Cnf.form
+)
+ident(
+  int_ref a "fof_lexer.mll" 93 21581 21621 "fof_lexer.mll" 93 21581 21622
+)
+"fof_lexer.mll" 93 21581 21637 "fof_lexer.mll" 93 21581 21638
+type(
+  Cnf.form
+)
+ident(
+  int_ref b "fof_lexer.mll" 93 21581 21623 "fof_lexer.mll" 93 21581 21624
+)
+"fof_lexer.mll" 93 21581 21628 "fof_lexer.mll" 93 21581 21639
+type(
+  Cnf.form
+)
+"fof_lexer.mll" 93 21581 21616 "fof_lexer.mll" 93 21581 21640
+type(
+  Cnf.form -> Cnf.form -> Cnf.form
+)
+"fof_lexer.mll" 93 21581 21641 "fof_lexer.mll" 93 21581 21642
+type(
+  Cnf.form
+)
+ident(
+  int_ref h "fof_lexer.mll" 93 21581 21585 "fof_lexer.mll" 93 21581 21586
+)
+"fof_lexer.mll" 93 21581 21643 "fof_lexer.mll" 93 21581 21644
+type(
+  Cnf.form list
+)
+ident(
+  int_ref t "fof_lexer.mll" 93 21581 21590 "fof_lexer.mll" 93 21581 21591
+)
+"fof_lexer.mll" 93 21581 21601 "fof_lexer.mll" 93 21581 21644
+call(
+  stack
+)
+type(
+  Cnf.form
+)
+"fof_lexer.mll" 93 21581 21595 "fof_lexer.mll" 93 21581 21645
+type(
+  Cnf.form list * Cnf.form
+)
+"fof_lexer.mll" 94 21646 21650 "fof_lexer.mll" 94 21646 21651
+type(
+  Cnf.form list
+)
+"fof_lexer.mll" 95 21655 21665 "fof_lexer.mll" 95 21655 21673
+type(
+  (string * string * Cnf.form -> Cnf.form) ->
+  (string * string * Cnf.form) list -> Cnf.form list
+)
+ident(
+  ext_ref List.map
+)
+"fof_lexer.mll" 95 21655 21680 "fof_lexer.mll" 95 21655 21681
+type(
+  string
+)
+"fof_lexer.mll" 95 21655 21682 "fof_lexer.mll" 95 21655 21683
+type(
+  string
+)
+"fof_lexer.mll" 95 21655 21684 "fof_lexer.mll" 95 21655 21685
+type(
+  Cnf.form
+)
+ident(
+  def x "fof_lexer.mll" 95 21655 21690 "fof_lexer.mll" 95 21655 21691
+)
+"fof_lexer.mll" 95 21655 21679 "fof_lexer.mll" 95 21655 21686
+type(
+  string * string * Cnf.form
+)
+"fof_lexer.mll" 95 21655 21690 "fof_lexer.mll" 95 21655 21691
+type(
+  Cnf.form
+)
+ident(
+  int_ref x "fof_lexer.mll" 95 21655 21684 "fof_lexer.mll" 95 21655 21685
+)
+"fof_lexer.mll" 95 21655 21674 "fof_lexer.mll" 95 21655 21692
+type(
+  string * string * Cnf.form -> Cnf.form
+)
+"fof_lexer.mll" 95 21655 21694 "fof_lexer.mll" 95 21655 21705
+type(
+  (string * string * Cnf.form -> bool) ->
+  (string * string * Cnf.form) list -> (string * string * Cnf.form) list
+)
+ident(
+  ext_ref List.filter
+)
+"fof_lexer.mll" 95 21655 21712 "fof_lexer.mll" 95 21655 21713
+type(
+  string
+)
+"fof_lexer.mll" 95 21655 21715 "fof_lexer.mll" 95 21655 21716
+type(
+  string
+)
+ident(
+  def x "fof_lexer.mll" 95 21655 21724 "fof_lexer.mll" 95 21655 21748
+)
+"fof_lexer.mll" 95 21655 21718 "fof_lexer.mll" 95 21655 21719
+type(
+  Cnf.form
+)
+"fof_lexer.mll" 95 21655 21711 "fof_lexer.mll" 95 21655 21720
+type(
+  string * string * Cnf.form
+)
+"fof_lexer.mll" 95 21655 21724 "fof_lexer.mll" 95 21655 21725
+type(
+  string
+)
+ident(
+  int_ref x "fof_lexer.mll" 95 21655 21715 "fof_lexer.mll" 95 21655 21716
+)
+"fof_lexer.mll" 95 21655 21726 "fof_lexer.mll" 95 21655 21727
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fof_lexer.mll" 95 21655 21728 "fof_lexer.mll" 95 21655 21748
+type(
+  string
+)
+"fof_lexer.mll" 95 21655 21724 "fof_lexer.mll" 95 21655 21748
+type(
+  bool
+)
+"fof_lexer.mll" 95 21655 21706 "fof_lexer.mll" 95 21655 21749
+type(
+  string * string * Cnf.form -> bool
+)
+"fof_lexer.mll" 95 21655 21750 "fof_lexer.mll" 95 21655 21754
+type(
+  (string * string * Cnf.form) list
+)
+ident(
+  int_ref fofs "fof_lexer.mll" 90 21278 21284 "fof_lexer.mll" 90 21278 21288
+)
+"fof_lexer.mll" 95 21655 21693 "fof_lexer.mll" 95 21655 21755
+call(
+  stack
+)
+type(
+  (string * string * Cnf.form) list
+)
+"fof_lexer.mll" 95 21655 21665 "fof_lexer.mll" 95 21655 21755
+call(
+  stack
+)
+type(
+  Cnf.form list
+)
+"fof_lexer.mll" 96 21761 21767 "fof_lexer.mll" 96 21761 21768
+type(
+  Cnf.form
+)
+ident(
+  def h "fof_lexer.mll" 96 21761 21777 "fof_lexer.mll" 96 21761 21833
+)
+"fof_lexer.mll" 96 21761 21772 "fof_lexer.mll" 96 21761 21773
+type(
+  Cnf.form list
+)
+ident(
+  def t "fof_lexer.mll" 96 21761 21777 "fof_lexer.mll" 96 21761 21833
+)
+"fof_lexer.mll" 96 21761 21767 "fof_lexer.mll" 96 21761 21773
+type(
+  Cnf.form list
+)
+"fof_lexer.mll" 96 21761 21778 "fof_lexer.mll" 96 21761 21781
+type(
+  Cnf.form list
+)
+ident(
+  int_ref ths "fof_lexer.mll" 91 21305 21311 "fof_lexer.mll" 91 21305 21314
+)
+"fof_lexer.mll" 96 21761 21788 "fof_lexer.mll" 96 21761 21802
+type(
+  (Cnf.form -> Cnf.form -> Cnf.form) -> Cnf.form -> Cnf.form list -> Cnf.form
+)
+ident(
+  ext_ref List.fold_left
+)
+"fof_lexer.mll" 96 21761 21808 "fof_lexer.mll" 96 21761 21809
+type(
+  Cnf.form
+)
+ident(
+  def a "fof_lexer.mll" 96 21761 21810 "fof_lexer.mll" 96 21761 21826
+)
+"fof_lexer.mll" 96 21761 21810 "fof_lexer.mll" 96 21761 21811
+type(
+  Cnf.form
+)
+ident(
+  def b "fof_lexer.mll" 96 21761 21815 "fof_lexer.mll" 96 21761 21826
+)
+"fof_lexer.mll" 96 21761 21821 "fof_lexer.mll" 96 21761 21822
+type(
+  Cnf.form
+)
+ident(
+  int_ref a "fof_lexer.mll" 96 21761 21808 "fof_lexer.mll" 96 21761 21809
+)
+"fof_lexer.mll" 96 21761 21824 "fof_lexer.mll" 96 21761 21825
+type(
+  Cnf.form
+)
+ident(
+  int_ref b "fof_lexer.mll" 96 21761 21810 "fof_lexer.mll" 96 21761 21811
+)
+"fof_lexer.mll" 96 21761 21815 "fof_lexer.mll" 96 21761 21826
+type(
+  Cnf.form
+)
+"fof_lexer.mll" 96 21761 21803 "fof_lexer.mll" 96 21761 21827
+type(
+  Cnf.form -> Cnf.form -> Cnf.form
+)
+"fof_lexer.mll" 96 21761 21828 "fof_lexer.mll" 96 21761 21829
+type(
+  Cnf.form
+)
+ident(
+  int_ref h "fof_lexer.mll" 96 21761 21767 "fof_lexer.mll" 96 21761 21768
+)
+"fof_lexer.mll" 96 21761 21830 "fof_lexer.mll" 96 21761 21831
+type(
+  Cnf.form list
+)
+ident(
+  int_ref t "fof_lexer.mll" 96 21761 21772 "fof_lexer.mll" 96 21761 21773
+)
+"fof_lexer.mll" 96 21761 21787 "fof_lexer.mll" 96 21761 21832
+call(
+  stack
+)
+type(
+  Cnf.form
+)
+"fof_lexer.mll" 96 21761 21783 "fof_lexer.mll" 96 21761 21832
+type(
+  Cnf.form
+)
+"fof_lexer.mll" 96 21761 21777 "fof_lexer.mll" 96 21761 21833
+type(
+  Cnf.form list * Cnf.form
+)
+"fof_lexer.mll" 97 21834 21840 "fof_lexer.mll" 97 21834 21841
+type(
+  Cnf.form list
+)
+"fof_lexer.mll" 97 21834 21845 "fof_lexer.mll" 97 21834 21853
+type(
+  string -> Cnf.form list * Cnf.form
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"fof_lexer.mll" 97 21834 21854 "fof_lexer.mll" 97 21834 21891
+type(
+  string
+)
+"fof_lexer.mll" 97 21834 21845 "fof_lexer.mll" 97 21834 21891
+call(
+  tail
+)
+type(
+  Cnf.form list * Cnf.form
+)
+"fof_lexer.mll" 95 21655 21659 "fof_lexer.mll" 97 21834 21891
+type(
+  Cnf.form list * Cnf.form
+)
+"fof_lexer.mll" 92 21485 21487 "fof_lexer.mll" 97 21834 21891
+type(
+  Cnf.form list * Cnf.form
+)
+"fof_lexer.mll" 91 21305 21307 "fof_lexer.mll" 97 21834 21891
+type(
+  Cnf.form list * Cnf.form
+)
+"fof_lexer.mll" 90 21278 21280 "fof_lexer.mll" 97 21834 21891
+type(
+  Cnf.form list * Cnf.form
+)

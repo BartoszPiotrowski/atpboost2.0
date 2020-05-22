@@ -1,0 +1,76 @@
+### Starting build.
+# Target: mcts.ml.depends, tags: { annot, bin_annot, extension:ml, file:mcts.ml, ocaml, ocamldep, quiet, traverse }
+/usr/bin/ocamldep.opt -modules mcts.ml > mcts.ml.depends # cached
+# Target: args.ml.depends, tags: { annot, bin_annot, extension:ml, file:args.ml, ocaml, ocamldep, quiet, traverse }
+/usr/bin/ocamldep.opt -modules args.ml > args.ml.depends # cached
+# Target: features.ml.depends, tags: { annot, bin_annot, extension:ml, file:features.ml, ocaml, ocamldep, quiet, traverse }
+/usr/bin/ocamldep.opt -modules features.ml > features.ml.depends # cached
+# Target: cnf.ml.depends, tags: { annot, bin_annot, extension:ml, file:cnf.ml, ocaml, ocamldep, quiet, traverse }
+/usr/bin/ocamldep.opt -modules cnf.ml > cnf.ml.depends # cached
+# Target: cnf.cmo, tags: { annot, bin_annot, byte, compile, extension:cmo, extension:ml, file:cnf.cmo, file:cnf.ml, implem, ocaml, quiet, traverse }
+/usr/bin/ocamlc.opt -c -annot -bin-annot -o cnf.cmo cnf.ml # cached
+# Target: fof.ml.depends, tags: { annot, bin_annot, extension:ml, file:fof.ml, ocaml, ocamldep, quiet, traverse }
+/usr/bin/ocamldep.opt -modules fof.ml > fof.ml.depends # cached
+# Target: fof.cmo, tags: { annot, bin_annot, byte, compile, extension:cmo, extension:ml, file:fof.cmo, file:fof.ml, implem, ocaml, quiet, traverse }
+/usr/bin/ocamlc.opt -c -annot -bin-annot -o fof.cmo fof.ml # cached
+# Target: fof_parse.mly, tags: { annot, bin_annot, extension:mly, file:fof_parse.mly, ocaml, ocamlyacc, parser, quiet, traverse }
+/usr/bin/ocamlyacc fof_parse.mly # cached
+# Target: fof_parse.mli.depends, tags: { annot, bin_annot, extension:mli, file:fof_parse.mli, ocaml, ocamldep, quiet, traverse }
+/usr/bin/ocamldep.opt -modules fof_parse.mli > fof_parse.mli.depends # cached
+# Target: fof_parse.cmi, tags: { annot, bin_annot, byte, compile, extension:mli, file:fof_parse.mli, interf, ocaml, quiet, traverse }
+/usr/bin/ocamlc.opt -c -annot -bin-annot -o fof_parse.cmi fof_parse.mli # cached
+# Target: features.cmo, tags: { annot, bin_annot, byte, compile, extension:cmo, extension:ml, file:features.cmo, file:features.ml, implem, ocaml, quiet, traverse }
+/usr/bin/ocamlc.opt -c -annot -bin-annot -o features.cmo features.ml # cached
+# Target: args.cmo, tags: { annot, bin_annot, byte, compile, extension:cmo, extension:ml, file:args.cmo, file:args.ml, implem, ocaml, quiet, traverse }
+/usr/bin/ocamlc.opt -c -annot -bin-annot -o args.cmo args.ml # cached
+# Target: export_state.ml.depends, tags: { annot, bin_annot, extension:ml, file:export_state.ml, ocaml, ocamldep, quiet, traverse }
+/usr/bin/ocamldep.opt -modules export_state.ml > export_state.ml.depends # cached
+# Target: circuit.ml.depends, tags: { annot, bin_annot, extension:ml, file:circuit.ml, ocaml, ocamldep, quiet, traverse }
+/usr/bin/ocamldep.opt -modules circuit.ml > circuit.ml.depends # cached
+# Target: logic.ml.depends, tags: { annot, bin_annot, extension:ml, file:logic.ml, ocaml, ocamldep, quiet, traverse }
+/usr/bin/ocamldep.opt -modules logic.ml > logic.ml.depends # cached
+# Target: dtree.ml.depends, tags: { annot, bin_annot, extension:ml, file:dtree.ml, ocaml, ocamldep, quiet, traverse }
+/usr/bin/ocamldep.opt -modules dtree.ml > dtree.ml.depends # cached
+# Target: dtree.cmo, tags: { annot, bin_annot, byte, compile, extension:cmo, extension:ml, file:dtree.cmo, file:dtree.ml, implem, ocaml, quiet, traverse }
+/usr/bin/ocamlc.opt -c -annot -bin-annot -o dtree.cmo dtree.ml # cached
+# Target: fof_lexer.mll, tags: { annot, bin_annot, extension:mll, file:fof_lexer.mll, lexer, ocaml, ocamllex, quiet, traverse }
+/usr/bin/ocamllex.opt -q fof_lexer.mll # cached
+# Target: fof_lexer.ml.depends, tags: { annot, bin_annot, extension:ml, file:fof_lexer.ml, ocaml, ocamldep, quiet, traverse }
+/usr/bin/ocamldep.opt -modules fof_lexer.ml > fof_lexer.ml.depends # cached
+# Target: fof_lexer.cmo, tags: { annot, bin_annot, byte, compile, extension:cmo, extension:ml, file:fof_lexer.cmo, file:fof_lexer.ml, implem, ocaml, quiet, traverse }
+/usr/bin/ocamlc.opt -c -annot -bin-annot -o fof_lexer.cmo fof_lexer.ml # cached
+# Target: logic.cmo, tags: { annot, bin_annot, byte, compile, extension:cmo, extension:ml, file:logic.cmo, file:logic.ml, implem, ocaml, quiet, traverse }
+/usr/bin/ocamlc.opt -c -annot -bin-annot -o logic.cmo logic.ml # cached
+# Target: circuit.cmo, tags: { annot, bin_annot, byte, compile, extension:cmo, extension:ml, file:circuit.cmo, file:circuit.ml, implem, ocaml, quiet, traverse }
+/usr/bin/ocamlc.opt -c -annot -bin-annot -o circuit.cmo circuit.ml # cached
+# Target: export_state.cmo, tags: { annot, bin_annot, byte, compile, extension:cmo, extension:ml, file:export_state.cmo, file:export_state.ml, implem, ocaml, quiet, traverse }
+/usr/bin/ocamlc.opt -c -annot -bin-annot -o export_state.cmo export_state.ml # cached
+# Target: mcts.cmo, tags: { annot, bin_annot, byte, compile, extension:cmo, extension:ml, file:mcts.cmo, file:mcts.ml, implem, ocaml, quiet, traverse }
+/usr/bin/ocamlc.opt -c -annot -bin-annot -o mcts.cmo mcts.ml # cached
+# Target: cnf.cmx, tags: { annot, bin_annot, compile, extension:cmx, extension:ml, file:cnf.cmx, file:cnf.ml, implem, native, ocaml, quiet, traverse }
+/usr/bin/ocamlopt.opt -c -annot -bin-annot -o cnf.cmx cnf.ml # cached
+# Target: fof.cmx, tags: { annot, bin_annot, compile, extension:cmx, extension:ml, file:fof.cmx, file:fof.ml, implem, native, ocaml, quiet, traverse }
+/usr/bin/ocamlopt.opt -c -annot -bin-annot -o fof.cmx fof.ml # cached
+# Target: fof_parse.ml.depends, tags: { annot, bin_annot, extension:ml, file:fof_parse.ml, ocaml, ocamldep, quiet, traverse }
+/usr/bin/ocamldep.opt -modules fof_parse.ml > fof_parse.ml.depends # cached
+# Target: fof_parse.cmx, tags: { annot, bin_annot, compile, extension:cmx, extension:ml, file:fof_parse.cmx, file:fof_parse.ml, implem, native, ocaml, quiet, traverse }
+/usr/bin/ocamlopt.opt -c -annot -bin-annot -o fof_parse.cmx fof_parse.ml # cached
+# Target: features.cmx, tags: { annot, bin_annot, compile, extension:cmx, extension:ml, file:features.cmx, file:features.ml, implem, native, ocaml, quiet, traverse }
+/usr/bin/ocamlopt.opt -c -annot -bin-annot -o features.cmx features.ml # cached
+# Target: args.cmx, tags: { annot, bin_annot, compile, extension:cmx, extension:ml, file:args.cmx, file:args.ml, implem, native, ocaml, quiet, traverse }
+/usr/bin/ocamlopt.opt -c -annot -bin-annot -o args.cmx args.ml # cached
+# Target: dtree.cmx, tags: { annot, bin_annot, compile, extension:cmx, extension:ml, file:dtree.cmx, file:dtree.ml, implem, native, ocaml, quiet, traverse }
+/usr/bin/ocamlopt.opt -c -annot -bin-annot -o dtree.cmx dtree.ml # cached
+# Target: fof_lexer.cmx, tags: { annot, bin_annot, compile, extension:cmx, extension:ml, file:fof_lexer.cmx, file:fof_lexer.ml, implem, native, ocaml, quiet, traverse }
+/usr/bin/ocamlopt.opt -c -annot -bin-annot -o fof_lexer.cmx fof_lexer.ml # cached
+# Target: logic.cmx, tags: { annot, bin_annot, compile, extension:cmx, extension:ml, file:logic.cmx, file:logic.ml, implem, native, ocaml, quiet, traverse }
+/usr/bin/ocamlopt.opt -c -annot -bin-annot -o logic.cmx logic.ml # cached
+# Target: circuit.cmx, tags: { annot, bin_annot, compile, extension:cmx, extension:ml, file:circuit.cmx, file:circuit.ml, implem, native, ocaml, quiet, traverse }
+/usr/bin/ocamlopt.opt -c -annot -bin-annot -o circuit.cmx circuit.ml # cached
+# Target: export_state.cmx, tags: { annot, bin_annot, compile, extension:cmx, extension:ml, file:export_state.cmx, file:export_state.ml, implem, native, ocaml, quiet, traverse }
+/usr/bin/ocamlopt.opt -c -annot -bin-annot -o export_state.cmx export_state.ml # cached
+# Target: mcts.cmx, tags: { annot, bin_annot, compile, extension:cmx, extension:ml, file:mcts.cmx, file:mcts.ml, implem, native, ocaml, quiet, traverse }
+/usr/bin/ocamlopt.opt -c -annot -bin-annot -o mcts.cmx mcts.ml # cached
+# Target: mcts.native, tags: { annot, bin_annot, dont_link_with, extension:native, file:mcts.native, link, native, ocaml, program, quiet, traverse }
+/usr/bin/ocamlopt.opt str.cmxa unix.cmxa nums.cmxa cnf.cmx fof.cmx fof_parse.cmx features.cmx args.cmx dtree.cmx fof_lexer.cmx logic.cmx circuit.cmx export_state.cmx mcts.cmx -o mcts.native # cached
+# Compilation successful.

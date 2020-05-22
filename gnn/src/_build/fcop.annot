@@ -1,0 +1,5598 @@
+"fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  def sts "fcop.ml" 10 129 129 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 9 110 120 "fcop.ml" 9 110 123
+type(
+  (Logic.state * int list) list -> (Logic.state * int list) list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"fcop.ml" 9 110 124 "fcop.ml" 9 110 126
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 9 110 120 "fcop.ml" 9 110 126
+type(
+  (Logic.state * int list) list ref
+)
+"fcop.ml" 10 129 133 "fcop.ml" 10 129 142
+type(
+  string -> int * int
+)
+ident(
+  def cop_start "fcop.ml" 13 237 237 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 10 129 143 "fcop.ml" 10 129 147
+type(
+  string
+)
+ident(
+  def file "fcop.ml" 11 150 152 "fcop.ml" 12 194 234
+)
+"fcop.ml" 11 150 157 "fcop.ml" 11 150 158
+type(
+  int
+)
+ident(
+  def s "fcop.ml" 12 194 196 "fcop.ml" 12 194 234
+)
+"fcop.ml" 11 150 160 "fcop.ml" 11 150 163
+type(
+  Logic.state * int list
+)
+ident(
+  def sta "fcop.ml" 12 194 196 "fcop.ml" 12 194 234
+)
+"fcop.ml" 11 150 156 "fcop.ml" 11 150 164
+type(
+  int * (Logic.state * int list)
+)
+"fcop.ml" 11 150 168 "fcop.ml" 11 150 171
+ident(
+  def ret "fcop.ml" 12 194 196 "fcop.ml" 12 194 234
+)
+"fcop.ml" 11 150 156 "fcop.ml" 11 150 171
+type(
+  int * (Logic.state * int list)
+)
+"fcop.ml" 11 150 174 "fcop.ml" 11 150 185
+type(
+  string -> int * (Logic.state * int list)
+)
+ident(
+  ext_ref Logic.start
+)
+"fcop.ml" 11 150 186 "fcop.ml" 11 150 190
+type(
+  string
+)
+ident(
+  int_ref file "fcop.ml" 10 129 143 "fcop.ml" 10 129 147
+)
+"fcop.ml" 11 150 174 "fcop.ml" 11 150 190
+call(
+  stack
+)
+type(
+  int * (Logic.state * int list)
+)
+"fcop.ml" 12 194 196 "fcop.ml" 12 194 199
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 12 194 200 "fcop.ml" 12 194 202
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"fcop.ml" 12 194 204 "fcop.ml" 12 194 207
+type(
+  Logic.state * int list
+)
+ident(
+  int_ref sta "fcop.ml" 11 150 160 "fcop.ml" 11 150 163
+)
+"fcop.ml" 12 194 203 "fcop.ml" 12 194 208
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 12 194 196 "fcop.ml" 12 194 208
+type(
+  unit
+)
+"fcop.ml" 12 194 210 "fcop.ml" 12 194 211
+type(
+  int
+)
+ident(
+  int_ref s "fcop.ml" 11 150 157 "fcop.ml" 11 150 158
+)
+"fcop.ml" 12 194 213 "fcop.ml" 12 194 224
+type(
+  int list -> int
+)
+ident(
+  ext_ref List.length
+)
+"fcop.ml" 12 194 226 "fcop.ml" 12 194 229
+type(
+  Logic.state * int list -> int list
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"fcop.ml" 12 194 230 "fcop.ml" 12 194 233
+type(
+  Logic.state * int list
+)
+ident(
+  int_ref sta "fcop.ml" 11 150 160 "fcop.ml" 11 150 163
+)
+"fcop.ml" 12 194 225 "fcop.ml" 12 194 234
+type(
+  int list
+)
+"fcop.ml" 12 194 213 "fcop.ml" 12 194 234
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 12 194 210 "fcop.ml" 12 194 234
+type(
+  int * int
+)
+"fcop.ml" 12 194 196 "fcop.ml" 12 194 234
+type(
+  int * int
+)
+"fcop.ml" 11 150 152 "fcop.ml" 12 194 234
+type(
+  int * int
+)
+"fcop.ml" 13 237 241 "fcop.ml" 13 237 251
+type(
+  int -> int * int
+)
+ident(
+  def cop_action "fcop.ml" 17 401 401 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 13 237 252 "fcop.ml" 13 237 253
+type(
+  int
+)
+ident(
+  def i "fcop.ml" 14 256 258 "fcop.ml" 16 352 398
+)
+"fcop.ml" 14 256 263 "fcop.ml" 14 256 265
+type(
+  Logic.state
+)
+ident(
+  def st "fcop.ml" 15 292 294 "fcop.ml" 16 352 398
+)
+"fcop.ml" 14 256 267 "fcop.ml" 14 256 270
+type(
+  int list
+)
+ident(
+  def acs "fcop.ml" 15 292 294 "fcop.ml" 16 352 398
+)
+"fcop.ml" 14 256 262 "fcop.ml" 14 256 271
+type(
+  Logic.state * int list
+)
+"fcop.ml" 14 256 274 "fcop.ml" 14 256 281
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 14 256 283 "fcop.ml" 14 256 284
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 14 256 284 "fcop.ml" 14 256 287
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 14 256 282 "fcop.ml" 14 256 288
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 14 256 274 "fcop.ml" 14 256 288
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 15 292 299 "fcop.ml" 15 292 300
+type(
+  int
+)
+ident(
+  def s "fcop.ml" 16 352 354 "fcop.ml" 16 352 398
+)
+"fcop.ml" 15 292 302 "fcop.ml" 15 292 305
+type(
+  Logic.state * int list
+)
+ident(
+  def sta "fcop.ml" 16 352 354 "fcop.ml" 16 352 398
+)
+"fcop.ml" 15 292 298 "fcop.ml" 15 292 306
+type(
+  int * (Logic.state * int list)
+)
+"fcop.ml" 15 292 310 "fcop.ml" 15 292 313
+ident(
+  def ret "fcop.ml" 16 352 354 "fcop.ml" 16 352 398
+)
+"fcop.ml" 15 292 298 "fcop.ml" 15 292 313
+type(
+  int * (Logic.state * int list)
+)
+"fcop.ml" 15 292 316 "fcop.ml" 15 292 328
+type(
+  Logic.state -> int -> int * (Logic.state * int list)
+)
+ident(
+  ext_ref Logic.extend
+)
+"fcop.ml" 15 292 329 "fcop.ml" 15 292 331
+type(
+  Logic.state
+)
+ident(
+  int_ref st "fcop.ml" 14 256 263 "fcop.ml" 14 256 265
+)
+"fcop.ml" 15 292 333 "fcop.ml" 15 292 341
+type(
+  int list -> int -> int
+)
+ident(
+  ext_ref List.nth
+)
+"fcop.ml" 15 292 342 "fcop.ml" 15 292 345
+type(
+  int list
+)
+ident(
+  int_ref acs "fcop.ml" 14 256 267 "fcop.ml" 14 256 270
+)
+"fcop.ml" 15 292 346 "fcop.ml" 15 292 347
+type(
+  int
+)
+ident(
+  int_ref i "fcop.ml" 13 237 252 "fcop.ml" 13 237 253
+)
+"fcop.ml" 15 292 332 "fcop.ml" 15 292 348
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 15 292 316 "fcop.ml" 15 292 348
+call(
+  stack
+)
+type(
+  int * (Logic.state * int list)
+)
+"fcop.ml" 16 352 354 "fcop.ml" 16 352 357
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 16 352 358 "fcop.ml" 16 352 360
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"fcop.ml" 16 352 361 "fcop.ml" 16 352 364
+type(
+  Logic.state * int list
+)
+ident(
+  int_ref sta "fcop.ml" 15 292 302 "fcop.ml" 15 292 305
+)
+"fcop.ml" 16 352 368 "fcop.ml" 16 352 369
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 16 352 369 "fcop.ml" 16 352 372
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 16 352 368 "fcop.ml" 16 352 372
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 16 352 361 "fcop.ml" 16 352 372
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 16 352 354 "fcop.ml" 16 352 372
+type(
+  unit
+)
+"fcop.ml" 16 352 374 "fcop.ml" 16 352 375
+type(
+  int
+)
+ident(
+  int_ref s "fcop.ml" 15 292 299 "fcop.ml" 15 292 300
+)
+"fcop.ml" 16 352 377 "fcop.ml" 16 352 388
+type(
+  int list -> int
+)
+ident(
+  ext_ref List.length
+)
+"fcop.ml" 16 352 390 "fcop.ml" 16 352 393
+type(
+  Logic.state * int list -> int list
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"fcop.ml" 16 352 394 "fcop.ml" 16 352 397
+type(
+  Logic.state * int list
+)
+ident(
+  int_ref sta "fcop.ml" 15 292 302 "fcop.ml" 15 292 305
+)
+"fcop.ml" 16 352 389 "fcop.ml" 16 352 398
+type(
+  int list
+)
+"fcop.ml" 16 352 377 "fcop.ml" 16 352 398
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 16 352 374 "fcop.ml" 16 352 398
+type(
+  int * int
+)
+"fcop.ml" 16 352 354 "fcop.ml" 16 352 398
+type(
+  int * int
+)
+"fcop.ml" 15 292 294 "fcop.ml" 16 352 398
+type(
+  int * int
+)
+"fcop.ml" 14 256 258 "fcop.ml" 16 352 398
+type(
+  int * int
+)
+"fcop.ml" 17 401 405 "fcop.ml" 17 401 418
+type(
+  unit -> unit
+)
+ident(
+  def cop_backtrack "fcop.ml" 18 499 499 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 17 401 419 "fcop.ml" 17 401 421
+type(
+  unit
+)
+"fcop.ml" 17 401 424 "fcop.ml" 17 401 427
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 17 401 428 "fcop.ml" 17 401 430
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"fcop.ml" 17 401 431 "fcop.ml" 17 401 438
+type(
+  (Logic.state * int list) list -> (Logic.state * int list) list
+)
+ident(
+  ext_ref List.tl
+)
+"fcop.ml" 17 401 439 "fcop.ml" 17 401 440
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 17 401 440 "fcop.ml" 17 401 443
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 17 401 439 "fcop.ml" 17 401 443
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 17 401 431 "fcop.ml" 17 401 443
+call(
+  stack
+)
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 17 401 424 "fcop.ml" 17 401 443
+type(
+  unit
+)
+"fcop.ml" 17 401 448 "fcop.ml" 17 401 449
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 17 401 449 "fcop.ml" 17 401 452
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 17 401 448 "fcop.ml" 17 401 452
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 17 401 453 "fcop.ml" 17 401 454
+type(
+  (Logic.state * int list) list -> (Logic.state * int list) list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fcop.ml" 17 401 455 "fcop.ml" 17 401 457
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 17 401 448 "fcop.ml" 17 401 457
+type(
+  bool
+)
+"fcop.ml" 17 401 463 "fcop.ml" 17 401 471
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"fcop.ml" 17 401 472 "fcop.ml" 17 401 496
+type(
+  string
+)
+"fcop.ml" 17 401 463 "fcop.ml" 17 401 496
+call(
+  tail
+)
+type(
+  unit
+)
+"fcop.ml" 17 401 445 "fcop.ml" 17 401 496
+type(
+  unit
+)
+"fcop.ml" 17 401 424 "fcop.ml" 17 401 496
+type(
+  unit
+)
+"fcop.ml" 18 499 507 "fcop.ml" 18 499 518
+type(
+  unit -> int * int
+)
+ident(
+  def cop_restart "fcop.ml" 18 499 499 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 18 499 519 "fcop.ml" 18 499 521
+type(
+  unit
+)
+"fcop.ml" 19 524 532 "fcop.ml" 19 524 533
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 19 524 533 "fcop.ml" 19 524 536
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 19 524 532 "fcop.ml" 19 524 536
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 20 542 546 "fcop.ml" 20 542 547
+type(
+  Logic.state * int list
+)
+"fcop.ml" 20 542 551 "fcop.ml" 20 542 552
+type(
+  Logic.state * int list
+)
+"fcop.ml" 20 542 556 "fcop.ml" 20 542 557
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 20 542 551 "fcop.ml" 20 542 557
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 20 542 546 "fcop.ml" 20 542 557
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 20 542 561 "fcop.ml" 20 542 574
+type(
+  unit -> unit
+)
+ident(
+  int_ref cop_backtrack "fcop.ml" 17 401 405 "fcop.ml" 17 401 418
+)
+"fcop.ml" 20 542 575 "fcop.ml" 20 542 577
+type(
+  unit
+)
+"fcop.ml" 20 542 561 "fcop.ml" 20 542 577
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 20 542 579 "fcop.ml" 20 542 590
+type(
+  unit -> int * int
+)
+ident(
+  int_ref cop_restart "fcop.ml" 18 499 507 "fcop.ml" 18 499 518
+)
+"fcop.ml" 20 542 591 "fcop.ml" 20 542 593
+type(
+  unit
+)
+"fcop.ml" 20 542 579 "fcop.ml" 20 542 593
+call(
+  tail
+)
+type(
+  int * int
+)
+"fcop.ml" 20 542 561 "fcop.ml" 20 542 593
+type(
+  int * int
+)
+"fcop.ml" 21 594 600 "fcop.ml" 21 594 601
+type(
+  Logic.state
+)
+"fcop.ml" 21 594 603 "fcop.ml" 21 594 606
+type(
+  int list
+)
+ident(
+  def acs "fcop.ml" 21 594 612 "fcop.ml" 21 594 632
+)
+"fcop.ml" 21 594 599 "fcop.ml" 21 594 607
+type(
+  Logic.state * int list
+)
+"fcop.ml" 21 594 598 "fcop.ml" 21 594 608
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 21 594 613 "fcop.ml" 21 594 614
+type(
+  int
+)
+"fcop.ml" 21 594 616 "fcop.ml" 21 594 627
+type(
+  int list -> int
+)
+ident(
+  ext_ref List.length
+)
+"fcop.ml" 21 594 628 "fcop.ml" 21 594 631
+type(
+  int list
+)
+ident(
+  int_ref acs "fcop.ml" 21 594 603 "fcop.ml" 21 594 606
+)
+"fcop.ml" 21 594 616 "fcop.ml" 21 594 631
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 21 594 612 "fcop.ml" 21 594 632
+type(
+  int * int
+)
+"fcop.ml" 22 633 637 "fcop.ml" 22 633 639
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 22 633 643 "fcop.ml" 22 633 651
+type(
+  string -> int * int
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"fcop.ml" 22 633 652 "fcop.ml" 22 633 676
+type(
+  string
+)
+"fcop.ml" 22 633 643 "fcop.ml" 22 633 676
+call(
+  tail
+)
+type(
+  int * int
+)
+"fcop.ml" 19 524 526 "fcop.ml" 22 633 676
+type(
+  int * int
+)
+"fcop.ml" 24 680 688 "fcop.ml" 24 680 693
+type(
+  'a -> 'a list -> int
+)
+ident(
+  def index "fcop.ml" 24 680 680 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 24 680 694 "fcop.ml" 24 680 695
+type(
+  'a
+)
+ident(
+  def v "fcop.ml" 24 680 698 "fcop.ml" 27 744 769
+)
+"fcop.ml" 25 707 711 "fcop.ml" 25 707 713
+type(
+  'a list
+)
+"fcop.ml" 25 707 717 "fcop.ml" 25 707 718
+type(
+  int
+)
+"fcop.ml" 26 719 723 "fcop.ml" 26 719 724
+type(
+  'a
+)
+ident(
+  def a "fcop.ml" 26 719 728 "fcop.ml" 26 719 743
+)
+"fcop.ml" 26 719 726 "fcop.ml" 26 719 727
+type(
+  'a list
+)
+ident(
+  def r "fcop.ml" 26 719 728 "fcop.ml" 26 719 743
+)
+"fcop.ml" 26 719 723 "fcop.ml" 26 719 727
+type(
+  'a list
+)
+"fcop.ml" 26 719 733 "fcop.ml" 26 719 734
+type(
+  'a
+)
+ident(
+  int_ref a "fcop.ml" 26 719 723 "fcop.ml" 26 719 724
+)
+"fcop.ml" 26 719 735 "fcop.ml" 26 719 736
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fcop.ml" 26 719 737 "fcop.ml" 26 719 738
+type(
+  'a
+)
+ident(
+  int_ref v "fcop.ml" 24 680 694 "fcop.ml" 24 680 695
+)
+"fcop.ml" 26 719 733 "fcop.ml" 26 719 738
+type(
+  bool
+)
+"fcop.ml" 26 719 742 "fcop.ml" 26 719 743
+type(
+  int
+)
+"fcop.ml" 27 744 748 "fcop.ml" 27 744 749
+type(
+  'a
+)
+ident(
+  def a "fcop.ml" 27 744 756 "fcop.ml" 27 744 769
+)
+"fcop.ml" 27 744 751 "fcop.ml" 27 744 752
+type(
+  'a list
+)
+ident(
+  def r "fcop.ml" 27 744 756 "fcop.ml" 27 744 769
+)
+"fcop.ml" 27 744 748 "fcop.ml" 27 744 752
+type(
+  'a list
+)
+"fcop.ml" 27 744 756 "fcop.ml" 27 744 757
+type(
+  int
+)
+"fcop.ml" 27 744 758 "fcop.ml" 27 744 759
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"fcop.ml" 27 744 760 "fcop.ml" 27 744 765
+type(
+  'a -> 'a list -> int
+)
+ident(
+  int_ref index "fcop.ml" 24 680 688 "fcop.ml" 24 680 693
+)
+"fcop.ml" 27 744 766 "fcop.ml" 27 744 767
+type(
+  'a
+)
+ident(
+  int_ref v "fcop.ml" 24 680 694 "fcop.ml" 24 680 695
+)
+"fcop.ml" 27 744 768 "fcop.ml" 27 744 769
+type(
+  'a list
+)
+ident(
+  int_ref r "fcop.ml" 27 744 751 "fcop.ml" 27 744 752
+)
+"fcop.ml" 27 744 760 "fcop.ml" 27 744 769
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 27 744 756 "fcop.ml" 27 744 769
+type(
+  int
+)
+"fcop.ml" 24 680 698 "fcop.ml" 27 744 769
+type(
+  'a list -> int
+)
+"fcop.ml" 29 771 779 "fcop.ml" 29 771 793
+type(
+  ('a -> 'a -> int) -> 'a list -> 'a list
+)
+ident(
+  def remove_doubles "fcop.ml" 29 771 771 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 29 771 794 "fcop.ml" 29 771 797
+type(
+  'a -> 'a -> int
+)
+ident(
+  def cmp "fcop.ml" 29 771 800 "fcop.ml" 33 897 942
+)
+"fcop.ml" 30 809 813 "fcop.ml" 30 809 815
+type(
+  'a list
+)
+"fcop.ml" 30 809 819 "fcop.ml" 30 809 821
+type(
+  'a list
+)
+"fcop.ml" 31 822 827 "fcop.ml" 31 822 828
+type(
+  'a
+)
+ident(
+  def a "fcop.ml" 31 822 833 "fcop.ml" 31 822 836
+)
+"fcop.ml" 31 822 826 "fcop.ml" 31 822 829
+type(
+  'a list
+)
+"fcop.ml" 31 822 834 "fcop.ml" 31 822 835
+type(
+  'a
+)
+ident(
+  int_ref a "fcop.ml" 31 822 827 "fcop.ml" 31 822 828
+)
+"fcop.ml" 31 822 833 "fcop.ml" 31 822 836
+type(
+  'a list
+)
+"fcop.ml" 32 837 841 "fcop.ml" 32 837 842
+type(
+  'a
+)
+ident(
+  def a "fcop.ml" 32 837 849 "fcop.ml" 32 837 896
+)
+"fcop.ml" 32 837 844 "fcop.ml" 32 837 845
+type(
+  'a
+)
+ident(
+  def b "fcop.ml" 32 837 849 "fcop.ml" 32 837 896
+)
+"fcop.ml" 32 837 847 "fcop.ml" 32 837 848
+type(
+  'a list
+)
+ident(
+  def r "fcop.ml" 32 837 849 "fcop.ml" 32 837 896
+)
+"fcop.ml" 32 837 844 "fcop.ml" 32 837 848
+type(
+  'a list
+)
+"fcop.ml" 32 837 841 "fcop.ml" 32 837 848
+type(
+  'a list
+)
+"fcop.ml" 32 837 855 "fcop.ml" 32 837 858
+type(
+  'a -> 'a -> int
+)
+ident(
+  int_ref cmp "fcop.ml" 29 771 794 "fcop.ml" 29 771 797
+)
+"fcop.ml" 32 837 859 "fcop.ml" 32 837 860
+type(
+  'a
+)
+ident(
+  int_ref a "fcop.ml" 32 837 841 "fcop.ml" 32 837 842
+)
+"fcop.ml" 32 837 861 "fcop.ml" 32 837 862
+type(
+  'a
+)
+ident(
+  int_ref b "fcop.ml" 32 837 844 "fcop.ml" 32 837 845
+)
+"fcop.ml" 32 837 854 "fcop.ml" 32 837 863
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 32 837 864 "fcop.ml" 32 837 865
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fcop.ml" 32 837 866 "fcop.ml" 32 837 867
+type(
+  int
+)
+"fcop.ml" 32 837 854 "fcop.ml" 32 837 867
+type(
+  bool
+)
+"fcop.ml" 32 837 871 "fcop.ml" 32 837 885
+type(
+  ('a -> 'a -> int) -> 'a list -> 'a list
+)
+ident(
+  int_ref remove_doubles "fcop.ml" 29 771 779 "fcop.ml" 29 771 793
+)
+"fcop.ml" 32 837 886 "fcop.ml" 32 837 889
+type(
+  'a -> 'a -> int
+)
+ident(
+  int_ref cmp "fcop.ml" 29 771 794 "fcop.ml" 29 771 797
+)
+"fcop.ml" 32 837 891 "fcop.ml" 32 837 892
+type(
+  'a
+)
+ident(
+  int_ref a "fcop.ml" 32 837 841 "fcop.ml" 32 837 842
+)
+"fcop.ml" 32 837 894 "fcop.ml" 32 837 895
+type(
+  'a list
+)
+ident(
+  int_ref r "fcop.ml" 32 837 847 "fcop.ml" 32 837 848
+)
+"fcop.ml" 32 837 890 "fcop.ml" 32 837 896
+type(
+  'a list
+)
+"fcop.ml" 32 837 871 "fcop.ml" 32 837 896
+call(
+  tail
+)
+type(
+  'a list
+)
+"fcop.ml" 33 897 901 "fcop.ml" 33 897 902
+type(
+  'a
+)
+ident(
+  def a "fcop.ml" 33 897 912 "fcop.ml" 33 897 942
+)
+"fcop.ml" 33 897 904 "fcop.ml" 33 897 905
+type(
+  'a
+)
+ident(
+  def b "fcop.ml" 33 897 912 "fcop.ml" 33 897 942
+)
+"fcop.ml" 33 897 907 "fcop.ml" 33 897 908
+type(
+  'a list
+)
+ident(
+  def r "fcop.ml" 33 897 912 "fcop.ml" 33 897 942
+)
+"fcop.ml" 33 897 904 "fcop.ml" 33 897 908
+type(
+  'a list
+)
+"fcop.ml" 33 897 901 "fcop.ml" 33 897 908
+type(
+  'a list
+)
+"fcop.ml" 33 897 912 "fcop.ml" 33 897 913
+type(
+  'a
+)
+ident(
+  int_ref a "fcop.ml" 33 897 901 "fcop.ml" 33 897 902
+)
+"fcop.ml" 33 897 916 "fcop.ml" 33 897 930
+type(
+  ('a -> 'a -> int) -> 'a list -> 'a list
+)
+ident(
+  int_ref remove_doubles "fcop.ml" 29 771 779 "fcop.ml" 29 771 793
+)
+"fcop.ml" 33 897 931 "fcop.ml" 33 897 934
+type(
+  'a -> 'a -> int
+)
+ident(
+  int_ref cmp "fcop.ml" 29 771 794 "fcop.ml" 29 771 797
+)
+"fcop.ml" 33 897 936 "fcop.ml" 33 897 937
+type(
+  'a
+)
+ident(
+  int_ref b "fcop.ml" 33 897 904 "fcop.ml" 33 897 905
+)
+"fcop.ml" 33 897 939 "fcop.ml" 33 897 940
+type(
+  'a list
+)
+ident(
+  int_ref r "fcop.ml" 33 897 907 "fcop.ml" 33 897 908
+)
+"fcop.ml" 33 897 935 "fcop.ml" 33 897 941
+type(
+  'a list
+)
+"fcop.ml" 33 897 915 "fcop.ml" 33 897 942
+call(
+  stack
+)
+type(
+  'a list
+)
+"fcop.ml" 33 897 912 "fcop.ml" 33 897 942
+type(
+  'a list
+)
+"fcop.ml" 29 771 800 "fcop.ml" 33 897 942
+type(
+  'a list -> 'a list
+)
+"fcop.ml" 35 944 948 "fcop.ml" 35 944 957
+type(
+  ('a -> 'a -> int) -> 'a list -> 'a list
+)
+ident(
+  def sort_uniq "fcop.ml" 37 1004 1004 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 35 944 958 "fcop.ml" 35 944 961
+type(
+  'a -> 'a -> int
+)
+ident(
+  def cmp "fcop.ml" 35 944 962 "fcop.ml" 35 944 1002
+)
+"fcop.ml" 35 944 962 "fcop.ml" 35 944 963
+type(
+  'a list
+)
+ident(
+  def l "fcop.ml" 35 944 966 "fcop.ml" 35 944 1002
+)
+"fcop.ml" 35 944 966 "fcop.ml" 35 944 980
+type(
+  ('a -> 'a -> int) -> 'a list -> 'a list
+)
+ident(
+  int_ref remove_doubles "fcop.ml" 29 771 779 "fcop.ml" 29 771 793
+)
+"fcop.ml" 35 944 981 "fcop.ml" 35 944 984
+type(
+  'a -> 'a -> int
+)
+ident(
+  int_ref cmp "fcop.ml" 35 944 958 "fcop.ml" 35 944 961
+)
+"fcop.ml" 35 944 986 "fcop.ml" 35 944 995
+type(
+  ('a -> 'a -> int) -> 'a list -> 'a list
+)
+ident(
+  ext_ref List.sort
+)
+"fcop.ml" 35 944 996 "fcop.ml" 35 944 999
+type(
+  'a -> 'a -> int
+)
+ident(
+  int_ref cmp "fcop.ml" 35 944 958 "fcop.ml" 35 944 961
+)
+"fcop.ml" 35 944 1000 "fcop.ml" 35 944 1001
+type(
+  'a list
+)
+ident(
+  int_ref l "fcop.ml" 35 944 962 "fcop.ml" 35 944 963
+)
+"fcop.ml" 35 944 985 "fcop.ml" 35 944 1002
+call(
+  stack
+)
+type(
+  'a list
+)
+"fcop.ml" 35 944 966 "fcop.ml" 35 944 1002
+call(
+  tail
+)
+type(
+  'a list
+)
+"fcop.ml" 37 1004 1008 "fcop.ml" 37 1004 1021
+type(
+  int -> int * int
+)
+ident(
+  def cop_action_fl "fcop.ml" 43 1262 1262 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 37 1004 1022 "fcop.ml" 37 1004 1025
+type(
+  int
+)
+ident(
+  def fli "fcop.ml" 38 1028 1030 "fcop.ml" 41 1228 1260
+)
+"fcop.ml" 38 1028 1034 "fcop.ml" 38 1028 1040
+type(
+  int list
+)
+ident(
+  def hashes "fcop.ml" 39 1065 1067 "fcop.ml" 41 1228 1260
+)
+"fcop.ml" 38 1028 1043 "fcop.ml" 38 1028 1046
+type(
+  Logic.state * int list -> int list
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"fcop.ml" 38 1028 1048 "fcop.ml" 38 1028 1055
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 38 1028 1056 "fcop.ml" 38 1028 1057
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 38 1028 1057 "fcop.ml" 38 1028 1060
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 38 1028 1056 "fcop.ml" 38 1028 1060
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 38 1028 1047 "fcop.ml" 38 1028 1061
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 38 1028 1043 "fcop.ml" 38 1028 1061
+type(
+  int list
+)
+"fcop.ml" 39 1065 1071 "fcop.ml" 39 1065 1084
+type(
+  int list
+)
+ident(
+  def hashes_sorted "fcop.ml" 40 1185 1187 "fcop.ml" 41 1228 1260
+)
+"fcop.ml" 39 1065 1087 "fcop.ml" 39 1065 1093
+type(
+  int list
+)
+ident(
+  int_ref hashes "fcop.ml" 38 1028 1034 "fcop.ml" 38 1028 1040
+)
+"fcop.ml" 39 1065 1094 "fcop.ml" 39 1065 1096
+type(
+  int list -> (int list -> int list) -> int list
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"fcop.ml" 39 1065 1097 "fcop.ml" 39 1065 1106
+type(
+  (int -> int -> int) -> int list -> int list
+)
+ident(
+  int_ref sort_uniq "fcop.ml" 35 944 948 "fcop.ml" 35 944 957
+)
+"fcop.ml" 39 1065 1112 "fcop.ml" 39 1065 1113
+type(
+  int
+)
+ident(
+  def x "fcop.ml" 39 1065 1114 "fcop.ml" 39 1065 1180
+)
+"fcop.ml" 39 1065 1114 "fcop.ml" 39 1065 1115
+type(
+  int
+)
+ident(
+  def y "fcop.ml" 39 1065 1119 "fcop.ml" 39 1065 1180
+)
+"fcop.ml" 39 1065 1119 "fcop.ml" 39 1065 1126
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"fcop.ml" 39 1065 1128 "fcop.ml" 39 1065 1150
+type(
+  int -> int
+)
+ident(
+  ext_ref Logic.hash_to_fl_index
+)
+"fcop.ml" 39 1065 1151 "fcop.ml" 39 1065 1152
+type(
+  int
+)
+ident(
+  int_ref x "fcop.ml" 39 1065 1112 "fcop.ml" 39 1065 1113
+)
+"fcop.ml" 39 1065 1127 "fcop.ml" 39 1065 1153
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 39 1065 1155 "fcop.ml" 39 1065 1177
+type(
+  int -> int
+)
+ident(
+  ext_ref Logic.hash_to_fl_index
+)
+"fcop.ml" 39 1065 1178 "fcop.ml" 39 1065 1179
+type(
+  int
+)
+ident(
+  int_ref y "fcop.ml" 39 1065 1114 "fcop.ml" 39 1065 1115
+)
+"fcop.ml" 39 1065 1154 "fcop.ml" 39 1065 1180
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 39 1065 1119 "fcop.ml" 39 1065 1180
+type(
+  int
+)
+"fcop.ml" 39 1065 1107 "fcop.ml" 39 1065 1181
+type(
+  int -> int -> int
+)
+"fcop.ml" 39 1065 1097 "fcop.ml" 39 1065 1181
+type(
+  int list -> int list
+)
+"fcop.ml" 39 1065 1087 "fcop.ml" 39 1065 1181
+call(
+  stack
+)
+type(
+  int list
+)
+"fcop.ml" 40 1185 1191 "fcop.ml" 40 1185 1195
+type(
+  int
+)
+ident(
+  def hash "fcop.ml" 41 1228 1230 "fcop.ml" 41 1228 1260
+)
+"fcop.ml" 40 1185 1198 "fcop.ml" 40 1185 1206
+type(
+  int list -> int -> int
+)
+ident(
+  ext_ref List.nth
+)
+"fcop.ml" 40 1185 1207 "fcop.ml" 40 1185 1220
+type(
+  int list
+)
+ident(
+  int_ref hashes_sorted "fcop.ml" 39 1065 1071 "fcop.ml" 39 1065 1084
+)
+"fcop.ml" 40 1185 1221 "fcop.ml" 40 1185 1224
+type(
+  int
+)
+ident(
+  int_ref fli "fcop.ml" 37 1004 1022 "fcop.ml" 37 1004 1025
+)
+"fcop.ml" 40 1185 1198 "fcop.ml" 40 1185 1224
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 41 1228 1230 "fcop.ml" 41 1228 1240
+type(
+  int -> int * int
+)
+ident(
+  int_ref cop_action "fcop.ml" 13 237 241 "fcop.ml" 13 237 251
+)
+"fcop.ml" 41 1228 1242 "fcop.ml" 41 1228 1247
+type(
+  int -> int list -> int
+)
+ident(
+  int_ref index "fcop.ml" 24 680 688 "fcop.ml" 24 680 693
+)
+"fcop.ml" 41 1228 1248 "fcop.ml" 41 1228 1252
+type(
+  int
+)
+ident(
+  int_ref hash "fcop.ml" 40 1185 1191 "fcop.ml" 40 1185 1195
+)
+"fcop.ml" 41 1228 1253 "fcop.ml" 41 1228 1259
+type(
+  int list
+)
+ident(
+  int_ref hashes "fcop.ml" 38 1028 1034 "fcop.ml" 38 1028 1040
+)
+"fcop.ml" 41 1228 1241 "fcop.ml" 41 1228 1260
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 41 1228 1230 "fcop.ml" 41 1228 1260
+call(
+  tail
+)
+type(
+  int * int
+)
+"fcop.ml" 40 1185 1187 "fcop.ml" 41 1228 1260
+type(
+  int * int
+)
+"fcop.ml" 39 1065 1067 "fcop.ml" 41 1228 1260
+type(
+  int * int
+)
+"fcop.ml" 38 1028 1030 "fcop.ml" 41 1228 1260
+type(
+  int * int
+)
+"fcop.ml" 43 1262 1266 "fcop.ml" 43 1262 1279
+type(
+  unit -> int list
+)
+ident(
+  def cop_unif_mask "fcop.ml" 51 1478 1478 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 43 1262 1280 "fcop.ml" 43 1262 1282
+type(
+  unit
+)
+"fcop.ml" 44 1285 1291 "fcop.ml" 44 1285 1297
+type(
+  int list
+)
+ident(
+  def hashes "fcop.ml" 46 1371 1373 "fcop.ml" 49 1453 1476
+)
+"fcop.ml" 44 1285 1300 "fcop.ml" 44 1285 1303
+type(
+  Logic.state * int list -> int list
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"fcop.ml" 44 1285 1305 "fcop.ml" 44 1285 1312
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 44 1285 1313 "fcop.ml" 44 1285 1314
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 44 1285 1314 "fcop.ml" 44 1285 1317
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 44 1285 1313 "fcop.ml" 44 1285 1317
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 44 1285 1304 "fcop.ml" 44 1285 1318
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 44 1285 1300 "fcop.ml" 44 1285 1318
+type(
+  int list
+)
+"fcop.ml" 45 1319 1325 "fcop.ml" 45 1319 1332
+type(
+  int array
+)
+ident(
+  def mask_ar "fcop.ml" 46 1371 1373 "fcop.ml" 49 1453 1476
+)
+"fcop.ml" 45 1319 1335 "fcop.ml" 45 1319 1345
+type(
+  int -> int -> int array
+)
+ident(
+  ext_ref Array.make
+)
+"fcop.ml" 45 1319 1346 "fcop.ml" 45 1319 1347
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 45 1319 1347 "fcop.ml" 45 1319 1365
+type(
+  int ref
+)
+ident(
+  ext_ref Logic.total_action
+)
+"fcop.ml" 45 1319 1346 "fcop.ml" 45 1319 1365
+type(
+  int
+)
+"fcop.ml" 45 1319 1366 "fcop.ml" 45 1319 1367
+type(
+  int
+)
+"fcop.ml" 45 1319 1335 "fcop.ml" 45 1319 1367
+type(
+  int array
+)
+"fcop.ml" 46 1371 1373 "fcop.ml" 46 1371 1379
+type(
+  int list
+)
+ident(
+  int_ref hashes "fcop.ml" 44 1285 1291 "fcop.ml" 44 1285 1297
+)
+"fcop.ml" 46 1371 1380 "fcop.ml" 46 1371 1382
+type(
+  int list -> (int list -> unit) -> unit
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"fcop.ml" 46 1371 1383 "fcop.ml" 46 1371 1392
+type(
+  (int -> unit) -> int list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"fcop.ml" 46 1371 1398 "fcop.ml" 46 1371 1399
+type(
+  int
+)
+ident(
+  def x "fcop.ml" 47 1403 1407 "fcop.ml" 47 1403 1447
+)
+"fcop.ml" 47 1403 1407 "fcop.ml" 47 1403 1414
+type(
+  int array
+)
+ident(
+  int_ref mask_ar "fcop.ml" 45 1319 1325 "fcop.ml" 45 1319 1332
+)
+"fcop.ml" 47 1403 1416 "fcop.ml" 47 1403 1438
+type(
+  int -> int
+)
+ident(
+  ext_ref Logic.hash_to_fl_index
+)
+"fcop.ml" 47 1403 1439 "fcop.ml" 47 1403 1440
+type(
+  int
+)
+ident(
+  int_ref x "fcop.ml" 46 1371 1398 "fcop.ml" 46 1371 1399
+)
+"fcop.ml" 47 1403 1416 "fcop.ml" 47 1403 1440
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 47 1403 1445 "fcop.ml" 47 1403 1446
+type(
+  int
+)
+"fcop.ml" 47 1403 1407 "fcop.ml" 47 1403 1447
+type(
+  unit
+)
+"fcop.ml" 46 1371 1393 "fcop.ml" 48 1448 1451
+type(
+  int -> unit
+)
+"fcop.ml" 46 1371 1383 "fcop.ml" 48 1448 1451
+type(
+  int list -> unit
+)
+"fcop.ml" 46 1371 1373 "fcop.ml" 48 1448 1451
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 49 1453 1455 "fcop.ml" 49 1453 1468
+type(
+  int array -> int list
+)
+ident(
+  ext_ref Array.to_list
+)
+"fcop.ml" 49 1453 1469 "fcop.ml" 49 1453 1476
+type(
+  int array
+)
+ident(
+  int_ref mask_ar "fcop.ml" 45 1319 1325 "fcop.ml" 45 1319 1332
+)
+"fcop.ml" 49 1453 1455 "fcop.ml" 49 1453 1476
+call(
+  tail
+)
+type(
+  int list
+)
+"fcop.ml" 46 1371 1373 "fcop.ml" 49 1453 1476
+type(
+  int list
+)
+"fcop.ml" 44 1285 1287 "fcop.ml" 49 1453 1476
+type(
+  int list
+)
+"fcop.ml" 51 1478 1482 "fcop.ml" 51 1478 1498
+type(
+  int -> int
+)
+ident(
+  def cop_act_to_actfl "fcop.ml" 62 1771 1771 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 51 1478 1499 "fcop.ml" 51 1478 1502
+type(
+  int
+)
+ident(
+  def act "fcop.ml" 52 1505 1507 "fcop.ml" 60 1751 1769
+)
+"fcop.ml" 52 1505 1511 "fcop.ml" 52 1505 1515
+type(
+  int
+)
+ident(
+  def hash "fcop.ml" 53 1555 1557 "fcop.ml" 60 1751 1769
+)
+"fcop.ml" 52 1505 1518 "fcop.ml" 52 1505 1526
+type(
+  int list -> int -> int
+)
+ident(
+  ext_ref List.nth
+)
+"fcop.ml" 52 1505 1528 "fcop.ml" 52 1505 1531
+type(
+  Logic.state * int list -> int list
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"fcop.ml" 52 1505 1533 "fcop.ml" 52 1505 1540
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 52 1505 1541 "fcop.ml" 52 1505 1542
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 52 1505 1542 "fcop.ml" 52 1505 1545
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 52 1505 1541 "fcop.ml" 52 1505 1545
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 52 1505 1532 "fcop.ml" 52 1505 1546
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 52 1505 1527 "fcop.ml" 52 1505 1547
+type(
+  int list
+)
+"fcop.ml" 52 1505 1548 "fcop.ml" 52 1505 1551
+type(
+  int
+)
+ident(
+  int_ref act "fcop.ml" 51 1478 1499 "fcop.ml" 51 1478 1502
+)
+"fcop.ml" 52 1505 1518 "fcop.ml" 52 1505 1551
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 53 1555 1561 "fcop.ml" 53 1555 1565
+type(
+  int list
+)
+ident(
+  def mask "fcop.ml" 54 1588 1590 "fcop.ml" 60 1751 1769
+)
+"fcop.ml" 53 1555 1568 "fcop.ml" 53 1555 1581
+type(
+  unit -> int list
+)
+ident(
+  int_ref cop_unif_mask "fcop.ml" 43 1262 1266 "fcop.ml" 43 1262 1279
+)
+"fcop.ml" 53 1555 1582 "fcop.ml" 53 1555 1584
+type(
+  unit
+)
+"fcop.ml" 53 1555 1568 "fcop.ml" 53 1555 1584
+call(
+  stack
+)
+type(
+  int list
+)
+"fcop.ml" 54 1588 1594 "fcop.ml" 54 1588 1595
+type(
+  int
+)
+ident(
+  def i "fcop.ml" 55 1629 1631 "fcop.ml" 60 1751 1769
+)
+"fcop.ml" 54 1588 1598 "fcop.ml" 54 1588 1620
+type(
+  int -> int
+)
+ident(
+  ext_ref Logic.hash_to_fl_index
+)
+"fcop.ml" 54 1588 1621 "fcop.ml" 54 1588 1625
+type(
+  int
+)
+ident(
+  int_ref hash "fcop.ml" 52 1505 1511 "fcop.ml" 52 1505 1515
+)
+"fcop.ml" 54 1588 1598 "fcop.ml" 54 1588 1625
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 55 1629 1639 "fcop.ml" 55 1629 1648
+type(
+  int -> int list -> int
+)
+ident(
+  def sum_start "fcop.ml" 55 1629 1631 "fcop.ml" 60 1751 1769
+)
+"fcop.ml" 56 1660 1666 "fcop.ml" 56 1660 1667
+type(
+  int
+)
+"fcop.ml" 56 1660 1675 "fcop.ml" 56 1660 1676
+type(
+  int list
+)
+"fcop.ml" 56 1660 1680 "fcop.ml" 56 1660 1681
+type(
+  int
+)
+"fcop.ml" 56 1660 1671 "fcop.ml" 56 1660 1681
+type(
+  int list -> int
+)
+"fcop.ml" 57 1682 1688 "fcop.ml" 57 1682 1689
+type(
+  int
+)
+ident(
+  def n "fcop.ml" 57 1682 1693 "fcop.ml" 59 1713 1747
+)
+"fcop.ml" 58 1702 1705 "fcop.ml" 58 1702 1707
+type(
+  int list
+)
+"fcop.ml" 58 1702 1711 "fcop.ml" 58 1702 1712
+type(
+  int
+)
+"fcop.ml" 59 1713 1716 "fcop.ml" 59 1713 1717
+type(
+  int
+)
+ident(
+  def a "fcop.ml" 59 1713 1724 "fcop.ml" 59 1713 1747
+)
+"fcop.ml" 59 1713 1719 "fcop.ml" 59 1713 1720
+type(
+  int list
+)
+ident(
+  def r "fcop.ml" 59 1713 1724 "fcop.ml" 59 1713 1747
+)
+"fcop.ml" 59 1713 1716 "fcop.ml" 59 1713 1720
+type(
+  int list
+)
+"fcop.ml" 59 1713 1724 "fcop.ml" 59 1713 1725
+type(
+  int
+)
+ident(
+  int_ref a "fcop.ml" 59 1713 1716 "fcop.ml" 59 1713 1717
+)
+"fcop.ml" 59 1713 1726 "fcop.ml" 59 1713 1727
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"fcop.ml" 59 1713 1729 "fcop.ml" 59 1713 1738
+type(
+  int -> int list -> int
+)
+ident(
+  int_ref sum_start "fcop.ml" 55 1629 1639 "fcop.ml" 55 1629 1648
+)
+"fcop.ml" 59 1713 1740 "fcop.ml" 59 1713 1741
+type(
+  int
+)
+ident(
+  int_ref n "fcop.ml" 57 1682 1688 "fcop.ml" 57 1682 1689
+)
+"fcop.ml" 59 1713 1741 "fcop.ml" 59 1713 1742
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"fcop.ml" 59 1713 1742 "fcop.ml" 59 1713 1743
+type(
+  int
+)
+"fcop.ml" 59 1713 1739 "fcop.ml" 59 1713 1744
+type(
+  int
+)
+"fcop.ml" 59 1713 1745 "fcop.ml" 59 1713 1746
+type(
+  int list
+)
+ident(
+  int_ref r "fcop.ml" 59 1713 1719 "fcop.ml" 59 1713 1720
+)
+"fcop.ml" 59 1713 1728 "fcop.ml" 59 1713 1747
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 59 1713 1724 "fcop.ml" 59 1713 1747
+type(
+  int
+)
+"fcop.ml" 57 1682 1693 "fcop.ml" 59 1713 1747
+type(
+  int list -> int
+)
+"fcop.ml" 55 1629 1651 "fcop.ml" 59 1713 1747
+type(
+  int -> int list -> int
+)
+"fcop.ml" 60 1751 1753 "fcop.ml" 60 1751 1762
+type(
+  int -> int list -> int
+)
+ident(
+  int_ref sum_start "fcop.ml" 55 1629 1639 "fcop.ml" 55 1629 1648
+)
+"fcop.ml" 60 1751 1763 "fcop.ml" 60 1751 1764
+type(
+  int
+)
+ident(
+  int_ref i "fcop.ml" 54 1588 1594 "fcop.ml" 54 1588 1595
+)
+"fcop.ml" 60 1751 1765 "fcop.ml" 60 1751 1769
+type(
+  int list
+)
+ident(
+  int_ref mask "fcop.ml" 53 1555 1561 "fcop.ml" 53 1555 1565
+)
+"fcop.ml" 60 1751 1753 "fcop.ml" 60 1751 1769
+call(
+  tail
+)
+type(
+  int
+)
+"fcop.ml" 55 1629 1631 "fcop.ml" 60 1751 1769
+type(
+  int
+)
+"fcop.ml" 54 1588 1590 "fcop.ml" 60 1751 1769
+type(
+  int
+)
+"fcop.ml" 53 1555 1557 "fcop.ml" 60 1751 1769
+type(
+  int
+)
+"fcop.ml" 52 1505 1507 "fcop.ml" 60 1751 1769
+type(
+  int
+)
+"fcop.ml" 62 1771 1775 "fcop.ml" 62 1771 1789
+type(
+  unit ->
+  ((int * int * int) * (int * int * int list) list *
+   (int * int * int list) list * int list) *
+  int list * int list * int list list
+)
+ident(
+  def cop_circuit_st "fcop.ml" 67 1939 1939 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 62 1771 1790 "fcop.ml" 62 1771 1792
+type(
+  unit
+)
+"fcop.ml" 63 1795 1802 "fcop.ml" 63 1795 1804
+type(
+  Logic.state
+)
+ident(
+  def st "fcop.ml" 64 1831 1833 "fcop.ml" 65 1898 1937
+)
+"fcop.ml" 63 1795 1806 "fcop.ml" 63 1795 1809
+type(
+  int list
+)
+ident(
+  def acs "fcop.ml" 64 1831 1833 "fcop.ml" 65 1898 1937
+)
+"fcop.ml" 63 1795 1801 "fcop.ml" 63 1795 1810
+type(
+  Logic.state * int list
+)
+"fcop.ml" 63 1795 1813 "fcop.ml" 63 1795 1820
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 63 1795 1822 "fcop.ml" 63 1795 1823
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 63 1795 1823 "fcop.ml" 63 1795 1826
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 63 1795 1821 "fcop.ml" 63 1795 1827
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 63 1795 1813 "fcop.ml" 63 1795 1827
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 64 1831 1838 "fcop.ml" 64 1831 1842
+type(
+  Circuit.circuit
+)
+ident(
+  def circ "fcop.ml" 65 1898 1900 "fcop.ml" 65 1898 1937
+)
+"fcop.ml" 64 1831 1844 "fcop.ml" 64 1831 1848
+type(
+  int list
+)
+ident(
+  def path "fcop.ml" 65 1898 1900 "fcop.ml" 65 1898 1937
+)
+"fcop.ml" 64 1831 1850 "fcop.ml" 64 1831 1855
+type(
+  int list
+)
+ident(
+  def goals "fcop.ml" 65 1898 1900 "fcop.ml" 65 1898 1937
+)
+"fcop.ml" 64 1831 1857 "fcop.ml" 64 1831 1863
+type(
+  int list list
+)
+ident(
+  def axioms "fcop.ml" 65 1898 1900 "fcop.ml" 65 1898 1937
+)
+"fcop.ml" 64 1831 1837 "fcop.ml" 64 1831 1864
+type(
+  Circuit.circuit * int list * int list * int list list
+)
+"fcop.ml" 64 1831 1867 "fcop.ml" 64 1831 1891
+type(
+  Logic.state -> Circuit.circuit * int list * int list * int list list
+)
+ident(
+  ext_ref Circuit.state_to_circuit
+)
+"fcop.ml" 64 1831 1892 "fcop.ml" 64 1831 1894
+type(
+  Logic.state
+)
+ident(
+  int_ref st "fcop.ml" 63 1795 1802 "fcop.ml" 63 1795 1804
+)
+"fcop.ml" 64 1831 1867 "fcop.ml" 64 1831 1894
+call(
+  stack
+)
+type(
+  Circuit.circuit * int list * int list * int list list
+)
+"fcop.ml" 65 1898 1901 "fcop.ml" 65 1898 1905
+type(
+  Circuit.circuit
+)
+ident(
+  int_ref circ "fcop.ml" 64 1831 1838 "fcop.ml" 64 1831 1842
+)
+"fcop.ml" 65 1898 1901 "fcop.ml" 65 1898 1912
+call(
+  stack
+)
+type(
+  unit ->
+  (int * int * int) * (int * int * int list) list *
+  (int * int * int list) list * int list
+)
+"fcop.ml" 65 1898 1913 "fcop.ml" 65 1898 1915
+type(
+  unit
+)
+"fcop.ml" 65 1898 1901 "fcop.ml" 65 1898 1915
+type(
+  (int * int * int) * (int * int * int list) list *
+  (int * int * int list) list * int list
+)
+"fcop.ml" 65 1898 1917 "fcop.ml" 65 1898 1921
+type(
+  int list
+)
+ident(
+  int_ref path "fcop.ml" 64 1831 1844 "fcop.ml" 64 1831 1848
+)
+"fcop.ml" 65 1898 1923 "fcop.ml" 65 1898 1928
+type(
+  int list
+)
+ident(
+  int_ref goals "fcop.ml" 64 1831 1850 "fcop.ml" 64 1831 1855
+)
+"fcop.ml" 65 1898 1930 "fcop.ml" 65 1898 1936
+type(
+  int list list
+)
+ident(
+  int_ref axioms "fcop.ml" 64 1831 1857 "fcop.ml" 64 1831 1863
+)
+"fcop.ml" 65 1898 1900 "fcop.ml" 65 1898 1937
+type(
+  ((int * int * int) * (int * int * int list) list *
+   (int * int * int list) list * int list) *
+  int list * int list * int list list
+)
+"fcop.ml" 64 1831 1833 "fcop.ml" 65 1898 1937
+type(
+  ((int * int * int) * (int * int * int list) list *
+   (int * int * int list) list * int list) *
+  int list * int list * int list list
+)
+"fcop.ml" 63 1795 1797 "fcop.ml" 65 1898 1937
+type(
+  ((int * int * int) * (int * int * int list) list *
+   (int * int * int list) list * int list) *
+  int list * int list * int list list
+)
+"fcop.ml" 67 1939 1943 "fcop.ml" 67 1939 1960
+type(
+  unit ->
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list
+)
+ident(
+  def cop_graph_indices "fcop.ml" 71 2036 2036 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 67 1939 1961 "fcop.ml" 67 1939 1963
+type(
+  unit
+)
+"fcop.ml" 68 1966 1973 "fcop.ml" 68 1966 1975
+type(
+  Logic.state
+)
+ident(
+  def st "fcop.ml" 69 2002 2004 "fcop.ml" 69 2002 2034
+)
+"fcop.ml" 68 1966 1977 "fcop.ml" 68 1966 1980
+type(
+  int list
+)
+ident(
+  def acs "fcop.ml" 69 2002 2004 "fcop.ml" 69 2002 2034
+)
+"fcop.ml" 68 1966 1972 "fcop.ml" 68 1966 1981
+type(
+  Logic.state * int list
+)
+"fcop.ml" 68 1966 1984 "fcop.ml" 68 1966 1991
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 68 1966 1993 "fcop.ml" 68 1966 1994
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 68 1966 1994 "fcop.ml" 68 1966 1997
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 68 1966 1992 "fcop.ml" 68 1966 1998
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 68 1966 1984 "fcop.ml" 68 1966 1998
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 69 2002 2004 "fcop.ml" 69 2002 2031
+type(
+  Logic.state ->
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list
+)
+ident(
+  ext_ref Circuit.state_to_gr_indices
+)
+"fcop.ml" 69 2002 2032 "fcop.ml" 69 2002 2034
+type(
+  Logic.state
+)
+ident(
+  int_ref st "fcop.ml" 68 1966 1973 "fcop.ml" 68 1966 1975
+)
+"fcop.ml" 69 2002 2004 "fcop.ml" 69 2002 2034
+call(
+  tail
+)
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list
+)
+"fcop.ml" 68 1966 1968 "fcop.ml" 69 2002 2034
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list
+)
+"fcop.ml" 71 2036 2040 "fcop.ml" 71 2036 2057
+type(
+  unit -> string list * string list
+)
+ident(
+  def cop_graph_symbols "fcop.ml" 75 2133 2133 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 71 2036 2058 "fcop.ml" 71 2036 2060
+type(
+  unit
+)
+"fcop.ml" 72 2063 2070 "fcop.ml" 72 2063 2072
+type(
+  Logic.state
+)
+ident(
+  def st "fcop.ml" 73 2099 2101 "fcop.ml" 73 2099 2131
+)
+"fcop.ml" 72 2063 2074 "fcop.ml" 72 2063 2077
+type(
+  int list
+)
+ident(
+  def acs "fcop.ml" 73 2099 2101 "fcop.ml" 73 2099 2131
+)
+"fcop.ml" 72 2063 2069 "fcop.ml" 72 2063 2078
+type(
+  Logic.state * int list
+)
+"fcop.ml" 72 2063 2081 "fcop.ml" 72 2063 2088
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 72 2063 2090 "fcop.ml" 72 2063 2091
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 72 2063 2091 "fcop.ml" 72 2063 2094
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 72 2063 2089 "fcop.ml" 72 2063 2095
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 72 2063 2081 "fcop.ml" 72 2063 2095
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 73 2099 2101 "fcop.ml" 73 2099 2128
+type(
+  Logic.state -> string list * string list
+)
+ident(
+  ext_ref Circuit.state_to_gr_symbols
+)
+"fcop.ml" 73 2099 2129 "fcop.ml" 73 2099 2131
+type(
+  Logic.state
+)
+ident(
+  int_ref st "fcop.ml" 72 2063 2070 "fcop.ml" 72 2063 2072
+)
+"fcop.ml" 73 2099 2101 "fcop.ml" 73 2099 2131
+call(
+  tail
+)
+type(
+  string list * string list
+)
+"fcop.ml" 72 2063 2065 "fcop.ml" 73 2099 2131
+type(
+  string list * string list
+)
+"fcop.ml" 75 2133 2137 "fcop.ml" 75 2133 2155
+type(
+  int -> int list
+)
+ident(
+  def cop_contr_features "fcop.ml" 77 2296 2296 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 75 2133 2156 "fcop.ml" 75 2133 2157
+type(
+  int
+)
+ident(
+  def i "fcop.ml" 76 2160 2162 "fcop.ml" 76 2160 2293
+)
+"fcop.ml" 76 2160 2162 "fcop.ml" 76 2160 2170
+type(
+  (int * int -> int) -> (int * int) list -> int list
+)
+ident(
+  ext_ref List.map
+)
+"fcop.ml" 76 2160 2177 "fcop.ml" 76 2160 2178
+type(
+  int
+)
+ident(
+  def x "fcop.ml" 76 2160 2186 "fcop.ml" 76 2160 2220
+)
+"fcop.ml" 76 2160 2180 "fcop.ml" 76 2160 2181
+type(
+  int
+)
+"fcop.ml" 76 2160 2176 "fcop.ml" 76 2160 2182
+type(
+  int * int
+)
+"fcop.ml" 76 2160 2187 "fcop.ml" 76 2160 2188
+type(
+  int
+)
+ident(
+  int_ref x "fcop.ml" 76 2160 2177 "fcop.ml" 76 2160 2178
+)
+"fcop.ml" 76 2160 2189 "fcop.ml" 76 2160 2190
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"fcop.ml" 76 2160 2191 "fcop.ml" 76 2160 2192
+type(
+  int
+)
+"fcop.ml" 76 2160 2193 "fcop.ml" 76 2160 2194
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"fcop.ml" 76 2160 2195 "fcop.ml" 76 2160 2219
+type(
+  int
+)
+ident(
+  ext_ref Features.features_modulo
+)
+"fcop.ml" 76 2160 2191 "fcop.ml" 76 2160 2219
+type(
+  int
+)
+"fcop.ml" 76 2160 2186 "fcop.ml" 76 2160 2220
+type(
+  int
+)
+"fcop.ml" 76 2160 2171 "fcop.ml" 76 2160 2221
+type(
+  int * int -> int
+)
+"fcop.ml" 76 2160 2223 "fcop.ml" 76 2160 2235
+type(
+  (int, (int * int) list) Hashtbl.t -> int -> (int * int) list
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"fcop.ml" 76 2160 2236 "fcop.ml" 76 2160 2256
+type(
+  (int, (int * int) list) Hashtbl.t
+)
+ident(
+  ext_ref Features.no_contrfea
+)
+"fcop.ml" 76 2160 2258 "fcop.ml" 76 2160 2266
+type(
+  int list -> int -> int
+)
+ident(
+  ext_ref List.nth
+)
+"fcop.ml" 76 2160 2268 "fcop.ml" 76 2160 2271
+type(
+  Logic.state * int list -> int list
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"fcop.ml" 76 2160 2273 "fcop.ml" 76 2160 2280
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 76 2160 2282 "fcop.ml" 76 2160 2283
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 76 2160 2283 "fcop.ml" 76 2160 2286
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 76 2160 2281 "fcop.ml" 76 2160 2287
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 76 2160 2272 "fcop.ml" 76 2160 2288
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 76 2160 2267 "fcop.ml" 76 2160 2289
+type(
+  int list
+)
+"fcop.ml" 76 2160 2290 "fcop.ml" 76 2160 2291
+type(
+  int
+)
+ident(
+  int_ref i "fcop.ml" 75 2133 2156 "fcop.ml" 75 2133 2157
+)
+"fcop.ml" 76 2160 2257 "fcop.ml" 76 2160 2292
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 76 2160 2222 "fcop.ml" 76 2160 2293
+call(
+  stack
+)
+type(
+  (int * int) list
+)
+"fcop.ml" 76 2160 2162 "fcop.ml" 76 2160 2293
+call(
+  tail
+)
+type(
+  int list
+)
+"fcop.ml" 77 2296 2300 "fcop.ml" 77 2296 2319
+type(
+  int -> int list
+)
+ident(
+  def cop_contr_represent "fcop.ml" 83 2563 2563 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 77 2296 2320 "fcop.ml" 77 2296 2321
+type(
+  int
+)
+ident(
+  def i "fcop.ml" 78 2324 2326 "fcop.ml" 78 2324 2399
+)
+"fcop.ml" 78 2324 2326 "fcop.ml" 78 2324 2338
+type(
+  (int, int list) Hashtbl.t -> int -> int list
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"fcop.ml" 78 2324 2339 "fcop.ml" 78 2324 2363
+type(
+  (int, int list) Hashtbl.t
+)
+ident(
+  ext_ref Features.no_contrholstep
+)
+"fcop.ml" 78 2324 2365 "fcop.ml" 78 2324 2373
+type(
+  int list -> int -> int
+)
+ident(
+  ext_ref List.nth
+)
+"fcop.ml" 78 2324 2375 "fcop.ml" 78 2324 2378
+type(
+  Logic.state * int list -> int list
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"fcop.ml" 78 2324 2380 "fcop.ml" 78 2324 2387
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 78 2324 2389 "fcop.ml" 78 2324 2390
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 78 2324 2390 "fcop.ml" 78 2324 2393
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 78 2324 2388 "fcop.ml" 78 2324 2394
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 78 2324 2379 "fcop.ml" 78 2324 2395
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 78 2324 2374 "fcop.ml" 78 2324 2396
+type(
+  int list
+)
+"fcop.ml" 78 2324 2397 "fcop.ml" 78 2324 2398
+type(
+  int
+)
+ident(
+  int_ref i "fcop.ml" 77 2296 2320 "fcop.ml" 77 2296 2321
+)
+"fcop.ml" 78 2324 2364 "fcop.ml" 78 2324 2399
+call(
+  stack
+)
+type(
+  int
+)
+"fcop.ml" 78 2324 2326 "fcop.ml" 78 2324 2399
+call(
+  tail
+)
+type(
+  int list
+)
+"fcop.ml" 83 2563 2567 "fcop.ml" 83 2563 2579
+type(
+  unit -> unit
+)
+ident(
+  def cop_st_print "fcop.ml" 96 3393 3393 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 83 2563 2580 "fcop.ml" 83 2563 2582
+type(
+  unit
+)
+"fcop.ml" 84 2585 2592 "fcop.ml" 84 2585 2594
+type(
+  Logic.state
+)
+ident(
+  def st "fcop.ml" 85 2619 2621 "fcop.ml" 94 3366 3389
+)
+"fcop.ml" 84 2585 2596 "fcop.ml" 84 2585 2599
+type(
+  int list
+)
+ident(
+  def acs "fcop.ml" 85 2619 2621 "fcop.ml" 94 3366 3389
+)
+"fcop.ml" 84 2585 2591 "fcop.ml" 84 2585 2600
+type(
+  Logic.state * int list
+)
+"fcop.ml" 84 2585 2603 "fcop.ml" 84 2585 2610
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 84 2585 2611 "fcop.ml" 84 2585 2612
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 84 2585 2612 "fcop.ml" 84 2585 2615
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 84 2585 2611 "fcop.ml" 84 2585 2615
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 84 2585 2603 "fcop.ml" 84 2585 2615
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 85 2619 2625 "fcop.ml" 85 2619 2626
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  def s "fcop.ml" 86 2645 2647 "fcop.ml" 94 3366 3389
+)
+"fcop.ml" 85 2619 2629 "fcop.ml" 85 2619 2632
+type(
+  Cnf.term Cnf.Im.t * int -> Cnf.term Cnf.Im.t
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 85 2619 2634 "fcop.ml" 85 2619 2636
+type(
+  Logic.state
+)
+ident(
+  int_ref st "fcop.ml" 84 2585 2592 "fcop.ml" 84 2585 2594
+)
+"fcop.ml" 85 2619 2633 "fcop.ml" 85 2619 2641
+type(
+  Cnf.term Cnf.Im.t * int
+)
+"fcop.ml" 85 2619 2629 "fcop.ml" 85 2619 2641
+type(
+  Cnf.term Cnf.Im.t
+)
+"fcop.ml" 86 2645 2651 "fcop.ml" 86 2645 2656
+type(
+  Cnf.lit list
+)
+ident(
+  def stack "fcop.ml" 87 2733 2735 "fcop.ml" 94 3366 3389
+)
+"fcop.ml" 86 2645 2659 "fcop.ml" 86 2645 2670
+type(
+  Cnf.lit list list -> Cnf.lit list
+)
+ident(
+  ext_ref List.concat
+)
+"fcop.ml" 86 2645 2672 "fcop.ml" 86 2645 2680
+type(
+  (Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list ->
+   Cnf.lit list) ->
+  (Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list) list ->
+  Cnf.lit list list
+)
+ident(
+  ext_ref List.map
+)
+"fcop.ml" 86 2645 2687 "fcop.ml" 86 2645 2689
+type(
+  Logic.state
+)
+ident(
+  def _t "fcop.ml" 86 2645 2716 "fcop.ml" 86 2645 2718
+)
+"fcop.ml" 86 2645 2691 "fcop.ml" 86 2645 2694
+type(
+  Cnf.lit list
+)
+ident(
+  def pat "fcop.ml" 86 2645 2716 "fcop.ml" 86 2645 2718
+)
+"fcop.ml" 86 2645 2696 "fcop.ml" 86 2645 2700
+type(
+  Cnf.lit list
+)
+ident(
+  def _lem "fcop.ml" 86 2645 2716 "fcop.ml" 86 2645 2718
+)
+"fcop.ml" 86 2645 2702 "fcop.ml" 86 2645 2704
+type(
+  Cnf.lit list
+)
+ident(
+  def cl "fcop.ml" 86 2645 2716 "fcop.ml" 86 2645 2718
+)
+"fcop.ml" 86 2645 2706 "fcop.ml" 86 2645 2711
+type(
+  int list
+)
+ident(
+  def _pcno "fcop.ml" 86 2645 2716 "fcop.ml" 86 2645 2718
+)
+"fcop.ml" 86 2645 2686 "fcop.ml" 86 2645 2712
+type(
+  Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list
+)
+"fcop.ml" 86 2645 2716 "fcop.ml" 86 2645 2718
+type(
+  Cnf.lit list
+)
+ident(
+  int_ref cl "fcop.ml" 86 2645 2702 "fcop.ml" 86 2645 2704
+)
+"fcop.ml" 86 2645 2681 "fcop.ml" 86 2645 2719
+type(
+  Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list ->
+  Cnf.lit list
+)
+"fcop.ml" 86 2645 2720 "fcop.ml" 86 2645 2722
+type(
+  Logic.state
+)
+ident(
+  int_ref st "fcop.ml" 84 2585 2592 "fcop.ml" 84 2585 2594
+)
+"fcop.ml" 86 2645 2720 "fcop.ml" 86 2645 2728
+type(
+  (Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list) list
+)
+"fcop.ml" 86 2645 2671 "fcop.ml" 86 2645 2729
+call(
+  stack
+)
+type(
+  Cnf.lit list list
+)
+"fcop.ml" 86 2645 2659 "fcop.ml" 86 2645 2729
+call(
+  stack
+)
+type(
+  Cnf.lit list
+)
+"fcop.ml" 87 2733 2739 "fcop.ml" 87 2733 2742
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  def scl "fcop.ml" 88 2854 2856 "fcop.ml" 94 3366 3389
+)
+"fcop.ml" 87 2733 2744 "fcop.ml" 87 2733 2749
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  def spath "fcop.ml" 88 2854 2856 "fcop.ml" 94 3366 3389
+)
+"fcop.ml" 87 2733 2751 "fcop.ml" 87 2733 2755
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  def slem "fcop.ml" 88 2854 2856 "fcop.ml" 94 3366 3389
+)
+"fcop.ml" 87 2733 2739 "fcop.ml" 87 2733 2755
+type(
+  (int * Cnf.term list) list * (int * Cnf.term list) list *
+  (int * Cnf.term list) list
+)
+"fcop.ml" 87 2733 2758 "fcop.ml" 87 2733 2766
+type(
+  (Cnf.lit -> int * Cnf.term list) ->
+  Cnf.lit list -> (int * Cnf.term list) list
+)
+ident(
+  ext_ref List.map
+)
+"fcop.ml" 87 2733 2768 "fcop.ml" 87 2733 2776
+type(
+  Cnf.term Cnf.Im.t -> Cnf.lit -> int * Cnf.term list
+)
+ident(
+  ext_ref Cnf.inst_lit
+)
+"fcop.ml" 87 2733 2777 "fcop.ml" 87 2733 2778
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  int_ref s "fcop.ml" 85 2619 2625 "fcop.ml" 85 2619 2626
+)
+"fcop.ml" 87 2733 2767 "fcop.ml" 87 2733 2779
+call(
+  stack
+)
+type(
+  Cnf.lit -> int * Cnf.term list
+)
+"fcop.ml" 87 2733 2780 "fcop.ml" 87 2733 2782
+type(
+  Logic.state
+)
+ident(
+  int_ref st "fcop.ml" 84 2585 2592 "fcop.ml" 84 2585 2594
+)
+"fcop.ml" 87 2733 2780 "fcop.ml" 87 2733 2789
+type(
+  Cnf.lit list
+)
+"fcop.ml" 87 2733 2758 "fcop.ml" 87 2733 2789
+call(
+  stack
+)
+type(
+  (int * Cnf.term list) list
+)
+"fcop.ml" 87 2733 2791 "fcop.ml" 87 2733 2799
+type(
+  (Cnf.lit -> int * Cnf.term list) ->
+  Cnf.lit list -> (int * Cnf.term list) list
+)
+ident(
+  ext_ref List.map
+)
+"fcop.ml" 87 2733 2801 "fcop.ml" 87 2733 2809
+type(
+  Cnf.term Cnf.Im.t -> Cnf.lit -> int * Cnf.term list
+)
+ident(
+  ext_ref Cnf.inst_lit
+)
+"fcop.ml" 87 2733 2810 "fcop.ml" 87 2733 2811
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  int_ref s "fcop.ml" 85 2619 2625 "fcop.ml" 85 2619 2626
+)
+"fcop.ml" 87 2733 2800 "fcop.ml" 87 2733 2812
+call(
+  stack
+)
+type(
+  Cnf.lit -> int * Cnf.term list
+)
+"fcop.ml" 87 2733 2813 "fcop.ml" 87 2733 2815
+type(
+  Logic.state
+)
+ident(
+  int_ref st "fcop.ml" 84 2585 2592 "fcop.ml" 84 2585 2594
+)
+"fcop.ml" 87 2733 2813 "fcop.ml" 87 2733 2820
+type(
+  Cnf.lit list
+)
+"fcop.ml" 87 2733 2791 "fcop.ml" 87 2733 2820
+call(
+  stack
+)
+type(
+  (int * Cnf.term list) list
+)
+"fcop.ml" 87 2733 2822 "fcop.ml" 87 2733 2830
+type(
+  (Cnf.lit -> int * Cnf.term list) ->
+  Cnf.lit list -> (int * Cnf.term list) list
+)
+ident(
+  ext_ref List.map
+)
+"fcop.ml" 87 2733 2832 "fcop.ml" 87 2733 2840
+type(
+  Cnf.term Cnf.Im.t -> Cnf.lit -> int * Cnf.term list
+)
+ident(
+  ext_ref Cnf.inst_lit
+)
+"fcop.ml" 87 2733 2841 "fcop.ml" 87 2733 2842
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  int_ref s "fcop.ml" 85 2619 2625 "fcop.ml" 85 2619 2626
+)
+"fcop.ml" 87 2733 2831 "fcop.ml" 87 2733 2843
+call(
+  stack
+)
+type(
+  Cnf.lit -> int * Cnf.term list
+)
+"fcop.ml" 87 2733 2844 "fcop.ml" 87 2733 2846
+type(
+  Logic.state
+)
+ident(
+  int_ref st "fcop.ml" 84 2585 2592 "fcop.ml" 84 2585 2594
+)
+"fcop.ml" 87 2733 2844 "fcop.ml" 87 2733 2850
+type(
+  Cnf.lit list
+)
+"fcop.ml" 87 2733 2822 "fcop.ml" 87 2733 2850
+call(
+  stack
+)
+type(
+  (int * Cnf.term list) list
+)
+"fcop.ml" 87 2733 2758 "fcop.ml" 87 2733 2850
+type(
+  (int * Cnf.term list) list * (int * Cnf.term list) list *
+  (int * Cnf.term list) list
+)
+"fcop.ml" 88 2854 2860 "fcop.ml" 88 2854 2866
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  def sstack "fcop.ml" 89 2900 2902 "fcop.ml" 94 3366 3389
+)
+"fcop.ml" 88 2854 2869 "fcop.ml" 88 2854 2877
+type(
+  (Cnf.lit -> int * Cnf.term list) ->
+  Cnf.lit list -> (int * Cnf.term list) list
+)
+ident(
+  ext_ref List.map
+)
+"fcop.ml" 88 2854 2879 "fcop.ml" 88 2854 2887
+type(
+  Cnf.term Cnf.Im.t -> Cnf.lit -> int * Cnf.term list
+)
+ident(
+  ext_ref Cnf.inst_lit
+)
+"fcop.ml" 88 2854 2888 "fcop.ml" 88 2854 2889
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  int_ref s "fcop.ml" 85 2619 2625 "fcop.ml" 85 2619 2626
+)
+"fcop.ml" 88 2854 2878 "fcop.ml" 88 2854 2890
+call(
+  stack
+)
+type(
+  Cnf.lit -> int * Cnf.term list
+)
+"fcop.ml" 88 2854 2891 "fcop.ml" 88 2854 2896
+type(
+  Cnf.lit list
+)
+ident(
+  int_ref stack "fcop.ml" 86 2645 2651 "fcop.ml" 86 2645 2656
+)
+"fcop.ml" 88 2854 2869 "fcop.ml" 88 2854 2896
+call(
+  stack
+)
+type(
+  (int * Cnf.term list) list
+)
+"fcop.ml" 89 2900 2902 "fcop.ml" 89 2900 2914
+type(
+  string -> unit
+)
+ident(
+  ext_ref Format.print_string
+)
+"fcop.ml" 89 2900 2915 "fcop.ml" 89 2900 2923
+type(
+  string
+)
+"fcop.ml" 89 2900 2902 "fcop.ml" 89 2900 2923
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 89 2900 2925 "fcop.ml" 89 2900 2932
+type(
+  Format.formatter ->
+  (Format.formatter -> int * Cnf.term list -> unit) ->
+  string -> (int * Cnf.term list) list -> unit
+)
+ident(
+  ext_ref Fof.pp_iter
+)
+"fcop.ml" 89 2900 2933 "fcop.ml" 89 2900 2946
+type(
+  Format.formatter
+)
+ident(
+  ext_ref Format.std_formatter
+)
+"fcop.ml" 89 2900 2947 "fcop.ml" 89 2900 2959
+type(
+  Format.formatter -> int * Cnf.term list -> unit
+)
+ident(
+  ext_ref Fof.pp_print_lit
+)
+"fcop.ml" 89 2900 2960 "fcop.ml" 89 2900 2963
+type(
+  string
+)
+"fcop.ml" 89 2900 2964 "fcop.ml" 89 2900 2967
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  int_ref scl "fcop.ml" 87 2733 2739 "fcop.ml" 87 2733 2742
+)
+"fcop.ml" 89 2900 2925 "fcop.ml" 89 2900 2967
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 89 2900 2969 "fcop.ml" 89 2900 2981
+type(
+  string -> unit
+)
+ident(
+  ext_ref Format.print_string
+)
+"fcop.ml" 89 2900 2982 "fcop.ml" 89 2900 2987
+type(
+  string
+)
+"fcop.ml" 89 2900 2969 "fcop.ml" 89 2900 2987
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 90 2989 2991 "fcop.ml" 90 2989 3003
+type(
+  string -> unit
+)
+ident(
+  ext_ref Format.print_string
+)
+"fcop.ml" 90 2989 3004 "fcop.ml" 90 2989 3013
+type(
+  string
+)
+"fcop.ml" 90 2989 2991 "fcop.ml" 90 2989 3013
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 90 2989 3015 "fcop.ml" 90 2989 3022
+type(
+  Format.formatter ->
+  (Format.formatter -> int * Cnf.term list -> unit) ->
+  string -> (int * Cnf.term list) list -> unit
+)
+ident(
+  ext_ref Fof.pp_iter
+)
+"fcop.ml" 90 2989 3023 "fcop.ml" 90 2989 3036
+type(
+  Format.formatter
+)
+ident(
+  ext_ref Format.std_formatter
+)
+"fcop.ml" 90 2989 3037 "fcop.ml" 90 2989 3049
+type(
+  Format.formatter -> int * Cnf.term list -> unit
+)
+ident(
+  ext_ref Fof.pp_print_lit
+)
+"fcop.ml" 90 2989 3050 "fcop.ml" 90 2989 3053
+type(
+  string
+)
+"fcop.ml" 90 2989 3054 "fcop.ml" 90 2989 3059
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  int_ref spath "fcop.ml" 87 2733 2744 "fcop.ml" 87 2733 2749
+)
+"fcop.ml" 90 2989 3015 "fcop.ml" 90 2989 3059
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 90 2989 3061 "fcop.ml" 90 2989 3073
+type(
+  string -> unit
+)
+ident(
+  ext_ref Format.print_string
+)
+"fcop.ml" 90 2989 3074 "fcop.ml" 90 2989 3079
+type(
+  string
+)
+"fcop.ml" 90 2989 3061 "fcop.ml" 90 2989 3079
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 91 3081 3083 "fcop.ml" 91 3081 3095
+type(
+  string -> unit
+)
+ident(
+  ext_ref Format.print_string
+)
+"fcop.ml" 91 3081 3096 "fcop.ml" 91 3081 3105
+type(
+  string
+)
+"fcop.ml" 91 3081 3083 "fcop.ml" 91 3081 3105
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 91 3081 3107 "fcop.ml" 91 3081 3114
+type(
+  Format.formatter ->
+  (Format.formatter -> int * Cnf.term list -> unit) ->
+  string -> (int * Cnf.term list) list -> unit
+)
+ident(
+  ext_ref Fof.pp_iter
+)
+"fcop.ml" 91 3081 3115 "fcop.ml" 91 3081 3128
+type(
+  Format.formatter
+)
+ident(
+  ext_ref Format.std_formatter
+)
+"fcop.ml" 91 3081 3129 "fcop.ml" 91 3081 3141
+type(
+  Format.formatter -> int * Cnf.term list -> unit
+)
+ident(
+  ext_ref Fof.pp_print_lit
+)
+"fcop.ml" 91 3081 3142 "fcop.ml" 91 3081 3145
+type(
+  string
+)
+"fcop.ml" 91 3081 3146 "fcop.ml" 91 3081 3150
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  int_ref slem "fcop.ml" 87 2733 2751 "fcop.ml" 87 2733 2755
+)
+"fcop.ml" 91 3081 3107 "fcop.ml" 91 3081 3150
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 91 3081 3152 "fcop.ml" 91 3081 3164
+type(
+  string -> unit
+)
+ident(
+  ext_ref Format.print_string
+)
+"fcop.ml" 91 3081 3165 "fcop.ml" 91 3081 3170
+type(
+  string
+)
+"fcop.ml" 91 3081 3152 "fcop.ml" 91 3081 3170
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 92 3172 3174 "fcop.ml" 92 3172 3186
+type(
+  string -> unit
+)
+ident(
+  ext_ref Format.print_string
+)
+"fcop.ml" 92 3172 3187 "fcop.ml" 92 3172 3196
+type(
+  string
+)
+"fcop.ml" 92 3172 3174 "fcop.ml" 92 3172 3196
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 92 3172 3198 "fcop.ml" 92 3172 3205
+type(
+  Format.formatter ->
+  (Format.formatter -> int * Cnf.term list -> unit) ->
+  string -> (int * Cnf.term list) list -> unit
+)
+ident(
+  ext_ref Fof.pp_iter
+)
+"fcop.ml" 92 3172 3206 "fcop.ml" 92 3172 3219
+type(
+  Format.formatter
+)
+ident(
+  ext_ref Format.std_formatter
+)
+"fcop.ml" 92 3172 3220 "fcop.ml" 92 3172 3232
+type(
+  Format.formatter -> int * Cnf.term list -> unit
+)
+ident(
+  ext_ref Fof.pp_print_lit
+)
+"fcop.ml" 92 3172 3233 "fcop.ml" 92 3172 3236
+type(
+  string
+)
+"fcop.ml" 92 3172 3237 "fcop.ml" 92 3172 3243
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  int_ref sstack "fcop.ml" 88 2854 2860 "fcop.ml" 88 2854 2866
+)
+"fcop.ml" 92 3172 3198 "fcop.ml" 92 3172 3243
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 92 3172 3245 "fcop.ml" 92 3172 3257
+type(
+  string -> unit
+)
+ident(
+  ext_ref Format.print_string
+)
+"fcop.ml" 92 3172 3258 "fcop.ml" 92 3172 3263
+type(
+  string
+)
+"fcop.ml" 92 3172 3245 "fcop.ml" 92 3172 3263
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 93 3265 3267 "fcop.ml" 93 3265 3277
+type(
+  (int -> int -> unit) -> int list -> unit
+)
+ident(
+  ext_ref List.iteri
+)
+"fcop.ml" 93 3265 3283 "fcop.ml" 93 3265 3284
+type(
+  int
+)
+ident(
+  def n "fcop.ml" 93 3265 3285 "fcop.ml" 93 3265 3359
+)
+"fcop.ml" 93 3265 3285 "fcop.ml" 93 3265 3286
+type(
+  int
+)
+ident(
+  def c "fcop.ml" 93 3265 3290 "fcop.ml" 93 3265 3359
+)
+"fcop.ml" 93 3265 3290 "fcop.ml" 93 3265 3303
+type(
+  (int -> string -> unit, Format.formatter, unit) format ->
+  int -> string -> unit
+)
+ident(
+  ext_ref Format.printf
+)
+"fcop.ml" 93 3265 3304 "fcop.ml" 93 3265 3319
+type(
+  (int -> string -> unit, Format.formatter, unit) format
+)
+"fcop.ml" 93 3265 3320 "fcop.ml" 93 3265 3321
+type(
+  int
+)
+ident(
+  int_ref n "fcop.ml" 93 3265 3283 "fcop.ml" 93 3265 3284
+)
+"fcop.ml" 93 3265 3323 "fcop.ml" 93 3265 3335
+type(
+  (int, string) Hashtbl.t -> int -> string
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"fcop.ml" 93 3265 3336 "fcop.ml" 93 3265 3356
+type(
+  (int, string) Hashtbl.t
+)
+ident(
+  ext_ref Features.no_contrstr
+)
+"fcop.ml" 93 3265 3357 "fcop.ml" 93 3265 3358
+type(
+  int
+)
+ident(
+  int_ref c "fcop.ml" 93 3265 3285 "fcop.ml" 93 3265 3286
+)
+"fcop.ml" 93 3265 3322 "fcop.ml" 93 3265 3359
+call(
+  stack
+)
+type(
+  string
+)
+"fcop.ml" 93 3265 3290 "fcop.ml" 93 3265 3359
+call(
+  tail
+)
+type(
+  unit
+)
+"fcop.ml" 93 3265 3278 "fcop.ml" 93 3265 3360
+type(
+  int -> int -> unit
+)
+"fcop.ml" 93 3265 3361 "fcop.ml" 93 3265 3364
+type(
+  int list
+)
+ident(
+  int_ref acs "fcop.ml" 84 2585 2596 "fcop.ml" 84 2585 2599
+)
+"fcop.ml" 93 3265 3267 "fcop.ml" 93 3265 3364
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 94 3366 3368 "fcop.ml" 94 3366 3386
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Format.print_flush
+)
+"fcop.ml" 94 3366 3387 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 94 3366 3368 "fcop.ml" 94 3366 3389
+call(
+  tail
+)
+type(
+  unit
+)
+"fcop.ml" 93 3265 3267 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 92 3172 3245 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 92 3172 3198 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 92 3172 3174 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 91 3081 3152 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 91 3081 3107 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 91 3081 3083 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 90 2989 3061 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 90 2989 3015 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 90 2989 2991 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 89 2900 2969 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 89 2900 2925 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 89 2900 2902 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 88 2854 2856 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 87 2733 2735 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 86 2645 2647 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 85 2619 2621 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 84 2585 2587 "fcop.ml" 94 3366 3389
+type(
+  unit
+)
+"fcop.ml" 96 3393 3397 "fcop.ml" 96 3393 3414
+type(
+  unit -> unit
+)
+ident(
+  def cop_print_symbols "fcop.ml" 102 3540 3540 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 96 3393 3415 "fcop.ml" 96 3393 3417
+type(
+  unit
+)
+"fcop.ml" 97 3420 3422 "fcop.ml" 97 3420 3433
+type(
+  (int, string) Hashtbl.t
+)
+ident(
+  ext_ref Cnf.no_cnst
+)
+"fcop.ml" 97 3420 3434 "fcop.ml" 97 3420 3436
+type(
+  (int, string) Hashtbl.t -> ((int, string) Hashtbl.t -> unit) -> unit
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"fcop.ml" 97 3420 3437 "fcop.ml" 97 3420 3449
+type(
+  (int -> string -> unit) -> (int, string) Hashtbl.t -> unit
+)
+ident(
+  ext_ref Hashtbl.iter
+)
+"fcop.ml" 97 3420 3455 "fcop.ml" 97 3420 3457
+type(
+  int
+)
+ident(
+  def no "fcop.ml" 97 3420 3458 "fcop.ml" 98 3466 3507
+)
+"fcop.ml" 97 3420 3458 "fcop.ml" 97 3420 3462
+type(
+  string
+)
+ident(
+  def cnst "fcop.ml" 98 3466 3470 "fcop.ml" 98 3466 3507
+)
+"fcop.ml" 98 3466 3470 "fcop.ml" 98 3466 3482
+type(
+  string -> unit
+)
+ident(
+  ext_ref Format.print_string
+)
+"fcop.ml" 98 3466 3483 "fcop.ml" 98 3466 3487
+type(
+  string
+)
+ident(
+  int_ref cnst "fcop.ml" 97 3420 3458 "fcop.ml" 97 3420 3462
+)
+"fcop.ml" 98 3466 3470 "fcop.ml" 98 3466 3487
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 98 3466 3489 "fcop.ml" 98 3466 3501
+type(
+  string -> unit
+)
+ident(
+  ext_ref Format.print_string
+)
+"fcop.ml" 98 3466 3502 "fcop.ml" 98 3466 3506
+type(
+  string
+)
+"fcop.ml" 98 3466 3489 "fcop.ml" 98 3466 3507
+call(
+  tail
+)
+type(
+  unit
+)
+"fcop.ml" 98 3466 3470 "fcop.ml" 98 3466 3507
+type(
+  unit
+)
+"fcop.ml" 97 3420 3450 "fcop.ml" 99 3508 3511
+type(
+  int -> string -> unit
+)
+"fcop.ml" 97 3420 3437 "fcop.ml" 99 3508 3511
+type(
+  (int, string) Hashtbl.t -> unit
+)
+"fcop.ml" 97 3420 3422 "fcop.ml" 99 3508 3511
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 100 3513 3515 "fcop.ml" 100 3513 3533
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Format.print_flush
+)
+"fcop.ml" 100 3513 3534 "fcop.ml" 100 3513 3536
+type(
+  unit
+)
+"fcop.ml" 100 3513 3515 "fcop.ml" 100 3513 3536
+call(
+  tail
+)
+type(
+  unit
+)
+"fcop.ml" 97 3420 3422 "fcop.ml" 100 3513 3536
+type(
+  unit
+)
+"fcop.ml" 102 3540 3544 "fcop.ml" 102 3540 3559
+type(
+  unit ->
+  Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list
+)
+ident(
+  def cop_st_features "fcop.ml" 111 4149 4149 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 102 3540 3560 "fcop.ml" 102 3540 3562
+type(
+  unit
+)
+"fcop.ml" 103 3565 3571 "fcop.ml" 103 3565 3576
+type(
+  Logic.state
+)
+ident(
+  def state "fcop.ml" 104 3601 3603 "fcop.ml" 109 4063 4145
+)
+"fcop.ml" 103 3565 3579 "fcop.ml" 103 3565 3582
+type(
+  Logic.state * int list -> Logic.state
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 103 3565 3584 "fcop.ml" 103 3565 3591
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 103 3565 3592 "fcop.ml" 103 3565 3593
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 103 3565 3593 "fcop.ml" 103 3565 3596
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 103 3565 3592 "fcop.ml" 103 3565 3596
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 103 3565 3583 "fcop.ml" 103 3565 3597
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 103 3565 3579 "fcop.ml" 103 3565 3597
+type(
+  Logic.state
+)
+"fcop.ml" 104 3601 3607 "fcop.ml" 104 3601 3613
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  def litfea "fcop.ml" 105 3715 3717 "fcop.ml" 109 4063 4145
+)
+"fcop.ml" 104 3601 3619 "fcop.ml" 104 3601 3624
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 103 3565 3571 "fcop.ml" 103 3565 3576
+)
+"fcop.ml" 104 3601 3619 "fcop.ml" 104 3601 3631
+type(
+  Cnf.lit list
+)
+"fcop.ml" 104 3601 3632 "fcop.ml" 104 3601 3633
+type(
+  Cnf.lit list -> Cnf.lit list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fcop.ml" 104 3601 3634 "fcop.ml" 104 3601 3636
+type(
+  Cnf.lit list
+)
+"fcop.ml" 104 3601 3619 "fcop.ml" 104 3601 3636
+type(
+  bool
+)
+"fcop.ml" 104 3601 3642 "fcop.ml" 104 3601 3644
+type(
+  (Cnf.Im.key * int) list
+)
+"fcop.ml" 104 3601 3650 "fcop.ml" 104 3601 3669
+type(
+  Cnf.term Cnf.Im.t -> int list -> Cnf.lit list -> (Cnf.Im.key * int) list
+)
+ident(
+  ext_ref Features.ubit2_list
+)
+"fcop.ml" 104 3601 3671 "fcop.ml" 104 3601 3674
+type(
+  Cnf.term Cnf.Im.t * int -> Cnf.term Cnf.Im.t
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 104 3601 3675 "fcop.ml" 104 3601 3680
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 103 3565 3571 "fcop.ml" 103 3565 3576
+)
+"fcop.ml" 104 3601 3675 "fcop.ml" 104 3601 3684
+type(
+  Cnf.term Cnf.Im.t * int
+)
+"fcop.ml" 104 3601 3670 "fcop.ml" 104 3601 3685
+type(
+  Cnf.term Cnf.Im.t
+)
+"fcop.ml" 104 3601 3686 "fcop.ml" 104 3601 3688
+type(
+  int list
+)
+"fcop.ml" 104 3601 3690 "fcop.ml" 104 3601 3697
+type(
+  Cnf.lit list -> Cnf.lit
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 104 3601 3698 "fcop.ml" 104 3601 3703
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 103 3565 3571 "fcop.ml" 103 3565 3576
+)
+"fcop.ml" 104 3601 3698 "fcop.ml" 104 3601 3710
+type(
+  Cnf.lit list
+)
+"fcop.ml" 104 3601 3690 "fcop.ml" 104 3601 3710
+call(
+  stack
+)
+type(
+  Cnf.lit
+)
+"fcop.ml" 104 3601 3689 "fcop.ml" 104 3601 3711
+type(
+  Cnf.lit list
+)
+"fcop.ml" 104 3601 3650 "fcop.ml" 104 3601 3711
+call(
+  stack
+)
+type(
+  (Cnf.Im.key * int) list
+)
+"fcop.ml" 104 3601 3616 "fcop.ml" 104 3601 3711
+type(
+  (Cnf.Im.key * int) list
+)
+"fcop.ml" 105 3715 3721 "fcop.ml" 105 3715 3725
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  def pfea "fcop.ml" 106 3781 3783 "fcop.ml" 109 4063 4145
+)
+"fcop.ml" 105 3715 3728 "fcop.ml" 105 3715 3747
+type(
+  Cnf.term Cnf.Im.t -> int list -> Cnf.lit list -> (Cnf.Im.key * int) list
+)
+ident(
+  ext_ref Features.ubit2_list
+)
+"fcop.ml" 105 3715 3749 "fcop.ml" 105 3715 3752
+type(
+  Cnf.term Cnf.Im.t * int -> Cnf.term Cnf.Im.t
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 105 3715 3753 "fcop.ml" 105 3715 3758
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 103 3565 3571 "fcop.ml" 103 3565 3576
+)
+"fcop.ml" 105 3715 3753 "fcop.ml" 105 3715 3762
+type(
+  Cnf.term Cnf.Im.t * int
+)
+"fcop.ml" 105 3715 3748 "fcop.ml" 105 3715 3763
+type(
+  Cnf.term Cnf.Im.t
+)
+"fcop.ml" 105 3715 3764 "fcop.ml" 105 3715 3766
+type(
+  int list
+)
+"fcop.ml" 105 3715 3767 "fcop.ml" 105 3715 3772
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 103 3565 3571 "fcop.ml" 103 3565 3576
+)
+"fcop.ml" 105 3715 3767 "fcop.ml" 105 3715 3777
+type(
+  Cnf.lit list
+)
+"fcop.ml" 105 3715 3728 "fcop.ml" 105 3715 3777
+call(
+  stack
+)
+type(
+  (Cnf.Im.key * int) list
+)
+"fcop.ml" 106 3781 3787 "fcop.ml" 106 3781 3793
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  def lemfea "fcop.ml" 107 3848 3850 "fcop.ml" 109 4063 4145
+)
+"fcop.ml" 106 3781 3796 "fcop.ml" 106 3781 3815
+type(
+  Cnf.term Cnf.Im.t -> int list -> Cnf.lit list -> (Cnf.Im.key * int) list
+)
+ident(
+  ext_ref Features.ubit2_list
+)
+"fcop.ml" 106 3781 3817 "fcop.ml" 106 3781 3820
+type(
+  Cnf.term Cnf.Im.t * int -> Cnf.term Cnf.Im.t
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 106 3781 3821 "fcop.ml" 106 3781 3826
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 103 3565 3571 "fcop.ml" 103 3565 3576
+)
+"fcop.ml" 106 3781 3821 "fcop.ml" 106 3781 3830
+type(
+  Cnf.term Cnf.Im.t * int
+)
+"fcop.ml" 106 3781 3816 "fcop.ml" 106 3781 3831
+type(
+  Cnf.term Cnf.Im.t
+)
+"fcop.ml" 106 3781 3832 "fcop.ml" 106 3781 3834
+type(
+  int list
+)
+"fcop.ml" 106 3781 3835 "fcop.ml" 106 3781 3840
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 103 3565 3571 "fcop.ml" 103 3565 3576
+)
+"fcop.ml" 106 3781 3835 "fcop.ml" 106 3781 3844
+type(
+  Cnf.lit list
+)
+"fcop.ml" 106 3781 3796 "fcop.ml" 106 3781 3844
+call(
+  stack
+)
+type(
+  (Cnf.Im.key * int) list
+)
+"fcop.ml" 107 3848 3854 "fcop.ml" 107 3848 3860
+type(
+  Cnf.lit list
+)
+ident(
+  def nstack "fcop.ml" 108 3940 3942 "fcop.ml" 109 4063 4145
+)
+"fcop.ml" 107 3848 3863 "fcop.ml" 107 3848 3874
+type(
+  Cnf.lit list list -> Cnf.lit list
+)
+ident(
+  ext_ref List.concat
+)
+"fcop.ml" 107 3848 3876 "fcop.ml" 107 3848 3884
+type(
+  (Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list ->
+   Cnf.lit list) ->
+  (Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list) list ->
+  Cnf.lit list list
+)
+ident(
+  ext_ref List.map
+)
+"fcop.ml" 107 3848 3891 "fcop.ml" 107 3848 3892
+type(
+  Logic.state
+)
+"fcop.ml" 107 3848 3894 "fcop.ml" 107 3848 3898
+type(
+  Cnf.lit list
+)
+ident(
+  def _pat "fcop.ml" 107 3848 3920 "fcop.ml" 107 3848 3922
+)
+"fcop.ml" 107 3848 3900 "fcop.ml" 107 3848 3904
+type(
+  Cnf.lit list
+)
+ident(
+  def _lem "fcop.ml" 107 3848 3920 "fcop.ml" 107 3848 3922
+)
+"fcop.ml" 107 3848 3906 "fcop.ml" 107 3848 3908
+type(
+  Cnf.lit list
+)
+ident(
+  def cl "fcop.ml" 107 3848 3920 "fcop.ml" 107 3848 3922
+)
+"fcop.ml" 107 3848 3910 "fcop.ml" 107 3848 3915
+type(
+  int list
+)
+ident(
+  def _pcno "fcop.ml" 107 3848 3920 "fcop.ml" 107 3848 3922
+)
+"fcop.ml" 107 3848 3890 "fcop.ml" 107 3848 3916
+type(
+  Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list
+)
+"fcop.ml" 107 3848 3920 "fcop.ml" 107 3848 3922
+type(
+  Cnf.lit list
+)
+ident(
+  int_ref cl "fcop.ml" 107 3848 3906 "fcop.ml" 107 3848 3908
+)
+"fcop.ml" 107 3848 3885 "fcop.ml" 107 3848 3923
+type(
+  Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list ->
+  Cnf.lit list
+)
+"fcop.ml" 107 3848 3924 "fcop.ml" 107 3848 3929
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 103 3565 3571 "fcop.ml" 103 3565 3576
+)
+"fcop.ml" 107 3848 3924 "fcop.ml" 107 3848 3935
+type(
+  (Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list) list
+)
+"fcop.ml" 107 3848 3875 "fcop.ml" 107 3848 3936
+call(
+  stack
+)
+type(
+  Cnf.lit list list
+)
+"fcop.ml" 107 3848 3863 "fcop.ml" 107 3848 3936
+call(
+  stack
+)
+type(
+  Cnf.lit list
+)
+"fcop.ml" 108 3940 3946 "fcop.ml" 108 3940 3950
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  def gfea "fcop.ml" 109 4063 4065 "fcop.ml" 109 4063 4145
+)
+"fcop.ml" 108 3940 3953 "fcop.ml" 108 3940 3972
+type(
+  Cnf.term Cnf.Im.t -> int list -> Cnf.lit list -> (Cnf.Im.key * int) list
+)
+ident(
+  ext_ref Features.ubit2_list
+)
+"fcop.ml" 108 3940 3974 "fcop.ml" 108 3940 3977
+type(
+  Cnf.term Cnf.Im.t * int -> Cnf.term Cnf.Im.t
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 108 3940 3978 "fcop.ml" 108 3940 3983
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 103 3565 3571 "fcop.ml" 103 3565 3576
+)
+"fcop.ml" 108 3940 3978 "fcop.ml" 108 3940 3987
+type(
+  Cnf.term Cnf.Im.t * int
+)
+"fcop.ml" 108 3940 3973 "fcop.ml" 108 3940 3988
+type(
+  Cnf.term Cnf.Im.t
+)
+"fcop.ml" 108 3940 3989 "fcop.ml" 108 3940 3991
+type(
+  int list
+)
+"fcop.ml" 108 3940 3997 "fcop.ml" 108 3940 4002
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 103 3565 3571 "fcop.ml" 103 3565 3576
+)
+"fcop.ml" 108 3940 3997 "fcop.ml" 108 3940 4009
+type(
+  Cnf.lit list
+)
+"fcop.ml" 108 3940 4010 "fcop.ml" 108 3940 4011
+type(
+  Cnf.lit list -> Cnf.lit list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fcop.ml" 108 3940 4012 "fcop.ml" 108 3940 4014
+type(
+  Cnf.lit list
+)
+"fcop.ml" 108 3940 3997 "fcop.ml" 108 3940 4014
+type(
+  bool
+)
+"fcop.ml" 108 3940 4020 "fcop.ml" 108 3940 4022
+type(
+  Cnf.lit list
+)
+"fcop.ml" 108 3940 4028 "fcop.ml" 108 3940 4035
+type(
+  Cnf.lit list -> Cnf.lit list
+)
+ident(
+  ext_ref List.tl
+)
+"fcop.ml" 108 3940 4036 "fcop.ml" 108 3940 4041
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 103 3565 3571 "fcop.ml" 103 3565 3576
+)
+"fcop.ml" 108 3940 4036 "fcop.ml" 108 3940 4048
+type(
+  Cnf.lit list
+)
+"fcop.ml" 108 3940 4028 "fcop.ml" 108 3940 4048
+call(
+  stack
+)
+type(
+  Cnf.lit list
+)
+"fcop.ml" 108 3940 3993 "fcop.ml" 108 3940 4049
+type(
+  Cnf.lit list
+)
+"fcop.ml" 108 3940 4050 "fcop.ml" 108 3940 4051
+type(
+  Cnf.lit list -> Cnf.lit list -> Cnf.lit list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"fcop.ml" 108 3940 4052 "fcop.ml" 108 3940 4058
+type(
+  Cnf.lit list
+)
+ident(
+  int_ref nstack "fcop.ml" 107 3848 3854 "fcop.ml" 107 3848 3860
+)
+"fcop.ml" 108 3940 3992 "fcop.ml" 108 3940 4059
+call(
+  stack
+)
+type(
+  Cnf.lit list
+)
+"fcop.ml" 108 3940 3953 "fcop.ml" 108 3940 4059
+call(
+  stack
+)
+type(
+  (Cnf.Im.key * int) list
+)
+"fcop.ml" 109 4063 4066 "fcop.ml" 109 4063 4074
+type(
+  (Cnf.Im.key * int -> Cnf.Im.key) ->
+  (Cnf.Im.key * int) list -> Cnf.Im.key list
+)
+ident(
+  ext_ref List.map
+)
+"fcop.ml" 109 4063 4075 "fcop.ml" 109 4063 4078
+type(
+  Cnf.Im.key * int -> Cnf.Im.key
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 109 4063 4079 "fcop.ml" 109 4063 4085
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  int_ref litfea "fcop.ml" 104 3601 3607 "fcop.ml" 104 3601 3613
+)
+"fcop.ml" 109 4063 4066 "fcop.ml" 109 4063 4085
+call(
+  stack
+)
+type(
+  Cnf.Im.key list
+)
+"fcop.ml" 109 4063 4087 "fcop.ml" 109 4063 4095
+type(
+  (Cnf.Im.key * int -> Cnf.Im.key) ->
+  (Cnf.Im.key * int) list -> Cnf.Im.key list
+)
+ident(
+  ext_ref List.map
+)
+"fcop.ml" 109 4063 4096 "fcop.ml" 109 4063 4099
+type(
+  Cnf.Im.key * int -> Cnf.Im.key
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 109 4063 4100 "fcop.ml" 109 4063 4104
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  int_ref pfea "fcop.ml" 105 3715 3721 "fcop.ml" 105 3715 3725
+)
+"fcop.ml" 109 4063 4087 "fcop.ml" 109 4063 4104
+call(
+  stack
+)
+type(
+  Cnf.Im.key list
+)
+"fcop.ml" 109 4063 4106 "fcop.ml" 109 4063 4114
+type(
+  (Cnf.Im.key * int -> Cnf.Im.key) ->
+  (Cnf.Im.key * int) list -> Cnf.Im.key list
+)
+ident(
+  ext_ref List.map
+)
+"fcop.ml" 109 4063 4115 "fcop.ml" 109 4063 4118
+type(
+  Cnf.Im.key * int -> Cnf.Im.key
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 109 4063 4119 "fcop.ml" 109 4063 4125
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  int_ref lemfea "fcop.ml" 106 3781 3787 "fcop.ml" 106 3781 3793
+)
+"fcop.ml" 109 4063 4106 "fcop.ml" 109 4063 4125
+call(
+  stack
+)
+type(
+  Cnf.Im.key list
+)
+"fcop.ml" 109 4063 4127 "fcop.ml" 109 4063 4135
+type(
+  (Cnf.Im.key * int -> Cnf.Im.key) ->
+  (Cnf.Im.key * int) list -> Cnf.Im.key list
+)
+ident(
+  ext_ref List.map
+)
+"fcop.ml" 109 4063 4136 "fcop.ml" 109 4063 4139
+type(
+  Cnf.Im.key * int -> Cnf.Im.key
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 109 4063 4140 "fcop.ml" 109 4063 4144
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  int_ref gfea "fcop.ml" 108 3940 3946 "fcop.ml" 108 3940 3950
+)
+"fcop.ml" 109 4063 4127 "fcop.ml" 109 4063 4144
+call(
+  stack
+)
+type(
+  Cnf.Im.key list
+)
+"fcop.ml" 109 4063 4065 "fcop.ml" 109 4063 4145
+type(
+  Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list
+)
+"fcop.ml" 108 3940 3942 "fcop.ml" 109 4063 4145
+type(
+  Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list
+)
+"fcop.ml" 107 3848 3850 "fcop.ml" 109 4063 4145
+type(
+  Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list
+)
+"fcop.ml" 106 3781 3783 "fcop.ml" 109 4063 4145
+type(
+  Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list
+)
+"fcop.ml" 105 3715 3717 "fcop.ml" 109 4063 4145
+type(
+  Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list
+)
+"fcop.ml" 104 3601 3603 "fcop.ml" 109 4063 4145
+type(
+  Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list
+)
+"fcop.ml" 103 3565 3567 "fcop.ml" 109 4063 4145
+type(
+  Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list
+)
+"fcop.ml" 111 4149 4153 "fcop.ml" 111 4149 4173
+type(
+  unit -> Cnf.Im.key list
+)
+ident(
+  def cop_st_features_fast "fcop.ml" 116 4354 4354 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 111 4149 4174 "fcop.ml" 111 4149 4176
+type(
+  unit
+)
+"fcop.ml" 112 4179 4185 "fcop.ml" 112 4179 4190
+type(
+  Logic.state
+)
+ident(
+  def state "fcop.ml" 113 4215 4217 "fcop.ml" 114 4329 4350
+)
+"fcop.ml" 112 4179 4193 "fcop.ml" 112 4179 4196
+type(
+  Logic.state * int list -> Logic.state
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 112 4179 4198 "fcop.ml" 112 4179 4205
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 112 4179 4206 "fcop.ml" 112 4179 4207
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 112 4179 4207 "fcop.ml" 112 4179 4210
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 112 4179 4206 "fcop.ml" 112 4179 4210
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 112 4179 4197 "fcop.ml" 112 4179 4211
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 112 4179 4193 "fcop.ml" 112 4179 4211
+type(
+  Logic.state
+)
+"fcop.ml" 113 4215 4221 "fcop.ml" 113 4215 4227
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  def litfea "fcop.ml" 114 4329 4331 "fcop.ml" 114 4329 4350
+)
+"fcop.ml" 113 4215 4233 "fcop.ml" 113 4215 4238
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 112 4179 4185 "fcop.ml" 112 4179 4190
+)
+"fcop.ml" 113 4215 4233 "fcop.ml" 113 4215 4245
+type(
+  Cnf.lit list
+)
+"fcop.ml" 113 4215 4246 "fcop.ml" 113 4215 4247
+type(
+  Cnf.lit list -> Cnf.lit list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fcop.ml" 113 4215 4248 "fcop.ml" 113 4215 4250
+type(
+  Cnf.lit list
+)
+"fcop.ml" 113 4215 4233 "fcop.ml" 113 4215 4250
+type(
+  bool
+)
+"fcop.ml" 113 4215 4256 "fcop.ml" 113 4215 4258
+type(
+  (Cnf.Im.key * int) list
+)
+"fcop.ml" 113 4215 4264 "fcop.ml" 113 4215 4283
+type(
+  Cnf.term Cnf.Im.t -> int list -> Cnf.lit list -> (Cnf.Im.key * int) list
+)
+ident(
+  ext_ref Features.ubit2_list
+)
+"fcop.ml" 113 4215 4285 "fcop.ml" 113 4215 4288
+type(
+  Cnf.term Cnf.Im.t * int -> Cnf.term Cnf.Im.t
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 113 4215 4289 "fcop.ml" 113 4215 4294
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 112 4179 4185 "fcop.ml" 112 4179 4190
+)
+"fcop.ml" 113 4215 4289 "fcop.ml" 113 4215 4298
+type(
+  Cnf.term Cnf.Im.t * int
+)
+"fcop.ml" 113 4215 4284 "fcop.ml" 113 4215 4299
+type(
+  Cnf.term Cnf.Im.t
+)
+"fcop.ml" 113 4215 4300 "fcop.ml" 113 4215 4302
+type(
+  int list
+)
+"fcop.ml" 113 4215 4304 "fcop.ml" 113 4215 4311
+type(
+  Cnf.lit list -> Cnf.lit
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 113 4215 4312 "fcop.ml" 113 4215 4317
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 112 4179 4185 "fcop.ml" 112 4179 4190
+)
+"fcop.ml" 113 4215 4312 "fcop.ml" 113 4215 4324
+type(
+  Cnf.lit list
+)
+"fcop.ml" 113 4215 4304 "fcop.ml" 113 4215 4324
+call(
+  stack
+)
+type(
+  Cnf.lit
+)
+"fcop.ml" 113 4215 4303 "fcop.ml" 113 4215 4325
+type(
+  Cnf.lit list
+)
+"fcop.ml" 113 4215 4264 "fcop.ml" 113 4215 4325
+call(
+  stack
+)
+type(
+  (Cnf.Im.key * int) list
+)
+"fcop.ml" 113 4215 4230 "fcop.ml" 113 4215 4325
+type(
+  (Cnf.Im.key * int) list
+)
+"fcop.ml" 114 4329 4331 "fcop.ml" 114 4329 4339
+type(
+  (Cnf.Im.key * int -> Cnf.Im.key) ->
+  (Cnf.Im.key * int) list -> Cnf.Im.key list
+)
+ident(
+  ext_ref List.map
+)
+"fcop.ml" 114 4329 4340 "fcop.ml" 114 4329 4343
+type(
+  Cnf.Im.key * int -> Cnf.Im.key
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 114 4329 4344 "fcop.ml" 114 4329 4350
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  int_ref litfea "fcop.ml" 113 4215 4221 "fcop.ml" 113 4215 4227
+)
+"fcop.ml" 114 4329 4331 "fcop.ml" 114 4329 4350
+call(
+  tail
+)
+type(
+  Cnf.Im.key list
+)
+"fcop.ml" 113 4215 4217 "fcop.ml" 114 4329 4350
+type(
+  Cnf.Im.key list
+)
+"fcop.ml" 112 4179 4181 "fcop.ml" 114 4329 4350
+type(
+  Cnf.Im.key list
+)
+"fcop.ml" 116 4354 4358 "fcop.ml" 116 4354 4374
+type(
+  unit -> int list * int list * int list * int list
+)
+ident(
+  def cop_st_represent "fcop.ml" 128 4898 4898 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 116 4354 4375 "fcop.ml" 116 4354 4377
+type(
+  unit
+)
+"fcop.ml" 117 4380 4386 "fcop.ml" 117 4380 4391
+type(
+  Logic.state
+)
+ident(
+  def state "fcop.ml" 118 4416 4418 "fcop.ml" 123 4810 4840
+)
+"fcop.ml" 117 4380 4394 "fcop.ml" 117 4380 4397
+type(
+  Logic.state * int list -> Logic.state
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"fcop.ml" 117 4380 4399 "fcop.ml" 117 4380 4406
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 117 4380 4407 "fcop.ml" 117 4380 4408
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 117 4380 4408 "fcop.ml" 117 4380 4411
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 117 4380 4407 "fcop.ml" 117 4380 4411
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 117 4380 4398 "fcop.ml" 117 4380 4412
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 117 4380 4394 "fcop.ml" 117 4380 4412
+type(
+  Logic.state
+)
+"fcop.ml" 118 4416 4422 "fcop.ml" 118 4416 4428
+type(
+  int list
+)
+ident(
+  def litrep "fcop.ml" 119 4513 4515 "fcop.ml" 123 4810 4840
+)
+"fcop.ml" 118 4416 4434 "fcop.ml" 118 4416 4439
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 117 4380 4386 "fcop.ml" 117 4380 4391
+)
+"fcop.ml" 118 4416 4434 "fcop.ml" 118 4416 4446
+type(
+  Cnf.lit list
+)
+"fcop.ml" 118 4416 4447 "fcop.ml" 118 4416 4448
+type(
+  Cnf.lit list -> Cnf.lit list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fcop.ml" 118 4416 4449 "fcop.ml" 118 4416 4451
+type(
+  Cnf.lit list
+)
+"fcop.ml" 118 4416 4434 "fcop.ml" 118 4416 4451
+type(
+  bool
+)
+"fcop.ml" 118 4416 4457 "fcop.ml" 118 4416 4459
+type(
+  int list
+)
+"fcop.ml" 118 4416 4465 "fcop.ml" 118 4416 4486
+type(
+  Cnf.lit list -> int list
+)
+ident(
+  ext_ref Features.holstep_list
+)
+"fcop.ml" 118 4416 4488 "fcop.ml" 118 4416 4495
+type(
+  Cnf.lit list -> Cnf.lit
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 118 4416 4496 "fcop.ml" 118 4416 4501
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 117 4380 4386 "fcop.ml" 117 4380 4391
+)
+"fcop.ml" 118 4416 4496 "fcop.ml" 118 4416 4508
+type(
+  Cnf.lit list
+)
+"fcop.ml" 118 4416 4488 "fcop.ml" 118 4416 4508
+call(
+  stack
+)
+type(
+  Cnf.lit
+)
+"fcop.ml" 118 4416 4487 "fcop.ml" 118 4416 4509
+type(
+  Cnf.lit list
+)
+"fcop.ml" 118 4416 4465 "fcop.ml" 118 4416 4509
+call(
+  stack
+)
+type(
+  int list
+)
+"fcop.ml" 118 4416 4431 "fcop.ml" 118 4416 4509
+type(
+  int list
+)
+"fcop.ml" 119 4513 4519 "fcop.ml" 119 4513 4523
+type(
+  int list
+)
+ident(
+  def prep "fcop.ml" 120 4562 4564 "fcop.ml" 123 4810 4840
+)
+"fcop.ml" 119 4513 4526 "fcop.ml" 119 4513 4547
+type(
+  Cnf.lit list -> int list
+)
+ident(
+  ext_ref Features.holstep_list
+)
+"fcop.ml" 119 4513 4548 "fcop.ml" 119 4513 4553
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 117 4380 4386 "fcop.ml" 117 4380 4391
+)
+"fcop.ml" 119 4513 4548 "fcop.ml" 119 4513 4558
+type(
+  Cnf.lit list
+)
+"fcop.ml" 119 4513 4526 "fcop.ml" 119 4513 4558
+call(
+  stack
+)
+type(
+  int list
+)
+"fcop.ml" 120 4562 4568 "fcop.ml" 120 4562 4574
+type(
+  int list
+)
+ident(
+  def lemrep "fcop.ml" 121 4612 4614 "fcop.ml" 123 4810 4840
+)
+"fcop.ml" 120 4562 4577 "fcop.ml" 120 4562 4598
+type(
+  Cnf.lit list -> int list
+)
+ident(
+  ext_ref Features.holstep_list
+)
+"fcop.ml" 120 4562 4599 "fcop.ml" 120 4562 4604
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 117 4380 4386 "fcop.ml" 117 4380 4391
+)
+"fcop.ml" 120 4562 4599 "fcop.ml" 120 4562 4608
+type(
+  Cnf.lit list
+)
+"fcop.ml" 120 4562 4577 "fcop.ml" 120 4562 4608
+call(
+  stack
+)
+type(
+  int list
+)
+"fcop.ml" 121 4612 4618 "fcop.ml" 121 4612 4624
+type(
+  Cnf.lit list
+)
+ident(
+  def nstack "fcop.ml" 122 4704 4706 "fcop.ml" 123 4810 4840
+)
+"fcop.ml" 121 4612 4627 "fcop.ml" 121 4612 4638
+type(
+  Cnf.lit list list -> Cnf.lit list
+)
+ident(
+  ext_ref List.concat
+)
+"fcop.ml" 121 4612 4640 "fcop.ml" 121 4612 4648
+type(
+  (Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list ->
+   Cnf.lit list) ->
+  (Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list) list ->
+  Cnf.lit list list
+)
+ident(
+  ext_ref List.map
+)
+"fcop.ml" 121 4612 4655 "fcop.ml" 121 4612 4656
+type(
+  Logic.state
+)
+"fcop.ml" 121 4612 4658 "fcop.ml" 121 4612 4662
+type(
+  Cnf.lit list
+)
+ident(
+  def _pat "fcop.ml" 121 4612 4684 "fcop.ml" 121 4612 4686
+)
+"fcop.ml" 121 4612 4664 "fcop.ml" 121 4612 4668
+type(
+  Cnf.lit list
+)
+ident(
+  def _lem "fcop.ml" 121 4612 4684 "fcop.ml" 121 4612 4686
+)
+"fcop.ml" 121 4612 4670 "fcop.ml" 121 4612 4672
+type(
+  Cnf.lit list
+)
+ident(
+  def cl "fcop.ml" 121 4612 4684 "fcop.ml" 121 4612 4686
+)
+"fcop.ml" 121 4612 4674 "fcop.ml" 121 4612 4679
+type(
+  int list
+)
+ident(
+  def _pcno "fcop.ml" 121 4612 4684 "fcop.ml" 121 4612 4686
+)
+"fcop.ml" 121 4612 4654 "fcop.ml" 121 4612 4680
+type(
+  Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list
+)
+"fcop.ml" 121 4612 4684 "fcop.ml" 121 4612 4686
+type(
+  Cnf.lit list
+)
+ident(
+  int_ref cl "fcop.ml" 121 4612 4670 "fcop.ml" 121 4612 4672
+)
+"fcop.ml" 121 4612 4649 "fcop.ml" 121 4612 4687
+type(
+  Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list ->
+  Cnf.lit list
+)
+"fcop.ml" 121 4612 4688 "fcop.ml" 121 4612 4693
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 117 4380 4386 "fcop.ml" 117 4380 4391
+)
+"fcop.ml" 121 4612 4688 "fcop.ml" 121 4612 4699
+type(
+  (Logic.state * Cnf.lit list * Cnf.lit list * Cnf.lit list * int list) list
+)
+"fcop.ml" 121 4612 4639 "fcop.ml" 121 4612 4700
+call(
+  stack
+)
+type(
+  Cnf.lit list list
+)
+"fcop.ml" 121 4612 4627 "fcop.ml" 121 4612 4700
+call(
+  stack
+)
+type(
+  Cnf.lit list
+)
+"fcop.ml" 122 4704 4710 "fcop.ml" 122 4704 4714
+type(
+  int list
+)
+ident(
+  def grep "fcop.ml" 123 4810 4812 "fcop.ml" 123 4810 4840
+)
+"fcop.ml" 122 4704 4717 "fcop.ml" 122 4704 4738
+type(
+  Cnf.lit list -> int list
+)
+ident(
+  ext_ref Features.holstep_list
+)
+"fcop.ml" 122 4704 4744 "fcop.ml" 122 4704 4749
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 117 4380 4386 "fcop.ml" 117 4380 4391
+)
+"fcop.ml" 122 4704 4744 "fcop.ml" 122 4704 4756
+type(
+  Cnf.lit list
+)
+"fcop.ml" 122 4704 4757 "fcop.ml" 122 4704 4758
+type(
+  Cnf.lit list -> Cnf.lit list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"fcop.ml" 122 4704 4759 "fcop.ml" 122 4704 4761
+type(
+  Cnf.lit list
+)
+"fcop.ml" 122 4704 4744 "fcop.ml" 122 4704 4761
+type(
+  bool
+)
+"fcop.ml" 122 4704 4767 "fcop.ml" 122 4704 4769
+type(
+  Cnf.lit list
+)
+"fcop.ml" 122 4704 4775 "fcop.ml" 122 4704 4782
+type(
+  Cnf.lit list -> Cnf.lit list
+)
+ident(
+  ext_ref List.tl
+)
+"fcop.ml" 122 4704 4783 "fcop.ml" 122 4704 4788
+type(
+  Logic.state
+)
+ident(
+  int_ref state "fcop.ml" 117 4380 4386 "fcop.ml" 117 4380 4391
+)
+"fcop.ml" 122 4704 4783 "fcop.ml" 122 4704 4795
+type(
+  Cnf.lit list
+)
+"fcop.ml" 122 4704 4775 "fcop.ml" 122 4704 4795
+call(
+  stack
+)
+type(
+  Cnf.lit list
+)
+"fcop.ml" 122 4704 4740 "fcop.ml" 122 4704 4796
+type(
+  Cnf.lit list
+)
+"fcop.ml" 122 4704 4797 "fcop.ml" 122 4704 4798
+type(
+  Cnf.lit list -> Cnf.lit list -> Cnf.lit list
+)
+ident(
+  ext_ref Pervasives.( @ )
+)
+"fcop.ml" 122 4704 4799 "fcop.ml" 122 4704 4805
+type(
+  Cnf.lit list
+)
+ident(
+  int_ref nstack "fcop.ml" 121 4612 4618 "fcop.ml" 121 4612 4624
+)
+"fcop.ml" 122 4704 4739 "fcop.ml" 122 4704 4806
+call(
+  stack
+)
+type(
+  Cnf.lit list
+)
+"fcop.ml" 122 4704 4717 "fcop.ml" 122 4704 4806
+call(
+  stack
+)
+type(
+  int list
+)
+"fcop.ml" 123 4810 4813 "fcop.ml" 123 4810 4819
+type(
+  int list
+)
+ident(
+  int_ref litrep "fcop.ml" 118 4416 4422 "fcop.ml" 118 4416 4428
+)
+"fcop.ml" 123 4810 4821 "fcop.ml" 123 4810 4825
+type(
+  int list
+)
+ident(
+  int_ref prep "fcop.ml" 119 4513 4519 "fcop.ml" 119 4513 4523
+)
+"fcop.ml" 123 4810 4827 "fcop.ml" 123 4810 4833
+type(
+  int list
+)
+ident(
+  int_ref lemrep "fcop.ml" 120 4562 4568 "fcop.ml" 120 4562 4574
+)
+"fcop.ml" 123 4810 4835 "fcop.ml" 123 4810 4839
+type(
+  int list
+)
+ident(
+  int_ref grep "fcop.ml" 122 4704 4710 "fcop.ml" 122 4704 4714
+)
+"fcop.ml" 123 4810 4812 "fcop.ml" 123 4810 4840
+type(
+  int list * int list * int list * int list
+)
+"fcop.ml" 122 4704 4706 "fcop.ml" 123 4810 4840
+type(
+  int list * int list * int list * int list
+)
+"fcop.ml" 121 4612 4614 "fcop.ml" 123 4810 4840
+type(
+  int list * int list * int list * int list
+)
+"fcop.ml" 120 4562 4564 "fcop.ml" 123 4810 4840
+type(
+  int list * int list * int list * int list
+)
+"fcop.ml" 119 4513 4515 "fcop.ml" 123 4810 4840
+type(
+  int list * int list * int list * int list
+)
+"fcop.ml" 118 4416 4418 "fcop.ml" 123 4810 4840
+type(
+  int list * int list * int list * int list
+)
+"fcop.ml" 117 4380 4382 "fcop.ml" 123 4810 4840
+type(
+  int list * int list * int list * int list
+)
+"fcop.ml" 128 4898 4902 "fcop.ml" 128 4898 4917
+type(
+  unit -> (int * string) list
+)
+ident(
+  def cop_all_contras "fcop.ml" 129 4991 4991 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 128 4898 4918 "fcop.ml" 128 4898 4920
+type(
+  unit
+)
+"fcop.ml" 128 4898 4923 "fcop.ml" 128 4898 4935
+type(
+  (int -> string -> (int * string) list -> (int * string) list) ->
+  (int, string) Hashtbl.t -> (int * string) list -> (int * string) list
+)
+ident(
+  ext_ref Hashtbl.fold
+)
+"fcop.ml" 128 4898 4941 "fcop.ml" 128 4898 4942
+type(
+  int
+)
+ident(
+  def c "fcop.ml" 128 4898 4943 "fcop.ml" 128 4898 4963
+)
+"fcop.ml" 128 4898 4943 "fcop.ml" 128 4898 4944
+type(
+  string
+)
+ident(
+  def s "fcop.ml" 128 4898 4945 "fcop.ml" 128 4898 4963
+)
+"fcop.ml" 128 4898 4945 "fcop.ml" 128 4898 4947
+type(
+  (int * string) list
+)
+ident(
+  def sf "fcop.ml" 128 4898 4951 "fcop.ml" 128 4898 4963
+)
+"fcop.ml" 128 4898 4952 "fcop.ml" 128 4898 4953
+type(
+  int
+)
+ident(
+  int_ref c "fcop.ml" 128 4898 4941 "fcop.ml" 128 4898 4942
+)
+"fcop.ml" 128 4898 4955 "fcop.ml" 128 4898 4956
+type(
+  string
+)
+ident(
+  int_ref s "fcop.ml" 128 4898 4943 "fcop.ml" 128 4898 4944
+)
+"fcop.ml" 128 4898 4951 "fcop.ml" 128 4898 4957
+type(
+  int * string
+)
+"fcop.ml" 128 4898 4961 "fcop.ml" 128 4898 4963
+type(
+  (int * string) list
+)
+ident(
+  int_ref sf "fcop.ml" 128 4898 4945 "fcop.ml" 128 4898 4947
+)
+"fcop.ml" 128 4898 4951 "fcop.ml" 128 4898 4963
+type(
+  (int * string) list
+)
+"fcop.ml" 128 4898 4936 "fcop.ml" 128 4898 4964
+type(
+  int -> string -> (int * string) list -> (int * string) list
+)
+"fcop.ml" 128 4898 4965 "fcop.ml" 128 4898 4985
+type(
+  (int, string) Hashtbl.t
+)
+ident(
+  ext_ref Features.no_contrstr
+)
+"fcop.ml" 128 4898 4986 "fcop.ml" 128 4898 4988
+type(
+  (int * string) list
+)
+"fcop.ml" 128 4898 4923 "fcop.ml" 128 4898 4988
+call(
+  tail
+)
+type(
+  (int * string) list
+)
+"fcop.ml" 129 4991 4995 "fcop.ml" 129 4991 5010
+type(
+  unit -> int list
+)
+ident(
+  def cop_nos_contras "fcop.ml" 131 5038 5038 "fcop.ml" 1 0 -1
+)
+"fcop.ml" 129 4991 5011 "fcop.ml" 129 4991 5013
+type(
+  unit
+)
+"fcop.ml" 129 4991 5016 "fcop.ml" 129 4991 5019
+type(
+  Logic.state * int list -> int list
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"fcop.ml" 129 4991 5021 "fcop.ml" 129 4991 5028
+type(
+  (Logic.state * int list) list -> Logic.state * int list
+)
+ident(
+  ext_ref List.hd
+)
+"fcop.ml" 129 4991 5029 "fcop.ml" 129 4991 5030
+type(
+  (Logic.state * int list) list ref -> (Logic.state * int list) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"fcop.ml" 129 4991 5030 "fcop.ml" 129 4991 5033
+type(
+  (Logic.state * int list) list ref
+)
+ident(
+  int_ref sts "fcop.ml" 9 110 114 "fcop.ml" 9 110 117
+)
+"fcop.ml" 129 4991 5029 "fcop.ml" 129 4991 5033
+type(
+  (Logic.state * int list) list
+)
+"fcop.ml" 129 4991 5020 "fcop.ml" 129 4991 5034
+call(
+  stack
+)
+type(
+  Logic.state * int list
+)
+"fcop.ml" 129 4991 5016 "fcop.ml" 129 4991 5034
+type(
+  int list
+)
+"fcop.ml" 131 5038 5046 "fcop.ml" 131 5038 5063
+type(
+  string -> (string -> int * int) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 131 5038 5064 "fcop.ml" 131 5038 5075
+type(
+  string
+)
+"fcop.ml" 131 5038 5076 "fcop.ml" 131 5038 5085
+type(
+  string -> int * int
+)
+ident(
+  int_ref cop_start "fcop.ml" 10 129 133 "fcop.ml" 10 129 142
+)
+"fcop.ml" 131 5038 5046 "fcop.ml" 131 5038 5085
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 132 5088 5096 "fcop.ml" 132 5088 5113
+type(
+  string -> (int -> int * int) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 132 5088 5114 "fcop.ml" 132 5088 5126
+type(
+  string
+)
+"fcop.ml" 132 5088 5127 "fcop.ml" 132 5088 5137
+type(
+  int -> int * int
+)
+ident(
+  int_ref cop_action "fcop.ml" 13 237 241 "fcop.ml" 13 237 251
+)
+"fcop.ml" 132 5088 5096 "fcop.ml" 132 5088 5137
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 133 5140 5148 "fcop.ml" 133 5140 5165
+type(
+  string -> (unit -> unit) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 133 5140 5166 "fcop.ml" 133 5140 5181
+type(
+  string
+)
+"fcop.ml" 133 5140 5182 "fcop.ml" 133 5140 5195
+type(
+  unit -> unit
+)
+ident(
+  int_ref cop_backtrack "fcop.ml" 17 401 405 "fcop.ml" 17 401 418
+)
+"fcop.ml" 133 5140 5148 "fcop.ml" 133 5140 5195
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 134 5198 5206 "fcop.ml" 134 5198 5223
+type(
+  string -> (unit -> int * int) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 134 5198 5224 "fcop.ml" 134 5198 5237
+type(
+  string
+)
+"fcop.ml" 134 5198 5238 "fcop.ml" 134 5198 5249
+type(
+  unit -> int * int
+)
+ident(
+  int_ref cop_restart "fcop.ml" 18 499 507 "fcop.ml" 18 499 518
+)
+"fcop.ml" 134 5198 5206 "fcop.ml" 134 5198 5249
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 137 5319 5327 "fcop.ml" 137 5319 5344
+type(
+  string -> (int -> int list) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 137 5319 5345 "fcop.ml" 137 5319 5365
+type(
+  string
+)
+"fcop.ml" 137 5319 5366 "fcop.ml" 137 5319 5384
+type(
+  int -> int list
+)
+ident(
+  int_ref cop_contr_features "fcop.ml" 75 2133 2137 "fcop.ml" 75 2133 2155
+)
+"fcop.ml" 137 5319 5327 "fcop.ml" 137 5319 5384
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 138 5387 5395 "fcop.ml" 138 5387 5412
+type(
+  string -> (int -> int list) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 138 5387 5413 "fcop.ml" 138 5387 5434
+type(
+  string
+)
+"fcop.ml" 138 5387 5435 "fcop.ml" 138 5387 5454
+type(
+  int -> int list
+)
+ident(
+  int_ref cop_contr_represent "fcop.ml" 77 2296 2300 "fcop.ml" 77 2296 2319
+)
+"fcop.ml" 138 5387 5395 "fcop.ml" 138 5387 5454
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 140 5458 5466 "fcop.ml" 140 5458 5483
+type(
+  string -> (unit -> unit) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 140 5458 5484 "fcop.ml" 140 5458 5498
+type(
+  string
+)
+"fcop.ml" 140 5458 5499 "fcop.ml" 140 5458 5511
+type(
+  unit -> unit
+)
+ident(
+  int_ref cop_st_print "fcop.ml" 83 2563 2567 "fcop.ml" 83 2563 2579
+)
+"fcop.ml" 140 5458 5466 "fcop.ml" 140 5458 5511
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 141 5514 5522 "fcop.ml" 141 5514 5539
+type(
+  string ->
+  (unit ->
+   Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list) ->
+  unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 141 5514 5540 "fcop.ml" 141 5514 5557
+type(
+  string
+)
+"fcop.ml" 141 5514 5558 "fcop.ml" 141 5514 5573
+type(
+  unit ->
+  Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list * Cnf.Im.key list
+)
+ident(
+  int_ref cop_st_features "fcop.ml" 102 3540 3544 "fcop.ml" 102 3540 3559
+)
+"fcop.ml" 141 5514 5522 "fcop.ml" 141 5514 5573
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 142 5576 5584 "fcop.ml" 142 5576 5601
+type(
+  string -> (unit -> Cnf.Im.key list) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 142 5576 5602 "fcop.ml" 142 5576 5624
+type(
+  string
+)
+"fcop.ml" 142 5576 5625 "fcop.ml" 142 5576 5645
+type(
+  unit -> Cnf.Im.key list
+)
+ident(
+  int_ref cop_st_features_fast "fcop.ml" 111 4149 4153 "fcop.ml" 111 4149 4173
+)
+"fcop.ml" 142 5576 5584 "fcop.ml" 142 5576 5645
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 143 5648 5656 "fcop.ml" 143 5648 5673
+type(
+  string -> (unit -> int list * int list * int list * int list) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 143 5648 5674 "fcop.ml" 143 5648 5692
+type(
+  string
+)
+"fcop.ml" 143 5648 5693 "fcop.ml" 143 5648 5709
+type(
+  unit -> int list * int list * int list * int list
+)
+ident(
+  int_ref cop_st_represent "fcop.ml" 116 4354 4358 "fcop.ml" 116 4354 4374
+)
+"fcop.ml" 143 5648 5656 "fcop.ml" 143 5648 5709
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 145 5713 5721 "fcop.ml" 145 5713 5738
+type(
+  string -> (unit -> (int * string) list) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 145 5713 5739 "fcop.ml" 145 5713 5756
+type(
+  string
+)
+"fcop.ml" 145 5713 5757 "fcop.ml" 145 5713 5772
+type(
+  unit -> (int * string) list
+)
+ident(
+  int_ref cop_all_contras "fcop.ml" 128 4898 4902 "fcop.ml" 128 4898 4917
+)
+"fcop.ml" 145 5713 5721 "fcop.ml" 145 5713 5772
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 146 5775 5783 "fcop.ml" 146 5775 5800
+type(
+  string -> (unit -> int list) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 146 5775 5801 "fcop.ml" 146 5775 5818
+type(
+  string
+)
+"fcop.ml" 146 5775 5819 "fcop.ml" 146 5775 5834
+type(
+  unit -> int list
+)
+ident(
+  int_ref cop_nos_contras "fcop.ml" 129 4991 4995 "fcop.ml" 129 4991 5010
+)
+"fcop.ml" 146 5775 5783 "fcop.ml" 146 5775 5834
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 148 5838 5846 "fcop.ml" 148 5838 5863
+type(
+  string ->
+  (unit ->
+   ((int * int * int) * (int * int * int list) list *
+    (int * int * int list) list * int list) *
+   int list * int list * int list list) ->
+  unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 148 5838 5864 "fcop.ml" 148 5838 5880
+type(
+  string
+)
+"fcop.ml" 148 5838 5881 "fcop.ml" 148 5838 5895
+type(
+  unit ->
+  ((int * int * int) * (int * int * int list) list *
+   (int * int * int list) list * int list) *
+  int list * int list * int list list
+)
+ident(
+  int_ref cop_circuit_st "fcop.ml" 62 1771 1775 "fcop.ml" 62 1771 1789
+)
+"fcop.ml" 148 5838 5846 "fcop.ml" 148 5838 5895
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 149 5898 5906 "fcop.ml" 149 5898 5923
+type(
+  string ->
+  (unit ->
+   (int list * (int * int * int * bool) list) list *
+   (int list * int list) list * int list list) ->
+  unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 149 5898 5924 "fcop.ml" 149 5898 5943
+type(
+  string
+)
+"fcop.ml" 149 5898 5944 "fcop.ml" 149 5898 5961
+type(
+  unit ->
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list
+)
+ident(
+  int_ref cop_graph_indices "fcop.ml" 67 1939 1943 "fcop.ml" 67 1939 1960
+)
+"fcop.ml" 149 5898 5906 "fcop.ml" 149 5898 5961
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 150 5964 5972 "fcop.ml" 150 5964 5989
+type(
+  string -> (unit -> string list * string list) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 150 5964 5990 "fcop.ml" 150 5964 6009
+type(
+  string
+)
+"fcop.ml" 150 5964 6010 "fcop.ml" 150 5964 6027
+type(
+  unit -> string list * string list
+)
+ident(
+  int_ref cop_graph_symbols "fcop.ml" 71 2036 2040 "fcop.ml" 71 2036 2057
+)
+"fcop.ml" 150 5964 5972 "fcop.ml" 150 5964 6027
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 151 6030 6038 "fcop.ml" 151 6030 6055
+type(
+  string ->
+  (string ->
+   (int list * (int * int * int * bool) list) list *
+   (int list * int list) list * int list list *
+   (int list * int list * (string list * string list))) ->
+  unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 151 6030 6056 "fcop.ml" 151 6030 6074
+type(
+  string
+)
+"fcop.ml" 151 6030 6075 "fcop.ml" 151 6030 6094
+type(
+  string ->
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  (int list * int list * (string list * string list))
+)
+ident(
+  ext_ref Premsel_parse.load_premsel_to_ind
+)
+"fcop.ml" 151 6030 6038 "fcop.ml" 151 6030 6094
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 152 6097 6105 "fcop.ml" 152 6097 6122
+type(
+  string ->
+  (string ->
+   (int list * (int * int * int * bool) list) list *
+   (int list * int list) list * int list list *
+   (int list * (string list * string list))) ->
+  unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 152 6097 6123 "fcop.ml" 152 6097 6144
+type(
+  string
+)
+"fcop.ml" 152 6097 6145 "fcop.ml" 152 6097 6167
+type(
+  string ->
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  (int list * (string list * string list))
+)
+ident(
+  ext_ref Cnfpremsel_parse.load_cnfpremsel_to_ind
+)
+"fcop.ml" 152 6097 6105 "fcop.ml" 152 6097 6167
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 154 6171 6179 "fcop.ml" 154 6171 6196
+type(
+  string -> (int -> int * int) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 154 6171 6197 "fcop.ml" 154 6171 6212
+type(
+  string
+)
+"fcop.ml" 154 6171 6213 "fcop.ml" 154 6171 6226
+type(
+  int -> int * int
+)
+ident(
+  int_ref cop_action_fl "fcop.ml" 37 1004 1008 "fcop.ml" 37 1004 1021
+)
+"fcop.ml" 154 6171 6179 "fcop.ml" 154 6171 6226
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 155 6229 6237 "fcop.ml" 155 6229 6254
+type(
+  string -> (unit -> int list) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 155 6229 6255 "fcop.ml" 155 6229 6270
+type(
+  string
+)
+"fcop.ml" 155 6229 6271 "fcop.ml" 155 6229 6284
+type(
+  unit -> int list
+)
+ident(
+  int_ref cop_unif_mask "fcop.ml" 43 1262 1266 "fcop.ml" 43 1262 1279
+)
+"fcop.ml" 155 6229 6237 "fcop.ml" 155 6229 6284
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 156 6287 6295 "fcop.ml" 156 6287 6312
+type(
+  string -> (int -> int) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 156 6287 6313 "fcop.ml" 156 6287 6331
+type(
+  string
+)
+"fcop.ml" 156 6287 6332 "fcop.ml" 156 6287 6348
+type(
+  int -> int
+)
+ident(
+  int_ref cop_act_to_actfl "fcop.ml" 51 1478 1482 "fcop.ml" 51 1478 1498
+)
+"fcop.ml" 156 6287 6295 "fcop.ml" 156 6287 6348
+call(
+  stack
+)
+type(
+  unit
+)
+"fcop.ml" 157 6351 6359 "fcop.ml" 157 6351 6376
+type(
+  string -> (unit -> unit) -> unit
+)
+ident(
+  ext_ref Callback.register
+)
+"fcop.ml" 157 6351 6377 "fcop.ml" 157 6351 6396
+type(
+  string
+)
+"fcop.ml" 157 6351 6397 "fcop.ml" 157 6351 6414
+type(
+  unit -> unit
+)
+ident(
+  int_ref cop_print_symbols "fcop.ml" 96 3393 3397 "fcop.ml" 96 3393 3414
+)
+"fcop.ml" 157 6351 6359 "fcop.ml" 157 6351 6414
+call(
+  stack
+)
+type(
+  unit
+)

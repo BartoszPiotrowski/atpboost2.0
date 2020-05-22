@@ -1,0 +1,7433 @@
+"features.ml" 5 40 44 "features.ml" 5 40 56
+type(
+  bool ref
+)
+ident(
+  def unifyskolems "features.ml" 6 71 71 "features.ml" 1 0 -1
+)
+"features.ml" 5 40 59 "features.ml" 5 40 62
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"features.ml" 5 40 63 "features.ml" 5 40 68
+type(
+  bool
+)
+"features.ml" 5 40 59 "features.ml" 5 40 68
+type(
+  bool ref
+)
+"features.ml" 6 71 75 "features.ml" 6 71 86
+type(
+  int ref
+)
+ident(
+  def fea_pat_len "features.ml" 8 148 148 "features.ml" 1 0 -1
+)
+"features.ml" 6 71 89 "features.ml" 6 71 92
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"features.ml" 6 71 93 "features.ml" 6 71 94
+type(
+  int
+)
+"features.ml" 6 71 89 "features.ml" 6 71 94
+type(
+  int ref
+)
+"features.ml" 8 148 152 "features.ml" 8 148 161
+type(
+  bool ref
+)
+ident(
+  def fea_cross "features.ml" 9 176 176 "features.ml" 1 0 -1
+)
+"features.ml" 8 148 164 "features.ml" 8 148 167
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"features.ml" 8 148 168 "features.ml" 8 148 173
+type(
+  bool
+)
+"features.ml" 8 148 164 "features.ml" 8 148 173
+type(
+  bool ref
+)
+"features.ml" 9 176 180 "features.ml" 9 176 194
+type(
+  bool ref
+)
+ident(
+  def fea_undersubst "features.ml" 11 276 276 "features.ml" 1 0 -1
+)
+"features.ml" 9 176 197 "features.ml" 9 176 200
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"features.ml" 9 176 201 "features.ml" 9 176 205
+type(
+  bool
+)
+"features.ml" 9 176 197 "features.ml" 9 176 205
+type(
+  bool ref
+)
+"features.ml" 11 276 280 "features.ml" 11 276 289
+type(
+  bool ref
+)
+ident(
+  def fea_model "features.ml" 12 304 304 "features.ml" 1 0 -1
+)
+"features.ml" 11 276 292 "features.ml" 11 276 295
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"features.ml" 11 276 296 "features.ml" 11 276 301
+type(
+  bool
+)
+"features.ml" 11 276 292 "features.ml" 11 276 301
+type(
+  bool ref
+)
+"features.ml" 12 304 308 "features.ml" 12 304 319
+type(
+  bool ref
+)
+ident(
+  def fea_nocount "features.ml" 14 335 335 "features.ml" 1 0 -1
+)
+"features.ml" 12 304 322 "features.ml" 12 304 325
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"features.ml" 12 304 326 "features.ml" 12 304 331
+type(
+  bool
+)
+"features.ml" 12 304 322 "features.ml" 12 304 331
+type(
+  bool ref
+)
+"features.ml" 14 335 339 "features.ml" 14 335 348
+type(
+  string -> string list list
+)
+ident(
+  def read_file "features.ml" 22 577 577 "features.ml" 1 0 -1
+)
+"features.ml" 14 335 349 "features.ml" 14 335 354
+type(
+  string
+)
+ident(
+  def fname "features.ml" 15 357 359 "features.ml" 20 506 573
+)
+"features.ml" 15 357 363 "features.ml" 15 357 365
+type(
+  in_channel
+)
+ident(
+  def ic "features.ml" 16 385 387 "features.ml" 20 506 573
+)
+"features.ml" 15 357 368 "features.ml" 15 357 375
+type(
+  string -> in_channel
+)
+ident(
+  ext_ref Pervasives.open_in
+)
+"features.ml" 15 357 376 "features.ml" 15 357 381
+type(
+  string
+)
+ident(
+  int_ref fname "features.ml" 14 335 349 "features.ml" 14 335 354
+)
+"features.ml" 15 357 368 "features.ml" 15 357 381
+call(
+  stack
+)
+type(
+  in_channel
+)
+"features.ml" 16 385 391 "features.ml" 16 385 394
+type(
+  Str.regexp
+)
+ident(
+  def rxp "features.ml" 17 415 417 "features.ml" 20 506 573
+)
+"features.ml" 16 385 397 "features.ml" 16 385 407
+type(
+  string -> Str.regexp
+)
+ident(
+  ext_ref Str.regexp
+)
+"features.ml" 16 385 408 "features.ml" 16 385 411
+type(
+  string
+)
+"features.ml" 16 385 397 "features.ml" 16 385 411
+call(
+  stack
+)
+type(
+  Str.regexp
+)
+"features.ml" 17 415 421 "features.ml" 17 415 424
+type(
+  string list list ref
+)
+ident(
+  def ret "features.ml" 18 437 439 "features.ml" 20 506 573
+)
+"features.ml" 17 415 427 "features.ml" 17 415 430
+type(
+  string list list -> string list list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"features.ml" 17 415 431 "features.ml" 17 415 433
+type(
+  string list list
+)
+"features.ml" 17 415 427 "features.ml" 17 415 433
+type(
+  string list list ref
+)
+"features.ml" 18 437 449 "features.ml" 18 437 453
+type(
+  bool
+)
+"features.ml" 19 457 461 "features.ml" 19 457 464
+type(
+  string list list ref
+)
+ident(
+  int_ref ret "features.ml" 17 415 421 "features.ml" 17 415 424
+)
+"features.ml" 19 457 465 "features.ml" 19 457 467
+type(
+  string list list ref -> string list list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"features.ml" 19 457 468 "features.ml" 19 457 477
+type(
+  Str.regexp -> string -> string list
+)
+ident(
+  ext_ref Str.split
+)
+"features.ml" 19 457 478 "features.ml" 19 457 481
+type(
+  Str.regexp
+)
+ident(
+  int_ref rxp "features.ml" 16 385 391 "features.ml" 16 385 394
+)
+"features.ml" 19 457 483 "features.ml" 19 457 493
+type(
+  in_channel -> string
+)
+ident(
+  ext_ref Pervasives.input_line
+)
+"features.ml" 19 457 494 "features.ml" 19 457 496
+type(
+  in_channel
+)
+ident(
+  int_ref ic "features.ml" 15 357 363 "features.ml" 15 357 365
+)
+"features.ml" 19 457 482 "features.ml" 19 457 497
+call(
+  stack
+)
+type(
+  string
+)
+"features.ml" 19 457 468 "features.ml" 19 457 497
+call(
+  stack
+)
+type(
+  string list
+)
+"features.ml" 19 457 501 "features.ml" 19 457 502
+type(
+  string list list ref -> string list list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"features.ml" 19 457 502 "features.ml" 19 457 505
+type(
+  string list list ref
+)
+ident(
+  int_ref ret "features.ml" 17 415 421 "features.ml" 17 415 424
+)
+"features.ml" 19 457 501 "features.ml" 19 457 505
+type(
+  string list list
+)
+"features.ml" 19 457 468 "features.ml" 19 457 505
+type(
+  string list list
+)
+"features.ml" 19 457 461 "features.ml" 19 457 505
+type(
+  unit
+)
+"features.ml" 18 437 443 "features.ml" 20 506 512
+type(
+  unit
+)
+"features.ml" 20 506 514 "features.ml" 20 506 526
+type(
+  string list list
+)
+"features.ml" 18 437 443 "features.ml" 20 506 526
+type(
+  string list list
+)
+"features.ml" 20 506 532 "features.ml" 20 506 543
+type(
+  exn
+)
+"features.ml" 20 506 547 "features.ml" 20 506 555
+type(
+  in_channel -> unit
+)
+ident(
+  ext_ref Pervasives.close_in
+)
+"features.ml" 20 506 556 "features.ml" 20 506 558
+type(
+  in_channel
+)
+ident(
+  int_ref ic "features.ml" 15 357 363 "features.ml" 15 357 365
+)
+"features.ml" 20 506 547 "features.ml" 20 506 558
+call(
+  stack
+)
+type(
+  unit
+)
+"features.ml" 20 506 560 "features.ml" 20 506 568
+type(
+  string list list -> string list list
+)
+ident(
+  ext_ref List.rev
+)
+"features.ml" 20 506 569 "features.ml" 20 506 570
+type(
+  string list list ref -> string list list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"features.ml" 20 506 570 "features.ml" 20 506 573
+type(
+  string list list ref
+)
+ident(
+  int_ref ret "features.ml" 17 415 421 "features.ml" 17 415 424
+)
+"features.ml" 20 506 569 "features.ml" 20 506 573
+type(
+  string list list
+)
+"features.ml" 20 506 560 "features.ml" 20 506 573
+call(
+  tail
+)
+type(
+  string list list
+)
+"features.ml" 20 506 547 "features.ml" 20 506 573
+type(
+  string list list
+)
+"features.ml" 18 437 439 "features.ml" 20 506 573
+type(
+  string list list
+)
+"features.ml" 17 415 417 "features.ml" 20 506 573
+type(
+  string list list
+)
+"features.ml" 16 385 387 "features.ml" 20 506 573
+type(
+  string list list
+)
+"features.ml" 15 357 359 "features.ml" 20 506 573
+type(
+  string list list
+)
+"features.ml" 22 577 581 "features.ml" 22 577 595
+type(
+  string -> string -> int -> int list
+)
+ident(
+  def read_model_fea "features.ml" 32 1107 1107 "features.ml" 1 0 -1
+)
+"features.ml" 22 577 596 "features.ml" 22 577 600
+type(
+  string
+)
+ident(
+  def fean "features.ml" 22 577 601 "features.ml" 30 1098 1103
+)
+"features.ml" 22 577 601 "features.ml" 22 577 605
+type(
+  string
+)
+ident(
+  def mapn "features.ml" 23 608 610 "features.ml" 30 1098 1103
+)
+"features.ml" 23 608 613 "features.ml" 23 608 614
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"features.ml" 23 608 614 "features.ml" 23 608 623
+type(
+  bool ref
+)
+ident(
+  int_ref fea_model "features.ml" 11 276 280 "features.ml" 11 276 289
+)
+"features.ml" 23 608 613 "features.ml" 23 608 623
+type(
+  bool
+)
+"features.ml" 23 608 624 "features.ml" 23 608 625
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"features.ml" 23 608 626 "features.ml" 23 608 631
+type(
+  bool
+)
+"features.ml" 23 608 613 "features.ml" 23 608 631
+type(
+  bool
+)
+"features.ml" 23 608 641 "features.ml" 23 608 642
+type(
+  int
+)
+"features.ml" 23 608 646 "features.ml" 23 608 648
+type(
+  int list
+)
+"features.ml" 23 608 637 "features.ml" 23 608 648
+type(
+  int -> int list
+)
+"features.ml" 24 660 668 "features.ml" 24 660 673
+type(
+  (string, int list) Hashtbl.t
+)
+ident(
+  def hash1 "features.ml" 25 727 731 "features.ml" 29 1014 1097
+)
+"features.ml" 24 660 676 "features.ml" 24 660 690
+type(
+  ?random:bool -> int -> (string, int list) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"features.ml" 24 660 691 "features.ml" 24 660 693
+type(
+  int
+)
+"features.ml" 24 660 676 "features.ml" 24 660 693
+call(
+  stack
+)
+type(
+  (string, int list) Hashtbl.t
+)
+"features.ml" 24 660 698 "features.ml" 24 660 703
+type(
+  (int, string) Hashtbl.t
+)
+ident(
+  def hash2 "features.ml" 25 727 731 "features.ml" 29 1014 1097
+)
+"features.ml" 24 660 706 "features.ml" 24 660 720
+type(
+  ?random:bool -> int -> (int, string) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"features.ml" 24 660 721 "features.ml" 24 660 723
+type(
+  int
+)
+"features.ml" 24 660 706 "features.ml" 24 660 723
+call(
+  stack
+)
+type(
+  (int, string) Hashtbl.t
+)
+"features.ml" 25 727 735 "features.ml" 25 727 737
+type(
+  string list -> unit
+)
+ident(
+  def f1 "features.ml" 26 839 843 "features.ml" 29 1014 1097
+)
+"features.ml" 25 727 749 "features.ml" 25 727 750
+type(
+  string
+)
+ident(
+  def h "features.ml" 25 727 759 "features.ml" 25 727 796
+)
+"features.ml" 25 727 754 "features.ml" 25 727 755
+type(
+  string list
+)
+ident(
+  def t "features.ml" 25 727 759 "features.ml" 25 727 796
+)
+"features.ml" 25 727 749 "features.ml" 25 727 755
+type(
+  string list
+)
+"features.ml" 25 727 759 "features.ml" 25 727 770
+type(
+  (string, int list) Hashtbl.t -> string -> int list -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"features.ml" 25 727 771 "features.ml" 25 727 776
+type(
+  (string, int list) Hashtbl.t
+)
+ident(
+  int_ref hash1 "features.ml" 24 660 668 "features.ml" 24 660 673
+)
+"features.ml" 25 727 777 "features.ml" 25 727 778
+type(
+  string
+)
+ident(
+  int_ref h "features.ml" 25 727 749 "features.ml" 25 727 750
+)
+"features.ml" 25 727 780 "features.ml" 25 727 788
+type(
+  (string -> int) -> string list -> int list
+)
+ident(
+  ext_ref List.map
+)
+"features.ml" 25 727 789 "features.ml" 25 727 793
+type(
+  string -> int
+)
+ident(
+  ext_ref Cnf.md5s
+)
+"features.ml" 25 727 794 "features.ml" 25 727 795
+type(
+  string list
+)
+ident(
+  int_ref t "features.ml" 25 727 754 "features.ml" 25 727 755
+)
+"features.ml" 25 727 779 "features.ml" 25 727 796
+call(
+  stack
+)
+type(
+  int list
+)
+"features.ml" 25 727 759 "features.ml" 25 727 796
+call(
+  tail
+)
+type(
+  unit
+)
+"features.ml" 25 727 799 "features.ml" 25 727 800
+type(
+  string list
+)
+"features.ml" 25 727 804 "features.ml" 25 727 812
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"features.ml" 25 727 813 "features.ml" 25 727 835
+type(
+  string
+)
+"features.ml" 25 727 804 "features.ml" 25 727 835
+call(
+  tail
+)
+type(
+  unit
+)
+"features.ml" 25 727 740 "features.ml" 25 727 835
+type(
+  string list -> unit
+)
+"features.ml" 26 839 847 "features.ml" 26 839 849
+type(
+  string list -> unit
+)
+ident(
+  def f2 "features.ml" 27 944 948 "features.ml" 29 1014 1097
+)
+"features.ml" 26 839 862 "features.ml" 26 839 863
+type(
+  string
+)
+ident(
+  def l "features.ml" 26 839 871 "features.ml" 26 839 908
+)
+"features.ml" 26 839 865 "features.ml" 26 839 866
+type(
+  string
+)
+ident(
+  def r "features.ml" 26 839 871 "features.ml" 26 839 908
+)
+"features.ml" 26 839 861 "features.ml" 26 839 867
+type(
+  string list
+)
+"features.ml" 26 839 871 "features.ml" 26 839 882
+type(
+  (int, string) Hashtbl.t -> int -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"features.ml" 26 839 883 "features.ml" 26 839 888
+type(
+  (int, string) Hashtbl.t
+)
+ident(
+  int_ref hash2 "features.ml" 24 660 698 "features.ml" 24 660 703
+)
+"features.ml" 26 839 890 "features.ml" 26 839 903
+type(
+  string -> int
+)
+ident(
+  ext_ref Pervasives.int_of_string
+)
+"features.ml" 26 839 904 "features.ml" 26 839 905
+type(
+  string
+)
+ident(
+  int_ref l "features.ml" 26 839 862 "features.ml" 26 839 863
+)
+"features.ml" 26 839 889 "features.ml" 26 839 906
+type(
+  int
+)
+"features.ml" 26 839 907 "features.ml" 26 839 908
+type(
+  string
+)
+ident(
+  int_ref r "features.ml" 26 839 865 "features.ml" 26 839 866
+)
+"features.ml" 26 839 871 "features.ml" 26 839 908
+call(
+  tail
+)
+type(
+  unit
+)
+"features.ml" 26 839 911 "features.ml" 26 839 912
+type(
+  string list
+)
+"features.ml" 26 839 916 "features.ml" 26 839 924
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"features.ml" 26 839 925 "features.ml" 26 839 940
+type(
+  string
+)
+"features.ml" 26 839 916 "features.ml" 26 839 940
+call(
+  tail
+)
+type(
+  unit
+)
+"features.ml" 26 839 852 "features.ml" 26 839 940
+type(
+  string list -> unit
+)
+"features.ml" 27 944 948 "features.ml" 27 944 957
+type(
+  (string list -> unit) -> string list list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"features.ml" 27 944 958 "features.ml" 27 944 960
+type(
+  string list -> unit
+)
+ident(
+  int_ref f1 "features.ml" 25 727 735 "features.ml" 25 727 737
+)
+"features.ml" 27 944 962 "features.ml" 27 944 971
+type(
+  string -> string list list
+)
+ident(
+  int_ref read_file "features.ml" 14 335 339 "features.ml" 14 335 348
+)
+"features.ml" 27 944 972 "features.ml" 27 944 976
+type(
+  string
+)
+ident(
+  int_ref fean "features.ml" 22 577 596 "features.ml" 22 577 600
+)
+"features.ml" 27 944 961 "features.ml" 27 944 977
+call(
+  stack
+)
+type(
+  string list list
+)
+"features.ml" 27 944 948 "features.ml" 27 944 977
+call(
+  stack
+)
+type(
+  unit
+)
+"features.ml" 28 979 983 "features.ml" 28 979 992
+type(
+  (string list -> unit) -> string list list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"features.ml" 28 979 993 "features.ml" 28 979 995
+type(
+  string list -> unit
+)
+ident(
+  int_ref f2 "features.ml" 26 839 847 "features.ml" 26 839 849
+)
+"features.ml" 28 979 997 "features.ml" 28 979 1006
+type(
+  string -> string list list
+)
+ident(
+  int_ref read_file "features.ml" 14 335 339 "features.ml" 14 335 348
+)
+"features.ml" 28 979 1007 "features.ml" 28 979 1011
+type(
+  string
+)
+ident(
+  int_ref mapn "features.ml" 22 577 601 "features.ml" 22 577 605
+)
+"features.ml" 28 979 996 "features.ml" 28 979 1012
+call(
+  stack
+)
+type(
+  string list list
+)
+"features.ml" 28 979 983 "features.ml" 28 979 1012
+call(
+  stack
+)
+type(
+  unit
+)
+"features.ml" 29 1014 1022 "features.ml" 29 1014 1025
+type(
+  int
+)
+ident(
+  def cno "features.ml" 29 1014 1029 "features.ml" 29 1014 1097
+)
+"features.ml" 29 1014 1033 "features.ml" 29 1014 1045
+type(
+  (string, int list) Hashtbl.t -> string -> int list
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"features.ml" 29 1014 1046 "features.ml" 29 1014 1051
+type(
+  (string, int list) Hashtbl.t
+)
+ident(
+  int_ref hash1 "features.ml" 24 660 668 "features.ml" 24 660 673
+)
+"features.ml" 29 1014 1053 "features.ml" 29 1014 1065
+type(
+  (int, string) Hashtbl.t -> int -> string
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"features.ml" 29 1014 1066 "features.ml" 29 1014 1071
+type(
+  (int, string) Hashtbl.t
+)
+ident(
+  int_ref hash2 "features.ml" 24 660 698 "features.ml" 24 660 703
+)
+"features.ml" 29 1014 1072 "features.ml" 29 1014 1075
+type(
+  int
+)
+ident(
+  int_ref cno "features.ml" 29 1014 1022 "features.ml" 29 1014 1025
+)
+"features.ml" 29 1014 1052 "features.ml" 29 1014 1076
+call(
+  stack
+)
+type(
+  string
+)
+"features.ml" 29 1014 1033 "features.ml" 29 1014 1076
+call(
+  stack
+)
+type(
+  int list
+)
+"features.ml" 29 1014 1082 "features.ml" 29 1014 1091
+type(
+  exn
+)
+"features.ml" 29 1014 1095 "features.ml" 29 1014 1097
+type(
+  int list
+)
+"features.ml" 29 1014 1029 "features.ml" 29 1014 1097
+type(
+  int list
+)
+"features.ml" 29 1014 1018 "features.ml" 29 1014 1097
+type(
+  int -> int list
+)
+"features.ml" 28 979 983 "features.ml" 29 1014 1097
+type(
+  int -> int list
+)
+"features.ml" 27 944 948 "features.ml" 29 1014 1097
+type(
+  int -> int list
+)
+"features.ml" 26 839 843 "features.ml" 29 1014 1097
+type(
+  int -> int list
+)
+"features.ml" 25 727 731 "features.ml" 29 1014 1097
+type(
+  int -> int list
+)
+"features.ml" 23 608 654 "features.ml" 30 1098 1103
+type(
+  int -> int list
+)
+"features.ml" 23 608 610 "features.ml" 30 1098 1103
+type(
+  int -> int list
+)
+"features.ml" 32 1107 1111 "features.ml" 32 1107 1126
+type(
+  int
+)
+ident(
+  def features_modulo "features.ml" 33 1161 1161 "features.ml" 1 0 -1
+)
+"features.ml" 32 1107 1129 "features.ml" 32 1107 1135
+type(
+  int
+)
+"features.ml" 33 1161 1165 "features.ml" 33 1161 1169
+type(
+  int -> int
+)
+ident(
+  def fmod "features.ml" 34 1254 1254 "features.ml" 1 0 -1
+)
+"features.ml" 33 1161 1170 "features.ml" 33 1161 1171
+type(
+  int
+)
+ident(
+  def n "features.ml" 33 1161 1174 "features.ml" 33 1161 1251
+)
+"features.ml" 33 1161 1174 "features.ml" 33 1161 1175
+type(
+  int
+)
+"features.ml" 33 1161 1176 "features.ml" 33 1161 1177
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 33 1161 1182 "features.ml" 33 1161 1183
+type(
+  int
+)
+ident(
+  def r "features.ml" 33 1161 1211 "features.ml" 33 1161 1251
+)
+"features.ml" 33 1161 1186 "features.ml" 33 1161 1187
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 33 1161 1170 "features.ml" 33 1161 1171
+)
+"features.ml" 33 1161 1188 "features.ml" 33 1161 1191
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( mod )
+)
+"features.ml" 33 1161 1192 "features.ml" 33 1161 1207
+type(
+  int
+)
+ident(
+  int_ref features_modulo "features.ml" 32 1107 1111 "features.ml" 32 1107 1126
+)
+"features.ml" 33 1161 1186 "features.ml" 33 1161 1207
+type(
+  int
+)
+"features.ml" 33 1161 1214 "features.ml" 33 1161 1215
+type(
+  int
+)
+ident(
+  int_ref r "features.ml" 33 1161 1182 "features.ml" 33 1161 1183
+)
+"features.ml" 33 1161 1216 "features.ml" 33 1161 1217
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"features.ml" 33 1161 1218 "features.ml" 33 1161 1219
+type(
+  int
+)
+"features.ml" 33 1161 1214 "features.ml" 33 1161 1219
+type(
+  bool
+)
+"features.ml" 33 1161 1225 "features.ml" 33 1161 1226
+type(
+  int
+)
+ident(
+  int_ref r "features.ml" 33 1161 1182 "features.ml" 33 1161 1183
+)
+"features.ml" 33 1161 1227 "features.ml" 33 1161 1228
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 33 1161 1229 "features.ml" 33 1161 1244
+type(
+  int
+)
+ident(
+  int_ref features_modulo "features.ml" 32 1107 1111 "features.ml" 32 1107 1126
+)
+"features.ml" 33 1161 1225 "features.ml" 33 1161 1244
+type(
+  int
+)
+"features.ml" 33 1161 1250 "features.ml" 33 1161 1251
+type(
+  int
+)
+ident(
+  int_ref r "features.ml" 33 1161 1182 "features.ml" 33 1161 1183
+)
+"features.ml" 33 1161 1211 "features.ml" 33 1161 1251
+type(
+  int
+)
+"features.ml" 33 1161 1178 "features.ml" 33 1161 1251
+type(
+  int
+)
+"features.ml" 33 1161 1174 "features.ml" 33 1161 1251
+type(
+  int
+)
+"features.ml" 34 1254 1258 "features.ml" 34 1254 1263
+type(
+  int -> int
+)
+ident(
+  def fmod3 "features.ml" 36 1361 1361 "features.ml" 1 0 -1
+)
+"features.ml" 34 1254 1264 "features.ml" 34 1254 1265
+type(
+  int
+)
+ident(
+  def n "features.ml" 34 1254 1268 "features.ml" 34 1254 1357
+)
+"features.ml" 34 1254 1268 "features.ml" 34 1254 1269
+type(
+  int
+)
+"features.ml" 34 1254 1270 "features.ml" 34 1254 1271
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 34 1254 1276 "features.ml" 34 1254 1277
+type(
+  int
+)
+ident(
+  def r "features.ml" 34 1254 1311 "features.ml" 34 1254 1357
+)
+"features.ml" 34 1254 1280 "features.ml" 34 1254 1281
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 34 1254 1264 "features.ml" 34 1254 1265
+)
+"features.ml" 34 1254 1282 "features.ml" 34 1254 1285
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( mod )
+)
+"features.ml" 34 1254 1287 "features.ml" 34 1254 1302
+type(
+  int
+)
+ident(
+  int_ref features_modulo "features.ml" 32 1107 1111 "features.ml" 32 1107 1126
+)
+"features.ml" 34 1254 1303 "features.ml" 34 1254 1304
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"features.ml" 34 1254 1305 "features.ml" 34 1254 1306
+type(
+  int
+)
+"features.ml" 34 1254 1286 "features.ml" 34 1254 1307
+type(
+  int
+)
+"features.ml" 34 1254 1280 "features.ml" 34 1254 1307
+type(
+  int
+)
+"features.ml" 34 1254 1314 "features.ml" 34 1254 1315
+type(
+  int
+)
+ident(
+  int_ref r "features.ml" 34 1254 1276 "features.ml" 34 1254 1277
+)
+"features.ml" 34 1254 1316 "features.ml" 34 1254 1317
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"features.ml" 34 1254 1318 "features.ml" 34 1254 1319
+type(
+  int
+)
+"features.ml" 34 1254 1314 "features.ml" 34 1254 1319
+type(
+  bool
+)
+"features.ml" 34 1254 1325 "features.ml" 34 1254 1326
+type(
+  int
+)
+ident(
+  int_ref r "features.ml" 34 1254 1276 "features.ml" 34 1254 1277
+)
+"features.ml" 34 1254 1327 "features.ml" 34 1254 1328
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 34 1254 1330 "features.ml" 34 1254 1345
+type(
+  int
+)
+ident(
+  int_ref features_modulo "features.ml" 32 1107 1111 "features.ml" 32 1107 1126
+)
+"features.ml" 34 1254 1346 "features.ml" 34 1254 1347
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"features.ml" 34 1254 1348 "features.ml" 34 1254 1349
+type(
+  int
+)
+"features.ml" 34 1254 1329 "features.ml" 34 1254 1350
+type(
+  int
+)
+"features.ml" 34 1254 1325 "features.ml" 34 1254 1350
+type(
+  int
+)
+"features.ml" 34 1254 1356 "features.ml" 34 1254 1357
+type(
+  int
+)
+ident(
+  int_ref r "features.ml" 34 1254 1276 "features.ml" 34 1254 1277
+)
+"features.ml" 34 1254 1311 "features.ml" 34 1254 1357
+type(
+  int
+)
+"features.ml" 34 1254 1272 "features.ml" 34 1254 1357
+type(
+  int
+)
+"features.ml" 34 1254 1268 "features.ml" 34 1254 1357
+type(
+  int
+)
+"features.ml" 36 1361 1365 "features.ml" 36 1361 1375
+type(
+  int
+)
+ident(
+  def fea_vconst "features.ml" 37 1383 1383 "features.ml" 1 0 -1
+)
+"features.ml" 36 1361 1378 "features.ml" 36 1361 1380
+type(
+  int
+)
+"features.ml" 37 1383 1391 "features.ml" 37 1383 1408
+type(
+  int -> int list -> Cnf.term -> int list
+)
+ident(
+  def bit_features_cont "features.ml" 37 1383 1383 "features.ml" 1 0 -1
+)
+"features.ml" 37 1383 1409 "features.ml" 37 1383 1413
+type(
+  int
+)
+ident(
+  def last "features.ml" 37 1383 1414 "features.ml" 39 1477 1553
+)
+"features.ml" 37 1383 1414 "features.ml" 37 1383 1416
+type(
+  int list
+)
+ident(
+  def sf "features.ml" 37 1383 1419 "features.ml" 39 1477 1553
+)
+"features.ml" 38 1428 1434 "features.ml" 38 1428 1435
+type(
+  int
+)
+"features.ml" 38 1428 1432 "features.ml" 38 1428 1435
+type(
+  Cnf.term
+)
+"features.ml" 38 1428 1439 "features.ml" 38 1428 1443
+type(
+  int
+)
+ident(
+  int_ref last "features.ml" 37 1383 1409 "features.ml" 37 1383 1413
+)
+"features.ml" 38 1428 1444 "features.ml" 38 1428 1445
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"features.ml" 38 1428 1446 "features.ml" 38 1428 1456
+type(
+  int
+)
+ident(
+  int_ref fea_vconst "features.ml" 36 1361 1365 "features.ml" 36 1361 1375
+)
+"features.ml" 38 1428 1439 "features.ml" 38 1428 1456
+type(
+  int
+)
+"features.ml" 38 1428 1460 "features.ml" 38 1428 1470
+type(
+  int
+)
+ident(
+  int_ref fea_vconst "features.ml" 36 1361 1365 "features.ml" 36 1361 1375
+)
+"features.ml" 38 1428 1474 "features.ml" 38 1428 1476
+type(
+  int list
+)
+ident(
+  int_ref sf "features.ml" 37 1383 1414 "features.ml" 37 1383 1416
+)
+"features.ml" 38 1428 1460 "features.ml" 38 1428 1476
+type(
+  int list
+)
+"features.ml" 38 1428 1439 "features.ml" 38 1428 1476
+type(
+  int list
+)
+"features.ml" 39 1477 1484 "features.ml" 39 1477 1485
+type(
+  int
+)
+ident(
+  def f "features.ml" 39 1477 1493 "features.ml" 39 1477 1553
+)
+"features.ml" 39 1477 1487 "features.ml" 39 1477 1488
+type(
+  Cnf.term list
+)
+ident(
+  def l "features.ml" 39 1477 1493 "features.ml" 39 1477 1553
+)
+"features.ml" 39 1477 1481 "features.ml" 39 1477 1489
+type(
+  Cnf.term
+)
+"features.ml" 39 1477 1493 "features.ml" 39 1477 1507
+type(
+  (int list -> Cnf.term -> int list) -> int list -> Cnf.term list -> int list
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 39 1477 1509 "features.ml" 39 1477 1526
+type(
+  int -> int list -> Cnf.term -> int list
+)
+ident(
+  int_ref bit_features_cont "features.ml" 37 1383 1391 "features.ml" 37 1383 1408
+)
+"features.ml" 39 1477 1527 "features.ml" 39 1477 1528
+type(
+  int
+)
+ident(
+  int_ref f "features.ml" 39 1477 1484 "features.ml" 39 1477 1485
+)
+"features.ml" 39 1477 1508 "features.ml" 39 1477 1529
+call(
+  stack
+)
+type(
+  int list -> Cnf.term -> int list
+)
+"features.ml" 39 1477 1531 "features.ml" 39 1477 1535
+type(
+  int
+)
+ident(
+  int_ref last "features.ml" 37 1383 1409 "features.ml" 37 1383 1413
+)
+"features.ml" 39 1477 1536 "features.ml" 39 1477 1537
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"features.ml" 39 1477 1538 "features.ml" 39 1477 1539
+type(
+  int
+)
+ident(
+  int_ref f "features.ml" 39 1477 1484 "features.ml" 39 1477 1485
+)
+"features.ml" 39 1477 1531 "features.ml" 39 1477 1539
+type(
+  int
+)
+"features.ml" 39 1477 1543 "features.ml" 39 1477 1544
+type(
+  int
+)
+ident(
+  int_ref f "features.ml" 39 1477 1484 "features.ml" 39 1477 1485
+)
+"features.ml" 39 1477 1548 "features.ml" 39 1477 1550
+type(
+  int list
+)
+ident(
+  int_ref sf "features.ml" 37 1383 1414 "features.ml" 37 1383 1416
+)
+"features.ml" 39 1477 1543 "features.ml" 39 1477 1550
+type(
+  int list
+)
+"features.ml" 39 1477 1530 "features.ml" 39 1477 1551
+type(
+  int list
+)
+"features.ml" 39 1477 1552 "features.ml" 39 1477 1553
+type(
+  Cnf.term list
+)
+ident(
+  int_ref l "features.ml" 39 1477 1487 "features.ml" 39 1477 1488
+)
+"features.ml" 39 1477 1493 "features.ml" 39 1477 1553
+call(
+  tail
+)
+type(
+  int list
+)
+"features.ml" 37 1383 1419 "features.ml" 39 1477 1553
+type(
+  Cnf.term -> int list
+)
+"features.ml" 40 1556 1560 "features.ml" 40 1556 1572
+type(
+  int list -> int * Cnf.term list -> int list
+)
+ident(
+  def bit_features "features.ml" 42 1637 1637 "features.ml" 1 0 -1
+)
+"features.ml" 40 1556 1573 "features.ml" 40 1556 1575
+type(
+  int list
+)
+ident(
+  def sf "features.ml" 40 1556 1576 "features.ml" 40 1556 1633
+)
+"features.ml" 40 1556 1577 "features.ml" 40 1556 1578
+type(
+  int
+)
+ident(
+  def n "features.ml" 40 1556 1585 "features.ml" 40 1556 1633
+)
+"features.ml" 40 1556 1580 "features.ml" 40 1556 1581
+type(
+  Cnf.term list
+)
+ident(
+  def l "features.ml" 40 1556 1585 "features.ml" 40 1556 1633
+)
+"features.ml" 40 1556 1576 "features.ml" 40 1556 1582
+type(
+  int * Cnf.term list
+)
+"features.ml" 40 1556 1585 "features.ml" 40 1556 1599
+type(
+  (int list -> Cnf.term -> int list) -> int list -> Cnf.term list -> int list
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 40 1556 1601 "features.ml" 40 1556 1618
+type(
+  int -> int list -> Cnf.term -> int list
+)
+ident(
+  int_ref bit_features_cont "features.ml" 37 1383 1391 "features.ml" 37 1383 1408
+)
+"features.ml" 40 1556 1619 "features.ml" 40 1556 1620
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 40 1556 1577 "features.ml" 40 1556 1578
+)
+"features.ml" 40 1556 1600 "features.ml" 40 1556 1621
+call(
+  stack
+)
+type(
+  int list -> Cnf.term -> int list
+)
+"features.ml" 40 1556 1623 "features.ml" 40 1556 1624
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 40 1556 1577 "features.ml" 40 1556 1578
+)
+"features.ml" 40 1556 1628 "features.ml" 40 1556 1630
+type(
+  int list
+)
+ident(
+  int_ref sf "features.ml" 40 1556 1573 "features.ml" 40 1556 1575
+)
+"features.ml" 40 1556 1622 "features.ml" 40 1556 1631
+type(
+  int list
+)
+"features.ml" 40 1556 1632 "features.ml" 40 1556 1633
+type(
+  Cnf.term list
+)
+ident(
+  int_ref l "features.ml" 40 1556 1580 "features.ml" 40 1556 1581
+)
+"features.ml" 40 1556 1585 "features.ml" 40 1556 1633
+call(
+  tail
+)
+type(
+  int list
+)
+"features.ml" 42 1637 1641 "features.ml" 42 1637 1648
+type(
+  int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  def imincr1 "features.ml" 48 1783 1783 "features.ml" 1 0 -1
+)
+"features.ml" 42 1637 1649 "features.ml" 42 1637 1652
+type(
+  int
+)
+ident(
+  def key "features.ml" 42 1637 1653 "features.ml" 46 1744 1779
+)
+"features.ml" 42 1637 1653 "features.ml" 42 1637 1655
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf "features.ml" 43 1658 1660 "features.ml" 46 1744 1779
+)
+"features.ml" 43 1658 1664 "features.ml" 43 1658 1667
+type(
+  int
+)
+ident(
+  def key "features.ml" 44 1682 1684 "features.ml" 46 1744 1779
+)
+"features.ml" 43 1658 1670 "features.ml" 43 1658 1674
+type(
+  int -> int
+)
+ident(
+  int_ref fmod "features.ml" 33 1161 1165 "features.ml" 33 1161 1169
+)
+"features.ml" 43 1658 1675 "features.ml" 43 1658 1678
+type(
+  int
+)
+ident(
+  int_ref key "features.ml" 42 1637 1649 "features.ml" 42 1637 1652
+)
+"features.ml" 43 1658 1670 "features.ml" 43 1658 1678
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 44 1682 1692 "features.ml" 44 1682 1694
+type(
+  int
+)
+ident(
+  def ov "features.ml" 45 1715 1721 "features.ml" 45 1715 1743
+)
+"features.ml" 44 1682 1697 "features.ml" 44 1682 1704
+type(
+  Cnf.Im.key -> int Cnf.Im.t -> int
+)
+ident(
+  ext_ref Cnf.Im.find
+)
+"features.ml" 44 1682 1705 "features.ml" 44 1682 1708
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key "features.ml" 43 1658 1664 "features.ml" 43 1658 1667
+)
+"features.ml" 44 1682 1709 "features.ml" 44 1682 1711
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 42 1637 1653 "features.ml" 42 1637 1655
+)
+"features.ml" 44 1682 1697 "features.ml" 44 1682 1711
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 45 1715 1721 "features.ml" 45 1715 1727
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 45 1715 1728 "features.ml" 45 1715 1731
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key "features.ml" 43 1658 1664 "features.ml" 43 1658 1667
+)
+"features.ml" 45 1715 1733 "features.ml" 45 1715 1735
+type(
+  int
+)
+ident(
+  int_ref ov "features.ml" 44 1682 1692 "features.ml" 44 1682 1694
+)
+"features.ml" 45 1715 1736 "features.ml" 45 1715 1737
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 45 1715 1738 "features.ml" 45 1715 1739
+type(
+  int
+)
+"features.ml" 45 1715 1732 "features.ml" 45 1715 1740
+type(
+  int
+)
+"features.ml" 45 1715 1741 "features.ml" 45 1715 1743
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 42 1637 1653 "features.ml" 42 1637 1655
+)
+"features.ml" 45 1715 1721 "features.ml" 45 1715 1743
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 44 1682 1688 "features.ml" 45 1715 1743
+type(
+  int Cnf.Im.t
+)
+"features.ml" 46 1744 1751 "features.ml" 46 1744 1760
+type(
+  exn
+)
+"features.ml" 46 1744 1764 "features.ml" 46 1744 1770
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 46 1744 1771 "features.ml" 46 1744 1774
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key "features.ml" 43 1658 1664 "features.ml" 43 1658 1667
+)
+"features.ml" 46 1744 1775 "features.ml" 46 1744 1776
+type(
+  int
+)
+"features.ml" 46 1744 1777 "features.ml" 46 1744 1779
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 42 1637 1653 "features.ml" 42 1637 1655
+)
+"features.ml" 46 1744 1764 "features.ml" 46 1744 1779
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 44 1682 1684 "features.ml" 46 1744 1779
+type(
+  int Cnf.Im.t
+)
+"features.ml" 43 1658 1660 "features.ml" 46 1744 1779
+type(
+  int Cnf.Im.t
+)
+"features.ml" 48 1783 1787 "features.ml" 48 1783 1792
+type(
+  int -> int -> int
+)
+ident(
+  def fmodi "features.ml" 51 1872 1872 "features.ml" 1 0 -1
+)
+"features.ml" 48 1783 1793 "features.ml" 48 1783 1794
+type(
+  int
+)
+ident(
+  def n "features.ml" 48 1783 1795 "features.ml" 48 1783 1848
+)
+"features.ml" 48 1783 1795 "features.ml" 48 1783 1796
+type(
+  int
+)
+ident(
+  def i "features.ml" 48 1783 1799 "features.ml" 48 1783 1848
+)
+"features.ml" 48 1783 1799 "features.ml" 48 1783 1800
+type(
+  int
+)
+"features.ml" 48 1783 1801 "features.ml" 48 1783 1802
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 48 1783 1807 "features.ml" 48 1783 1808
+type(
+  int
+)
+ident(
+  def r "features.ml" 48 1783 1822 "features.ml" 48 1783 1848
+)
+"features.ml" 48 1783 1811 "features.ml" 48 1783 1812
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 48 1783 1793 "features.ml" 48 1783 1794
+)
+"features.ml" 48 1783 1813 "features.ml" 48 1783 1816
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( mod )
+)
+"features.ml" 48 1783 1817 "features.ml" 48 1783 1818
+type(
+  int
+)
+ident(
+  int_ref i "features.ml" 48 1783 1795 "features.ml" 48 1783 1796
+)
+"features.ml" 48 1783 1811 "features.ml" 48 1783 1818
+type(
+  int
+)
+"features.ml" 48 1783 1825 "features.ml" 48 1783 1826
+type(
+  int
+)
+ident(
+  int_ref r "features.ml" 48 1783 1807 "features.ml" 48 1783 1808
+)
+"features.ml" 48 1783 1827 "features.ml" 48 1783 1828
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"features.ml" 48 1783 1829 "features.ml" 48 1783 1830
+type(
+  int
+)
+"features.ml" 48 1783 1825 "features.ml" 48 1783 1830
+type(
+  bool
+)
+"features.ml" 48 1783 1836 "features.ml" 48 1783 1837
+type(
+  int
+)
+ident(
+  int_ref r "features.ml" 48 1783 1807 "features.ml" 48 1783 1808
+)
+"features.ml" 48 1783 1838 "features.ml" 48 1783 1839
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 48 1783 1840 "features.ml" 48 1783 1841
+type(
+  int
+)
+ident(
+  int_ref i "features.ml" 48 1783 1795 "features.ml" 48 1783 1796
+)
+"features.ml" 48 1783 1836 "features.ml" 48 1783 1841
+type(
+  int
+)
+"features.ml" 48 1783 1847 "features.ml" 48 1783 1848
+type(
+  int
+)
+ident(
+  int_ref r "features.ml" 48 1783 1807 "features.ml" 48 1783 1808
+)
+"features.ml" 48 1783 1822 "features.ml" 48 1783 1848
+type(
+  int
+)
+"features.ml" 48 1783 1803 "features.ml" 48 1783 1848
+type(
+  int
+)
+"features.ml" 48 1783 1799 "features.ml" 48 1783 1848
+type(
+  int
+)
+"features.ml" 51 1872 1876 "features.ml" 51 1872 1883
+type(
+  int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  def imincr2 "features.ml" 60 2216 2216 "features.ml" 1 0 -1
+)
+"features.ml" 51 1872 1884 "features.ml" 51 1872 1887
+type(
+  int
+)
+ident(
+  def key "features.ml" 51 1872 1888 "features.ml" 58 2207 2212
+)
+"features.ml" 51 1872 1888 "features.ml" 51 1872 1890
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf "features.ml" 52 1893 1895 "features.ml" 58 2207 2212
+)
+"features.ml" 52 1893 1899 "features.ml" 52 1893 1903
+type(
+  int
+)
+ident(
+  def key1 "features.ml" 53 1926 1928 "features.ml" 58 2207 2212
+)
+"features.ml" 52 1893 1906 "features.ml" 52 1893 1911
+type(
+  int -> int -> int
+)
+ident(
+  int_ref fmodi "features.ml" 48 1783 1787 "features.ml" 48 1783 1792
+)
+"features.ml" 52 1893 1912 "features.ml" 52 1893 1915
+type(
+  int
+)
+ident(
+  int_ref key "features.ml" 51 1872 1884 "features.ml" 51 1872 1887
+)
+"features.ml" 52 1893 1916 "features.ml" 52 1893 1922
+type(
+  int
+)
+"features.ml" 52 1893 1906 "features.ml" 52 1893 1922
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 53 1926 1932 "features.ml" 53 1926 1936
+type(
+  int
+)
+ident(
+  def key2 "features.ml" 54 1968 1970 "features.ml" 58 2207 2212
+)
+"features.ml" 53 1926 1939 "features.ml" 53 1926 1944
+type(
+  int -> int -> int
+)
+ident(
+  int_ref fmodi "features.ml" 48 1783 1787 "features.ml" 48 1783 1792
+)
+"features.ml" 53 1926 1945 "features.ml" 53 1926 1948
+type(
+  int
+)
+ident(
+  int_ref key "features.ml" 51 1872 1884 "features.ml" 51 1872 1887
+)
+"features.ml" 53 1926 1949 "features.ml" 53 1926 1955
+type(
+  int
+)
+"features.ml" 53 1926 1939 "features.ml" 53 1926 1955
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 53 1926 1956 "features.ml" 53 1926 1957
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 53 1926 1958 "features.ml" 53 1926 1964
+type(
+  int
+)
+"features.ml" 53 1926 1939 "features.ml" 53 1926 1964
+type(
+  int
+)
+"features.ml" 54 1968 1974 "features.ml" 54 1968 1977
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf1 "features.ml" 56 2086 2088 "features.ml" 58 2207 2212
+)
+"features.ml" 54 1968 1988 "features.ml" 54 1968 1990
+type(
+  int
+)
+ident(
+  def ov "features.ml" 54 1968 2012 "features.ml" 54 1968 2035
+)
+"features.ml" 54 1968 1993 "features.ml" 54 1968 2000
+type(
+  Cnf.Im.key -> int Cnf.Im.t -> int
+)
+ident(
+  ext_ref Cnf.Im.find
+)
+"features.ml" 54 1968 2001 "features.ml" 54 1968 2005
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key1 "features.ml" 52 1893 1899 "features.ml" 52 1893 1903
+)
+"features.ml" 54 1968 2006 "features.ml" 54 1968 2008
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 51 1872 1888 "features.ml" 51 1872 1890
+)
+"features.ml" 54 1968 1993 "features.ml" 54 1968 2008
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 54 1968 2012 "features.ml" 54 1968 2018
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 54 1968 2019 "features.ml" 54 1968 2023
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key1 "features.ml" 52 1893 1899 "features.ml" 52 1893 1903
+)
+"features.ml" 54 1968 2025 "features.ml" 54 1968 2027
+type(
+  int
+)
+ident(
+  int_ref ov "features.ml" 54 1968 1988 "features.ml" 54 1968 1990
+)
+"features.ml" 54 1968 2028 "features.ml" 54 1968 2029
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 54 1968 2030 "features.ml" 54 1968 2031
+type(
+  int
+)
+"features.ml" 54 1968 2024 "features.ml" 54 1968 2032
+type(
+  int
+)
+"features.ml" 54 1968 2033 "features.ml" 54 1968 2035
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 51 1872 1888 "features.ml" 51 1872 1890
+)
+"features.ml" 54 1968 2012 "features.ml" 54 1968 2035
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 54 1968 1984 "features.ml" 54 1968 2035
+type(
+  int Cnf.Im.t
+)
+"features.ml" 55 2036 2053 "features.ml" 55 2036 2062
+type(
+  exn
+)
+"features.ml" 55 2036 2066 "features.ml" 55 2036 2072
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 55 2036 2073 "features.ml" 55 2036 2077
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key1 "features.ml" 52 1893 1899 "features.ml" 52 1893 1903
+)
+"features.ml" 55 2036 2078 "features.ml" 55 2036 2079
+type(
+  int
+)
+"features.ml" 55 2036 2080 "features.ml" 55 2036 2082
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 51 1872 1888 "features.ml" 51 1872 1890
+)
+"features.ml" 55 2036 2066 "features.ml" 55 2036 2082
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 54 1968 1980 "features.ml" 55 2036 2082
+type(
+  int Cnf.Im.t
+)
+"features.ml" 56 2086 2092 "features.ml" 56 2086 2095
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf2 "features.ml" 58 2207 2209 "features.ml" 58 2207 2212
+)
+"features.ml" 56 2086 2106 "features.ml" 56 2086 2108
+type(
+  int
+)
+ident(
+  def ov "features.ml" 56 2086 2131 "features.ml" 56 2086 2155
+)
+"features.ml" 56 2086 2111 "features.ml" 56 2086 2118
+type(
+  Cnf.Im.key -> int Cnf.Im.t -> int
+)
+ident(
+  ext_ref Cnf.Im.find
+)
+"features.ml" 56 2086 2119 "features.ml" 56 2086 2123
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key2 "features.ml" 53 1926 1932 "features.ml" 53 1926 1936
+)
+"features.ml" 56 2086 2124 "features.ml" 56 2086 2127
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf1 "features.ml" 54 1968 1974 "features.ml" 54 1968 1977
+)
+"features.ml" 56 2086 2111 "features.ml" 56 2086 2127
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 56 2086 2131 "features.ml" 56 2086 2137
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 56 2086 2138 "features.ml" 56 2086 2142
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key2 "features.ml" 53 1926 1932 "features.ml" 53 1926 1936
+)
+"features.ml" 56 2086 2144 "features.ml" 56 2086 2146
+type(
+  int
+)
+ident(
+  int_ref ov "features.ml" 56 2086 2106 "features.ml" 56 2086 2108
+)
+"features.ml" 56 2086 2147 "features.ml" 56 2086 2148
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 56 2086 2149 "features.ml" 56 2086 2150
+type(
+  int
+)
+"features.ml" 56 2086 2143 "features.ml" 56 2086 2151
+type(
+  int
+)
+"features.ml" 56 2086 2152 "features.ml" 56 2086 2155
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf1 "features.ml" 54 1968 1974 "features.ml" 54 1968 1977
+)
+"features.ml" 56 2086 2131 "features.ml" 56 2086 2155
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 56 2086 2102 "features.ml" 56 2086 2155
+type(
+  int Cnf.Im.t
+)
+"features.ml" 57 2156 2173 "features.ml" 57 2156 2182
+type(
+  exn
+)
+"features.ml" 57 2156 2186 "features.ml" 57 2156 2192
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 57 2156 2193 "features.ml" 57 2156 2197
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key2 "features.ml" 53 1926 1932 "features.ml" 53 1926 1936
+)
+"features.ml" 57 2156 2198 "features.ml" 57 2156 2199
+type(
+  int
+)
+"features.ml" 57 2156 2200 "features.ml" 57 2156 2203
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf1 "features.ml" 54 1968 1974 "features.ml" 54 1968 1977
+)
+"features.ml" 57 2156 2186 "features.ml" 57 2156 2203
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 56 2086 2098 "features.ml" 57 2156 2203
+type(
+  int Cnf.Im.t
+)
+"features.ml" 58 2207 2209 "features.ml" 58 2207 2212
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf2 "features.ml" 56 2086 2092 "features.ml" 56 2086 2095
+)
+"features.ml" 56 2086 2088 "features.ml" 58 2207 2212
+type(
+  int Cnf.Im.t
+)
+"features.ml" 54 1968 1970 "features.ml" 58 2207 2212
+type(
+  int Cnf.Im.t
+)
+"features.ml" 53 1926 1928 "features.ml" 58 2207 2212
+type(
+  int Cnf.Im.t
+)
+"features.ml" 52 1893 1895 "features.ml" 58 2207 2212
+type(
+  int Cnf.Im.t
+)
+"features.ml" 60 2216 2220 "features.ml" 60 2216 2227
+type(
+  int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  def imincr3 "features.ml" 69 2545 2545 "features.ml" 1 0 -1
+)
+"features.ml" 60 2216 2228 "features.ml" 60 2216 2231
+type(
+  int
+)
+ident(
+  def key "features.ml" 60 2216 2232 "features.ml" 67 2536 2541
+)
+"features.ml" 60 2216 2232 "features.ml" 60 2216 2234
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf "features.ml" 61 2237 2239 "features.ml" 67 2536 2541
+)
+"features.ml" 61 2237 2243 "features.ml" 61 2237 2247
+type(
+  int
+)
+ident(
+  def key1 "features.ml" 62 2262 2264 "features.ml" 67 2536 2541
+)
+"features.ml" 61 2237 2250 "features.ml" 61 2237 2254
+type(
+  int -> int
+)
+ident(
+  int_ref fmod "features.ml" 33 1161 1165 "features.ml" 33 1161 1169
+)
+"features.ml" 61 2237 2255 "features.ml" 61 2237 2258
+type(
+  int
+)
+ident(
+  int_ref key "features.ml" 60 2216 2228 "features.ml" 60 2216 2231
+)
+"features.ml" 61 2237 2250 "features.ml" 61 2237 2258
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 62 2262 2268 "features.ml" 62 2262 2272
+type(
+  int
+)
+ident(
+  def key2 "features.ml" 63 2297 2299 "features.ml" 67 2536 2541
+)
+"features.ml" 62 2262 2275 "features.ml" 62 2262 2279
+type(
+  int -> int
+)
+ident(
+  int_ref fmod "features.ml" 33 1161 1165 "features.ml" 33 1161 1169
+)
+"features.ml" 62 2262 2281 "features.ml" 62 2262 2284
+type(
+  int
+)
+ident(
+  int_ref key "features.ml" 60 2216 2228 "features.ml" 60 2216 2231
+)
+"features.ml" 62 2262 2285 "features.ml" 62 2262 2286
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"features.ml" 62 2262 2287 "features.ml" 62 2262 2292
+type(
+  int
+)
+"features.ml" 62 2262 2280 "features.ml" 62 2262 2293
+type(
+  int
+)
+"features.ml" 62 2262 2275 "features.ml" 62 2262 2293
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 63 2297 2303 "features.ml" 63 2297 2306
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf1 "features.ml" 65 2415 2417 "features.ml" 67 2536 2541
+)
+"features.ml" 63 2297 2317 "features.ml" 63 2297 2319
+type(
+  int
+)
+ident(
+  def ov "features.ml" 63 2297 2341 "features.ml" 63 2297 2364
+)
+"features.ml" 63 2297 2322 "features.ml" 63 2297 2329
+type(
+  Cnf.Im.key -> int Cnf.Im.t -> int
+)
+ident(
+  ext_ref Cnf.Im.find
+)
+"features.ml" 63 2297 2330 "features.ml" 63 2297 2334
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key1 "features.ml" 61 2237 2243 "features.ml" 61 2237 2247
+)
+"features.ml" 63 2297 2335 "features.ml" 63 2297 2337
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 60 2216 2232 "features.ml" 60 2216 2234
+)
+"features.ml" 63 2297 2322 "features.ml" 63 2297 2337
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 63 2297 2341 "features.ml" 63 2297 2347
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 63 2297 2348 "features.ml" 63 2297 2352
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key1 "features.ml" 61 2237 2243 "features.ml" 61 2237 2247
+)
+"features.ml" 63 2297 2354 "features.ml" 63 2297 2356
+type(
+  int
+)
+ident(
+  int_ref ov "features.ml" 63 2297 2317 "features.ml" 63 2297 2319
+)
+"features.ml" 63 2297 2357 "features.ml" 63 2297 2358
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 63 2297 2359 "features.ml" 63 2297 2360
+type(
+  int
+)
+"features.ml" 63 2297 2353 "features.ml" 63 2297 2361
+type(
+  int
+)
+"features.ml" 63 2297 2362 "features.ml" 63 2297 2364
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 60 2216 2232 "features.ml" 60 2216 2234
+)
+"features.ml" 63 2297 2341 "features.ml" 63 2297 2364
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 63 2297 2313 "features.ml" 63 2297 2364
+type(
+  int Cnf.Im.t
+)
+"features.ml" 64 2365 2382 "features.ml" 64 2365 2391
+type(
+  exn
+)
+"features.ml" 64 2365 2395 "features.ml" 64 2365 2401
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 64 2365 2402 "features.ml" 64 2365 2406
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key1 "features.ml" 61 2237 2243 "features.ml" 61 2237 2247
+)
+"features.ml" 64 2365 2407 "features.ml" 64 2365 2408
+type(
+  int
+)
+"features.ml" 64 2365 2409 "features.ml" 64 2365 2411
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 60 2216 2232 "features.ml" 60 2216 2234
+)
+"features.ml" 64 2365 2395 "features.ml" 64 2365 2411
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 63 2297 2309 "features.ml" 64 2365 2411
+type(
+  int Cnf.Im.t
+)
+"features.ml" 65 2415 2421 "features.ml" 65 2415 2424
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf2 "features.ml" 67 2536 2538 "features.ml" 67 2536 2541
+)
+"features.ml" 65 2415 2435 "features.ml" 65 2415 2437
+type(
+  int
+)
+ident(
+  def ov "features.ml" 65 2415 2460 "features.ml" 65 2415 2484
+)
+"features.ml" 65 2415 2440 "features.ml" 65 2415 2447
+type(
+  Cnf.Im.key -> int Cnf.Im.t -> int
+)
+ident(
+  ext_ref Cnf.Im.find
+)
+"features.ml" 65 2415 2448 "features.ml" 65 2415 2452
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key2 "features.ml" 62 2262 2268 "features.ml" 62 2262 2272
+)
+"features.ml" 65 2415 2453 "features.ml" 65 2415 2456
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf1 "features.ml" 63 2297 2303 "features.ml" 63 2297 2306
+)
+"features.ml" 65 2415 2440 "features.ml" 65 2415 2456
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 65 2415 2460 "features.ml" 65 2415 2466
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 65 2415 2467 "features.ml" 65 2415 2471
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key2 "features.ml" 62 2262 2268 "features.ml" 62 2262 2272
+)
+"features.ml" 65 2415 2473 "features.ml" 65 2415 2475
+type(
+  int
+)
+ident(
+  int_ref ov "features.ml" 65 2415 2435 "features.ml" 65 2415 2437
+)
+"features.ml" 65 2415 2476 "features.ml" 65 2415 2477
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 65 2415 2478 "features.ml" 65 2415 2479
+type(
+  int
+)
+"features.ml" 65 2415 2472 "features.ml" 65 2415 2480
+type(
+  int
+)
+"features.ml" 65 2415 2481 "features.ml" 65 2415 2484
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf1 "features.ml" 63 2297 2303 "features.ml" 63 2297 2306
+)
+"features.ml" 65 2415 2460 "features.ml" 65 2415 2484
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 65 2415 2431 "features.ml" 65 2415 2484
+type(
+  int Cnf.Im.t
+)
+"features.ml" 66 2485 2502 "features.ml" 66 2485 2511
+type(
+  exn
+)
+"features.ml" 66 2485 2515 "features.ml" 66 2485 2521
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 66 2485 2522 "features.ml" 66 2485 2526
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref key2 "features.ml" 62 2262 2268 "features.ml" 62 2262 2272
+)
+"features.ml" 66 2485 2527 "features.ml" 66 2485 2528
+type(
+  int
+)
+"features.ml" 66 2485 2529 "features.ml" 66 2485 2532
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf1 "features.ml" 63 2297 2303 "features.ml" 63 2297 2306
+)
+"features.ml" 66 2485 2515 "features.ml" 66 2485 2532
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 65 2415 2427 "features.ml" 66 2485 2532
+type(
+  int Cnf.Im.t
+)
+"features.ml" 67 2536 2538 "features.ml" 67 2536 2541
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf2 "features.ml" 65 2415 2421 "features.ml" 65 2415 2424
+)
+"features.ml" 65 2415 2417 "features.ml" 67 2536 2541
+type(
+  int Cnf.Im.t
+)
+"features.ml" 63 2297 2299 "features.ml" 67 2536 2541
+type(
+  int Cnf.Im.t
+)
+"features.ml" 62 2262 2264 "features.ml" 67 2536 2541
+type(
+  int Cnf.Im.t
+)
+"features.ml" 61 2237 2239 "features.ml" 67 2536 2541
+type(
+  int Cnf.Im.t
+)
+"features.ml" 69 2545 2549 "features.ml" 69 2545 2555
+type(
+  int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  def imincr "features.ml" 71 2569 2569 "features.ml" 1 0 -1
+)
+"features.ml" 69 2545 2558 "features.ml" 69 2545 2565
+type(
+  int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  int_ref imincr1 "features.ml" 42 1637 1641 "features.ml" 42 1637 1648
+)
+"features.ml" 71 2569 2573 "features.ml" 71 2569 2578
+type(
+  int -> int
+)
+ident(
+  def simpf "features.ml" 109 4062 4062 "features.ml" 1 0 -1
+)
+"features.ml" 71 2569 2579 "features.ml" 71 2569 2580
+type(
+  int
+)
+ident(
+  def i "features.ml" 72 2583 2585 "features.ml" 75 2724 2756
+)
+"features.ml" 72 2583 2588 "features.ml" 72 2583 2591
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"features.ml" 72 2583 2592 "features.ml" 72 2583 2593
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"features.ml" 72 2583 2593 "features.ml" 72 2583 2605
+type(
+  bool ref
+)
+ident(
+  int_ref unifyskolems "features.ml" 5 40 44 "features.ml" 5 40 56
+)
+"features.ml" 72 2583 2592 "features.ml" 72 2583 2605
+type(
+  bool
+)
+"features.ml" 72 2583 2588 "features.ml" 72 2583 2605
+type(
+  bool
+)
+"features.ml" 72 2583 2611 "features.ml" 72 2583 2612
+type(
+  int
+)
+ident(
+  int_ref i "features.ml" 71 2569 2579 "features.ml" 71 2569 2580
+)
+"features.ml" 73 2618 2624 "features.ml" 73 2618 2625
+type(
+  string
+)
+ident(
+  def s "features.ml" 74 2654 2656 "features.ml" 75 2724 2756
+)
+"features.ml" 73 2618 2628 "features.ml" 73 2618 2640
+type(
+  (int, string) Hashtbl.t -> int -> string
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"features.ml" 73 2618 2641 "features.ml" 73 2618 2648
+type(
+  (int, string) Hashtbl.t
+)
+ident(
+  ext_ref Cnf.no_cnst
+)
+"features.ml" 73 2618 2649 "features.ml" 73 2618 2650
+type(
+  int
+)
+ident(
+  int_ref i "features.ml" 71 2569 2579 "features.ml" 71 2569 2580
+)
+"features.ml" 73 2618 2628 "features.ml" 73 2618 2650
+call(
+  stack
+)
+type(
+  string
+)
+"features.ml" 74 2654 2659 "features.ml" 74 2654 2672
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"features.ml" 74 2654 2673 "features.ml" 74 2654 2674
+type(
+  string
+)
+ident(
+  int_ref s "features.ml" 73 2618 2624 "features.ml" 73 2618 2625
+)
+"features.ml" 74 2654 2659 "features.ml" 74 2654 2674
+type(
+  int
+)
+"features.ml" 74 2654 2675 "features.ml" 74 2654 2676
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"features.ml" 74 2654 2677 "features.ml" 74 2654 2678
+type(
+  int
+)
+"features.ml" 74 2654 2659 "features.ml" 74 2654 2678
+type(
+  bool
+)
+"features.ml" 74 2654 2679 "features.ml" 74 2654 2681
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"features.ml" 74 2654 2682 "features.ml" 74 2654 2683
+type(
+  string
+)
+ident(
+  int_ref s "features.ml" 73 2618 2624 "features.ml" 73 2618 2625
+)
+"features.ml" 74 2654 2685 "features.ml" 74 2654 2686
+type(
+  int
+)
+"features.ml" 74 2654 2682 "features.ml" 74 2654 2687
+type(
+  char
+)
+"features.ml" 74 2654 2687 "features.ml" 74 2654 2688
+type(
+  char -> char -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"features.ml" 74 2654 2688 "features.ml" 74 2654 2692
+type(
+  char
+)
+"features.ml" 74 2654 2682 "features.ml" 74 2654 2692
+type(
+  bool
+)
+"features.ml" 74 2654 2693 "features.ml" 74 2654 2695
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"features.ml" 74 2654 2696 "features.ml" 74 2654 2697
+type(
+  string
+)
+ident(
+  int_ref s "features.ml" 73 2618 2624 "features.ml" 73 2618 2625
+)
+"features.ml" 74 2654 2699 "features.ml" 74 2654 2700
+type(
+  int
+)
+"features.ml" 74 2654 2696 "features.ml" 74 2654 2701
+type(
+  char
+)
+"features.ml" 74 2654 2701 "features.ml" 74 2654 2702
+type(
+  char -> char -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"features.ml" 74 2654 2702 "features.ml" 74 2654 2705
+type(
+  char
+)
+"features.ml" 74 2654 2696 "features.ml" 74 2654 2705
+type(
+  bool
+)
+"features.ml" 74 2654 2706 "features.ml" 74 2654 2708
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"features.ml" 74 2654 2709 "features.ml" 74 2654 2710
+type(
+  string
+)
+ident(
+  int_ref s "features.ml" 73 2618 2624 "features.ml" 73 2618 2625
+)
+"features.ml" 74 2654 2712 "features.ml" 74 2654 2713
+type(
+  int
+)
+"features.ml" 74 2654 2709 "features.ml" 74 2654 2714
+type(
+  char
+)
+"features.ml" 74 2654 2714 "features.ml" 74 2654 2715
+type(
+  char -> char -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"features.ml" 74 2654 2715 "features.ml" 74 2654 2718
+type(
+  char
+)
+"features.ml" 74 2654 2709 "features.ml" 74 2654 2718
+type(
+  bool
+)
+"features.ml" 74 2654 2696 "features.ml" 74 2654 2718
+type(
+  bool
+)
+"features.ml" 74 2654 2682 "features.ml" 74 2654 2718
+type(
+  bool
+)
+"features.ml" 74 2654 2659 "features.ml" 74 2654 2718
+type(
+  bool
+)
+"features.ml" 75 2724 2729 "features.ml" 75 2724 2744
+type(
+  int
+)
+ident(
+  int_ref features_modulo "features.ml" 32 1107 1111 "features.ml" 32 1107 1126
+)
+"features.ml" 75 2724 2745 "features.ml" 75 2724 2746
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( / )
+)
+"features.ml" 75 2724 2747 "features.ml" 75 2724 2748
+type(
+  int
+)
+"features.ml" 75 2724 2728 "features.ml" 75 2724 2749
+type(
+  int
+)
+"features.ml" 75 2724 2755 "features.ml" 75 2724 2756
+type(
+  int
+)
+ident(
+  int_ref i "features.ml" 71 2569 2579 "features.ml" 71 2569 2580
+)
+"features.ml" 74 2654 2656 "features.ml" 75 2724 2756
+type(
+  int
+)
+"features.ml" 73 2618 2620 "features.ml" 75 2724 2756
+type(
+  int
+)
+"features.ml" 72 2583 2585 "features.ml" 75 2724 2756
+type(
+  int
+)
+"features.ml" 109 4062 4066 "features.ml" 109 4062 4075
+type(
+  int
+)
+ident(
+  def fea_prime "features.ml" 111 4134 4134 "features.ml" 1 0 -1
+)
+"features.ml" 109 4062 4078 "features.ml" 109 4062 4082
+type(
+  int
+)
+"features.ml" 111 4134 4142 "features.ml" 111 4134 4151
+type(
+  int -> int -> int Cnf.Im.t -> int -> int list -> int Cnf.Im.t
+)
+ident(
+  def ubitn_add "features.ml" 111 4134 4134 "features.ml" 1 0 -1
+)
+"features.ml" 111 4134 4152 "features.ml" 111 4134 4159
+type(
+  int
+)
+ident(
+  def current "features.ml" 111 4134 4160 "features.ml" 115 4271 4359
+)
+"features.ml" 111 4134 4160 "features.ml" 111 4134 4165
+type(
+  int
+)
+ident(
+  def prime "features.ml" 111 4134 4166 "features.ml" 115 4271 4359
+)
+"features.ml" 111 4134 4166 "features.ml" 111 4134 4168
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf "features.ml" 111 4134 4169 "features.ml" 115 4271 4359
+)
+"features.ml" 111 4134 4169 "features.ml" 111 4134 4172
+type(
+  int
+)
+ident(
+  def len "features.ml" 111 4134 4175 "features.ml" 115 4271 4359
+)
+"features.ml" 112 4184 4188 "features.ml" 112 4184 4190
+type(
+  int list
+)
+"features.ml" 112 4184 4194 "features.ml" 112 4184 4200
+type(
+  int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  int_ref imincr "features.ml" 69 2545 2549 "features.ml" 69 2545 2555
+)
+"features.ml" 112 4184 4201 "features.ml" 112 4184 4208
+type(
+  int
+)
+ident(
+  int_ref current "features.ml" 111 4134 4152 "features.ml" 111 4134 4159
+)
+"features.ml" 112 4184 4209 "features.ml" 112 4184 4211
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 111 4134 4166 "features.ml" 111 4134 4168
+)
+"features.ml" 112 4184 4194 "features.ml" 112 4184 4211
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 113 4212 4216 "features.ml" 113 4212 4217
+type(
+  int
+)
+ident(
+  def h "features.ml" 114 4226 4231 "features.ml" 115 4271 4359
+)
+"features.ml" 113 4212 4221 "features.ml" 113 4212 4222
+type(
+  int list
+)
+ident(
+  def t "features.ml" 114 4226 4231 "features.ml" 115 4271 4359
+)
+"features.ml" 113 4212 4216 "features.ml" 113 4212 4222
+type(
+  int list
+)
+"features.ml" 114 4226 4234 "features.ml" 114 4226 4237
+type(
+  int
+)
+ident(
+  int_ref len "features.ml" 111 4134 4169 "features.ml" 111 4134 4172
+)
+"features.ml" 114 4226 4238 "features.ml" 114 4226 4240
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <= )
+)
+"features.ml" 114 4226 4241 "features.ml" 114 4226 4242
+type(
+  int
+)
+"features.ml" 114 4226 4234 "features.ml" 114 4226 4242
+type(
+  bool
+)
+"features.ml" 114 4226 4248 "features.ml" 114 4226 4254
+type(
+  int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  int_ref imincr "features.ml" 69 2545 2549 "features.ml" 69 2545 2555
+)
+"features.ml" 114 4226 4255 "features.ml" 114 4226 4262
+type(
+  int
+)
+ident(
+  int_ref current "features.ml" 111 4134 4152 "features.ml" 111 4134 4159
+)
+"features.ml" 114 4226 4263 "features.ml" 114 4226 4265
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 111 4134 4166 "features.ml" 111 4134 4168
+)
+"features.ml" 114 4226 4248 "features.ml" 114 4226 4265
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 115 4271 4276 "features.ml" 115 4271 4285
+type(
+  int -> int -> int Cnf.Im.t -> int -> int list -> int Cnf.Im.t
+)
+ident(
+  int_ref ubitn_add "features.ml" 111 4134 4142 "features.ml" 111 4134 4151
+)
+"features.ml" 115 4271 4287 "features.ml" 115 4271 4294
+type(
+  int
+)
+ident(
+  int_ref current "features.ml" 111 4134 4152 "features.ml" 111 4134 4159
+)
+"features.ml" 115 4271 4295 "features.ml" 115 4271 4296
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"features.ml" 115 4271 4297 "features.ml" 115 4271 4302
+type(
+  int
+)
+ident(
+  int_ref prime "features.ml" 111 4134 4160 "features.ml" 111 4134 4165
+)
+"features.ml" 115 4271 4287 "features.ml" 115 4271 4302
+type(
+  int
+)
+"features.ml" 115 4271 4303 "features.ml" 115 4271 4304
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 115 4271 4305 "features.ml" 115 4271 4306
+type(
+  int
+)
+ident(
+  int_ref h "features.ml" 113 4212 4216 "features.ml" 113 4212 4217
+)
+"features.ml" 115 4271 4286 "features.ml" 115 4271 4307
+type(
+  int
+)
+"features.ml" 115 4271 4309 "features.ml" 115 4271 4314
+type(
+  int
+)
+ident(
+  int_ref prime "features.ml" 111 4134 4160 "features.ml" 111 4134 4165
+)
+"features.ml" 115 4271 4315 "features.ml" 115 4271 4316
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"features.ml" 115 4271 4317 "features.ml" 115 4271 4326
+type(
+  int
+)
+ident(
+  int_ref fea_prime "features.ml" 109 4062 4066 "features.ml" 109 4062 4075
+)
+"features.ml" 115 4271 4308 "features.ml" 115 4271 4327
+type(
+  int
+)
+"features.ml" 115 4271 4329 "features.ml" 115 4271 4335
+type(
+  int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  int_ref imincr "features.ml" 69 2545 2549 "features.ml" 69 2545 2555
+)
+"features.ml" 115 4271 4336 "features.ml" 115 4271 4343
+type(
+  int
+)
+ident(
+  int_ref current "features.ml" 111 4134 4152 "features.ml" 111 4134 4159
+)
+"features.ml" 115 4271 4344 "features.ml" 115 4271 4346
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 111 4134 4166 "features.ml" 111 4134 4168
+)
+"features.ml" 115 4271 4328 "features.ml" 115 4271 4347
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 115 4271 4349 "features.ml" 115 4271 4352
+type(
+  int
+)
+ident(
+  int_ref len "features.ml" 111 4134 4169 "features.ml" 111 4134 4172
+)
+"features.ml" 115 4271 4353 "features.ml" 115 4271 4354
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"features.ml" 115 4271 4355 "features.ml" 115 4271 4356
+type(
+  int
+)
+"features.ml" 115 4271 4348 "features.ml" 115 4271 4357
+type(
+  int
+)
+"features.ml" 115 4271 4358 "features.ml" 115 4271 4359
+type(
+  int list
+)
+ident(
+  int_ref t "features.ml" 113 4212 4221 "features.ml" 113 4212 4222
+)
+"features.ml" 115 4271 4276 "features.ml" 115 4271 4359
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 114 4226 4231 "features.ml" 115 4271 4359
+type(
+  int Cnf.Im.t
+)
+"features.ml" 111 4134 4175 "features.ml" 115 4271 4359
+type(
+  int list -> int Cnf.Im.t
+)
+"features.ml" 116 4362 4370 "features.ml" 116 4362 4380
+type(
+  Cnf.term Cnf.Im.t -> int list -> int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t
+)
+ident(
+  def ubitn_cont "features.ml" 116 4362 4362 "features.ml" 1 0 -1
+)
+"features.ml" 116 4362 4381 "features.ml" 116 4362 4382
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  def s "features.ml" 116 4362 4383 "features.ml" 123 4629 4724
+)
+"features.ml" 116 4362 4383 "features.ml" 116 4362 4388
+type(
+  int list
+)
+ident(
+  def lasts "features.ml" 116 4362 4389 "features.ml" 123 4629 4724
+)
+"features.ml" 116 4362 4389 "features.ml" 116 4362 4391
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf "features.ml" 116 4362 4394 "features.ml" 123 4629 4724
+)
+"features.ml" 117 4403 4409 "features.ml" 117 4403 4410
+type(
+  int
+)
+ident(
+  def n "features.ml" 118 4414 4419 "features.ml" 120 4547 4588
+)
+"features.ml" 117 4403 4407 "features.ml" 117 4403 4410
+type(
+  Cnf.term
+)
+"features.ml" 118 4414 4429 "features.ml" 118 4414 4430
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"features.ml" 118 4414 4430 "features.ml" 118 4414 4444
+type(
+  bool ref
+)
+ident(
+  int_ref fea_undersubst "features.ml" 9 176 180 "features.ml" 9 176 194
+)
+"features.ml" 118 4414 4429 "features.ml" 118 4414 4444
+type(
+  bool
+)
+"features.ml" 118 4414 4450 "features.ml" 118 4414 4459
+type(
+  Cnf.term Cnf.Im.t -> Cnf.Im.key -> Cnf.term option
+)
+ident(
+  ext_ref Cnf.subst_get
+)
+"features.ml" 118 4414 4460 "features.ml" 118 4414 4461
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  int_ref s "features.ml" 116 4362 4381 "features.ml" 116 4362 4382
+)
+"features.ml" 118 4414 4462 "features.ml" 118 4414 4463
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref n "features.ml" 117 4403 4409 "features.ml" 117 4403 4410
+)
+"features.ml" 118 4414 4450 "features.ml" 118 4414 4463
+call(
+  stack
+)
+type(
+  Cnf.term option
+)
+"features.ml" 118 4414 4469 "features.ml" 118 4414 4473
+type(
+  Cnf.term option
+)
+"features.ml" 118 4414 4426 "features.ml" 118 4414 4473
+type(
+  Cnf.term option
+)
+"features.ml" 119 4479 4486 "features.ml" 119 4479 4490
+type(
+  Cnf.term option
+)
+"features.ml" 119 4479 4494 "features.ml" 119 4479 4503
+type(
+  int -> int -> int Cnf.Im.t -> int -> int list -> int Cnf.Im.t
+)
+ident(
+  int_ref ubitn_add "features.ml" 111 4134 4142 "features.ml" 111 4134 4151
+)
+"features.ml" 119 4479 4504 "features.ml" 119 4479 4514
+type(
+  int
+)
+ident(
+  int_ref fea_vconst "features.ml" 36 1361 1365 "features.ml" 36 1361 1375
+)
+"features.ml" 119 4479 4515 "features.ml" 119 4479 4524
+type(
+  int
+)
+ident(
+  int_ref fea_prime "features.ml" 109 4062 4066 "features.ml" 109 4062 4075
+)
+"features.ml" 119 4479 4525 "features.ml" 119 4479 4527
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 116 4362 4389 "features.ml" 116 4362 4391
+)
+"features.ml" 119 4479 4528 "features.ml" 119 4479 4529
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"features.ml" 119 4479 4529 "features.ml" 119 4479 4540
+type(
+  int ref
+)
+ident(
+  int_ref fea_pat_len "features.ml" 6 71 75 "features.ml" 6 71 86
+)
+"features.ml" 119 4479 4528 "features.ml" 119 4479 4540
+type(
+  int
+)
+"features.ml" 119 4479 4541 "features.ml" 119 4479 4546
+type(
+  int list
+)
+ident(
+  int_ref lasts "features.ml" 116 4362 4383 "features.ml" 116 4362 4388
+)
+"features.ml" 119 4479 4494 "features.ml" 119 4479 4546
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 120 4547 4559 "features.ml" 120 4547 4560
+type(
+  Cnf.term
+)
+ident(
+  def t "features.ml" 120 4547 4564 "features.ml" 120 4547 4587
+)
+"features.ml" 120 4547 4554 "features.ml" 120 4547 4560
+type(
+  Cnf.term option
+)
+"features.ml" 120 4547 4564 "features.ml" 120 4547 4574
+type(
+  Cnf.term Cnf.Im.t -> int list -> int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t
+)
+ident(
+  int_ref ubitn_cont "features.ml" 116 4362 4370 "features.ml" 116 4362 4380
+)
+"features.ml" 120 4547 4575 "features.ml" 120 4547 4576
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  int_ref s "features.ml" 116 4362 4381 "features.ml" 116 4362 4382
+)
+"features.ml" 120 4547 4577 "features.ml" 120 4547 4582
+type(
+  int list
+)
+ident(
+  int_ref lasts "features.ml" 116 4362 4383 "features.ml" 116 4362 4388
+)
+"features.ml" 120 4547 4583 "features.ml" 120 4547 4585
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 116 4362 4389 "features.ml" 116 4362 4391
+)
+"features.ml" 120 4547 4586 "features.ml" 120 4547 4587
+type(
+  Cnf.term
+)
+ident(
+  int_ref t "features.ml" 120 4547 4559 "features.ml" 120 4547 4560
+)
+"features.ml" 120 4547 4564 "features.ml" 120 4547 4587
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 118 4414 4419 "features.ml" 120 4547 4588
+type(
+  int Cnf.Im.t
+)
+"features.ml" 121 4589 4596 "features.ml" 121 4589 4597
+type(
+  int
+)
+ident(
+  def f "features.ml" 122 4605 4610 "features.ml" 123 4629 4724
+)
+"features.ml" 121 4589 4599 "features.ml" 121 4589 4600
+type(
+  Cnf.term list
+)
+ident(
+  def l "features.ml" 122 4605 4610 "features.ml" 123 4629 4724
+)
+"features.ml" 121 4589 4593 "features.ml" 121 4589 4601
+type(
+  Cnf.term
+)
+"features.ml" 122 4605 4614 "features.ml" 122 4605 4615
+type(
+  int
+)
+ident(
+  def f "features.ml" 123 4629 4634 "features.ml" 123 4629 4724
+)
+"features.ml" 122 4605 4618 "features.ml" 122 4605 4623
+type(
+  int -> int
+)
+ident(
+  int_ref simpf "features.ml" 71 2569 2573 "features.ml" 71 2569 2578
+)
+"features.ml" 122 4605 4624 "features.ml" 122 4605 4625
+type(
+  int
+)
+ident(
+  int_ref f "features.ml" 121 4589 4596 "features.ml" 121 4589 4597
+)
+"features.ml" 122 4605 4618 "features.ml" 122 4605 4625
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 123 4629 4634 "features.ml" 123 4629 4648
+type(
+  (int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t) ->
+  int Cnf.Im.t -> Cnf.term list -> int Cnf.Im.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 123 4629 4650 "features.ml" 123 4629 4660
+type(
+  Cnf.term Cnf.Im.t -> int list -> int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t
+)
+ident(
+  int_ref ubitn_cont "features.ml" 116 4362 4370 "features.ml" 116 4362 4380
+)
+"features.ml" 123 4629 4661 "features.ml" 123 4629 4662
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  int_ref s "features.ml" 116 4362 4381 "features.ml" 116 4362 4382
+)
+"features.ml" 123 4629 4664 "features.ml" 123 4629 4665
+type(
+  int
+)
+ident(
+  int_ref f "features.ml" 122 4605 4614 "features.ml" 122 4605 4615
+)
+"features.ml" 123 4629 4669 "features.ml" 123 4629 4674
+type(
+  int list
+)
+ident(
+  int_ref lasts "features.ml" 116 4362 4383 "features.ml" 116 4362 4388
+)
+"features.ml" 123 4629 4663 "features.ml" 123 4629 4675
+type(
+  int list
+)
+"features.ml" 123 4629 4649 "features.ml" 123 4629 4676
+call(
+  stack
+)
+type(
+  int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t
+)
+"features.ml" 123 4629 4678 "features.ml" 123 4629 4687
+type(
+  int -> int -> int Cnf.Im.t -> int -> int list -> int Cnf.Im.t
+)
+ident(
+  int_ref ubitn_add "features.ml" 111 4134 4142 "features.ml" 111 4134 4151
+)
+"features.ml" 123 4629 4688 "features.ml" 123 4629 4689
+type(
+  int
+)
+ident(
+  int_ref f "features.ml" 122 4605 4614 "features.ml" 122 4605 4615
+)
+"features.ml" 123 4629 4690 "features.ml" 123 4629 4699
+type(
+  int
+)
+ident(
+  int_ref fea_prime "features.ml" 109 4062 4066 "features.ml" 109 4062 4075
+)
+"features.ml" 123 4629 4700 "features.ml" 123 4629 4702
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 116 4362 4389 "features.ml" 116 4362 4391
+)
+"features.ml" 123 4629 4703 "features.ml" 123 4629 4704
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"features.ml" 123 4629 4704 "features.ml" 123 4629 4715
+type(
+  int ref
+)
+ident(
+  int_ref fea_pat_len "features.ml" 6 71 75 "features.ml" 6 71 86
+)
+"features.ml" 123 4629 4703 "features.ml" 123 4629 4715
+type(
+  int
+)
+"features.ml" 123 4629 4716 "features.ml" 123 4629 4721
+type(
+  int list
+)
+ident(
+  int_ref lasts "features.ml" 116 4362 4383 "features.ml" 116 4362 4388
+)
+"features.ml" 123 4629 4677 "features.ml" 123 4629 4722
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 123 4629 4723 "features.ml" 123 4629 4724
+type(
+  Cnf.term list
+)
+ident(
+  int_ref l "features.ml" 121 4589 4599 "features.ml" 121 4589 4600
+)
+"features.ml" 123 4629 4634 "features.ml" 123 4629 4724
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 122 4605 4610 "features.ml" 123 4629 4724
+type(
+  int Cnf.Im.t
+)
+"features.ml" 116 4362 4394 "features.ml" 123 4629 4724
+type(
+  Cnf.term -> int Cnf.Im.t
+)
+"features.ml" 124 4727 4731 "features.ml" 124 4727 4736
+type(
+  Cnf.term Cnf.Im.t -> int Cnf.Im.t -> int * Cnf.term list -> int Cnf.Im.t
+)
+ident(
+  def ubit2 "features.ml" 126 4804 4804 "features.ml" 1 0 -1
+)
+"features.ml" 124 4727 4737 "features.ml" 124 4727 4738
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  def s "features.ml" 124 4727 4739 "features.ml" 124 4727 4800
+)
+"features.ml" 124 4727 4739 "features.ml" 124 4727 4741
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf "features.ml" 124 4727 4742 "features.ml" 124 4727 4800
+)
+"features.ml" 124 4727 4743 "features.ml" 124 4727 4744
+type(
+  int
+)
+ident(
+  def n "features.ml" 124 4727 4751 "features.ml" 124 4727 4800
+)
+"features.ml" 124 4727 4746 "features.ml" 124 4727 4747
+type(
+  Cnf.term list
+)
+ident(
+  def l "features.ml" 124 4727 4751 "features.ml" 124 4727 4800
+)
+"features.ml" 124 4727 4742 "features.ml" 124 4727 4748
+type(
+  int * Cnf.term list
+)
+"features.ml" 124 4727 4751 "features.ml" 124 4727 4765
+type(
+  (int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t) ->
+  int Cnf.Im.t -> Cnf.term list -> int Cnf.Im.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 124 4727 4767 "features.ml" 124 4727 4777
+type(
+  Cnf.term Cnf.Im.t -> int list -> int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t
+)
+ident(
+  int_ref ubitn_cont "features.ml" 116 4362 4370 "features.ml" 116 4362 4380
+)
+"features.ml" 124 4727 4778 "features.ml" 124 4727 4779
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  int_ref s "features.ml" 124 4727 4737 "features.ml" 124 4727 4738
+)
+"features.ml" 124 4727 4781 "features.ml" 124 4727 4782
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 124 4727 4743 "features.ml" 124 4727 4744
+)
+"features.ml" 124 4727 4780 "features.ml" 124 4727 4783
+type(
+  int list
+)
+"features.ml" 124 4727 4766 "features.ml" 124 4727 4784
+call(
+  stack
+)
+type(
+  int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t
+)
+"features.ml" 124 4727 4786 "features.ml" 124 4727 4792
+type(
+  int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  int_ref imincr "features.ml" 69 2545 2549 "features.ml" 69 2545 2555
+)
+"features.ml" 124 4727 4793 "features.ml" 124 4727 4794
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 124 4727 4743 "features.ml" 124 4727 4744
+)
+"features.ml" 124 4727 4795 "features.ml" 124 4727 4797
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 124 4727 4739 "features.ml" 124 4727 4741
+)
+"features.ml" 124 4727 4785 "features.ml" 124 4727 4798
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 124 4727 4799 "features.ml" 124 4727 4800
+type(
+  Cnf.term list
+)
+ident(
+  int_ref l "features.ml" 124 4727 4746 "features.ml" 124 4727 4747
+)
+"features.ml" 124 4727 4751 "features.ml" 124 4727 4800
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 126 4804 4808 "features.ml" 126 4804 4817
+type(
+  int Cnf.Im.t -> (Cnf.Im.key * int) list
+)
+ident(
+  def unpack_im "features.ml" 129 4963 4963 "features.ml" 1 0 -1
+)
+"features.ml" 126 4804 4818 "features.ml" 126 4804 4820
+type(
+  int Cnf.Im.t
+)
+ident(
+  def im "features.ml" 127 4823 4825 "features.ml" 128 4900 4960
+)
+"features.ml" 127 4823 4828 "features.ml" 127 4823 4829
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"features.ml" 127 4823 4829 "features.ml" 127 4823 4840
+type(
+  bool ref
+)
+ident(
+  int_ref fea_nocount "features.ml" 12 304 308 "features.ml" 12 304 319
+)
+"features.ml" 127 4823 4828 "features.ml" 127 4823 4840
+type(
+  bool
+)
+"features.ml" 127 4823 4846 "features.ml" 127 4823 4854
+type(
+  (Cnf.Im.key * int) list -> (Cnf.Im.key * int) list
+)
+ident(
+  ext_ref List.rev
+)
+"features.ml" 127 4823 4856 "features.ml" 127 4823 4863
+type(
+  (Cnf.Im.key -> int -> (Cnf.Im.key * int) list -> (Cnf.Im.key * int) list) ->
+  int Cnf.Im.t -> (Cnf.Im.key * int) list -> (Cnf.Im.key * int) list
+)
+ident(
+  ext_ref Cnf.Im.fold
+)
+"features.ml" 127 4823 4869 "features.ml" 127 4823 4870
+type(
+  Cnf.Im.key
+)
+ident(
+  def i "features.ml" 127 4823 4871 "features.ml" 127 4823 4891
+)
+"features.ml" 127 4823 4871 "features.ml" 127 4823 4872
+type(
+  int
+)
+ident(
+  def n "features.ml" 127 4823 4873 "features.ml" 127 4823 4891
+)
+"features.ml" 127 4823 4873 "features.ml" 127 4823 4875
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  def sf "features.ml" 127 4823 4879 "features.ml" 127 4823 4891
+)
+"features.ml" 127 4823 4880 "features.ml" 127 4823 4881
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref i "features.ml" 127 4823 4869 "features.ml" 127 4823 4870
+)
+"features.ml" 127 4823 4883 "features.ml" 127 4823 4884
+type(
+  int
+)
+"features.ml" 127 4823 4879 "features.ml" 127 4823 4885
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 127 4823 4889 "features.ml" 127 4823 4891
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  int_ref sf "features.ml" 127 4823 4873 "features.ml" 127 4823 4875
+)
+"features.ml" 127 4823 4879 "features.ml" 127 4823 4891
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 127 4823 4864 "features.ml" 127 4823 4892
+type(
+  Cnf.Im.key -> int -> (Cnf.Im.key * int) list -> (Cnf.Im.key * int) list
+)
+"features.ml" 127 4823 4893 "features.ml" 127 4823 4895
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 126 4804 4818 "features.ml" 126 4804 4820
+)
+"features.ml" 127 4823 4896 "features.ml" 127 4823 4898
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 127 4823 4855 "features.ml" 127 4823 4899
+call(
+  stack
+)
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 127 4823 4846 "features.ml" 127 4823 4899
+call(
+  tail
+)
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 128 4900 4907 "features.ml" 128 4900 4915
+type(
+  (Cnf.Im.key * int) list -> (Cnf.Im.key * int) list
+)
+ident(
+  ext_ref List.rev
+)
+"features.ml" 128 4900 4917 "features.ml" 128 4900 4924
+type(
+  (Cnf.Im.key -> int -> (Cnf.Im.key * int) list -> (Cnf.Im.key * int) list) ->
+  int Cnf.Im.t -> (Cnf.Im.key * int) list -> (Cnf.Im.key * int) list
+)
+ident(
+  ext_ref Cnf.Im.fold
+)
+"features.ml" 128 4900 4930 "features.ml" 128 4900 4931
+type(
+  Cnf.Im.key
+)
+ident(
+  def i "features.ml" 128 4900 4932 "features.ml" 128 4900 4952
+)
+"features.ml" 128 4900 4932 "features.ml" 128 4900 4933
+type(
+  int
+)
+ident(
+  def n "features.ml" 128 4900 4934 "features.ml" 128 4900 4952
+)
+"features.ml" 128 4900 4934 "features.ml" 128 4900 4936
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  def sf "features.ml" 128 4900 4940 "features.ml" 128 4900 4952
+)
+"features.ml" 128 4900 4941 "features.ml" 128 4900 4942
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref i "features.ml" 128 4900 4930 "features.ml" 128 4900 4931
+)
+"features.ml" 128 4900 4944 "features.ml" 128 4900 4945
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 128 4900 4932 "features.ml" 128 4900 4933
+)
+"features.ml" 128 4900 4940 "features.ml" 128 4900 4946
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 128 4900 4950 "features.ml" 128 4900 4952
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  int_ref sf "features.ml" 128 4900 4934 "features.ml" 128 4900 4936
+)
+"features.ml" 128 4900 4940 "features.ml" 128 4900 4952
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 128 4900 4925 "features.ml" 128 4900 4953
+type(
+  Cnf.Im.key -> int -> (Cnf.Im.key * int) list -> (Cnf.Im.key * int) list
+)
+"features.ml" 128 4900 4954 "features.ml" 128 4900 4956
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 126 4804 4818 "features.ml" 126 4804 4820
+)
+"features.ml" 128 4900 4957 "features.ml" 128 4900 4959
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 128 4900 4916 "features.ml" 128 4900 4960
+call(
+  stack
+)
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 128 4900 4907 "features.ml" 128 4900 4960
+call(
+  tail
+)
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 127 4823 4825 "features.ml" 128 4900 4960
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 129 4963 4967 "features.ml" 129 4963 4977
+type(
+  Cnf.term Cnf.Im.t ->
+  int list -> (int * Cnf.term list) list -> (Cnf.Im.key * int) list
+)
+ident(
+  def ubit2_list "features.ml" 133 5116 5116 "features.ml" 1 0 -1
+)
+"features.ml" 129 4963 4978 "features.ml" 129 4963 4979
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  def s "features.ml" 129 4963 4980 "features.ml" 131 5069 5112
+)
+"features.ml" 129 4963 4980 "features.ml" 129 4963 4985
+type(
+  int list
+)
+ident(
+  def start "features.ml" 129 4963 4986 "features.ml" 131 5069 5112
+)
+"features.ml" 129 4963 4986 "features.ml" 129 4963 4987
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  def l "features.ml" 130 4990 4992 "features.ml" 131 5069 5112
+)
+"features.ml" 130 4990 4996 "features.ml" 130 4990 4998
+type(
+  int Cnf.Im.t
+)
+ident(
+  def im "features.ml" 131 5069 5071 "features.ml" 131 5069 5112
+)
+"features.ml" 130 4990 5001 "features.ml" 130 4990 5015
+type(
+  (int Cnf.Im.t -> int -> int Cnf.Im.t) ->
+  int Cnf.Im.t -> int list -> int Cnf.Im.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 130 4990 5021 "features.ml" 130 4990 5023
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf "features.ml" 130 4990 5024 "features.ml" 130 4990 5049
+)
+"features.ml" 130 4990 5024 "features.ml" 130 4990 5025
+type(
+  int
+)
+ident(
+  def v "features.ml" 130 4990 5029 "features.ml" 130 4990 5049
+)
+"features.ml" 130 4990 5029 "features.ml" 130 4990 5035
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 130 4990 5037 "features.ml" 130 4990 5041
+type(
+  int -> Cnf.Im.key
+)
+ident(
+  int_ref fmod "features.ml" 33 1161 1165 "features.ml" 33 1161 1169
+)
+"features.ml" 130 4990 5042 "features.ml" 130 4990 5043
+type(
+  int
+)
+ident(
+  int_ref v "features.ml" 130 4990 5024 "features.ml" 130 4990 5025
+)
+"features.ml" 130 4990 5036 "features.ml" 130 4990 5044
+call(
+  stack
+)
+type(
+  Cnf.Im.key
+)
+"features.ml" 130 4990 5045 "features.ml" 130 4990 5046
+type(
+  int
+)
+"features.ml" 130 4990 5047 "features.ml" 130 4990 5049
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 130 4990 5021 "features.ml" 130 4990 5023
+)
+"features.ml" 130 4990 5029 "features.ml" 130 4990 5049
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 130 4990 5016 "features.ml" 130 4990 5050
+type(
+  int Cnf.Im.t -> int -> int Cnf.Im.t
+)
+"features.ml" 130 4990 5051 "features.ml" 130 4990 5059
+type(
+  int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.empty
+)
+"features.ml" 130 4990 5060 "features.ml" 130 4990 5065
+type(
+  int list
+)
+ident(
+  int_ref start "features.ml" 129 4963 4980 "features.ml" 129 4963 4985
+)
+"features.ml" 130 4990 5001 "features.ml" 130 4990 5065
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 131 5069 5071 "features.ml" 131 5069 5080
+type(
+  int Cnf.Im.t -> (Cnf.Im.key * int) list
+)
+ident(
+  int_ref unpack_im "features.ml" 126 4804 4808 "features.ml" 126 4804 4817
+)
+"features.ml" 131 5069 5082 "features.ml" 131 5069 5096
+type(
+  (int Cnf.Im.t -> int * Cnf.term list -> int Cnf.Im.t) ->
+  int Cnf.Im.t -> (int * Cnf.term list) list -> int Cnf.Im.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 131 5069 5098 "features.ml" 131 5069 5103
+type(
+  Cnf.term Cnf.Im.t -> int Cnf.Im.t -> int * Cnf.term list -> int Cnf.Im.t
+)
+ident(
+  int_ref ubit2 "features.ml" 124 4727 4731 "features.ml" 124 4727 4736
+)
+"features.ml" 131 5069 5104 "features.ml" 131 5069 5105
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  int_ref s "features.ml" 129 4963 4978 "features.ml" 129 4963 4979
+)
+"features.ml" 131 5069 5097 "features.ml" 131 5069 5106
+call(
+  stack
+)
+type(
+  int Cnf.Im.t -> int * Cnf.term list -> int Cnf.Im.t
+)
+"features.ml" 131 5069 5107 "features.ml" 131 5069 5109
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 130 4990 4996 "features.ml" 130 4990 4998
+)
+"features.ml" 131 5069 5110 "features.ml" 131 5069 5111
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  int_ref l "features.ml" 129 4963 4986 "features.ml" 129 4963 4987
+)
+"features.ml" 131 5069 5081 "features.ml" 131 5069 5112
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 131 5069 5071 "features.ml" 131 5069 5112
+call(
+  tail
+)
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 130 4990 4992 "features.ml" 131 5069 5112
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 133 5116 5120 "features.ml" 133 5116 5125
+type(
+  (Cnf.Im.key * int) list ->
+  (Cnf.Im.key * int) list -> (Cnf.Im.key * int) list
+)
+ident(
+  def cross "features.ml" 143 5546 5546 "features.ml" 1 0 -1
+)
+"features.ml" 133 5116 5126 "features.ml" 133 5116 5128
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  def l1 "features.ml" 133 5116 5129 "features.ml" 141 5528 5542
+)
+"features.ml" 133 5116 5129 "features.ml" 133 5116 5131
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  def l2 "features.ml" 134 5134 5136 "features.ml" 141 5528 5542
+)
+"features.ml" 134 5134 5140 "features.ml" 134 5134 5142
+type(
+  int Cnf.Im.t
+)
+ident(
+  def im "features.ml" 135 5208 5210 "features.ml" 141 5528 5542
+)
+"features.ml" 134 5134 5145 "features.ml" 134 5134 5159
+type(
+  (int Cnf.Im.t -> Cnf.Im.key * int -> int Cnf.Im.t) ->
+  int Cnf.Im.t -> (Cnf.Im.key * int) list -> int Cnf.Im.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 134 5134 5165 "features.ml" 134 5134 5167
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf "features.ml" 134 5134 5168 "features.ml" 134 5134 5191
+)
+"features.ml" 134 5134 5169 "features.ml" 134 5134 5170
+type(
+  Cnf.Im.key
+)
+ident(
+  def e "features.ml" 134 5134 5178 "features.ml" 134 5134 5191
+)
+"features.ml" 134 5134 5172 "features.ml" 134 5134 5173
+type(
+  int
+)
+ident(
+  def n "features.ml" 134 5134 5178 "features.ml" 134 5134 5191
+)
+"features.ml" 134 5134 5168 "features.ml" 134 5134 5174
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 134 5134 5178 "features.ml" 134 5134 5184
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 134 5134 5185 "features.ml" 134 5134 5186
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref e "features.ml" 134 5134 5169 "features.ml" 134 5134 5170
+)
+"features.ml" 134 5134 5187 "features.ml" 134 5134 5188
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 134 5134 5172 "features.ml" 134 5134 5173
+)
+"features.ml" 134 5134 5189 "features.ml" 134 5134 5191
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 134 5134 5165 "features.ml" 134 5134 5167
+)
+"features.ml" 134 5134 5178 "features.ml" 134 5134 5191
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 134 5134 5160 "features.ml" 134 5134 5192
+type(
+  int Cnf.Im.t -> Cnf.Im.key * int -> int Cnf.Im.t
+)
+"features.ml" 134 5134 5193 "features.ml" 134 5134 5201
+type(
+  int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.empty
+)
+"features.ml" 134 5134 5202 "features.ml" 134 5134 5204
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  int_ref l1 "features.ml" 133 5116 5126 "features.ml" 133 5116 5128
+)
+"features.ml" 134 5134 5145 "features.ml" 134 5134 5204
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 135 5208 5214 "features.ml" 135 5208 5216
+type(
+  int Cnf.Im.t
+)
+ident(
+  def im "features.ml" 136 5276 5278 "features.ml" 141 5528 5542
+)
+"features.ml" 135 5208 5219 "features.ml" 135 5208 5233
+type(
+  (int Cnf.Im.t -> Cnf.Im.key * int -> int Cnf.Im.t) ->
+  int Cnf.Im.t -> (Cnf.Im.key * int) list -> int Cnf.Im.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 135 5208 5239 "features.ml" 135 5208 5241
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf "features.ml" 135 5208 5242 "features.ml" 135 5208 5265
+)
+"features.ml" 135 5208 5243 "features.ml" 135 5208 5244
+type(
+  Cnf.Im.key
+)
+ident(
+  def e "features.ml" 135 5208 5252 "features.ml" 135 5208 5265
+)
+"features.ml" 135 5208 5246 "features.ml" 135 5208 5247
+type(
+  int
+)
+ident(
+  def m "features.ml" 135 5208 5252 "features.ml" 135 5208 5265
+)
+"features.ml" 135 5208 5242 "features.ml" 135 5208 5248
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 135 5208 5252 "features.ml" 135 5208 5258
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 135 5208 5259 "features.ml" 135 5208 5260
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref e "features.ml" 135 5208 5243 "features.ml" 135 5208 5244
+)
+"features.ml" 135 5208 5261 "features.ml" 135 5208 5262
+type(
+  int
+)
+ident(
+  int_ref m "features.ml" 135 5208 5246 "features.ml" 135 5208 5247
+)
+"features.ml" 135 5208 5263 "features.ml" 135 5208 5265
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 135 5208 5239 "features.ml" 135 5208 5241
+)
+"features.ml" 135 5208 5252 "features.ml" 135 5208 5265
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 135 5208 5234 "features.ml" 135 5208 5266
+type(
+  int Cnf.Im.t -> Cnf.Im.key * int -> int Cnf.Im.t
+)
+"features.ml" 135 5208 5267 "features.ml" 135 5208 5269
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 134 5134 5140 "features.ml" 134 5134 5142
+)
+"features.ml" 135 5208 5270 "features.ml" 135 5208 5272
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  int_ref l2 "features.ml" 133 5116 5129 "features.ml" 133 5116 5131
+)
+"features.ml" 135 5208 5219 "features.ml" 135 5208 5272
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 136 5276 5282 "features.ml" 136 5276 5288
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  def im_add "features.ml" 137 5368 5370 "features.ml" 141 5528 5542
+)
+"features.ml" 136 5276 5289 "features.ml" 136 5276 5290
+type(
+  Cnf.Im.key
+)
+ident(
+  def k "features.ml" 136 5276 5291 "features.ml" 136 5276 5364
+)
+"features.ml" 136 5276 5291 "features.ml" 136 5276 5292
+type(
+  int
+)
+ident(
+  def v "features.ml" 136 5276 5293 "features.ml" 136 5276 5364
+)
+"features.ml" 136 5276 5293 "features.ml" 136 5276 5295
+type(
+  int Cnf.Im.t
+)
+ident(
+  def mp "features.ml" 136 5276 5298 "features.ml" 136 5276 5364
+)
+"features.ml" 136 5276 5302 "features.ml" 136 5276 5308
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 136 5276 5309 "features.ml" 136 5276 5310
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref k "features.ml" 136 5276 5289 "features.ml" 136 5276 5290
+)
+"features.ml" 136 5276 5312 "features.ml" 136 5276 5313
+type(
+  int
+)
+ident(
+  int_ref v "features.ml" 136 5276 5291 "features.ml" 136 5276 5292
+)
+"features.ml" 136 5276 5314 "features.ml" 136 5276 5315
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 136 5276 5316 "features.ml" 136 5276 5323
+type(
+  Cnf.Im.key -> int Cnf.Im.t -> int
+)
+ident(
+  ext_ref Cnf.Im.find
+)
+"features.ml" 136 5276 5324 "features.ml" 136 5276 5325
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref k "features.ml" 136 5276 5289 "features.ml" 136 5276 5290
+)
+"features.ml" 136 5276 5326 "features.ml" 136 5276 5328
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref mp "features.ml" 136 5276 5293 "features.ml" 136 5276 5295
+)
+"features.ml" 136 5276 5316 "features.ml" 136 5276 5328
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 136 5276 5311 "features.ml" 136 5276 5329
+type(
+  int
+)
+"features.ml" 136 5276 5330 "features.ml" 136 5276 5332
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref mp "features.ml" 136 5276 5293 "features.ml" 136 5276 5295
+)
+"features.ml" 136 5276 5302 "features.ml" 136 5276 5332
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 136 5276 5338 "features.ml" 136 5276 5347
+type(
+  exn
+)
+"features.ml" 136 5276 5351 "features.ml" 136 5276 5357
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 136 5276 5358 "features.ml" 136 5276 5359
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref k "features.ml" 136 5276 5289 "features.ml" 136 5276 5290
+)
+"features.ml" 136 5276 5360 "features.ml" 136 5276 5361
+type(
+  int
+)
+ident(
+  int_ref v "features.ml" 136 5276 5291 "features.ml" 136 5276 5292
+)
+"features.ml" 136 5276 5362 "features.ml" 136 5276 5364
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref mp "features.ml" 136 5276 5293 "features.ml" 136 5276 5295
+)
+"features.ml" 136 5276 5351 "features.ml" 136 5276 5364
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 136 5276 5298 "features.ml" 136 5276 5364
+type(
+  int Cnf.Im.t
+)
+"features.ml" 137 5368 5374 "features.ml" 137 5368 5376
+type(
+  int Cnf.Im.t
+)
+ident(
+  def im "features.ml" 141 5528 5530 "features.ml" 141 5528 5542
+)
+"features.ml" 138 5379 5383 "features.ml" 138 5379 5397
+type(
+  (int Cnf.Im.t -> Cnf.Im.key * int -> int Cnf.Im.t) ->
+  int Cnf.Im.t -> (Cnf.Im.key * int) list -> int Cnf.Im.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 138 5379 5403 "features.ml" 138 5379 5405
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf "features.ml" 138 5379 5406 "features.ml" 140 5459 5517
+)
+"features.ml" 138 5379 5407 "features.ml" 138 5379 5410
+type(
+  Cnf.Im.key
+)
+ident(
+  def l1e "features.ml" 139 5418 5424 "features.ml" 140 5459 5517
+)
+"features.ml" 138 5379 5412 "features.ml" 138 5379 5413
+type(
+  int
+)
+ident(
+  def n "features.ml" 139 5418 5424 "features.ml" 140 5459 5517
+)
+"features.ml" 138 5379 5406 "features.ml" 138 5379 5414
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 139 5418 5424 "features.ml" 139 5418 5438
+type(
+  (int Cnf.Im.t -> Cnf.Im.key * int -> int Cnf.Im.t) ->
+  int Cnf.Im.t -> (Cnf.Im.key * int) list -> int Cnf.Im.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 139 5418 5444 "features.ml" 139 5418 5446
+type(
+  int Cnf.Im.t
+)
+ident(
+  def sf "features.ml" 139 5418 5447 "features.ml" 140 5459 5510
+)
+"features.ml" 139 5418 5448 "features.ml" 139 5418 5451
+type(
+  Cnf.Im.key
+)
+ident(
+  def l2e "features.ml" 140 5459 5467 "features.ml" 140 5459 5510
+)
+"features.ml" 139 5418 5453 "features.ml" 139 5418 5454
+type(
+  int
+)
+ident(
+  def m "features.ml" 140 5459 5467 "features.ml" 140 5459 5510
+)
+"features.ml" 139 5418 5447 "features.ml" 139 5418 5455
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 140 5459 5467 "features.ml" 140 5459 5473
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  int_ref im_add "features.ml" 136 5276 5282 "features.ml" 136 5276 5288
+)
+"features.ml" 140 5459 5475 "features.ml" 140 5459 5480
+type(
+  int -> Cnf.Im.key
+)
+ident(
+  int_ref fmod3 "features.ml" 34 1254 1258 "features.ml" 34 1254 1263
+)
+"features.ml" 140 5459 5482 "features.ml" 140 5459 5485
+type(
+  int
+)
+"features.ml" 140 5459 5486 "features.ml" 140 5459 5487
+type(
+  int -> Cnf.Im.key -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"features.ml" 140 5459 5488 "features.ml" 140 5459 5491
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref l1e "features.ml" 138 5379 5407 "features.ml" 138 5379 5410
+)
+"features.ml" 140 5459 5482 "features.ml" 140 5459 5491
+type(
+  int
+)
+"features.ml" 140 5459 5492 "features.ml" 140 5459 5493
+type(
+  int -> Cnf.Im.key -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 140 5459 5494 "features.ml" 140 5459 5497
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref l2e "features.ml" 139 5418 5448 "features.ml" 139 5418 5451
+)
+"features.ml" 140 5459 5481 "features.ml" 140 5459 5498
+type(
+  int
+)
+"features.ml" 140 5459 5474 "features.ml" 140 5459 5499
+call(
+  stack
+)
+type(
+  Cnf.Im.key
+)
+"features.ml" 140 5459 5501 "features.ml" 140 5459 5502
+type(
+  int
+)
+ident(
+  int_ref m "features.ml" 139 5418 5453 "features.ml" 139 5418 5454
+)
+"features.ml" 140 5459 5503 "features.ml" 140 5459 5504
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"features.ml" 140 5459 5505 "features.ml" 140 5459 5506
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 138 5379 5412 "features.ml" 138 5379 5413
+)
+"features.ml" 140 5459 5500 "features.ml" 140 5459 5507
+type(
+  int
+)
+"features.ml" 140 5459 5508 "features.ml" 140 5459 5510
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 139 5418 5444 "features.ml" 139 5418 5446
+)
+"features.ml" 140 5459 5467 "features.ml" 140 5459 5510
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 139 5418 5439 "features.ml" 140 5459 5511
+type(
+  int Cnf.Im.t -> Cnf.Im.key * int -> int Cnf.Im.t
+)
+"features.ml" 140 5459 5512 "features.ml" 140 5459 5514
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref sf "features.ml" 138 5379 5403 "features.ml" 138 5379 5405
+)
+"features.ml" 140 5459 5515 "features.ml" 140 5459 5517
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  int_ref l2 "features.ml" 133 5116 5129 "features.ml" 133 5116 5131
+)
+"features.ml" 139 5418 5424 "features.ml" 140 5459 5517
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 138 5379 5398 "features.ml" 140 5459 5518
+type(
+  int Cnf.Im.t -> Cnf.Im.key * int -> int Cnf.Im.t
+)
+"features.ml" 140 5459 5519 "features.ml" 140 5459 5521
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 135 5208 5214 "features.ml" 135 5208 5216
+)
+"features.ml" 140 5459 5522 "features.ml" 140 5459 5524
+type(
+  (Cnf.Im.key * int) list
+)
+ident(
+  int_ref l1 "features.ml" 133 5116 5126 "features.ml" 133 5116 5128
+)
+"features.ml" 138 5379 5383 "features.ml" 140 5459 5524
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 141 5528 5530 "features.ml" 141 5528 5539
+type(
+  int Cnf.Im.t -> (Cnf.Im.key * int) list
+)
+ident(
+  int_ref unpack_im "features.ml" 126 4804 4808 "features.ml" 126 4804 4817
+)
+"features.ml" 141 5528 5540 "features.ml" 141 5528 5542
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 137 5368 5374 "features.ml" 137 5368 5376
+)
+"features.ml" 141 5528 5530 "features.ml" 141 5528 5542
+call(
+  tail
+)
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 137 5368 5370 "features.ml" 141 5528 5542
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 136 5276 5278 "features.ml" 141 5528 5542
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 135 5208 5210 "features.ml" 141 5528 5542
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 134 5134 5136 "features.ml" 141 5528 5542
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 143 5546 5554 "features.ml" 143 5546 5568
+type(
+  Cnf.term Cnf.Im.t -> int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t
+)
+ident(
+  def update_freq_tm "features.ml" 143 5546 5546 "features.ml" 1 0 -1
+)
+"features.ml" 143 5546 5569 "features.ml" 143 5546 5570
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  def s "features.ml" 143 5546 5571 "features.ml" 147 5784 5828
+)
+"features.ml" 143 5546 5571 "features.ml" 143 5546 5573
+type(
+  int Cnf.Im.t
+)
+ident(
+  def im "features.ml" 143 5546 5576 "features.ml" 147 5784 5828
+)
+"features.ml" 144 5585 5591 "features.ml" 144 5585 5592
+type(
+  int
+)
+ident(
+  def n "features.ml" 144 5585 5596 "features.ml" 144 5585 5667
+)
+"features.ml" 144 5585 5589 "features.ml" 144 5585 5592
+type(
+  Cnf.term
+)
+"features.ml" 144 5585 5603 "features.ml" 144 5585 5612
+type(
+  Cnf.term Cnf.Im.t -> Cnf.Im.key -> Cnf.term option
+)
+ident(
+  ext_ref Cnf.subst_get
+)
+"features.ml" 144 5585 5613 "features.ml" 144 5585 5614
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  int_ref s "features.ml" 143 5546 5569 "features.ml" 143 5546 5570
+)
+"features.ml" 144 5585 5615 "features.ml" 144 5585 5616
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref n "features.ml" 144 5585 5591 "features.ml" 144 5585 5592
+)
+"features.ml" 144 5585 5603 "features.ml" 144 5585 5616
+call(
+  stack
+)
+type(
+  Cnf.term option
+)
+"features.ml" 144 5585 5622 "features.ml" 144 5585 5626
+type(
+  Cnf.term option
+)
+"features.ml" 144 5585 5630 "features.ml" 144 5585 5632
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 143 5546 5571 "features.ml" 143 5546 5573
+)
+"features.ml" 144 5585 5640 "features.ml" 144 5585 5641
+type(
+  Cnf.term
+)
+ident(
+  def t "features.ml" 144 5585 5645 "features.ml" 144 5585 5666
+)
+"features.ml" 144 5585 5635 "features.ml" 144 5585 5641
+type(
+  Cnf.term option
+)
+"features.ml" 144 5585 5645 "features.ml" 144 5585 5659
+type(
+  Cnf.term Cnf.Im.t -> int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t
+)
+ident(
+  int_ref update_freq_tm "features.ml" 143 5546 5554 "features.ml" 143 5546 5568
+)
+"features.ml" 144 5585 5660 "features.ml" 144 5585 5661
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  int_ref s "features.ml" 143 5546 5569 "features.ml" 143 5546 5570
+)
+"features.ml" 144 5585 5662 "features.ml" 144 5585 5664
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 143 5546 5571 "features.ml" 143 5546 5573
+)
+"features.ml" 144 5585 5665 "features.ml" 144 5585 5666
+type(
+  Cnf.term
+)
+ident(
+  int_ref t "features.ml" 144 5585 5640 "features.ml" 144 5585 5641
+)
+"features.ml" 144 5585 5645 "features.ml" 144 5585 5666
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 144 5585 5596 "features.ml" 144 5585 5667
+type(
+  int Cnf.Im.t
+)
+"features.ml" 145 5668 5675 "features.ml" 145 5668 5676
+type(
+  int
+)
+ident(
+  def f "features.ml" 146 5684 5689 "features.ml" 147 5784 5828
+)
+"features.ml" 145 5668 5678 "features.ml" 145 5668 5679
+type(
+  Cnf.term list
+)
+ident(
+  def l "features.ml" 146 5684 5689 "features.ml" 147 5784 5828
+)
+"features.ml" 145 5668 5672 "features.ml" 145 5668 5680
+type(
+  Cnf.term
+)
+"features.ml" 146 5684 5693 "features.ml" 146 5684 5696
+type(
+  int Cnf.Im.t
+)
+ident(
+  def im2 "features.ml" 147 5784 5789 "features.ml" 147 5784 5828
+)
+"features.ml" 146 5684 5707 "features.ml" 146 5684 5709
+type(
+  int
+)
+ident(
+  def ov "features.ml" 146 5684 5728 "features.ml" 146 5684 5748
+)
+"features.ml" 146 5684 5712 "features.ml" 146 5684 5719
+type(
+  Cnf.Im.key -> int Cnf.Im.t -> int
+)
+ident(
+  ext_ref Cnf.Im.find
+)
+"features.ml" 146 5684 5720 "features.ml" 146 5684 5721
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref f "features.ml" 145 5668 5675 "features.ml" 145 5668 5676
+)
+"features.ml" 146 5684 5722 "features.ml" 146 5684 5724
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 143 5546 5571 "features.ml" 143 5546 5573
+)
+"features.ml" 146 5684 5712 "features.ml" 146 5684 5724
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 146 5684 5728 "features.ml" 146 5684 5734
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 146 5684 5735 "features.ml" 146 5684 5736
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref f "features.ml" 145 5668 5675 "features.ml" 145 5668 5676
+)
+"features.ml" 146 5684 5738 "features.ml" 146 5684 5740
+type(
+  int
+)
+ident(
+  int_ref ov "features.ml" 146 5684 5707 "features.ml" 146 5684 5709
+)
+"features.ml" 146 5684 5741 "features.ml" 146 5684 5742
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 146 5684 5743 "features.ml" 146 5684 5744
+type(
+  int
+)
+"features.ml" 146 5684 5737 "features.ml" 146 5684 5745
+type(
+  int
+)
+"features.ml" 146 5684 5746 "features.ml" 146 5684 5748
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 143 5546 5571 "features.ml" 143 5546 5573
+)
+"features.ml" 146 5684 5728 "features.ml" 146 5684 5748
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 146 5684 5703 "features.ml" 146 5684 5748
+type(
+  int Cnf.Im.t
+)
+"features.ml" 146 5684 5754 "features.ml" 146 5684 5763
+type(
+  exn
+)
+"features.ml" 146 5684 5767 "features.ml" 146 5684 5773
+type(
+  Cnf.Im.key -> int -> int Cnf.Im.t -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.add
+)
+"features.ml" 146 5684 5774 "features.ml" 146 5684 5775
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref f "features.ml" 145 5668 5675 "features.ml" 145 5668 5676
+)
+"features.ml" 146 5684 5776 "features.ml" 146 5684 5777
+type(
+  int
+)
+"features.ml" 146 5684 5778 "features.ml" 146 5684 5780
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 143 5546 5571 "features.ml" 143 5546 5573
+)
+"features.ml" 146 5684 5767 "features.ml" 146 5684 5780
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 146 5684 5699 "features.ml" 146 5684 5780
+type(
+  int Cnf.Im.t
+)
+"features.ml" 147 5784 5789 "features.ml" 147 5784 5803
+type(
+  (int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t) ->
+  int Cnf.Im.t -> Cnf.term list -> int Cnf.Im.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 147 5784 5805 "features.ml" 147 5784 5819
+type(
+  Cnf.term Cnf.Im.t -> int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t
+)
+ident(
+  int_ref update_freq_tm "features.ml" 143 5546 5554 "features.ml" 143 5546 5568
+)
+"features.ml" 147 5784 5820 "features.ml" 147 5784 5821
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  int_ref s "features.ml" 143 5546 5569 "features.ml" 143 5546 5570
+)
+"features.ml" 147 5784 5804 "features.ml" 147 5784 5822
+call(
+  stack
+)
+type(
+  int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t
+)
+"features.ml" 147 5784 5823 "features.ml" 147 5784 5826
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im2 "features.ml" 146 5684 5693 "features.ml" 146 5684 5696
+)
+"features.ml" 147 5784 5827 "features.ml" 147 5784 5828
+type(
+  Cnf.term list
+)
+ident(
+  int_ref l "features.ml" 145 5668 5678 "features.ml" 145 5668 5679
+)
+"features.ml" 147 5784 5789 "features.ml" 147 5784 5828
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 146 5684 5689 "features.ml" 147 5784 5828
+type(
+  int Cnf.Im.t
+)
+"features.ml" 143 5546 5576 "features.ml" 147 5784 5828
+type(
+  Cnf.term -> int Cnf.Im.t
+)
+"features.ml" 148 5831 5835 "features.ml" 148 5831 5850
+type(
+  Cnf.term Cnf.Im.t -> int Cnf.Im.t -> 'a * Cnf.term list -> int Cnf.Im.t
+)
+ident(
+  def update_freq_lit "features.ml" 150 5909 5909 "features.ml" 1 0 -1
+)
+"features.ml" 148 5831 5851 "features.ml" 148 5831 5852
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  def s "features.ml" 148 5831 5853 "features.ml" 148 5831 5905
+)
+"features.ml" 148 5831 5853 "features.ml" 148 5831 5855
+type(
+  int Cnf.Im.t
+)
+ident(
+  def im "features.ml" 148 5831 5856 "features.ml" 148 5831 5905
+)
+"features.ml" 148 5831 5857 "features.ml" 148 5831 5858
+type(
+  'a
+)
+"features.ml" 148 5831 5860 "features.ml" 148 5831 5862
+type(
+  Cnf.term list
+)
+ident(
+  def ts "features.ml" 148 5831 5866 "features.ml" 148 5831 5905
+)
+"features.ml" 148 5831 5856 "features.ml" 148 5831 5863
+type(
+  'a * Cnf.term list
+)
+"features.ml" 148 5831 5866 "features.ml" 148 5831 5880
+type(
+  (int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t) ->
+  int Cnf.Im.t -> Cnf.term list -> int Cnf.Im.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 148 5831 5882 "features.ml" 148 5831 5896
+type(
+  Cnf.term Cnf.Im.t -> int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t
+)
+ident(
+  int_ref update_freq_tm "features.ml" 143 5546 5554 "features.ml" 143 5546 5568
+)
+"features.ml" 148 5831 5897 "features.ml" 148 5831 5898
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  int_ref s "features.ml" 148 5831 5851 "features.ml" 148 5831 5852
+)
+"features.ml" 148 5831 5881 "features.ml" 148 5831 5899
+call(
+  stack
+)
+type(
+  int Cnf.Im.t -> Cnf.term -> int Cnf.Im.t
+)
+"features.ml" 148 5831 5900 "features.ml" 148 5831 5902
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 148 5831 5853 "features.ml" 148 5831 5855
+)
+"features.ml" 148 5831 5903 "features.ml" 148 5831 5905
+type(
+  Cnf.term list
+)
+ident(
+  int_ref ts "features.ml" 148 5831 5860 "features.ml" 148 5831 5862
+)
+"features.ml" 148 5831 5866 "features.ml" 148 5831 5905
+call(
+  tail
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 150 5909 5913 "features.ml" 150 5909 5924
+type(
+  int Cnf.Im.t -> (Cnf.Im.key * int) * (Cnf.Im.key * int)
+)
+ident(
+  def most_common "features.ml" 155 6168 6168 "features.ml" 1 0 -1
+)
+"features.ml" 150 5909 5925 "features.ml" 150 5909 5927
+type(
+  int Cnf.Im.t
+)
+ident(
+  def im "features.ml" 151 5930 5932 "features.ml" 153 6138 6164
+)
+"features.ml" 151 5930 5937 "features.ml" 151 5930 5940
+type(
+  Cnf.Im.key
+)
+ident(
+  def mk1 "features.ml" 152 6028 6030 "features.ml" 153 6138 6164
+)
+"features.ml" 151 5930 5942 "features.ml" 151 5930 5945
+type(
+  int
+)
+ident(
+  def mv1 "features.ml" 152 6028 6030 "features.ml" 153 6138 6164
+)
+"features.ml" 151 5930 5936 "features.ml" 151 5930 5946
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 151 5930 5949 "features.ml" 151 5930 5956
+type(
+  (Cnf.Im.key -> int -> Cnf.Im.key * int -> Cnf.Im.key * int) ->
+  int Cnf.Im.t -> Cnf.Im.key * int -> Cnf.Im.key * int
+)
+ident(
+  ext_ref Cnf.Im.fold
+)
+"features.ml" 151 5930 5962 "features.ml" 151 5930 5963
+type(
+  Cnf.Im.key
+)
+ident(
+  def k "features.ml" 151 5930 5964 "features.ml" 151 5930 6013
+)
+"features.ml" 151 5930 5964 "features.ml" 151 5930 5965
+type(
+  int
+)
+ident(
+  def v "features.ml" 151 5930 5966 "features.ml" 151 5930 6013
+)
+"features.ml" 151 5930 5967 "features.ml" 151 5930 5969
+type(
+  Cnf.Im.key
+)
+ident(
+  def mk "features.ml" 151 5930 5978 "features.ml" 151 5930 6013
+)
+"features.ml" 151 5930 5971 "features.ml" 151 5930 5973
+type(
+  int
+)
+ident(
+  def mv "features.ml" 151 5930 5978 "features.ml" 151 5930 6013
+)
+"features.ml" 151 5930 5966 "features.ml" 151 5930 5974
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 151 5930 5981 "features.ml" 151 5930 5982
+type(
+  int
+)
+ident(
+  int_ref v "features.ml" 151 5930 5964 "features.ml" 151 5930 5965
+)
+"features.ml" 151 5930 5983 "features.ml" 151 5930 5984
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"features.ml" 151 5930 5985 "features.ml" 151 5930 5987
+type(
+  int
+)
+ident(
+  int_ref mv "features.ml" 151 5930 5971 "features.ml" 151 5930 5973
+)
+"features.ml" 151 5930 5981 "features.ml" 151 5930 5987
+type(
+  bool
+)
+"features.ml" 151 5930 5994 "features.ml" 151 5930 5995
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref k "features.ml" 151 5930 5962 "features.ml" 151 5930 5963
+)
+"features.ml" 151 5930 5997 "features.ml" 151 5930 5998
+type(
+  int
+)
+ident(
+  int_ref v "features.ml" 151 5930 5964 "features.ml" 151 5930 5965
+)
+"features.ml" 151 5930 5993 "features.ml" 151 5930 5999
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 151 5930 6006 "features.ml" 151 5930 6008
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref mk "features.ml" 151 5930 5967 "features.ml" 151 5930 5969
+)
+"features.ml" 151 5930 6010 "features.ml" 151 5930 6012
+type(
+  int
+)
+ident(
+  int_ref mv "features.ml" 151 5930 5971 "features.ml" 151 5930 5973
+)
+"features.ml" 151 5930 6005 "features.ml" 151 5930 6013
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 151 5930 5978 "features.ml" 151 5930 6013
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 151 5930 5957 "features.ml" 151 5930 6014
+type(
+  Cnf.Im.key -> int -> Cnf.Im.key * int -> Cnf.Im.key * int
+)
+"features.ml" 151 5930 6015 "features.ml" 151 5930 6017
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 150 5909 5925 "features.ml" 150 5909 5927
+)
+"features.ml" 151 5930 6019 "features.ml" 151 5930 6020
+type(
+  Cnf.Im.key
+)
+"features.ml" 151 5930 6022 "features.ml" 151 5930 6023
+type(
+  int
+)
+"features.ml" 151 5930 6018 "features.ml" 151 5930 6024
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 151 5930 5949 "features.ml" 151 5930 6024
+call(
+  stack
+)
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 152 6028 6035 "features.ml" 152 6028 6038
+type(
+  Cnf.Im.key
+)
+ident(
+  def mk2 "features.ml" 153 6138 6140 "features.ml" 153 6138 6164
+)
+"features.ml" 152 6028 6040 "features.ml" 152 6028 6043
+type(
+  int
+)
+ident(
+  def mv2 "features.ml" 153 6138 6140 "features.ml" 153 6138 6164
+)
+"features.ml" 152 6028 6034 "features.ml" 152 6028 6044
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 152 6028 6047 "features.ml" 152 6028 6054
+type(
+  (Cnf.Im.key -> int -> Cnf.Im.key * int -> Cnf.Im.key * int) ->
+  int Cnf.Im.t -> Cnf.Im.key * int -> Cnf.Im.key * int
+)
+ident(
+  ext_ref Cnf.Im.fold
+)
+"features.ml" 152 6028 6060 "features.ml" 152 6028 6061
+type(
+  Cnf.Im.key
+)
+ident(
+  def k "features.ml" 152 6028 6062 "features.ml" 152 6028 6123
+)
+"features.ml" 152 6028 6062 "features.ml" 152 6028 6063
+type(
+  int
+)
+ident(
+  def v "features.ml" 152 6028 6064 "features.ml" 152 6028 6123
+)
+"features.ml" 152 6028 6065 "features.ml" 152 6028 6067
+type(
+  Cnf.Im.key
+)
+ident(
+  def mk "features.ml" 152 6028 6076 "features.ml" 152 6028 6123
+)
+"features.ml" 152 6028 6069 "features.ml" 152 6028 6071
+type(
+  int
+)
+ident(
+  def mv "features.ml" 152 6028 6076 "features.ml" 152 6028 6123
+)
+"features.ml" 152 6028 6064 "features.ml" 152 6028 6072
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 152 6028 6079 "features.ml" 152 6028 6080
+type(
+  int
+)
+ident(
+  int_ref v "features.ml" 152 6028 6062 "features.ml" 152 6028 6063
+)
+"features.ml" 152 6028 6081 "features.ml" 152 6028 6082
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"features.ml" 152 6028 6083 "features.ml" 152 6028 6085
+type(
+  int
+)
+ident(
+  int_ref mv "features.ml" 152 6028 6069 "features.ml" 152 6028 6071
+)
+"features.ml" 152 6028 6079 "features.ml" 152 6028 6085
+type(
+  bool
+)
+"features.ml" 152 6028 6086 "features.ml" 152 6028 6088
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( && )
+)
+"features.ml" 152 6028 6089 "features.ml" 152 6028 6090
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref k "features.ml" 152 6028 6060 "features.ml" 152 6028 6061
+)
+"features.ml" 152 6028 6091 "features.ml" 152 6028 6093
+type(
+  Cnf.Im.key -> Cnf.Im.key -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"features.ml" 152 6028 6094 "features.ml" 152 6028 6097
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref mk1 "features.ml" 151 5930 5937 "features.ml" 151 5930 5940
+)
+"features.ml" 152 6028 6089 "features.ml" 152 6028 6097
+type(
+  bool
+)
+"features.ml" 152 6028 6079 "features.ml" 152 6028 6097
+type(
+  bool
+)
+"features.ml" 152 6028 6104 "features.ml" 152 6028 6105
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref k "features.ml" 152 6028 6060 "features.ml" 152 6028 6061
+)
+"features.ml" 152 6028 6107 "features.ml" 152 6028 6108
+type(
+  int
+)
+ident(
+  int_ref v "features.ml" 152 6028 6062 "features.ml" 152 6028 6063
+)
+"features.ml" 152 6028 6103 "features.ml" 152 6028 6109
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 152 6028 6116 "features.ml" 152 6028 6118
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref mk "features.ml" 152 6028 6065 "features.ml" 152 6028 6067
+)
+"features.ml" 152 6028 6120 "features.ml" 152 6028 6122
+type(
+  int
+)
+ident(
+  int_ref mv "features.ml" 152 6028 6069 "features.ml" 152 6028 6071
+)
+"features.ml" 152 6028 6115 "features.ml" 152 6028 6123
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 152 6028 6076 "features.ml" 152 6028 6123
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 152 6028 6055 "features.ml" 152 6028 6124
+type(
+  Cnf.Im.key -> int -> Cnf.Im.key * int -> Cnf.Im.key * int
+)
+"features.ml" 152 6028 6125 "features.ml" 152 6028 6127
+type(
+  int Cnf.Im.t
+)
+ident(
+  int_ref im "features.ml" 150 5909 5925 "features.ml" 150 5909 5927
+)
+"features.ml" 152 6028 6129 "features.ml" 152 6028 6130
+type(
+  Cnf.Im.key
+)
+"features.ml" 152 6028 6132 "features.ml" 152 6028 6133
+type(
+  int
+)
+"features.ml" 152 6028 6128 "features.ml" 152 6028 6134
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 152 6028 6047 "features.ml" 152 6028 6134
+call(
+  stack
+)
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 153 6138 6142 "features.ml" 153 6138 6145
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref mk1 "features.ml" 151 5930 5937 "features.ml" 151 5930 5940
+)
+"features.ml" 153 6138 6147 "features.ml" 153 6138 6150
+type(
+  int
+)
+ident(
+  int_ref mv1 "features.ml" 151 5930 5942 "features.ml" 151 5930 5945
+)
+"features.ml" 153 6138 6141 "features.ml" 153 6138 6151
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 153 6138 6154 "features.ml" 153 6138 6157
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref mk2 "features.ml" 152 6028 6035 "features.ml" 152 6028 6038
+)
+"features.ml" 153 6138 6159 "features.ml" 153 6138 6162
+type(
+  int
+)
+ident(
+  int_ref mv2 "features.ml" 152 6028 6040 "features.ml" 152 6028 6043
+)
+"features.ml" 153 6138 6153 "features.ml" 153 6138 6163
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 153 6138 6140 "features.ml" 153 6138 6164
+type(
+  (Cnf.Im.key * int) * (Cnf.Im.key * int)
+)
+"features.ml" 152 6028 6030 "features.ml" 153 6138 6164
+type(
+  (Cnf.Im.key * int) * (Cnf.Im.key * int)
+)
+"features.ml" 151 5930 5932 "features.ml" 153 6138 6164
+type(
+  (Cnf.Im.key * int) * (Cnf.Im.key * int)
+)
+"features.ml" 155 6168 6176 "features.ml" 155 6168 6185
+type(
+  int list -> Cnf.term -> int list
+)
+ident(
+  def holstep_t "features.ml" 155 6168 6168 "features.ml" 1 0 -1
+)
+"features.ml" 155 6168 6186 "features.ml" 155 6168 6188
+type(
+  int list
+)
+ident(
+  def sf "features.ml" 155 6168 6191 "features.ml" 160 6387 6425
+)
+"features.ml" 156 6200 6206 "features.ml" 156 6200 6207
+type(
+  int
+)
+ident(
+  def i "features.ml" 156 6200 6211 "features.ml" 156 6200 6242
+)
+"features.ml" 156 6200 6204 "features.ml" 156 6200 6207
+type(
+  Cnf.term
+)
+"features.ml" 156 6200 6212 "features.ml" 156 6200 6213
+type(
+  int
+)
+"features.ml" 156 6200 6214 "features.ml" 156 6200 6215
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 156 6200 6216 "features.ml" 156 6200 6231
+type(
+  int
+)
+ident(
+  int_ref features_modulo "features.ml" 32 1107 1111 "features.ml" 32 1107 1126
+)
+"features.ml" 156 6200 6212 "features.ml" 156 6200 6231
+type(
+  int
+)
+"features.ml" 156 6200 6232 "features.ml" 156 6200 6233
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 156 6200 6234 "features.ml" 156 6200 6235
+type(
+  int
+)
+ident(
+  int_ref i "features.ml" 156 6200 6206 "features.ml" 156 6200 6207
+)
+"features.ml" 156 6200 6211 "features.ml" 156 6200 6236
+type(
+  int
+)
+"features.ml" 156 6200 6240 "features.ml" 156 6200 6242
+type(
+  int list
+)
+ident(
+  int_ref sf "features.ml" 155 6168 6186 "features.ml" 155 6168 6188
+)
+"features.ml" 156 6200 6211 "features.ml" 156 6200 6242
+type(
+  int list
+)
+"features.ml" 157 6243 6250 "features.ml" 157 6243 6251
+type(
+  int
+)
+ident(
+  def p "features.ml" 158 6262 6267 "features.ml" 160 6387 6425
+)
+"features.ml" 157 6243 6253 "features.ml" 157 6243 6257
+type(
+  Cnf.term list
+)
+ident(
+  def args "features.ml" 158 6262 6267 "features.ml" 160 6387 6425
+)
+"features.ml" 157 6243 6247 "features.ml" 157 6243 6258
+type(
+  Cnf.term
+)
+"features.ml" 158 6262 6271 "features.ml" 158 6262 6274
+type(
+  int list
+)
+ident(
+  def sf1 "features.ml" 159 6349 6354 "features.ml" 160 6387 6425
+)
+"features.ml" 158 6262 6277 "features.ml" 158 6262 6292
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref List.rev_append
+)
+"features.ml" 158 6262 6294 "features.ml" 158 6262 6307
+type(
+  int array -> int list
+)
+ident(
+  ext_ref Array.to_list
+)
+"features.ml" 158 6262 6309 "features.ml" 158 6262 6319
+type(
+  int -> int -> int array
+)
+ident(
+  ext_ref Array.make
+)
+"features.ml" 158 6262 6321 "features.ml" 158 6262 6332
+type(
+  Cnf.term list -> int
+)
+ident(
+  ext_ref List.length
+)
+"features.ml" 158 6262 6333 "features.ml" 158 6262 6337
+type(
+  Cnf.term list
+)
+ident(
+  int_ref args "features.ml" 157 6243 6253 "features.ml" 157 6243 6257
+)
+"features.ml" 158 6262 6320 "features.ml" 158 6262 6338
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 158 6262 6339 "features.ml" 158 6262 6340
+type(
+  int
+)
+"features.ml" 158 6262 6308 "features.ml" 158 6262 6341
+type(
+  int array
+)
+"features.ml" 158 6262 6293 "features.ml" 158 6262 6342
+call(
+  stack
+)
+type(
+  int list
+)
+"features.ml" 158 6262 6343 "features.ml" 158 6262 6345
+type(
+  int list
+)
+ident(
+  int_ref sf "features.ml" 155 6168 6186 "features.ml" 155 6168 6188
+)
+"features.ml" 158 6262 6277 "features.ml" 158 6262 6345
+call(
+  stack
+)
+type(
+  int list
+)
+"features.ml" 159 6349 6358 "features.ml" 159 6349 6361
+type(
+  int list
+)
+ident(
+  def sf2 "features.ml" 160 6387 6392 "features.ml" 160 6387 6425
+)
+"features.ml" 159 6349 6365 "features.ml" 159 6349 6366
+type(
+  int
+)
+"features.ml" 159 6349 6367 "features.ml" 159 6349 6368
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 159 6349 6369 "features.ml" 159 6349 6373
+type(
+  int -> int
+)
+ident(
+  int_ref fmod "features.ml" 33 1161 1165 "features.ml" 33 1161 1169
+)
+"features.ml" 159 6349 6374 "features.ml" 159 6349 6375
+type(
+  int
+)
+ident(
+  int_ref p "features.ml" 157 6243 6250 "features.ml" 157 6243 6251
+)
+"features.ml" 159 6349 6369 "features.ml" 159 6349 6375
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 159 6349 6364 "features.ml" 159 6349 6376
+type(
+  int
+)
+"features.ml" 159 6349 6380 "features.ml" 159 6349 6383
+type(
+  int list
+)
+ident(
+  int_ref sf1 "features.ml" 158 6262 6271 "features.ml" 158 6262 6274
+)
+"features.ml" 159 6349 6364 "features.ml" 159 6349 6383
+type(
+  int list
+)
+"features.ml" 160 6387 6392 "features.ml" 160 6387 6406
+type(
+  (int list -> Cnf.term -> int list) -> int list -> Cnf.term list -> int list
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 160 6387 6407 "features.ml" 160 6387 6416
+type(
+  int list -> Cnf.term -> int list
+)
+ident(
+  int_ref holstep_t "features.ml" 155 6168 6176 "features.ml" 155 6168 6185
+)
+"features.ml" 160 6387 6417 "features.ml" 160 6387 6420
+type(
+  int list
+)
+ident(
+  int_ref sf2 "features.ml" 159 6349 6358 "features.ml" 159 6349 6361
+)
+"features.ml" 160 6387 6421 "features.ml" 160 6387 6425
+type(
+  Cnf.term list
+)
+ident(
+  int_ref args "features.ml" 157 6243 6253 "features.ml" 157 6243 6257
+)
+"features.ml" 160 6387 6392 "features.ml" 160 6387 6425
+call(
+  tail
+)
+type(
+  int list
+)
+"features.ml" 159 6349 6354 "features.ml" 160 6387 6425
+type(
+  int list
+)
+"features.ml" 158 6262 6267 "features.ml" 160 6387 6425
+type(
+  int list
+)
+"features.ml" 155 6168 6191 "features.ml" 160 6387 6425
+type(
+  Cnf.term -> int list
+)
+"features.ml" 162 6429 6433 "features.ml" 162 6429 6442
+type(
+  int * Cnf.term list -> int list
+)
+ident(
+  def holstep_p "features.ml" 163 6495 6495 "features.ml" 1 0 -1
+)
+"features.ml" 162 6429 6444 "features.ml" 162 6429 6445
+type(
+  int
+)
+ident(
+  def p "features.ml" 162 6429 6455 "features.ml" 162 6429 6492
+)
+"features.ml" 162 6429 6447 "features.ml" 162 6429 6451
+type(
+  Cnf.term list
+)
+ident(
+  def args "features.ml" 162 6429 6455 "features.ml" 162 6429 6492
+)
+"features.ml" 162 6429 6443 "features.ml" 162 6429 6452
+type(
+  int * Cnf.term list
+)
+"features.ml" 162 6429 6455 "features.ml" 162 6429 6463
+type(
+  int list -> int list
+)
+ident(
+  ext_ref List.rev
+)
+"features.ml" 162 6429 6465 "features.ml" 162 6429 6474
+type(
+  int list -> Cnf.term -> int list
+)
+ident(
+  int_ref holstep_t "features.ml" 155 6168 6176 "features.ml" 155 6168 6185
+)
+"features.ml" 162 6429 6475 "features.ml" 162 6429 6477
+type(
+  int list
+)
+"features.ml" 162 6429 6482 "features.ml" 162 6429 6483
+type(
+  int
+)
+ident(
+  int_ref p "features.ml" 162 6429 6444 "features.ml" 162 6429 6445
+)
+"features.ml" 162 6429 6485 "features.ml" 162 6429 6489
+type(
+  Cnf.term list
+)
+ident(
+  int_ref args "features.ml" 162 6429 6447 "features.ml" 162 6429 6451
+)
+"features.ml" 162 6429 6478 "features.ml" 162 6429 6491
+type(
+  Cnf.term
+)
+"features.ml" 162 6429 6464 "features.ml" 162 6429 6492
+call(
+  stack
+)
+type(
+  int list
+)
+"features.ml" 162 6429 6455 "features.ml" 162 6429 6492
+call(
+  tail
+)
+type(
+  int list
+)
+"features.ml" 163 6495 6499 "features.ml" 163 6495 6511
+type(
+  (int * Cnf.term list) list -> int list
+)
+ident(
+  def holstep_list "features.ml" 165 6554 6554 "features.ml" 1 0 -1
+)
+"features.ml" 163 6495 6512 "features.ml" 163 6495 6513
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  def l "features.ml" 163 6495 6516 "features.ml" 163 6495 6550
+)
+"features.ml" 163 6495 6516 "features.ml" 163 6495 6527
+type(
+  int list list -> int list
+)
+ident(
+  ext_ref List.concat
+)
+"features.ml" 163 6495 6529 "features.ml" 163 6495 6537
+type(
+  (int * Cnf.term list -> int list) ->
+  (int * Cnf.term list) list -> int list list
+)
+ident(
+  ext_ref List.map
+)
+"features.ml" 163 6495 6538 "features.ml" 163 6495 6547
+type(
+  int * Cnf.term list -> int list
+)
+ident(
+  int_ref holstep_p "features.ml" 162 6429 6433 "features.ml" 162 6429 6442
+)
+"features.ml" 163 6495 6548 "features.ml" 163 6495 6549
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  int_ref l "features.ml" 163 6495 6512 "features.ml" 163 6495 6513
+)
+"features.ml" 163 6495 6528 "features.ml" 163 6495 6550
+call(
+  stack
+)
+type(
+  int list list
+)
+"features.ml" 163 6495 6516 "features.ml" 163 6495 6550
+call(
+  tail
+)
+type(
+  int list
+)
+"features.ml" 165 6554 6558 "features.ml" 165 6554 6566
+type(
+  (string, int) Hashtbl.t
+)
+ident(
+  def contr_no "features.ml" 167 6627 6627 "features.ml" 1 0 -1
+)
+"features.ml" 165 6554 6569 "features.ml" 165 6554 6583
+type(
+  ?random:bool -> int -> (string, int) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"features.ml" 165 6554 6584 "features.ml" 165 6554 6587
+type(
+  int
+)
+"features.ml" 165 6554 6569 "features.ml" 165 6554 6587
+call(
+  stack
+)
+type(
+  (string, int) Hashtbl.t
+)
+"features.ml" 166 6588 6592 "features.ml" 166 6588 6603
+type(
+  (int, string) Hashtbl.t
+)
+ident(
+  def no_contrstr "features.ml" 167 6627 6627 "features.ml" 1 0 -1
+)
+"features.ml" 166 6588 6606 "features.ml" 166 6588 6620
+type(
+  ?random:bool -> int -> (int, string) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"features.ml" 166 6588 6621 "features.ml" 166 6588 6624
+type(
+  int
+)
+"features.ml" 166 6588 6606 "features.ml" 166 6588 6624
+call(
+  stack
+)
+type(
+  (int, string) Hashtbl.t
+)
+"features.ml" 167 6627 6635 "features.ml" 167 6627 6650
+type(
+  int -> int
+)
+ident(
+  def find_free_contr "features.ml" 167 6627 6627 "features.ml" 1 0 -1
+)
+"features.ml" 167 6627 6651 "features.ml" 167 6627 6652
+type(
+  int
+)
+ident(
+  def n "features.ml" 167 6627 6655 "features.ml" 167 6627 6719
+)
+"features.ml" 167 6627 6658 "features.ml" 167 6627 6669
+type(
+  (int, string) Hashtbl.t -> int -> bool
+)
+ident(
+  ext_ref Hashtbl.mem
+)
+"features.ml" 167 6627 6670 "features.ml" 167 6627 6681
+type(
+  (int, string) Hashtbl.t
+)
+ident(
+  int_ref no_contrstr "features.ml" 166 6588 6592 "features.ml" 166 6588 6603
+)
+"features.ml" 167 6627 6682 "features.ml" 167 6627 6683
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 167 6627 6651 "features.ml" 167 6627 6652
+)
+"features.ml" 167 6627 6658 "features.ml" 167 6627 6683
+call(
+  stack
+)
+type(
+  bool
+)
+"features.ml" 167 6627 6689 "features.ml" 167 6627 6704
+type(
+  int -> int
+)
+ident(
+  int_ref find_free_contr "features.ml" 167 6627 6635 "features.ml" 167 6627 6650
+)
+"features.ml" 167 6627 6706 "features.ml" 167 6627 6707
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 167 6627 6651 "features.ml" 167 6627 6652
+)
+"features.ml" 167 6627 6708 "features.ml" 167 6627 6709
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 167 6627 6710 "features.ml" 167 6627 6711
+type(
+  int
+)
+"features.ml" 167 6627 6705 "features.ml" 167 6627 6712
+type(
+  int
+)
+"features.ml" 167 6627 6689 "features.ml" 167 6627 6712
+call(
+  tail
+)
+type(
+  int
+)
+"features.ml" 167 6627 6718 "features.ml" 167 6627 6719
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 167 6627 6651 "features.ml" 167 6627 6652
+)
+"features.ml" 167 6627 6655 "features.ml" 167 6627 6719
+type(
+  int
+)
+"features.ml" 168 6722 6726 "features.ml" 168 6722 6737
+type(
+  (int, (int * int) list) Hashtbl.t
+)
+ident(
+  def no_contrfea "features.ml" 169 6761 6761 "features.ml" 1 0 -1
+)
+"features.ml" 168 6722 6740 "features.ml" 168 6722 6754
+type(
+  ?random:bool -> int -> (int, (int * int) list) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"features.ml" 168 6722 6755 "features.ml" 168 6722 6758
+type(
+  int
+)
+"features.ml" 168 6722 6740 "features.ml" 168 6722 6758
+call(
+  stack
+)
+type(
+  (int, (int * int) list) Hashtbl.t
+)
+"features.ml" 169 6761 6765 "features.ml" 169 6761 6780
+type(
+  (int, int list) Hashtbl.t
+)
+ident(
+  def no_contrholstep "features.ml" 170 6804 6804 "features.ml" 1 0 -1
+)
+"features.ml" 169 6761 6783 "features.ml" 169 6761 6797
+type(
+  ?random:bool -> int -> (int, int list) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"features.ml" 169 6761 6798 "features.ml" 169 6761 6801
+type(
+  int
+)
+"features.ml" 169 6761 6783 "features.ml" 169 6761 6801
+call(
+  stack
+)
+type(
+  (int, int list) Hashtbl.t
+)
+"features.ml" 170 6804 6808 "features.ml" 170 6804 6820
+type(
+  (int, int) Hashtbl.t
+)
+ident(
+  def no_contrvars "features.ml" 172 6845 6845 "features.ml" 1 0 -1
+)
+"features.ml" 170 6804 6823 "features.ml" 170 6804 6837
+type(
+  ?random:bool -> int -> (int, int) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"features.ml" 170 6804 6838 "features.ml" 170 6804 6841
+type(
+  int
+)
+"features.ml" 170 6804 6823 "features.ml" 170 6804 6841
+call(
+  stack
+)
+type(
+  (int, int) Hashtbl.t
+)
+"features.ml" 172 6845 6849 "features.ml" 172 6845 6861
+type(
+  (int -> int list) -> (int * Cnf.term list) list -> string -> int
+)
+ident(
+  def contr_number "features.ml" 181 7450 7450 "features.ml" 1 0 -1
+)
+"features.ml" 172 6845 6862 "features.ml" 172 6845 6875
+type(
+  int -> int list
+)
+ident(
+  def get_model_fea "features.ml" 172 6845 6876 "features.ml" 180 7400 7447
+)
+"features.ml" 172 6845 6876 "features.ml" 172 6845 6881
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  def contr "features.ml" 172 6845 6882 "features.ml" 180 7400 7447
+)
+"features.ml" 172 6845 6882 "features.ml" 172 6845 6892
+type(
+  string
+)
+ident(
+  def strofcontr "features.ml" 173 6895 6897 "features.ml" 180 7400 7447
+)
+"features.ml" 173 6895 6901 "features.ml" 173 6895 6913
+type(
+  (string, int) Hashtbl.t -> string -> int
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"features.ml" 173 6895 6914 "features.ml" 173 6895 6922
+type(
+  (string, int) Hashtbl.t
+)
+ident(
+  int_ref contr_no "features.ml" 165 6554 6558 "features.ml" 165 6554 6566
+)
+"features.ml" 173 6895 6923 "features.ml" 173 6895 6933
+type(
+  string
+)
+ident(
+  int_ref strofcontr "features.ml" 172 6845 6882 "features.ml" 172 6845 6892
+)
+"features.ml" 173 6895 6901 "features.ml" 173 6895 6933
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 173 6895 6939 "features.ml" 173 6895 6948
+type(
+  exn
+)
+"features.ml" 174 6952 6960 "features.ml" 174 6952 6963
+type(
+  int
+)
+ident(
+  def cno "features.ml" 175 7003 7007 "features.ml" 180 7400 7447
+)
+"features.ml" 174 6952 6966 "features.ml" 174 6952 6981
+type(
+  int -> int
+)
+ident(
+  int_ref find_free_contr "features.ml" 167 6627 6635 "features.ml" 167 6627 6650
+)
+"features.ml" 174 6952 6983 "features.ml" 174 6952 6987
+type(
+  string -> int
+)
+ident(
+  ext_ref Cnf.md5s
+)
+"features.ml" 174 6952 6988 "features.ml" 174 6952 6998
+type(
+  string
+)
+ident(
+  int_ref strofcontr "features.ml" 172 6845 6882 "features.ml" 172 6845 6892
+)
+"features.ml" 174 6952 6982 "features.ml" 174 6952 6999
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 174 6952 6966 "features.ml" 174 6952 6999
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 175 7003 7011 "features.ml" 175 7003 7016
+type(
+  int list
+)
+ident(
+  def start "features.ml" 176 7077 7081 "features.ml" 180 7400 7447
+)
+"features.ml" 175 7003 7022 "features.ml" 175 7003 7023
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"features.ml" 175 7003 7023 "features.ml" 175 7003 7032
+type(
+  bool ref
+)
+ident(
+  int_ref fea_model "features.ml" 11 276 280 "features.ml" 11 276 289
+)
+"features.ml" 175 7003 7022 "features.ml" 175 7003 7032
+type(
+  bool
+)
+"features.ml" 175 7003 7038 "features.ml" 175 7003 7041
+type(
+  int
+)
+ident(
+  int_ref cno "features.ml" 174 6952 6960 "features.ml" 174 6952 6963
+)
+"features.ml" 175 7003 7045 "features.ml" 175 7003 7058
+type(
+  int -> int list
+)
+ident(
+  int_ref get_model_fea "features.ml" 172 6845 6862 "features.ml" 172 6845 6875
+)
+"features.ml" 175 7003 7059 "features.ml" 175 7003 7062
+type(
+  int
+)
+ident(
+  int_ref cno "features.ml" 174 6952 6960 "features.ml" 174 6952 6963
+)
+"features.ml" 175 7003 7045 "features.ml" 175 7003 7062
+call(
+  stack
+)
+type(
+  int list
+)
+"features.ml" 175 7003 7038 "features.ml" 175 7003 7062
+type(
+  int list
+)
+"features.ml" 175 7003 7069 "features.ml" 175 7003 7072
+type(
+  int
+)
+ident(
+  int_ref cno "features.ml" 174 6952 6960 "features.ml" 174 6952 6963
+)
+"features.ml" 175 7003 7068 "features.ml" 175 7003 7073
+type(
+  int list
+)
+"features.ml" 175 7003 7019 "features.ml" 175 7003 7073
+type(
+  int list
+)
+"features.ml" 176 7077 7081 "features.ml" 176 7077 7092
+type(
+  (int, (int * int) list) Hashtbl.t -> int -> (int * int) list -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"features.ml" 176 7077 7093 "features.ml" 176 7077 7104
+type(
+  (int, (int * int) list) Hashtbl.t
+)
+ident(
+  int_ref no_contrfea "features.ml" 168 6722 6726 "features.ml" 168 6722 6737
+)
+"features.ml" 176 7077 7105 "features.ml" 176 7077 7108
+type(
+  int
+)
+ident(
+  int_ref cno "features.ml" 174 6952 6960 "features.ml" 174 6952 6963
+)
+"features.ml" 176 7077 7110 "features.ml" 176 7077 7118
+type(
+  (Cnf.Im.key * int -> int * int) ->
+  (Cnf.Im.key * int) list -> (int * int) list
+)
+ident(
+  ext_ref List.map
+)
+"features.ml" 176 7077 7125 "features.ml" 176 7077 7126
+type(
+  Cnf.Im.key
+)
+ident(
+  def x "features.ml" 176 7077 7134 "features.ml" 176 7077 7162
+)
+"features.ml" 176 7077 7128 "features.ml" 176 7077 7129
+type(
+  int
+)
+ident(
+  def n "features.ml" 176 7077 7134 "features.ml" 176 7077 7162
+)
+"features.ml" 176 7077 7124 "features.ml" 176 7077 7130
+type(
+  Cnf.Im.key * int
+)
+"features.ml" 176 7077 7135 "features.ml" 176 7077 7136
+type(
+  Cnf.Im.key
+)
+ident(
+  int_ref x "features.ml" 176 7077 7125 "features.ml" 176 7077 7126
+)
+"features.ml" 176 7077 7137 "features.ml" 176 7077 7138
+type(
+  Cnf.Im.key -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"features.ml" 176 7077 7139 "features.ml" 176 7077 7140
+type(
+  int
+)
+"features.ml" 176 7077 7141 "features.ml" 176 7077 7142
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( * )
+)
+"features.ml" 176 7077 7143 "features.ml" 176 7077 7158
+type(
+  int
+)
+ident(
+  int_ref features_modulo "features.ml" 32 1107 1111 "features.ml" 32 1107 1126
+)
+"features.ml" 176 7077 7139 "features.ml" 176 7077 7158
+type(
+  int
+)
+"features.ml" 176 7077 7135 "features.ml" 176 7077 7158
+type(
+  int
+)
+"features.ml" 176 7077 7160 "features.ml" 176 7077 7161
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 176 7077 7128 "features.ml" 176 7077 7129
+)
+"features.ml" 176 7077 7134 "features.ml" 176 7077 7162
+type(
+  int * int
+)
+"features.ml" 176 7077 7119 "features.ml" 176 7077 7163
+type(
+  Cnf.Im.key * int -> int * int
+)
+"features.ml" 176 7077 7165 "features.ml" 176 7077 7175
+type(
+  Cnf.term Cnf.Im.t ->
+  int list -> (int * Cnf.term list) list -> (Cnf.Im.key * int) list
+)
+ident(
+  int_ref ubit2_list "features.ml" 129 4963 4967 "features.ml" 129 4963 4977
+)
+"features.ml" 176 7077 7176 "features.ml" 176 7077 7185
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.empty_sub
+)
+"features.ml" 176 7077 7186 "features.ml" 176 7077 7191
+type(
+  int list
+)
+ident(
+  int_ref start "features.ml" 175 7003 7011 "features.ml" 175 7003 7016
+)
+"features.ml" 176 7077 7192 "features.ml" 176 7077 7197
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  int_ref contr "features.ml" 172 6845 6876 "features.ml" 172 6845 6881
+)
+"features.ml" 176 7077 7164 "features.ml" 176 7077 7198
+call(
+  stack
+)
+type(
+  (Cnf.Im.key * int) list
+)
+"features.ml" 176 7077 7109 "features.ml" 176 7077 7199
+call(
+  stack
+)
+type(
+  (int * int) list
+)
+"features.ml" 176 7077 7081 "features.ml" 176 7077 7199
+call(
+  stack
+)
+type(
+  unit
+)
+"features.ml" 177 7201 7205 "features.ml" 177 7201 7216
+type(
+  (int, int list) Hashtbl.t -> int -> int list -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"features.ml" 177 7201 7217 "features.ml" 177 7201 7232
+type(
+  (int, int list) Hashtbl.t
+)
+ident(
+  int_ref no_contrholstep "features.ml" 169 6761 6765 "features.ml" 169 6761 6780
+)
+"features.ml" 177 7201 7233 "features.ml" 177 7201 7236
+type(
+  int
+)
+ident(
+  int_ref cno "features.ml" 174 6952 6960 "features.ml" 174 6952 6963
+)
+"features.ml" 177 7201 7238 "features.ml" 177 7201 7250
+type(
+  (int * Cnf.term list) list -> int list
+)
+ident(
+  int_ref holstep_list "features.ml" 163 6495 6499 "features.ml" 163 6495 6511
+)
+"features.ml" 177 7201 7251 "features.ml" 177 7201 7256
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  int_ref contr "features.ml" 172 6845 6876 "features.ml" 172 6845 6881
+)
+"features.ml" 177 7201 7237 "features.ml" 177 7201 7257
+call(
+  stack
+)
+type(
+  int list
+)
+"features.ml" 177 7201 7205 "features.ml" 177 7201 7257
+call(
+  stack
+)
+type(
+  unit
+)
+"features.ml" 178 7259 7263 "features.ml" 178 7259 7274
+type(
+  (int, int) Hashtbl.t -> int -> int -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"features.ml" 178 7259 7275 "features.ml" 178 7259 7287
+type(
+  (int, int) Hashtbl.t
+)
+ident(
+  int_ref no_contrvars "features.ml" 170 6804 6808 "features.ml" 170 6804 6820
+)
+"features.ml" 178 7259 7288 "features.ml" 178 7259 7291
+type(
+  int
+)
+ident(
+  int_ref cno "features.ml" 174 6952 6960 "features.ml" 174 6952 6963
+)
+"features.ml" 178 7259 7293 "features.ml" 178 7259 7304
+type(
+  int Cnf.Im.t -> int
+)
+ident(
+  ext_ref Cnf.Im.cardinal
+)
+"features.ml" 178 7259 7306 "features.ml" 178 7259 7320
+type(
+  (int Cnf.Im.t -> int * Cnf.term list -> int Cnf.Im.t) ->
+  int Cnf.Im.t -> (int * Cnf.term list) list -> int Cnf.Im.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 178 7259 7322 "features.ml" 178 7259 7330
+type(
+  Cnf.term Cnf.Im.t -> int Cnf.Im.t -> int * Cnf.term list -> int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.lit_vars
+)
+"features.ml" 178 7259 7331 "features.ml" 178 7259 7339
+type(
+  Cnf.term Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.empty
+)
+"features.ml" 178 7259 7321 "features.ml" 178 7259 7340
+call(
+  stack
+)
+type(
+  int Cnf.Im.t -> int * Cnf.term list -> int Cnf.Im.t
+)
+"features.ml" 178 7259 7341 "features.ml" 178 7259 7349
+type(
+  int Cnf.Im.t
+)
+ident(
+  ext_ref Cnf.Im.empty
+)
+"features.ml" 178 7259 7350 "features.ml" 178 7259 7355
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  int_ref contr "features.ml" 172 6845 6876 "features.ml" 172 6845 6881
+)
+"features.ml" 178 7259 7305 "features.ml" 178 7259 7356
+call(
+  stack
+)
+type(
+  int Cnf.Im.t
+)
+"features.ml" 178 7259 7292 "features.ml" 178 7259 7357
+call(
+  stack
+)
+type(
+  int
+)
+"features.ml" 178 7259 7263 "features.ml" 178 7259 7357
+call(
+  stack
+)
+type(
+  unit
+)
+"features.ml" 179 7359 7363 "features.ml" 179 7359 7374
+type(
+  (string, int) Hashtbl.t -> string -> int -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"features.ml" 179 7359 7375 "features.ml" 179 7359 7383
+type(
+  (string, int) Hashtbl.t
+)
+ident(
+  int_ref contr_no "features.ml" 165 6554 6558 "features.ml" 165 6554 6566
+)
+"features.ml" 179 7359 7384 "features.ml" 179 7359 7394
+type(
+  string
+)
+ident(
+  int_ref strofcontr "features.ml" 172 6845 6882 "features.ml" 172 6845 6892
+)
+"features.ml" 179 7359 7395 "features.ml" 179 7359 7398
+type(
+  int
+)
+ident(
+  int_ref cno "features.ml" 174 6952 6960 "features.ml" 174 6952 6963
+)
+"features.ml" 179 7359 7363 "features.ml" 179 7359 7398
+call(
+  stack
+)
+type(
+  unit
+)
+"features.ml" 180 7400 7404 "features.ml" 180 7400 7415
+type(
+  (int, string) Hashtbl.t -> int -> string -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"features.ml" 180 7400 7416 "features.ml" 180 7400 7427
+type(
+  (int, string) Hashtbl.t
+)
+ident(
+  int_ref no_contrstr "features.ml" 166 6588 6592 "features.ml" 166 6588 6603
+)
+"features.ml" 180 7400 7428 "features.ml" 180 7400 7431
+type(
+  int
+)
+ident(
+  int_ref cno "features.ml" 174 6952 6960 "features.ml" 174 6952 6963
+)
+"features.ml" 180 7400 7432 "features.ml" 180 7400 7442
+type(
+  string
+)
+ident(
+  int_ref strofcontr "features.ml" 172 6845 6882 "features.ml" 172 6845 6892
+)
+"features.ml" 180 7400 7404 "features.ml" 180 7400 7442
+call(
+  stack
+)
+type(
+  unit
+)
+"features.ml" 180 7400 7444 "features.ml" 180 7400 7447
+type(
+  int
+)
+ident(
+  int_ref cno "features.ml" 174 6952 6960 "features.ml" 174 6952 6963
+)
+"features.ml" 180 7400 7404 "features.ml" 180 7400 7447
+type(
+  int
+)
+"features.ml" 179 7359 7363 "features.ml" 180 7400 7447
+type(
+  int
+)
+"features.ml" 178 7259 7263 "features.ml" 180 7400 7447
+type(
+  int
+)
+"features.ml" 177 7201 7205 "features.ml" 180 7400 7447
+type(
+  int
+)
+"features.ml" 176 7077 7081 "features.ml" 180 7400 7447
+type(
+  int
+)
+"features.ml" 175 7003 7007 "features.ml" 180 7400 7447
+type(
+  int
+)
+"features.ml" 174 6952 6956 "features.ml" 180 7400 7447
+type(
+  int
+)
+"features.ml" 173 6895 6897 "features.ml" 180 7400 7447
+type(
+  int
+)
+"features.ml" 181 7450 7454 "features.ml" 181 7450 7469
+type(
+  int * Cnf.term list -> Cnf.form
+)
+ident(
+  def neg_atom_of_lit "features.ml" 182 7533 7533 "features.ml" 1 0 -1
+)
+"features.ml" 181 7450 7472 "features.ml" 181 7450 7473
+type(
+  int
+)
+ident(
+  def p "features.ml" 181 7450 7486 "features.ml" 181 7450 7530
+)
+"features.ml" 181 7450 7475 "features.ml" 181 7450 7476
+type(
+  Cnf.term list
+)
+ident(
+  def l "features.ml" 181 7450 7486 "features.ml" 181 7450 7530
+)
+"features.ml" 181 7450 7471 "features.ml" 181 7450 7477
+type(
+  int * Cnf.term list
+)
+"features.ml" 181 7450 7481 "features.ml" 181 7450 7482
+ident(
+  def a "features.ml" 181 7450 7486 "features.ml" 181 7450 7530
+)
+"features.ml" 181 7450 7470 "features.ml" 181 7450 7483
+type(
+  int * Cnf.term list
+)
+"features.ml" 181 7450 7489 "features.ml" 181 7450 7490
+type(
+  int
+)
+ident(
+  int_ref p "features.ml" 181 7450 7472 "features.ml" 181 7450 7473
+)
+"features.ml" 181 7450 7491 "features.ml" 181 7450 7492
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"features.ml" 181 7450 7493 "features.ml" 181 7450 7494
+type(
+  int
+)
+"features.ml" 181 7450 7489 "features.ml" 181 7450 7494
+type(
+  bool
+)
+"features.ml" 181 7450 7510 "features.ml" 181 7450 7511
+type(
+  int * Cnf.term list
+)
+ident(
+  int_ref a "features.ml" 181 7450 7470 "features.ml" 181 7450 7483
+)
+"features.ml" 181 7450 7504 "features.ml" 181 7450 7512
+type(
+  Cnf.form
+)
+"features.ml" 181 7450 7500 "features.ml" 181 7450 7512
+type(
+  Cnf.form
+)
+"features.ml" 181 7450 7524 "features.ml" 181 7450 7525
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.( ~- )
+)
+"features.ml" 181 7450 7525 "features.ml" 181 7450 7526
+type(
+  int
+)
+ident(
+  int_ref p "features.ml" 181 7450 7472 "features.ml" 181 7450 7473
+)
+"features.ml" 181 7450 7524 "features.ml" 181 7450 7526
+type(
+  int
+)
+"features.ml" 181 7450 7528 "features.ml" 181 7450 7529
+type(
+  Cnf.term list
+)
+ident(
+  int_ref l "features.ml" 181 7450 7475 "features.ml" 181 7450 7476
+)
+"features.ml" 181 7450 7523 "features.ml" 181 7450 7530
+type(
+  int * Cnf.term list
+)
+"features.ml" 181 7450 7518 "features.ml" 181 7450 7530
+type(
+  Cnf.form
+)
+"features.ml" 181 7450 7486 "features.ml" 181 7450 7530
+type(
+  Cnf.form
+)
+"features.ml" 182 7533 7537 "features.ml" 182 7533 7548
+type(
+  int * Cnf.term list -> Cnf.form
+)
+ident(
+  def atom_of_lit "features.ml" 183 7612 7612 "features.ml" 1 0 -1
+)
+"features.ml" 182 7533 7551 "features.ml" 182 7533 7552
+type(
+  int
+)
+ident(
+  def p "features.ml" 182 7533 7565 "features.ml" 182 7533 7609
+)
+"features.ml" 182 7533 7554 "features.ml" 182 7533 7555
+type(
+  Cnf.term list
+)
+ident(
+  def l "features.ml" 182 7533 7565 "features.ml" 182 7533 7609
+)
+"features.ml" 182 7533 7550 "features.ml" 182 7533 7556
+type(
+  int * Cnf.term list
+)
+"features.ml" 182 7533 7560 "features.ml" 182 7533 7561
+ident(
+  def a "features.ml" 182 7533 7565 "features.ml" 182 7533 7609
+)
+"features.ml" 182 7533 7549 "features.ml" 182 7533 7562
+type(
+  int * Cnf.term list
+)
+"features.ml" 182 7533 7568 "features.ml" 182 7533 7569
+type(
+  int
+)
+ident(
+  int_ref p "features.ml" 182 7533 7551 "features.ml" 182 7533 7552
+)
+"features.ml" 182 7533 7570 "features.ml" 182 7533 7571
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"features.ml" 182 7533 7572 "features.ml" 182 7533 7573
+type(
+  int
+)
+"features.ml" 182 7533 7568 "features.ml" 182 7533 7573
+type(
+  bool
+)
+"features.ml" 182 7533 7584 "features.ml" 182 7533 7585
+type(
+  int * Cnf.term list
+)
+ident(
+  int_ref a "features.ml" 182 7533 7549 "features.ml" 182 7533 7562
+)
+"features.ml" 182 7533 7579 "features.ml" 182 7533 7585
+type(
+  Cnf.form
+)
+"features.ml" 182 7533 7602 "features.ml" 182 7533 7603
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.( ~- )
+)
+"features.ml" 182 7533 7603 "features.ml" 182 7533 7604
+type(
+  int
+)
+ident(
+  int_ref p "features.ml" 182 7533 7551 "features.ml" 182 7533 7552
+)
+"features.ml" 182 7533 7602 "features.ml" 182 7533 7604
+type(
+  int
+)
+"features.ml" 182 7533 7606 "features.ml" 182 7533 7607
+type(
+  Cnf.term list
+)
+ident(
+  int_ref l "features.ml" 182 7533 7554 "features.ml" 182 7533 7555
+)
+"features.ml" 182 7533 7601 "features.ml" 182 7533 7608
+type(
+  int * Cnf.term list
+)
+"features.ml" 182 7533 7595 "features.ml" 182 7533 7609
+type(
+  Cnf.form
+)
+"features.ml" 182 7533 7591 "features.ml" 182 7533 7609
+type(
+  Cnf.form
+)
+"features.ml" 182 7533 7565 "features.ml" 182 7533 7609
+type(
+  Cnf.form
+)
+"features.ml" 183 7612 7616 "features.ml" 183 7612 7631
+type(
+  int * Cnf.term list -> (int * Cnf.term list) list -> string
+)
+ident(
+  def string_of_contr "features.ml" 187 7790 7790 "features.ml" 1 0 -1
+)
+"features.ml" 183 7612 7632 "features.ml" 183 7612 7635
+type(
+  int * Cnf.term list
+)
+ident(
+  def lit "features.ml" 183 7612 7636 "features.ml" 185 7705 7786
+)
+"features.ml" 183 7612 7636 "features.ml" 183 7612 7640
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  def rest "features.ml" 184 7643 7645 "features.ml" 185 7705 7786
+)
+"features.ml" 184 7643 7645 "features.ml" 184 7643 7659
+type(
+  Cnf.form -> string
+)
+ident(
+  ext_ref Fof.string_of_form
+)
+"features.ml" 184 7643 7661 "features.ml" 184 7643 7675
+type(
+  Cnf.form -> Cnf.form
+)
+ident(
+  ext_ref Fof.rename_unbound
+)
+"features.ml" 184 7643 7677 "features.ml" 184 7643 7692
+type(
+  (int * Cnf.term list -> Cnf.form -> Cnf.form) ->
+  (int * Cnf.term list) list -> Cnf.form -> Cnf.form
+)
+ident(
+  ext_ref List.fold_right
+)
+"features.ml" 184 7643 7698 "features.ml" 184 7643 7699
+type(
+  int * Cnf.term list
+)
+ident(
+  def a "features.ml" 184 7643 7700 "features.ml" 185 7705 7740
+)
+"features.ml" 184 7643 7700 "features.ml" 184 7643 7701
+type(
+  Cnf.form
+)
+ident(
+  def b "features.ml" 185 7705 7709 "features.ml" 185 7705 7740
+)
+"features.ml" 185 7705 7723 "features.ml" 185 7705 7734
+type(
+  int * Cnf.term list -> Cnf.form
+)
+ident(
+  int_ref atom_of_lit "features.ml" 182 7533 7537 "features.ml" 182 7533 7548
+)
+"features.ml" 185 7705 7735 "features.ml" 185 7705 7736
+type(
+  int * Cnf.term list
+)
+ident(
+  int_ref a "features.ml" 184 7643 7698 "features.ml" 184 7643 7699
+)
+"features.ml" 185 7705 7723 "features.ml" 185 7705 7736
+call(
+  stack
+)
+type(
+  Cnf.form
+)
+"features.ml" 185 7705 7738 "features.ml" 185 7705 7739
+type(
+  Cnf.form
+)
+ident(
+  int_ref b "features.ml" 184 7643 7700 "features.ml" 184 7643 7701
+)
+"features.ml" 185 7705 7709 "features.ml" 185 7705 7740
+type(
+  Cnf.form
+)
+"features.ml" 184 7643 7693 "features.ml" 185 7705 7741
+type(
+  int * Cnf.term list -> Cnf.form -> Cnf.form
+)
+"features.ml" 185 7705 7743 "features.ml" 185 7705 7752
+type(
+  (int * Cnf.term list -> int * Cnf.term list -> int) ->
+  (int * Cnf.term list) list -> (int * Cnf.term list) list
+)
+ident(
+  ext_ref List.sort
+)
+"features.ml" 185 7705 7753 "features.ml" 185 7705 7760
+type(
+  int * Cnf.term list -> int * Cnf.term list -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"features.ml" 185 7705 7761 "features.ml" 185 7705 7765
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  int_ref rest "features.ml" 183 7612 7636 "features.ml" 183 7612 7640
+)
+"features.ml" 185 7705 7742 "features.ml" 185 7705 7766
+call(
+  stack
+)
+type(
+  (int * Cnf.term list) list
+)
+"features.ml" 185 7705 7768 "features.ml" 185 7705 7779
+type(
+  int * Cnf.term list -> Cnf.form
+)
+ident(
+  int_ref atom_of_lit "features.ml" 182 7533 7537 "features.ml" 182 7533 7548
+)
+"features.ml" 185 7705 7780 "features.ml" 185 7705 7783
+type(
+  int * Cnf.term list
+)
+ident(
+  int_ref lit "features.ml" 183 7612 7632 "features.ml" 183 7612 7635
+)
+"features.ml" 185 7705 7767 "features.ml" 185 7705 7784
+call(
+  stack
+)
+type(
+  Cnf.form
+)
+"features.ml" 184 7643 7676 "features.ml" 185 7705 7785
+call(
+  stack
+)
+type(
+  Cnf.form
+)
+"features.ml" 184 7643 7660 "features.ml" 185 7705 7786
+call(
+  stack
+)
+type(
+  Cnf.form
+)
+"features.ml" 184 7643 7645 "features.ml" 185 7705 7786
+call(
+  tail
+)
+type(
+  string
+)
+"features.ml" 187 7790 7794 "features.ml" 187 7790 7804
+type(
+  int -> string
+)
+ident(
+  def str_of_fea "features.ml" 189 7889 7889 "features.ml" 1 0 -1
+)
+"features.ml" 187 7790 7805 "features.ml" 187 7790 7806
+type(
+  int
+)
+ident(
+  def n "features.ml" 187 7790 7809 "features.ml" 187 7790 7885
+)
+"features.ml" 187 7790 7813 "features.ml" 187 7790 7825
+type(
+  (int, string) Hashtbl.t -> int -> string
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"features.ml" 187 7790 7826 "features.ml" 187 7790 7833
+type(
+  (int, string) Hashtbl.t
+)
+ident(
+  ext_ref Cnf.no_cnst
+)
+"features.ml" 187 7790 7834 "features.ml" 187 7790 7835
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 187 7790 7805 "features.ml" 187 7790 7806
+)
+"features.ml" 187 7790 7813 "features.ml" 187 7790 7835
+call(
+  stack
+)
+type(
+  string
+)
+"features.ml" 187 7790 7841 "features.ml" 187 7790 7850
+type(
+  exn
+)
+"features.ml" 187 7790 7854 "features.ml" 187 7790 7857
+type(
+  string
+)
+"features.ml" 187 7790 7858 "features.ml" 187 7790 7859
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"features.ml" 187 7790 7860 "features.ml" 187 7790 7872
+type(
+  (int, string) Hashtbl.t -> int -> string
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"features.ml" 187 7790 7873 "features.ml" 187 7790 7880
+type(
+  (int, string) Hashtbl.t
+)
+ident(
+  ext_ref Cnf.no_cnst
+)
+"features.ml" 187 7790 7882 "features.ml" 187 7790 7883
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.( ~- )
+)
+"features.ml" 187 7790 7883 "features.ml" 187 7790 7884
+type(
+  int
+)
+ident(
+  int_ref n "features.ml" 187 7790 7805 "features.ml" 187 7790 7806
+)
+"features.ml" 187 7790 7881 "features.ml" 187 7790 7885
+type(
+  int
+)
+"features.ml" 187 7790 7860 "features.ml" 187 7790 7885
+call(
+  stack
+)
+type(
+  string
+)
+"features.ml" 187 7790 7854 "features.ml" 187 7790 7885
+call(
+  tail
+)
+type(
+  string
+)
+"features.ml" 187 7790 7809 "features.ml" 187 7790 7885
+type(
+  string
+)
+"features.ml" 189 7889 7948 "features.ml" 189 7889 7955
+type(
+  'a -> 'a -> int
+)
+ident(
+  def compare "features.ml" 189 7889 7965 "features.ml" 189 7889 7969
+)
+"features.ml" 189 7889 7958 "features.ml" 189 7889 7965
+type(
+  'a -> 'a -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"features.ml" 189 7889 7901 "features.ml" 189 7889 7970
+call(
+  stack
+)
+"features.ml" 191 7974 7982 "features.ml" 191 7974 7995
+type(
+  Cnf.term -> Cnf.term
+)
+ident(
+  def normalize_var "features.ml" 191 7974 7974 "features.ml" 1 0 -1
+)
+"features.ml" 192 8007 8013 "features.ml" 192 8007 8014
+type(
+  int
+)
+ident(
+  def n "features.ml" 192 8007 8018 "features.ml" 192 8007 8021
+)
+"features.ml" 192 8007 8011 "features.ml" 192 8007 8014
+type(
+  Cnf.term
+)
+"features.ml" 192 8007 8020 "features.ml" 192 8007 8021
+type(
+  int
+)
+"features.ml" 192 8007 8018 "features.ml" 192 8007 8021
+type(
+  Cnf.term
+)
+"features.ml" 193 8022 8029 "features.ml" 193 8022 8030
+type(
+  int
+)
+ident(
+  def p "features.ml" 193 8022 8038 "features.ml" 193 8022 8069
+)
+"features.ml" 193 8022 8032 "features.ml" 193 8022 8033
+type(
+  Cnf.term list
+)
+ident(
+  def l "features.ml" 193 8022 8038 "features.ml" 193 8022 8069
+)
+"features.ml" 193 8022 8026 "features.ml" 193 8022 8034
+type(
+  Cnf.term
+)
+"features.ml" 193 8022 8041 "features.ml" 193 8022 8042
+type(
+  int
+)
+ident(
+  int_ref p "features.ml" 193 8022 8029 "features.ml" 193 8022 8030
+)
+"features.ml" 193 8022 8044 "features.ml" 193 8022 8052
+type(
+  (Cnf.term -> Cnf.term) -> Cnf.term list -> Cnf.term list
+)
+ident(
+  ext_ref List.map
+)
+"features.ml" 193 8022 8053 "features.ml" 193 8022 8066
+type(
+  Cnf.term -> Cnf.term
+)
+ident(
+  int_ref normalize_var "features.ml" 191 7974 7982 "features.ml" 191 7974 7995
+)
+"features.ml" 193 8022 8067 "features.ml" 193 8022 8068
+type(
+  Cnf.term list
+)
+ident(
+  int_ref l "features.ml" 193 8022 8032 "features.ml" 193 8022 8033
+)
+"features.ml" 193 8022 8044 "features.ml" 193 8022 8068
+call(
+  stack
+)
+type(
+  Cnf.term list
+)
+"features.ml" 193 8022 8038 "features.ml" 193 8022 8069
+type(
+  Cnf.term
+)
+"features.ml" 191 7974 7998 "features.ml" 193 8022 8069
+type(
+  Cnf.term -> Cnf.term
+)
+"features.ml" 195 8073 8077 "features.ml" 195 8073 8086
+type(
+  float list -> float list
+)
+ident(
+  def normalize "features.ml" 197 8131 8163 "features.ml" 1 0 -1
+)
+"features.ml" 195 8073 8087 "features.ml" 195 8073 8088
+type(
+  float list
+)
+ident(
+  def l "features.ml" 196 8091 8093 "features.ml" 197 8131 8163
+)
+"features.ml" 196 8091 8097 "features.ml" 196 8091 8100
+type(
+  float
+)
+ident(
+  def sum "features.ml" 197 8131 8133 "features.ml" 197 8131 8163
+)
+"features.ml" 196 8091 8103 "features.ml" 196 8091 8117
+type(
+  (float -> float -> float) -> float -> float list -> float
+)
+ident(
+  ext_ref List.fold_left
+)
+"features.ml" 196 8091 8118 "features.ml" 196 8091 8122
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( +. )
+)
+"features.ml" 196 8091 8123 "features.ml" 196 8091 8125
+type(
+  float
+)
+"features.ml" 196 8091 8126 "features.ml" 196 8091 8127
+type(
+  float list
+)
+ident(
+  int_ref l "features.ml" 195 8073 8087 "features.ml" 195 8073 8088
+)
+"features.ml" 196 8091 8103 "features.ml" 196 8091 8127
+call(
+  stack
+)
+type(
+  float
+)
+"features.ml" 197 8131 8133 "features.ml" 197 8131 8141
+type(
+  (float -> float) -> float list -> float list
+)
+ident(
+  ext_ref List.map
+)
+"features.ml" 197 8131 8147 "features.ml" 197 8131 8148
+type(
+  float
+)
+ident(
+  def v "features.ml" 197 8131 8152 "features.ml" 197 8131 8160
+)
+"features.ml" 197 8131 8152 "features.ml" 197 8131 8153
+type(
+  float
+)
+ident(
+  int_ref v "features.ml" 197 8131 8147 "features.ml" 197 8131 8148
+)
+"features.ml" 197 8131 8154 "features.ml" 197 8131 8156
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( /. )
+)
+"features.ml" 197 8131 8157 "features.ml" 197 8131 8160
+type(
+  float
+)
+ident(
+  int_ref sum "features.ml" 196 8091 8097 "features.ml" 196 8091 8100
+)
+"features.ml" 197 8131 8152 "features.ml" 197 8131 8160
+type(
+  float
+)
+"features.ml" 197 8131 8142 "features.ml" 197 8131 8161
+type(
+  float -> float
+)
+"features.ml" 197 8131 8162 "features.ml" 197 8131 8163
+type(
+  float list
+)
+ident(
+  int_ref l "features.ml" 195 8073 8087 "features.ml" 195 8073 8088
+)
+"features.ml" 197 8131 8133 "features.ml" 197 8131 8163
+call(
+  tail
+)
+type(
+  float list
+)
+"features.ml" 196 8091 8093 "features.ml" 197 8131 8163
+type(
+  float list
+)

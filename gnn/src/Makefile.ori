@@ -1,0 +1,31 @@
+FILES = cnf fof fof_parse fof_lexer features args dtree logic circuit fcop
+FILES_CMX = $(addsuffix .cmx,$(FILES))
+LIB = -L`ocamlopt -where` -lunix -lcamlstr -lasmrun_pic -lm -ldl -L /usr/lib/python3.6/config-3.6m-x86_64-linux-gnu -L /net/software/local/python/3.6.0/lib/ -lpython3.6m
+
+all: test fcoplib.so
+
+fcoplib.so: cint.o oo.o
+	gcc -shared -Wl,-soname,fcoplib -o fcoplib.so -fPIC $^ $(LIB)
+
+oo.o: $(FILES_CMX)
+	ocamlopt -output-obj -o oo.o str.cmxa unix.cmxa $(FILES_CMX)
+
+.c.o:
+	gcc -c -fPIC -I /usr/include/python3.6m -o $*.o $<
+
+test: cint.o oo.o test.o
+	gcc -fPIC oo.o cint.o test.o $(LIB) -o test
+
+clean:
+	@ocamlbuild -clean
+	@rm -f fcoplib.so *o *~ *cmi *cmx
+
+%.cmx: %.ml
+	ocamlopt -annot -inline 100 -c $<
+
+%.ml: %.mly
+	ocamlyacc $< # -v
+	rm $(<:y=i)
+
+%_lexer.ml: %_lexer.mll %_parse.ml
+	ocamllex $<

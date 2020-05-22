@@ -1,0 +1,3137 @@
+"cnfpremsel_parse.ml" 5 38 42 "cnfpremsel_parse.ml" 5 38 46
+type(
+  'a array -> int -> int -> unit
+)
+ident(
+  def swap "cnfpremsel_parse.ml" 10 114 114 "cnfpremsel_parse.ml" 1 0 -1
+)
+"cnfpremsel_parse.ml" 5 38 47 "cnfpremsel_parse.ml" 5 38 48
+type(
+  'a array
+)
+ident(
+  def a "cnfpremsel_parse.ml" 5 38 49 "cnfpremsel_parse.ml" 8 96 110
+)
+"cnfpremsel_parse.ml" 5 38 49 "cnfpremsel_parse.ml" 5 38 50
+type(
+  int
+)
+ident(
+  def i "cnfpremsel_parse.ml" 5 38 51 "cnfpremsel_parse.ml" 8 96 110
+)
+"cnfpremsel_parse.ml" 5 38 51 "cnfpremsel_parse.ml" 5 38 52
+type(
+  int
+)
+ident(
+  def j "cnfpremsel_parse.ml" 6 57 59 "cnfpremsel_parse.ml" 8 96 110
+)
+"cnfpremsel_parse.ml" 6 57 63 "cnfpremsel_parse.ml" 6 57 66
+type(
+  'a
+)
+ident(
+  def tmp "cnfpremsel_parse.ml" 7 78 80 "cnfpremsel_parse.ml" 8 96 110
+)
+"cnfpremsel_parse.ml" 6 57 69 "cnfpremsel_parse.ml" 6 57 70
+type(
+  'a array
+)
+ident(
+  int_ref a "cnfpremsel_parse.ml" 5 38 47 "cnfpremsel_parse.ml" 5 38 48
+)
+"cnfpremsel_parse.ml" 6 57 72 "cnfpremsel_parse.ml" 6 57 73
+type(
+  int
+)
+ident(
+  int_ref i "cnfpremsel_parse.ml" 5 38 49 "cnfpremsel_parse.ml" 5 38 50
+)
+"cnfpremsel_parse.ml" 6 57 69 "cnfpremsel_parse.ml" 6 57 74
+type(
+  'a
+)
+"cnfpremsel_parse.ml" 7 78 80 "cnfpremsel_parse.ml" 7 78 81
+type(
+  'a array
+)
+ident(
+  int_ref a "cnfpremsel_parse.ml" 5 38 47 "cnfpremsel_parse.ml" 5 38 48
+)
+"cnfpremsel_parse.ml" 7 78 83 "cnfpremsel_parse.ml" 7 78 84
+type(
+  int
+)
+ident(
+  int_ref i "cnfpremsel_parse.ml" 5 38 49 "cnfpremsel_parse.ml" 5 38 50
+)
+"cnfpremsel_parse.ml" 7 78 89 "cnfpremsel_parse.ml" 7 78 90
+type(
+  'a array
+)
+ident(
+  int_ref a "cnfpremsel_parse.ml" 5 38 47 "cnfpremsel_parse.ml" 5 38 48
+)
+"cnfpremsel_parse.ml" 7 78 92 "cnfpremsel_parse.ml" 7 78 93
+type(
+  int
+)
+ident(
+  int_ref j "cnfpremsel_parse.ml" 5 38 51 "cnfpremsel_parse.ml" 5 38 52
+)
+"cnfpremsel_parse.ml" 7 78 89 "cnfpremsel_parse.ml" 7 78 94
+type(
+  'a
+)
+"cnfpremsel_parse.ml" 7 78 80 "cnfpremsel_parse.ml" 7 78 94
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 8 96 98 "cnfpremsel_parse.ml" 8 96 99
+type(
+  'a array
+)
+ident(
+  int_ref a "cnfpremsel_parse.ml" 5 38 47 "cnfpremsel_parse.ml" 5 38 48
+)
+"cnfpremsel_parse.ml" 8 96 101 "cnfpremsel_parse.ml" 8 96 102
+type(
+  int
+)
+ident(
+  int_ref j "cnfpremsel_parse.ml" 5 38 51 "cnfpremsel_parse.ml" 5 38 52
+)
+"cnfpremsel_parse.ml" 8 96 107 "cnfpremsel_parse.ml" 8 96 110
+type(
+  'a
+)
+ident(
+  int_ref tmp "cnfpremsel_parse.ml" 6 57 63 "cnfpremsel_parse.ml" 6 57 66
+)
+"cnfpremsel_parse.ml" 8 96 98 "cnfpremsel_parse.ml" 8 96 110
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 7 78 80 "cnfpremsel_parse.ml" 8 96 110
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 6 57 59 "cnfpremsel_parse.ml" 8 96 110
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 10 114 118 "cnfpremsel_parse.ml" 10 114 131
+type(
+  'a array -> unit
+)
+ident(
+  def shuffle_array "cnfpremsel_parse.ml" 17 257 257 "cnfpremsel_parse.ml" 1 0 -1
+)
+"cnfpremsel_parse.ml" 10 114 132 "cnfpremsel_parse.ml" 10 114 133
+type(
+  'a array
+)
+ident(
+  def a "cnfpremsel_parse.ml" 11 138 140 "cnfpremsel_parse.ml" 15 247 253
+)
+"cnfpremsel_parse.ml" 11 138 144 "cnfpremsel_parse.ml" 11 138 147
+type(
+  int
+)
+ident(
+  def len "cnfpremsel_parse.ml" 12 168 170 "cnfpremsel_parse.ml" 15 247 253
+)
+"cnfpremsel_parse.ml" 11 138 150 "cnfpremsel_parse.ml" 11 138 162
+type(
+  'a array -> int
+)
+ident(
+  ext_ref Array.length
+)
+"cnfpremsel_parse.ml" 11 138 163 "cnfpremsel_parse.ml" 11 138 164
+type(
+  'a array
+)
+ident(
+  int_ref a "cnfpremsel_parse.ml" 10 114 132 "cnfpremsel_parse.ml" 10 114 133
+)
+"cnfpremsel_parse.ml" 11 138 150 "cnfpremsel_parse.ml" 11 138 164
+type(
+  int
+)
+"cnfpremsel_parse.ml" 12 168 178 "cnfpremsel_parse.ml" 12 168 179
+type(
+  int
+)
+"cnfpremsel_parse.ml" 12 168 183 "cnfpremsel_parse.ml" 12 168 186
+type(
+  int
+)
+ident(
+  int_ref len "cnfpremsel_parse.ml" 11 138 144 "cnfpremsel_parse.ml" 11 138 147
+)
+"cnfpremsel_parse.ml" 12 168 186 "cnfpremsel_parse.ml" 12 168 187
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"cnfpremsel_parse.ml" 12 168 187 "cnfpremsel_parse.ml" 12 168 188
+type(
+  int
+)
+"cnfpremsel_parse.ml" 12 168 183 "cnfpremsel_parse.ml" 12 168 188
+type(
+  int
+)
+"cnfpremsel_parse.ml" 13 192 200 "cnfpremsel_parse.ml" 13 192 201
+type(
+  int
+)
+ident(
+  def r "cnfpremsel_parse.ml" 14 232 236 "cnfpremsel_parse.ml" 14 232 246
+)
+"cnfpremsel_parse.ml" 13 192 204 "cnfpremsel_parse.ml" 13 192 205
+type(
+  int
+)
+ident(
+  int_ref i "cnfpremsel_parse.ml" 12 168 170 "cnfpremsel_parse.ml" 15 247 253
+)
+"cnfpremsel_parse.ml" 13 192 206 "cnfpremsel_parse.ml" 13 192 207
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cnfpremsel_parse.ml" 13 192 208 "cnfpremsel_parse.ml" 13 192 218
+type(
+  int -> int
+)
+ident(
+  ext_ref Random.int
+)
+"cnfpremsel_parse.ml" 13 192 220 "cnfpremsel_parse.ml" 13 192 223
+type(
+  int
+)
+ident(
+  int_ref len "cnfpremsel_parse.ml" 11 138 144 "cnfpremsel_parse.ml" 11 138 147
+)
+"cnfpremsel_parse.ml" 13 192 224 "cnfpremsel_parse.ml" 13 192 225
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"cnfpremsel_parse.ml" 13 192 226 "cnfpremsel_parse.ml" 13 192 227
+type(
+  int
+)
+ident(
+  int_ref i "cnfpremsel_parse.ml" 12 168 170 "cnfpremsel_parse.ml" 15 247 253
+)
+"cnfpremsel_parse.ml" 13 192 219 "cnfpremsel_parse.ml" 13 192 228
+type(
+  int
+)
+"cnfpremsel_parse.ml" 13 192 208 "cnfpremsel_parse.ml" 13 192 228
+call(
+  stack
+)
+type(
+  int
+)
+"cnfpremsel_parse.ml" 13 192 204 "cnfpremsel_parse.ml" 13 192 228
+type(
+  int
+)
+"cnfpremsel_parse.ml" 14 232 236 "cnfpremsel_parse.ml" 14 232 240
+type(
+  'a array -> int -> int -> unit
+)
+ident(
+  int_ref swap "cnfpremsel_parse.ml" 5 38 42 "cnfpremsel_parse.ml" 5 38 46
+)
+"cnfpremsel_parse.ml" 14 232 241 "cnfpremsel_parse.ml" 14 232 242
+type(
+  'a array
+)
+ident(
+  int_ref a "cnfpremsel_parse.ml" 10 114 132 "cnfpremsel_parse.ml" 10 114 133
+)
+"cnfpremsel_parse.ml" 14 232 243 "cnfpremsel_parse.ml" 14 232 244
+type(
+  int
+)
+ident(
+  int_ref i "cnfpremsel_parse.ml" 12 168 170 "cnfpremsel_parse.ml" 15 247 253
+)
+"cnfpremsel_parse.ml" 14 232 245 "cnfpremsel_parse.ml" 14 232 246
+type(
+  int
+)
+ident(
+  int_ref r "cnfpremsel_parse.ml" 13 192 200 "cnfpremsel_parse.ml" 13 192 201
+)
+"cnfpremsel_parse.ml" 14 232 236 "cnfpremsel_parse.ml" 14 232 246
+call(
+  stack
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 13 192 196 "cnfpremsel_parse.ml" 14 232 246
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 12 168 170 "cnfpremsel_parse.ml" 15 247 253
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 11 138 140 "cnfpremsel_parse.ml" 15 247 253
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 17 257 261 "cnfpremsel_parse.ml" 17 257 269
+type(
+  'a list -> 'a list
+)
+ident(
+  def shuffled "cnfpremsel_parse.ml" 22 341 341 "cnfpremsel_parse.ml" 1 0 -1
+)
+"cnfpremsel_parse.ml" 17 257 270 "cnfpremsel_parse.ml" 17 257 271
+type(
+  'a list
+)
+ident(
+  def l "cnfpremsel_parse.ml" 18 274 276 "cnfpremsel_parse.ml" 20 322 339
+)
+"cnfpremsel_parse.ml" 18 274 280 "cnfpremsel_parse.ml" 18 274 281
+type(
+  'a array
+)
+ident(
+  def a "cnfpremsel_parse.ml" 19 303 305 "cnfpremsel_parse.ml" 20 322 339
+)
+"cnfpremsel_parse.ml" 18 274 284 "cnfpremsel_parse.ml" 18 274 297
+type(
+  'a list -> 'a array
+)
+ident(
+  ext_ref Array.of_list
+)
+"cnfpremsel_parse.ml" 18 274 298 "cnfpremsel_parse.ml" 18 274 299
+type(
+  'a list
+)
+ident(
+  int_ref l "cnfpremsel_parse.ml" 17 257 270 "cnfpremsel_parse.ml" 17 257 271
+)
+"cnfpremsel_parse.ml" 18 274 284 "cnfpremsel_parse.ml" 18 274 299
+call(
+  stack
+)
+type(
+  'a array
+)
+"cnfpremsel_parse.ml" 19 303 305 "cnfpremsel_parse.ml" 19 303 318
+type(
+  'a array -> unit
+)
+ident(
+  int_ref shuffle_array "cnfpremsel_parse.ml" 10 114 118 "cnfpremsel_parse.ml" 10 114 131
+)
+"cnfpremsel_parse.ml" 19 303 319 "cnfpremsel_parse.ml" 19 303 320
+type(
+  'a array
+)
+ident(
+  int_ref a "cnfpremsel_parse.ml" 18 274 280 "cnfpremsel_parse.ml" 18 274 281
+)
+"cnfpremsel_parse.ml" 19 303 305 "cnfpremsel_parse.ml" 19 303 320
+call(
+  stack
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 20 322 324 "cnfpremsel_parse.ml" 20 322 337
+type(
+  'a array -> 'a list
+)
+ident(
+  ext_ref Array.to_list
+)
+"cnfpremsel_parse.ml" 20 322 338 "cnfpremsel_parse.ml" 20 322 339
+type(
+  'a array
+)
+ident(
+  int_ref a "cnfpremsel_parse.ml" 18 274 280 "cnfpremsel_parse.ml" 18 274 281
+)
+"cnfpremsel_parse.ml" 20 322 324 "cnfpremsel_parse.ml" 20 322 339
+call(
+  tail
+)
+type(
+  'a list
+)
+"cnfpremsel_parse.ml" 19 303 305 "cnfpremsel_parse.ml" 20 322 339
+type(
+  'a list
+)
+"cnfpremsel_parse.ml" 18 274 276 "cnfpremsel_parse.ml" 20 322 339
+type(
+  'a list
+)
+"cnfpremsel_parse.ml" 22 341 345 "cnfpremsel_parse.ml" 22 341 360
+type(
+  string -> (int * Cnf.term list) list list * int list
+)
+ident(
+  def load_cnfpremsel "cnfpremsel_parse.ml" 38 1141 1141 "cnfpremsel_parse.ml" 1 0 -1
+)
+"cnfpremsel_parse.ml" 22 341 361 "cnfpremsel_parse.ml" 22 341 366
+type(
+  string
+)
+ident(
+  def fname "cnfpremsel_parse.ml" 23 369 371 "cnfpremsel_parse.ml" 36 1102 1137
+)
+"cnfpremsel_parse.ml" 23 369 371 "cnfpremsel_parse.ml" 23 369 383
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Logic.copend
+)
+"cnfpremsel_parse.ml" 23 369 384 "cnfpremsel_parse.ml" 23 369 386
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 23 369 371 "cnfpremsel_parse.ml" 23 369 386
+call(
+  stack
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 24 388 394 "cnfpremsel_parse.ml" 24 388 408
+type(
+  (string * string * Cnf.form) list
+)
+ident(
+  def axioms_ordered "cnfpremsel_parse.ml" 26 472 474 "cnfpremsel_parse.ml" 36 1102 1137
+)
+"cnfpremsel_parse.ml" 24 388 411 "cnfpremsel_parse.ml" 24 388 425
+type(
+  string -> (string * string * Cnf.form) list
+)
+ident(
+  ext_ref Fof_lexer.file
+)
+"cnfpremsel_parse.ml" 24 388 426 "cnfpremsel_parse.ml" 24 388 431
+type(
+  string
+)
+ident(
+  int_ref fname "cnfpremsel_parse.ml" 22 341 361 "cnfpremsel_parse.ml" 22 341 366
+)
+"cnfpremsel_parse.ml" 24 388 411 "cnfpremsel_parse.ml" 24 388 431
+call(
+  stack
+)
+type(
+  (string * string * Cnf.form) list
+)
+"cnfpremsel_parse.ml" 25 432 438 "cnfpremsel_parse.ml" 25 432 446
+type(
+  'a * 'b * 'c -> 'b
+)
+ident(
+  def cnf_type "cnfpremsel_parse.ml" 26 472 474 "cnfpremsel_parse.ml" 36 1102 1137
+)
+"cnfpremsel_parse.ml" 25 432 448 "cnfpremsel_parse.ml" 25 432 453
+type(
+  'a
+)
+ident(
+  def label "cnfpremsel_parse.ml" 25 432 466 "cnfpremsel_parse.ml" 25 432 468
+)
+"cnfpremsel_parse.ml" 25 432 455 "cnfpremsel_parse.ml" 25 432 457
+type(
+  'b
+)
+ident(
+  def ct "cnfpremsel_parse.ml" 25 432 466 "cnfpremsel_parse.ml" 25 432 468
+)
+"cnfpremsel_parse.ml" 25 432 459 "cnfpremsel_parse.ml" 25 432 462
+type(
+  'c
+)
+ident(
+  def cnf "cnfpremsel_parse.ml" 25 432 466 "cnfpremsel_parse.ml" 25 432 468
+)
+"cnfpremsel_parse.ml" 25 432 447 "cnfpremsel_parse.ml" 25 432 463
+type(
+  'a * 'b * 'c
+)
+"cnfpremsel_parse.ml" 25 432 466 "cnfpremsel_parse.ml" 25 432 468
+type(
+  'b
+)
+ident(
+  int_ref ct "cnfpremsel_parse.ml" 25 432 455 "cnfpremsel_parse.ml" 25 432 457
+)
+"cnfpremsel_parse.ml" 26 472 474 "cnfpremsel_parse.ml" 26 472 488
+type(
+  (string * string * Cnf.form) list
+)
+ident(
+  int_ref axioms_ordered "cnfpremsel_parse.ml" 24 388 394 "cnfpremsel_parse.ml" 24 388 408
+)
+"cnfpremsel_parse.ml" 26 472 489 "cnfpremsel_parse.ml" 26 472 491
+type(
+  (string * string * Cnf.form) list ->
+  ((string * string * Cnf.form) list -> unit) -> unit
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"cnfpremsel_parse.ml" 26 472 493 "cnfpremsel_parse.ml" 26 472 502
+type(
+  (string * string * Cnf.form -> unit) ->
+  (string * string * Cnf.form) list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"cnfpremsel_parse.ml" 26 472 509 "cnfpremsel_parse.ml" 26 472 514
+type(
+  string
+)
+ident(
+  def label "cnfpremsel_parse.ml" 27 528 532 "cnfpremsel_parse.ml" 27 528 585
+)
+"cnfpremsel_parse.ml" 26 472 516 "cnfpremsel_parse.ml" 26 472 518
+type(
+  string
+)
+ident(
+  def ct "cnfpremsel_parse.ml" 27 528 532 "cnfpremsel_parse.ml" 27 528 585
+)
+"cnfpremsel_parse.ml" 26 472 520 "cnfpremsel_parse.ml" 26 472 523
+type(
+  Cnf.form
+)
+ident(
+  def cnf "cnfpremsel_parse.ml" 27 528 532 "cnfpremsel_parse.ml" 27 528 585
+)
+"cnfpremsel_parse.ml" 26 472 508 "cnfpremsel_parse.ml" 26 472 524
+type(
+  string * string * Cnf.form
+)
+"cnfpremsel_parse.ml" 27 528 539 "cnfpremsel_parse.ml" 27 528 541
+type(
+  string
+)
+ident(
+  int_ref ct "cnfpremsel_parse.ml" 26 472 516 "cnfpremsel_parse.ml" 26 472 518
+)
+"cnfpremsel_parse.ml" 27 528 542 "cnfpremsel_parse.ml" 27 528 543
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cnfpremsel_parse.ml" 27 528 544 "cnfpremsel_parse.ml" 27 528 558
+type(
+  string
+)
+"cnfpremsel_parse.ml" 27 528 539 "cnfpremsel_parse.ml" 27 528 558
+type(
+  bool
+)
+"cnfpremsel_parse.ml" 27 528 559 "cnfpremsel_parse.ml" 27 528 561
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"cnfpremsel_parse.ml" 27 528 562 "cnfpremsel_parse.ml" 27 528 564
+type(
+  string
+)
+ident(
+  int_ref ct "cnfpremsel_parse.ml" 26 472 516 "cnfpremsel_parse.ml" 26 472 518
+)
+"cnfpremsel_parse.ml" 27 528 565 "cnfpremsel_parse.ml" 27 528 566
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cnfpremsel_parse.ml" 27 528 567 "cnfpremsel_parse.ml" 27 528 584
+type(
+  string
+)
+"cnfpremsel_parse.ml" 27 528 562 "cnfpremsel_parse.ml" 27 528 584
+type(
+  bool
+)
+"cnfpremsel_parse.ml" 27 528 538 "cnfpremsel_parse.ml" 27 528 585
+type(
+  bool
+)
+"cnfpremsel_parse.ml" 27 528 532 "cnfpremsel_parse.ml" 27 528 585
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 26 472 503 "cnfpremsel_parse.ml" 27 528 586
+type(
+  string * string * Cnf.form -> unit
+)
+"cnfpremsel_parse.ml" 26 472 492 "cnfpremsel_parse.ml" 27 528 587
+type(
+  (string * string * Cnf.form) list -> unit
+)
+"cnfpremsel_parse.ml" 26 472 474 "cnfpremsel_parse.ml" 27 528 587
+call(
+  stack
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 28 589 595 "cnfpremsel_parse.ml" 28 589 601
+type(
+  (string * string * Cnf.form) list
+)
+ident(
+  def axioms "cnfpremsel_parse.ml" 30 752 754 "cnfpremsel_parse.ml" 36 1102 1137
+)
+"cnfpremsel_parse.ml" 28 589 617 "cnfpremsel_parse.ml" 28 589 631
+type(
+  (string * string * Cnf.form) list
+)
+ident(
+  int_ref axioms_ordered "cnfpremsel_parse.ml" 24 388 394 "cnfpremsel_parse.ml" 24 388 408
+)
+"cnfpremsel_parse.ml" 30 752 758 "cnfpremsel_parse.ml" 30 752 764
+type(
+  int list
+)
+ident(
+  def labels "cnfpremsel_parse.ml" 32 854 856 "cnfpremsel_parse.ml" 36 1102 1137
+)
+"cnfpremsel_parse.ml" 30 752 767 "cnfpremsel_parse.ml" 30 752 773
+type(
+  (string * string * Cnf.form) list
+)
+ident(
+  int_ref axioms "cnfpremsel_parse.ml" 28 589 595 "cnfpremsel_parse.ml" 28 589 601
+)
+"cnfpremsel_parse.ml" 30 752 774 "cnfpremsel_parse.ml" 30 752 776
+type(
+  (string * string * Cnf.form) list ->
+  ((string * string * Cnf.form) list -> int list) -> int list
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"cnfpremsel_parse.ml" 30 752 777 "cnfpremsel_parse.ml" 30 752 785
+type(
+  (string * string * Cnf.form -> int) ->
+  (string * string * Cnf.form) list -> int list
+)
+ident(
+  ext_ref List.map
+)
+"cnfpremsel_parse.ml" 30 752 792 "cnfpremsel_parse.ml" 30 752 797
+type(
+  string
+)
+ident(
+  def label "cnfpremsel_parse.ml" 30 752 811 "cnfpremsel_parse.ml" 30 752 847
+)
+"cnfpremsel_parse.ml" 30 752 799 "cnfpremsel_parse.ml" 30 752 801
+type(
+  string
+)
+ident(
+  def ct "cnfpremsel_parse.ml" 30 752 811 "cnfpremsel_parse.ml" 30 752 847
+)
+"cnfpremsel_parse.ml" 30 752 803 "cnfpremsel_parse.ml" 30 752 806
+type(
+  Cnf.form
+)
+ident(
+  def cnf "cnfpremsel_parse.ml" 30 752 811 "cnfpremsel_parse.ml" 30 752 847
+)
+"cnfpremsel_parse.ml" 30 752 791 "cnfpremsel_parse.ml" 30 752 807
+type(
+  string * string * Cnf.form
+)
+"cnfpremsel_parse.ml" 30 752 814 "cnfpremsel_parse.ml" 30 752 816
+type(
+  string
+)
+ident(
+  int_ref ct "cnfpremsel_parse.ml" 30 752 799 "cnfpremsel_parse.ml" 30 752 801
+)
+"cnfpremsel_parse.ml" 30 752 817 "cnfpremsel_parse.ml" 30 752 818
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cnfpremsel_parse.ml" 30 752 819 "cnfpremsel_parse.ml" 30 752 833
+type(
+  string
+)
+"cnfpremsel_parse.ml" 30 752 814 "cnfpremsel_parse.ml" 30 752 833
+type(
+  bool
+)
+"cnfpremsel_parse.ml" 30 752 839 "cnfpremsel_parse.ml" 30 752 840
+type(
+  int
+)
+"cnfpremsel_parse.ml" 30 752 846 "cnfpremsel_parse.ml" 30 752 847
+type(
+  int
+)
+"cnfpremsel_parse.ml" 30 752 811 "cnfpremsel_parse.ml" 30 752 847
+type(
+  int
+)
+"cnfpremsel_parse.ml" 30 752 786 "cnfpremsel_parse.ml" 30 752 848
+type(
+  string * string * Cnf.form -> int
+)
+"cnfpremsel_parse.ml" 30 752 777 "cnfpremsel_parse.ml" 30 752 848
+type(
+  (string * string * Cnf.form) list -> int list
+)
+"cnfpremsel_parse.ml" 30 752 767 "cnfpremsel_parse.ml" 30 752 848
+call(
+  stack
+)
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 32 854 860 "cnfpremsel_parse.ml" 32 854 873
+type(
+  'd * 'e * 'f -> 'f
+)
+ident(
+  def remove_header "cnfpremsel_parse.ml" 33 900 902 "cnfpremsel_parse.ml" 36 1102 1137
+)
+"cnfpremsel_parse.ml" 32 854 875 "cnfpremsel_parse.ml" 32 854 880
+type(
+  'd
+)
+ident(
+  def label "cnfpremsel_parse.ml" 32 854 893 "cnfpremsel_parse.ml" 32 854 896
+)
+"cnfpremsel_parse.ml" 32 854 882 "cnfpremsel_parse.ml" 32 854 884
+type(
+  'e
+)
+ident(
+  def ct "cnfpremsel_parse.ml" 32 854 893 "cnfpremsel_parse.ml" 32 854 896
+)
+"cnfpremsel_parse.ml" 32 854 886 "cnfpremsel_parse.ml" 32 854 889
+type(
+  'f
+)
+ident(
+  def cnf "cnfpremsel_parse.ml" 32 854 893 "cnfpremsel_parse.ml" 32 854 896
+)
+"cnfpremsel_parse.ml" 32 854 874 "cnfpremsel_parse.ml" 32 854 890
+type(
+  'd * 'e * 'f
+)
+"cnfpremsel_parse.ml" 32 854 893 "cnfpremsel_parse.ml" 32 854 896
+type(
+  'f
+)
+ident(
+  int_ref cnf "cnfpremsel_parse.ml" 32 854 886 "cnfpremsel_parse.ml" 32 854 889
+)
+"cnfpremsel_parse.ml" 33 900 906 "cnfpremsel_parse.ml" 33 900 912
+type(
+  'g * 'h * Cnf.form -> (int * Cnf.term list) list list
+)
+ident(
+  def to_cnf "cnfpremsel_parse.ml" 35 1051 1053 "cnfpremsel_parse.ml" 36 1102 1137
+)
+"cnfpremsel_parse.ml" 33 900 913 "cnfpremsel_parse.ml" 33 900 914
+type(
+  'g * 'h * Cnf.form
+)
+ident(
+  def c "cnfpremsel_parse.ml" 33 900 917 "cnfpremsel_parse.ml" 34 972 1047
+)
+"cnfpremsel_parse.ml" 33 900 917 "cnfpremsel_parse.ml" 33 900 918
+type(
+  'g * 'h * Cnf.form
+)
+ident(
+  int_ref c "cnfpremsel_parse.ml" 33 900 913 "cnfpremsel_parse.ml" 33 900 914
+)
+"cnfpremsel_parse.ml" 33 900 919 "cnfpremsel_parse.ml" 33 900 921
+type(
+  'g * 'h * Cnf.form -> ('g * 'h * Cnf.form -> Cnf.form) -> Cnf.form
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"cnfpremsel_parse.ml" 33 900 922 "cnfpremsel_parse.ml" 33 900 935
+type(
+  'g * 'h * Cnf.form -> Cnf.form
+)
+ident(
+  int_ref remove_header "cnfpremsel_parse.ml" 32 854 860 "cnfpremsel_parse.ml" 32 854 873
+)
+"cnfpremsel_parse.ml" 33 900 917 "cnfpremsel_parse.ml" 33 900 935
+call(
+  stack
+)
+type(
+  Cnf.form
+)
+"cnfpremsel_parse.ml" 33 900 936 "cnfpremsel_parse.ml" 33 900 938
+type(
+  Cnf.form -> (Cnf.form -> Cnf.form) -> Cnf.form
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"cnfpremsel_parse.ml" 33 900 940 "cnfpremsel_parse.ml" 33 900 952
+type(
+  bool -> Cnf.form -> Cnf.form
+)
+ident(
+  ext_ref Fof.unfold_equiv
+)
+"cnfpremsel_parse.ml" 33 900 953 "cnfpremsel_parse.ml" 33 900 957
+type(
+  bool
+)
+"cnfpremsel_parse.ml" 33 900 939 "cnfpremsel_parse.ml" 33 900 958
+type(
+  Cnf.form -> Cnf.form
+)
+"cnfpremsel_parse.ml" 33 900 917 "cnfpremsel_parse.ml" 33 900 958
+call(
+  stack
+)
+type(
+  Cnf.form
+)
+"cnfpremsel_parse.ml" 33 900 959 "cnfpremsel_parse.ml" 33 900 961
+type(
+  Cnf.form -> (Cnf.form -> Cnf.form) -> Cnf.form
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"cnfpremsel_parse.ml" 33 900 962 "cnfpremsel_parse.ml" 33 900 971
+type(
+  Cnf.form -> Cnf.form
+)
+ident(
+  ext_ref Fof.miniscope
+)
+"cnfpremsel_parse.ml" 33 900 917 "cnfpremsel_parse.ml" 33 900 971
+call(
+  stack
+)
+type(
+  Cnf.form
+)
+"cnfpremsel_parse.ml" 34 972 991 "cnfpremsel_parse.ml" 34 972 993
+type(
+  Cnf.form -> (Cnf.form -> Cnf.form) -> Cnf.form
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"cnfpremsel_parse.ml" 34 972 994 "cnfpremsel_parse.ml" 34 972 1005
+type(
+  Cnf.form -> Cnf.form
+)
+ident(
+  ext_ref Fof.rename_form
+)
+"cnfpremsel_parse.ml" 33 900 917 "cnfpremsel_parse.ml" 34 972 1005
+call(
+  stack
+)
+type(
+  Cnf.form
+)
+"cnfpremsel_parse.ml" 34 972 1006 "cnfpremsel_parse.ml" 34 972 1008
+type(
+  Cnf.form -> (Cnf.form -> Cnf.form) -> Cnf.form
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"cnfpremsel_parse.ml" 34 972 1009 "cnfpremsel_parse.ml" 34 972 1012
+type(
+  Cnf.form -> Cnf.form
+)
+ident(
+  ext_ref Fof.nnf
+)
+"cnfpremsel_parse.ml" 33 900 917 "cnfpremsel_parse.ml" 34 972 1012
+call(
+  stack
+)
+type(
+  Cnf.form
+)
+"cnfpremsel_parse.ml" 34 972 1013 "cnfpremsel_parse.ml" 34 972 1015
+type(
+  Cnf.form -> (Cnf.form -> Cnf.form) -> Cnf.form
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"cnfpremsel_parse.ml" 34 972 1016 "cnfpremsel_parse.ml" 34 972 1022
+type(
+  Cnf.form -> Cnf.form
+)
+ident(
+  ext_ref Fof.skolem
+)
+"cnfpremsel_parse.ml" 33 900 917 "cnfpremsel_parse.ml" 34 972 1022
+call(
+  stack
+)
+type(
+  Cnf.form
+)
+"cnfpremsel_parse.ml" 34 972 1023 "cnfpremsel_parse.ml" 34 972 1025
+type(
+  Cnf.form -> (Cnf.form -> Cnf.form) -> Cnf.form
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"cnfpremsel_parse.ml" 34 972 1026 "cnfpremsel_parse.ml" 34 972 1034
+type(
+  Cnf.form -> Cnf.form
+)
+ident(
+  ext_ref Fof.noforall
+)
+"cnfpremsel_parse.ml" 33 900 917 "cnfpremsel_parse.ml" 34 972 1034
+call(
+  stack
+)
+type(
+  Cnf.form
+)
+"cnfpremsel_parse.ml" 34 972 1035 "cnfpremsel_parse.ml" 34 972 1037
+type(
+  Cnf.form ->
+  (Cnf.form -> (int * Cnf.term list) list list) ->
+  (int * Cnf.term list) list list
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"cnfpremsel_parse.ml" 34 972 1039 "cnfpremsel_parse.ml" 34 972 1043
+type(
+  (int * Cnf.term list) list list ->
+  Cnf.form -> (int * Cnf.term list) list list
+)
+ident(
+  ext_ref Fof.dcnf
+)
+"cnfpremsel_parse.ml" 34 972 1044 "cnfpremsel_parse.ml" 34 972 1046
+type(
+  (int * Cnf.term list) list list
+)
+"cnfpremsel_parse.ml" 34 972 1038 "cnfpremsel_parse.ml" 34 972 1047
+type(
+  Cnf.form -> (int * Cnf.term list) list list
+)
+"cnfpremsel_parse.ml" 33 900 917 "cnfpremsel_parse.ml" 34 972 1047
+call(
+  tail
+)
+type(
+  (int * Cnf.term list) list list
+)
+"cnfpremsel_parse.ml" 35 1051 1057 "cnfpremsel_parse.ml" 35 1051 1066
+type(
+  'i * 'j * Cnf.form -> (int * Cnf.term list) list
+)
+ident(
+  def to_clause "cnfpremsel_parse.ml" 36 1102 1104 "cnfpremsel_parse.ml" 36 1102 1137
+)
+"cnfpremsel_parse.ml" 35 1051 1067 "cnfpremsel_parse.ml" 35 1051 1068
+type(
+  'i * 'j * Cnf.form
+)
+ident(
+  def c "cnfpremsel_parse.ml" 35 1051 1071 "cnfpremsel_parse.ml" 35 1051 1098
+)
+"cnfpremsel_parse.ml" 35 1051 1077 "cnfpremsel_parse.ml" 35 1051 1079
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  def cl "cnfpremsel_parse.ml" 35 1051 1095 "cnfpremsel_parse.ml" 35 1051 1097
+)
+"cnfpremsel_parse.ml" 35 1051 1076 "cnfpremsel_parse.ml" 35 1051 1080
+type(
+  (int * Cnf.term list) list list
+)
+"cnfpremsel_parse.ml" 35 1051 1083 "cnfpremsel_parse.ml" 35 1051 1089
+type(
+  'i * 'j * Cnf.form -> (int * Cnf.term list) list list
+)
+ident(
+  int_ref to_cnf "cnfpremsel_parse.ml" 33 900 906 "cnfpremsel_parse.ml" 33 900 912
+)
+"cnfpremsel_parse.ml" 35 1051 1090 "cnfpremsel_parse.ml" 35 1051 1091
+type(
+  'i * 'j * Cnf.form
+)
+ident(
+  int_ref c "cnfpremsel_parse.ml" 35 1051 1067 "cnfpremsel_parse.ml" 35 1051 1068
+)
+"cnfpremsel_parse.ml" 35 1051 1083 "cnfpremsel_parse.ml" 35 1051 1091
+call(
+  stack
+)
+type(
+  (int * Cnf.term list) list list
+)
+"cnfpremsel_parse.ml" 35 1051 1095 "cnfpremsel_parse.ml" 35 1051 1097
+type(
+  (int * Cnf.term list) list
+)
+ident(
+  int_ref cl "cnfpremsel_parse.ml" 35 1051 1077 "cnfpremsel_parse.ml" 35 1051 1079
+)
+"cnfpremsel_parse.ml" 35 1051 1071 "cnfpremsel_parse.ml" 35 1051 1098
+type(
+  (int * Cnf.term list) list
+)
+"cnfpremsel_parse.ml" 36 1102 1104 "cnfpremsel_parse.ml" 36 1102 1112
+type(
+  (string * string * Cnf.form -> (int * Cnf.term list) list) ->
+  (string * string * Cnf.form) list -> (int * Cnf.term list) list list
+)
+ident(
+  ext_ref List.map
+)
+"cnfpremsel_parse.ml" 36 1102 1113 "cnfpremsel_parse.ml" 36 1102 1122
+type(
+  string * string * Cnf.form -> (int * Cnf.term list) list
+)
+ident(
+  int_ref to_clause "cnfpremsel_parse.ml" 35 1051 1057 "cnfpremsel_parse.ml" 35 1051 1066
+)
+"cnfpremsel_parse.ml" 36 1102 1123 "cnfpremsel_parse.ml" 36 1102 1129
+type(
+  (string * string * Cnf.form) list
+)
+ident(
+  int_ref axioms "cnfpremsel_parse.ml" 28 589 595 "cnfpremsel_parse.ml" 28 589 601
+)
+"cnfpremsel_parse.ml" 36 1102 1104 "cnfpremsel_parse.ml" 36 1102 1129
+call(
+  stack
+)
+type(
+  (int * Cnf.term list) list list
+)
+"cnfpremsel_parse.ml" 36 1102 1131 "cnfpremsel_parse.ml" 36 1102 1137
+type(
+  int list
+)
+ident(
+  int_ref labels "cnfpremsel_parse.ml" 30 752 758 "cnfpremsel_parse.ml" 30 752 764
+)
+"cnfpremsel_parse.ml" 36 1102 1104 "cnfpremsel_parse.ml" 36 1102 1137
+type(
+  (int * Cnf.term list) list list * int list
+)
+"cnfpremsel_parse.ml" 35 1051 1053 "cnfpremsel_parse.ml" 36 1102 1137
+type(
+  (int * Cnf.term list) list list * int list
+)
+"cnfpremsel_parse.ml" 33 900 902 "cnfpremsel_parse.ml" 36 1102 1137
+type(
+  (int * Cnf.term list) list list * int list
+)
+"cnfpremsel_parse.ml" 32 854 856 "cnfpremsel_parse.ml" 36 1102 1137
+type(
+  (int * Cnf.term list) list list * int list
+)
+"cnfpremsel_parse.ml" 30 752 754 "cnfpremsel_parse.ml" 36 1102 1137
+type(
+  (int * Cnf.term list) list list * int list
+)
+"cnfpremsel_parse.ml" 28 589 591 "cnfpremsel_parse.ml" 36 1102 1137
+type(
+  (int * Cnf.term list) list list * int list
+)
+"cnfpremsel_parse.ml" 26 472 474 "cnfpremsel_parse.ml" 36 1102 1137
+type(
+  (int * Cnf.term list) list list * int list
+)
+"cnfpremsel_parse.ml" 24 388 390 "cnfpremsel_parse.ml" 36 1102 1137
+type(
+  (int * Cnf.term list) list list * int list
+)
+"cnfpremsel_parse.ml" 23 369 371 "cnfpremsel_parse.ml" 36 1102 1137
+type(
+  (int * Cnf.term list) list list * int list
+)
+"cnfpremsel_parse.ml" 38 1141 1145 "cnfpremsel_parse.ml" 38 1141 1170
+type(
+  (Circuit.IM.key * Cnf.term list) list list * 'a ->
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+ident(
+  def cnfpremsel_cnf_to_indices "cnfpremsel_parse.ml" 102 3297 3297 "cnfpremsel_parse.ml" 1 0 -1
+)
+"cnfpremsel_parse.ml" 38 1141 1172 "cnfpremsel_parse.ml" 38 1141 1179
+type(
+  (Circuit.IM.key * Cnf.term list) list list
+)
+ident(
+  def clauses "cnfpremsel_parse.ml" 39 1192 1194 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 38 1141 1181 "cnfpremsel_parse.ml" 38 1141 1187
+type(
+  'a
+)
+ident(
+  def labels "cnfpremsel_parse.ml" 39 1192 1194 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 38 1141 1171 "cnfpremsel_parse.ml" 38 1141 1188
+type(
+  (Circuit.IM.key * Cnf.term list) list list * 'a
+)
+"cnfpremsel_parse.ml" 39 1192 1198 "cnfpremsel_parse.ml" 39 1192 1202
+type(
+  Circuit.circuit
+)
+ident(
+  def circ "cnfpremsel_parse.ml" 41 1222 1224 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 39 1192 1205 "cnfpremsel_parse.ml" 39 1192 1216
+type(
+  Circuit.circuit
+)
+"cnfpremsel_parse.ml" 41 1222 1228 "cnfpremsel_parse.ml" 41 1222 1235
+type(
+  (Circuit.IM.key * Cnf.term list) list -> int list
+)
+ident(
+  def cl2circ "cnfpremsel_parse.ml" 44 1293 1295 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 41 1222 1236 "cnfpremsel_parse.ml" 41 1222 1238
+type(
+  (Circuit.IM.key * Cnf.term list) list
+)
+ident(
+  def cl "cnfpremsel_parse.ml" 42 1241 1245 "cnfpremsel_parse.ml" 43 1261 1289
+)
+"cnfpremsel_parse.ml" 42 1241 1245 "cnfpremsel_parse.ml" 42 1241 1249
+type(
+  Circuit.circuit
+)
+ident(
+  int_ref circ "cnfpremsel_parse.ml" 39 1192 1198 "cnfpremsel_parse.ml" 39 1192 1202
+)
+"cnfpremsel_parse.ml" 42 1241 1245 "cnfpremsel_parse.ml" 42 1241 1259
+call(
+  stack
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 43 1261 1265 "cnfpremsel_parse.ml" 43 1261 1273
+type(
+  (Circuit.IM.key * Cnf.term list -> int) ->
+  (Circuit.IM.key * Cnf.term list) list -> int list
+)
+ident(
+  ext_ref List.map
+)
+"cnfpremsel_parse.ml" 43 1261 1274 "cnfpremsel_parse.ml" 43 1261 1278
+type(
+  Circuit.circuit
+)
+ident(
+  int_ref circ "cnfpremsel_parse.ml" 39 1192 1198 "cnfpremsel_parse.ml" 39 1192 1202
+)
+"cnfpremsel_parse.ml" 43 1261 1274 "cnfpremsel_parse.ml" 43 1261 1286
+call(
+  stack
+)
+type(
+  Circuit.IM.key * Cnf.term list -> int
+)
+"cnfpremsel_parse.ml" 43 1261 1287 "cnfpremsel_parse.ml" 43 1261 1289
+type(
+  (Circuit.IM.key * Cnf.term list) list
+)
+ident(
+  int_ref cl "cnfpremsel_parse.ml" 41 1222 1236 "cnfpremsel_parse.ml" 41 1222 1238
+)
+"cnfpremsel_parse.ml" 43 1261 1265 "cnfpremsel_parse.ml" 43 1261 1289
+call(
+  tail
+)
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 42 1241 1245 "cnfpremsel_parse.ml" 43 1261 1289
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 44 1293 1299 "cnfpremsel_parse.ml" 44 1293 1305
+type(
+  int list list
+)
+ident(
+  def cl_ind "cnfpremsel_parse.ml" 45 1336 1338 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 44 1293 1308 "cnfpremsel_parse.ml" 44 1293 1316
+type(
+  ((Circuit.IM.key * Cnf.term list) list -> int list) ->
+  (Circuit.IM.key * Cnf.term list) list list -> int list list
+)
+ident(
+  ext_ref List.map
+)
+"cnfpremsel_parse.ml" 44 1293 1317 "cnfpremsel_parse.ml" 44 1293 1324
+type(
+  (Circuit.IM.key * Cnf.term list) list -> int list
+)
+ident(
+  int_ref cl2circ "cnfpremsel_parse.ml" 41 1222 1228 "cnfpremsel_parse.ml" 41 1222 1235
+)
+"cnfpremsel_parse.ml" 44 1293 1325 "cnfpremsel_parse.ml" 44 1293 1332
+type(
+  (Circuit.IM.key * Cnf.term list) list list
+)
+ident(
+  int_ref clauses "cnfpremsel_parse.ml" 38 1141 1172 "cnfpremsel_parse.ml" 38 1141 1179
+)
+"cnfpremsel_parse.ml" 44 1293 1308 "cnfpremsel_parse.ml" 44 1293 1332
+call(
+  stack
+)
+type(
+  int list list
+)
+"cnfpremsel_parse.ml" 46 1344 1349 "cnfpremsel_parse.ml" 46 1344 1357
+type(
+  int
+)
+ident(
+  def node_num "cnfpremsel_parse.ml" 51 1477 1479 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 46 1344 1359 "cnfpremsel_parse.ml" 46 1344 1367
+type(
+  int
+)
+ident(
+  def func_num "cnfpremsel_parse.ml" 51 1477 1479 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 46 1344 1369 "cnfpremsel_parse.ml" 46 1344 1376
+type(
+  int
+)
+ident(
+  def rel_num "cnfpremsel_parse.ml" 51 1477 1479 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 46 1344 1348 "cnfpremsel_parse.ml" 46 1344 1377
+type(
+  int * int * int
+)
+"cnfpremsel_parse.ml" 47 1379 1383 "cnfpremsel_parse.ml" 47 1379 1388
+type(
+  (int * int * int list) list
+)
+ident(
+  def terms "cnfpremsel_parse.ml" 51 1477 1479 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 47 1379 1390 "cnfpremsel_parse.ml" 47 1379 1398
+type(
+  (int * int * int list) list
+)
+ident(
+  def literals "cnfpremsel_parse.ml" 51 1477 1479 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 47 1379 1400 "cnfpremsel_parse.ml" 47 1379 1410
+type(
+  int list
+)
+ident(
+  def node_types "cnfpremsel_parse.ml" 51 1477 1479 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 45 1336 1342 "cnfpremsel_parse.ml" 48 1411 1415
+type(
+  (int * int * int) * (int * int * int list) list *
+  (int * int * int list) list * int list
+)
+"cnfpremsel_parse.ml" 48 1411 1418 "cnfpremsel_parse.ml" 48 1411 1422
+type(
+  Circuit.circuit
+)
+ident(
+  int_ref circ "cnfpremsel_parse.ml" 39 1192 1198 "cnfpremsel_parse.ml" 39 1192 1202
+)
+"cnfpremsel_parse.ml" 48 1411 1418 "cnfpremsel_parse.ml" 48 1411 1429
+call(
+  stack
+)
+type(
+  unit ->
+  (int * int * int) * (int * int * int list) list *
+  (int * int * int list) list * int list
+)
+"cnfpremsel_parse.ml" 48 1411 1430 "cnfpremsel_parse.ml" 48 1411 1432
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 48 1411 1418 "cnfpremsel_parse.ml" 48 1411 1432
+type(
+  (int * int * int) * (int * int * int list) list *
+  (int * int * int list) list * int list
+)
+"cnfpremsel_parse.ml" 49 1433 1439 "cnfpremsel_parse.ml" 49 1433 1446
+type(
+  string list * string list
+)
+ident(
+  def symbols "cnfpremsel_parse.ml" 51 1477 1479 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 49 1433 1449 "cnfpremsel_parse.ml" 49 1433 1453
+type(
+  Circuit.circuit
+)
+ident(
+  int_ref circ "cnfpremsel_parse.ml" 39 1192 1198 "cnfpremsel_parse.ml" 39 1192 1202
+)
+"cnfpremsel_parse.ml" 49 1433 1449 "cnfpremsel_parse.ml" 49 1433 1468
+call(
+  stack
+)
+type(
+  unit -> string list * string list
+)
+"cnfpremsel_parse.ml" 49 1433 1469 "cnfpremsel_parse.ml" 49 1433 1471
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 49 1433 1449 "cnfpremsel_parse.ml" 49 1433 1471
+type(
+  string list * string list
+)
+"cnfpremsel_parse.ml" 51 1477 1483 "cnfpremsel_parse.ml" 51 1477 1493
+type(
+  int
+)
+ident(
+  def symbol_num "cnfpremsel_parse.ml" 57 1707 1709 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 51 1477 1496 "cnfpremsel_parse.ml" 51 1477 1504
+type(
+  int
+)
+ident(
+  int_ref func_num "cnfpremsel_parse.ml" 46 1344 1359 "cnfpremsel_parse.ml" 46 1344 1367
+)
+"cnfpremsel_parse.ml" 51 1477 1505 "cnfpremsel_parse.ml" 51 1477 1506
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cnfpremsel_parse.ml" 51 1477 1507 "cnfpremsel_parse.ml" 51 1477 1514
+type(
+  int
+)
+ident(
+  int_ref rel_num "cnfpremsel_parse.ml" 46 1344 1369 "cnfpremsel_parse.ml" 46 1344 1376
+)
+"cnfpremsel_parse.ml" 51 1477 1496 "cnfpremsel_parse.ml" 51 1477 1514
+type(
+  int
+)
+"cnfpremsel_parse.ml" 52 1515 1521 "cnfpremsel_parse.ml" 52 1515 1531
+type(
+  'b * 'c * 'd -> 'b * 'c * 'd * bool
+)
+ident(
+  def func_to_fr "cnfpremsel_parse.ml" 57 1707 1709 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 52 1515 1533 "cnfpremsel_parse.ml" 52 1515 1536
+type(
+  'b
+)
+ident(
+  def res "cnfpremsel_parse.ml" 52 1515 1550 "cnfpremsel_parse.ml" 52 1515 1572
+)
+"cnfpremsel_parse.ml" 52 1515 1538 "cnfpremsel_parse.ml" 52 1515 1539
+type(
+  'c
+)
+ident(
+  def f "cnfpremsel_parse.ml" 52 1515 1550 "cnfpremsel_parse.ml" 52 1515 1572
+)
+"cnfpremsel_parse.ml" 52 1515 1541 "cnfpremsel_parse.ml" 52 1515 1546
+type(
+  'd
+)
+ident(
+  def param "cnfpremsel_parse.ml" 52 1515 1550 "cnfpremsel_parse.ml" 52 1515 1572
+)
+"cnfpremsel_parse.ml" 52 1515 1532 "cnfpremsel_parse.ml" 52 1515 1547
+type(
+  'b * 'c * 'd
+)
+"cnfpremsel_parse.ml" 52 1515 1551 "cnfpremsel_parse.ml" 52 1515 1554
+type(
+  'b
+)
+ident(
+  int_ref res "cnfpremsel_parse.ml" 52 1515 1533 "cnfpremsel_parse.ml" 52 1515 1536
+)
+"cnfpremsel_parse.ml" 52 1515 1556 "cnfpremsel_parse.ml" 52 1515 1557
+type(
+  'c
+)
+ident(
+  int_ref f "cnfpremsel_parse.ml" 52 1515 1538 "cnfpremsel_parse.ml" 52 1515 1539
+)
+"cnfpremsel_parse.ml" 52 1515 1559 "cnfpremsel_parse.ml" 52 1515 1564
+type(
+  'd
+)
+ident(
+  int_ref param "cnfpremsel_parse.ml" 52 1515 1541 "cnfpremsel_parse.ml" 52 1515 1546
+)
+"cnfpremsel_parse.ml" 52 1515 1566 "cnfpremsel_parse.ml" 52 1515 1571
+type(
+  bool
+)
+"cnfpremsel_parse.ml" 52 1515 1550 "cnfpremsel_parse.ml" 52 1515 1572
+type(
+  'b * 'c * 'd * bool
+)
+"cnfpremsel_parse.ml" 53 1573 1579 "cnfpremsel_parse.ml" 53 1573 1588
+type(
+  'e * int * 'f -> 'e * int * 'f * bool
+)
+ident(
+  def rel_to_fr "cnfpremsel_parse.ml" 57 1707 1709 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 53 1573 1590 "cnfpremsel_parse.ml" 53 1573 1593
+type(
+  'e
+)
+ident(
+  def res "cnfpremsel_parse.ml" 54 1607 1611 "cnfpremsel_parse.ml" 55 1659 1701
+)
+"cnfpremsel_parse.ml" 53 1573 1595 "cnfpremsel_parse.ml" 53 1573 1596
+type(
+  int
+)
+ident(
+  def r "cnfpremsel_parse.ml" 54 1607 1611 "cnfpremsel_parse.ml" 55 1659 1701
+)
+"cnfpremsel_parse.ml" 53 1573 1598 "cnfpremsel_parse.ml" 53 1573 1603
+type(
+  'f
+)
+ident(
+  def param "cnfpremsel_parse.ml" 54 1607 1611 "cnfpremsel_parse.ml" 55 1659 1701
+)
+"cnfpremsel_parse.ml" 53 1573 1589 "cnfpremsel_parse.ml" 53 1573 1604
+type(
+  'e * int * 'f
+)
+"cnfpremsel_parse.ml" 54 1607 1614 "cnfpremsel_parse.ml" 54 1607 1615
+type(
+  int
+)
+ident(
+  int_ref r "cnfpremsel_parse.ml" 53 1573 1595 "cnfpremsel_parse.ml" 53 1573 1596
+)
+"cnfpremsel_parse.ml" 54 1607 1616 "cnfpremsel_parse.ml" 54 1607 1617
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"cnfpremsel_parse.ml" 54 1607 1618 "cnfpremsel_parse.ml" 54 1607 1619
+type(
+  int
+)
+"cnfpremsel_parse.ml" 54 1607 1614 "cnfpremsel_parse.ml" 54 1607 1619
+type(
+  bool
+)
+"cnfpremsel_parse.ml" 54 1607 1626 "cnfpremsel_parse.ml" 54 1607 1629
+type(
+  'e
+)
+ident(
+  int_ref res "cnfpremsel_parse.ml" 53 1573 1590 "cnfpremsel_parse.ml" 53 1573 1593
+)
+"cnfpremsel_parse.ml" 54 1607 1631 "cnfpremsel_parse.ml" 54 1607 1632
+type(
+  int
+)
+ident(
+  int_ref r "cnfpremsel_parse.ml" 53 1573 1595 "cnfpremsel_parse.ml" 53 1573 1596
+)
+"cnfpremsel_parse.ml" 54 1607 1632 "cnfpremsel_parse.ml" 54 1607 1633
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"cnfpremsel_parse.ml" 54 1607 1633 "cnfpremsel_parse.ml" 54 1607 1634
+type(
+  int
+)
+"cnfpremsel_parse.ml" 54 1607 1631 "cnfpremsel_parse.ml" 54 1607 1634
+type(
+  int
+)
+"cnfpremsel_parse.ml" 54 1607 1634 "cnfpremsel_parse.ml" 54 1607 1635
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cnfpremsel_parse.ml" 54 1607 1635 "cnfpremsel_parse.ml" 54 1607 1643
+type(
+  int
+)
+ident(
+  int_ref func_num "cnfpremsel_parse.ml" 46 1344 1359 "cnfpremsel_parse.ml" 46 1344 1367
+)
+"cnfpremsel_parse.ml" 54 1607 1631 "cnfpremsel_parse.ml" 54 1607 1643
+type(
+  int
+)
+"cnfpremsel_parse.ml" 54 1607 1645 "cnfpremsel_parse.ml" 54 1607 1650
+type(
+  'f
+)
+ident(
+  int_ref param "cnfpremsel_parse.ml" 53 1573 1598 "cnfpremsel_parse.ml" 53 1573 1603
+)
+"cnfpremsel_parse.ml" 54 1607 1652 "cnfpremsel_parse.ml" 54 1607 1657
+type(
+  bool
+)
+"cnfpremsel_parse.ml" 54 1607 1625 "cnfpremsel_parse.ml" 54 1607 1658
+type(
+  'e * int * 'f * bool
+)
+"cnfpremsel_parse.ml" 55 1659 1669 "cnfpremsel_parse.ml" 55 1659 1672
+type(
+  'e
+)
+ident(
+  int_ref res "cnfpremsel_parse.ml" 53 1573 1590 "cnfpremsel_parse.ml" 53 1573 1593
+)
+"cnfpremsel_parse.ml" 55 1659 1674 "cnfpremsel_parse.ml" 55 1659 1675
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.( ~- )
+)
+"cnfpremsel_parse.ml" 55 1659 1675 "cnfpremsel_parse.ml" 55 1659 1676
+type(
+  int
+)
+ident(
+  int_ref r "cnfpremsel_parse.ml" 53 1573 1595 "cnfpremsel_parse.ml" 53 1573 1596
+)
+"cnfpremsel_parse.ml" 55 1659 1674 "cnfpremsel_parse.ml" 55 1659 1676
+type(
+  int
+)
+"cnfpremsel_parse.ml" 55 1659 1676 "cnfpremsel_parse.ml" 55 1659 1677
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"cnfpremsel_parse.ml" 55 1659 1677 "cnfpremsel_parse.ml" 55 1659 1678
+type(
+  int
+)
+"cnfpremsel_parse.ml" 55 1659 1674 "cnfpremsel_parse.ml" 55 1659 1678
+type(
+  int
+)
+"cnfpremsel_parse.ml" 55 1659 1678 "cnfpremsel_parse.ml" 55 1659 1679
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cnfpremsel_parse.ml" 55 1659 1679 "cnfpremsel_parse.ml" 55 1659 1687
+type(
+  int
+)
+ident(
+  int_ref func_num "cnfpremsel_parse.ml" 46 1344 1359 "cnfpremsel_parse.ml" 46 1344 1367
+)
+"cnfpremsel_parse.ml" 55 1659 1674 "cnfpremsel_parse.ml" 55 1659 1687
+type(
+  int
+)
+"cnfpremsel_parse.ml" 55 1659 1689 "cnfpremsel_parse.ml" 55 1659 1694
+type(
+  'f
+)
+ident(
+  int_ref param "cnfpremsel_parse.ml" 53 1573 1598 "cnfpremsel_parse.ml" 53 1573 1603
+)
+"cnfpremsel_parse.ml" 55 1659 1696 "cnfpremsel_parse.ml" 55 1659 1700
+type(
+  bool
+)
+"cnfpremsel_parse.ml" 55 1659 1668 "cnfpremsel_parse.ml" 55 1659 1701
+type(
+  'e * int * 'f * bool
+)
+"cnfpremsel_parse.ml" 54 1607 1611 "cnfpremsel_parse.ml" 55 1659 1701
+type(
+  'e * int * 'f * bool
+)
+"cnfpremsel_parse.ml" 57 1707 1713 "cnfpremsel_parse.ml" 57 1707 1728
+type(
+  (int * int * int * bool) list array
+)
+ident(
+  def node_res_inputs "cnfpremsel_parse.ml" 63 1941 1943 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 57 1707 1731 "cnfpremsel_parse.ml" 57 1707 1741
+type(
+  int -> (int * int * int * bool) list -> (int * int * int * bool) list array
+)
+ident(
+  ext_ref Array.make
+)
+"cnfpremsel_parse.ml" 57 1707 1742 "cnfpremsel_parse.ml" 57 1707 1750
+type(
+  int
+)
+ident(
+  int_ref node_num "cnfpremsel_parse.ml" 46 1344 1349 "cnfpremsel_parse.ml" 46 1344 1357
+)
+"cnfpremsel_parse.ml" 57 1707 1751 "cnfpremsel_parse.ml" 57 1707 1753
+type(
+  (int * int * int * bool) list
+)
+"cnfpremsel_parse.ml" 57 1707 1731 "cnfpremsel_parse.ml" 57 1707 1753
+type(
+  (int * int * int * bool) list array
+)
+"cnfpremsel_parse.ml" 58 1754 1760 "cnfpremsel_parse.ml" 58 1754 1773
+type(
+  (int * int * int * bool) list array
+)
+ident(
+  def node_l_inputs "cnfpremsel_parse.ml" 63 1941 1943 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 58 1754 1776 "cnfpremsel_parse.ml" 58 1754 1786
+type(
+  int -> (int * int * int * bool) list -> (int * int * int * bool) list array
+)
+ident(
+  ext_ref Array.make
+)
+"cnfpremsel_parse.ml" 58 1754 1787 "cnfpremsel_parse.ml" 58 1754 1795
+type(
+  int
+)
+ident(
+  int_ref node_num "cnfpremsel_parse.ml" 46 1344 1349 "cnfpremsel_parse.ml" 46 1344 1357
+)
+"cnfpremsel_parse.ml" 58 1754 1796 "cnfpremsel_parse.ml" 58 1754 1798
+type(
+  (int * int * int * bool) list
+)
+"cnfpremsel_parse.ml" 58 1754 1776 "cnfpremsel_parse.ml" 58 1754 1798
+type(
+  (int * int * int * bool) list array
+)
+"cnfpremsel_parse.ml" 59 1799 1805 "cnfpremsel_parse.ml" 59 1799 1818
+type(
+  (int * int * int * bool) list array
+)
+ident(
+  def node_r_inputs "cnfpremsel_parse.ml" 63 1941 1943 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 59 1799 1821 "cnfpremsel_parse.ml" 59 1799 1831
+type(
+  int -> (int * int * int * bool) list -> (int * int * int * bool) list array
+)
+ident(
+  ext_ref Array.make
+)
+"cnfpremsel_parse.ml" 59 1799 1832 "cnfpremsel_parse.ml" 59 1799 1840
+type(
+  int
+)
+ident(
+  int_ref node_num "cnfpremsel_parse.ml" 46 1344 1349 "cnfpremsel_parse.ml" 46 1344 1357
+)
+"cnfpremsel_parse.ml" 59 1799 1841 "cnfpremsel_parse.ml" 59 1799 1843
+type(
+  (int * int * int * bool) list
+)
+"cnfpremsel_parse.ml" 59 1799 1821 "cnfpremsel_parse.ml" 59 1799 1843
+type(
+  (int * int * int * bool) list array
+)
+"cnfpremsel_parse.ml" 60 1844 1850 "cnfpremsel_parse.ml" 60 1844 1863
+type(
+  (int * int * int * bool) list array
+)
+ident(
+  def symbol_inputs "cnfpremsel_parse.ml" 63 1941 1943 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 60 1844 1866 "cnfpremsel_parse.ml" 60 1844 1876
+type(
+  int -> (int * int * int * bool) list -> (int * int * int * bool) list array
+)
+ident(
+  ext_ref Array.make
+)
+"cnfpremsel_parse.ml" 60 1844 1877 "cnfpremsel_parse.ml" 60 1844 1887
+type(
+  int
+)
+ident(
+  int_ref symbol_num "cnfpremsel_parse.ml" 51 1477 1483 "cnfpremsel_parse.ml" 51 1477 1493
+)
+"cnfpremsel_parse.ml" 60 1844 1888 "cnfpremsel_parse.ml" 60 1844 1890
+type(
+  (int * int * int * bool) list
+)
+"cnfpremsel_parse.ml" 60 1844 1866 "cnfpremsel_parse.ml" 60 1844 1890
+type(
+  (int * int * int * bool) list array
+)
+"cnfpremsel_parse.ml" 61 1891 1897 "cnfpremsel_parse.ml" 61 1891 1910
+type(
+  int list array
+)
+ident(
+  def node_c_inputs "cnfpremsel_parse.ml" 63 1941 1943 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 61 1891 1913 "cnfpremsel_parse.ml" 61 1891 1923
+type(
+  int -> int list -> int list array
+)
+ident(
+  ext_ref Array.make
+)
+"cnfpremsel_parse.ml" 61 1891 1924 "cnfpremsel_parse.ml" 61 1891 1932
+type(
+  int
+)
+ident(
+  int_ref node_num "cnfpremsel_parse.ml" 46 1344 1349 "cnfpremsel_parse.ml" 46 1344 1357
+)
+"cnfpremsel_parse.ml" 61 1891 1933 "cnfpremsel_parse.ml" 61 1891 1935
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 61 1891 1913 "cnfpremsel_parse.ml" 61 1891 1935
+type(
+  int list array
+)
+"cnfpremsel_parse.ml" 63 1941 1943 "cnfpremsel_parse.ml" 63 1941 1949
+type(
+  int list list
+)
+ident(
+  int_ref cl_ind "cnfpremsel_parse.ml" 44 1293 1299 "cnfpremsel_parse.ml" 44 1293 1305
+)
+"cnfpremsel_parse.ml" 63 1941 1950 "cnfpremsel_parse.ml" 63 1941 1952
+type(
+  int list list -> (int list list -> unit) -> unit
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"cnfpremsel_parse.ml" 63 1941 1953 "cnfpremsel_parse.ml" 63 1941 1963
+type(
+  (int -> int list -> unit) -> int list list -> unit
+)
+ident(
+  ext_ref List.iteri
+)
+"cnfpremsel_parse.ml" 63 1941 1969 "cnfpremsel_parse.ml" 63 1941 1970
+type(
+  int
+)
+ident(
+  def i "cnfpremsel_parse.ml" 63 1941 1971 "cnfpremsel_parse.ml" 66 2043 2048
+)
+"cnfpremsel_parse.ml" 63 1941 1971 "cnfpremsel_parse.ml" 63 1941 1973
+type(
+  int list
+)
+ident(
+  def cl "cnfpremsel_parse.ml" 64 1977 1981 "cnfpremsel_parse.ml" 66 2043 2048
+)
+"cnfpremsel_parse.ml" 64 1977 1981 "cnfpremsel_parse.ml" 64 1977 1983
+type(
+  int list
+)
+ident(
+  int_ref cl "cnfpremsel_parse.ml" 63 1941 1971 "cnfpremsel_parse.ml" 63 1941 1973
+)
+"cnfpremsel_parse.ml" 64 1977 1984 "cnfpremsel_parse.ml" 64 1977 1986
+type(
+  int list -> (int list -> unit) -> unit
+)
+ident(
+  ext_ref Pervasives.( |> )
+)
+"cnfpremsel_parse.ml" 64 1977 1987 "cnfpremsel_parse.ml" 64 1977 1996
+type(
+  (int -> unit) -> int list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"cnfpremsel_parse.ml" 64 1977 2002 "cnfpremsel_parse.ml" 64 1977 2004
+type(
+  int
+)
+ident(
+  def li "cnfpremsel_parse.ml" 65 2008 2014 "cnfpremsel_parse.ml" 65 2008 2042
+)
+"cnfpremsel_parse.ml" 65 2008 2014 "cnfpremsel_parse.ml" 65 2008 2023
+type(
+  int list array -> int -> int -> unit
+)
+ident(
+  ext_ref Circuit.ar_append
+)
+"cnfpremsel_parse.ml" 65 2008 2024 "cnfpremsel_parse.ml" 65 2008 2037
+type(
+  int list array
+)
+ident(
+  int_ref node_c_inputs "cnfpremsel_parse.ml" 61 1891 1897 "cnfpremsel_parse.ml" 61 1891 1910
+)
+"cnfpremsel_parse.ml" 65 2008 2038 "cnfpremsel_parse.ml" 65 2008 2040
+type(
+  int
+)
+ident(
+  int_ref li "cnfpremsel_parse.ml" 64 1977 2002 "cnfpremsel_parse.ml" 64 1977 2004
+)
+"cnfpremsel_parse.ml" 65 2008 2041 "cnfpremsel_parse.ml" 65 2008 2042
+type(
+  int
+)
+ident(
+  int_ref i "cnfpremsel_parse.ml" 63 1941 1969 "cnfpremsel_parse.ml" 63 1941 1970
+)
+"cnfpremsel_parse.ml" 65 2008 2014 "cnfpremsel_parse.ml" 65 2008 2042
+call(
+  tail
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 64 1977 1997 "cnfpremsel_parse.ml" 66 2043 2048
+type(
+  int -> unit
+)
+"cnfpremsel_parse.ml" 64 1977 1987 "cnfpremsel_parse.ml" 66 2043 2048
+type(
+  int list -> unit
+)
+"cnfpremsel_parse.ml" 64 1977 1981 "cnfpremsel_parse.ml" 66 2043 2048
+call(
+  tail
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 63 1941 1964 "cnfpremsel_parse.ml" 67 2049 2052
+type(
+  int -> int list -> unit
+)
+"cnfpremsel_parse.ml" 63 1941 1953 "cnfpremsel_parse.ml" 67 2049 2052
+type(
+  int list list -> unit
+)
+"cnfpremsel_parse.ml" 63 1941 1943 "cnfpremsel_parse.ml" 67 2049 2052
+call(
+  stack
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 69 2055 2061 "cnfpremsel_parse.ml" 69 2055 2068
+type(
+  int * int * int list * bool -> unit
+)
+ident(
+  def save_fr "cnfpremsel_parse.ml" 81 2549 2551 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 69 2055 2070 "cnfpremsel_parse.ml" 69 2055 2073
+type(
+  int
+)
+ident(
+  def res "cnfpremsel_parse.ml" 70 2090 2094 "cnfpremsel_parse.ml" 80 2526 2545
+)
+"cnfpremsel_parse.ml" 69 2055 2075 "cnfpremsel_parse.ml" 69 2055 2076
+type(
+  int
+)
+ident(
+  def s "cnfpremsel_parse.ml" 70 2090 2094 "cnfpremsel_parse.ml" 80 2526 2545
+)
+"cnfpremsel_parse.ml" 69 2055 2078 "cnfpremsel_parse.ml" 69 2055 2083
+type(
+  int list
+)
+ident(
+  def param "cnfpremsel_parse.ml" 70 2090 2094 "cnfpremsel_parse.ml" 80 2526 2545
+)
+"cnfpremsel_parse.ml" 69 2055 2085 "cnfpremsel_parse.ml" 69 2055 2086
+type(
+  bool
+)
+ident(
+  def b "cnfpremsel_parse.ml" 70 2090 2094 "cnfpremsel_parse.ml" 80 2526 2545
+)
+"cnfpremsel_parse.ml" 69 2055 2069 "cnfpremsel_parse.ml" 69 2055 2087
+type(
+  int * int * int list * bool
+)
+"cnfpremsel_parse.ml" 70 2090 2098 "cnfpremsel_parse.ml" 70 2090 2107
+type(
+  int -> int -> unit
+)
+ident(
+  def save_pair "cnfpremsel_parse.ml" 75 2340 2344 "cnfpremsel_parse.ml" 80 2526 2545
+)
+"cnfpremsel_parse.ml" 70 2090 2108 "cnfpremsel_parse.ml" 70 2090 2109
+type(
+  int
+)
+ident(
+  def x "cnfpremsel_parse.ml" 70 2090 2110 "cnfpremsel_parse.ml" 74 2290 2336
+)
+"cnfpremsel_parse.ml" 70 2090 2110 "cnfpremsel_parse.ml" 70 2090 2111
+type(
+  int
+)
+ident(
+  def y "cnfpremsel_parse.ml" 71 2114 2120 "cnfpremsel_parse.ml" 74 2290 2336
+)
+"cnfpremsel_parse.ml" 71 2114 2120 "cnfpremsel_parse.ml" 71 2114 2129
+type(
+  (int * int * int * bool) list array ->
+  int -> int * int * int * bool -> unit
+)
+ident(
+  ext_ref Circuit.ar_append
+)
+"cnfpremsel_parse.ml" 71 2114 2130 "cnfpremsel_parse.ml" 71 2114 2145
+type(
+  (int * int * int * bool) list array
+)
+ident(
+  int_ref node_res_inputs "cnfpremsel_parse.ml" 57 1707 1713 "cnfpremsel_parse.ml" 57 1707 1728
+)
+"cnfpremsel_parse.ml" 71 2114 2146 "cnfpremsel_parse.ml" 71 2114 2149
+type(
+  int
+)
+ident(
+  int_ref res "cnfpremsel_parse.ml" 69 2055 2070 "cnfpremsel_parse.ml" 69 2055 2073
+)
+"cnfpremsel_parse.ml" 71 2114 2151 "cnfpremsel_parse.ml" 71 2114 2152
+type(
+  int
+)
+ident(
+  int_ref s "cnfpremsel_parse.ml" 69 2055 2075 "cnfpremsel_parse.ml" 69 2055 2076
+)
+"cnfpremsel_parse.ml" 71 2114 2154 "cnfpremsel_parse.ml" 71 2114 2155
+type(
+  int
+)
+ident(
+  int_ref x "cnfpremsel_parse.ml" 70 2090 2108 "cnfpremsel_parse.ml" 70 2090 2109
+)
+"cnfpremsel_parse.ml" 71 2114 2157 "cnfpremsel_parse.ml" 71 2114 2158
+type(
+  int
+)
+ident(
+  int_ref y "cnfpremsel_parse.ml" 70 2090 2110 "cnfpremsel_parse.ml" 70 2090 2111
+)
+"cnfpremsel_parse.ml" 71 2114 2160 "cnfpremsel_parse.ml" 71 2114 2161
+type(
+  bool
+)
+ident(
+  int_ref b "cnfpremsel_parse.ml" 69 2055 2085 "cnfpremsel_parse.ml" 69 2055 2086
+)
+"cnfpremsel_parse.ml" 71 2114 2150 "cnfpremsel_parse.ml" 71 2114 2162
+type(
+  int * int * int * bool
+)
+"cnfpremsel_parse.ml" 71 2114 2120 "cnfpremsel_parse.ml" 71 2114 2162
+call(
+  stack
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 72 2164 2173 "cnfpremsel_parse.ml" 72 2164 2174
+type(
+  int
+)
+ident(
+  int_ref x "cnfpremsel_parse.ml" 70 2090 2108 "cnfpremsel_parse.ml" 70 2090 2109
+)
+"cnfpremsel_parse.ml" 72 2164 2175 "cnfpremsel_parse.ml" 72 2164 2177
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( >= )
+)
+"cnfpremsel_parse.ml" 72 2164 2178 "cnfpremsel_parse.ml" 72 2164 2179
+type(
+  int
+)
+"cnfpremsel_parse.ml" 72 2164 2173 "cnfpremsel_parse.ml" 72 2164 2179
+type(
+  bool
+)
+"cnfpremsel_parse.ml" 72 2164 2185 "cnfpremsel_parse.ml" 72 2164 2194
+type(
+  (int * int * int * bool) list array ->
+  int -> int * int * int * bool -> unit
+)
+ident(
+  ext_ref Circuit.ar_append
+)
+"cnfpremsel_parse.ml" 72 2164 2195 "cnfpremsel_parse.ml" 72 2164 2208
+type(
+  (int * int * int * bool) list array
+)
+ident(
+  int_ref node_l_inputs "cnfpremsel_parse.ml" 58 1754 1760 "cnfpremsel_parse.ml" 58 1754 1773
+)
+"cnfpremsel_parse.ml" 72 2164 2209 "cnfpremsel_parse.ml" 72 2164 2210
+type(
+  int
+)
+ident(
+  int_ref x "cnfpremsel_parse.ml" 70 2090 2108 "cnfpremsel_parse.ml" 70 2090 2109
+)
+"cnfpremsel_parse.ml" 72 2164 2212 "cnfpremsel_parse.ml" 72 2164 2213
+type(
+  int
+)
+ident(
+  int_ref s "cnfpremsel_parse.ml" 69 2055 2075 "cnfpremsel_parse.ml" 69 2055 2076
+)
+"cnfpremsel_parse.ml" 72 2164 2215 "cnfpremsel_parse.ml" 72 2164 2218
+type(
+  int
+)
+ident(
+  int_ref res "cnfpremsel_parse.ml" 69 2055 2070 "cnfpremsel_parse.ml" 69 2055 2073
+)
+"cnfpremsel_parse.ml" 72 2164 2220 "cnfpremsel_parse.ml" 72 2164 2221
+type(
+  int
+)
+ident(
+  int_ref y "cnfpremsel_parse.ml" 70 2090 2110 "cnfpremsel_parse.ml" 70 2090 2111
+)
+"cnfpremsel_parse.ml" 72 2164 2223 "cnfpremsel_parse.ml" 72 2164 2224
+type(
+  bool
+)
+ident(
+  int_ref b "cnfpremsel_parse.ml" 69 2055 2085 "cnfpremsel_parse.ml" 69 2055 2086
+)
+"cnfpremsel_parse.ml" 72 2164 2211 "cnfpremsel_parse.ml" 72 2164 2225
+type(
+  int * int * int * bool
+)
+"cnfpremsel_parse.ml" 72 2164 2185 "cnfpremsel_parse.ml" 72 2164 2225
+call(
+  stack
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 72 2164 2170 "cnfpremsel_parse.ml" 72 2164 2225
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 73 2227 2236 "cnfpremsel_parse.ml" 73 2227 2237
+type(
+  int
+)
+ident(
+  int_ref y "cnfpremsel_parse.ml" 70 2090 2110 "cnfpremsel_parse.ml" 70 2090 2111
+)
+"cnfpremsel_parse.ml" 73 2227 2238 "cnfpremsel_parse.ml" 73 2227 2240
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( >= )
+)
+"cnfpremsel_parse.ml" 73 2227 2241 "cnfpremsel_parse.ml" 73 2227 2242
+type(
+  int
+)
+"cnfpremsel_parse.ml" 73 2227 2236 "cnfpremsel_parse.ml" 73 2227 2242
+type(
+  bool
+)
+"cnfpremsel_parse.ml" 73 2227 2248 "cnfpremsel_parse.ml" 73 2227 2257
+type(
+  (int * int * int * bool) list array ->
+  int -> int * int * int * bool -> unit
+)
+ident(
+  ext_ref Circuit.ar_append
+)
+"cnfpremsel_parse.ml" 73 2227 2258 "cnfpremsel_parse.ml" 73 2227 2271
+type(
+  (int * int * int * bool) list array
+)
+ident(
+  int_ref node_r_inputs "cnfpremsel_parse.ml" 59 1799 1805 "cnfpremsel_parse.ml" 59 1799 1818
+)
+"cnfpremsel_parse.ml" 73 2227 2272 "cnfpremsel_parse.ml" 73 2227 2273
+type(
+  int
+)
+ident(
+  int_ref y "cnfpremsel_parse.ml" 70 2090 2110 "cnfpremsel_parse.ml" 70 2090 2111
+)
+"cnfpremsel_parse.ml" 73 2227 2275 "cnfpremsel_parse.ml" 73 2227 2276
+type(
+  int
+)
+ident(
+  int_ref s "cnfpremsel_parse.ml" 69 2055 2075 "cnfpremsel_parse.ml" 69 2055 2076
+)
+"cnfpremsel_parse.ml" 73 2227 2278 "cnfpremsel_parse.ml" 73 2227 2281
+type(
+  int
+)
+ident(
+  int_ref res "cnfpremsel_parse.ml" 69 2055 2070 "cnfpremsel_parse.ml" 69 2055 2073
+)
+"cnfpremsel_parse.ml" 73 2227 2283 "cnfpremsel_parse.ml" 73 2227 2284
+type(
+  int
+)
+ident(
+  int_ref x "cnfpremsel_parse.ml" 70 2090 2108 "cnfpremsel_parse.ml" 70 2090 2109
+)
+"cnfpremsel_parse.ml" 73 2227 2286 "cnfpremsel_parse.ml" 73 2227 2287
+type(
+  bool
+)
+ident(
+  int_ref b "cnfpremsel_parse.ml" 69 2055 2085 "cnfpremsel_parse.ml" 69 2055 2086
+)
+"cnfpremsel_parse.ml" 73 2227 2274 "cnfpremsel_parse.ml" 73 2227 2288
+type(
+  int * int * int * bool
+)
+"cnfpremsel_parse.ml" 73 2227 2248 "cnfpremsel_parse.ml" 73 2227 2288
+call(
+  stack
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 73 2227 2233 "cnfpremsel_parse.ml" 73 2227 2288
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 74 2290 2296 "cnfpremsel_parse.ml" 74 2290 2305
+type(
+  (int * int * int * bool) list array ->
+  int -> int * int * int * bool -> unit
+)
+ident(
+  ext_ref Circuit.ar_append
+)
+"cnfpremsel_parse.ml" 74 2290 2306 "cnfpremsel_parse.ml" 74 2290 2319
+type(
+  (int * int * int * bool) list array
+)
+ident(
+  int_ref symbol_inputs "cnfpremsel_parse.ml" 60 1844 1850 "cnfpremsel_parse.ml" 60 1844 1863
+)
+"cnfpremsel_parse.ml" 74 2290 2320 "cnfpremsel_parse.ml" 74 2290 2321
+type(
+  int
+)
+ident(
+  int_ref s "cnfpremsel_parse.ml" 69 2055 2075 "cnfpremsel_parse.ml" 69 2055 2076
+)
+"cnfpremsel_parse.ml" 74 2290 2323 "cnfpremsel_parse.ml" 74 2290 2326
+type(
+  int
+)
+ident(
+  int_ref res "cnfpremsel_parse.ml" 69 2055 2070 "cnfpremsel_parse.ml" 69 2055 2073
+)
+"cnfpremsel_parse.ml" 74 2290 2328 "cnfpremsel_parse.ml" 74 2290 2329
+type(
+  int
+)
+ident(
+  int_ref x "cnfpremsel_parse.ml" 70 2090 2108 "cnfpremsel_parse.ml" 70 2090 2109
+)
+"cnfpremsel_parse.ml" 74 2290 2331 "cnfpremsel_parse.ml" 74 2290 2332
+type(
+  int
+)
+ident(
+  int_ref y "cnfpremsel_parse.ml" 70 2090 2110 "cnfpremsel_parse.ml" 70 2090 2111
+)
+"cnfpremsel_parse.ml" 74 2290 2334 "cnfpremsel_parse.ml" 74 2290 2335
+type(
+  bool
+)
+ident(
+  int_ref b "cnfpremsel_parse.ml" 69 2055 2085 "cnfpremsel_parse.ml" 69 2055 2086
+)
+"cnfpremsel_parse.ml" 74 2290 2322 "cnfpremsel_parse.ml" 74 2290 2336
+type(
+  int * int * int * bool
+)
+"cnfpremsel_parse.ml" 74 2290 2296 "cnfpremsel_parse.ml" 74 2290 2336
+call(
+  tail
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 73 2227 2233 "cnfpremsel_parse.ml" 74 2290 2336
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 72 2164 2170 "cnfpremsel_parse.ml" 74 2290 2336
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 71 2114 2120 "cnfpremsel_parse.ml" 74 2290 2336
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 75 2340 2352 "cnfpremsel_parse.ml" 75 2340 2361
+type(
+  int list -> unit
+)
+ident(
+  def save_list "cnfpremsel_parse.ml" 75 2340 2344 "cnfpremsel_parse.ml" 80 2526 2545
+)
+"cnfpremsel_parse.ml" 76 2373 2381 "cnfpremsel_parse.ml" 76 2373 2383
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 76 2373 2387 "cnfpremsel_parse.ml" 76 2373 2396
+type(
+  int -> int -> unit
+)
+ident(
+  int_ref save_pair "cnfpremsel_parse.ml" 70 2090 2098 "cnfpremsel_parse.ml" 70 2090 2107
+)
+"cnfpremsel_parse.ml" 76 2373 2397 "cnfpremsel_parse.ml" 76 2373 2401
+type(
+  int
+)
+"cnfpremsel_parse.ml" 76 2373 2402 "cnfpremsel_parse.ml" 76 2373 2406
+type(
+  int
+)
+"cnfpremsel_parse.ml" 76 2373 2387 "cnfpremsel_parse.ml" 76 2373 2406
+call(
+  tail
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 77 2407 2416 "cnfpremsel_parse.ml" 77 2407 2417
+type(
+  int
+)
+ident(
+  def x "cnfpremsel_parse.ml" 77 2407 2422 "cnfpremsel_parse.ml" 77 2407 2438
+)
+"cnfpremsel_parse.ml" 77 2407 2415 "cnfpremsel_parse.ml" 77 2407 2418
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 77 2407 2422 "cnfpremsel_parse.ml" 77 2407 2431
+type(
+  int -> int -> unit
+)
+ident(
+  int_ref save_pair "cnfpremsel_parse.ml" 70 2090 2098 "cnfpremsel_parse.ml" 70 2090 2107
+)
+"cnfpremsel_parse.ml" 77 2407 2432 "cnfpremsel_parse.ml" 77 2407 2433
+type(
+  int
+)
+ident(
+  int_ref x "cnfpremsel_parse.ml" 77 2407 2416 "cnfpremsel_parse.ml" 77 2407 2417
+)
+"cnfpremsel_parse.ml" 77 2407 2434 "cnfpremsel_parse.ml" 77 2407 2438
+type(
+  int
+)
+"cnfpremsel_parse.ml" 77 2407 2422 "cnfpremsel_parse.ml" 77 2407 2438
+call(
+  tail
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 78 2439 2448 "cnfpremsel_parse.ml" 78 2439 2449
+type(
+  int
+)
+ident(
+  def x "cnfpremsel_parse.ml" 78 2439 2456 "cnfpremsel_parse.ml" 78 2439 2469
+)
+"cnfpremsel_parse.ml" 78 2439 2450 "cnfpremsel_parse.ml" 78 2439 2451
+type(
+  int
+)
+ident(
+  def y "cnfpremsel_parse.ml" 78 2439 2456 "cnfpremsel_parse.ml" 78 2439 2469
+)
+"cnfpremsel_parse.ml" 78 2439 2447 "cnfpremsel_parse.ml" 78 2439 2452
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 78 2439 2456 "cnfpremsel_parse.ml" 78 2439 2465
+type(
+  int -> int -> unit
+)
+ident(
+  int_ref save_pair "cnfpremsel_parse.ml" 70 2090 2098 "cnfpremsel_parse.ml" 70 2090 2107
+)
+"cnfpremsel_parse.ml" 78 2439 2466 "cnfpremsel_parse.ml" 78 2439 2467
+type(
+  int
+)
+ident(
+  int_ref x "cnfpremsel_parse.ml" 78 2439 2448 "cnfpremsel_parse.ml" 78 2439 2449
+)
+"cnfpremsel_parse.ml" 78 2439 2468 "cnfpremsel_parse.ml" 78 2439 2469
+type(
+  int
+)
+ident(
+  int_ref y "cnfpremsel_parse.ml" 78 2439 2450 "cnfpremsel_parse.ml" 78 2439 2451
+)
+"cnfpremsel_parse.ml" 78 2439 2456 "cnfpremsel_parse.ml" 78 2439 2469
+call(
+  tail
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 79 2470 2478 "cnfpremsel_parse.ml" 79 2470 2479
+type(
+  int
+)
+ident(
+  def x "cnfpremsel_parse.ml" 79 2470 2490 "cnfpremsel_parse.ml" 79 2470 2522
+)
+"cnfpremsel_parse.ml" 79 2470 2481 "cnfpremsel_parse.ml" 79 2470 2482
+type(
+  int
+)
+ident(
+  def y "cnfpremsel_parse.ml" 79 2470 2490 "cnfpremsel_parse.ml" 79 2470 2522
+)
+"cnfpremsel_parse.ml" 79 2470 2484 "cnfpremsel_parse.ml" 79 2470 2486
+type(
+  int list
+)
+ident(
+  def tl "cnfpremsel_parse.ml" 79 2470 2490 "cnfpremsel_parse.ml" 79 2470 2522
+)
+"cnfpremsel_parse.ml" 79 2470 2481 "cnfpremsel_parse.ml" 79 2470 2486
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 79 2470 2478 "cnfpremsel_parse.ml" 79 2470 2486
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 79 2470 2490 "cnfpremsel_parse.ml" 79 2470 2499
+type(
+  int -> int -> unit
+)
+ident(
+  int_ref save_pair "cnfpremsel_parse.ml" 70 2090 2098 "cnfpremsel_parse.ml" 70 2090 2107
+)
+"cnfpremsel_parse.ml" 79 2470 2500 "cnfpremsel_parse.ml" 79 2470 2501
+type(
+  int
+)
+ident(
+  int_ref x "cnfpremsel_parse.ml" 79 2470 2478 "cnfpremsel_parse.ml" 79 2470 2479
+)
+"cnfpremsel_parse.ml" 79 2470 2502 "cnfpremsel_parse.ml" 79 2470 2503
+type(
+  int
+)
+ident(
+  int_ref y "cnfpremsel_parse.ml" 79 2470 2481 "cnfpremsel_parse.ml" 79 2470 2482
+)
+"cnfpremsel_parse.ml" 79 2470 2490 "cnfpremsel_parse.ml" 79 2470 2503
+call(
+  stack
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 79 2470 2505 "cnfpremsel_parse.ml" 79 2470 2514
+type(
+  int list -> unit
+)
+ident(
+  int_ref save_list "cnfpremsel_parse.ml" 75 2340 2352 "cnfpremsel_parse.ml" 75 2340 2361
+)
+"cnfpremsel_parse.ml" 79 2470 2516 "cnfpremsel_parse.ml" 79 2470 2517
+type(
+  int
+)
+ident(
+  int_ref y "cnfpremsel_parse.ml" 79 2470 2481 "cnfpremsel_parse.ml" 79 2470 2482
+)
+"cnfpremsel_parse.ml" 79 2470 2519 "cnfpremsel_parse.ml" 79 2470 2521
+type(
+  int list
+)
+ident(
+  int_ref tl "cnfpremsel_parse.ml" 79 2470 2484 "cnfpremsel_parse.ml" 79 2470 2486
+)
+"cnfpremsel_parse.ml" 79 2470 2515 "cnfpremsel_parse.ml" 79 2470 2522
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 79 2470 2505 "cnfpremsel_parse.ml" 79 2470 2522
+call(
+  tail
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 79 2470 2490 "cnfpremsel_parse.ml" 79 2470 2522
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 75 2340 2364 "cnfpremsel_parse.ml" 79 2470 2522
+type(
+  int list -> unit
+)
+"cnfpremsel_parse.ml" 80 2526 2530 "cnfpremsel_parse.ml" 80 2526 2539
+type(
+  int list -> unit
+)
+ident(
+  int_ref save_list "cnfpremsel_parse.ml" 75 2340 2352 "cnfpremsel_parse.ml" 75 2340 2361
+)
+"cnfpremsel_parse.ml" 80 2526 2540 "cnfpremsel_parse.ml" 80 2526 2545
+type(
+  int list
+)
+ident(
+  int_ref param "cnfpremsel_parse.ml" 69 2055 2078 "cnfpremsel_parse.ml" 69 2055 2083
+)
+"cnfpremsel_parse.ml" 80 2526 2530 "cnfpremsel_parse.ml" 80 2526 2545
+call(
+  tail
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 75 2340 2344 "cnfpremsel_parse.ml" 80 2526 2545
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 70 2090 2094 "cnfpremsel_parse.ml" 80 2526 2545
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 81 2549 2551 "cnfpremsel_parse.ml" 81 2549 2560
+type(
+  (int * int * int list -> unit) -> (int * int * int list) list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"cnfpremsel_parse.ml" 81 2549 2562 "cnfpremsel_parse.ml" 81 2549 2569
+type(
+  (int * int * int list * bool -> unit) ->
+  (int * int * int list -> int * int * int list * bool) ->
+  int * int * int list -> unit
+)
+ident(
+  ext_ref Circuit.compose
+)
+"cnfpremsel_parse.ml" 81 2549 2570 "cnfpremsel_parse.ml" 81 2549 2577
+type(
+  int * int * int list * bool -> unit
+)
+ident(
+  int_ref save_fr "cnfpremsel_parse.ml" 69 2055 2061 "cnfpremsel_parse.ml" 69 2055 2068
+)
+"cnfpremsel_parse.ml" 81 2549 2578 "cnfpremsel_parse.ml" 81 2549 2588
+type(
+  int * int * int list -> int * int * int list * bool
+)
+ident(
+  int_ref func_to_fr "cnfpremsel_parse.ml" 52 1515 1521 "cnfpremsel_parse.ml" 52 1515 1531
+)
+"cnfpremsel_parse.ml" 81 2549 2561 "cnfpremsel_parse.ml" 81 2549 2589
+call(
+  stack
+)
+type(
+  int * int * int list -> unit
+)
+"cnfpremsel_parse.ml" 81 2549 2590 "cnfpremsel_parse.ml" 81 2549 2595
+type(
+  (int * int * int list) list
+)
+ident(
+  int_ref terms "cnfpremsel_parse.ml" 47 1379 1383 "cnfpremsel_parse.ml" 47 1379 1388
+)
+"cnfpremsel_parse.ml" 81 2549 2551 "cnfpremsel_parse.ml" 81 2549 2595
+call(
+  stack
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 82 2597 2599 "cnfpremsel_parse.ml" 82 2597 2608
+type(
+  (int * int * int list -> unit) -> (int * int * int list) list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"cnfpremsel_parse.ml" 82 2597 2610 "cnfpremsel_parse.ml" 82 2597 2617
+type(
+  (int * int * int list * bool -> unit) ->
+  (int * int * int list -> int * int * int list * bool) ->
+  int * int * int list -> unit
+)
+ident(
+  ext_ref Circuit.compose
+)
+"cnfpremsel_parse.ml" 82 2597 2618 "cnfpremsel_parse.ml" 82 2597 2625
+type(
+  int * int * int list * bool -> unit
+)
+ident(
+  int_ref save_fr "cnfpremsel_parse.ml" 69 2055 2061 "cnfpremsel_parse.ml" 69 2055 2068
+)
+"cnfpremsel_parse.ml" 82 2597 2626 "cnfpremsel_parse.ml" 82 2597 2635
+type(
+  int * int * int list -> int * int * int list * bool
+)
+ident(
+  int_ref rel_to_fr "cnfpremsel_parse.ml" 53 1573 1579 "cnfpremsel_parse.ml" 53 1573 1588
+)
+"cnfpremsel_parse.ml" 82 2597 2609 "cnfpremsel_parse.ml" 82 2597 2636
+call(
+  stack
+)
+type(
+  int * int * int list -> unit
+)
+"cnfpremsel_parse.ml" 82 2597 2637 "cnfpremsel_parse.ml" 82 2597 2645
+type(
+  (int * int * int list) list
+)
+ident(
+  int_ref literals "cnfpremsel_parse.ml" 47 1379 1390 "cnfpremsel_parse.ml" 47 1379 1398
+)
+"cnfpremsel_parse.ml" 82 2597 2599 "cnfpremsel_parse.ml" 82 2597 2645
+call(
+  stack
+)
+type(
+  unit
+)
+"cnfpremsel_parse.ml" 84 2648 2654 "cnfpremsel_parse.ml" 84 2648 2666
+type(
+  int list
+)
+ident(
+  def symbol_types "cnfpremsel_parse.ml" 87 2853 2855 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 84 2648 2669 "cnfpremsel_parse.ml" 84 2648 2684
+type(
+  int list -> int list -> int list
+)
+ident(
+  ext_ref List.rev_append
+)
+"cnfpremsel_parse.ml" 84 2648 2686 "cnfpremsel_parse.ml" 84 2648 2696
+type(
+  int -> int -> int list
+)
+ident(
+  ext_ref Circuit.ListE.make
+)
+"cnfpremsel_parse.ml" 84 2648 2697 "cnfpremsel_parse.ml" 84 2648 2705
+type(
+  int
+)
+ident(
+  int_ref func_num "cnfpremsel_parse.ml" 46 1344 1359 "cnfpremsel_parse.ml" 46 1344 1367
+)
+"cnfpremsel_parse.ml" 84 2648 2706 "cnfpremsel_parse.ml" 84 2648 2707
+type(
+  int
+)
+"cnfpremsel_parse.ml" 84 2648 2685 "cnfpremsel_parse.ml" 84 2648 2708
+call(
+  stack
+)
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 84 2648 2710 "cnfpremsel_parse.ml" 84 2648 2720
+type(
+  int -> int -> int list
+)
+ident(
+  ext_ref Circuit.ListE.make
+)
+"cnfpremsel_parse.ml" 84 2648 2721 "cnfpremsel_parse.ml" 84 2648 2728
+type(
+  int
+)
+ident(
+  int_ref rel_num "cnfpremsel_parse.ml" 46 1344 1369 "cnfpremsel_parse.ml" 46 1344 1376
+)
+"cnfpremsel_parse.ml" 84 2648 2729 "cnfpremsel_parse.ml" 84 2648 2730
+type(
+  int
+)
+"cnfpremsel_parse.ml" 84 2648 2709 "cnfpremsel_parse.ml" 84 2648 2731
+call(
+  stack
+)
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 84 2648 2669 "cnfpremsel_parse.ml" 84 2648 2731
+call(
+  stack
+)
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 85 2732 2738 "cnfpremsel_parse.ml" 85 2732 2750
+type(
+  int list
+)
+ident(
+  def clause_types "cnfpremsel_parse.ml" 87 2853 2855 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 85 2732 2753 "cnfpremsel_parse.ml" 85 2732 2763
+type(
+  int -> int -> int list
+)
+ident(
+  ext_ref Circuit.ListE.make
+)
+"cnfpremsel_parse.ml" 85 2732 2765 "cnfpremsel_parse.ml" 85 2732 2776
+type(
+  int list list -> int
+)
+ident(
+  ext_ref List.length
+)
+"cnfpremsel_parse.ml" 85 2732 2777 "cnfpremsel_parse.ml" 85 2732 2783
+type(
+  int list list
+)
+ident(
+  int_ref cl_ind "cnfpremsel_parse.ml" 44 1293 1299 "cnfpremsel_parse.ml" 44 1293 1305
+)
+"cnfpremsel_parse.ml" 85 2732 2764 "cnfpremsel_parse.ml" 85 2732 2784
+call(
+  stack
+)
+type(
+  int
+)
+"cnfpremsel_parse.ml" 85 2732 2785 "cnfpremsel_parse.ml" 85 2732 2786
+type(
+  int
+)
+"cnfpremsel_parse.ml" 85 2732 2753 "cnfpremsel_parse.ml" 85 2732 2786
+call(
+  stack
+)
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 86 2787 2793 "cnfpremsel_parse.ml" 86 2787 2804
+type(
+  'g list list -> int list * 'g list
+)
+ident(
+  def export_list "cnfpremsel_parse.ml" 87 2853 2855 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 86 2787 2805 "cnfpremsel_parse.ml" 86 2787 2806
+type(
+  'g list list
+)
+ident(
+  def l "cnfpremsel_parse.ml" 86 2787 2809 "cnfpremsel_parse.ml" 86 2787 2849
+)
+"cnfpremsel_parse.ml" 86 2787 2810 "cnfpremsel_parse.ml" 86 2787 2818
+type(
+  ('g list -> int) -> 'g list list -> int list
+)
+ident(
+  ext_ref List.map
+)
+"cnfpremsel_parse.ml" 86 2787 2819 "cnfpremsel_parse.ml" 86 2787 2830
+type(
+  'g list -> int
+)
+ident(
+  ext_ref List.length
+)
+"cnfpremsel_parse.ml" 86 2787 2831 "cnfpremsel_parse.ml" 86 2787 2832
+type(
+  'g list list
+)
+ident(
+  int_ref l "cnfpremsel_parse.ml" 86 2787 2805 "cnfpremsel_parse.ml" 86 2787 2806
+)
+"cnfpremsel_parse.ml" 86 2787 2810 "cnfpremsel_parse.ml" 86 2787 2832
+call(
+  stack
+)
+type(
+  int list
+)
+"cnfpremsel_parse.ml" 86 2787 2834 "cnfpremsel_parse.ml" 86 2787 2846
+type(
+  'g list list -> 'g list
+)
+ident(
+  ext_ref List.flatten
+)
+"cnfpremsel_parse.ml" 86 2787 2847 "cnfpremsel_parse.ml" 86 2787 2848
+type(
+  'g list list
+)
+ident(
+  int_ref l "cnfpremsel_parse.ml" 86 2787 2805 "cnfpremsel_parse.ml" 86 2787 2806
+)
+"cnfpremsel_parse.ml" 86 2787 2834 "cnfpremsel_parse.ml" 86 2787 2848
+call(
+  stack
+)
+type(
+  'g list
+)
+"cnfpremsel_parse.ml" 86 2787 2809 "cnfpremsel_parse.ml" 86 2787 2849
+type(
+  int list * 'g list
+)
+"cnfpremsel_parse.ml" 87 2853 2859 "cnfpremsel_parse.ml" 87 2853 2871
+type(
+  'h list array -> int list * 'h list
+)
+ident(
+  def export_array "cnfpremsel_parse.ml" 89 2911 2913 "cnfpremsel_parse.ml" 100 3290 3293
+)
+"cnfpremsel_parse.ml" 87 2853 2872 "cnfpremsel_parse.ml" 87 2853 2873
+type(
+  'h list array
+)
+ident(
+  def a "cnfpremsel_parse.ml" 87 2853 2876 "cnfpremsel_parse.ml" 87 2853 2905
+)
+"cnfpremsel_parse.ml" 87 2853 2876 "cnfpremsel_parse.ml" 87 2853 2887
+type(
+  'h list list -> int list * 'h list
+)
+ident(
+  int_ref export_list "cnfpremsel_parse.ml" 86 2787 2793 "cnfpremsel_parse.ml" 86 2787 2804
+)
+"cnfpremsel_parse.ml" 87 2853 2889 "cnfpremsel_parse.ml" 87 2853 2902
+type(
+  'h list array -> 'h list list
+)
+ident(
+  ext_ref Array.to_list
+)
+"cnfpremsel_parse.ml" 87 2853 2903 "cnfpremsel_parse.ml" 87 2853 2904
+type(
+  'h list array
+)
+ident(
+  int_ref a "cnfpremsel_parse.ml" 87 2853 2872 "cnfpremsel_parse.ml" 87 2853 2873
+)
+"cnfpremsel_parse.ml" 87 2853 2888 "cnfpremsel_parse.ml" 87 2853 2905
+call(
+  stack
+)
+type(
+  'h list list
+)
+"cnfpremsel_parse.ml" 87 2853 2876 "cnfpremsel_parse.ml" 87 2853 2905
+call(
+  tail
+)
+type(
+  int list * 'h list
+)
+"cnfpremsel_parse.ml" 90 2915 2918 "cnfpremsel_parse.ml" 90 2915 2926
+type(
+  ((int * int * int * bool) list array ->
+   int list * (int * int * int * bool) list) ->
+  (int * int * int * bool) list array list ->
+  (int list * (int * int * int * bool) list) list
+)
+ident(
+  ext_ref List.map
+)
+"cnfpremsel_parse.ml" 90 2915 2927 "cnfpremsel_parse.ml" 90 2915 2939
+type(
+  (int * int * int * bool) list array ->
+  int list * (int * int * int * bool) list
+)
+ident(
+  int_ref export_array "cnfpremsel_parse.ml" 87 2853 2859 "cnfpremsel_parse.ml" 87 2853 2871
+)
+"cnfpremsel_parse.ml" 91 2940 2947 "cnfpremsel_parse.ml" 91 2940 2962
+type(
+  (int * int * int * bool) list array
+)
+ident(
+  int_ref node_res_inputs "cnfpremsel_parse.ml" 57 1707 1713 "cnfpremsel_parse.ml" 57 1707 1728
+)
+"cnfpremsel_parse.ml" 91 2940 2964 "cnfpremsel_parse.ml" 91 2940 2977
+type(
+  (int * int * int * bool) list array
+)
+ident(
+  int_ref node_l_inputs "cnfpremsel_parse.ml" 58 1754 1760 "cnfpremsel_parse.ml" 58 1754 1773
+)
+"cnfpremsel_parse.ml" 91 2940 2979 "cnfpremsel_parse.ml" 91 2940 2992
+type(
+  (int * int * int * bool) list array
+)
+ident(
+  int_ref node_r_inputs "cnfpremsel_parse.ml" 59 1799 1805 "cnfpremsel_parse.ml" 59 1799 1818
+)
+"cnfpremsel_parse.ml" 91 2940 2994 "cnfpremsel_parse.ml" 91 2940 3007
+type(
+  (int * int * int * bool) list array
+)
+ident(
+  int_ref symbol_inputs "cnfpremsel_parse.ml" 60 1844 1850 "cnfpremsel_parse.ml" 60 1844 1863
+)
+"cnfpremsel_parse.ml" 91 2940 2945 "cnfpremsel_parse.ml" 91 2940 3009
+type(
+  (int * int * int * bool) list array list
+)
+"cnfpremsel_parse.ml" 90 2915 2918 "cnfpremsel_parse.ml" 91 2940 3009
+call(
+  stack
+)
+type(
+  (int list * (int * int * int * bool) list) list
+)
+"cnfpremsel_parse.ml" 92 3011 3016 "cnfpremsel_parse.ml" 92 3011 3028
+type(
+  int list array -> int list * int list
+)
+ident(
+  int_ref export_array "cnfpremsel_parse.ml" 87 2853 2859 "cnfpremsel_parse.ml" 87 2853 2871
+)
+"cnfpremsel_parse.ml" 92 3011 3029 "cnfpremsel_parse.ml" 92 3011 3042
+type(
+  int list array
+)
+ident(
+  int_ref node_c_inputs "cnfpremsel_parse.ml" 61 1891 1897 "cnfpremsel_parse.ml" 61 1891 1910
+)
+"cnfpremsel_parse.ml" 92 3011 3016 "cnfpremsel_parse.ml" 92 3011 3042
+call(
+  stack
+)
+type(
+  int list * int list
+)
+"cnfpremsel_parse.ml" 92 3011 3044 "cnfpremsel_parse.ml" 92 3011 3055
+type(
+  int list list -> int list * int list
+)
+ident(
+  int_ref export_list "cnfpremsel_parse.ml" 86 2787 2793 "cnfpremsel_parse.ml" 86 2787 2804
+)
+"cnfpremsel_parse.ml" 92 3011 3056 "cnfpremsel_parse.ml" 92 3011 3062
+type(
+  int list list
+)
+ident(
+  int_ref cl_ind "cnfpremsel_parse.ml" 44 1293 1299 "cnfpremsel_parse.ml" 44 1293 1305
+)
+"cnfpremsel_parse.ml" 92 3011 3044 "cnfpremsel_parse.ml" 92 3011 3062
+call(
+  stack
+)
+type(
+  int list * int list
+)
+"cnfpremsel_parse.ml" 92 3011 3014 "cnfpremsel_parse.ml" 92 3011 3064
+type(
+  (int list * int list) list
+)
+"cnfpremsel_parse.ml" 93 3066 3071 "cnfpremsel_parse.ml" 93 3066 3081
+type(
+  int list
+)
+ident(
+  int_ref node_types "cnfpremsel_parse.ml" 47 1379 1400 "cnfpremsel_parse.ml" 47 1379 1410
+)
+"cnfpremsel_parse.ml" 93 3066 3083 "cnfpremsel_parse.ml" 93 3066 3095
+type(
+  int list
+)
+ident(
+  int_ref symbol_types "cnfpremsel_parse.ml" 84 2648 2654 "cnfpremsel_parse.ml" 84 2648 2666
+)
+"cnfpremsel_parse.ml" 93 3066 3097 "cnfpremsel_parse.ml" 93 3066 3109
+type(
+  int list
+)
+ident(
+  int_ref clause_types "cnfpremsel_parse.ml" 85 2732 2738 "cnfpremsel_parse.ml" 85 2732 2750
+)
+"cnfpremsel_parse.ml" 93 3066 3069 "cnfpremsel_parse.ml" 93 3066 3111
+type(
+  int list list
+)
+"cnfpremsel_parse.ml" 99 3269 3273 "cnfpremsel_parse.ml" 99 3269 3279
+type(
+  'a
+)
+ident(
+  int_ref labels "cnfpremsel_parse.ml" 38 1141 1181 "cnfpremsel_parse.ml" 38 1141 1187
+)
+"cnfpremsel_parse.ml" 99 3269 3281 "cnfpremsel_parse.ml" 99 3269 3288
+type(
+  string list * string list
+)
+ident(
+  int_ref symbols "cnfpremsel_parse.ml" 49 1433 1439 "cnfpremsel_parse.ml" 49 1433 1446
+)
+"cnfpremsel_parse.ml" 99 3269 3272 "cnfpremsel_parse.ml" 99 3269 3289
+type(
+  'a * (string list * string list)
+)
+"cnfpremsel_parse.ml" 89 2911 2913 "cnfpremsel_parse.ml" 100 3290 3293
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+"cnfpremsel_parse.ml" 87 2853 2855 "cnfpremsel_parse.ml" 100 3290 3293
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+"cnfpremsel_parse.ml" 84 2648 2650 "cnfpremsel_parse.ml" 100 3290 3293
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+"cnfpremsel_parse.ml" 82 2597 2599 "cnfpremsel_parse.ml" 100 3290 3293
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+"cnfpremsel_parse.ml" 81 2549 2551 "cnfpremsel_parse.ml" 100 3290 3293
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+"cnfpremsel_parse.ml" 69 2055 2057 "cnfpremsel_parse.ml" 100 3290 3293
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+"cnfpremsel_parse.ml" 63 1941 1943 "cnfpremsel_parse.ml" 100 3290 3293
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+"cnfpremsel_parse.ml" 57 1707 1709 "cnfpremsel_parse.ml" 100 3290 3293
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+"cnfpremsel_parse.ml" 51 1477 1479 "cnfpremsel_parse.ml" 100 3290 3293
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+"cnfpremsel_parse.ml" 45 1336 1338 "cnfpremsel_parse.ml" 100 3290 3293
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+"cnfpremsel_parse.ml" 44 1293 1295 "cnfpremsel_parse.ml" 100 3290 3293
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+"cnfpremsel_parse.ml" 41 1222 1224 "cnfpremsel_parse.ml" 100 3290 3293
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+"cnfpremsel_parse.ml" 39 1192 1194 "cnfpremsel_parse.ml" 100 3290 3293
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  ('a * (string list * string list))
+)
+"cnfpremsel_parse.ml" 102 3297 3301 "cnfpremsel_parse.ml" 102 3297 3323
+type(
+  string ->
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  (int list * (string list * string list))
+)
+ident(
+  def load_cnfpremsel_to_ind "cnfpremsel_parse.ml" 103 3332 3383 "cnfpremsel_parse.ml" 1 0 -1
+)
+"cnfpremsel_parse.ml" 102 3297 3324 "cnfpremsel_parse.ml" 102 3297 3329
+type(
+  string
+)
+ident(
+  def fname "cnfpremsel_parse.ml" 103 3332 3334 "cnfpremsel_parse.ml" 103 3332 3383
+)
+"cnfpremsel_parse.ml" 103 3332 3334 "cnfpremsel_parse.ml" 103 3332 3359
+type(
+  (Circuit.IM.key * Cnf.term list) list list * int list ->
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  (int list * (string list * string list))
+)
+ident(
+  int_ref cnfpremsel_cnf_to_indices "cnfpremsel_parse.ml" 38 1141 1145 "cnfpremsel_parse.ml" 38 1141 1170
+)
+"cnfpremsel_parse.ml" 103 3332 3361 "cnfpremsel_parse.ml" 103 3332 3376
+type(
+  string -> (Circuit.IM.key * Cnf.term list) list list * int list
+)
+ident(
+  int_ref load_cnfpremsel "cnfpremsel_parse.ml" 22 341 345 "cnfpremsel_parse.ml" 22 341 360
+)
+"cnfpremsel_parse.ml" 103 3332 3377 "cnfpremsel_parse.ml" 103 3332 3382
+type(
+  string
+)
+ident(
+  int_ref fname "cnfpremsel_parse.ml" 102 3297 3324 "cnfpremsel_parse.ml" 102 3297 3329
+)
+"cnfpremsel_parse.ml" 103 3332 3360 "cnfpremsel_parse.ml" 103 3332 3383
+call(
+  stack
+)
+type(
+  (Circuit.IM.key * Cnf.term list) list list * int list
+)
+"cnfpremsel_parse.ml" 103 3332 3334 "cnfpremsel_parse.ml" 103 3332 3383
+call(
+  tail
+)
+type(
+  (int list * (int * int * int * bool) list) list *
+  (int list * int list) list * int list list *
+  (int list * (string list * string list))
+)
