@@ -78,7 +78,6 @@ class KNN(Model):
         simils_sorted = sorted(simils.values(), reverse=True)
         N_thresh = simils_sorted[min(self.neighbours, len(simils) - 1)]
         N_nearest_thms = {t for t in simils if simils[t] >= N_thresh}
-        assert not conj in N_nearest_thms
         prems_scores = {}
         for thm in N_nearest_thms:
             prems_scores_one = {}
