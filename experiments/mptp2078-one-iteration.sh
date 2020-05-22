@@ -10,8 +10,7 @@ python3 atpboost.py \
 	--mining 0 \
 	--n_jobs 70 \
 	--xgb_rounds 5000 \
-	--xgb_knn_prefiltering 0 \
-	--data_dir data/MPTP2078/atpboost_data \
 	--xgb_knn_prefiltering 10000 \
+	--data_dir data/MPTP2078/atpboost_data \
 	--logfile `echo $0 | sed 's/\.sh/.log/g'`
 
