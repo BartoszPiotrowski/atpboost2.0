@@ -124,7 +124,6 @@ class XGBoost(Model):
         array = self.xgb.DMatrix(array)
         scores = xgb_model.predict(array)
         premises_scores = list(zip(premises, scores))
-        write_lines([f'{p} {s}' for p, s in premises_scores], '_scores/' + conj)
         return premises_scores
 
 
@@ -134,6 +133,7 @@ class XGBoost(Model):
         for conj in scored_prems:
             sp = scored_prems[conj]
             sp.sort(key = lambda x: x[1], reverse = True)
+            write_lines([f'{p} {s}' for p, s in sp], '_scores/' + conj)
             ranking = [p for p, s in sp]
             slices = [ranking[:i] for i in slices_lens]
             slices_to_save = [conj + ':' + ' '.join(s) for s in slices]
