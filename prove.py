@@ -3,6 +3,7 @@ from joblib import Parallel, delayed
 from utils import merge_predictions, mkdir_if_not_exists
 from utils import read_lines, read_statements
 from tqdm import tqdm
+from random import shuffle
 
 
 def prove(predictions, args):
@@ -22,6 +23,8 @@ def prove(predictions, args):
 
 def prove_one(conj, deps, statements_path, dir_path, proving_script, logger):
     assert not conj in set(deps), (conj, deps)
+    deps = list(deps)
+    shuffle(deps)
     input_filename = problem_file(conj, deps, statements_path, dir_path)
     output_filename = input_filename.replace('.p', '.out')
     run_prover(input_filename, output_filename, proving_script)
