@@ -9,3 +9,5 @@ python3 atpboost.py \
     --iterations 100 \
 	--n_jobs 50 \
     --data_dir data/MPTP2078/atpboost_data \
+	--logfile `echo $0 | rev | cut -d. -f2- | rev`.log
+
