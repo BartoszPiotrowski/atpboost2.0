@@ -30,20 +30,23 @@ def stats(train_deps, conjs, conjs_proved=None, padding=' ' * 25):
     n_conjs_proved_total = len(set(train_deps) & set(conjs))
     n_conjs_proved_now = len(set(conjs_proved))
     n_all_deps = sum([len(train_deps[t]) for t in train_deps])
+    n_conj_deps = sum([len(train_deps[t]) for t in train_deps if t in conjs])
     n_thms_in_deps = len(train_deps)
 
-    message = 'Loop statistics: \n'
+    message = "Loop statistics: \n"
     message += padding
-    message += f'Conjectures proved (all iterations)  : ' + \
-               f'{n_conjs_proved_total} / {len(conjs)} ' + \
-               f'({100 * n_conjs_proved_total / len(conjs):.2f}%)\n'
+    message += f"Conjectures proved (all iterations)  : " + \
+               f"{n_conjs_proved_total} / {len(conjs)} " + \
+               f"({100 * n_conjs_proved_total / len(conjs):.2f}%)\n"
     message += padding
-    message += f'Conjectures proved (this interation) : ' + \
-               f'{n_conjs_proved_now} / {len(conjs)} ' + \
-               f'({100 * n_conjs_proved_now / len(conjs):.2f}%)\n'
+    message += f"Conjectures proved (this interation) : " + \
+               f"{n_conjs_proved_now} / {len(conjs)} " + \
+               f"({100 * n_conjs_proved_now / len(conjs):.2f}%)\n"
     message += padding
-    message += f'All training dependencies            : {n_all_deps}\n'
+    message += f"Conjectures' dependencies            : {n_conj_deps}\n"
     message += padding
-    message += f'Theorems in training dependencies    : {n_thms_in_deps}'
+    message += f"Training dependencies                : {n_all_deps}\n"
+    message += padding
+    message += f"Theorems in training dependencies    : {n_thms_in_deps}"
 
     return message
