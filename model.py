@@ -1,6 +1,6 @@
 import os
 from joblib import Parallel, delayed
-from prepare_data import deps_to_train_array, pairs_to_array
+from prepare_data_xgb import deps_to_train_array, pairs_to_array
 from importlib import import_module
 from utils import read_lines, write_lines, read_features, read_deps, size, size
 from utils import mkdir_if_not_exists, dict_features_numbers, similarity
@@ -10,16 +10,16 @@ class Model:
     def __init__(self, **kwargs):
         self.kwargs = kwargs
         self.train_params = {}
-        self.train_deps = kwargs['train_deps']
         self.n_jobs = kwargs['n_jobs']
         self.logger = kwargs['logger']
         self.save_dir = kwargs['save_dir']
         self.chronology = kwargs['chronology']
         mkdir_if_not_exists(self.save_dir)
 
-    def train(self):
+    def train(self, train_deps, train_neg_deps=None):
         # some models do not train (knn)
-        pass
+        self.train_deps = train_deps
+        self.train_neg_deps = train_neg_deps
 
     def save(self):
         pass
@@ -61,14 +61,15 @@ class KNN(Model):
         for conj in conjs:
             available_prems = set(chronology[:chronology.index(conj)])
             scored_prems[conj] = self.predict_1(conj, available_prems,
-                                                 deps, deps_u, features,
-                                                 features_numbers)
+                 deps, deps_u, features, features_numbers, self.neighbours)
         self.predictions_path = self.make_predictions(scored_prems)
         self.logger.print(f'Predictions saved to {self.predictions_path}')
         return self.predictions_path
 
-    def predict_1(self, conj, available_prems, deps, deps_u, features,
-                  features_numbers):
+
+    @staticmethod
+    def predict_1(conj, available_prems, deps, deps_u, features,
+                  features_numbers, n_neighbours=100):
         assert not conj in available_prems
         available_thms = {t for t in deps_u if deps_u[t] <= available_prems}
         simils = {thm: similarity((conj, features[conj]),
@@ -76,7 +77,7 @@ class KNN(Model):
                                   features_numbers, len(available_thms))
                             for thm in available_thms} # TODO len(av_thms) ??
         simils_sorted = sorted(simils.values(), reverse=True)
-        N_thresh = simils_sorted[min(self.neighbours, len(simils) - 1)]
+        N_thresh = simils_sorted[min(n_neighbours, len(simils) - 1)]
         N_nearest_thms = {t for t in simils if simils[t] >= N_thresh}
         prems_scores = {}
         for thm in N_nearest_thms:
@@ -115,13 +116,15 @@ class XGBoost(Model):
         self.train_params['n_jobs'] = self.n_jobs
 
 
-    def prepare(self):
-        return deps_to_train_array(**self.kwargs)
+    def prepare(self, train_deps, train_neg_deps=None):
+        return deps_to_train_array(train_deps, train_neg_deps, **self.kwargs)
 
 
-    def train(self):
+    def train(self, train_deps, train_neg_deps=None):
+        self.train_deps = train_deps
+        self.train_neg_deps = train_neg_deps
         self.logger.print('Preparing training data...')
-        labels, array = self.prepare()
+        labels, array = self.prepare(train_deps, train_neg_deps)
         dtrain = self.xgb.DMatrix(array, label=labels)
         self.logger.print('Training data prepared')
         self.logger.print('Training XGBoost model...')
@@ -200,9 +203,6 @@ class XGBoost(Model):
         premises_scores = list(zip(premises, scores))
         return premises_scores
 
-
-
-
     def save(self, model):
         model.save_model(self.model_path)
         return self.model_path
@@ -216,7 +216,56 @@ class XGBoost(Model):
 class GNN(Model):
     def __init__(self, **kwargs):
         super(GNN, self).__init__(**kwargs)
+        self.gnn_prep= import_module('gnn.data_preparation')
+        self.gnn_train= import_module('gnn.gnn')
+        self.stms = kwargs['statements']
+        self.model_dir = os.path.join(self.save_dir, 'model.gnn')
+        self.train_data_dir = os.path.join(self.save_dir, 'train_data.gnn')
+        self.predictions_path = os.path.join(self.save_dir, 'predictions.gnn')
+        self.n_deps_per_example = kwargs['gnn_n_deps_per_example']
+        self.batch_size = kwargs['gnn_batch_size']
+        self.epochs = kwargs['gnn_epochs']
+        self.features = kwargs['features']
+
+
+
+    def deps_to_train_dir(self):
+        train_deps = read_deps(self.train_deps)
+        train_deps_u = read_deps(self.train_deps, unions=True)
+        thms = set(train_deps)
+        chronology = read_lines(self.chronology)
+        features = read_features(self.features)
+        features_numbers = dict_features_numbers(features)
+        train_ranks = {}
+        for thm in thms:
+            available_prems = set(chronology[:chronology.index(thm)])
+            sp = KNN.predict_1(thm, available_prems, train_deps, train_deps_u,
+                               features, features_numbers)
+            sp.sort(key = lambda x: x[1], reverse = True)
+            train_ranks[thm] = [p for p, s in sp]
+        os.makedirs(self.train_data_dir)
+        self.gnn_prep.prepare_training_data(train_deps, train_ranks, self.stms,
+                           self.train_data_dir, self.n_deps_per_example)
+        return self.train_data_dir
+
+
+    def predict_dir(self):
         pass
+
+
+    def train(self, train_deps, train_neg_deps):
+        self.logger.print('Preparing training data...')
+        self.train_deps = train_deps
+        self.train_neg_deps = train_neg_deps
+        train_data_dir = self.deps_to_train_dir()
+        self.logger.print('Training data prepared')
+        os.makedirs(self.model_path)
+        self.logger.print('Training GNN model...')
+        self.model_path = self.gnn_train.train_gnn_model(train_data_dir,
+                           epochs=self.epochs, batch_size=self.batch_size,
+                           save_each=20, save_dir=self.model_dir)
+        self.logger.print('Training GNN model done')
+        self.logger.print(f'Model saved to {self.model_path}')
 
 
 class LightGBM(Model):

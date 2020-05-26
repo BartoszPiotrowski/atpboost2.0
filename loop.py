@@ -11,22 +11,23 @@ from utils import mkdir_if_not_exists
 
 def loop(args):
     args.logger = Logger(args.logfile)
-    args.logger.print(stats_init(args.train_deps, args.conjectures))
     mkdir_if_not_exists(args.data_dir)
-    args.train_deps = copyfile(args.train_deps, args.data_dir + '/train_deps')
+    train_deps = copyfile(args.train_deps, args.data_dir + '/train_deps')
+    train_neg_deps = args.train_neg_deps
+    conjectures = args.conjectures
+    args.logger.print(stats_init(train_deps, conjectures))
     for i in range(args.iterations):
         args.logger.print(f'### Loop iteration no. {i + 1} ###', newline=True)
-        models = train(args)
-        preds = predict(models, args.conjectures)
+        models = train(train_deps, train_neg_deps, args)
+        preds = predict(models, conjectures)
         conjs_proofs = prove(preds, args)
-        conjs_deps = extract_deps(conjs_proofs) # TODO file or not?
-        # TODO how to store the deps? cleaning it?
-        args.train_deps = merge_deps(args.train_deps, *conjs_deps)
+        conjs_deps = extract_deps(conjs_proofs)
+        train_deps = merge_deps(train_deps, *conjs_deps)
         if args.mining:
             pos_deps, neg_deps = mining(models, args)
-            args.train_deps = merge_deps(args.train_deps, pos_deps)
-            args.train_neg_deps = neg_deps
-        args.logger.print(stats(args.train_deps, args.conjectures, conjs_deps))
+            train_deps = merge_deps(train_deps, pos_deps)
+            train_neg_deps = neg_deps
+        args.logger.print(stats(train_deps, conjectures, conjs_deps))
 
 
 if __name__=='__main__':

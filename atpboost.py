@@ -53,6 +53,18 @@ if __name__ == '__main__':
         default=10,
         type=int)
     parser.add_argument(
+        '--gnn_batch_size',
+        default=128,
+        type=int)
+    parser.add_argument(
+        '--gnn_epochs',
+        default=100,
+        type=int)
+    parser.add_argument(
+        '--gnn_n_deps_per_example',
+        default=256,
+        type=int)
+    parser.add_argument(
         '--knn_neighbours',
         default=100,
         type=int)

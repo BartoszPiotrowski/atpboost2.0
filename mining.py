@@ -6,6 +6,7 @@ from utils import write_lines, merge_predictions, unify_predictions
 from utils import read_deps, save_deps
 from utils import read_lines
 
+
 def mining(models, args):
     args.logger.print('Mining...')
     pos_deps, neg_deps = [], []

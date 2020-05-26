@@ -1,14 +1,24 @@
 import os, sys
-from joblib import Parallel, delayed
 from random import shuffle
 from glob import glob
-from joblib import Parallel, delayed
 from .src import fcoplib as cop
 from .graph_data import GraphData
 from .utils import read_lines, write_lines, append_lines, read_deps, read_stms
 from .utils import mkdir_if_not_exists, partition, save_obj, load_obj
 
 
+
+def prepare_training_data(train_deps, train_ranks, stms_path, save_dir,
+                          num_deps_per_example=256):
+    stms = read_stms(stms_path)
+    for thm in train_deps:
+        for i in range(len(train_deps[thm])):
+            rank = train_ranks[thm]
+            ds_pos = train_deps[thm][i]
+            n_ds_neg = max(10, num_deps_per_example - len(ds_pos))
+            ds_neg = rank[:n_ds_neg]
+            suffix = '-' + str(i)
+            make_training_file(thm, ds_pos, ds_neg, stms, save_dir, suffix)
 
 
 def prepare_training_data_from_pos_neg(conjectures_path, deps_pos_path,
