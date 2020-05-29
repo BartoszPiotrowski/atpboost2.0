@@ -37,7 +37,7 @@ def premises_names(data_dir):
         conj_prems[filename] = prems
     return conj_prems
 
-def train_gnn_model(train_data_dir, epochs, batch_size, save_each=10,
+def train_gnn_model(train_data_dir, epochs, batch_size, save_each=20,
                     save_dir='gnn_models'):
     if save_each > epochs:
         save_each = epochs
@@ -48,20 +48,18 @@ def train_gnn_model(train_data_dir, epochs, batch_size, save_each=10,
     for epoch_i in range(1, epochs + 1):
         print(f"Epoch {epoch_i}.")
         i = 0
-        print(len(train_data._permutation))
         while not train_data.epoch_finished():
-            print(len(train_data._permutation))
             batch = train_data.next_batch()
             try:
                 metrics, _, _, _ = network.train(batch)
             except:
                 print('Training on batch failed.')
-            if i % 100:
-                print(f"Loss: {metrics[0]:.5f}, "
-                      f"TPR: {metrics[1]:.2f}, TNR {metrics[2]:.2f}")
-            print(f"Loss: {metrics[0]:.5f}, "
-                  f"TPR: {metrics[1]:.2f}, TNR {metrics[2]:.2f}")
-            i += 1
+            #if i % 100:
+            #    print(f"Loss: {metrics[0]:.5f}, "
+            #          f"TPR: {metrics[1]:.2f}, TNR {metrics[2]:.2f}")
+            #i += 1
+        print(f"Loss: {metrics[0]:.5f}, "
+              f"TPR: {metrics[1]:.2f}, TNR {metrics[2]:.2f}")
         if epoch_i % save_each == 0 or epoch_i == epochs:
             save_path = save_dir + '/epoch_' + str(epoch_i)
             network.save(save_path)
