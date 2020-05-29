@@ -1,6 +1,5 @@
 import os
 from joblib import Parallel, delayed
-from prepare_data_xgb import deps_to_train_array, pairs_to_array
 from importlib import import_module
 from utils import read_lines, write_lines, read_features, read_deps, size, size
 from utils import mkdir_if_not_exists, dict_features_numbers, similarity
@@ -99,6 +98,7 @@ class KNN(Model):
 
 
 class XGBoost(Model):
+    from xgb.prepare_data import deps_to_train_array, pairs_to_array
     def __init__(self, **kwargs):
         super(XGBoost, self).__init__(**kwargs)
         self.xgb = import_module('xgboost')
