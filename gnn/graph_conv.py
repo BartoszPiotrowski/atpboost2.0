@@ -1,4 +1,7 @@
-import tensorflow as tf; tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.FATAL)
+import tensorflow as tf
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.FATAL)
+os.environ['TF_CPP_MIN_VLOG_LEVEL'] = '3'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from .debug_node import tf_debug
 from .tf_helpers import *
 
