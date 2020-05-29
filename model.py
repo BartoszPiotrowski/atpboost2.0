@@ -246,7 +246,7 @@ class GNN(Model):
                                features, features_numbers)
             sp.sort(key = lambda x: x[1], reverse = True)
             train_ranks[thm] = [p for p, s in sp]
-        mkdir_if_not_exists(self.training_dir)
+        rmdir_mkdir(self.training_dir)
         self.gnn_prep.prepare_training_data(train_deps, train_ranks, self.stms,
                            self.training_dir, self.n_deps_per_example)
         return self.training_dir
@@ -265,7 +265,7 @@ class GNN(Model):
                                features, features_numbers)
             sp.sort(key = lambda x: x[1], reverse = True)
             conjs_ranks[conj] = [p for p, s in sp]
-        mkdir_if_not_exists(self.testing_dir)
+        rmdir_mkdir(self.testing_dir)
         self.gnn_prep.prepare_testing_data(conjs, conjs_ranks, self.stms,
                                        self.testing_dir, self.n_deps_per_example)
         return self.testing_dir
@@ -288,7 +288,7 @@ class GNN(Model):
         self.train_neg_deps = train_neg_deps
         training_dir = self.prepare_training_dir()
         self.logger.print('Training data prepared')
-        mkdir_if_not_exists(self.model_dir)
+        rmdir_mkdir(self.model_dir)
         self.logger.print('Training GNN model...')
         self.model_path = self.gnn.train_gnn_model(training_dir,
                            epochs=self.epochs, batch_size=self.batch_size,
