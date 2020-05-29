@@ -253,7 +253,6 @@ class GNN(Model):
 
 
     def prepare_testing_dir(self, conjs):
-        conjs = read_lines(conjs)
         train_deps = read_deps(self.train_deps)
         train_deps_u = read_deps(self.train_deps, unions=True)
         chronology = read_lines(self.chronology)
@@ -273,6 +272,7 @@ class GNN(Model):
 
 
     def predict(self, conjs):
+        conjs = read_lines(conjs) if type(conjs) == str else conjs
         self.prepare_testing_dir(conjs)
         scored_prems = self.gnn.predictions_from_gnn_model(self.testing_dir,
                                                            self.model_path)
