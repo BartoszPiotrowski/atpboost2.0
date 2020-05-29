@@ -54,7 +54,7 @@ if __name__ == '__main__':
         type=int)
     parser.add_argument(
         '--gnn_batch_size',
-        default=128,
+        default=64,
         type=int)
     parser.add_argument(
         '--gnn_epochs',

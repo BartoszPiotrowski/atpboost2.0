@@ -5,11 +5,13 @@ from .src import fcoplib as cop
 from .graph_data import GraphData
 from .utils import read_lines, write_lines, append_lines, read_deps, read_stms
 from .utils import mkdir_if_not_exists, partition, save_obj, load_obj
+from joblib import Parallel, delayed
+from .premsel_network import enumerate_symbols
 
 
 
 def prepare_training_data(train_deps, train_ranks, stms_path, save_dir,
-                          n_deps_per_example=256):
+                          n_deps_per_example=None, n_jobs=10):
     stms = read_stms(stms_path)
     for thm in train_deps:
         for i in range(len(train_deps[thm])):
@@ -19,10 +21,22 @@ def prepare_training_data(train_deps, train_ranks, stms_path, save_dir,
             ds_neg = rank[:n_ds_neg]
             suffix = '-' + str(i)
             make_training_file(thm, ds_pos, ds_neg, stms, save_dir, suffix)
+    # postprocessing
+    data_files = glob(save_dir + '/*')
+    def load(fname):
+        gd, lls = cop.load_premsel(fname)
+        return GraphData(gd), lls, fname
+    load_d = delayed(load)
+    with Parallel(n_jobs=n_jobs) as parallel:
+        data_list = parallel(load_d(fname) for fname in data_files)
+    _, data_list = enumerate_symbols(data_list)
+    for d in data_list:
+        save_obj(d, d[-1] + '.pickle')
+    return save_dir
 
 
 def prepare_testing_data(conjs, conjs_ranks, stms_path, save_dir,
-                         n_deps_per_example=256, n=128):
+                         n_deps_per_example=None, n=128):
     stms = read_stms(stms_path)
     N = len(conjs) // n # n = size of a batch
     batches = partition(conjs, N)
@@ -89,15 +103,6 @@ def enumerate_symbols_save(data_files):
         save_obj(ds, fname + '.pickle')
     #    res_data.append((graph_data, (lens, labels, symbols), fname))
     #return symbol_to_num, res_data
-
-
-def prepare_training_data_from_pos_neg_finish_failed(dir_path):
-    data_files = glob(dir_path + '/*.pickle.tmp')
-    #data_list = [load_obj(f) for f in data_files]
-    enumerate_symbols_save(data_files)
-
-
-
 
 
 def prepare_testing_data_from_pos_neg(conjectures_path,

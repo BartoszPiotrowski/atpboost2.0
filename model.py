@@ -48,6 +48,7 @@ class KNN(Model):
         self.features = kwargs['features']
         self.predictions_path = os.path.join(self.save_dir, 'predictions.knn')
 
+
     def predict(self, conjs):
         conjs = read_lines(conjs) if type(conjs) == str else conjs
         self.logger.print(f'Making predictions for {len(conjs)} conjectures...')
@@ -249,7 +250,7 @@ class GNN(Model):
             train_ranks[thm] = [p for p, s in sp]
         rmdir_mkdir(self.training_dir)
         self.gnn_prep.prepare_training_data(train_deps, train_ranks, self.stms,
-                           self.training_dir, self.n_deps_per_example)
+                       self.training_dir, self.n_deps_per_example, self.n_jobs)
         return self.training_dir
 
 

@@ -48,7 +48,9 @@ def train_gnn_model(train_data_dir, epochs, batch_size, save_each=10,
     for epoch_i in range(1, epochs + 1):
         print(f"Epoch {epoch_i}.")
         i = 0
+        print(len(train_data._permutation))
         while not train_data.epoch_finished():
+            print(len(train_data._permutation))
             batch = train_data.next_batch()
             try:
                 metrics, _, _, _ = network.train(batch)
