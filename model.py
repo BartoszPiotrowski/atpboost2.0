@@ -5,7 +5,6 @@ from importlib import import_module
 from utils import read_lines, write_lines, read_features, read_deps, size, size
 from utils import mkdir_if_not_exists, dict_features_numbers, similarity
 
-
 class Model:
     def __init__(self, **kwargs):
         self.kwargs = kwargs
@@ -218,6 +217,7 @@ class XGBoost(Model):
 class GNN(Model):
     def __init__(self, **kwargs):
         super(GNN, self).__init__(**kwargs)
+        warn = import_module('warnings'); warn.filterwarnings("ignore")
         self.gnn_prep= import_module('gnn.data_preparation')
         self.gnn= import_module('gnn.gnn')
         self.stms = kwargs['statements']
@@ -276,6 +276,7 @@ class GNN(Model):
         self.prepare_testing_dir(conjs)
         scored_prems = self.gnn.predictions_from_gnn_model(self.testing_dir,
                                                            self.model_path)
+
         self.predictions_path = self.make_predictions(scored_prems)
         self.logger.print(f'Predictions saved to {self.predictions_path}')
         return self.predictions_path

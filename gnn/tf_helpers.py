@@ -1,6 +1,4 @@
-import tensorflow as tf
-tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
-tf.logging.set_verbosity(tf.logging.ERROR)
+import tensorflow as tf; tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.FATAL)
 from tensorflow.contrib.layers import fully_connected
 
 def tf_linear(x, num_outputs, activation_fn = None):

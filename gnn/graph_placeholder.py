@@ -1,6 +1,4 @@
-import tensorflow as tf
-tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
-tf.logging.set_verbosity(tf.logging.ERROR)
+import tensorflow as tf; tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.FATAL)
 from .graph_data import GraphData
 from .segments import SegmentsPH
 

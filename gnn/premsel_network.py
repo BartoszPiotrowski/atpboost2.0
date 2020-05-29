@@ -5,9 +5,7 @@ import glob
 import gc
 from .src import fcoplib as cop
 import numpy as np
-import tensorflow as tf
-tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
-tf.logging.set_verbosity(tf.logging.ERROR)
+import tensorflow as tf; tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.FATAL)
 from tensorflow.contrib.layers import fully_connected
 from joblib import Parallel, delayed
 from .tf_helpers import tf_linear_sq, mean_or_zero
