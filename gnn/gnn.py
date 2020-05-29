@@ -111,7 +111,7 @@ def predictions_from_gnn_model(test_data_dir, network_path):
     premises_batches = []
     logits_batches = []
     for batch_dir in batch_dirs:
-        print("Processing", batch_dir)
+        #print("Processing", batch_dir)
         test_data_batch = load_data(batch_dir)
         logits_batch = network.predict_logits_1(test_data_batch)
         premises_batch = premises_names(batch_dir)
