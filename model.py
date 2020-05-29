@@ -104,9 +104,10 @@ class XGBoost(Model):
         super(XGBoost, self).__init__(**kwargs)
         self.xgb = import_module('xgboost')
         self.kwargs = kwargs
+        self.save_dir = os.path.join(self.save_dir, 'xgb')
         self.features = kwargs['features']
-        self.model_path = os.path.join(self.save_dir, 'model.xgb')
-        self.predictions_path = os.path.join(self.save_dir, 'predictions.xgb')
+        self.model_path = os.path.join(self.save_dir, 'model')
+        self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.knn_prefiltering = kwargs['xgb_knn_prefiltering']
         self.train_params_rounds = kwargs['xgb_rounds']
         self.train_params['max_depth'] = 10
@@ -135,6 +136,7 @@ class XGBoost(Model):
         self.logger.print(self.show_config())
         self.save(model)
         self.logger.print(f'Model saved to {self.model_path}')
+
 
     def show_config(self, padding=' ' * 25):
         message = 'Parameters of the XGBoost model:\n'
@@ -217,19 +219,20 @@ class GNN(Model):
     def __init__(self, **kwargs):
         super(GNN, self).__init__(**kwargs)
         self.gnn_prep= import_module('gnn.data_preparation')
-        self.gnn_train= import_module('gnn.gnn')
+        self.gnn= import_module('gnn.gnn')
         self.stms = kwargs['statements']
-        self.model_dir = os.path.join(self.save_dir, 'model.gnn')
-        self.train_data_dir = os.path.join(self.save_dir, 'train_data.gnn')
-        self.predictions_path = os.path.join(self.save_dir, 'predictions.gnn')
+        self.save_dir = os.path.join(self.save_dir, 'gnn')
+        self.model_dir = os.path.join(self.save_dir, 'model')
+        self.training_dir = os.path.join(self.save_dir, 'training')
+        self.testing_dir = os.path.join(self.save_dir, 'testing')
+        self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.n_deps_per_example = kwargs['gnn_n_deps_per_example']
         self.batch_size = kwargs['gnn_batch_size']
         self.epochs = kwargs['gnn_epochs']
         self.features = kwargs['features']
 
 
-
-    def deps_to_train_dir(self):
+    def prepare_training_dir(self):
         train_deps = read_deps(self.train_deps)
         train_deps_u = read_deps(self.train_deps, unions=True)
         thms = set(train_deps)
@@ -243,29 +246,55 @@ class GNN(Model):
                                features, features_numbers)
             sp.sort(key = lambda x: x[1], reverse = True)
             train_ranks[thm] = [p for p, s in sp]
-        os.makedirs(self.train_data_dir)
+        mkdir_if_not_exists(self.training_dir)
         self.gnn_prep.prepare_training_data(train_deps, train_ranks, self.stms,
-                           self.train_data_dir, self.n_deps_per_example)
-        return self.train_data_dir
+                           self.training_dir, self.n_deps_per_example)
+        return self.training_dir
 
 
-    def predict_dir(self):
-        pass
+    def prepare_testing_dir(self, conjs):
+        conjs = read_lines(conjs)
+        train_deps = read_deps(self.train_deps)
+        train_deps_u = read_deps(self.train_deps, unions=True)
+        chronology = read_lines(self.chronology)
+        features = read_features(self.features)
+        features_numbers = dict_features_numbers(features)
+        conjs_ranks = {}
+        for conj in conjs:
+            available_prems = set(chronology[:chronology.index(conj)])
+            sp = KNN.predict_1(conj, available_prems, train_deps, train_deps_u,
+                               features, features_numbers)
+            sp.sort(key = lambda x: x[1], reverse = True)
+            conjs_ranks[conj] = [p for p, s in sp]
+        mkdir_if_not_exists(self.testing_dir)
+        self.gnn_prep.prepare_testing_data(conjs, conjs_ranks, self.stms,
+                                       self.testing_dir, self.n_deps_per_example)
+        return self.testing_dir
+
+
+    def predict(self, conjs):
+        self.prepare_testing_dir(conjs)
+        scored_prems = self.gnn.predictions_from_gnn_model(self.testing_dir,
+                                                           self.model_path)
+        self.predictions_path = self.make_predictions(scored_prems)
+        self.logger.print(f'Predictions saved to {self.predictions_path}')
+        return self.predictions_path
 
 
     def train(self, train_deps, train_neg_deps):
         self.logger.print('Preparing training data...')
         self.train_deps = train_deps
         self.train_neg_deps = train_neg_deps
-        train_data_dir = self.deps_to_train_dir()
+        training_dir = self.prepare_training_dir()
         self.logger.print('Training data prepared')
-        os.makedirs(self.model_path)
+        mkdir_if_not_exists(self.model_dir)
         self.logger.print('Training GNN model...')
-        self.model_path = self.gnn_train.train_gnn_model(train_data_dir,
+        self.model_path = self.gnn.train_gnn_model(training_dir,
                            epochs=self.epochs, batch_size=self.batch_size,
                            save_each=20, save_dir=self.model_dir)
         self.logger.print('Training GNN model done')
         self.logger.print(f'Model saved to {self.model_path}')
+
 
 
 class LightGBM(Model):

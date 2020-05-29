@@ -46,7 +46,7 @@ def train_gnn_model(train_data_dir, epochs, batch_size, save_each=10,
     network = Network()
     # Training
     for epoch_i in range(1, epochs + 1):
-        print(f"\nEpoch {epoch_i}.")
+        print(f"Epoch {epoch_i}.")
         i = 0
         while not train_data.epoch_finished():
             batch = train_data.next_batch()
@@ -60,7 +60,7 @@ def train_gnn_model(train_data_dir, epochs, batch_size, save_each=10,
             print(f"Loss: {metrics[0]:.5f}, "
                   f"TPR: {metrics[1]:.2f}, TNR {metrics[2]:.2f}")
             i += 1
-        if not epoch_i % save_each or epoch_i == epochs:
+        if epoch_i % save_each == 0 or epoch_i == epochs:
             save_path = save_dir + '/epoch_' + str(epoch_i)
             network.save(save_path)
     return save_path
@@ -103,8 +103,7 @@ def rankings_from_gnn_model(test_data_dir, network_path, rankings_dir):
         write_lines(ranking, os.path.join(rankings_dir, c))
     return rankings_dir
 
-def predictions_from_gnn_model(test_data_dir, network_path, predictions_dir):
-    mkdir_if_not_exists(predictions_dir)
+def predictions_from_gnn_model(test_data_dir, network_path):
     print("Reconstructing network...")
     network = Network()
     network.load(network_path)
@@ -121,11 +120,9 @@ def predictions_from_gnn_model(test_data_dir, network_path, predictions_dir):
     logits = {c: lb[c] for lb in logits_batches for c in lb}
     premises = {c: pb[c] for pb in premises_batches for c in pb}
     assert len(logits) == len(premises)
+    scored_prems = {}
     for c in logits:
         assert len(premises[c]) == len(logits[c])
-        premises_logits = list(zip(premises[c], logits[c]))
-        premises_logits.sort(key = lambda x: x[1], reverse = True)
-        lines = [f'{t[0]} {str(t[1])}' for t in premises_logits]
-        write_lines(lines, os.path.join(predictions_dir, c))
-    return predictions_dir
+        scored_prems[c] = list(zip(premises[c], logits[c]))
+    return scored_prems
 

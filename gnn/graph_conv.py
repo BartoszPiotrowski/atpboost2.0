@@ -1,4 +1,6 @@
 import tensorflow as tf
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+tf.logging.set_verbosity(tf.logging.ERROR)
 from .debug_node import tf_debug
 from .tf_helpers import *
 

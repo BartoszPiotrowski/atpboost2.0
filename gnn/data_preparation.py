@@ -9,16 +9,32 @@ from .utils import mkdir_if_not_exists, partition, save_obj, load_obj
 
 
 def prepare_training_data(train_deps, train_ranks, stms_path, save_dir,
-                          num_deps_per_example=256):
+                          n_deps_per_example=256):
     stms = read_stms(stms_path)
     for thm in train_deps:
         for i in range(len(train_deps[thm])):
             rank = train_ranks[thm]
             ds_pos = train_deps[thm][i]
-            n_ds_neg = max(10, num_deps_per_example - len(ds_pos))
+            n_ds_neg = max(10, n_deps_per_example - len(ds_pos))
             ds_neg = rank[:n_ds_neg]
             suffix = '-' + str(i)
             make_training_file(thm, ds_pos, ds_neg, stms, save_dir, suffix)
+
+
+def prepare_testing_data(conjs, conjs_ranks, stms_path, save_dir,
+                         n_deps_per_example=256, n=128):
+    stms = read_stms(stms_path)
+    N = len(conjs) // n # n = size of a batch
+    batches = partition(conjs, N)
+    for i in range(len(batches)):
+        batch_dir = os.path.join(save_dir, f'batch_{i}')
+        mkdir_if_not_exists(batch_dir)
+        for conj in batches[i]:
+            ds = conjs_ranks[conj][:n_deps_per_example]
+            # forget which are positive and which negative
+            shuffle(ds) # just to be sure we not exploit any bug
+            make_testing_file(conj, ds, stms, batch_dir)
+    return save_dir
 
 
 def prepare_training_data_from_pos_neg(conjectures_path, deps_pos_path,
@@ -82,23 +98,6 @@ def prepare_training_data_from_pos_neg_finish_failed(dir_path):
 
 
 
-def prepare_testing_data(conjectures_path, available_premises_path,
-                         statements_path, save_dir, n=128):
-    mkdir_if_not_exists(save_dir)
-    conjectures = read_lines(conjectures_path)
-    statements = read_stms(statements_path)
-    available_premises = read_deps(available_premises_path)
-    N = len(conjectures) // n # n = size of a batch
-    batches = partition(conjectures, N)
-    for i in range(len(batches)):
-        batch_dir = os.path.join(save_dir, f'batch_{i}')
-        mkdir_if_not_exists(batch_dir)
-        for conj in batches[i]:
-            ds = list(available_premises[conj])
-            # forget which are positive and which negative
-            shuffle(ds) # just to be sure we not exploit any bug
-            make_testing_file(conj, ds, statements, batch_dir)
-    return save_dir
 
 
 def prepare_testing_data_from_pos_neg(conjectures_path,

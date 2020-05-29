@@ -6,6 +6,8 @@ import gc
 from .src import fcoplib as cop
 import numpy as np
 import tensorflow as tf
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+tf.logging.set_verbosity(tf.logging.ERROR)
 from tensorflow.contrib.layers import fully_connected
 from joblib import Parallel, delayed
 from .tf_helpers import tf_linear_sq, mean_or_zero
@@ -210,7 +212,6 @@ class Network:
             self.session,
             path,
             global_step=step,
-            max_to_keep=0, # keep all checkpoints
             write_meta_graph=True,
             write_state=True)
 
