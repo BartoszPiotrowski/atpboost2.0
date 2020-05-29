@@ -2,7 +2,8 @@ import os
 from joblib import Parallel, delayed
 from importlib import import_module
 from utils import read_lines, write_lines, read_features, read_deps, size, size
-from utils import mkdir_if_not_exists, dict_features_numbers, similarity
+from utils import dict_features_numbers, similarity
+from utils import mkdir_if_not_exists, rmdir_mkdir
 
 class Model:
     def __init__(self, **kwargs):
