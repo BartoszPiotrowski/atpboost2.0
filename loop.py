@@ -14,12 +14,12 @@ def loop(args):
     mkdir_if_not_exists(args.data_dir)
     train_deps = copyfile(args.train_deps, args.data_dir + '/train_deps')
     train_neg_deps = args.train_neg_deps
-    conjectures = args.conjectures
-    args.logger.print(stats_init(train_deps, conjectures))
+    conjs = args.conjectures
+    args.logger.print(stats_init(train_deps, conjs))
     for i in range(args.iterations):
         args.logger.print(f'### Loop iteration no. {i + 1} ###', newline=True)
         models = train(train_deps, train_neg_deps, args)
-        preds = predict(models, conjectures)
+        preds = predict(models, conjs)
         conjs_proofs = prove(preds, args)
         conjs_deps = extract_deps(conjs_proofs)
         train_deps = merge_deps(train_deps, *conjs_deps)
@@ -27,7 +27,7 @@ def loop(args):
             pos_deps, neg_deps = mining(models, args)
             train_deps = merge_deps(train_deps, pos_deps)
             train_neg_deps = neg_deps
-        args.logger.print(stats(train_deps, conjectures, conjs_deps))
+        args.logger.print(stats(train_deps, conjs, conjs_deps))
 
 
 if __name__=='__main__':
