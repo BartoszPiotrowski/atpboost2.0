@@ -20,7 +20,7 @@
 [2020-05-30--02:08:55] Mining done
 [2020-05-30--02:08:55] Loop statistics: 
                          Conjectures proved (all iterations)  : 218 / 342 (63.74%)
-                         Conjectures proved (this interation) : 218 / 342 (63.74%)
+                         Conjectures proved (this iteration) : 218 / 342 (63.74%)
                          All training dependencies            : 1700
                          Theorems in training dependencies    : 1218
 
@@ -40,7 +40,7 @@
 [2020-05-30--02:33:48] Mining done
 [2020-05-30--02:33:48] Loop statistics: 
                          Conjectures proved (all iterations)  : 228 / 342 (66.67%)
-                         Conjectures proved (this interation) : 223 / 342 (65.20%)
+                         Conjectures proved (this iteration) : 223 / 342 (65.20%)
                          All training dependencies            : 2260
                          Theorems in training dependencies    : 1228
 
@@ -60,7 +60,7 @@
 [2020-05-30--03:05:16] Mining done
 [2020-05-30--03:05:16] Loop statistics: 
                          Conjectures proved (all iterations)  : 229 / 342 (66.96%)
-                         Conjectures proved (this interation) : 223 / 342 (65.20%)
+                         Conjectures proved (this iteration) : 223 / 342 (65.20%)
                          All training dependencies            : 2720
                          Theorems in training dependencies    : 1229
 
@@ -80,7 +80,7 @@
 [2020-05-30--03:42:36] Mining done
 [2020-05-30--03:42:36] Loop statistics: 
                          Conjectures proved (all iterations)  : 230 / 342 (67.25%)
-                         Conjectures proved (this interation) : 224 / 342 (65.50%)
+                         Conjectures proved (this iteration) : 224 / 342 (65.50%)
                          All training dependencies            : 3156
                          Theorems in training dependencies    : 1230
 
@@ -100,6 +100,6 @@
 [2020-05-30--04:24:35] Mining done
 [2020-05-30--04:24:35] Loop statistics: 
                          Conjectures proved (all iterations)  : 231 / 342 (67.54%)
-                         Conjectures proved (this interation) : 225 / 342 (65.79%)
+                         Conjectures proved (this iteration) : 225 / 342 (65.79%)
                          All training dependencies            : 3571
                          Theorems in training dependencies    : 1231
