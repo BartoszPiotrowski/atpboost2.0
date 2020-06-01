@@ -188,7 +188,7 @@ def read_features_binary(features_lines):
     return features
 
 
-def read_statements(file):
+def read_stms(file):
     '''
     file should contain lines of the form:
         fof(name,type,formula).
@@ -197,8 +197,17 @@ def read_statements(file):
     for line in read_lines(file):
         name = line.split('(')[1].split(',')[0]
         assert name not in stms
-        stms[name] = line
+        stms[name] = line.replace(',axiom,', ',conjecture,')
     return stms
+
+
+#def read_stms(path):
+#    stms_lines = read_lines(path)
+#    names = [l.split(',')[0].split('(')[1].replace(' ', '')
+#             for l in stms_lines]
+#    stms = [l.replace(' ', '').replace(',axiom,', ',conjecture,')
+#            for l in stms_lines]
+#    return dict(zip(names, stms))
 
 
 def read_rankings(path):
@@ -213,13 +222,6 @@ def read_rankings(path):
     return rankings
 
 
-def read_stms(path):
-    stms_lines = read_lines(path)
-    names = [l.split(',')[0].split('(')[1].replace(' ', '')
-             for l in stms_lines]
-    stms = [l.replace(' ', '').replace(',axiom,', ',conjecture,')
-            for l in stms_lines]
-    return dict(zip(names, stms))
 
 
 def dict_features_flas(features):

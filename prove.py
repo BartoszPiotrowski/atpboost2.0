@@ -1,7 +1,7 @@
 import os, subprocess, uuid
 from joblib import Parallel, delayed
 from utils import merge_predictions, mkdir_if_not_exists
-from utils import read_lines, read_statements
+from utils import read_lines, read_stms
 from tqdm import tqdm
 from random import shuffle
 
@@ -39,7 +39,7 @@ def prove_one(conj, deps, statements_path, dir_path, proving_script, logger):
 
 
 def problem_file(conj, list_of_deps, statements_path, dir_path):
-    statements = read_statements(statements_path)
+    statements = read_stms(statements_path)
     uuid4 = uuid.uuid4().hex
     input_filename = os.path.join(dir_path, uuid4 + '.p')
     with open(input_filename, 'w') as problem:
