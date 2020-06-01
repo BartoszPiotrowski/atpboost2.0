@@ -1,0 +1,105 @@
+[2020-05-30--00:57:06] Initial data statistics: 
+                         Theorems in training dependencies    : 1000
+                         All training dependencies            : 1000
+                         Number of conjectures                : 342
+                         Conjectures with dependencies        : 0 (0.00%)
+
+[2020-05-30--00:57:06] ### Loop iteration no. 1 ###
+[2020-05-30--00:57:07] Preparing training data...
+[2020-05-30--00:58:16] Training data prepared
+[2020-05-30--00:58:16] Training GNN model...
+[2020-05-30--01:01:35] Training GNN model done
+[2020-05-30--01:01:35] Model saved to data/MPTP2078/atpboost_data/models/gnn/model/epoch_100
+[2020-05-30--01:01:50] Predictions saved to data/MPTP2078/atpboost_data/models/gnn/predictions
+[2020-05-30--01:01:50] Proving...
+[2020-05-30--01:03:46] Proving done (529 proofs found).
+[2020-05-30--01:03:46] Mining...
+[2020-05-30--01:03:55] Predictions saved to data/MPTP2078/atpboost_data/models/gnn/predictions
+[2020-05-30--01:03:55] Proving...
+[2020-05-30--01:04:22] Proving done (307 proofs found).
+[2020-05-30--01:04:22] Mining done
+[2020-05-30--01:04:22] Loop statistics: 
+                         Conjectures proved (all iterations)  : 189 / 342 (55.26%)
+                         Conjectures proved (this interation) : 189 / 342 (55.26%)
+                         All training dependencies            : 1490
+                         Theorems in training dependencies    : 1189
+
+[2020-05-30--01:04:22] ### Loop iteration no. 2 ###
+[2020-05-30--01:04:22] Preparing training data...
+[2020-05-30--01:06:03] Training data prepared
+[2020-05-30--01:06:03] Training GNN model...
+[2020-05-30--01:10:59] Training GNN model done
+[2020-05-30--01:10:59] Model saved to data/MPTP2078/atpboost_data/models/gnn/model/epoch_100
+[2020-05-30--01:11:15] Predictions saved to data/MPTP2078/atpboost_data/models/gnn/predictions
+[2020-05-30--01:11:15] Proving...
+[2020-05-30--01:13:11] Proving done (656 proofs found).
+[2020-05-30--01:13:11] Mining...
+[2020-05-30--01:13:19] Predictions saved to data/MPTP2078/atpboost_data/models/gnn/predictions
+[2020-05-30--01:13:19] Proving...
+[2020-05-30--01:13:47] Proving done (324 proofs found).
+[2020-05-30--01:13:47] Mining done
+[2020-05-30--01:13:47] Loop statistics: 
+                         Conjectures proved (all iterations)  : 200 / 342 (58.48%)
+                         Conjectures proved (this interation) : 195 / 342 (57.02%)
+                         All training dependencies            : 1899
+                         Theorems in training dependencies    : 1200
+
+[2020-05-30--01:13:47] ### Loop iteration no. 3 ###
+[2020-05-30--01:13:47] Preparing training data...
+[2020-05-30--01:15:49] Training data prepared
+[2020-05-30--01:15:49] Training GNN model...
+[2020-05-30--01:21:47] Training GNN model done
+[2020-05-30--01:21:47] Model saved to data/MPTP2078/atpboost_data/models/gnn/model/epoch_100
+[2020-05-30--01:22:03] Predictions saved to data/MPTP2078/atpboost_data/models/gnn/predictions
+[2020-05-30--01:22:03] Proving...
+[2020-05-30--01:23:57] Proving done (695 proofs found).
+[2020-05-30--01:23:57] Mining...
+[2020-05-30--01:24:06] Predictions saved to data/MPTP2078/atpboost_data/models/gnn/predictions
+[2020-05-30--01:24:06] Proving...
+[2020-05-30--01:24:34] Proving done (293 proofs found).
+[2020-05-30--01:24:34] Mining done
+[2020-05-30--01:24:34] Loop statistics: 
+                         Conjectures proved (all iterations)  : 207 / 342 (60.53%)
+                         Conjectures proved (this interation) : 199 / 342 (58.19%)
+                         All training dependencies            : 2271
+                         Theorems in training dependencies    : 1207
+
+[2020-05-30--01:24:34] ### Loop iteration no. 4 ###
+[2020-05-30--01:24:34] Preparing training data...
+[2020-05-30--01:26:55] Training data prepared
+[2020-05-30--01:26:55] Training GNN model...
+[2020-05-30--01:34:12] Training GNN model done
+[2020-05-30--01:34:12] Model saved to data/MPTP2078/atpboost_data/models/gnn/model/epoch_100
+[2020-05-30--01:34:26] Predictions saved to data/MPTP2078/atpboost_data/models/gnn/predictions
+[2020-05-30--01:34:26] Proving...
+[2020-05-30--01:36:28] Proving done (682 proofs found).
+[2020-05-30--01:36:28] Mining...
+[2020-05-30--01:36:36] Predictions saved to data/MPTP2078/atpboost_data/models/gnn/predictions
+[2020-05-30--01:36:36] Proving...
+[2020-05-30--01:37:05] Proving done (297 proofs found).
+[2020-05-30--01:37:05] Mining done
+[2020-05-30--01:37:05] Loop statistics: 
+                         Conjectures proved (all iterations)  : 209 / 342 (61.11%)
+                         Conjectures proved (this interation) : 200 / 342 (58.48%)
+                         All training dependencies            : 2597
+                         Theorems in training dependencies    : 1209
+
+[2020-05-30--01:37:05] ### Loop iteration no. 5 ###
+[2020-05-30--01:37:05] Preparing training data...
+[2020-05-30--01:39:41] Training data prepared
+[2020-05-30--01:39:41] Training GNN model...
+[2020-05-30--01:47:51] Training GNN model done
+[2020-05-30--01:47:51] Model saved to data/MPTP2078/atpboost_data/models/gnn/model/epoch_100
+[2020-05-30--01:48:07] Predictions saved to data/MPTP2078/atpboost_data/models/gnn/predictions
+[2020-05-30--01:48:07] Proving...
+[2020-05-30--01:49:59] Proving done (671 proofs found).
+[2020-05-30--01:50:00] Mining...
+[2020-05-30--01:50:08] Predictions saved to data/MPTP2078/atpboost_data/models/gnn/predictions
+[2020-05-30--01:50:08] Proving...
+[2020-05-30--01:50:36] Proving done (307 proofs found).
+[2020-05-30--01:50:36] Mining done
+[2020-05-30--01:50:36] Loop statistics: 
+                         Conjectures proved (all iterations)  : 209 / 342 (61.11%)
+                         Conjectures proved (this interation) : 194 / 342 (56.73%)
+                         All training dependencies            : 2891
+                         Theorems in training dependencies    : 1209
