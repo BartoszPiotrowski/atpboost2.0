@@ -9,30 +9,30 @@ from deps import clean_deps, unify_deps
 from tqdm import tqdm
 
 
-def deps_to_train_array(train_deps=None, n_jobs=1, **kwargs):
+def deps_to_train_array(train_deps, train_neg_deps=None, n_jobs=1, **kwargs):
     thms = list(set(read_deps(train_deps)))
     split = partition(thms, max(1, len(thms) // 100))
     with Parallel(n_jobs=n_jobs) as parallel:
         labels_arrays = parallel(delayed(deps_to_train_array_1_job)(
-            i_thms=i_thms, deps=train_deps, **kwargs) \
+            i_thms=i_thms, deps=train_deps, deps_neg=train_neg_deps, **kwargs) \
             for i_thms in tqdm(list(enumerate(split))))
     labels, array = merge_saved_arrays(labels_arrays)
     return labels, array
 
 
-def deps_to_train_array_1_job(i_thms=None, deps=None, deps_negative=None,
+def deps_to_train_array_1_job(i_thms=None, deps=None, deps_neg=None,
                               chronology=None, features=None, data_dir=None,
                               **kwargs):
     i, thms = i_thms
     deps = unify_deps(clean_deps(read_deps(deps)))
     chronology = read_lines(chronology)
-    if deps_negative:
-        deps_negative = read_deps(deps_negative, unions=True)
+    if deps_neg:
+        deps_neg = read_deps(deps_neg, unions=True)
     labels, pairs = [], []
     for thm in thms:
         pos_premises = deps[thm]
-        if deps_negative and thm in deps_negative:
-            neg_premises = deps_negative[thm]
+        if deps_neg and thm in deps_neg:
+            neg_premises = deps_neg[thm]
         else:
             neg_premises = set()
         available_premises = chronology[:chronology.index(thm)]
@@ -49,8 +49,8 @@ def deps_to_train_array_1_job(i_thms=None, deps=None, deps_negative=None,
     return labels_path, array_path
 
 
-def thm_to_labels_and_pairs(thm, pos_premises, available_premises,
-                            neg_premises=set(), ratio_neg_pos=16, **kwars):
+def thm_to_labels_and_pairs(thm, pos_premises, available_premises, neg_premises,
+                            ratio_neg_pos=16, **kwars):
     not_pos_premises = set(available_premises) - pos_premises
     assert not pos_premises & not_pos_premises
     if len(not_pos_premises) == 0:
@@ -113,7 +113,7 @@ def merge_saved_arrays(labels_arrays):
 if __name__=='__main__':
     # tests
     deps = 'data/example/train_deps'
-    deps_negative = 'data/example/train_neg_deps'
+    deps_neg = 'data/example/train_neg_deps'
     features = 'data/example/features_binary'
     #features = 'data/example/features'
     chronology = 'data/example/chronology'
@@ -122,7 +122,7 @@ if __name__=='__main__':
     #    deps=deps,
     #    features=features,
     #    chronology=chronology,
-    #    deps_negative=deps_negative,
+    #    deps_neg=deps_neg,
     #    data_dir='tmp/data'
     #)
 
@@ -130,7 +130,7 @@ if __name__=='__main__':
         train_deps=deps,
         features=features,
         chronology=chronology,
-        deps_negative=deps_negative,
+        deps_neg=deps_neg,
         data_dir='tmp/data',
         n_jobs=1
     )

@@ -1,5 +1,6 @@
 from utils import read_deps, read_lines
 
+
 def stats_init(train_deps, conjs, padding=' ' * 25):
     train_deps = read_deps(train_deps)
     conjs = read_lines(conjs)
@@ -21,10 +22,11 @@ def stats_init(train_deps, conjs, padding=' ' * 25):
 
     return message
 
-def stats(train_deps, conjs, conjs_proved=None, padding=' ' * 25):
+
+def stats(train_deps, conjs, conjs_proved, padding=' ' * 25):
     train_deps = read_deps(train_deps)
-    conjs_proved = [read_lines(d)[0].split(':')[0] for d in conjs_proved]
     conjs = read_lines(conjs)
+    conjs_proved = [read_lines(d)[0].split(':')[0] for d in conjs_proved]
     assert set(conjs_proved) <= set(conjs), set(conjs_proved) - set(conjs)
     assert set(conjs_proved) <= set(train_deps), set(conjs_proved) - set(train_deps)
     n_conjs_proved_total = len(set(train_deps) & set(conjs))
@@ -39,7 +41,7 @@ def stats(train_deps, conjs, conjs_proved=None, padding=' ' * 25):
                f"{n_conjs_proved_total} / {len(conjs)} " + \
                f"({100 * n_conjs_proved_total / len(conjs):.2f}%)\n"
     message += padding
-    message += f"Conjectures proved (this interation) : " + \
+    message += f"Conjectures proved (this iteration) : " + \
                f"{n_conjs_proved_now} / {len(conjs)} " + \
                f"({100 * n_conjs_proved_now / len(conjs):.2f}%)\n"
     message += padding
