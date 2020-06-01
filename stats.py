@@ -40,7 +40,7 @@ def stats(train_deps, conjs, conjs_proved, padding=' ' * 25):
                f'{n_conjs_proved_total} / {len(conjs)} ' + \
                f'({100 * n_conjs_proved_total / len(conjs):.2f}%)\n'
     message += padding
-    message += f'Conjectures proved (this interation) : ' + \
+    message += f'Conjectures proved (this iteration) : ' + \
                f'{n_conjs_proved_now} / {len(conjs)} ' + \
                f'({100 * n_conjs_proved_now / len(conjs):.2f}%)\n'
     message += padding
