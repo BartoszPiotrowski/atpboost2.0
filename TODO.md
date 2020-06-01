@@ -1,3 +1,4 @@
+- handling errors from os.popen
 - add support for both binary features and enigma features
 - describe parameters
 - max_num_prems, knn_prefiltering: check this carefully

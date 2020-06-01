@@ -80,6 +80,14 @@ if __name__ == '__main__':
         '--xgb_knn_prefiltering',
         default=10000,
         type=int)
+    parser.add_argument(
+        '--rnn_epochs',
+        default=100,
+        type=int)
+    parser.add_argument(
+        '--rnn_batch_size',
+        default=100,
+        type=int)
     args = parser.parse_args()
 
 loop(args)

@@ -188,7 +188,7 @@ def read_features_binary(features_lines):
     return features
 
 
-def read_stms(file):
+def read_stms(file, short=False, tokens=False):
     '''
     file should contain lines of the form:
         fof(name,type,formula).
@@ -197,8 +197,38 @@ def read_stms(file):
     for line in read_lines(file):
         name = line.split('(')[1].split(',')[0]
         assert name not in stms
-        stms[name] = line.replace(',axiom,', ',conjecture,')
+        line = line.replace(' ', '').replace(',axiom,', ',conjecture,')
+        if short:
+            line = ' '.join(line.split(',')[2:])[:-2]
+        if tokens:
+            line = tokenize(line)
+        stms[name] = line
     return stms
+
+
+def tokenize(line):
+    tptp_conns_orig = ['<=>', '<~>', '=>', '<=', '~|', '~&', '!=', '$t', '$f']
+    tptp_conns = [' '.join(conn) for conn in tptp_conns_orig]
+    tptp_conns_dict = dict(zip(tptp_conns, tptp_conns_orig))
+    line_list = []
+    line_token = ''
+    for ch in line:
+        if ch == ' ':
+            if line_token:
+                line_list.append(line_token)
+                line_token = ''
+        elif str.isalnum(ch) or (ch == '_'):
+            line_token += ch
+        else:
+            if line_token:
+                line_list.append(line_token)
+                line_token = ''
+            line_list.append(ch)
+    out_str = ' '.join(line_list)
+    for conn in tptp_conns:
+        if conn in out_str:
+            out_str = out_str.replace(conn, tptp_conns_dict[conn])
+    return out_str
 
 
 #def read_stms(path):

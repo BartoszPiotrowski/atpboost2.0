@@ -5,9 +5,9 @@ from utils import read_lines, write_lines, read_features, read_deps, size, size
 from utils import dict_features_numbers, similarity
 from utils import mkdir_if_not_exists, rmdir_mkdir
 
+
 class Model:
     def __init__(self, **kwargs):
-        self.kwargs = kwargs
         self.train_params = {}
         self.n_jobs = kwargs['n_jobs']
         self.logger = kwargs['logger']
@@ -43,7 +43,6 @@ class Model:
 class KNN(Model):
     def __init__(self, **kwargs):
         super(KNN, self).__init__(**kwargs)
-        self.kwargs = kwargs
         self.neighbours = kwargs['knn_neighbours']
         self.features = kwargs['features']
         self.predictions_path = os.path.join(self.save_dir, 'predictions.knn')
@@ -100,14 +99,14 @@ class KNN(Model):
 
 
 class XGBoost(Model):
-    from xgb.prepare_data import deps_to_train_array, pairs_to_array
     def __init__(self, **kwargs):
         super(XGBoost, self).__init__(**kwargs)
         self.xgb = import_module('xgboost')
-        self.kwargs = kwargs
+        self.xgb_prep = import_module('xgb.prepare_data')
         self.save_dir = os.path.join(self.save_dir, 'xgb')
-        self.features = kwargs['features']
+        mkdir_if_not_exists(self.save_dir)
         self.model_path = os.path.join(self.save_dir, 'model')
+        self.features = kwargs['features']
         self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.knn_prefiltering = kwargs['xgb_knn_prefiltering']
         self.train_params_rounds = kwargs['xgb_rounds']
@@ -118,15 +117,23 @@ class XGBoost(Model):
         self.train_params['n_jobs'] = self.n_jobs
 
 
-    def prepare(self, train_deps, train_neg_deps=None):
-        return deps_to_train_array(train_deps, train_neg_deps, **self.kwargs)
+    def prepare(self):
+        kwargs = {
+            'train_deps': self.train_deps,
+            'train_neg_deps': self.train_neg_deps,
+            'features': self.features,
+            'chronology': self.chronology,
+            'save_dir': self.save_dir,
+            'n_jobs': self.n_jobs,
+        }
+        return self.xgb_prep.deps_to_train_array(**kwargs)
 
 
     def train(self, train_deps, train_neg_deps=None):
         self.train_deps = train_deps
         self.train_neg_deps = train_neg_deps
         self.logger.print('Preparing training data...')
-        labels, array = self.prepare(train_deps, train_neg_deps)
+        labels, array = self.prepare()
         dtrain = self.xgb.DMatrix(array, label=labels)
         self.logger.print('Training data prepared')
         self.logger.print('Training XGBoost model...')
@@ -200,7 +207,7 @@ class XGBoost(Model):
 
     def score_prems(self, conj, premises, xgb_model, features):
         pairs = [(conj, p) for p in premises]
-        array = pairs_to_array(pairs, features)
+        array = self.xgb_prep.pairs_to_array(pairs, features)
         array = self.xgb.DMatrix(array)
         scores = xgb_model.predict(array)
         premises_scores = list(zip(premises, scores))
@@ -284,7 +291,7 @@ class GNN(Model):
         return self.predictions_path
 
 
-    def train(self, train_deps, train_neg_deps):
+    def train(self, train_deps, train_neg_deps=None):
         self.logger.print('Preparing training data...')
         self.train_deps = train_deps
         self.train_neg_deps = train_neg_deps
@@ -300,14 +307,41 @@ class GNN(Model):
 
 
 
+class RNN(Model):
+    def __init__(self, **kwargs):
+        super(RNN, self).__init__(**kwargs)
+        self.rnn_prep= import_module('rnn.prepare_data')
+        self.stms = kwargs['statements']
+        self.save_dir = os.path.join(self.save_dir, 'rnn')
+        self.model_path = os.path.join(self.save_dir, 'model')
+        self.predictions_path = os.path.join(self.save_dir, 'predictions')
+        self.batch_size = kwargs['rnn_batch_size']
+        self.epochs = kwargs['rnn_epochs']
+
+
+    def prepare(self):
+        mkdir_if_not_exists(self.save_dir)
+        return self.rnn_prep.prepare_training_data(self.train_deps, self.stms,
+                                                   self.save_dir)
+
+
+    def train(self, train_deps, train_neg_deps=None):
+        self.train_deps = train_deps
+        self.train_neg_deps = train_neg_deps
+        train_data = self.prepare()
+        os.popen(
+            f'''
+            onmt_train \
+                -data {train_data} \
+                -save_model {self.model_path}
+            '''
+        ).read()
+        # TODO optionally add: -world_size 1 -gpu_ranks 0 \
+
+    def predict(self, conjs):
+        pass
+
+
 class LightGBM(Model):
     def __init__(self, **kwargs):
         pass
-
-
-
-class RNN(Model):
-    def __init__(self, **kwargs):
-        pass
-
-

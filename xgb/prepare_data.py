@@ -9,7 +9,7 @@ from deps import clean_deps, unify_deps
 from tqdm import tqdm
 
 
-def deps_to_train_array(train_deps, train_neg_deps=None, n_jobs=1, **kwargs):
+def deps_to_train_array(train_deps=None, train_neg_deps=None, n_jobs=1, **kwargs):
     thms = list(set(read_deps(train_deps)))
     split = partition(thms, max(1, len(thms) // 100))
     with Parallel(n_jobs=n_jobs) as parallel:
@@ -21,7 +21,7 @@ def deps_to_train_array(train_deps, train_neg_deps=None, n_jobs=1, **kwargs):
 
 
 def deps_to_train_array_1_job(i_thms=None, deps=None, deps_neg=None,
-                              chronology=None, features=None, data_dir=None,
+                              chronology=None, features=None, save_dir=None,
                               **kwargs):
     i, thms = i_thms
     deps = unify_deps(clean_deps(read_deps(deps)))
@@ -42,15 +42,15 @@ def deps_to_train_array_1_job(i_thms=None, deps=None, deps_neg=None,
         pairs.extend(pairs_thm)
     array = pairs_to_array(pairs, read_features(features))
     assert len(labels) == array.shape[0]
-    labels_path = os.path.join(data_dir, 'labels_' + str(i) + '.pickle')
-    array_path = os.path.join(data_dir, 'array_' + str(i) + '.pickle')
+    labels_path = os.path.join(save_dir, 'labels_' + str(i) + '.pickle')
+    array_path = os.path.join(save_dir, 'array_' + str(i) + '.pickle')
     save_obj(labels, labels_path)
     save_obj(array, array_path)
     return labels_path, array_path
 
 
 def thm_to_labels_and_pairs(thm, pos_premises, available_premises, neg_premises,
-                            ratio_neg_pos=16, **kwars):
+                            ratio_neg_pos=16, **kwargs):
     not_pos_premises = set(available_premises) - pos_premises
     assert not pos_premises & not_pos_premises
     if len(not_pos_premises) == 0:
@@ -92,9 +92,9 @@ def pairs_to_array(pairs, features):
 
 
 def merge_saved_arrays(labels_arrays):
-    data_dir = os.path.dirname(labels_arrays[0][0])
-    save_path_labels = os.path.join(data_dir, 'cumulated_labels.pickle')
-    save_path_array = os.path.join(data_dir, 'cumulated_array.pickle')
+    save_dir = os.path.dirname(labels_arrays[0][0])
+    save_path_labels = os.path.join(save_dir, 'cumulated_labels.pickle')
+    save_path_array = os.path.join(save_dir, 'cumulated_array.pickle')
     cumul_labels = []
     for l_a in labels_arrays:
         labels_path, array_path = l_a
@@ -123,7 +123,7 @@ if __name__=='__main__':
     #    features=features,
     #    chronology=chronology,
     #    deps_neg=deps_neg,
-    #    data_dir='tmp/data'
+    #    save_dir='tmp/data'
     #)
 
     labels, array = deps_to_train_array(
@@ -131,6 +131,6 @@ if __name__=='__main__':
         features=features,
         chronology=chronology,
         deps_neg=deps_neg,
-        data_dir='tmp/data',
+        save_dir='tmp/data',
         n_jobs=1
     )
