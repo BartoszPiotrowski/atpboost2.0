@@ -333,10 +333,10 @@ class RNN(Model):
             onmt_train \
                 -data {train_data} \
                 -train_steps {self.train_steps} \
+                -world_size 1 -gpu_ranks 0 \
                 -save_model {self.model_path}
             '''
         ).read()
-        # TODO optionally add: -world_size 1 -gpu_ranks 0 \
         return self.model_path
 
 
@@ -352,10 +352,10 @@ class RNN(Model):
                 -src {source} \
                 -beam_size 10 -n_best 10 \
                 -replace_unk -verbose \
+                -gpu 0 \
                 -output {self.predictions_path}
             '''
         ).read()
-        # TODO -gpu 0 \
         preds_raw = read_lines(self.predictions_path)
         print(preds_raw)
         assert len(preds_raw) and len(preds_raw) % len(conjs) == 0
