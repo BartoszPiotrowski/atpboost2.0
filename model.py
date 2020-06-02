@@ -45,7 +45,9 @@ class KNN(Model):
         super(KNN, self).__init__(**kwargs)
         self.neighbours = kwargs['knn_neighbours']
         self.features = kwargs['features']
-        self.predictions_path = os.path.join(self.save_dir, 'predictions.knn')
+        self.save_dir = os.path.join(self.save_dir, 'knn')
+        self.predictions_path = os.path.join(self.save_dir, 'predictions')
+        mkdir_if_not_exists(self.save_dir)
 
 
     def predict(self, conjs):
