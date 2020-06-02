@@ -1,4 +1,5 @@
 import os
+import numpy as np
 from joblib import Parallel, delayed
 from importlib import import_module
 from utils import read_lines, write_lines, read_features, read_deps, read_stms
