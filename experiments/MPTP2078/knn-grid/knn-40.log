@@ -1,0 +1,185 @@
+[2020-06-01--18:51:29] Initial data statistics: 
+                         Theorems in training dependencies    : 1000
+                         All training dependencies            : 1000
+                         Number of conjectures                : 342
+                         Conjectures with dependencies        : 0 (0.00%)
+
+[2020-06-01--18:51:29] ### Loop iteration no. 1 ###
+[2020-06-01--18:51:29] Making predictions for 342 conjectures...
+[2020-06-01--18:51:34] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--18:51:34] Proving...
+[2020-06-01--18:55:51] Proving done (681 proofs found).
+[2020-06-01--18:55:52] Mining...
+[2020-06-01--18:55:52] Making predictions for 100 conjectures...
+[2020-06-01--18:55:55] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--18:55:55] Proving...
+[2020-06-01--18:57:00] Proving done (340 proofs found).
+[2020-06-01--18:57:00] Mining done
+[2020-06-01--18:57:00] Loop statistics: 
+                         Conjectures proved (all iterations)  : 202 / 342 (59.06%)
+                         Conjectures proved (this iteration) : 202 / 342 (59.06%)
+                         Conjectures' dependencies            : 504
+                         Training dependencies                : 1587
+                         Theorems in training dependencies    : 1202
+
+[2020-06-01--18:57:00] ### Loop iteration no. 2 ###
+[2020-06-01--18:57:00] Making predictions for 342 conjectures...
+[2020-06-01--18:57:11] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--18:57:11] Proving...
+[2020-06-01--19:01:41] Proving done (828 proofs found).
+[2020-06-01--19:01:41] Mining...
+[2020-06-01--19:01:41] Making predictions for 100 conjectures...
+[2020-06-01--19:01:43] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:01:43] Proving...
+[2020-06-01--19:02:48] Proving done (322 proofs found).
+[2020-06-01--19:02:48] Mining done
+[2020-06-01--19:02:48] Loop statistics: 
+                         Conjectures proved (all iterations)  : 209 / 342 (61.11%)
+                         Conjectures proved (this iteration) : 209 / 342 (61.11%)
+                         Conjectures' dependencies            : 591
+                         Training dependencies                : 1671
+                         Theorems in training dependencies    : 1209
+
+[2020-06-01--19:02:48] ### Loop iteration no. 3 ###
+[2020-06-01--19:02:48] Making predictions for 342 conjectures...
+[2020-06-01--19:02:53] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:02:53] Proving...
+[2020-06-01--19:06:23] Proving done (842 proofs found).
+[2020-06-01--19:06:23] Mining...
+[2020-06-01--19:06:23] Making predictions for 100 conjectures...
+[2020-06-01--19:06:25] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:06:25] Proving...
+[2020-06-01--19:07:19] Proving done (336 proofs found).
+[2020-06-01--19:07:19] Mining done
+[2020-06-01--19:07:19] Loop statistics: 
+                         Conjectures proved (all iterations)  : 213 / 342 (62.28%)
+                         Conjectures proved (this iteration) : 211 / 342 (61.70%)
+                         Conjectures' dependencies            : 905
+                         Training dependencies                : 2066
+                         Theorems in training dependencies    : 1213
+
+[2020-06-01--19:07:19] ### Loop iteration no. 4 ###
+[2020-06-01--19:07:19] Making predictions for 342 conjectures...
+[2020-06-01--19:07:24] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:07:24] Proving...
+[2020-06-01--19:11:01] Proving done (832 proofs found).
+[2020-06-01--19:11:02] Mining...
+[2020-06-01--19:11:02] Making predictions for 100 conjectures...
+[2020-06-01--19:11:03] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:11:03] Proving...
+[2020-06-01--19:12:00] Proving done (292 proofs found).
+[2020-06-01--19:12:00] Mining done
+[2020-06-01--19:12:00] Loop statistics: 
+                         Conjectures proved (all iterations)  : 214 / 342 (62.57%)
+                         Conjectures proved (this iteration) : 208 / 342 (60.82%)
+                         Conjectures' dependencies            : 1145
+                         Training dependencies                : 2383
+                         Theorems in training dependencies    : 1214
+
+[2020-06-01--19:12:00] ### Loop iteration no. 5 ###
+[2020-06-01--19:12:00] Making predictions for 342 conjectures...
+[2020-06-01--19:12:05] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:12:05] Proving...
+[2020-06-01--19:15:49] Proving done (789 proofs found).
+[2020-06-01--19:15:49] Mining...
+[2020-06-01--19:15:49] Making predictions for 100 conjectures...
+[2020-06-01--19:15:51] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:15:51] Proving...
+[2020-06-01--19:16:55] Proving done (304 proofs found).
+[2020-06-01--19:16:55] Mining done
+[2020-06-01--19:16:55] Loop statistics: 
+                         Conjectures proved (all iterations)  : 214 / 342 (62.57%)
+                         Conjectures proved (this iteration) : 206 / 342 (60.23%)
+                         Conjectures' dependencies            : 1306
+                         Training dependencies                : 2621
+                         Theorems in training dependencies    : 1214
+
+[2020-06-01--19:16:55] ### Loop iteration no. 6 ###
+[2020-06-01--19:16:55] Making predictions for 342 conjectures...
+[2020-06-01--19:17:00] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:17:00] Proving...
+[2020-06-01--19:20:47] Proving done (794 proofs found).
+[2020-06-01--19:20:47] Mining...
+[2020-06-01--19:20:47] Making predictions for 100 conjectures...
+[2020-06-01--19:20:49] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:20:49] Proving...
+[2020-06-01--19:21:55] Proving done (306 proofs found).
+[2020-06-01--19:21:55] Mining done
+[2020-06-01--19:21:55] Loop statistics: 
+                         Conjectures proved (all iterations)  : 214 / 342 (62.57%)
+                         Conjectures proved (this iteration) : 208 / 342 (60.82%)
+                         Conjectures' dependencies            : 1479
+                         Training dependencies                : 2866
+                         Theorems in training dependencies    : 1214
+
+[2020-06-01--19:21:55] ### Loop iteration no. 7 ###
+[2020-06-01--19:21:55] Making predictions for 342 conjectures...
+[2020-06-01--19:22:00] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:22:01] Proving...
+[2020-06-01--19:25:47] Proving done (788 proofs found).
+[2020-06-01--19:25:47] Mining...
+[2020-06-01--19:25:47] Making predictions for 100 conjectures...
+[2020-06-01--19:25:49] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:25:49] Proving...
+[2020-06-01--19:27:14] Proving done (280 proofs found).
+[2020-06-01--19:27:15] Mining done
+[2020-06-01--19:27:15] Loop statistics: 
+                         Conjectures proved (all iterations)  : 214 / 342 (62.57%)
+                         Conjectures proved (this iteration) : 205 / 342 (59.94%)
+                         Conjectures' dependencies            : 1624
+                         Training dependencies                : 3077
+                         Theorems in training dependencies    : 1214
+
+[2020-06-01--19:27:15] ### Loop iteration no. 8 ###
+[2020-06-01--19:27:15] Making predictions for 342 conjectures...
+[2020-06-01--19:27:20] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:27:20] Proving...
+[2020-06-01--19:31:07] Proving done (786 proofs found).
+[2020-06-01--19:31:08] Mining...
+[2020-06-01--19:31:08] Making predictions for 100 conjectures...
+[2020-06-01--19:31:09] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:31:09] Proving...
+[2020-06-01--19:32:13] Proving done (299 proofs found).
+[2020-06-01--19:32:13] Mining done
+[2020-06-01--19:32:13] Loop statistics: 
+                         Conjectures proved (all iterations)  : 214 / 342 (62.57%)
+                         Conjectures proved (this iteration) : 205 / 342 (59.94%)
+                         Conjectures' dependencies            : 1718
+                         Training dependencies                : 3236
+                         Theorems in training dependencies    : 1214
+
+[2020-06-01--19:32:13] ### Loop iteration no. 9 ###
+[2020-06-01--19:32:13] Making predictions for 342 conjectures...
+[2020-06-01--19:32:18] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:32:18] Proving...
+[2020-06-01--19:36:12] Proving done (770 proofs found).
+[2020-06-01--19:36:12] Mining...
+[2020-06-01--19:36:12] Making predictions for 100 conjectures...
+[2020-06-01--19:36:14] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:36:14] Proving...
+[2020-06-01--19:37:39] Proving done (262 proofs found).
+[2020-06-01--19:37:40] Mining done
+[2020-06-01--19:37:40] Loop statistics: 
+                         Conjectures proved (all iterations)  : 214 / 342 (62.57%)
+                         Conjectures proved (this iteration) : 202 / 342 (59.06%)
+                         Conjectures' dependencies            : 1828
+                         Training dependencies                : 3408
+                         Theorems in training dependencies    : 1214
+
+[2020-06-01--19:37:40] ### Loop iteration no. 10 ###
+[2020-06-01--19:37:40] Making predictions for 342 conjectures...
+[2020-06-01--19:37:52] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:37:52] Proving...
+[2020-06-01--19:43:10] Proving done (762 proofs found).
+[2020-06-01--19:43:11] Mining...
+[2020-06-01--19:43:11] Making predictions for 100 conjectures...
+[2020-06-01--19:43:14] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
+[2020-06-01--19:43:14] Proving...
+[2020-06-01--19:44:12] Proving done (314 proofs found).
+[2020-06-01--19:44:12] Mining done
+[2020-06-01--19:44:12] Loop statistics: 
+                         Conjectures proved (all iterations)  : 228 / 342 (66.67%)
+                         Conjectures proved (this iteration) : 201 / 342 (58.77%)
+                         Conjectures' dependencies            : 2384
+                         Training dependencies                : 4119
+                         Theorems in training dependencies    : 1228
