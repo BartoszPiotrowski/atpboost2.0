@@ -1,5 +1,4 @@
 import os
-import numpy as np
 from joblib import Parallel, delayed
 from importlib import import_module
 from utils import read_lines, write_lines, read_features, read_deps, read_stms
@@ -317,6 +316,7 @@ class RNN(Model):
         self.model_path = os.path.join(self.save_dir, 'model')
         self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.train_steps = kwargs['rnn_train_steps']
+        os.popen('export MKL_THREADING_LAYER=GNU')
 
 
     def prepare(self):
@@ -358,7 +358,6 @@ class RNN(Model):
             '''
         ).read()
         preds_raw = read_lines(self.predictions_path)
-        print(preds_raw)
         assert len(preds_raw) and len(preds_raw) % len(conjs) == 0
         write_empty(self.predictions_path)
         # when we produced n translations per theorem:
@@ -373,12 +372,13 @@ class RNN(Model):
             available_prems = set(chrono[:chrono.index(c)])
             ds = preds_raw[i].split(' ')
             ds = [d for d in ds if d in available_prems]
-            #ds = [d for d in ds]
-            deps_unions[c].update(ds)
-            append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
+            if ds:
+                deps_unions[c].update(ds)
+                append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
         for c in deps_unions:
-            ds = ' '.join(deps_unions[c])
-            append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
+            ds = deps_unions[c]
+            if ds:
+                append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
         return self.predictions_path
 
 
