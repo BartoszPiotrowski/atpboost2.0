@@ -316,7 +316,7 @@ class RNN(Model):
         self.model_path = os.path.join(self.save_dir, 'model')
         self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.train_steps = kwargs['rnn_train_steps']
-        os.popen('export MKL_THREADING_LAYER=GNU')
+        os.system('export MKL_THREADING_LAYER=GNU')
 
 
     def prepare(self):
