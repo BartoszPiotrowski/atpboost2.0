@@ -1,9 +1,9 @@
 import os
 from joblib import Parallel, delayed
 from importlib import import_module
-from utils import read_lines, write_lines, read_features, read_deps, size, size
+from utils import read_lines, write_lines, read_features, read_deps, read_stms
+from utils import mkdir_if_not_exists, rmdir_mkdir, write_empty, append_line
 from utils import dict_features_numbers, similarity
-from utils import mkdir_if_not_exists, rmdir_mkdir
 
 
 class Model:
@@ -315,14 +315,13 @@ class RNN(Model):
         self.save_dir = os.path.join(self.save_dir, 'rnn')
         self.model_path = os.path.join(self.save_dir, 'model')
         self.predictions_path = os.path.join(self.save_dir, 'predictions')
-        self.batch_size = kwargs['rnn_batch_size']
-        self.epochs = kwargs['rnn_epochs']
+        self.train_steps = kwargs['rnn_train_steps']
 
 
     def prepare(self):
         mkdir_if_not_exists(self.save_dir)
-        return self.rnn_prep.prepare_training_data(self.train_deps, self.stms,
-                                                   self.save_dir)
+        return self.rnn_prep.prepare_training_data(
+            self.train_deps, self.stms, self.save_dir)
 
 
     def train(self, train_deps, train_neg_deps=None):
@@ -333,13 +332,53 @@ class RNN(Model):
             f'''
             onmt_train \
                 -data {train_data} \
+                -train_steps {self.train_steps} \
                 -save_model {self.model_path}
             '''
         ).read()
         # TODO optionally add: -world_size 1 -gpu_ranks 0 \
+        return self.model_path
+
 
     def predict(self, conjs):
-        pass
+        conjs = read_lines(conjs) if type(conjs) == str else conjs
+        stms = read_stms(self.stms, tokens=True, short=True)
+        conjs_stms = [stms[c] for c in conjs]
+        source = write_lines(conjs_stms, os.path.join(self.save_dir, 'test.src'))
+        os.popen(
+            f'''
+            onmt_translate \
+                -model {self.model_path}_step_{str(self.train_steps)}.pt \
+                -src {source} \
+                -beam_size 10 -n_best 10 \
+                -replace_unk -verbose \
+                -output {self.predictions_path}
+            '''
+        ).read()
+        # TODO -gpu 0 \
+        preds_raw = read_lines(self.predictions_path)
+        print(preds_raw)
+        assert len(preds_raw) and len(preds_raw) % len(conjs) == 0
+        write_empty(self.predictions_path)
+        # when we produced n translations per theorem:
+        n = int(len(preds_raw) / len(conjs))
+        if n > 1:
+            conjs = [c for c in conjs for _ in range(n)]
+            assert conjs[0] == conjs[1]
+        deps_unions = {c: set() for c in conjs}
+        chrono = read_lines(self.chronology)
+        for i in range(len(preds_raw)):
+            c = conjs[i]
+            available_prems = set(chrono[:chrono.index(c)])
+            ds = preds_raw[i].split(' ')
+            ds = [d for d in ds if d in available_prems]
+            #ds = [d for d in ds]
+            deps_unions[c].update(ds)
+            append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
+        for c in deps_unions:
+            ds = ' '.join(deps_unions[c])
+            append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
+        return self.predictions_path
 
 
 class LightGBM(Model):

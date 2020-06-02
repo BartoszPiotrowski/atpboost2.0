@@ -81,12 +81,8 @@ if __name__ == '__main__':
         default=10000,
         type=int)
     parser.add_argument(
-        '--rnn_epochs',
-        default=100,
-        type=int)
-    parser.add_argument(
-        '--rnn_batch_size',
-        default=100,
+        '--rnn_train_steps',
+        default=100000,
         type=int)
     args = parser.parse_args()
 

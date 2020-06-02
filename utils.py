@@ -18,26 +18,31 @@ def write_lines(list_of_lines, filename, backup=False):
         copyfile(filename, filename + '.bcp')
     with open(filename, encoding='utf-8', mode='wt') as f:
         f.write('\n'.join(list_of_lines) + '\n')
+    return filename
 
 
 def write_line(line, filename):
     with open(filename, encoding='utf-8', mode='wt') as f:
         f.write(line + '\n')
+    return filename
 
 
 def write_empty(filename):
     with open(filename, encoding='utf-8', mode='wt') as f:
         f.write('')
+    return filename
 
 
 def append_lines(list_of_lines, filename):
     with open(filename, encoding='utf-8', mode='a') as f:
         f.write('\n'.join(list_of_lines) + '\n')
+    return filename
 
 
 def append_line(line, filename):
     with open(filename, encoding='utf-8', mode='a') as f:
         f.write(line + '\n')
+    return filename
 
 
 def save_obj(obj, filename, gzip=False):
