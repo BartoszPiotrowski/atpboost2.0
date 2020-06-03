@@ -44,7 +44,7 @@ def problem_file(conj, list_of_deps, stms_path, dir_path):
     input_filename = os.path.join(dir_path, uuid4 + '.p')
     with open(input_filename, 'w') as problem:
         conj_stms = stms[conj].replace(' ', '').replace(',axiom,', ',conjecture,')
-        print(, file=problem)
+        print(conj_stms, file=problem)
         for p in list_of_deps:
             print(stms[p], file=problem)
     return input_filename
