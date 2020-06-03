@@ -200,13 +200,19 @@ def read_stms(file, short=False, tokens=False):
     '''
     stms = {}
     for line in read_lines(file):
+        line = line.replace(' ', '').replace(',conjecture,', ',axiom,')
         name = line.split('(')[1].split(',')[0]
         assert name not in stms
-        line = line.replace(' ', '').replace(',conjecture,', ',axiom,')
-        if short:
-            line = ' '.join(line.split(',')[2:])[:-2]
-        if tokens:
+        if short or tokens:
             line = tokenize(line)
+            if short:
+                line_list = line.split(' ')
+                # formula from fof(name,type,formula).
+                line_list = line_list[6:-2]
+                # remove redundant brackets
+                if line_list[0] == '(':
+                    line_list = line_list[1:-1]
+                line = ' '.join(line_list)
         stms[name] = line
     return stms
 
