@@ -14,7 +14,7 @@ def prove(predictions, args):
     args.logger.print('Proving...')
     with Parallel(n_jobs=n_jobs) as parallel:
         prove_one_d = delayed(prove_one)
-        proofs = parallel(prove_one_d(conj, deps, srgs.statements, proofs_dir,
+        proofs = parallel(prove_one_d(conj, deps, args.statements, proofs_dir,
                              args.proving_script, args.logger) \
                           for conj, deps in tqdm(predictions))
     proofs_found = [p for p in proofs if p]
