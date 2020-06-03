@@ -14,18 +14,18 @@ def prove(predictions, args):
     args.logger.print('Proving...')
     with Parallel(n_jobs=n_jobs) as parallel:
         prove_one_d = delayed(prove_one)
-        proofs = parallel(prove_one_d(conj, deps, args.statements, proofs_dir,
+        proofs = parallel(prove_one_d(conj, deps, srgs.statements, proofs_dir,
                              args.proving_script, args.logger) \
                           for conj, deps in tqdm(predictions))
     proofs_found = [p for p in proofs if p]
     args.logger.print(f'Proving done ({len(proofs_found)} proofs found).')
     return proofs_found
 
-def prove_one(conj, deps, statements_path, dir_path, proving_script, logger):
+def prove_one(conj, deps, stms_path, dir_path, proving_script, logger):
     assert not conj in set(deps), (conj, deps)
     deps = list(deps)
     shuffle(deps)
-    input_filename = problem_file(conj, deps, statements_path, dir_path)
+    input_filename = problem_file(conj, deps, stms_path, dir_path)
     output_filename = input_filename.replace('.p', '.out')
     run_prover(input_filename, output_filename, proving_script)
     if "# Proof found!" in read_lines(output_filename):
@@ -38,14 +38,15 @@ def prove_one(conj, deps, statements_path, dir_path, proving_script, logger):
         return None
 
 
-def problem_file(conj, list_of_deps, statements_path, dir_path):
-    statements = read_stms(statements_path)
+def problem_file(conj, list_of_deps, stms_path, dir_path):
+    stms = read_stms(stms_path)
     uuid4 = uuid.uuid4().hex
     input_filename = os.path.join(dir_path, uuid4 + '.p')
     with open(input_filename, 'w') as problem:
-        print(statements[conj].replace('axiom,', 'conjecture,'), file=problem)
+        conj_stms = stms[conj].replace(' ', '').replace(',axiom,', ',conjecture,')
+        print(, file=problem)
         for p in list_of_deps:
-            print(statements[p], file=problem)
+            print(stms[p], file=problem)
     return input_filename
 
 

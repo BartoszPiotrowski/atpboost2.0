@@ -1,4 +1,4 @@
-[2020-06-01--19:44:13] Initial data statistics: 
+[2020-06-01--19:44:13] Initial data statistics:
                          Theorems in training dependencies    : 1000
                          All training dependencies            : 1000
                          Number of conjectures                : 342
@@ -15,7 +15,7 @@
 [2020-06-01--19:49:21] Proving...
 [2020-06-01--19:50:28] Proving done (368 proofs found).
 [2020-06-01--19:50:29] Mining done
-[2020-06-01--19:50:29] Loop statistics: 
+[2020-06-01--19:50:29] Loop statistics:
                          Conjectures proved (all iterations)  : 197 / 342 (57.60%)
                          Conjectures proved (this iteration) : 197 / 342 (57.60%)
                          Conjectures' dependencies            : 523
@@ -33,7 +33,7 @@
 [2020-06-01--19:55:08] Proving...
 [2020-06-01--19:56:22] Proving done (343 proofs found).
 [2020-06-01--19:56:22] Mining done
-[2020-06-01--19:56:22] Loop statistics: 
+[2020-06-01--19:56:22] Loop statistics:
                          Conjectures proved (all iterations)  : 201 / 342 (58.77%)
                          Conjectures proved (this iteration) : 198 / 342 (57.89%)
                          Conjectures' dependencies            : 917
@@ -51,7 +51,7 @@
 [2020-06-01--20:01:06] Proving...
 [2020-06-01--20:02:23] Proving done (281 proofs found).
 [2020-06-01--20:02:23] Mining done
-[2020-06-01--20:02:23] Loop statistics: 
+[2020-06-01--20:02:23] Loop statistics:
                          Conjectures proved (all iterations)  : 204 / 342 (59.65%)
                          Conjectures proved (this iteration) : 196 / 342 (57.31%)
                          Conjectures' dependencies            : 1181
@@ -69,7 +69,7 @@
 [2020-06-01--20:07:15] Proving...
 [2020-06-01--20:08:29] Proving done (331 proofs found).
 [2020-06-01--20:08:30] Mining done
-[2020-06-01--20:08:30] Loop statistics: 
+[2020-06-01--20:08:30] Loop statistics:
                          Conjectures proved (all iterations)  : 205 / 342 (59.94%)
                          Conjectures proved (this iteration) : 196 / 342 (57.31%)
                          Conjectures' dependencies            : 1368
@@ -87,7 +87,7 @@
 [2020-06-01--20:13:19] Proving...
 [2020-06-01--20:14:57] Proving done (319 proofs found).
 [2020-06-01--20:14:58] Mining done
-[2020-06-01--20:14:58] Loop statistics: 
+[2020-06-01--20:14:58] Loop statistics:
                          Conjectures proved (all iterations)  : 205 / 342 (59.94%)
                          Conjectures proved (this iteration) : 194 / 342 (56.73%)
                          Conjectures' dependencies            : 1543
@@ -105,7 +105,7 @@
 [2020-06-01--20:19:49] Proving...
 [2020-06-01--20:21:07] Proving done (287 proofs found).
 [2020-06-01--20:21:07] Mining done
-[2020-06-01--20:21:07] Loop statistics: 
+[2020-06-01--20:21:07] Loop statistics:
                          Conjectures proved (all iterations)  : 205 / 342 (59.94%)
                          Conjectures proved (this iteration) : 193 / 342 (56.43%)
                          Conjectures' dependencies            : 1666
@@ -123,7 +123,7 @@
 [2020-06-01--20:26:00] Proving...
 [2020-06-01--20:27:16] Proving done (286 proofs found).
 [2020-06-01--20:27:16] Mining done
-[2020-06-01--20:27:16] Loop statistics: 
+[2020-06-01--20:27:16] Loop statistics:
                          Conjectures proved (all iterations)  : 206 / 342 (60.23%)
                          Conjectures proved (this iteration) : 195 / 342 (57.02%)
                          Conjectures' dependencies            : 1785
@@ -141,21 +141,10 @@
 [2020-06-01--20:32:09] Proving...
 [2020-06-01--20:33:36] Proving done (235 proofs found).
 [2020-06-01--20:33:36] Mining done
-[2020-06-01--20:33:36] Loop statistics: 
+[2020-06-01--20:33:36] Loop statistics:
                          Conjectures proved (all iterations)  : 206 / 342 (60.23%)
                          Conjectures proved (this iteration) : 195 / 342 (57.02%)
                          Conjectures' dependencies            : 1874
                          Training dependencies                : 3446
                          Theorems in training dependencies    : 1206
 
-[2020-06-01--20:33:36] ### Loop iteration no. 9 ###
-[2020-06-01--20:33:36] Making predictions for 342 conjectures...
-[2020-06-01--20:33:42] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
-[2020-06-01--20:33:42] Proving...
-[2020-06-01--20:38:29] Proving done (728 proofs found).
-[2020-06-01--20:38:30] Mining...
-[2020-06-01--20:38:30] Making predictions for 100 conjectures...
-[2020-06-01--20:38:32] Predictions saved to data/MPTP2078/atpboost_data/models/predictions.knn
-[2020-06-01--20:38:32] Proving...
-[2020-06-01--20:39:55] Proving done (269 proofs found).
-[2020-06-01--20:39:55] Mining done

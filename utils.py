@@ -202,7 +202,7 @@ def read_stms(file, short=False, tokens=False):
     for line in read_lines(file):
         name = line.split('(')[1].split(',')[0]
         assert name not in stms
-        line = line.replace(' ', '').replace(',axiom,', ',conjecture,')
+        line = line.replace(' ', '').replace(',conjecture,', ',axiom,')
         if short:
             line = ' '.join(line.split(',')[2:])[:-2]
         if tokens:
