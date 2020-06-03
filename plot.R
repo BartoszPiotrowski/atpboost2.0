@@ -13,7 +13,7 @@ mdf<-melt(df, id='iteration')
 ggplot(mdf, aes(x=iteration, y=value, color=variable)) +
 	geom_point() +
 	geom_line() +
-	scale_y_continuous(breaks=seq(0, 400, 5), limits=c(150,300)) +
+	scale_y_continuous(breaks=seq(0, 400, 5), limits=c(160,340)) +
 	ggtitle(title)
 save_file<-paste0(title, '.png')
 ggsave(save_file, device='png', width=9, heigh=6)
