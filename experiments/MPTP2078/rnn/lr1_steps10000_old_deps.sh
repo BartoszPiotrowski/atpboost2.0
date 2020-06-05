@@ -1,5 +1,5 @@
 python3 atpboost.py \
-	--iterations 10 \
+	--iterations 5 \
 	--conjectures data/MPTP2078/conjectures \
 	--train_deps data/MPTP2078/train_deps \
 	--statements data/MPTP2078/statements \
@@ -9,6 +9,7 @@ python3 atpboost.py \
 	--ml_models rnn \
 	--n_jobs 70 \
 	--rnn_train_steps 10000 \
+	--rnn_learning_rate 1 \
 	--data_dir data/MPTP2078/atpboost_data \
 	--logfile `echo $0 | sed 's/\.sh/.log/g'`
 
