@@ -1,3 +1,5 @@
+import sys
+sys.path.append('.')
 from prove import prove_one
 from utils import read_deps
 from joblib import Parallel, delayed
