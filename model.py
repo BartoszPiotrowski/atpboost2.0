@@ -318,6 +318,7 @@ class RNN(Model):
         self.model_path = os.path.join(self.save_dir, 'model')
         self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.train_steps = kwargs['rnn_train_steps']
+        self.learning_rate = kwargs['rnn_learning_rate']
         os.environ['MKL_THREADING_LAYER'] = 'GNU'
 
 
@@ -336,6 +337,7 @@ class RNN(Model):
             onmt_train \
                 -data {train_data} \
                 -train_steps {self.train_steps} \
+                -learning_rate {self.learning_rate} \
                 -world_size 1 -gpu_ranks 0 \
                 -save_model {self.model_path}
             '''
@@ -367,6 +369,7 @@ class RNN(Model):
         if n > 1:
             conjs = [c for c in conjs for _ in range(n)]
             assert conjs[0] == conjs[1]
+            assert len(conjs) == len(preds_raw)
         deps_unions = {c: set() for c in conjs}
         chrono = read_lines(self.chronology)
         for i in range(len(preds_raw)):

@@ -84,6 +84,10 @@ if __name__ == '__main__':
         '--rnn_train_steps',
         default=100000,
         type=int)
+    parser.add_argument(
+        '--rnn_learning_rate',
+        default=0.1,
+        type=int)
     args = parser.parse_args()
 
 loop(args)
