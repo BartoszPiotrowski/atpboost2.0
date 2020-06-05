@@ -1,15 +1,15 @@
 import sys
 sys.path.append('.')
 from prove import prove_one
-from utils import read_deps, mkdir_if_not_exists
+from utils import read_lines, mkdir_if_not_exists
 from joblib import Parallel, delayed
 from tqdm import tqdm
 
 
 proofs_dir = 'rnn-fix/proofs'
 proving_script = 'prove.sh'
-predictions_ = read_deps(sys.argv[1], unions=True)
-predictions = [(n, predictions_[n]) for n in predictions_]
+predictions_lines = read_lines(sys.argv[1])
+predictions = [(l.split(':')[0], l.split(':')[1].split(' ')) for l in predictions_lines]
 stms = sys.argv[2]
 mkdir_if_not_exists(proofs_dir)
 n_jobs = 20
