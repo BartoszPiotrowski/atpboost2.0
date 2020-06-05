@@ -3,6 +3,7 @@ sys.path.append('.')
 from prove import prove_one
 from utils import read_deps, mkdir_if_not_exists
 from joblib import Parallel, delayed
+from tqdm import tqdm
 
 
 proofs_dir = 'rnn-fix/proofs'
