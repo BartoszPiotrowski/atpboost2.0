@@ -28,6 +28,7 @@ def prove_one(conj, deps, stms_path, dir_path, proving_script):
     input_filename = problem_file(conj, deps, stms_path, dir_path)
     output_filename = input_filename.replace('.p', '.out')
     run_prover(input_filename, output_filename, proving_script)
+    if "# Proof found!" in read_lines(output_filename):
         return output_filename
     else:
         return None
