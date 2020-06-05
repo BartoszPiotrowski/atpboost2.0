@@ -28,13 +28,8 @@ def prove_one(conj, deps, stms_path, dir_path, proving_script):
     input_filename = problem_file(conj, deps, stms_path, dir_path)
     output_filename = input_filename.replace('.p', '.out')
     run_prover(input_filename, output_filename, proving_script)
-    if "# Proof found!" in read_lines(output_filename):
-        print('PROVED#' + conj + ':' + ' '.join(deps) \
-                     + '#Output: ' + output_filename, verb_level=7)
         return output_filename
     else:
-        print('NOT proved#' + conj + ':' + ' '.join(deps) \
-                     + '#Output: ' + output_filename, verb_level=7)
         return None
 
 
