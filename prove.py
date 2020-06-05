@@ -21,7 +21,7 @@ def prove(predictions, args):
     args.logger.print(f'Proving done ({len(proofs_found)} proofs found).')
     return proofs_found
 
-def prove_one(conj, deps, stms_path, dir_path, proving_script, logger):
+def prove_one(conj, deps, stms_path, dir_path, proving_script, logger=None):
     assert not conj in set(deps), (conj, deps)
     deps = list(deps)
     shuffle(deps)
