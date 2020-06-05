@@ -1,6 +1,6 @@
 import sys
 sys.path.append('.')
-from utils import read_stms, read_lines, write_lines
+from utils import read_lines, write_empty, append_line
 
 
 conjs = read_lines(sys.argv[1])
