@@ -87,7 +87,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--rnn_learning_rate',
         default=0.1,
-        type=int)
+        type=float)
     args = parser.parse_args()
 
 loop(args)
