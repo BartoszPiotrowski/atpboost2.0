@@ -21,7 +21,7 @@ def prove(predictions, args):
     args.logger.print(f'Proving done ({len(proofs_found)} proofs found).')
     return proofs_found
 
-def prove_one(conj, deps, stms_path, dir_path, proving_script, logger=None):
+def prove_one(conj, deps, stms_path, dir_path, proving_script):
     assert not conj in set(deps), (conj, deps)
     deps = list(deps)
     shuffle(deps)
@@ -29,11 +29,11 @@ def prove_one(conj, deps, stms_path, dir_path, proving_script, logger=None):
     output_filename = input_filename.replace('.p', '.out')
     run_prover(input_filename, output_filename, proving_script)
     if "# Proof found!" in read_lines(output_filename):
-        logger.print('PROVED#' + conj + ':' + ' '.join(deps) \
+        print('PROVED#' + conj + ':' + ' '.join(deps) \
                      + '#Output: ' + output_filename, verb_level=7)
         return output_filename
     else:
-        logger.print('NOT proved#' + conj + ':' + ' '.join(deps) \
+        print('NOT proved#' + conj + ':' + ' '.join(deps) \
                      + '#Output: ' + output_filename, verb_level=7)
         return None
 
