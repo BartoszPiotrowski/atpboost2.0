@@ -8,7 +8,8 @@ from tqdm import tqdm
 
 proofs_dir = 'rnn-fix/proofs'
 proving_script = 'prove.sh'
-predictions = read_deps(sys.argv[1], unions=True)
+predictions_ = read_deps(sys.argv[1], unions=True)
+predictions = [(n, predictions_[n]) for n in predictions_]
 stms = sys.argv[2]
 mkdir_if_not_exists(proofs_dir)
 n_jobs = 70
