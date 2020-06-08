@@ -1,0 +1,150 @@
+[2020-06-06--02:09:42] Initial data statistics: 
+                         Theorems in training dependencies    : 1000
+                         All training dependencies            : 1000
+                         Number of conjectures                : 342
+                         Conjectures with dependencies        : 0 (0.00%)
+
+[2020-06-06--02:09:42] ### Loop iteration no. 1 ###
+[2020-06-06--02:09:42] Preparing training data...
+[2020-06-06--02:09:52] Training data prepared
+[2020-06-06--02:09:52] Training XGBoost model...
+[2020-06-06--03:01:40] Training XGBoost model done
+[2020-06-06--03:01:40] Parameters of the XGBoost model:
+                         rounds: 1000
+                         eta: 0.1
+                         max_depth: 10
+                         booster: gbtree
+                         objective: binary:logistic
+[2020-06-06--03:01:40] Model saved to data/MPTP2078/atpboost_data/models/xgb/model
+[2020-06-06--03:01:40] Making predictions for 342 conjectures...
+[2020-06-06--03:02:20] Predictions saved to data/MPTP2078/atpboost_data/models/xgb/predictions
+[2020-06-06--03:02:21] Proving...
+[2020-06-06--03:05:05] Proving done (1224 proofs found).
+[2020-06-06--03:05:06] Mining...
+[2020-06-06--03:05:06] Making predictions for 500 conjectures...
+[2020-06-06--03:06:01] Predictions saved to data/MPTP2078/atpboost_data/models/xgb/predictions
+[2020-06-06--03:06:01] Proving...
+[2020-06-06--03:09:17] Proving done (2184 proofs found).
+[2020-06-06--03:09:19] Mining done
+[2020-06-06--03:09:19] Loop statistics: 
+                         Conjectures proved (all iterations)  : 283 / 342 (82.75%)
+                         Conjectures proved (this iteration)  : 283 / 342 (82.75%)
+                         Conjectures' dependencies            : 814
+                         Training dependencies                : 2246
+                         Theorems in training dependencies    : 1283
+
+[2020-06-06--03:09:19] ### Loop iteration no. 2 ###
+[2020-06-06--03:09:19] Preparing training data...
+[2020-06-06--03:09:46] Training data prepared
+[2020-06-06--03:09:46] Training XGBoost model...
+[2020-06-06--04:00:11] Training XGBoost model done
+[2020-06-06--04:00:11] Parameters of the XGBoost model:
+                         rounds: 1000
+                         eta: 0.1
+                         max_depth: 10
+                         booster: gbtree
+                         objective: binary:logistic
+[2020-06-06--04:00:11] Model saved to data/MPTP2078/atpboost_data/models/xgb/model
+[2020-06-06--04:00:11] Making predictions for 342 conjectures...
+[2020-06-06--04:00:57] Predictions saved to data/MPTP2078/atpboost_data/models/xgb/predictions
+[2020-06-06--04:00:57] Proving...
+[2020-06-06--04:03:30] Proving done (1331 proofs found).
+[2020-06-06--04:03:31] Mining...
+[2020-06-06--04:03:31] Making predictions for 500 conjectures...
+[2020-06-06--04:04:38] Predictions saved to data/MPTP2078/atpboost_data/models/xgb/predictions
+[2020-06-06--04:04:39] Proving...
+[2020-06-06--04:08:06] Proving done (2132 proofs found).
+[2020-06-06--04:08:07] Mining done
+[2020-06-06--04:08:07] Loop statistics: 
+                         Conjectures proved (all iterations)  : 294 / 342 (85.96%)
+                         Conjectures proved (this iteration)  : 286 / 342 (83.63%)
+                         Conjectures' dependencies            : 1395
+                         Training dependencies                : 3213
+                         Theorems in training dependencies    : 1294
+
+[2020-06-06--04:08:07] ### Loop iteration no. 3 ###
+[2020-06-06--04:08:07] Preparing training data...
+[2020-06-06--04:08:39] Training data prepared
+[2020-06-06--04:08:39] Training XGBoost model...
+[2020-06-06--05:10:32] Training XGBoost model done
+[2020-06-06--05:10:32] Parameters of the XGBoost model:
+                         rounds: 1000
+                         eta: 0.1
+                         max_depth: 10
+                         booster: gbtree
+                         objective: binary:logistic
+[2020-06-06--05:10:32] Model saved to data/MPTP2078/atpboost_data/models/xgb/model
+[2020-06-06--05:10:32] Making predictions for 342 conjectures...
+[2020-06-06--05:11:16] Predictions saved to data/MPTP2078/atpboost_data/models/xgb/predictions
+[2020-06-06--05:11:16] Proving...
+[2020-06-06--05:13:51] Proving done (1292 proofs found).
+[2020-06-06--05:13:52] Mining...
+[2020-06-06--05:13:52] Making predictions for 500 conjectures...
+[2020-06-06--05:15:04] Predictions saved to data/MPTP2078/atpboost_data/models/xgb/predictions
+[2020-06-06--05:15:04] Proving...
+[2020-06-06--05:18:19] Proving done (2171 proofs found).
+[2020-06-06--05:18:21] Mining done
+[2020-06-06--05:18:22] Loop statistics: 
+                         Conjectures proved (all iterations)  : 298 / 342 (87.13%)
+                         Conjectures proved (this iteration)  : 287 / 342 (83.92%)
+                         Conjectures' dependencies            : 1836
+                         Training dependencies                : 4007
+                         Theorems in training dependencies    : 1298
+
+[2020-06-06--05:18:22] ### Loop iteration no. 4 ###
+[2020-06-06--05:18:22] Preparing training data...
+[2020-06-06--05:18:53] Training data prepared
+[2020-06-06--05:18:53] Training XGBoost model...
+[2020-06-06--06:06:15] Training XGBoost model done
+[2020-06-06--06:06:15] Parameters of the XGBoost model:
+                         rounds: 1000
+                         eta: 0.1
+                         max_depth: 10
+                         booster: gbtree
+                         objective: binary:logistic
+[2020-06-06--06:06:15] Model saved to data/MPTP2078/atpboost_data/models/xgb/model
+[2020-06-06--06:06:15] Making predictions for 342 conjectures...
+[2020-06-06--06:06:57] Predictions saved to data/MPTP2078/atpboost_data/models/xgb/predictions
+[2020-06-06--06:06:57] Proving...
+[2020-06-06--06:09:30] Proving done (1282 proofs found).
+[2020-06-06--06:09:31] Mining...
+[2020-06-06--06:09:31] Making predictions for 500 conjectures...
+[2020-06-06--06:10:32] Predictions saved to data/MPTP2078/atpboost_data/models/xgb/predictions
+[2020-06-06--06:10:32] Proving...
+[2020-06-06--06:14:04] Proving done (2019 proofs found).
+[2020-06-06--06:14:06] Mining done
+[2020-06-06--06:14:06] Loop statistics: 
+                         Conjectures proved (all iterations)  : 303 / 342 (88.60%)
+                         Conjectures proved (this iteration)  : 287 / 342 (83.92%)
+                         Conjectures' dependencies            : 2198
+                         Training dependencies                : 4692
+                         Theorems in training dependencies    : 1303
+
+[2020-06-06--06:14:06] ### Loop iteration no. 5 ###
+[2020-06-06--06:14:06] Preparing training data...
+[2020-06-06--06:14:39] Training data prepared
+[2020-06-06--06:14:39] Training XGBoost model...
+[2020-06-06--07:14:35] Training XGBoost model done
+[2020-06-06--07:14:35] Parameters of the XGBoost model:
+                         rounds: 1000
+                         eta: 0.1
+                         max_depth: 10
+                         booster: gbtree
+                         objective: binary:logistic
+[2020-06-06--07:14:35] Model saved to data/MPTP2078/atpboost_data/models/xgb/model
+[2020-06-06--07:14:35] Making predictions for 342 conjectures...
+[2020-06-06--07:15:20] Predictions saved to data/MPTP2078/atpboost_data/models/xgb/predictions
+[2020-06-06--07:15:21] Proving...
+[2020-06-06--07:17:57] Proving done (1228 proofs found).
+[2020-06-06--07:17:58] Mining...
+[2020-06-06--07:17:58] Making predictions for 500 conjectures...
+[2020-06-06--07:19:01] Predictions saved to data/MPTP2078/atpboost_data/models/xgb/predictions
+[2020-06-06--07:19:02] Proving...
+[2020-06-06--07:22:24] Proving done (1997 proofs found).
+[2020-06-06--07:22:25] Mining done
+[2020-06-06--07:22:25] Loop statistics: 
+                         Conjectures proved (all iterations)  : 305 / 342 (89.18%)
+                         Conjectures proved (this iteration)  : 288 / 342 (84.21%)
+                         Conjectures' dependencies            : 2498
+                         Training dependencies                : 5299
+                         Theorems in training dependencies    : 1305
