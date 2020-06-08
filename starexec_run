@@ -1,0 +1,5 @@
+#!/bin/tcsh
+
+BATCH_SPEC=$1
+OUT_DIR=$2
+
