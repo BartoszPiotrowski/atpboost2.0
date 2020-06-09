@@ -12,6 +12,10 @@ def read_lines(filename):
     with open(filename, encoding='utf-8') as f:
         return f.read().splitlines()
 
+def read(filename):
+    with open(filename, encoding='utf-8') as f:
+        return f.read()
+
 
 def write_lines(list_of_lines, filename, backup=False):
     if backup:
@@ -90,7 +94,7 @@ def partition(lst, n):
     '''
     Splits a list into n rougly equal partitions.
     '''
-    if n == 0:
+    if n == 0 or len(lst) == 0:
         return [lst]
     if n > len(lst):
         n = len(lst)
@@ -113,19 +117,24 @@ def date_time():
     return strftime('%Y%m%d%H%M%S')
 
 
-def read_deps(path, unions=False):
+def read_deps(path, unions=False, file=False):
     deps = {}
     deps_lines = read_lines(path)
     for l in deps_lines:
-        thm, ds = l.split(':')
+        thm_ds_file = l.split(':', 2)
+        thm = thm_ds_file[0]
+        ds = thm_ds_file[1]
         ds = set(ds.split(' '))
         ds = ds - {''}
-        assert thm not in ds, (thm, ds)
+        #assert thm not in ds, (thm, ds)
         if unions:
             if thm in deps:
                 deps[thm].update(ds)
             else:
                 deps[thm] = ds
+        elif file:
+            file = thm_ds_file[2]
+            deps[file] = (thm, ds)
         else:
             if thm in deps:
                 deps[thm].append(ds)
@@ -155,20 +164,19 @@ def read_features(path):
 
 
 def read_features_enigma(features_lines):
-    print('enigma features')
     '''
     Assumed format:
 
-    abstractness_v1_cfuncdom:32850:1 32927:1 34169:9
-    abstractness_v1_cat_1:32927:1 33139:1 34169:8 36357:2
+    abstractness_v1_cfuncdom 32850:1 32927:1 34169:9
+    abstractness_v1_cat_1 32927:1 33139:1 34169:8 36357:2
     ...
 
     '''
     features = {}
     for l in features_lines:
-        t, f = l.split(':', 1)
+        t, f = l.split(' ', 1)
         f = f.split(' ')
-        f = dict([(i.split(':')[0], int(i.split(':')[1])) for i in f])
+        f = dict([(i.split(':')[0], int(float(i.split(':')[1]))) for i in f])
         features[t] = f
     return features
 
@@ -306,11 +314,11 @@ def merge_predictions(predictions_paths_list):
         predictions_lines.extend(read_lines(p))
     predictions = []
     for l in predictions_lines:
-        conj, deps = l.split(':')
+        file, deps = l.split(':') #TODO files can have ':' in their names
         deps = set(deps.split(' '))
-        conj_deps = conj, deps
-        if conj_deps not in predictions:
-            predictions.append(conj_deps)
+        file_deps = file, deps
+        if file_deps not in predictions:
+            predictions.append(file_deps)
     return predictions
 
 

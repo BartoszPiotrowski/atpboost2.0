@@ -4,15 +4,16 @@ from importlib import import_module
 from utils import read_lines, write_lines, read_features, read_deps, read_stms
 from utils import mkdir_if_not_exists, rmdir_mkdir, write_empty, append_line
 from utils import dict_features_numbers, similarity
+from deps import extract_deps_from_tptp_file
 
 
 class Model:
     def __init__(self, **kwargs):
         self.train_params = {}
+        self.available_deps = kwargs['available_deps']
         self.n_jobs = kwargs['n_jobs']
         self.logger = kwargs['logger']
         self.save_dir = kwargs['save_dir']
-        self.chronology = kwargs['chronology']
         mkdir_if_not_exists(self.save_dir)
 
     def train(self, train_deps, train_neg_deps=None):
@@ -27,13 +28,14 @@ class Model:
         pass
 
     def make_predictions(self, scored_prems,
-                         slices_lens=[4,8,16,32,64,128,256,512]):
+                         slices_lens=[4,8,16,32,64,128,256,512,1024,2048]):
         all_predictions = []
         for conj in scored_prems:
             sp = scored_prems[conj]
             sp.sort(key = lambda x: x[1], reverse = True)
             ranking = [p for p, s in sp]
-            slices = [ranking[:i] for i in slices_lens]
+            slices = [tuple(ranking[:i]) for i in slices_lens]
+            slices = set(slices)
             slices_to_save = [conj + ':' + ' '.join(s) for s in slices]
             all_predictions.extend(slices_to_save)
         write_lines(all_predictions, self.predictions_path)
@@ -123,8 +125,8 @@ class XGBoost(Model):
         kwargs = {
             'train_deps': self.train_deps,
             'train_neg_deps': self.train_neg_deps,
+            'available_deps': self.available_deps,
             'features': self.features,
-            'chronology': self.chronology,
             'save_dir': self.save_dir,
             'n_jobs': self.n_jobs,
         }
@@ -163,26 +165,16 @@ class XGBoost(Model):
         return message
 
 
-    def predict(self, conjs, max_num_prems=None):
-        if max_num_prems == None:
-            max_num_prems = self.knn_prefiltering
-        conjs = read_lines(conjs) if type(conjs) == str else conjs
-        self.logger.print(f'Making predictions for {len(conjs)} conjectures...')
-        chronology = read_lines(self.chronology)
+    def predict(self, problems):
+        problems = read_lines(problems) if type(problems) == str else problems
+        problems = [p.split(' ')[0] for p in problems]
+        self.logger.print(f'Making predictions for {len(problems)} problems...')
         features = read_features(self.features)
-        features_numbers = dict_features_numbers(features) # for knn prefilering
-        deps = read_deps(self.train_deps, unions=True) # for knn prefilering
         model = self.load()
         scored_prems = {}
-        for conj in conjs:
-            available_prems = set(chronology[:chronology.index(conj)])
-            if len(available_prems) < max_num_prems:
-                candidate_prems = available_prems
-            else:
-                candidate_prems = self.knn_prefilter(conj, available_prems,
-                                                     deps, features,
-                                                     features_numbers)
-            scored_prems[conj] = self.score_prems(conj, candidate_prems,
+        for problem in problems:
+            conj, avail_deps = extract_deps_from_tptp_file(problem)
+            scored_prems[problem] = self.score_prems(conj, avail_deps,
                                                   model, features)
         self.predictions_path = self.make_predictions(scored_prems)
         self.logger.print(f'Predictions saved to {self.predictions_path}')

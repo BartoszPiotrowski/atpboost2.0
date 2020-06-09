@@ -1,14 +1,17 @@
 import os, subprocess, uuid
 from joblib import Parallel, delayed
 from utils import merge_predictions, mkdir_if_not_exists
-from utils import read_lines, read_stms
+from utils import read_lines, read_stms, write_lines
 from tqdm import tqdm
 from random import shuffle
 
 
 def prove(problems_outputs, predictions, args):
+    problems_dir = os.path.join(args.data_dir, 'problems')
+    mkdir_if_not_exists(problems_dir)
     if type(problems_outputs) == str:
         problems_outputs = read_lines(problems_outputs)
+    problems_outputs = [p.split(' ') for p in problems_outputs]
     predictions = merge_predictions(predictions)
     problem_deps_output = []
     for problem, output in problems_outputs:
@@ -20,25 +23,25 @@ def prove(problems_outputs, predictions, args):
     args.logger.print('Proving...')
     with Parallel(n_jobs=n_jobs) as parallel:
         prove_one_d = delayed(prove_one)
-        proofs = parallel(prove_one_d(problem, deps, problems_dir,
+        proofs = parallel(prove_one_d(problem, deps, output, problems_dir,
                              args.proving_script, args.logger) \
                       for problem, deps, output in tqdm(problem_deps_output))
     proofs_found = [p for p in proofs if p]
     args.logger.print(f'Proving done ({len(proofs_found)} proofs found).')
     return proofs_found
 
-def prove_one(problem, deps, output, dir_path, proving_script, logger):
+def prove_one(problem, deps, output_file, dir_path, proving_script, logger):
     deps = list(deps)
     shuffle(deps)
-    input_filename = modified_problem(problem, deps, dir_path)
-    run_prover(input_filename, output, proving_script)
-    if "# Proof found!" in read_lines(output):
-        logger.print('PROVED#' + conj + ':' + ' '.join(deps) \
-                     + '#Output: ' + output, verb_level=7)
-        return output
+    input_file = modified_problem(problem, deps, dir_path)
+    run_prover(input_file, output_file, proving_script)
+    if "# Proof found!" in read_lines(output_file):
+        logger.print('PROVED#' + ':' + ' '.join(deps) \
+                     + '#Output: ' + output_file, verb_level=7)
+        return output_file
     else:
-        logger.print('NOT proved#' + conj + ':' + ' '.join(deps) \
-                     + '#Output: ' + output, verb_level=7)
+        logger.print('NOT proved#' + ':' + ' '.join(deps) \
+                     + '#Output: ' + output_file, verb_level=7)
         return None
 
 
@@ -52,6 +55,26 @@ def problem_file(conj, list_of_deps, stms_path, dir_path):
         for p in list_of_deps:
             print(stms[p], file=problem)
     return input_filename
+
+
+def modified_problem(problem, deps, dir_path):
+    lines = read_lines(problem)
+    lines = [l for l in lines if l and not l[0] in '#%']
+    lines = ''.join(lines).replace(' ', '')
+    lines = lines.replace(').', ').\n').splitlines()
+    lines_out = []
+    for l in lines:
+        if not ',axiom,' in l and not ',lemma,' in l:
+            lines_out.append(l)
+        else:
+            name = l.split(',')[0].split('(')[1]
+            if name in deps:
+                lines_out.append(l)
+    shuffle(lines_out)
+    uuid4 = uuid.uuid4().hex
+    file_name = os.path.join(dir_path, uuid4 + os.path.basename(problem))
+    write_lines(lines_out, file_name)
+    return file_name
 
 
 def run_prover(input_filename, output_filename, proving_script):

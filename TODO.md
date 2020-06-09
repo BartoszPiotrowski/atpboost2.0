@@ -1,3 +1,6 @@
+- increasing number of trees
+- increasing mining ratio
+
 - atp-minimization
 - handling errors from os.popen
 - add support for both binary features and enigma features

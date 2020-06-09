@@ -21,11 +21,12 @@ def deps_to_train_array(train_deps=None, train_neg_deps=None, n_jobs=1, **kwargs
 
 
 def deps_to_train_array_1_job(i_thms=None, deps=None, deps_neg=None,
-                              chronology=None, features=None, save_dir=None,
+                              available_deps=None, features=None, save_dir=None,
                               **kwargs):
     i, thms = i_thms
     deps = unify_deps(clean_deps(read_deps(deps)))
-    chronology = read_lines(chronology)
+    available_deps = read_deps(available_deps, unions=True)
+    features = read_features(features)
     if deps_neg:
         deps_neg = read_deps(deps_neg, unions=True)
     labels, pairs = [], []
@@ -35,12 +36,15 @@ def deps_to_train_array_1_job(i_thms=None, deps=None, deps_neg=None,
             neg_premises = deps_neg[thm]
         else:
             neg_premises = set()
-        available_premises = chronology[:chronology.index(thm)]
+        thm_available_deps = available_deps[thm]
+        thm_available_deps = set(thm_available_deps) & set(features)
+        neg_premises = set(neg_premises) & set(features)
+        pos_premises = set(pos_premises) & set(features)
         labels_thm, pairs_thm = thm_to_labels_and_pairs(thm, pos_premises,
-                                available_premises, neg_premises, **kwargs)
+                                thm_available_deps, neg_premises, **kwargs)
         labels.extend(labels_thm)
         pairs.extend(pairs_thm)
-    array = pairs_to_array(pairs, read_features(features))
+    array = pairs_to_array(pairs, features)
     assert len(labels) == array.shape[0]
     labels_path = os.path.join(save_dir, 'labels_' + str(i) + '.pickle')
     array_path = os.path.join(save_dir, 'array_' + str(i) + '.pickle')
@@ -49,9 +53,9 @@ def deps_to_train_array_1_job(i_thms=None, deps=None, deps_neg=None,
     return labels_path, array_path
 
 
-def thm_to_labels_and_pairs(thm, pos_premises, available_premises, neg_premises,
+def thm_to_labels_and_pairs(thm, pos_premises, available_deps, neg_premises,
                             ratio_neg_pos=16, **kwargs):
-    not_pos_premises = set(available_premises) - pos_premises
+    not_pos_premises = set(available_deps) - pos_premises
     assert not pos_premises & not_pos_premises
     if len(not_pos_premises) == 0:
         labels = [1] * len(pos_premises)
@@ -86,7 +90,8 @@ def pairs_to_array(pairs, features):
         else:
             raise TypeError
         featurised_pairs.append(fea_pair)
-    hasher = FeatureHasher(n_features=2**14, input_type='string') # 2**15 == 32768
+    hasher = FeatureHasher(n_features=2**15, input_type='string') # 2**15 == 32768
+    # TODO input_type='string' for enigma features?
     array = hasher.transform(featurised_pairs)
     return array
 
