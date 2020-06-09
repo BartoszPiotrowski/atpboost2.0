@@ -1,45 +1,52 @@
 #!/bin/bash
 
-
 BATCH_SPEC=$1
 OUT_DIR=$2
 
-#module load python/python36
-#DATA_DIR=data_casc
-#mkdir $DATA_DIR
-#
-#TRAIN_DATA=`grep division.category.training_data $BATCH_SPEC | cut -d' ' -f2`
-#
-#tar xzf $TRAIN_DATA -C $DATA_DIR
+BATCH_SPEC_DIR=`dirname $BATCH_SPEC`
 
+PROBLEMS_TYPES_ATP="+1 +2" # TODO change it; also be careful with spec. symb.
 
-DATA_DIR=`pwd`/LTB_CASC_26
+#module load python/python36 # TODO uncomment
+DATA_DIR=`pwd`/data/CASC_SAMPLE # TODO change it
+mkdir -p $DATA_DIR
+
+TRAIN_ARCHIVE=$BATCH_SPEC_DIR/`grep division.category.training_data $BATCH_SPEC | cut -d' ' -f2`
+tar xzf $TRAIN_ARCHIVE -C $DATA_DIR
 
 SOLUTIONS_DIR=$DATA_DIR/Solutions
 PROBLEMS_DIR=$DATA_DIR/Problems
 # TODO make sure that both training and testing problems are in PROBLEMS_DIR
-AXIOMS_DIR=$DATA_DIR/Axioms
-# TODO remember to use axioms
+AXIOMS_DIR=$DATA_DIR/Axioms # TODO remember to use axioms
+
+sed -n '/SZS start BatchProblems/,/SZS end BatchProblems/p' $BATCH_SPEC \
+	| grep -v '^%' > $DATA_DIR/problems_outputs
+sed -i 's# # '$OUT_DIR'\/#g; s#^#'$BATCH_SPEC_DIR'\/#g' $DATA_DIR/problems_outputs
+for t in $PROBLEMS_TYPES_ATP; do
+	sed 's/\*/'$t'/g' $DATA_DIR/problems_outputs > $DATA_DIR/problems_outputs__$t
+done
+cat $DATA_DIR/problems_outputs__* | sort > $DATA_DIR/problems_outputs
+cut -d' ' -f1 $DATA_DIR/problems_outputs | xargs cp -t $PROBLEMS_DIR
+rm $DATA_DIR/problems_outputs__*
 
 find $SOLUTIONS_DIR -name '*.s' | grep 'E-' > $DATA_DIR/solutions_list
-python3 deps.py $DATA_DIR/solutions_list > $DATA_DIR/train_deps
+python3 deps.py $DATA_DIR/solutions_list > $DATA_DIR/train_deps_files
+rev $DATA_DIR/train_deps_files | cut -d':' -f1,2 | rev > $DATA_DIR/train_deps
+# TODO sort -u ?
 
-find $PROBLEMS_DIR -name '*+1*.p' > problems_list # TODO change +1
-python3 prepare_statements.py problems_list > $DATA_DIR/statements
+for t in $PROBLEMS_TYPES_ATP; do
+	find $PROBLEMS_DIR -name '*'$t'*.p' > $DATA_DIR/problems_list__$t
+done
+cat $DATA_DIR/problems_list__* > $DATA_DIR/problems_list
+python3 prepare_statements.py $DATA_DIR/problems_list > $DATA_DIR/statements
+
+python3 deps.py $DATA_DIR/problems_list > $DATA_DIR/available_deps # TODO sort -u ?
 
 cd featurizer
 ./featurize.pl $DATA_DIR/statements
 cd ..
 mv featurizer/features_enigma_as_axioms $DATA_DIR/features
 
-./atpboost.py \
-	--conjectures data/MPTP2078/conjectures \
-	--train_deps data/MPTP2078/train_deps \
-	--statements data/MPTP2078/statements \
-    --features data/MPTP2078/features_binary \
-    --chronology data/MPTP2078/chronology \
-	--ml_models xgboost \
-    --data_dir data/MPTP2078/atpboost_data \
-	--logfile `echo $0 | sed 's/\.sh/.log/g'`
+
 
 

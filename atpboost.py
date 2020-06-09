@@ -1,10 +1,10 @@
 import argparse
-from loop import loop
+from loop import loop, loop_casc
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '--conjectures',
+        '--problems',
         type=str)
     parser.add_argument(
         '--train_deps',
@@ -24,13 +24,9 @@ if __name__ == '__main__':
         '--features',
         type=str)
     parser.add_argument(
-        '--chronology',
-        type=str,
-        default=None)
-    parser.add_argument(
         '--mining',
         type=float,
-        default=0.1,
+        default=0.2,
         help='Fraction of proved theorems used for mining; 0 means no mining.')
     parser.add_argument(
         '--iterations',
@@ -50,7 +46,7 @@ if __name__ == '__main__':
         type=str)
     parser.add_argument(
         '--n_jobs',
-        default=10,
+        default=-1,
         type=int)
     parser.add_argument(
         '--gnn_batch_size',
@@ -78,7 +74,7 @@ if __name__ == '__main__':
         type=float)
     parser.add_argument(
         '--xgb_knn_prefiltering',
-        default=10000,
+        default=5000,
         type=int)
     parser.add_argument(
         '--rnn_train_steps',
@@ -90,4 +86,4 @@ if __name__ == '__main__':
         type=float)
     args = parser.parse_args()
 
-loop(args)
+    loop(args)

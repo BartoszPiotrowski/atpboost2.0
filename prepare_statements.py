@@ -6,6 +6,7 @@ statements_names = set()
 for p in problems:
     lines = read_lines(p)
     lines = [l for l in lines if l and not l[0] in '#%']
+    lines = [l for l in lines if l and not 'include(' in l]
     lines = ''.join(lines).replace(' ', '')
     lines = lines.replace(').', ').\n').splitlines()
     for l in lines:
