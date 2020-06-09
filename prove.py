@@ -6,35 +6,39 @@ from tqdm import tqdm
 from random import shuffle
 
 
-def prove(predictions, args):
+def prove(problems_outputs, predictions, args):
+    if type(problems_outputs) == str:
+        problems_outputs = read_lines(problems_outputs)
     predictions = merge_predictions(predictions)
-    proofs_dir = os.path.join(args.data_dir, 'proofs')
-    mkdir_if_not_exists(proofs_dir)
+    problem_deps_output = []
+    for problem, output in problems_outputs:
+        for file, deps in predictions:
+            if file == problem:
+                problem_deps_output.append((problem, deps, output))
+
     n_jobs = args.n_jobs
     args.logger.print('Proving...')
     with Parallel(n_jobs=n_jobs) as parallel:
         prove_one_d = delayed(prove_one)
-        proofs = parallel(prove_one_d(conj, deps, args.statements, proofs_dir,
+        proofs = parallel(prove_one_d(problem, deps, problems_dir,
                              args.proving_script, args.logger) \
-                          for conj, deps in tqdm(predictions))
+                      for problem, deps, output in tqdm(problem_deps_output))
     proofs_found = [p for p in proofs if p]
     args.logger.print(f'Proving done ({len(proofs_found)} proofs found).')
     return proofs_found
 
-def prove_one(conj, deps, stms_path, dir_path, proving_script, logger):
-    assert not conj in set(deps), (conj, deps)
+def prove_one(problem, deps, output, dir_path, proving_script, logger):
     deps = list(deps)
     shuffle(deps)
-    input_filename = problem_file(conj, deps, stms_path, dir_path)
-    output_filename = input_filename.replace('.p', '.out')
-    run_prover(input_filename, output_filename, proving_script)
-    if "# Proof found!" in read_lines(output_filename):
+    input_filename = modified_problem(problem, deps, dir_path)
+    run_prover(input_filename, output, proving_script)
+    if "# Proof found!" in read_lines(output):
         logger.print('PROVED#' + conj + ':' + ' '.join(deps) \
-                     + '#Output: ' + output_filename, verb_level=7)
-        return output_filename
+                     + '#Output: ' + output, verb_level=7)
+        return output
     else:
         logger.print('NOT proved#' + conj + ':' + ' '.join(deps) \
-                     + '#Output: ' + output_filename, verb_level=7)
+                     + '#Output: ' + output, verb_level=7)
         return None
 
 
