@@ -20,7 +20,7 @@ def loop(args):
         args.logger.print(f'### Loop iteration no. {i + 1} ###', newline=True)
         models = train(train_deps, train_neg_deps, args)
         preds = predict(models, problems)
-        proofs = prove(preds, args)
+        proofs = prove(problems, preds, args)
         deps = extract_deps(proofs)
         train_deps = merge_deps(train_deps, *deps)
         if args.mining:

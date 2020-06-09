@@ -29,19 +29,24 @@ cat $DATA_DIR/problems_outputs__* | sort > $DATA_DIR/problems_outputs
 cut -d' ' -f1 $DATA_DIR/problems_outputs | xargs cp -t $PROBLEMS_DIR
 rm $DATA_DIR/problems_outputs__*
 
-find $SOLUTIONS_DIR -name '*.s' | grep 'E-' > $DATA_DIR/solutions_list
+for t in $PROBLEMS_TYPES_ATP; do
+	find $SOLUTIONS_DIR -name '*.s' | grep $t | grep 'E-' > $DATA_DIR/solutions_list__$t
+done
+cat $DATA_DIR/solutions_list__* > $DATA_DIR/solutions_list
+rm $DATA_DIR/solutions_list__*
 python3 deps.py $DATA_DIR/solutions_list > $DATA_DIR/train_deps_files
-rev $DATA_DIR/train_deps_files | cut -d':' -f1,2 | rev > $DATA_DIR/train_deps
+cut -d':' -f1,2 $DATA_DIR/train_deps_files > $DATA_DIR/train_deps
 # TODO sort -u ?
 
 for t in $PROBLEMS_TYPES_ATP; do
 	find $PROBLEMS_DIR -name '*'$t'*.p' > $DATA_DIR/problems_list__$t
 done
 cat $DATA_DIR/problems_list__* > $DATA_DIR/problems_list
+rm $DATA_DIR/problems_list__*
 python3 prepare_statements.py $DATA_DIR/problems_list > $DATA_DIR/statements
 
-python3 deps.py $DATA_DIR/problems_list > $DATA_DIR/available_deps # TODO sort -u ?
-
+python3 deps.py $DATA_DIR/problems_list > $DATA_DIR/available_deps_files
+# TODO sort -u ?
 cd featurizer
 ./featurize.pl $DATA_DIR/statements
 cd ..

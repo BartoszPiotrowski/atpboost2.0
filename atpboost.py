@@ -1,5 +1,5 @@
 import argparse
-from loop import loop, loop_casc
+from loop import loop
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -14,9 +14,8 @@ if __name__ == '__main__':
         type=str,
         default=None)
     parser.add_argument(
-        '--data_dir',
-        type=str,
-        default='atpboost_data')
+        '--available_deps',
+        type=str)
     parser.add_argument(
         '--statements',
         type=str)
@@ -84,6 +83,10 @@ if __name__ == '__main__':
         '--rnn_learning_rate',
         default=0.1,
         type=float)
+    parser.add_argument(
+        '--data_dir',
+        type=str,
+        default='atpboost_data')
     args = parser.parse_args()
 
     loop(args)
