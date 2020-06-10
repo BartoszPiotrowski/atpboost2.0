@@ -7,6 +7,8 @@ def train(train_deps, train_neg_deps, args):
                   for t in models_types]
     for model in models:
         model.train(train_deps, train_neg_deps)
+    if args.xgb_rounds_increase:
+        args.xgb_rounds += args.xgb_rounds_increase
     return models
 
 

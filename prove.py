@@ -22,7 +22,7 @@ def prove(problems_outputs, predictions, args):
         prove_one_d = delayed(prove_one)
         problems_proofs = parallel(prove_one_d(problem, output, problems_dir,
                                                args.proving_script, deps) \
-                      for problem, deps, output in tqdm(problem_deps_output))
+                      for problem, deps, output in problem_deps_output)
     solved_problems = [p[0] for p in problems_proofs if p]
     proofs =          [p[1] for p in problems_proofs if p]
     args.logger.print(f'Proving done ({len(proofs)} proofs found).')
@@ -60,7 +60,7 @@ def prove_init(problems_outputs, args):
         prove_one_d = delayed(prove_one)
         problems_proofs = parallel(prove_one_d(problem, output,
                             problems_dir, args.init_proving_script) \
-                      for problem, output in tqdm(problems_outputs))
+                      for problem, output in problems_outputs)
     solved_problems = [p[0] for p in problems_proofs if p]
     proofs =          [p[1] for p in problems_proofs if p]
     args.logger.print(f'Proving done ({len(proofs)} proofs found).')

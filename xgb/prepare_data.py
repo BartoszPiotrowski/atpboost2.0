@@ -15,7 +15,7 @@ def deps_to_train_array(train_deps=None, train_neg_deps=None, n_jobs=1, **kwargs
     with Parallel(n_jobs=n_jobs) as parallel:
         labels_arrays = parallel(delayed(deps_to_train_array_1_job)(
             i_thms=i_thms, deps=train_deps, deps_neg=train_neg_deps, **kwargs) \
-            for i_thms in tqdm(list(enumerate(split))))
+            for i_thms in list(enumerate(split)))
     labels, array = merge_saved_arrays(labels_arrays)
     return labels, array
 

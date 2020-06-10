@@ -149,8 +149,6 @@ class XGBoost(Model):
         self.logger.print(self.show_config())
         self.save(model)
         self.logger.print(f'Model saved to {self.model_path}')
-        if self.train_params_rounds_increase:
-            self.train_params_rounds += self.train_params_rounds_increase
 
 
     def show_config(self, padding=' ' * 25):

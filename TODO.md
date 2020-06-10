@@ -1,2 +1,3 @@
 - add try/except in several places
 - remove log printouts
+- change +1 +2 to 4 5
