@@ -7,14 +7,13 @@ from utils import read_deps, save_deps
 from utils import read_lines
 
 
-def mining(models, args):
+def mining(models, train_problems, args):
     args.logger.print('Mining...')
     pos_deps, neg_deps = [], []
-    train_thms = set(read_deps(args.train_deps))
-    num_mining_thms = max(round(args.mining * len(train_thms)), 1)
-    mining_thms = sample(train_thms, num_mining_thms)
-    preds = [model.predict(mining_thms) for model in models]
-    proofs = prove(preds, args)
+    num_mining_problems = max(round(args.mining * len(train_problems)), 1)
+    mining_problems = sample(train_problems, num_mining_problems)
+    preds = [model.predict(mining_problems) for model in models]
+    _, proofs = prove(mining_problems, preds, args)
     if not proofs:
         return None, None
     deps = extract_deps(proofs)

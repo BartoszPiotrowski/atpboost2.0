@@ -4,14 +4,12 @@ from utils import merge_predictions, mkdir_if_not_exists
 from utils import read_lines, read_stms, write_lines
 from tqdm import tqdm
 from random import shuffle
+from shutil import copyfile
 
 
 def prove(problems_outputs, predictions, args):
-    problems_dir = os.path.join(args.data_dir, 'problems')
+    problems_dir = os.path.join(args.data_dir, 'proofs')
     mkdir_if_not_exists(problems_dir)
-    if type(problems_outputs) == str:
-        problems_outputs = read_lines(problems_outputs)
-    problems_outputs = [p.split(' ') for p in problems_outputs]
     predictions = merge_predictions(predictions)
     problem_deps_output = []
     for problem, output in problems_outputs:
@@ -22,9 +20,8 @@ def prove(problems_outputs, predictions, args):
     args.logger.print('Proving...')
     with Parallel(n_jobs=n_jobs) as parallel:
         prove_one_d = delayed(prove_one)
-        problems_proofs = parallel(prove_one_d(problem, deps, output,
-                               problems_dir, args.proving_script,
-                               args.default_proving_script, args.logger) \
+        problems_proofs = parallel(prove_one_d(problem, output, problems_dir,
+                                               args.proving_script, deps) \
                       for problem, deps, output in tqdm(problem_deps_output))
     solved_problems = [p[0] for p in problems_proofs if p]
     proofs =          [p[1] for p in problems_proofs if p]
@@ -32,22 +29,42 @@ def prove(problems_outputs, predictions, args):
     return solved_problems, proofs
 
 
-def prove_one(problem, deps, output_file, dir_path, proving_script,
-              default_proving_script, logger=None):
-    print(f"% SZS status Started for {problem}")
-    run_prover(problem, output_file, default_proving_script)
-    deps = list(deps)
-    shuffle(deps)
-    input_file = modified_problem(problem, deps, dir_path)
+def prove_one(problem, file_for_proof, dir_path, proving_script, deps=None):
+    problem_basename = os.path.basename(problem)
+    print(f"% SZS status Started for {problem_basename}")
+    if deps:
+        deps = list(deps)
+        shuffle(deps)
+        input_file = modified_problem(problem, deps, dir_path)
+    else:
+        input_file = os.path.join(dir_path, os.path.basename(problem))
+        copyfile(problem, input_file)
+    output_file = input_file.replace('.p', '.out')
     run_prover(input_file, output_file, proving_script)
     if "# Proof found!" in read_lines(output_file):
-        print(f"% SZS status Theorem for {problem}")
-        print(f"% SZS status Ended for {problem}")
-        return input_file, output_file
+        print(f"% SZS status Theorem for {problem_basename}")
+        copyfile(output_file, file_for_proof)
+        print(f"% SZS status Ended for {problem_basename}")
+        return file_for_proof, output_file
     else:
-        print(f"% SZS status GaveUp for {problem}")
-        print(f"% SZS status Ended for {problem}")
+        print(f"% SZS status GaveUp for {problem_basename}")
+        print(f"% SZS status Ended for {problem_basename}")
         return None
+
+def prove_init(problems_outputs, args):
+    problems_dir = os.path.join(args.data_dir, 'proofs')
+    mkdir_if_not_exists(problems_dir)
+    n_jobs = args.n_jobs
+    args.logger.print('Proving...')
+    with Parallel(n_jobs=n_jobs) as parallel:
+        prove_one_d = delayed(prove_one)
+        problems_proofs = parallel(prove_one_d(problem, output,
+                            problems_dir, args.init_proving_script) \
+                      for problem, output in tqdm(problems_outputs))
+    solved_problems = [p[0] for p in problems_proofs if p]
+    proofs =          [p[1] for p in problems_proofs if p]
+    args.logger.print(f'Proving done ({len(proofs)} proofs found).')
+    return solved_problems, proofs
 
 
 def problem_file(conj, list_of_deps, stms_path, dir_path):
@@ -77,7 +94,7 @@ def modified_problem(problem, deps, dir_path):
                 lines_out.append(l)
     shuffle(lines_out)
     uuid4 = uuid.uuid4().hex
-    file_name = os.path.join(dir_path, uuid4 + os.path.basename(problem))
+    file_name = os.path.join(dir_path, uuid4 + '_' + os.path.basename(problem))
     write_lines(lines_out, file_name)
     return file_name
 

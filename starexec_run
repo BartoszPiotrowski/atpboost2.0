@@ -8,8 +8,10 @@ BATCH_SPEC_DIR=`dirname $BATCH_SPEC`
 PROBLEMS_TYPES_ATP="+1 +2" # TODO change it; also be careful with spec. symb.
 
 #module load python/python36 # TODO uncomment
-DATA_DIR=`pwd`/data/CASC_SAMPLE # TODO change it
-mkdir -p $DATA_DIR
+DATA_DIR=`pwd`/data/CASC_SAMPLE; mkdir -p $DATA_DIR
+# TODO change it to this:
+#DATA_DIR=`mktemp -d`
+
 
 TRAIN_ARCHIVE=$BATCH_SPEC_DIR/`grep division.category.training_data $BATCH_SPEC | cut -d' ' -f2`
 tar xzf $TRAIN_ARCHIVE -C $DATA_DIR
@@ -18,6 +20,18 @@ SOLUTIONS_DIR=$DATA_DIR/Solutions
 PROBLEMS_DIR=$DATA_DIR/Problems
 # TODO make sure that both training and testing problems are in PROBLEMS_DIR
 AXIOMS_DIR=$DATA_DIR/Axioms # TODO remember to use axioms
+
+MINING_DIR=$DATA_DIR/MiningProofs
+mkdir -p $MINING_DIR
+for t in $PROBLEMS_TYPES_ATP; do
+	find $DATA_DIR/Problems -name '*'$t'*.p' > $DATA_DIR/train_problems__$t
+done
+cat $DATA_DIR/train_problems__* > $DATA_DIR/train_problems
+cat $DATA_DIR/train_problems | xargs -l1 basename \
+	> $DATA_DIR/train_problems_basenames
+paste -d' ' $DATA_DIR/train_problems \
+	<(sed 's#^#'$MINING_DIR'/#g; s/.p$//g' $DATA_DIR/train_problems_basenames) \
+	> $DATA_DIR/train_problems_outputs
 
 sed -n '/SZS start BatchProblems/,/SZS end BatchProblems/p' $BATCH_SPEC \
 	| grep -v '^%' > $DATA_DIR/problems_outputs
@@ -54,4 +68,4 @@ mv featurizer/features_enigma_as_axioms $DATA_DIR/features
 
 
 
-
+# TODO remove tmp data

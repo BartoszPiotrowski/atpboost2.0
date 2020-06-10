@@ -1,6 +1,6 @@
 from train import train
 from predict import predict
-from prove import prove
+from prove import prove, prove_init
 from mining import mining
 from deps import merge_deps, extract_deps, extract_deps_1
 from shutil import copyfile
@@ -12,21 +12,28 @@ from utils import mkdir_if_not_exists, read_lines, write_lines
 def loop(args):
     args.logger = Logger(args.logfile)
     mkdir_if_not_exists(args.data_dir)
-    problems = copyfile(args.problems, args.data_dir + '/unsolved_problems')
-    conjs = set(extract_deps_1(p.split(' ')[0])[0] for p in read_lines(problems))
+    problems = [p.split(' ') for p in read_lines(args.problems)]
+    train_problems = [p.split(' ') for p in read_lines(args.train_problems)]
+    conjs = [extract_deps_1(p[0])[0] for p in problems]
     conjs = write_lines(conjs, args.data_dir + '/conjs')
     train_deps = copyfile(args.train_deps, args.data_dir + '/train_deps')
     train_neg_deps = args.train_neg_deps
+    args.logger.print(stats_init(train_deps, conjs))
+    solved, proofs = prove_init(problems, args)
+    problems = [p for p in problems if not p[1] in solved]
+    conjs_deps = extract_deps(proofs)
+    train_deps = merge_deps(train_deps, *conjs_deps)
     args.logger.print(stats_init(train_deps, conjs))
     for i in range(args.iterations):
         args.logger.print(f'### Loop iteration no. {i + 1} ###', newline=True)
         models = train(train_deps, train_neg_deps, args)
         preds = predict(models, problems)
-        solved_problems, proofs = prove(problems, preds, args)
+        solved, proofs = prove(problems, preds, args)
+        problems = [p for p in problems if not p[1] in solved]
         conjs_deps = extract_deps(proofs)
         train_deps = merge_deps(train_deps, *conjs_deps)
         if args.mining:
-            pos_deps, neg_deps = mining(models, args)
+            pos_deps, neg_deps = mining(models, train_problems, args)
             train_deps = merge_deps(train_deps, pos_deps)
             train_neg_deps = neg_deps
         args.logger.print(stats(train_deps, conjs, conjs_deps))

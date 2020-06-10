@@ -28,7 +28,7 @@ class Model:
         pass
 
     def make_predictions(self, scored_prems,
-                         slices_lens=[4,8,16,32,64,128,256,512,1024,2048]):
+                         slices_lens=[4,8,16,32,64,128,256,512,1024]):
         all_predictions = []
         for conj in scored_prems:
             sp = scored_prems[conj]
@@ -166,8 +166,7 @@ class XGBoost(Model):
 
 
     def predict(self, problems):
-        problems = read_lines(problems) if type(problems) == str else problems
-        problems = [p.split(' ')[0] for p in problems]
+        problems = [p[0] for p in problems]
         self.logger.print(f'Making predictions for {len(problems)} problems...')
         features = read_features(self.features)
         model = self.load()
@@ -215,170 +214,3 @@ class XGBoost(Model):
         model = self.xgb.Booster()
         model.load_model(self.model_path)
         return model
-
-
-class GNN(Model):
-    def __init__(self, **kwargs):
-        super(GNN, self).__init__(**kwargs)
-        warn = import_module('warnings'); warn.filterwarnings("ignore")
-        self.gnn_prep= import_module('gnn.data_preparation')
-        self.gnn= import_module('gnn.gnn')
-        self.stms = kwargs['statements']
-        self.save_dir = os.path.join(self.save_dir, 'gnn')
-        self.model_dir = os.path.join(self.save_dir, 'model')
-        self.training_dir = os.path.join(self.save_dir, 'training')
-        self.testing_dir = os.path.join(self.save_dir, 'testing')
-        self.predictions_path = os.path.join(self.save_dir, 'predictions')
-        self.n_deps_per_example = kwargs['gnn_n_deps_per_example']
-        self.batch_size = kwargs['gnn_batch_size']
-        self.epochs = kwargs['gnn_epochs']
-        self.features = kwargs['features']
-
-
-    def prepare_training_dir(self):
-        train_deps = read_deps(self.train_deps)
-        train_deps_u = read_deps(self.train_deps, unions=True)
-        thms = set(train_deps)
-        chronology = read_lines(self.chronology)
-        features = read_features(self.features)
-        features_numbers = dict_features_numbers(features)
-        train_ranks = {}
-        for thm in thms:
-            available_prems = set(chronology[:chronology.index(thm)])
-            sp = KNN.predict_1(thm, available_prems, train_deps, train_deps_u,
-                               features, features_numbers)
-            sp.sort(key = lambda x: x[1], reverse = True)
-            train_ranks[thm] = [p for p, s in sp]
-        rmdir_mkdir(self.training_dir)
-        self.gnn_prep.prepare_training_data(train_deps, train_ranks, self.stms,
-                       self.training_dir, self.n_deps_per_example, self.n_jobs)
-        return self.training_dir
-
-
-    def prepare_testing_dir(self, conjs):
-        train_deps = read_deps(self.train_deps)
-        train_deps_u = read_deps(self.train_deps, unions=True)
-        chronology = read_lines(self.chronology)
-        features = read_features(self.features)
-        features_numbers = dict_features_numbers(features)
-        conjs_ranks = {}
-        for conj in conjs:
-            available_prems = set(chronology[:chronology.index(conj)])
-            sp = KNN.predict_1(conj, available_prems, train_deps, train_deps_u,
-                               features, features_numbers)
-            sp.sort(key = lambda x: x[1], reverse = True)
-            conjs_ranks[conj] = [p for p, s in sp]
-        rmdir_mkdir(self.testing_dir)
-        self.gnn_prep.prepare_testing_data(conjs, conjs_ranks, self.stms,
-                                       self.testing_dir, self.n_deps_per_example)
-        return self.testing_dir
-
-
-    def predict(self, conjs):
-        conjs = read_lines(conjs) if type(conjs) == str else conjs
-        self.prepare_testing_dir(conjs)
-        scored_prems = self.gnn.predictions_from_gnn_model(self.testing_dir,
-                                                           self.model_path)
-
-        self.predictions_path = self.make_predictions(scored_prems)
-        self.logger.print(f'Predictions saved to {self.predictions_path}')
-        return self.predictions_path
-
-
-    def train(self, train_deps, train_neg_deps=None):
-        self.logger.print('Preparing training data...')
-        self.train_deps = train_deps
-        self.train_neg_deps = train_neg_deps
-        training_dir = self.prepare_training_dir()
-        self.logger.print('Training data prepared')
-        rmdir_mkdir(self.model_dir)
-        self.logger.print('Training GNN model...')
-        self.model_path = self.gnn.train_gnn_model(training_dir,
-                           epochs=self.epochs, batch_size=self.batch_size,
-                           save_each=20, save_dir=self.model_dir)
-        self.logger.print('Training GNN model done')
-        self.logger.print(f'Model saved to {self.model_path}')
-
-
-
-class RNN(Model):
-    def __init__(self, **kwargs):
-        super(RNN, self).__init__(**kwargs)
-        self.rnn_prep= import_module('rnn.prepare_data')
-        self.stms = kwargs['statements']
-        self.save_dir = os.path.join(self.save_dir, 'rnn')
-        self.model_path = os.path.join(self.save_dir, 'model')
-        self.predictions_path = os.path.join(self.save_dir, 'predictions')
-        self.train_steps = kwargs['rnn_train_steps']
-        self.learning_rate = kwargs['rnn_learning_rate']
-        os.environ['MKL_THREADING_LAYER'] = 'GNU'
-
-
-    def prepare(self):
-        mkdir_if_not_exists(self.save_dir)
-        return self.rnn_prep.prepare_training_data(
-            self.train_deps, self.stms, self.save_dir)
-
-
-    def train(self, train_deps, train_neg_deps=None):
-        self.train_deps = train_deps
-        self.train_neg_deps = train_neg_deps
-        train_data = self.prepare()
-        os.popen(
-            f'''
-            onmt_train \
-                -data {train_data} \
-                -train_steps {self.train_steps} \
-                -learning_rate {self.learning_rate} \
-                -world_size 1 -gpu_ranks 0 \
-                -save_model {self.model_path}
-            '''
-        ).read()
-        return self.model_path
-
-
-    def predict(self, conjs):
-        conjs = read_lines(conjs) if type(conjs) == str else conjs
-        stms = read_stms(self.stms, tokens=True, short=True)
-        conjs_stms = [stms[c] for c in conjs]
-        source = write_lines(conjs_stms, os.path.join(self.save_dir, 'test.src'))
-        os.popen(
-            f'''
-            onmt_translate \
-                -model {self.model_path}_step_{str(self.train_steps)}.pt \
-                -src {source} \
-                -beam_size 10 -n_best 10 \
-                -replace_unk -verbose \
-                -gpu 0 \
-                -output {self.predictions_path}
-            '''
-        ).read()
-        preds_raw = read_lines(self.predictions_path)
-        assert len(preds_raw) and len(preds_raw) % len(conjs) == 0
-        write_empty(self.predictions_path)
-        # when we produced n translations per theorem:
-        n = int(len(preds_raw) / len(conjs))
-        if n > 1:
-            conjs = [c for c in conjs for _ in range(n)]
-            assert conjs[0] == conjs[1]
-            assert len(conjs) == len(preds_raw)
-        deps_unions = {c: set() for c in conjs}
-        chrono = read_lines(self.chronology)
-        for i in range(len(preds_raw)):
-            c = conjs[i]
-            available_prems = set(chrono[:chrono.index(c)])
-            ds = preds_raw[i].split(' ')
-            ds = [d for d in ds if d in available_prems]
-            if ds:
-                deps_unions[c].update(ds)
-                append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
-        for c in deps_unions:
-            ds = deps_unions[c]
-            if ds:
-                append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
-        return self.predictions_path
-
-
-class LightGBM(Model):
-    def __init__(self, **kwargs):
-        pass

@@ -53,9 +53,8 @@ def extract_deps_1(file_with_proof):
             elif (',axiom,' in l or ',lemma,' in l) and not 'inference(' in l:
                 premises_unordered.add(name)
         except:
-            print(f'Error at line {l}, file: {file_with_proof}')
-            print(lines)
-            sys.exit()
+            pass
+    #print(file_with_proof, conjecture, premises_unordered)
     return conjecture, premises_unordered
 
 

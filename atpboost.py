@@ -7,6 +7,9 @@ if __name__ == '__main__':
         '--problems',
         type=str)
     parser.add_argument(
+        '--train_problems',
+        type=str)
+    parser.add_argument(
         '--train_deps',
         type=str)
     parser.add_argument(
@@ -35,6 +38,10 @@ if __name__ == '__main__':
         '--proving_script',
         type=str,
         default='prove.sh')
+    parser.add_argument(
+        '--init_proving_script',
+        type=str,
+        default='prove-init.sh')
     parser.add_argument(
         '--default_proving_script',
         type=str,
