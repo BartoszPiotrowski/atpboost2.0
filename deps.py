@@ -1,4 +1,4 @@
-import os
+import os, sys
 from utils import read, read_lines, write_lines, write_line, remove_supersets
 
 
@@ -28,7 +28,7 @@ def merge_deps(file_0, *files, output_file=None):
 def extract_deps(proofs):
     output_files = []
     for p in proofs:
-        conjecture_premises = extract_deps_from_tptp_file(p)
+        conjecture_premises = extract_deps_1(p)
         if not conjecture_premises == None:
             conjecture, premises = conjecture_premises
             if premises:
@@ -38,7 +38,7 @@ def extract_deps(proofs):
     return output_files
 
 
-def extract_deps_from_tptp_file(file_with_proof):
+def extract_deps_1(file_with_proof):
     lines = read_lines(file_with_proof)
     lines = [l for l in lines if l and not l[0] in '#%']
     lines = ''.join(lines).replace(' ', '')
@@ -46,11 +46,16 @@ def extract_deps_from_tptp_file(file_with_proof):
     premises_unordered = set()
     conjecture = None
     for l in lines:
-        name = l.split(',')[0].split('(')[1]
-        if ',conjecture,' in l:
-            conjecture = name
-        elif (',axiom,' in l or ',lemma,' in l) and not 'inference(' in l:
-            premises_unordered.add(name)
+        try:
+            name = l.split(',')[0].split('(')[1]
+            if ',conjecture,' in l:
+                conjecture = name
+            elif (',axiom,' in l or ',lemma,' in l) and not 'inference(' in l:
+                premises_unordered.add(name)
+        except:
+            print(f'Error at line {l}, file: {file_with_proof}')
+            print(lines)
+            sys.exit()
     return conjecture, premises_unordered
 
 

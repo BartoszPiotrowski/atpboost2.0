@@ -4,7 +4,7 @@ from importlib import import_module
 from utils import read_lines, write_lines, read_features, read_deps, read_stms
 from utils import mkdir_if_not_exists, rmdir_mkdir, write_empty, append_line
 from utils import dict_features_numbers, similarity
-from deps import extract_deps_from_tptp_file
+from deps import extract_deps_1
 
 
 class Model:
@@ -173,7 +173,7 @@ class XGBoost(Model):
         model = self.load()
         scored_prems = {}
         for problem in problems:
-            conj, avail_deps = extract_deps_from_tptp_file(problem)
+            conj, avail_deps = extract_deps_1(problem)
             scored_prems[problem] = self.score_prems(conj, avail_deps,
                                                   model, features)
         self.predictions_path = self.make_predictions(scored_prems)
