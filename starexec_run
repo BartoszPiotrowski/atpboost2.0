@@ -65,8 +65,9 @@ cd featurizer
 ./featurize.pl $DATA_DIR/statements
 cd ..
 mv featurizer/features_enigma_as_axioms $DATA_DIR/features
+rm -r featurizer/mfeat_*
 
-#source atpboost_venv/bin/activate
+source atpboost_venv/bin/activate
 # TODO run atpboost
 
 # TODO remove tmp data

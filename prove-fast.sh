@@ -1,13 +1,13 @@
 PROBLEM=$1
 OUTPUT=$2
 
-./eprover \
-	--auto-schedule \
+eprover \
 	-sp \
 	--verbose=0 \
 	--output-level=0 \
-	--cpu-limit=11 \
-	--soft-cpu-limit=10 \
+	--auto-schedule \
+	--cpu-limit=2 \
+	--soft-cpu-limit=1 \
 	--free-numbers \
 	--memory-limit=2000 \
 	--tstp-format \

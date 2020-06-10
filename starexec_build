@@ -1,0 +1,3 @@
+virtualenv atpboost_venv --python=python3.6
+source atpboost_venv/bin/activate
+pip3 install -r requirements.txt
