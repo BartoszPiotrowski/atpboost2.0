@@ -32,7 +32,7 @@ if __name__ == '__main__':
         help='Fraction of proved theorems used for mining; 0 means no mining.')
     parser.add_argument(
         '--iterations',
-        default=10,
+        default=1000,
         type=int)
     parser.add_argument(
         '--proving_script',
@@ -79,12 +79,16 @@ if __name__ == '__main__':
         default=1000,
         type=int)
     parser.add_argument(
+        '--xgb_rounds_increase',
+        default=500,
+        type=int)
+    parser.add_argument(
         '--xgb_eta',
         default=0.1,
         type=float)
     parser.add_argument(
         '--xgb_knn_prefiltering',
-        default=5000,
+        default=10000,
         type=int)
     parser.add_argument(
         '--rnn_train_steps',

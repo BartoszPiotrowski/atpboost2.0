@@ -10,7 +10,7 @@ from utils import mkdir_if_not_exists, read_lines, write_lines
 
 
 def loop(args):
-    args.logger = Logger(args.logfile)
+    args.logger = Logger(args.logfile, verbose_stdout=0)
     mkdir_if_not_exists(args.data_dir)
     problems = [p.split(' ') for p in read_lines(args.problems)]
     train_problems = [p.split(' ') for p in read_lines(args.train_problems)]

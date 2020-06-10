@@ -114,6 +114,7 @@ class XGBoost(Model):
         self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.knn_prefiltering = kwargs['xgb_knn_prefiltering']
         self.train_params_rounds = kwargs['xgb_rounds']
+        self.train_params_rounds_increase = kwargs['xgb_rounds_increase']
         self.train_params['max_depth'] = 10
         self.train_params['eta'] = kwargs['xgb_eta']
         self.train_params['booster'] = 'gbtree'
@@ -148,6 +149,8 @@ class XGBoost(Model):
         self.logger.print(self.show_config())
         self.save(model)
         self.logger.print(f'Model saved to {self.model_path}')
+        if self.train_params_rounds_increase:
+            self.train_params_rounds += self.train_params_rounds_increase
 
 
     def show_config(self, padding=' ' * 25):
