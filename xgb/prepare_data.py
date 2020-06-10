@@ -73,25 +73,32 @@ def thm_to_labels_and_pairs(thm, pos_premises, available_deps, neg_premises,
 # pair means here (thm, prm)
 def pairs_to_array(pairs, features):
     assert len(pairs)
+    if type(features[pairs[0][0]]) == set:
+        features_type = 'binary'
+    elif type(features[pairs[0][0]]) == dict:
+        features_type = 'enigma'
+    else:
+        raise TypeError
     featurised_pairs = []
     for thm, prm in pairs:
         thm_f = features[thm]
         prm_f = features[prm]
-        if type(thm_f) == set: # 'binary' features
+        if features_type == 'binary':
             thm_f_appended = ['T' + f for f in thm_f]
             prm_f_appended = ['P' + f for f in prm_f]
             fea_pair = thm_f_appended + prm_f_appended
-        elif type(thm_f) == dict: # 'enigma' features
+        elif features_type == 'enigma':
             fea_pair = {}
             for f in thm_f:
                 fea_pair['T' + f] = thm_f[f]
             for f in prm_f:
                 fea_pair['P' + f] = prm_f[f]
-        else:
-            raise TypeError
         featurised_pairs.append(fea_pair)
-    hasher = FeatureHasher(n_features=2**15, input_type='string') # 2**15 == 32768
-    # TODO input_type='string' for enigma features?
+    if features_type == 'binary':
+        hasher = FeatureHasher(n_features=2**15, input_type='string')
+        # 2**15 == 32768
+    elif features_type == 'enigma':
+        hasher = FeatureHasher(n_features=2**15, input_type='dict')
     array = hasher.transform(featurised_pairs)
     return array
 
