@@ -18,30 +18,35 @@ def prove(problems_outputs, predictions, args):
         for file, deps in predictions:
             if file == problem:
                 problem_deps_output.append((problem, deps, output))
-
     n_jobs = args.n_jobs
     args.logger.print('Proving...')
     with Parallel(n_jobs=n_jobs) as parallel:
         prove_one_d = delayed(prove_one)
-        proofs = parallel(prove_one_d(problem, deps, output, problems_dir,
-                             args.proving_script, args.logger) \
+        problems_proofs = parallel(prove_one_d(problem, deps, output,
+                               problems_dir, args.proving_script,
+                               args.default_proving_script, args.logger) \
                       for problem, deps, output in tqdm(problem_deps_output))
-    proofs_found = [p for p in proofs if p]
-    args.logger.print(f'Proving done ({len(proofs_found)} proofs found).')
-    return proofs_found
+    solved_problems = [p[0] for p in problems_proofs if p]
+    proofs =          [p[1] for p in problems_proofs if p]
+    args.logger.print(f'Proving done ({len(proofs)} proofs found).')
+    return solved_problems, proofs
 
-def prove_one(problem, deps, output_file, dir_path, proving_script, logger):
+
+def prove_one(problem, deps, output_file, dir_path, proving_script,
+              default_proving_script, logger=None):
+    print(f"% SZS status Started for {problem}")
+    run_prover(problem, output_file, default_proving_script)
     deps = list(deps)
     shuffle(deps)
     input_file = modified_problem(problem, deps, dir_path)
     run_prover(input_file, output_file, proving_script)
     if "# Proof found!" in read_lines(output_file):
-        logger.print('PROVED#' + ':' + ' '.join(deps) \
-                     + '#Output: ' + output_file, verb_level=7)
-        return output_file
+        print(f"% SZS status Theorem for {problem}")
+        print(f"% SZS status Ended for {problem}")
+        return input_file, output_file
     else:
-        logger.print('NOT proved#' + ':' + ' '.join(deps) \
-                     + '#Output: ' + output_file, verb_level=7)
+        print(f"% SZS status GaveUp for {problem}")
+        print(f"% SZS status Ended for {problem}")
         return None
 
 
@@ -102,6 +107,4 @@ def run_prover(input_filename, output_filename, proving_script):
 #        input_filename],
 #        stdout=output, stderr = open(os.devnull, 'w'))
 #    output.close()
-
-
 
