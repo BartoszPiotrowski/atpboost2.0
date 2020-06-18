@@ -1,0 +1,6 @@
+#!/bin/bash
+
+module load python/3.6
+python3 -m venv atpboost_venv
+source atpboost_venv/bin/activate
+pip3 install -r bin/requirements.txt

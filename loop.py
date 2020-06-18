@@ -18,14 +18,11 @@ def loop(args):
     conjs = write_lines(conjs, args.data_dir + '/conjs')
     train_deps = copyfile(args.train_deps, args.data_dir + '/train_deps')
     train_neg_deps = args.train_neg_deps
-    args.logger.print(stats_init(train_deps, conjs))
     solved, proofs = prove_init(problems, args)
     problems = [p for p in problems if not p[1] in solved]
     conjs_deps = extract_deps(proofs)
     train_deps = merge_deps(train_deps, *conjs_deps)
-    args.logger.print(stats_init(train_deps, conjs))
     for i in range(args.iterations):
-        args.logger.print(f'### Loop iteration no. {i + 1} ###', newline=True)
         models = train(train_deps, train_neg_deps, args)
         preds = predict(models, problems)
         solved, proofs = prove(problems, preds, args)
@@ -33,10 +30,12 @@ def loop(args):
         conjs_deps = extract_deps(proofs)
         train_deps = merge_deps(train_deps, *conjs_deps)
         if args.mining:
-            pos_deps, neg_deps = mining(models, train_problems, args)
-            train_deps = merge_deps(train_deps, pos_deps)
-            train_neg_deps = neg_deps
-        args.logger.print(stats(train_deps, conjs, conjs_deps))
+            try:
+                pos_deps, neg_deps = mining(models, train_problems, args)
+                train_deps = merge_deps(train_deps, pos_deps)
+                train_neg_deps = neg_deps
+            except:
+                pass
 
 
 if __name__=='__main__':
