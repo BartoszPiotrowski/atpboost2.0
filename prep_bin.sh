@@ -14,6 +14,7 @@ cp prepare_statements.py bin
 cp -r featurizer bin
 cp prove* bin
 cp eprover bin
+cp parallel bin
 
 tar czf atpboost_casc.tgz starexec_run bin
 

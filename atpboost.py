@@ -43,10 +43,6 @@ if __name__ == '__main__':
         type=str,
         default='prove-init.sh')
     parser.add_argument(
-        '--default_proving_script',
-        type=str,
-        default='prove-auto.sh')
-    parser.add_argument(
         '--ml_models',
         default='xgboost,gnn,rnn,knn',
         type=str)

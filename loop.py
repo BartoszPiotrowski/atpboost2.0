@@ -1,6 +1,6 @@
 from train import train
 from predict import predict
-from prove import prove, prove_init
+from prove import prove
 from mining import mining
 from deps import merge_deps, extract_deps, extract_deps_1
 from shutil import copyfile
@@ -18,14 +18,15 @@ def loop(args):
     conjs = write_lines(conjs, args.data_dir + '/conjs')
     train_deps = copyfile(args.train_deps, args.data_dir + '/train_deps')
     train_neg_deps = args.train_neg_deps
-    solved, proofs = prove_init(problems, args)
+    solved, proofs = prove(problems, args,
+                           proving_script=args.init_proving_script)
     problems = [p for p in problems if not p[1] in solved]
     conjs_deps = extract_deps(proofs)
     train_deps = merge_deps(train_deps, *conjs_deps)
     for i in range(args.iterations):
         models = train(train_deps, train_neg_deps, args)
         preds = predict(models, problems)
-        solved, proofs = prove(problems, preds, args)
+        solved, proofs = prove(problems, args, preds)
         problems = [p for p in problems if not p[1] in solved]
         conjs_deps = extract_deps(proofs)
         train_deps = merge_deps(train_deps, *conjs_deps)

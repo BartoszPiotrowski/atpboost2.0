@@ -1,9 +1,9 @@
 #!/bin/bash
 
 DATA_DIR=$1
-#python3 atpboost.py \
 #./dist/atpboost/atpboost \
-./bin/dist/atpboost/atpboost \
+#./bin/dist/atpboost/atpboost \
+python3 atpboost.py \
 	--problems $DATA_DIR/problems_outputs \
 	--train_problems $DATA_DIR/train_problems_outputs \
 	--train_deps $DATA_DIR/train_deps \
@@ -12,7 +12,7 @@ DATA_DIR=$1
     --features $DATA_DIR/features \
 	--ml_models xgboost \
 	--xgb_rounds 20 \
-	--mining 0 \
+	--mining 0.5 \
 	--proving_script prove-fast.sh \
     --data_dir $DATA_DIR/atpboost_data \
     --n_jobs -1 \
