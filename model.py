@@ -1,11 +1,12 @@
 import os
-from joblib import Parallel, delayed
 from importlib import import_module
 from utils import read_lines, write_lines, read_features, read_deps, read_stms
 from utils import mkdir_if_not_exists, rmdir_mkdir, write_empty, append_line
 from utils import dict_features_numbers, similarity
 from deps import extract_deps_1
 
+import xgboost
+from xgb import prepare_data as xgb_prep
 
 class Model:
     def __init__(self, **kwargs):
@@ -105,8 +106,8 @@ class KNN(Model):
 class XGBoost(Model):
     def __init__(self, **kwargs):
         super(XGBoost, self).__init__(**kwargs)
-        self.xgb = import_module('xgboost')
-        self.xgb_prep = import_module('xgb.prepare_data')
+        #self.xgb = import_module('xgboost')
+        #self.xgb_prep = import_module('xgb.prepare_data')
         self.save_dir = os.path.join(self.save_dir, 'xgb')
         mkdir_if_not_exists(self.save_dir)
         self.model_path = os.path.join(self.save_dir, 'model')
@@ -119,7 +120,8 @@ class XGBoost(Model):
         self.train_params['eta'] = kwargs['xgb_eta']
         self.train_params['booster'] = 'gbtree'
         self.train_params['objective'] = 'binary:logistic'
-        self.train_params['n_jobs'] = self.n_jobs
+        if self.n_jobs != -1:
+            self.train_params['n_jobs'] = self.n_jobs
 
 
     def prepare(self):
@@ -131,7 +133,7 @@ class XGBoost(Model):
             'save_dir': self.save_dir,
             'n_jobs': self.n_jobs,
         }
-        return self.xgb_prep.deps_to_train_array(**kwargs)
+        return xgb_prep.deps_to_train_array(**kwargs)
 
 
     def train(self, train_deps, train_neg_deps=None):
@@ -139,10 +141,10 @@ class XGBoost(Model):
         self.train_neg_deps = train_neg_deps
         self.logger.print('Preparing training data...')
         labels, array = self.prepare()
-        dtrain = self.xgb.DMatrix(array, label=labels)
+        dtrain = xgboost.DMatrix(array, label=labels)
         self.logger.print('Training data prepared')
         self.logger.print('Training XGBoost model...')
-        model = self.xgb.train(self.train_params, dtrain,
+        model = xgboost.train(self.train_params, dtrain,
                           num_boost_round=self.train_params_rounds)
         self.logger.print('Training XGBoost model done')
         self.logger.print(self.show_config())
@@ -200,8 +202,8 @@ class XGBoost(Model):
 
     def score_prems(self, conj, premises, xgb_model, features):
         pairs = [(conj, p) for p in premises]
-        array = self.xgb_prep.pairs_to_array(pairs, features)
-        array = self.xgb.DMatrix(array)
+        array = xgb_prep.pairs_to_array(pairs, features)
+        array = xgboost.DMatrix(array)
         scores = xgb_model.predict(array)
         premises_scores = list(zip(premises, scores))
         return premises_scores
@@ -211,7 +213,7 @@ class XGBoost(Model):
         return self.model_path
 
     def load(self):
-        model = self.xgb.Booster()
+        model = xgboost.Booster()
         model.load_model(self.model_path)
         return model
 

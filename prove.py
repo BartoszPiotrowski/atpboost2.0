@@ -1,5 +1,4 @@
 import os, subprocess, uuid
-from joblib import Parallel, delayed
 from utils import merge_predictions, mkdir_if_not_exists
 from utils import read_lines, read_stms, write_lines
 from tqdm import tqdm
@@ -18,11 +17,14 @@ def prove(problems_outputs, predictions, args):
                 problem_deps_output.append((problem, deps, output))
     n_jobs = args.n_jobs
     args.logger.print('Proving...')
-    with Parallel(n_jobs=n_jobs) as parallel:
-        prove_one_d = delayed(prove_one)
-        problems_proofs = parallel(prove_one_d(problem, output, problems_dir,
-                                               args.proving_script, deps) \
-                      for problem, deps, output in problem_deps_output)
+    #with Parallel(n_jobs=n_jobs) as parallel:
+    #    prove_one_d = delayed(prove_one)
+    #    problems_proofs = parallel(prove_one_d(problem, output, problems_dir,
+    #                                           args.proving_script, deps) \
+    #                  for problem, deps, output in problem_deps_output)
+    problems_proofs = [prove_one(problem, output, problems_dir,
+                                 args.proving_script, deps) \
+                       for problem, deps, output in problem_deps_output]
     solved_problems = [p[0] for p in problems_proofs if p]
     proofs =          [p[1] for p in problems_proofs if p]
     args.logger.print(f'Proving done ({len(proofs)} proofs found).')
@@ -56,11 +58,14 @@ def prove_init(problems_outputs, args):
     mkdir_if_not_exists(problems_dir)
     n_jobs = args.n_jobs
     args.logger.print('Proving...')
-    with Parallel(n_jobs=n_jobs) as parallel:
-        prove_one_d = delayed(prove_one)
-        problems_proofs = parallel(prove_one_d(problem, output,
-                            problems_dir, args.init_proving_script) \
-                      for problem, output in problems_outputs)
+    #with Parallel(n_jobs=n_jobs) as parallel:
+    #    prove_one_d = delayed(prove_one)
+    #    problems_proofs = parallel(prove_one_d(problem, output,
+    #                        problems_dir, args.init_proving_script) \
+    #                  for problem, output in problems_outputs)
+    problems_proofs = [prove_one(problem, output, problems_dir,
+                                   args.init_proving_script) \
+                       for problem, output in problems_outputs]
     solved_problems = [p[0] for p in problems_proofs if p]
     proofs =          [p[1] for p in problems_proofs if p]
     args.logger.print(f'Proving done ({len(proofs)} proofs found).')

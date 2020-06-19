@@ -5,7 +5,7 @@ from .src import fcoplib as cop
 from .graph_data import GraphData
 from .utils import read_lines, write_lines, append_lines, read_deps, read_stms
 from .utils import mkdir_if_not_exists, partition, save_obj, load_obj
-from joblib import Parallel, delayed
+#from joblib import Parallel, delayed
 from .premsel_network import enumerate_symbols
 
 

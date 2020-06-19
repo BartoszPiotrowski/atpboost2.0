@@ -10,7 +10,7 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.FATAL)
 os.environ['TF_CPP_MIN_VLOG_LEVEL'] = '3'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from tensorflow.contrib.layers import fully_connected
-from joblib import Parallel, delayed
+#from joblib import Parallel, delayed
 from .tf_helpers import tf_linear_sq, mean_or_zero
 from .graph_placeholder import GraphPlaceholder
 from .graph_conv import graph_start, graph_conv

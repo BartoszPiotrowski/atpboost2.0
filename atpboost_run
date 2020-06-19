@@ -2,7 +2,8 @@
 
 DATA_DIR=$1
 #python3 atpboost.py \
-./atpboost \
+#./dist/atpboost/atpboost \
+./bin/dist/atpboost/atpboost \
 	--problems $DATA_DIR/problems_outputs \
 	--train_problems $DATA_DIR/train_problems_outputs \
 	--train_deps $DATA_DIR/train_deps \
