@@ -1,3 +1,4 @@
+- clean up, run test, include test data
 - atp-minimization
 - handling errors from os.popen
 - add support for both binary features and enigma features
