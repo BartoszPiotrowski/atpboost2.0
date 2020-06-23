@@ -1,9 +1,9 @@
 #!/bin/bash
 
 DATA_DIR=$1
-#./dist/atpboost/atpboost \
-#./bin/dist/atpboost/atpboost \
-python3 atpboost.py \
+#python3 atpboost.py \
+cd bin
+./dist/atpboost/atpboost \
 	--problems $DATA_DIR/problems_outputs \
 	--train_problems $DATA_DIR/train_problems_outputs \
 	--train_deps $DATA_DIR/train_deps \

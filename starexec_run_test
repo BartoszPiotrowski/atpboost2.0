@@ -9,7 +9,6 @@ PROBLEMS_TYPES_ATP="+1 +2"
 #PROBLEMS_TYPES_ATP="+4 +5 _4 _5"
 
 DATA_DIR=`mktemp -d`
-echo data dir: $DATA_DIR
 
 TRAIN_ARCHIVE=$BATCH_SPEC_DIR/`grep division.category.training_data $BATCH_SPEC | cut -d' ' -f2`
 tar xzf $TRAIN_ARCHIVE -C $DATA_DIR
@@ -44,7 +43,7 @@ for t in $PROBLEMS_TYPES_ATP; do
 done
 cat $DATA_DIR/solutions_list__* > $DATA_DIR/solutions_list
 rm $DATA_DIR/solutions_list__*
-python3 bin/deps.py $DATA_DIR/solutions_list > $DATA_DIR/train_deps_files
+python3 deps.py $DATA_DIR/solutions_list > $DATA_DIR/train_deps_files
 cut -d':' -f1,2 $DATA_DIR/train_deps_files > $DATA_DIR/train_deps
 
 for t in $PROBLEMS_TYPES_ATP; do
@@ -52,34 +51,29 @@ for t in $PROBLEMS_TYPES_ATP; do
 done
 cat $DATA_DIR/problems_list__* > $DATA_DIR/problems_list
 rm $DATA_DIR/problems_list__*
-python3 bin/prepare_statements.py $DATA_DIR/problems_list > $DATA_DIR/statements
+python3 prepare_statements.py $DATA_DIR/problems_list > $DATA_DIR/statements
 
-python3 bin/deps.py $DATA_DIR/problems_list > $DATA_DIR/available_deps_files
-cd bin/featurizer
+python3 deps.py $DATA_DIR/problems_list > $DATA_DIR/available_deps_files
+cd featurizer
 ./featurize.pl $DATA_DIR/statements
-cd ../..
-mv bin/featurizer/features_enigma_as_axioms $DATA_DIR/features
-rm -r bin/featurizer/mfeat_*
+cd ..
+mv featurizer/features_enigma_as_axioms $DATA_DIR/features
+rm -r featurizer/mfeat_*
 
-#source casc_env/bin/activate
-#
-#python3 bin/atpboost.py \
-#	--problems $DATA_DIR/problems_outputs \
-#	--train_problems $DATA_DIR/train_problems_outputs \
-#	--train_deps $DATA_DIR/train_deps \
-#	--available_deps $DATA_DIR/available_deps_files \
-#	--statements $DATA_DIR/statements \
-#    --features $DATA_DIR/features \
-#	--ml_models xgboost \
-#	--xgb_rounds 1000 \
-#	--xgb_rounds_increase 500 \
-#	--mining 0.2 \
-#	--proving_script prove.sh \
-#    --data_dir $DATA_DIR/atpboost_data \
-#    --n_jobs -1 \
-#	--logfile $DATA_DIR/atpboost.log
-#
-#rm -rf $DATA_DIR
-#rm -rf ../atpboost_venv
+./dist/atpboost/atpboost \
+	--problems $DATA_DIR/problems_outputs \
+	--train_problems $DATA_DIR/train_problems_outputs \
+	--train_deps $DATA_DIR/train_deps \
+	--available_deps $DATA_DIR/available_deps_files \
+	--statements $DATA_DIR/statements \
+    --features $DATA_DIR/features \
+	--ml_models xgboost \
+	--xgb_rounds 1000 \
+	--xgb_rounds_increase 500 \
+	--mining 0.2 \
+	--proving_script prove.sh \
+    --data_dir $DATA_DIR/atpboost_data \
+    --n_jobs -1 \
+	--logfile $DATA_DIR/atpboost.log
 
-
+rm -rf $DATA_DIR

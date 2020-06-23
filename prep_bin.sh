@@ -15,6 +15,7 @@ cp -r featurizer bin
 cp prove* bin
 cp eprover bin
 cp parallel bin
+cp starexec_run bin
 
-tar czf atpboost_casc.tgz starexec_run bin
+tar czf atpboost_casc.tgz bin
 

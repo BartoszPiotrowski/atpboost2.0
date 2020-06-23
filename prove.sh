@@ -1,3 +1,5 @@
+#!/bin/bash
+
 PROBLEM=$1
 OUTPUT=$2
 PROOFS=$3
