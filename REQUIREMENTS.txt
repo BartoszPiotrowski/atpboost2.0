@@ -1,7 +1,0 @@
-tqdm
-sklearn
-joblib
-
-tensorflow==1.15
-
-xgboost
