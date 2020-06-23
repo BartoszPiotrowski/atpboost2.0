@@ -12,6 +12,8 @@ from utils import mkdir_if_not_exists
 def loop(args):
     args.logger = Logger(args.logfile)
     mkdir_if_not_exists(args.data_dir)
+    args.logger.print(f'Dir for data produced during the run: '
+                      f'{args.data_dir}')
     train_deps = copyfile(args.train_deps, args.data_dir + '/train_deps')
     train_neg_deps = args.train_neg_deps
     conjs = args.conjectures

@@ -12,6 +12,7 @@ def prove(predictions, args):
     mkdir_if_not_exists(proofs_dir)
     n_jobs = args.n_jobs
     args.logger.print('Proving...')
+    args.logger.print(f'Proofs will be saved to {proofs_dir}')
     with Parallel(n_jobs=n_jobs) as parallel:
         prove_one_d = delayed(prove_one)
         proofs = parallel(prove_one_d(conj, deps, args.statements, proofs_dir,

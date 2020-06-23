@@ -10,15 +10,15 @@ def stats_init(train_deps, conjs, padding=' ' * 25):
 
     message = 'Initial data statistics: \n'
     message += padding
+    message += f'Number of conjectures to prove       : {len(conjs)}\n'
+    message += padding
+    message += f'Number of training dependencies      : {n_all_deps}\n'
+    message += padding
     message += f'Theorems in training dependencies    : {n_thms_in_deps}\n'
-    message += padding
-    message += f'All training dependencies            : {n_all_deps}\n'
-    message += padding
-    message += f'Number of conjectures                : {len(conjs)}\n'
-    message += padding
-    message += f'Conjectures with dependencies        : ' + \
-               f'{n_conjs_proved} ' + \
-               f'({100 * n_conjs_proved / len(conjs):.2f}%)'
+    #message += padding
+    #message += f'Conjectures with dependencies        : ' + \
+    #           f'{n_conjs_proved} ' + \
+    #           f'({100 * n_conjs_proved / len(conjs):.2f}%)'
 
     return message
 
