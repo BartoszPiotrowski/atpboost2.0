@@ -1,7 +1,8 @@
-virtualenv atpboost_env --python=python36 # python 3.6. required for tensorflow 1.15 required for gnn
-source atpboost_env/bin/activate
-pip install tqdm
-pip install joblib
-pip install sklearn
-pip install xgboost
-pip install tensorflow==1.15
+virtualenv atpboost_venv
+source atpboost_venv/bin/activate
+pip3 install tqdm
+pip3 install joblib
+pip3 install sklearn
+pip3 install xgboost
+pip3 install opennmt-py
+
