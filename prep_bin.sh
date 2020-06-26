@@ -1,11 +1,11 @@
 rm -rf bin
 mkdir bin
 
-source casc_env/bin/activate
+source atpboost_casc_env/bin/activate
 
 rm -rf dist build *.spec
 pyinstaller atpboost.py
-cp -r casc_env/lib/python3.6/site-packages/xgboost dist/atpboost/
+cp -r atpboost_casc_env/lib/python3.6/site-packages/xgboost dist/atpboost/
 cp -r dist bin
 
 cp utils.py bin
