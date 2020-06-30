@@ -9,4 +9,12 @@ pip3 install torch==1.5.1+cu101 torchvision==0.6.1+cu101 -f https://download.pyt
 # for CUDA 10.1; see: https://pytorch.org/get-started/locally/ for other versions of CUDA
 pip3 install opennmt-py
 
-# TODO compile fcoplib
+# installing E prover
+wget http://wwwlehre.dhbw-stuttgart.de/~sschulz/WORK/E_DOWNLOAD/V_2.4/E.tgz
+tar -xzf E.tgz
+cd E
+./configure
+make
+cd ..
+cp E/PROVER/eprover .
+
