@@ -31,7 +31,7 @@ def extract_deps(proofs):
         conjecture_premises = extract_deps_1(p)
         if not conjecture_premises == None:
             conjecture, premises = conjecture_premises
-            if premises:
+            if premises and not conjecture == None:
                 output_file = p + '.deps'
                 output_files.append(output_file)
                 write_line(f"{conjecture}:{' '.join(premises)}", output_file)
