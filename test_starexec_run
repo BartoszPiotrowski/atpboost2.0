@@ -54,6 +54,13 @@ cat $DATA_DIR/problems_list__* > $DATA_DIR/problems_list
 rm $DATA_DIR/problems_list__*
 python3 prepare_statements.py $DATA_DIR/problems_list > $DATA_DIR/statements
 
+PROBLEM_1=`head -1 $DATA_DIR/problems_outputs | cut -d' ' -f1`
+AXIOMS_1_DIR=`dirname $PROBLEM_1`/Axioms
+AXIOMS_2_DIR=$BATCH_SPEC_DIR/Axioms
+mkdir -p $DATA_DIR/atpboost_data/problems
+cp -r $AXIOMS_1_DIR $DATA_DIR/atpboost_data/problems
+cp -r $AXIOMS_2_DIR $DATA_DIR/atpboost_data/problems
+
 python3 deps.py $DATA_DIR/problems_list > $DATA_DIR/available_deps_files
 cd featurizer
 ./featurize.pl $DATA_DIR/statements
