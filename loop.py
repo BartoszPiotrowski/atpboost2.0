@@ -27,19 +27,22 @@ def loop(args):
     except:
         pass
     for i in range(args.iterations):
-        models = train(train_deps, train_neg_deps, args)
-        preds = predict(models, problems)
-        solved, proofs = prove(problems, args, preds)
-        problems = [p for p in problems if not p[1] in solved]
-        conjs_deps = extract_deps(proofs)
-        train_deps = merge_deps(train_deps, *conjs_deps)
-        if args.mining:
-            try:
-                pos_deps, neg_deps = mining(models, train_problems, args)
-                train_deps = merge_deps(train_deps, pos_deps)
-                train_neg_deps = neg_deps
-            except:
-                pass
+        try:
+            models = train(train_deps, train_neg_deps, args)
+            preds = predict(models, problems)
+            solved, proofs = prove(problems, args, preds)
+            problems = [p for p in problems if not p[1] in solved]
+            conjs_deps = extract_deps(proofs)
+            train_deps = merge_deps(train_deps, *conjs_deps)
+            if args.mining:
+                try:
+                    pos_deps, neg_deps = mining(models, train_problems, args)
+                    train_deps = merge_deps(train_deps, pos_deps)
+                    train_neg_deps = neg_deps
+                except:
+                    pass
+        except:
+            pass
 
 
 if __name__=='__main__':
