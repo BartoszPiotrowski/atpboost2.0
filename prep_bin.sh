@@ -11,6 +11,7 @@ pyinstaller atpboost.py
 cp -r atpboost_casc_venv/lib/python3.8/site-packages/xgboost dist/atpboost/
 
 cp -r dist bin
+cp -r E bin
 cp utils.py bin
 cp deps.py bin
 cp prepare_statements.py bin
@@ -21,5 +22,5 @@ cp parallel bin
 cp starexec_run bin
 cp test_starexec_run bin
 
-tar czf atpboost_casc.tgz bin
+tar czf atpboost_casc.tgz bin starexec_build
 
