@@ -27,6 +27,7 @@ then
 	echo $PROBLEM $PROBLEM.out >> $PROOFS
 else
 	echo '% SZS status GaveUp for '$PROBLEM_BASENAME
+	cat $PROBLEM.err
 fi
 
 echo '% SZS status Ended for '$PROBLEM_BASENAME
