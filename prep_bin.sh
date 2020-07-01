@@ -19,7 +19,7 @@ cp prove* bin
 cp eprover bin
 cp parallel bin
 cp starexec_run bin
-cp starexec_run_test bin
+cp test_starexec_run bin
 
 tar czf atpboost_casc.tgz bin
 
