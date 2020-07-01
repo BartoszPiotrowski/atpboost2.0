@@ -18,11 +18,14 @@ def loop(args):
     conjs = write_lines(conjs, args.data_dir + '/conjs')
     train_deps = copyfile(args.train_deps, args.data_dir + '/train_deps')
     train_neg_deps = args.train_neg_deps
-    solved, proofs = prove(problems, args,
-                           proving_script=args.init_proving_script)
-    problems = [p for p in problems if not p[1] in solved]
-    conjs_deps = extract_deps(proofs)
-    train_deps = merge_deps(train_deps, *conjs_deps)
+    try:
+        solved, proofs = prove(problems, args,
+                               proving_script=args.init_proving_script)
+        problems = [p for p in problems if not p[1] in solved]
+        conjs_deps = extract_deps(proofs)
+        train_deps = merge_deps(train_deps, *conjs_deps)
+    except:
+        pass
     for i in range(args.iterations):
         models = train(train_deps, train_neg_deps, args)
         preds = predict(models, problems)
