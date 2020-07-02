@@ -4,10 +4,19 @@ PROBLEM=$1
 OUTPUT=$2
 PROOFS=$3
 
+if [ -e $OUTPUT ]
+then
+	PROVED=YES
+else
+	PROVED=NO
+fi
 
 PROBLEM_BASENAME=`basename $PROBLEM | cut -d@ -f2`
 
-echo '% SZS status Started for '$PROBLEM_BASENAME
+if [ $PROVED = NO]
+then
+	echo '% SZS status Started for '$PROBLEM_BASENAME
+fi
 
 ./eprover \
 	--auto-schedule \
@@ -23,12 +32,21 @@ echo '% SZS status Started for '$PROBLEM_BASENAME
 
 if grep -q 'Proof found' $PROBLEM.out
 then
-	cp $PROBLEM.out $OUTPUT
-	echo '% SZS status Theorem for '$PROBLEM_BASENAME
+	if [ $PROVED = NO]
+	then
+		cp $PROBLEM.out $OUTPUT
+		echo '% SZS status Theorem for '$PROBLEM_BASENAME
+	fi
 	echo $PROBLEM $PROBLEM.out >> $PROOFS
 else
-	echo '% SZS status GaveUp for '$PROBLEM_BASENAME
+	if [ $PROVED = NO]
+	then
+		echo '% SZS status GaveUp for '$PROBLEM_BASENAME
+	fi
 	cat $PROBLEM.err
 fi
 
-echo '% SZS status Ended for '$PROBLEM_BASENAME
+if [ $PROVED = NO]
+then
+	echo '% SZS status Ended for '$PROBLEM_BASENAME
+fi
