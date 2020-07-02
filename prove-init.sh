@@ -13,7 +13,7 @@ fi
 
 PROBLEM_BASENAME=`basename $PROBLEM | cut -d@ -f2`
 
-if [ $PROVED = NO]
+if [ $PROVED = NO ]
 then
 	echo '% SZS status Started for '$PROBLEM_BASENAME
 fi
@@ -32,21 +32,21 @@ fi
 
 if grep -q 'Proof found' $PROBLEM.out
 then
-	if [ $PROVED = NO]
+	if [ $PROVED = NO ]
 	then
 		cp $PROBLEM.out $OUTPUT
 		echo '% SZS status Theorem for '$PROBLEM_BASENAME
 	fi
 	echo $PROBLEM $PROBLEM.out >> $PROOFS
 else
-	if [ $PROVED = NO]
+	if [ $PROVED = NO ]
 	then
 		echo '% SZS status GaveUp for '$PROBLEM_BASENAME
 	fi
 	cat $PROBLEM.err
 fi
 
-if [ $PROVED = NO]
+if [ $PROVED = NO ]
 then
 	echo '% SZS status Ended for '$PROBLEM_BASENAME
 fi
