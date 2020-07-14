@@ -145,7 +145,8 @@ class XGBoost(Model):
         self.logger.print('Training data prepared')
         self.logger.print('Training XGBoost model...')
         model = xgboost.train(self.train_params, dtrain,
-                          num_boost_round=self.train_params_rounds)
+                          num_boost_round=self.train_params_rounds,
+                          evals=[(dtrain, 'train')], verbose_eval=100)
         self.logger.print('Training XGBoost model done')
         self.logger.print(self.show_config())
         self.save(model)
