@@ -9,7 +9,7 @@ class Logger():
 
     def print(self, message, verb_level=3, newline=False):
         t = strftime('%Y-%m-%d--%H:%M:%S')
-        m = f"[{t}] {message}"
+        m = f"# [{t}] {message}"
         if newline:
             m = '\n' + m
         if verb_level <= self.verbose_stdout:

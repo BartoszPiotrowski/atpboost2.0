@@ -13,7 +13,7 @@ def mining(models, train_problems, args):
     num_mining_problems = max(round(args.mining * len(train_problems)), 1)
     mining_problems = sample(train_problems, num_mining_problems)
     preds = [model.predict(mining_problems) for model in models]
-    _, proofs = prove(mining_problems, preds, args)
+    _, proofs = prove(mining_problems, args, preds)
     if not proofs:
         return None, None
     deps = extract_deps(proofs)
@@ -23,7 +23,7 @@ def mining(models, train_problems, args):
     neg_deps_path = join(args.data_dir, 'mined_neg_deps')
     save_deps(pos_deps, pos_deps_path)
     save_deps(neg_deps, neg_deps_path)
-    args.logger.print('Mining done')
+    args.logger.print('Mining done.')
     return pos_deps_path, neg_deps_path
 
 def _mining(preds, deps):

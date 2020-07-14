@@ -98,6 +98,10 @@ if __name__ == '__main__':
         '--data_dir',
         type=str,
         default='atpboost_data')
+    parser.add_argument(
+        '--verbose',
+        type=int,
+        default=8)
     args = parser.parse_args()
 
     loop(args)

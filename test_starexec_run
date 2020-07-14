@@ -58,15 +58,17 @@ PROBLEM_1=`head -1 $DATA_DIR/problems_outputs | cut -d' ' -f1`
 AXIOMS_1_DIR=`dirname $PROBLEM_1`/Axioms
 AXIOMS_2_DIR=$BATCH_SPEC_DIR/Axioms
 mkdir -p $DATA_DIR/atpboost_data/problems
-cp -r $AXIOMS_1_DIR $DATA_DIR/atpboost_data/problems
-cp -r $AXIOMS_2_DIR $DATA_DIR/atpboost_data/problems
+cp -r $AXIOMS_1_DIR $DATA_DIR/atpboost_data/problems 2> /dev/null
+cp -r $AXIOMS_2_DIR $DATA_DIR/atpboost_data/problems 2> /dev/null
 
+echo "# Featurizing..."
 python3 deps.py $DATA_DIR/problems_list > $DATA_DIR/available_deps_files
 cd featurizer
 ./featurize.pl $DATA_DIR/statements
 cd ..
 mv featurizer/features_enigma_as_axioms $DATA_DIR/features
 rm -r featurizer/mfeat_*
+echo "# Featurizing done."
 
 ./dist/atpboost/atpboost \
 	--problems $DATA_DIR/problems_outputs \

@@ -27,6 +27,10 @@ def prove(problems_outputs, args, predictions=None, proving_script=None):
     inputs_outputs_path = os.path.join(args.data_dir, 'problems_to_prove')
     inputs_proofs_path = os.path.join(args.data_dir, 'problems_proofs')
     write_lines(inputs_outputs, inputs_outputs_path)
+    args.logger.print(f"Proving script: {proving_script}")
+    args.logger.print(f"Directory for problems and proofs: {problems_dir}")
+    args.logger.print(f"List of problems to prove: {inputs_outputs_path}")
+    args.logger.print(f"File for appending proofs' paths: {inputs_proofs_path}")
     args.logger.print('Proving...')
     prove_parallel(inputs_outputs_path, inputs_proofs_path, proving_script)
     inputs_proofs = [l.split(' ') for l in read_lines(inputs_proofs_path)]
