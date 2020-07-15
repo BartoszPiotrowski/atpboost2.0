@@ -40,8 +40,12 @@ def prove(problems_outputs, args, predictions=None, proving_script=None):
 
 
 def prove_parallel(inputs_outputs_path, inputs_proofs_path, proving_script):
-    os.system(f'./prove-parallel.sh {inputs_outputs_path} '
-             f' {inputs_proofs_path} {proving_script}')
+    #_ = os.system(f'./prove-parallel.sh {inputs_outputs_path} '
+    #         f' {inputs_proofs_path} {proving_script}')
+    _ = subprocess.Popen(f'./prove-parallel.sh {inputs_outputs_path} '
+                     f' {inputs_proofs_path} {proving_script}',
+                     shell=True).wait()
+
 
 
 def problem_file(conj, list_of_deps, stms_path, dir_path):
