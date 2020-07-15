@@ -9,7 +9,11 @@ PROBLEMS_TYPES_ATP="+1 +2"
 #PROBLEMS_TYPES_ATP="+4 +5 _4 _5"
 #PROBLEMS_TYPES_ATP="+4 +5"
 
-DATA_DIR=`mktemp -d`
+#DATA_DIR=`mktemp -d`
+DATA_DIR=`pwd`/atpboost_tmp
+rm -rf $DATA_DIR
+mkdir $DATA_DIR
+echo "Temporary data dir: "$DATA_DIR
 
 TRAIN_ARCHIVE=$BATCH_SPEC_DIR/`grep division.category.training_data $BATCH_SPEC | cut -d' ' -f2`
 tar xzf $TRAIN_ARCHIVE -C $DATA_DIR
