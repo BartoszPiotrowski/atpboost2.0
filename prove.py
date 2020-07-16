@@ -63,9 +63,9 @@ def problem_file(conj, list_of_deps, stms_path, dir_path):
 def modified_problem(problem, deps, dir_path):
     lines = read_lines(problem)
     lines = [l for l in lines if l and not l[0] in '#%']
+    lines = ''.join(lines).replace(' ', '')
+    lines = lines.replace(').', ').\n').splitlines()
     if deps:
-        lines = ''.join(lines).replace(' ', '')
-        lines = lines.replace(').', ').\n').splitlines()
         lines_out = []
         for l in lines:
             if not ',axiom,' in l and not ',lemma,' in l:
