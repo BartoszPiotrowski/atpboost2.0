@@ -63,16 +63,19 @@ def problem_file(conj, list_of_deps, stms_path, dir_path):
 def modified_problem(problem, deps, dir_path):
     lines = read_lines(problem)
     lines = [l for l in lines if l and not l[0] in '#%']
-    lines = ''.join(lines).replace(' ', '')
-    lines = lines.replace(').', ').\n').splitlines()
-    lines_out = []
-    for l in lines:
-        if not ',axiom,' in l and not ',lemma,' in l:
-            lines_out.append(l)
-        else:
-            name = l.split(',')[0].split('(')[1]
-            if name in deps:
+    if deps:
+        lines = ''.join(lines).replace(' ', '')
+        lines = lines.replace(').', ').\n').splitlines()
+        lines_out = []
+        for l in lines:
+            if not ',axiom,' in l and not ',lemma,' in l:
                 lines_out.append(l)
+            else:
+                name = l.split(',')[0].split('(')[1]
+                if name in deps:
+                    lines_out.append(l)
+    else:
+        lines_out = lines
     shuffle(lines_out)
     uuid4 = uuid.uuid4().hex
     file_name = os.path.join(dir_path, uuid4 + '@' + os.path.basename(problem))

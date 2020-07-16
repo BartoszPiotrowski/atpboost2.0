@@ -33,11 +33,14 @@ class Model:
         all_predictions = []
         for conj in scored_prems:
             sp = scored_prems[conj]
-            sp.sort(key = lambda x: x[1], reverse = True)
-            ranking = [p for p, s in sp]
-            slices = [tuple(ranking[:i]) for i in slices_lens]
-            slices = set(slices)
-            slices_to_save = [conj + ':' + ' '.join(s) for s in slices]
+            if sp:
+                sp.sort(key = lambda x: x[1], reverse = True)
+                ranking = [p for p, s in sp]
+                slices = [tuple(ranking[:i]) for i in slices_lens]
+                slices = set(slices)
+                slices_to_save = [conj + ':' + ' '.join(s) for s in slices]
+            else:
+                slices_to_save = [conj + ':']
             all_predictions.extend(slices_to_save)
         write_lines(all_predictions, self.predictions_path)
         return self.predictions_path
@@ -176,8 +179,12 @@ class XGBoost(Model):
         scored_prems = {}
         for problem in problems:
             conj, avail_deps = extract_deps_1(problem)
-            scored_prems[problem] = self.score_prems(conj, avail_deps,
-                                                  model, features)
+            if avail_deps:
+                scored_prems[problem] = \
+                        self.score_prems(conj, avail_deps, model, features)
+            else:
+                scored_prems[problem] = []
+
         self.predictions_path = self.make_predictions(scored_prems)
         self.logger.print(f'Predictions saved to {self.predictions_path}')
         return self.predictions_path

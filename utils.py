@@ -315,7 +315,7 @@ def merge_predictions(predictions_paths_list):
     predictions = []
     for l in predictions_lines:
         file, deps = l.split(':') #TODO files can have ':' in their names
-        deps = set(deps.split(' '))
+        deps = set(deps.split(' ')) if deps else []
         file_deps = file, deps
         if file_deps not in predictions:
             predictions.append(file_deps)
