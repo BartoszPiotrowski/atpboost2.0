@@ -5,10 +5,24 @@ Basic:
 ./install.sh # creates a virtual environment atpboost_venv
 ```
 
+Now these tests should be fine:
+```
+./tests/knn.sh
+./tests/xgb.sh
+./tests/multi1.sh
+```
+
 With GNN and RNN support:
 
 ```
 ./install-nn.sh # creates a virtual environment atpboost_venv
+```
+
+Now also these tests should be fine:
+```
+./tests/rnn.sh
+./tests/gnn.sh
+./tests/multi2.sh
 ```
 
 

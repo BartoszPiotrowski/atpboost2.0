@@ -6,7 +6,7 @@ python3 atpboost.py \
 	--features data/example/features_binary \
 	--chronology data/example/chronology \
 	--proving_script prove-2s.sh \
-	--ml_models knn,xgboost,gnn \
+	--ml_models knn,xgb \
 	--xgb_rounds 10 \
 	--mining 0.1 \
 	--n_jobs -1 \
