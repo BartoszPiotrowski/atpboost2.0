@@ -2,6 +2,7 @@ tmp
 data
 _build
 *.o
+eprover
 
 
 # Byte-compiled / optimized / DLL files
