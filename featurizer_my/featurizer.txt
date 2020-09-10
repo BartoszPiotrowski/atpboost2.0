@@ -1,0 +1,7 @@
+one line = one formula
+
+while there are formulas:
+	match (name,formula,reminder)
+	make an input for E prover
+	cnf'ize with E
+	run ./enigma-features
