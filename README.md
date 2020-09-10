@@ -16,7 +16,7 @@ Now these tests should run fine:
 With GNN and RNN support:
 
 ```
-./install-nn.sh # creates a virtual environment atpboost_venv
+./install_nn.sh # creates a virtual environment atpboost_venv
 source atpboost_venv/bin/activate
 ```
 

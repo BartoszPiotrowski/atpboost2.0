@@ -52,7 +52,7 @@ def problem_file(conj, list_of_deps, stms_path, dir_path):
 
 
 def run_prover(input_filename, output_filename, proving_script):
-    os.popen(f'./{proving_script} {input_filename} {output_filename}').read()
+    os.popen(f'{proving_script} {input_filename} {output_filename}').read()
 
 
 #CPU_TIME=10
