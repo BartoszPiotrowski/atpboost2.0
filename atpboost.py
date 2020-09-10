@@ -1,6 +1,6 @@
 #!/bin/python3
 
-import argparse
+import os, sys, argparse
 from loop import loop
 
 if __name__ == '__main__':
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--proving_script',
         type=str,
-        default='prove.sh')
+        default= os.path.join(sys.path[0], 'prove.sh'))
     parser.add_argument(
         '--ml_models',
         default='xgboost,gnn,rnn,knn',
