@@ -1,4 +1,5 @@
 - featurizer in python
+- description of the parameters
 - clean up, run test, include test data
 - atp-minimization
 - handling errors from os.popen
