@@ -22,6 +22,26 @@ def prove(predictions, args):
     args.logger.print(f'Proving done ({len(proofs_found)} proofs found).')
     return proofs_found
 
+def prove_init(conjs, args):
+    assert args.chronology
+    conjs = read_lines(conjs)
+    chrono = read_lines(args.chronology)
+    proofs_dir = os.path.join(args.data_dir, 'proofs')
+    mkdir_if_not_exists(proofs_dir)
+    n_jobs = args.n_jobs
+    args.logger.print(
+        'Initial proving (no predictions, available premises taken from chronology)...'
+    )
+    args.logger.print(f'Proofs will be saved to {proofs_dir}')
+    with Parallel(n_jobs=n_jobs) as parallel:
+        prove_one_d = delayed(prove_one)
+        proofs = parallel(prove_one_d(conj, chrono[:chrono.index(conj)], args.statements,
+                                      proofs_dir, args.proving_script, args.logger) \
+                          for conj in tqdm(conjs))
+    proofs_found = [p for p in proofs if p]
+    args.logger.print(f'Proving done ({len(proofs_found)} proofs found).')
+    return proofs_found
+
 def prove_one(conj, deps, stms_path, dir_path, proving_script, logger):
     assert not conj in set(deps), (conj, deps)
     deps = list(deps)

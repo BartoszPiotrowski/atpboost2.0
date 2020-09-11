@@ -299,10 +299,12 @@ def similarity(thm1, thm2, dict_features_numbers, n_of_theorems, power=2):
     return (sI / (s1 + s2 - sI)) ** (1 / power)  # Jaccard index
 
 
-def merge_predictions(predictions_paths_list):
-    assert isinstance(predictions_paths_list, list)
+def merge_predictions(predictions_paths):
+    if isinstance(predictions_paths, str):
+        predictions_paths = [predictions_paths]
+    assert isinstance(predictions_paths, list)
     predictions_lines = []
-    for p in predictions_paths_list:
+    for p in predictions_paths:
         predictions_lines.extend(read_lines(p))
     predictions = []
     for l in predictions_lines:

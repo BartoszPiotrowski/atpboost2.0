@@ -10,7 +10,8 @@ if __name__ == '__main__':
         type=str)
     parser.add_argument(
         '--train_deps',
-        type=str)
+        type=str,
+        default=None)
     parser.add_argument(
         '--train_neg_deps',
         type=str,
