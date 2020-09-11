@@ -5,7 +5,6 @@
 	--statements data/example/statements \
 	--features data/example/features_binary \
 	--chronology data/example/chronology \
-	--proving_script prove.sh \
 	--ml_models xgboost \
 	--mining 0.1 \
 	--data_dir ${0%.*}.data \

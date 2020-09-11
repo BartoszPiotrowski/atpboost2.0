@@ -5,7 +5,6 @@
 	--statements data/example/statements \
 	--features data/example/features_binary \
 	--chronology data/example/chronology \
-	--proving_script prove.sh \
 	--ml_models rnn \
 	--rnn_train_steps 100 \
 	--mining 0.1 \
