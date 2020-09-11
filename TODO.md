@@ -1,3 +1,4 @@
+- no training deps situation
 - featurizer in python
 - describe parameters
 - atp-minimization
