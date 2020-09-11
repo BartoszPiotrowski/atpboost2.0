@@ -1,6 +1,7 @@
 - no training deps situation
 - featurizer in python
 - check args before loop
+- n_jobs -1 not understood by xgb
 - test train_neg_deps
 - describe parameters
 - atp-minimization
