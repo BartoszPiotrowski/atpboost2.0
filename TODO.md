@@ -1,5 +1,7 @@
 - no training deps situation
 - featurizer in python
+- check args before loop
+- test train_neg_deps
 - describe parameters
 - atp-minimization
 - handling errors from os.popen
