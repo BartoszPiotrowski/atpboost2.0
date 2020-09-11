@@ -53,7 +53,7 @@ if __name__ == '__main__':
         type=str)
     parser.add_argument(
         '--n_jobs',
-        default=10,
+        default=30,
         type=int)
     parser.add_argument(
         '--gnn_batch_size',
