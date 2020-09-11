@@ -26,7 +26,11 @@ def write_line(line, filename):
         f.write(line + '\n')
     return filename
 
+def empty_file(filename):
+    open(filename, 'w').close()
+    return filename
 
+# TODO isn't the above the same?
 def write_empty(filename):
     with open(filename, encoding='utf-8', mode='wt') as f:
         f.write('')

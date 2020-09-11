@@ -7,10 +7,10 @@ from utils import read_deps, save_deps
 from utils import read_lines
 
 
-def mining(models, args):
+def mining(models, train_deps, args):
     args.logger.print('Mining...')
     pos_deps, neg_deps = [], []
-    train_thms = set(read_deps(args.train_deps))
+    train_thms = set(read_deps(train_deps))
     num_mining_thms = max(round(args.mining * len(train_thms)), 1)
     mining_thms = sample(train_thms, num_mining_thms)
     preds = [model.predict(mining_thms) for model in models]

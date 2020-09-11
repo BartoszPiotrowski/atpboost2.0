@@ -6,7 +6,7 @@ from deps import merge_deps, extract_deps
 from shutil import copyfile
 from logger import Logger
 from stats import stats, stats_init
-from utils import mkdir_if_not_exists
+from utils import mkdir_if_not_exists, empty_file
 
 
 def loop(args):
@@ -20,8 +20,7 @@ def loop(args):
     else:
         # if no training dependencies provided, try to produce proofs
         # without machine learning advice
-        train_deps = args.data_dir + '/train_deps'
-        open(train_deps, 'w').close() # empty file
+        train_deps = empty_file(args.data_dir + '/train_deps')
         conjs_proofs = prove_init(conjs, args)
         conjs_deps = extract_deps(conjs_proofs)
         train_deps = merge_deps(train_deps, *conjs_deps)
@@ -35,7 +34,7 @@ def loop(args):
         conjs_deps = extract_deps(conjs_proofs)
         train_deps = merge_deps(train_deps, *conjs_deps)
         if args.mining:
-            pos_deps, neg_deps = mining(models, args)
+            pos_deps, neg_deps = mining(models, train_deps, args)
             train_deps = merge_deps(train_deps, pos_deps)
             train_neg_deps = neg_deps
         args.logger.print(stats(train_deps, conjs, conjs_deps))
