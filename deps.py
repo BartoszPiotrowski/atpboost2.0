@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 import os
 from utils import read_lines, write_lines, write_line, remove_supersets
 
