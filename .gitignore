@@ -2,6 +2,7 @@ tmp
 data
 _build
 *.o
+*.data
 
 
 # Byte-compiled / optimized / DLL files
