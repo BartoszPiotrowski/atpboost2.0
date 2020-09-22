@@ -8,6 +8,10 @@ from sys import getsizeof
 from shutil import copyfile, rmtree
 
 
+def read(filename):
+    with open(filename, encoding='utf-8') as f:
+        return f.read()
+
 def read_lines(filename):
     with open(filename, encoding='utf-8') as f:
         return f.read().splitlines()
