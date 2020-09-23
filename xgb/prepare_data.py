@@ -21,11 +21,10 @@ def deps_to_train_array(train_deps=None, train_neg_deps=None, n_jobs=1, **kwargs
 
 
 def deps_to_train_array_1_job(i_thms=None, deps=None, deps_neg=None,
-                              chronology=None, features=None, save_dir=None,
-                              **kwargs):
+                              available_premises=None, features=None,
+                              save_dir=None, **kwargs):
     i, thms = i_thms
     deps = unify_deps(clean_deps(read_deps(deps)))
-    chronology = read_lines(chronology)
     if deps_neg:
         deps_neg = read_deps(deps_neg, unions=True)
     labels, pairs = [], []
@@ -35,9 +34,8 @@ def deps_to_train_array_1_job(i_thms=None, deps=None, deps_neg=None,
             neg_premises = deps_neg[thm]
         else:
             neg_premises = set()
-        available_premises = chronology[:chronology.index(thm)]
         labels_thm, pairs_thm = thm_to_labels_and_pairs(thm, pos_premises,
-                                available_premises, neg_premises, **kwargs)
+                                available_premises(thm), neg_premises, **kwargs)
         labels.extend(labels_thm)
         pairs.extend(pairs_thm)
     array = pairs_to_array(pairs, read_features(features))
@@ -109,6 +107,7 @@ def merge_saved_arrays(labels_arrays):
     save_obj(cumul_array, save_path_array)
     assert len(cumul_labels) == cumul_array.shape[0]
     return cumul_labels, cumul_array
+
 
 if __name__=='__main__':
     # tests

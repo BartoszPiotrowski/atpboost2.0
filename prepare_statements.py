@@ -12,10 +12,10 @@ statements_names = set()
 for p in problems_or_solutions:
     lines = read_lines(p)
     lines = [l.replace(' ', '') for l in lines]
+    lines = [l for l in lines if l and not l[0] in '#%']
     lines = ''.join(lines)
     lines = lines.replace(').', ').\n').splitlines()
     lines = [re.sub(",file\('.*\)\)\.$", ").", l) for l in lines]
-    lines = [l for l in lines if l and not l[0] in '#%']
     lines = [l for l in lines if l and not 'include(' in l]
     lines = [l for l in lines if l and not 'inference(' in l]
     lines = [l for l in lines if l and not 'introduced(' in l]

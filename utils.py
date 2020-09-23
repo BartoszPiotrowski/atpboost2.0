@@ -1,4 +1,5 @@
 import os
+import re
 import pickle
 import gzip
 from time import strftime
@@ -347,3 +348,35 @@ def remove_supersets(list_of_sets):
             if list_of_sets[i1] not in list_of_sets_clean:
                 list_of_sets_clean.append(list_of_sets[i1])
     return list_of_sets_clean
+
+
+def grep_first(file, pattern):
+    with open(file) as f:
+        for line in f:
+            if re.search(pattern, line):
+                return line.strip()
+
+
+class AvailablePremises:
+    def __init__(self, chronology=None, available_premises=None, **_):
+        self.available_premises_file = available_premises
+        self.chronology_list = read_lines(chronology) if chronology else None
+        # TODO if the chronology list large -- read the file after call
+
+    def __call__(self, conj):
+        if self.chronology_list:
+            return set(self.chronology_list[:self.chronology_list.index(conj)])
+        if self.available_premises_file:
+            line = grep_first(self.available_premises_file, '^' + conj + ':')
+            assert line, conj
+            return set(line.split(':')[1].split(' '))
+
+
+if __name__=='__main__':
+    print(grep_first('data/example/conjectures', '^t.8_tex.*'))
+    ap = AvailablePremises(chronology='data/example/chronology')
+    print(ap('t12_zfmisc_1'))
+    ap = AvailablePremises(available_premises='tests/preprocess/1.data_prep/available_premises')
+    print(ap('thm_2Ecardinal_2ECOUNTABLE'))
+
+

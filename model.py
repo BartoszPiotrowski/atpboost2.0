@@ -3,7 +3,7 @@ from joblib import Parallel, delayed
 from importlib import import_module
 from utils import read_lines, write_lines, read_features, read_deps, read_stms
 from utils import mkdir_if_not_exists, rmdir_mkdir, write_empty, append_line
-from utils import dict_features_numbers, similarity
+from utils import dict_features_numbers, similarity, AvailablePremises
 
 
 class Model:
@@ -12,7 +12,7 @@ class Model:
         self.n_jobs = kwargs['n_jobs']
         self.logger = kwargs['logger']
         self.save_dir = kwargs['save_dir']
-        self.chronology = kwargs['chronology']
+        self.available_premises = AvailablePremises(**kwargs)
         mkdir_if_not_exists(self.save_dir)
 
     def train(self, train_deps, train_neg_deps=None):
@@ -53,15 +53,13 @@ class KNN(Model):
     def predict(self, conjs):
         conjs = read_lines(conjs) if type(conjs) == str else conjs
         self.logger.print(f'Making predictions for {len(conjs)} conjectures...')
-        chronology = read_lines(self.chronology)
         features = read_features(self.features)
         features_numbers = dict_features_numbers(features)
         deps = read_deps(self.train_deps)
         deps_u = read_deps(self.train_deps, unions=True)
         scored_prems = {}
         for conj in conjs:
-            available_prems = set(chronology[:chronology.index(conj)])
-            scored_prems[conj] = self.predict_1(conj, available_prems,
+            scored_prems[conj] = self.predict_1(conj, self.available_premises(conj),
                  deps, deps_u, features, features_numbers, self.neighbours)
         self.predictions_path = self.make_predictions(scored_prems)
         self.logger.print(f'Predictions saved to {self.predictions_path}')
@@ -72,7 +70,10 @@ class KNN(Model):
     def predict_1(conj, available_prems, deps, deps_u, features,
                   features_numbers, n_neighbours=100):
         assert not conj in available_prems
-        available_thms = {t for t in deps_u if deps_u[t] <= available_prems}
+        #available_thms = {t for t in deps_u if deps_u[t] <= available_prems}
+        # TODO above does not work for data/example_2
+        # TODO investigate if its fine also when using chronology
+        available_thms = {t for t in deps_u}
         simils = {thm: similarity((conj, features[conj]),
                                   (thm,  features[thm]),
                                   features_numbers, len(available_thms))
@@ -96,7 +97,10 @@ class KNN(Model):
                                key=prems_scores.__getitem__, reverse=True)
         maximum = prems_scores[sorted_prems[0]]
         if maximum == 0: maximum = 1 # sometimes maximum = 0
-        prems_scores_norm = [(p, prems_scores[p]/maximum) for p in sorted_prems]
+        #prems_scores_norm = [(p, prems_scores[p]/maximum) for p in sorted_prems]
+        # TODO because of TODO's above; check if it's fine
+        prems_scores_norm = [(p, prems_scores[p]/maximum) for p in sorted_prems \
+                             if p in available_prems]
         return prems_scores_norm
 
 
@@ -124,7 +128,7 @@ class XGBoost(Model):
             'train_deps': self.train_deps,
             'train_neg_deps': self.train_neg_deps,
             'features': self.features,
-            'chronology': self.chronology,
+            'available_premises': self.available_premises,
             'save_dir': self.save_dir,
             'n_jobs': self.n_jobs,
         }
@@ -168,14 +172,13 @@ class XGBoost(Model):
             max_num_prems = self.knn_prefiltering
         conjs = read_lines(conjs) if type(conjs) == str else conjs
         self.logger.print(f'Making predictions for {len(conjs)} conjectures...')
-        chronology = read_lines(self.chronology)
         features = read_features(self.features)
         features_numbers = dict_features_numbers(features) # for knn prefilering
         deps = read_deps(self.train_deps, unions=True) # for knn prefilering
         model = self.load()
         scored_prems = {}
         for conj in conjs:
-            available_prems = set(chronology[:chronology.index(conj)])
+            available_prems = self.available_premises(conj)
             if len(available_prems) < max_num_prems:
                 candidate_prems = available_prems
             else:
@@ -247,12 +250,11 @@ class GNN(Model):
         train_deps = read_deps(self.train_deps)
         train_deps_u = read_deps(self.train_deps, unions=True)
         thms = set(train_deps)
-        chronology = read_lines(self.chronology)
         features = read_features(self.features)
         features_numbers = dict_features_numbers(features)
         train_ranks = {}
         for thm in thms:
-            available_prems = set(chronology[:chronology.index(thm)])
+            available_prems = self.available_premises(conj)
             sp = KNN.predict_1(thm, available_prems, train_deps, train_deps_u,
                                features, features_numbers)
             sp.sort(key = lambda x: x[1], reverse = True)
@@ -266,12 +268,11 @@ class GNN(Model):
     def prepare_testing_dir(self, conjs):
         train_deps = read_deps(self.train_deps)
         train_deps_u = read_deps(self.train_deps, unions=True)
-        chronology = read_lines(self.chronology)
         features = read_features(self.features)
         features_numbers = dict_features_numbers(features)
         conjs_ranks = {}
         for conj in conjs:
-            available_prems = set(chronology[:chronology.index(conj)])
+            available_prems = self.available_premises(conj)
             sp = KNN.predict_1(conj, available_prems, train_deps, train_deps_u,
                                features, features_numbers)
             sp.sort(key = lambda x: x[1], reverse = True)
@@ -371,10 +372,9 @@ class RNN(Model):
             assert conjs[0] == conjs[1]
             assert len(conjs) == len(preds_raw)
         deps_unions = {c: set() for c in conjs}
-        chrono = read_lines(self.chronology)
         for i in range(len(preds_raw)):
             c = conjs[i]
-            available_prems = set(chrono[:chrono.index(c)])
+            available_prems = self.available_premises(conj)
             ds = preds_raw[i].split(' ')
             ds = [d for d in ds if d in available_prems]
             if ds:
