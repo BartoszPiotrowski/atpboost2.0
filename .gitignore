@@ -3,6 +3,9 @@ data
 _build
 *.o
 *.data
+E
+E.tgz
+*.out
 
 
 # Byte-compiled / optimized / DLL files
