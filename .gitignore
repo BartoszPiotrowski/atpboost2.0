@@ -2,7 +2,7 @@ tmp
 data
 _build
 *.o
-*.data
+*.data*
 E
 E.tgz
 *.out
