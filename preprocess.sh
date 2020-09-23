@@ -3,16 +3,19 @@ SOLUTIONS=$2
 OUTDIR=$3
 
 TRAIN_DEPS=$OUTDIR/train_deps
-AVAILABLE_PREMS=$OUTDIR/available_prems
+CONJECTURES=$OUTDIR/conjectures
+AVAILABLE_PREMS=$OUTDIR/available_premises
 STATEMENTS=$OUTDIR/statements
 FEATURES=$OUTDIR/features
 
 mkdir -p $OUTDIR && echo "Produced data will be saved to $OUTDIR" || exit
 
-echo "Extracting available premises from problems listed in $PROBLEMS ..."
+echo "Extracting conjectures and its available premises from problems listed in $PROBLEMS ..."
 ./deps.py $PROBLEMS > $AVAILABLE_PREMS \
-	&& echo "Done. Saved to $AVAILABLE_PREMS"
+	&& cut -d: -f1 $AVAILABLE_PREMS | sort -u > $CONJECTURES \
+	&& echo "Done. Conjectures saved to $CONJECTURES and available premises saved to $AVAILABLE_PREMS"
 # TODO save axioms?
+
 echo "Extracting training dependencies from solutions listed in $SOLUTIONS ..."
 ./deps.py $SOLUTIONS > $TRAIN_DEPS \
 	&& echo "Done. Saved to $TRAIN_DEPS"

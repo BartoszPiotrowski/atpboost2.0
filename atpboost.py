@@ -31,6 +31,10 @@ if __name__ == '__main__':
         type=str,
         default=None)
     parser.add_argument(
+        '--available_premises',
+        type=str,
+        default=None)
+    parser.add_argument(
         '--mining',
         type=float,
         default=0.1,
