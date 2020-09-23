@@ -6,6 +6,7 @@ _build
 E
 E.tgz
 *.out
+eprover
 
 
 # Byte-compiled / optimized / DLL files
