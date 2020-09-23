@@ -18,8 +18,8 @@ echo Preprocessing...
 	--conjectures $PREP_DIR/conjectures \
 	--train_deps $PREP_DIR/train_deps \
 	--statements $PREP_DIR/statements \
-	--features $PREP_DIR/features_binary \
-	--available_premises $PREP_DIR/available_prems \
+	--features $PREP_DIR/features \
+	--available_premises $PREP_DIR/available_premises \
 	--ml_models xgboost \
 	--mining 0.1 \
 	--data_dir $TRAIN_DIR \
