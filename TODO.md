@@ -1,5 +1,8 @@
 - no training deps situation
-- featurizer in python
+- featurizer:
+	- adapt enigma featurizer and get its code
+	- get code of Cezary's featurizer
+	- or write your own featurizer
 - check args before loop
 - n_jobs -1 not understood by xgb
 - test train_neg_deps
