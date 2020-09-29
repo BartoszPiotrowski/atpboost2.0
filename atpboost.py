@@ -49,7 +49,7 @@ if __name__ == '__main__':
         default= os.path.join(sys.path[0], 'prove.sh'))
     parser.add_argument(
         '--ml_models',
-        default='xgboost,gnn,rnn,knn',
+        default='xgboost,knn',
         type=str)
     parser.add_argument(
         '--logfile',
@@ -85,6 +85,18 @@ if __name__ == '__main__':
         type=float)
     parser.add_argument(
         '--xgb_knn_prefiltering',
+        default=10000,
+        type=int)
+    parser.add_argument(
+        '--lgb_rounds',
+        default=1000,
+        type=int)
+    parser.add_argument(
+        '--lgb_eta',
+        default=0.1,
+        type=float)
+    parser.add_argument(
+        '--lgb_knn_prefiltering',
         default=10000,
         type=int)
     parser.add_argument(
