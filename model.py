@@ -1,6 +1,7 @@
 import os
 from joblib import Parallel, delayed
 from importlib import import_module
+from prepare_train_array import deps_to_train_array, pairs_to_array
 from utils import read_lines, write_lines, read_features, read_deps, read_stms
 from utils import mkdir_if_not_exists, rmdir_mkdir, write_empty, append_line
 from utils import dict_features_numbers, similarity, AvailablePremises
@@ -25,6 +26,7 @@ class Model:
 
     def delete(self):
         pass
+
 
     def make_predictions(self, scored_prems,
                          slices_lens=[4,8,16,32,64,128,256,512]):
@@ -104,11 +106,70 @@ class KNN(Model):
         return prems_scores_norm
 
 
-class XGBoost(Model):
+class TreeModel(Model):
+    def prepare(self):
+        kwargs = {
+            'train_deps': self.train_deps,
+            'train_neg_deps': self.train_neg_deps,
+            'features': self.features,
+            'available_premises': self.available_premises,
+            'save_dir': self.save_dir,
+            'n_jobs': self.n_jobs,
+        }
+        return deps_to_train_array(**kwargs)
+
+
+    def knn_prefilter(self, conj, available_prems, deps, features,
+                      features_numbers, N_thms=1024):
+        candidate_prems = set()
+        available_thms = {t for t in deps if deps[t] <= available_prems}
+        simils = {thm: similarity((conj, features[conj]),
+                                  (thm,  features[thm]),
+                                  features_numbers, len(available_thms))
+                            for thm in available_thms}
+                                        # TODO is len(available_thms) ok here?
+        simils_sorted = sorted(simils.values(), reverse=True)
+        N_thresh = simils_sorted[min(N_thms, len(simils) - 1)]
+        N_nearest_thms = {t for t in simils if simils[t] >= N_thresh}
+        for thm in N_nearest_thms:
+            candidate_prems.update(deps[thm])
+        assert candidate_prems <= available_prems
+        return candidate_prems
+
+    def score_prems(self):
+        raise NotImplemented
+
+
+    def predict(self, conjs, max_num_prems=None):
+        if max_num_prems == None:
+            max_num_prems = self.knn_prefiltering
+        conjs = read_lines(conjs) if type(conjs) == str else conjs
+        self.logger.print(f'Making predictions for {len(conjs)} conjectures...')
+        features = read_features(self.features)
+        features_numbers = dict_features_numbers(features) # for knn prefilering
+        deps = read_deps(self.train_deps, unions=True) # for knn prefilering
+        model = self.load()
+        scored_prems = {}
+        for conj in conjs:
+            available_prems = self.available_premises(conj)
+            if len(available_prems) < max_num_prems:
+                candidate_prems = available_prems
+            else:
+                candidate_prems = self.knn_prefilter(conj, available_prems,
+                                                     deps, features,
+                                                     features_numbers)
+            scored_prems[conj] = self.score_prems(conj, candidate_prems,
+                                                  model, features)
+        self.predictions_path = self.make_predictions(scored_prems)
+        self.logger.print(f'Predictions saved to {self.predictions_path}')
+        return self.predictions_path
+
+
+
+class XGBoost(TreeModel):
     def __init__(self, **kwargs):
         super(XGBoost, self).__init__(**kwargs)
         self.xgb = import_module('xgboost')
-        self.xgb_prep = import_module('xgb.prepare_data')
         self.save_dir = os.path.join(self.save_dir, 'xgb')
         mkdir_if_not_exists(self.save_dir)
         self.model_path = os.path.join(self.save_dir, 'model')
@@ -132,7 +193,7 @@ class XGBoost(Model):
             'save_dir': self.save_dir,
             'n_jobs': self.n_jobs,
         }
-        return self.xgb_prep.deps_to_train_array(**kwargs)
+        return deps_to_train_array(**kwargs)
 
 
     def train(self, train_deps, train_neg_deps=None):
@@ -192,27 +253,11 @@ class XGBoost(Model):
         return self.predictions_path
 
 
-    def knn_prefilter(self, conj, available_prems, deps, features,
-                      features_numbers, N_thms=1024):
-        candidate_prems = set()
-        available_thms = {t for t in deps if deps[t] <= available_prems}
-        simils = {thm: similarity((conj, features[conj]),
-                                  (thm,  features[thm]),
-                                  features_numbers, len(available_thms))
-                            for thm in available_thms}
-                                        # TODO is len(available_thms) ok here?
-        simils_sorted = sorted(simils.values(), reverse=True)
-        N_thresh = simils_sorted[min(N_thms, len(simils) - 1)]
-        N_nearest_thms = {t for t in simils if simils[t] >= N_thresh}
-        for thm in N_nearest_thms:
-            candidate_prems.update(deps[thm])
-        assert candidate_prems <= available_prems
-        return candidate_prems
 
 
     def score_prems(self, conj, premises, xgb_model, features):
         pairs = [(conj, p) for p in premises]
-        array = self.xgb_prep.pairs_to_array(pairs, features)
+        array = pairs_to_array(pairs, features)
         array = self.xgb.DMatrix(array)
         scores = xgb_model.predict(array)
         premises_scores = list(zip(premises, scores))
@@ -225,6 +270,78 @@ class XGBoost(Model):
     def load(self):
         model = self.xgb.Booster()
         model.load_model(self.model_path)
+        return model
+
+
+class LightGBM(TreeModel):
+    def __init__(self, **kwargs):
+        super(LightGBM, self).__init__(**kwargs)
+        self.lgb = import_module('lightgbm')
+        self.save_dir = os.path.join(self.save_dir, 'lgb')
+        mkdir_if_not_exists(self.save_dir)
+        self.model_path = os.path.join(self.save_dir, 'model')
+        self.features = kwargs['features']
+        self.predictions_path = os.path.join(self.save_dir, 'predictions')
+        self.knn_prefiltering = kwargs['lgb_knn_prefiltering']
+        self.train_params_rounds = kwargs['lgb_rounds']
+        self.train_params['max_depth'] = 10
+        self.train_params['eta'] = kwargs['lgb_eta']
+        self.train_params['boosting'] = 'gbdt'
+        self.train_params['num_leaves'] = 1500
+        self.train_params['objective'] = 'binary'
+        self.train_params['n_jobs'] = self.n_jobs
+
+
+
+
+    def train(self, train_deps, train_neg_deps=None):
+        self.train_deps = train_deps
+        self.train_neg_deps = train_neg_deps
+        self.logger.print('Preparing training data...')
+        labels, array = self.prepare()
+        dtrain = self.lgb.Dataset(array, label=labels)
+        self.logger.print('Training data prepared')
+        self.logger.print(self.show_config())
+        self.logger.print('Training LightGBM model...')
+        model = self.lgb.train(self.train_params, dtrain,
+                          num_boost_round=self.train_params_rounds)
+        self.logger.print('Training LightGBM model done')
+        self.save(model)
+        self.logger.print(f'Model saved to {self.model_path}')
+
+
+    def show_config(self, padding=' ' * 25):
+        message = 'Parameters of the LightGBM model:\n'
+        message += padding
+        message += f"rounds: {self.train_params_rounds}\n"
+        message += padding
+        message += f"eta: {self.train_params['eta']}\n"
+        message += padding
+        message += f"max_depth: {self.train_params['max_depth']}\n"
+        message += padding
+        message += f"boosting: {self.train_params['boosting']}\n"
+        message += padding
+        message += f"objective: {self.train_params['objective']}"
+        return message
+
+
+
+
+
+
+    def score_prems(self, conj, premises, lgb_model, features):
+        pairs = [(conj, p) for p in premises]
+        array = pairs_to_array(pairs, features)
+        scores = lgb_model.predict(array)
+        premises_scores = list(zip(premises, scores))
+        return premises_scores
+
+    def save(self, model):
+        model.save_model(self.model_path)
+        return self.model_path
+
+    def load(self):
+        model = self.lgb.Booster(model_file=self.model_path)
         return model
 
 
@@ -387,6 +504,3 @@ class RNN(Model):
         return self.predictions_path
 
 
-class LightGBM(Model):
-    def __init__(self, **kwargs):
-        pass
