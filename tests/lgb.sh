@@ -7,7 +7,7 @@
 	--chronology data/example/chronology \
 	--ml_models lightgbm \
 	--lgb_eta 0.1 \
-	--lgb_rounds 10 \
+	--lgb_rounds 100 \
 	--lgb_knn_prefiltering 10 \
 	--mining 0.1 \
 	--data_dir ${0%.*}.data \

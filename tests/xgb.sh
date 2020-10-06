@@ -6,6 +6,7 @@
 	--features data/example/features_binary \
 	--chronology data/example/chronology \
 	--ml_models xgboost \
+	--xgb_rounds 100 \
 	--mining 0.1 \
 	--data_dir ${0%.*}.data \
 	--logfile ${0%.*}.log
