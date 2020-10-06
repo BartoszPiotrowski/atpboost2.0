@@ -27,7 +27,6 @@ class Model:
     def delete(self):
         pass
 
-
     def make_predictions(self, scored_prems,
                          slices_lens=[4,8,16,32,64,128,256,512]):
         all_predictions = []
@@ -51,7 +50,6 @@ class KNN(Model):
         self.predictions_path = os.path.join(self.save_dir, 'predictions')
         mkdir_if_not_exists(self.save_dir)
 
-
     def predict(self, conjs):
         conjs = read_lines(conjs) if type(conjs) == str else conjs
         self.logger.print(f'Making predictions for {len(conjs)} conjectures...')
@@ -66,7 +64,6 @@ class KNN(Model):
         self.predictions_path = self.make_predictions(scored_prems)
         self.logger.print(f'Predictions saved to {self.predictions_path}')
         return self.predictions_path
-
 
     @staticmethod
     def predict_1(conj, available_prems, deps, deps_u, features,
@@ -118,7 +115,6 @@ class TreeModel(Model):
         }
         return deps_to_train_array(**kwargs)
 
-
     def knn_prefilter(self, conj, available_prems, deps, features,
                       features_numbers, N_thms=1024):
         candidate_prems = set()
@@ -165,7 +161,6 @@ class TreeModel(Model):
         return self.predictions_path
 
 
-
 class XGBoost(TreeModel):
     def __init__(self, **kwargs):
         super(XGBoost, self).__init__(**kwargs)
@@ -183,7 +178,6 @@ class XGBoost(TreeModel):
         self.train_params['objective'] = 'binary:logistic'
         self.train_params['n_jobs'] = self.n_jobs
 
-
     def prepare(self):
         kwargs = {
             'train_deps': self.train_deps,
@@ -194,7 +188,6 @@ class XGBoost(TreeModel):
             'n_jobs': self.n_jobs,
         }
         return deps_to_train_array(**kwargs)
-
 
     def train(self, train_deps, train_neg_deps=None):
         self.train_deps = train_deps
@@ -212,7 +205,6 @@ class XGBoost(TreeModel):
         self.save(model)
         self.logger.print(f'Model saved to {self.model_path}')
 
-
     def show_config(self, padding=' ' * 25):
         message = 'Parameters of the XGBoost model:\n'
         message += padding
@@ -226,7 +218,6 @@ class XGBoost(TreeModel):
         message += padding
         message += f"objective: {self.train_params['objective']}"
         return message
-
 
     def predict(self, conjs, max_num_prems=None):
         if max_num_prems == None:
@@ -251,9 +242,6 @@ class XGBoost(TreeModel):
         self.predictions_path = self.make_predictions(scored_prems)
         self.logger.print(f'Predictions saved to {self.predictions_path}')
         return self.predictions_path
-
-
-
 
     def score_prems(self, conj, premises, xgb_model, features):
         pairs = [(conj, p) for p in premises]
@@ -284,15 +272,14 @@ class LightGBM(TreeModel):
         self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.knn_prefiltering = kwargs['lgb_knn_prefiltering']
         self.train_params_rounds = kwargs['lgb_rounds']
-        self.train_params['max_depth'] = 10
         self.train_params['eta'] = kwargs['lgb_eta']
         self.train_params['boosting'] = 'gbdt'
-        self.train_params['num_leaves'] = 1500
+        self.train_params['max_depth'] = 10
+        self.train_params['num_leaves'] = 1000
+        #self.train_params['min_data_in_leaf'] = 10
         self.train_params['objective'] = 'binary'
         self.train_params['n_jobs'] = self.n_jobs
-
-
-
+        self.train_params['verbose'] = -1
 
     def train(self, train_deps, train_neg_deps=None):
         self.train_deps = train_deps
@@ -304,11 +291,11 @@ class LightGBM(TreeModel):
         self.logger.print(self.show_config())
         self.logger.print('Training LightGBM model...')
         model = self.lgb.train(self.train_params, dtrain,
-                          num_boost_round=self.train_params_rounds)
+                          num_boost_round=self.train_params_rounds,
+                          valid_sets=[dtrain], verbose_eval=100)
         self.logger.print('Training LightGBM model done')
         self.save(model)
         self.logger.print(f'Model saved to {self.model_path}')
-
 
     def show_config(self, padding=' ' * 25):
         message = 'Parameters of the LightGBM model:\n'
@@ -323,11 +310,6 @@ class LightGBM(TreeModel):
         message += padding
         message += f"objective: {self.train_params['objective']}"
         return message
-
-
-
-
-
 
     def score_prems(self, conj, premises, lgb_model, features):
         pairs = [(conj, p) for p in premises]
@@ -362,7 +344,6 @@ class GNN(Model):
         self.epochs = kwargs['gnn_epochs']
         self.features = kwargs['features']
 
-
     def prepare_training_dir(self):
         train_deps = read_deps(self.train_deps)
         train_deps_u = read_deps(self.train_deps, unions=True)
@@ -381,7 +362,6 @@ class GNN(Model):
                        self.training_dir, self.n_deps_per_example, self.n_jobs)
         return self.training_dir
 
-
     def prepare_testing_dir(self, conjs):
         train_deps = read_deps(self.train_deps)
         train_deps_u = read_deps(self.train_deps, unions=True)
@@ -399,17 +379,14 @@ class GNN(Model):
                                        self.testing_dir, self.n_deps_per_example)
         return self.testing_dir
 
-
     def predict(self, conjs):
         conjs = read_lines(conjs) if type(conjs) == str else conjs
         self.prepare_testing_dir(conjs)
         scored_prems = self.gnn.predictions_from_gnn_model(self.testing_dir,
                                                            self.model_path)
-
         self.predictions_path = self.make_predictions(scored_prems)
         self.logger.print(f'Predictions saved to {self.predictions_path}')
         return self.predictions_path
-
 
     def train(self, train_deps, train_neg_deps=None):
         self.logger.print('Preparing training data...')
@@ -426,7 +403,6 @@ class GNN(Model):
         self.logger.print(f'Model saved to {self.model_path}')
 
 
-
 class RNN(Model):
     def __init__(self, **kwargs):
         super(RNN, self).__init__(**kwargs)
@@ -439,12 +415,10 @@ class RNN(Model):
         self.learning_rate = kwargs['rnn_learning_rate']
         os.environ['MKL_THREADING_LAYER'] = 'GNU'
 
-
     def prepare(self):
         mkdir_if_not_exists(self.save_dir)
         return self.rnn_prep.prepare_training_data(
             self.train_deps, self.stms, self.save_dir)
-
 
     def train(self, train_deps, train_neg_deps=None):
         self.train_deps = train_deps
@@ -461,7 +435,6 @@ class RNN(Model):
             '''
         ).read()
         return self.model_path
-
 
     def predict(self, conjs):
         conjs = read_lines(conjs) if type(conjs) == str else conjs
@@ -502,5 +475,3 @@ class RNN(Model):
             if ds:
                 append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
         return self.predictions_path
-
-
