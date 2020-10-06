@@ -1,4 +1,4 @@
-- add lightgbm
+- tune lightgbm
 - checking and initializing parameters
 - test modified knn
 - assert that for every solution there is a problem defined
