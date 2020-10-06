@@ -91,15 +91,13 @@ class KNN(Model):
                 scr = simils[thm] * prems_scores_one[prm] ** .3
                 try: prems_scores[prm] = prems_scores[prm] + scr
                 except: prems_scores[prm] = scr
-        assert not conj in prems_scores
         sorted_prems = sorted(prems_scores,
                                key=prems_scores.__getitem__, reverse=True)
+        sorted_prems = [p for p in sorted_prems if p in available_prems]
+        assert not conj in sorted_prems
         maximum = prems_scores[sorted_prems[0]]
         if maximum == 0: maximum = 1 # sometimes maximum = 0
-        #prems_scores_norm = [(p, prems_scores[p]/maximum) for p in sorted_prems]
-        # TODO because of TODO's above; check if it's fine
-        prems_scores_norm = [(p, prems_scores[p]/maximum) for p in sorted_prems \
-                             if p in available_prems]
+        prems_scores_norm = [(p, prems_scores[p]/maximum) for p in sorted_prems]
         return prems_scores_norm
 
 
