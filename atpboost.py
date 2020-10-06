@@ -1,4 +1,4 @@
-#!/bin/python3
+#! /bin/env python3
 
 import os, sys, argparse
 from loop import loop
