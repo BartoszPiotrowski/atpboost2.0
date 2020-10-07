@@ -2,6 +2,7 @@
 
 import os, sys, argparse
 from loop import loop
+from one import one
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -43,6 +44,9 @@ if __name__ == '__main__':
         '--iterations',
         default=10,
         type=int)
+    parser.add_argument(
+        '--no_proving',
+        action='store_true')
     parser.add_argument(
         '--proving_script',
         type=str,
@@ -109,4 +113,7 @@ if __name__ == '__main__':
         type=float)
     args = parser.parse_args()
 
-loop(args)
+if args.iterations == 1:
+    one(args)
+else:
+    loop(args)
