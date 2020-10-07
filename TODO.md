@@ -1,8 +1,6 @@
 - tune lightgbm
 - checking and initializing parameters
-- test modified knn
 - assert that for every solution there is a problem defined
-- no training deps situation
 - featurizer:
 	- adapt enigma featurizer and get its code
 	- get code of Cezary's featurizer
