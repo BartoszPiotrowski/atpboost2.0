@@ -2,6 +2,7 @@ import os
 import re
 import pickle
 import gzip
+import uuid
 from time import strftime
 from glob import glob
 from math import log
@@ -333,6 +334,9 @@ def unify_predictions(predictions):
         else:
             predictions_unified[conj].update(deps)
     return predictions_unified
+
+def random_name():
+    return uuid.uuid4().hex
 
 
 def remove_supersets(list_of_sets):

@@ -2,6 +2,7 @@
 
 import os
 from utils import read, read_lines, write_lines, write_line, remove_supersets
+from utils import remove_supersets, mkdir_if_not_exists, random_name
 
 
 def clean_deps(deps):
@@ -27,13 +28,17 @@ def merge_deps(file_0, *files, output_file=None):
     return output_file
 
 
-def extract_deps(proofs):
+def extract_deps(proofs, outdir=None):
     output_files = []
     for p in proofs:
         conjecture_premises = extract_deps_1(p)
         conjecture, premises = conjecture_premises
         if conjecture and premises:
-            output_file = p + '.deps'
+            if outdir:
+                mkdir_if_not_exists(outdir)
+                output_file = os.path.join(outdir, random_name()) + '.deps'
+            else:
+                output_file = p + '.deps'
             output_files.append(output_file)
             write_line(f"{conjecture}:{' '.join(premises)}", output_file)
     return output_files
@@ -143,7 +148,10 @@ def extract_deps_1(file_with_proof):
 if __name__=='__main__':
     import sys
     tptp_files = read_lines(sys.argv[1])
-    deps_files = extract_deps(tptp_files)
+    try:
+        deps_files = extract_deps(tptp_files, sys.argv[2])
+    except:
+        deps_files = extract_deps(tptp_files)
     for d in deps_files:
         print(read(d).replace('\n',''))
     #for d in deps_files:
