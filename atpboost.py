@@ -1,7 +1,8 @@
-#!/bin/python3
+#! /bin/env python3
 
 import os, sys, argparse
 from loop import loop
+from one import one
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -10,7 +11,8 @@ if __name__ == '__main__':
         type=str)
     parser.add_argument(
         '--train_deps',
-        type=str)
+        type=str,
+        default=None)
     parser.add_argument(
         '--train_neg_deps',
         type=str,
@@ -30,6 +32,10 @@ if __name__ == '__main__':
         type=str,
         default=None)
     parser.add_argument(
+        '--available_premises',
+        type=str,
+        default=None)
+    parser.add_argument(
         '--mining',
         type=float,
         default=0.1,
@@ -39,12 +45,15 @@ if __name__ == '__main__':
         default=10,
         type=int)
     parser.add_argument(
+        '--no_proving',
+        action='store_true')
+    parser.add_argument(
         '--proving_script',
         type=str,
         default= os.path.join(sys.path[0], 'prove.sh'))
     parser.add_argument(
         '--ml_models',
-        default='xgboost,gnn,rnn,knn',
+        default='xgboost,knn',
         type=str)
     parser.add_argument(
         '--logfile',
@@ -52,7 +61,7 @@ if __name__ == '__main__':
         type=str)
     parser.add_argument(
         '--n_jobs',
-        default=10,
+        default=30,
         type=int)
     parser.add_argument(
         '--gnn_batch_size',
@@ -83,6 +92,18 @@ if __name__ == '__main__':
         default=10000,
         type=int)
     parser.add_argument(
+        '--lgb_rounds',
+        default=1000,
+        type=int)
+    parser.add_argument(
+        '--lgb_eta',
+        default=0.1,
+        type=float)
+    parser.add_argument(
+        '--lgb_knn_prefiltering',
+        default=10000,
+        type=int)
+    parser.add_argument(
         '--rnn_train_steps',
         default=100000,
         type=int)
@@ -92,4 +113,7 @@ if __name__ == '__main__':
         type=float)
     args = parser.parse_args()
 
-loop(args)
+if args.iterations == 1:
+    one(args)
+else:
+    loop(args)

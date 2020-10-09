@@ -1,12 +1,18 @@
 import os
+import re
 import pickle
 import gzip
+import uuid
 from time import strftime
 from glob import glob
 from math import log
 from sys import getsizeof
 from shutil import copyfile, rmtree
 
+
+def read(filename):
+    with open(filename, encoding='utf-8') as f:
+        return f.read()
 
 def read_lines(filename):
     with open(filename, encoding='utf-8') as f:
@@ -26,7 +32,11 @@ def write_line(line, filename):
         f.write(line + '\n')
     return filename
 
+def empty_file(filename):
+    open(filename, 'w').close()
+    return filename
 
+# TODO isn't the above the same?
 def write_empty(filename):
     with open(filename, encoding='utf-8', mode='wt') as f:
         f.write('')
@@ -299,10 +309,12 @@ def similarity(thm1, thm2, dict_features_numbers, n_of_theorems, power=2):
     return (sI / (s1 + s2 - sI)) ** (1 / power)  # Jaccard index
 
 
-def merge_predictions(predictions_paths_list):
-    assert isinstance(predictions_paths_list, list)
+def merge_predictions(predictions_paths):
+    if isinstance(predictions_paths, str):
+        predictions_paths = [predictions_paths]
+    assert isinstance(predictions_paths, list)
     predictions_lines = []
-    for p in predictions_paths_list:
+    for p in predictions_paths:
         predictions_lines.extend(read_lines(p))
     predictions = []
     for l in predictions_lines:
@@ -323,6 +335,9 @@ def unify_predictions(predictions):
             predictions_unified[conj].update(deps)
     return predictions_unified
 
+def random_name():
+    return uuid.uuid4().hex
+
 
 def remove_supersets(list_of_sets):
     '''Removes supersets from the list of sets'''
@@ -337,3 +352,35 @@ def remove_supersets(list_of_sets):
             if list_of_sets[i1] not in list_of_sets_clean:
                 list_of_sets_clean.append(list_of_sets[i1])
     return list_of_sets_clean
+
+
+def grep_first(file, pattern):
+    with open(file) as f:
+        for line in f:
+            if re.search(pattern, line):
+                return line.strip()
+
+
+class AvailablePremises:
+    def __init__(self, chronology=None, available_premises=None, **_):
+        self.available_premises_file = available_premises
+        self.chronology_list = read_lines(chronology) if chronology else None
+        # TODO if the chronology list large -- read the file after call
+
+    def __call__(self, conj):
+        if self.chronology_list:
+            return set(self.chronology_list[:self.chronology_list.index(conj)])
+        if self.available_premises_file:
+            line = grep_first(self.available_premises_file, '^' + conj + ':')
+            assert line, conj
+            return set(line.split(':')[1].split(' '))
+
+
+if __name__=='__main__':
+    print(grep_first('data/example/conjectures', '^t.8_tex.*'))
+    ap = AvailablePremises(chronology='data/example/chronology')
+    print(ap('t12_zfmisc_1'))
+    ap = AvailablePremises(available_premises='tests/preprocess/1.data_prep/available_premises')
+    print(ap('thm_2Ecardinal_2ECOUNTABLE'))
+
+

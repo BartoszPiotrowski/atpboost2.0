@@ -2,6 +2,10 @@ tmp
 data
 _build
 *.o
+*.data*
+E
+E.tgz
+*.out
 eprover
 
 
