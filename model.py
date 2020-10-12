@@ -12,7 +12,9 @@ class Model:
         self.train_params = {}
         self.n_jobs = kwargs['n_jobs']
         self.logger = kwargs['logger']
-        self.save_dir = kwargs['save_dir']
+        self.save_scores = kwargs['save_prediction_scores']
+        self.save_dir = os.path.join(kwargs['save_dir'], self.name)
+        self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.available_premises = AvailablePremises(**kwargs)
         mkdir_if_not_exists(self.save_dir)
 
@@ -30,6 +32,9 @@ class Model:
     def make_predictions(self, scored_prems,
                          slices_lens=[4,8,16,32,64,128,256,512]):
         all_predictions = []
+        if self.save_scores:
+            self.predictions_scores_dir = self.predictions_path + '.scores'
+            mkdir_if_not_exists(self.predictions_scores_dir)
         for conj in scored_prems:
             sp = scored_prems[conj]
             sp.sort(key = lambda x: x[1], reverse = True)
@@ -37,18 +42,20 @@ class Model:
             slices = [ranking[:i] for i in slices_lens]
             slices_to_save = [conj + ':' + ' '.join(s) for s in slices]
             all_predictions.extend(slices_to_save)
+            if self.save_scores:
+                scores_to_write = [f"{p}:{s}" for p, s in sp]
+                write_lines(scores_to_write,
+                            os.path.join(self.predictions_scores_dir, conj))
         write_lines(all_predictions, self.predictions_path)
         return self.predictions_path
 
 
 class KNN(Model):
     def __init__(self, **kwargs):
+        self.name = 'knn'
         super(KNN, self).__init__(**kwargs)
         self.neighbours = kwargs['knn_neighbours']
         self.features = kwargs['features']
-        self.save_dir = os.path.join(self.save_dir, 'knn')
-        self.predictions_path = os.path.join(self.save_dir, 'predictions')
-        mkdir_if_not_exists(self.save_dir)
 
     def predict(self, conjs):
         conjs = read_lines(conjs) if type(conjs) == str else conjs
@@ -102,6 +109,11 @@ class KNN(Model):
 
 
 class TreeModel(Model):
+    def __init__(self, **kwargs):
+        super(TreeModel, self).__init__(**kwargs)
+        self.model_path = os.path.join(self.save_dir, 'model')
+        self.features = kwargs['features']
+
     def prepare(self):
         kwargs = {
             'train_deps': self.train_deps,
@@ -133,7 +145,6 @@ class TreeModel(Model):
     def score_prems(self):
         raise NotImplemented
 
-
     def predict(self, conjs, max_num_prems=None):
         if max_num_prems == None:
             max_num_prems = self.knn_prefiltering
@@ -161,13 +172,9 @@ class TreeModel(Model):
 
 class XGBoost(TreeModel):
     def __init__(self, **kwargs):
+        self.name = 'xgboost'
         super(XGBoost, self).__init__(**kwargs)
         self.xgb = import_module('xgboost')
-        self.save_dir = os.path.join(self.save_dir, 'xgb')
-        mkdir_if_not_exists(self.save_dir)
-        self.model_path = os.path.join(self.save_dir, 'model')
-        self.features = kwargs['features']
-        self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.knn_prefiltering = kwargs['xgb_knn_prefiltering']
         self.train_params_rounds = kwargs['xgb_rounds']
         self.train_params['max_depth'] = 10
@@ -261,13 +268,9 @@ class XGBoost(TreeModel):
 
 class LightGBM(TreeModel):
     def __init__(self, **kwargs):
+        self.name = 'lightgbm'
         super(LightGBM, self).__init__(**kwargs)
         self.lgb = import_module('lightgbm')
-        self.save_dir = os.path.join(self.save_dir, 'lgb')
-        mkdir_if_not_exists(self.save_dir)
-        self.model_path = os.path.join(self.save_dir, 'model')
-        self.features = kwargs['features']
-        self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.knn_prefiltering = kwargs['lgb_knn_prefiltering']
         self.train_params_rounds = kwargs['lgb_rounds']
         self.train_params['eta'] = kwargs['lgb_eta']
@@ -327,6 +330,7 @@ class LightGBM(TreeModel):
 
 class GNN(Model):
     def __init__(self, **kwargs):
+        self.name = 'gnn'
         super(GNN, self).__init__(**kwargs)
         warn = import_module('warnings'); warn.filterwarnings("ignore")
         self.gnn_prep= import_module('gnn.data_preparation')
@@ -336,7 +340,6 @@ class GNN(Model):
         self.model_dir = os.path.join(self.save_dir, 'model')
         self.training_dir = os.path.join(self.save_dir, 'training')
         self.testing_dir = os.path.join(self.save_dir, 'testing')
-        self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.n_deps_per_example = kwargs['gnn_n_deps_per_example']
         self.batch_size = kwargs['gnn_batch_size']
         self.epochs = kwargs['gnn_epochs']
@@ -403,12 +406,12 @@ class GNN(Model):
 
 class RNN(Model):
     def __init__(self, **kwargs):
+        self.name = 'rnn'
         super(RNN, self).__init__(**kwargs)
         self.rnn_prep= import_module('rnn.prepare_data')
         self.stms = kwargs['statements']
         self.save_dir = os.path.join(self.save_dir, 'rnn')
         self.model_path = os.path.join(self.save_dir, 'model')
-        self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.train_steps = kwargs['rnn_train_steps']
         self.learning_rate = kwargs['rnn_learning_rate']
         os.environ['MKL_THREADING_LAYER'] = 'GNU'

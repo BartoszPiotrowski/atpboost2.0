@@ -56,6 +56,9 @@ if __name__ == '__main__':
         default='xgboost,knn',
         type=str)
     parser.add_argument(
+        '--save_prediction_scores',
+        action='store_true')
+    parser.add_argument(
         '--logfile',
         default='atpboost.log',
         type=str)
