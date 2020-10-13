@@ -1,6 +1,7 @@
 #!/bin/env python3
 
 import os
+from joblib import Parallel, delayed
 from utils import read, read_lines, write_lines, write_line, remove_supersets
 from utils import remove_supersets, mkdir_if_not_exists, random_name
 
@@ -148,13 +149,7 @@ def extract_deps_1(file_with_proof):
 if __name__=='__main__':
     import sys
     tptp_files = read_lines(sys.argv[1])
-    try:
-        deps_files = extract_deps(tptp_files, sys.argv[2])
-    except:
-        deps_files = extract_deps(tptp_files)
+    outdir = None if len(sys.argv) == 2 else sys.argv[2]
+    deps_files = extract_deps(tptp_files, outdir)
     for d in deps_files:
         print(read(d).replace('\n',''))
-    #for d in deps_files:
-    #    file = d.replace('.deps', '')
-    #    deps = read(d).replace('\n','')
-    #    print(f"{deps}:{file}")
