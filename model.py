@@ -1,5 +1,4 @@
 import os
-from joblib import Parallel, delayed
 from importlib import import_module
 from prepare_train_array import deps_to_train_array, pairs_to_array
 from utils import read_lines, write_lines, read_features, read_deps, read_stms
