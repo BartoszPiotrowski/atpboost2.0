@@ -1,8 +1,11 @@
 #! /bin/env python3
 
 import os, sys, argparse
+from logger import Logger
 from loop import loop
 from one import one
+from integrity import check
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -115,6 +118,10 @@ if __name__ == '__main__':
         default=0.1,
         type=float)
     args = parser.parse_args()
+
+args.logger = Logger(args.logfile)
+
+check(args)
 
 if args.iterations == 1:
     one(args)

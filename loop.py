@@ -4,13 +4,11 @@ from prove import prove, prove_init
 from mining import mining
 from deps import merge_deps, extract_deps
 from shutil import copyfile
-from logger import Logger
 from stats import stats, stats_init
 from utils import mkdir_if_not_exists, empty_file
 
 
 def loop(args):
-    args.logger = Logger(args.logfile)
     mkdir_if_not_exists(args.data_dir)
     args.logger.print(f'Directory for data produced during the run: '
                       f'{args.data_dir}')
