@@ -165,7 +165,6 @@ def read_features(path):
 
 
 def read_features_enigma(features_lines):
-    print('enigma features')
     '''
     Assumed format:
 
