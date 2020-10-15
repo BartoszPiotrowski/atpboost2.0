@@ -7,3 +7,5 @@ find . -name '*log' | xargs rm
 find . -name '*.out' | xargs rm -rf
 find . -name '*.data*' | xargs rm -rf
 find . -name '*.deps' | xargs rm
+find . -name 'mfeat_*' | xargs rm -rf
+
