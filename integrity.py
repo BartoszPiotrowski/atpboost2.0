@@ -16,7 +16,10 @@ def check(args):
                      args.conjectures,
                      args.chronology,
                      args.available_premises], file=args.statements)
-    args.logger.print(f'Data are correct.')
+    if args.chronology:
+        check_chronology(args.chronology, args.train_deps)
+    # TODO what if available_premises ?
+    args.logger.print(f'Data check passed.')
 
 def check_availability(item_set, *data, file=None):
     for data_i in data:
@@ -27,5 +30,12 @@ def check_availability(item_set, *data, file=None):
                 assert items_i < item_set, \
                         f"Missing items in {file}: {items_i - item_set}"
 
+def check_chronology(chronology, deps):
+    chronology = read_lines(chronology)
+    for l in read_lines(deps):
+        c, ds_ = l.split(':')
+        ds = set(ds_.split(' '))
+        before = set(chronology[:chronology.index(c)])
+        assert ds <= before
 
 
