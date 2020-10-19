@@ -36,6 +36,8 @@ def check_chronology(chronology, deps):
         c, ds_ = l.split(':')
         ds = set(ds_.split(' '))
         before = set(chronology[:chronology.index(c)])
-        assert ds <= before
+        assert ds <= before, \
+                f"This dependency does not satisfy chronology: \n{l}\n" \
+                f"Disallowed deps {ds - before}"
 
 
