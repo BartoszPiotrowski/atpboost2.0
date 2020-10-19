@@ -464,7 +464,7 @@ class RNN(Model):
         deps_unions = {c: set() for c in conjs}
         for i in range(len(preds_raw)):
             c = conjs[i]
-            available_prems = self.available_premises(conj)
+            available_prems = self.available_premises(c)
             ds = preds_raw[i].split(' ')
             ds = [d for d in ds if d in available_prems]
             if ds:
