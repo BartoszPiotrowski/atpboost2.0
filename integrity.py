@@ -10,7 +10,7 @@ def check(args):
                          args.conjectures,
                          args.chronology,
                          args.available_premises], file=args.features)
-        stms_set = set(read_stms(args.statements))
+    stms_set = set(read_stms(args.statements))
     check_availability(stms_set,
                    *[args.train_deps,
                      args.train_neg_deps,
