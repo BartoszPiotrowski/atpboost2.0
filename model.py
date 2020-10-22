@@ -241,8 +241,12 @@ class XGBoost(TreeModel):
                 candidate_prems = self.knn_prefilter(conj, available_prems,
                                                      deps, features,
                                                      features_numbers)
-            scored_prems[conj] = self.score_prems(conj, candidate_prems,
+            if len(candidate_prems):
+                scored_prems[conj] = self.score_prems(conj, candidate_prems,
                                                   model, features)
+            else:
+                logger.print(
+                    f'WARNING: conjecture {conj} had no candidate premsises.')
         self.predictions_path = self.make_predictions(scored_prems)
         self.logger.print(f'Predictions saved to {self.predictions_path}')
         return self.predictions_path
