@@ -55,7 +55,7 @@ def append_line(line, filename):
     return filename
 
 
-def save_obj(obj, filename, gzip=True):
+def save_obj(obj, filename, compress=True):
     if not gzip:
         with open(filename, 'wb') as f:
             pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
@@ -64,7 +64,7 @@ def save_obj(obj, filename, gzip=True):
             pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
 
 
-def load_obj(filename, gzip=True):
+def load_obj(filename, compress=True):
     if not gzip:
         with open(filename, 'rb') as f:
             return pickle.load(f)
