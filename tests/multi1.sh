@@ -1,3 +1,4 @@
+source atpboost_venv/bin/activate
 ./atpboost.py \
 	--iterations 2 \
 	--conjectures data/example/conjectures \
