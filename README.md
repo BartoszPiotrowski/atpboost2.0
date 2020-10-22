@@ -14,6 +14,7 @@ Now these tests should run fine:
 ```
 
 With GNN and RNN support:
+- CUDA 10.2 is required
 
 ```
 ./install_nn.sh # creates a virtual environment atpboost_venv
