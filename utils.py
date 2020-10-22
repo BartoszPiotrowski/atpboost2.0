@@ -177,7 +177,7 @@ def read_features_enigma(features_lines):
     for l in features_lines:
         t, f = l.split(':', 1)
         f = f.split(' ')
-        f = dict([(i.split(':')[0], int(i.split(':')[1])) for i in f])
+        f = dict([(i.split(':')[0], float(i.split(':')[1])) for i in f])
         features[t] = f
     return features
 
