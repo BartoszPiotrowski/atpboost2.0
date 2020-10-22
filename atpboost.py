@@ -114,6 +114,10 @@ if __name__ == '__main__':
         default=100000,
         type=int)
     parser.add_argument(
+        '--rnn_n_best',
+        default=10,
+        type=int)
+    parser.add_argument(
         '--rnn_learning_rate',
         default=0.1,
         type=float)
