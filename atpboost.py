@@ -62,6 +62,9 @@ if __name__ == '__main__':
         '--save_prediction_scores',
         action='store_true')
     parser.add_argument(
+        '--check_data',
+        action='store_true')
+    parser.add_argument(
         '--logfile',
         default='atpboost.log',
         type=str)
@@ -125,7 +128,8 @@ if __name__ == '__main__':
 
 args.logger = Logger(args.logfile)
 
-check(args)
+if args.check_data:
+    check(args)
 
 if args.iterations == 1:
     one(args)
