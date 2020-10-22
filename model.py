@@ -417,6 +417,7 @@ class RNN(Model):
         self.model_path = os.path.join(self.save_dir, 'model')
         self.train_steps = kwargs['rnn_train_steps']
         self.learning_rate = kwargs['rnn_learning_rate']
+        self.n_best = kwargs['rnn_n_best']
         os.environ['MKL_THREADING_LAYER'] = 'GNU'
 
     def prepare(self):
@@ -450,7 +451,7 @@ class RNN(Model):
             onmt_translate \
                 -model {self.model_path}_step_{str(self.train_steps)}.pt \
                 -src {source} \
-                -beam_size 10 -n_best 10 \
+                -beam_size {str(self.n_best)} -n_best {str(self.n_best)} \
                 -replace_unk -verbose \
                 -gpu 0 \
                 -output {self.predictions_path}
@@ -459,6 +460,7 @@ class RNN(Model):
         preds_raw = read_lines(self.predictions_path)
         assert len(preds_raw) and len(preds_raw) % len(conjs) == 0
         write_empty(self.predictions_path)
+        # we'll filter out non-available premises and empty sequences
         # when we produced n translations per theorem:
         n = int(len(preds_raw) / len(conjs))
         if n > 1:
@@ -474,8 +476,9 @@ class RNN(Model):
             if ds:
                 deps_unions[c].update(ds)
                 append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
-        for c in deps_unions:
-            ds = deps_unions[c]
-            if ds:
-                append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
+        if n > 1:
+            for c in deps_unions:
+                ds = deps_unions[c]
+                if ds:
+                    append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
         return self.predictions_path
