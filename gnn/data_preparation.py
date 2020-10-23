@@ -1,8 +1,9 @@
 import os, sys
 from random import shuffle
 from glob import glob
-from .src import fcoplib as cop
-from .graph_data import GraphData
+#from .src import fcoplib as cop
+from .parser_from_Mirek.parse_to_graph import parse_to_graph
+from .parser_from_Mirek.graph_data import GraphData
 from .utils import read_lines, write_lines, append_lines, read_deps, read_stms
 from .utils import mkdir_if_not_exists, partition, save_obj, load_obj
 from joblib import Parallel, delayed
@@ -24,7 +25,8 @@ def prepare_training_data(train_deps, train_ranks, stms_path, save_dir,
     # postprocessing
     data_files = glob(save_dir + '/*')
     def load(fname):
-        gd, lls = cop.load_premsel(fname)
+        #gd, lls = cop.load_premsel(fname)
+        gd, lls = parse_to_graph(fname)
         return GraphData(gd), lls, fname
     load_d = delayed(load)
     with Parallel(n_jobs=n_jobs) as parallel:

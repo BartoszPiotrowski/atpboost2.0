@@ -3,7 +3,7 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.FATAL)
 import os
 os.environ['TF_CPP_MIN_VLOG_LEVEL'] = '3'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-from .graph_data import GraphData
+from .parser_from_Mirek.graph_data import GraphData
 from .segments import SegmentsPH
 
 class GraphHyperEdgesAPH:

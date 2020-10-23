@@ -3,7 +3,8 @@ import sys
 import random
 import glob
 import gc
-from .src import fcoplib as cop
+#from .src import fcoplib as cop
+from .parser_from_Mirek.parse_to_graph import parse_to_graph
 import numpy as np
 import tensorflow as tf
 tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.FATAL)
@@ -14,7 +15,7 @@ from joblib import Parallel, delayed
 from .tf_helpers import tf_linear_sq, mean_or_zero
 from .graph_placeholder import GraphPlaceholder
 from .graph_conv import graph_start, graph_conv
-from .graph_data import GraphData
+from .parser_from_Mirek.graph_data import GraphData
 from .segments import Segments, SegmentsPH
 from . import debug_node
 from .utils import partition_by_size, load_obj
@@ -283,7 +284,7 @@ def load_data(datadir):
     fnames = os.listdir(datadir)
     data = []
     for fname in fnames:
-        graph_data, lens_labels_symbols = cop.load_premsel(
+        graph_data, lens_labels_symbols = parse_to_graph(
             os.path.join(datadir, fname))
         data.append((GraphData(graph_data), lens_labels_symbols, fname))
     return data
