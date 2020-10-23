@@ -356,7 +356,7 @@ class GNN(Model):
         features_numbers = dict_features_numbers(features)
         train_ranks = {}
         for thm in thms:
-            available_prems = self.available_premises(conj)
+            available_prems = self.available_premises(thm)
             sp = KNN.predict_1(thm, available_prems, train_deps, train_deps_u,
                                features, features_numbers)
             sp.sort(key = lambda x: x[1], reverse = True)

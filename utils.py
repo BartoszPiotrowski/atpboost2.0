@@ -115,7 +115,7 @@ def mkdir_if_not_exists(dirpath):
 
 
 def rmdir_mkdir(dirpath):
-    rmtree(dirpath)
+    rmtree(dirpath, ignore_errors=True)
     os.makedirs(dirpath)
 
 
