@@ -27,7 +27,8 @@ def prepare_training_data(train_deps, train_ranks, stms_path, save_dir,
     def load(fname):
         #gd, lls = cop.load_premsel(fname)
         gd, lls = parse_to_graph(fname)
-        return GraphData(gd), lls, fname
+        #return GraphData(gd), lls, fname
+        return gd, lls, fname
     load_d = delayed(load)
     with Parallel(n_jobs=n_jobs) as parallel:
         data_list = parallel(load_d(fname) for fname in data_files)
