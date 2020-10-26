@@ -1,10 +1,8 @@
-- tune lightgbm
+- augmentation trick for rnn
 - checking and initializing parameters
 - assert that for every solution there is a problem defined
-- featurizer:
-	- adapt enigma featurizer and get its code
-	- get code of Cezary's featurizer
-	- or write your own featurizer
+- adapt enigmatic featurizer
+- adapt parser from Mirek
 - check args before loop
 - n_jobs -1 not understood by xgb
 - test train_neg_deps
@@ -14,4 +12,3 @@
 - add support for both binary features and enigma features
 - max_num_prems, knn_prefiltering: check this carefully
 - check if neg mining is activated
-- compile fcoplib
