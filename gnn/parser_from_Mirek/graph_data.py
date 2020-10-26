@@ -83,7 +83,7 @@ class GraphHyperEdgesA():
         perm_dest = np.array(perm, dtype = int)+start_i
         self.symbols[perm_src] = self.symbols[perm_dest]
         self.nodes[perm_src] = self.nodes[perm_dest]
-        self.sgn[perm_src] = self.sgn[perm_dest]        
+        self.sgn[perm_src] = self.sgn[perm_dest]
 
 class GraphHyperEdgesB():
     __slots__ = ['lens', 'nodes', 'sgn']
@@ -219,7 +219,7 @@ class GraphData():
         elif isinstance(raw_data, str): self.load_from_str(raw_data)
         elif isinstance(raw_data, dict): self.load_from_dict(raw_data)
         else:
-            symb_edges, (node_c_inputs, clause_inputs),\
+            symb_edges, (node_c_inputs, clause_inputs), \
                 (ini_nodes, ini_symbols, ini_clauses), axiom_mask = raw_data
 
             self.node_inputs = tuple(map(GraphHyperEdgesA, symb_edges[:-1]))
