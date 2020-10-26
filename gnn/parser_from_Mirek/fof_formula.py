@@ -190,7 +190,8 @@ class Disj(Formula):
                         [atom_neg] + clause
                         for clause in cnf
                     )
-                    main_clause.append(atom_neg)
+                    #main_clause.append(atom_neg)
+                    main_clause.append(atom_pos)
             return definitions + [ main_clause ]
         else:
             return [ flatten(clause_tuple) for clause_tuple in product(*cnfs) ]
