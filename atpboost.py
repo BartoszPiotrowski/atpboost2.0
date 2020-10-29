@@ -3,8 +3,7 @@
 import os, sys, argparse
 from logger import Logger
 from loop import loop
-from one import one
-from integrity import check
+from integrity import check_data
 
 
 if __name__ == '__main__':
@@ -124,14 +123,15 @@ if __name__ == '__main__':
         '--rnn_learning_rate',
         default=0.1,
         type=float)
+    parser.add_argument(
+        '--rnn_subproofs',
+        default=None,
+        type=str)
     args = parser.parse_args()
 
 args.logger = Logger(args.logfile)
 
 if args.check_data:
-    check(args)
+    check_data(args)
 
-if args.iterations == 1:
-    one(args)
-else:
-    loop(args)
+loop(args)

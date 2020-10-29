@@ -418,12 +418,13 @@ class RNN(Model):
         self.train_steps = kwargs['rnn_train_steps']
         self.learning_rate = kwargs['rnn_learning_rate']
         self.n_best = kwargs['rnn_n_best']
+        self.subproofs = kwargs['rnn_subproofs']
         os.environ['MKL_THREADING_LAYER'] = 'GNU'
 
     def prepare(self):
         mkdir_if_not_exists(self.save_dir)
         return self.rnn_prep.prepare_training_data(
-            self.train_deps, self.stms, self.save_dir)
+            self.train_deps, self.stms, self.save_dir, self.subproofs)
 
     def train(self, train_deps, train_neg_deps=None):
         self.train_deps = train_deps
