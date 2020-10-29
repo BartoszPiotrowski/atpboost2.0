@@ -5,11 +5,12 @@ def flatten(l):
     return list(chain.from_iterable(l))
 
 def get_uq_name(used, default = ""):
-    if default not in used: return default
+    if default not in used and default != "": return default
     i = 0
     while True:
         name = "{}_{}".format(default, i)
         if name not in used: return name
+        i += 1
 
 skolem_index = 0
 def get_skolem_name(ori_name = ""):
@@ -119,6 +120,11 @@ class Atom(Formula):
         self.args = args
         self.negated = negated
     def __str__(self):
+        if self.name == "==" and len(self.args) == 2:
+            if self.negated: op = "!="
+            else: op = "="
+            A,B = self.args
+            return "{} {} {}".format(A, op, B)
         args = ', '.join(str(x) for x in self.args)
         res = "{}({})".format(self.name, args)
         if self.negated: return '~'+res
@@ -190,7 +196,6 @@ class Disj(Formula):
                         [atom_neg] + clause
                         for clause in cnf
                     )
-                    #main_clause.append(atom_neg)
                     main_clause.append(atom_pos)
             return definitions + [ main_clause ]
         else:
@@ -250,3 +255,4 @@ class Exists(Formula):
         for var_name in self.vl:
             new_d[var_name] = TermFunc(get_skolem_name(var_name), skolem_args)
         return self.body.skolemize_spec(fv, new_d, used)
+

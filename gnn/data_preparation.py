@@ -29,9 +29,10 @@ def prepare_training_data(train_deps, train_ranks, stms_path, save_dir,
         gd, lls = parse_to_graph(fname)
         #return GraphData(gd), lls, fname
         return gd, lls, fname
-    load_d = delayed(load)
-    with Parallel(n_jobs=n_jobs) as parallel:
-        data_list = parallel(load_d(fname) for fname in data_files)
+    #load_d = delayed(load)
+    #with Parallel(n_jobs=n_jobs) as parallel:
+    #    data_list = parallel(load_d(fname) for fname in data_files)
+    data_list = [load(fname) for fname in data_files]
     _, data_list = enumerate_symbols(data_list)
     for d in data_list:
         save_obj(d, d[-1] + '.pickle')
@@ -92,14 +93,17 @@ def enumerate_symbols_save(data_files):
     symbol_set = set()
     for f in data_files:
         d = load_obj(f)
-        _, (_, _, (funcs, rels)), _ = d
-        symbol_set.update(truncate_skolem(funcs + rels))
+        #_, (_, _, (funcs, rels)), _ = d
+        _, (_, _, symbols), _ = d
+        #symbol_set.update(truncate_skolem(funcs + rels))
+        symbol_set.update(truncate_skolem(symbols))
     symbol_to_num = dict(
         (symbol, i) for i, symbol in enumerate(sorted(symbol_set)))
     res_data = []
     for f in data_files:
         d = load_obj(f)
-        graph_data, (lens, labels, (funcs, rels)), fname = d
+        #graph_data, (lens, labels, (funcs, rels)), fname = d
+        graph_data, (lens, labels, symbols_), fname = d
         symbols = [symbol_to_num[symbol]
             for symbol in truncate_skolem(funcs + rels)]
         ds = (graph_data, (lens, labels, symbols), fname)

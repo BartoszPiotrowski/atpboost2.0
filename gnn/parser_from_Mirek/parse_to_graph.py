@@ -19,7 +19,6 @@ def parse_to_graph(fname, add_def = True):
     with open(fname) as f:
         data = f.read()
     commands = yacc.parse(data)
-    print(commands)
 
     role_to_label = {
         'axiom_redundant' : 0,
@@ -28,7 +27,6 @@ def parse_to_graph(fname, add_def = True):
     assert all(isinstance(cmd, TptpFormula) for cmd in commands)
     assert commands[0].role == "conjecture"
     conj = Neg(commands[0].fml).to_cnf(add_def = add_def)
-
     labels = np.array([role_to_label[cmd.role] for cmd in commands[1:]])
     premises = [cmd.fml.to_cnf(add_def = add_def) for cmd in commands[1:]]
 

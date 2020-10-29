@@ -286,7 +286,7 @@ def load_data(datadir):
     for fname in fnames:
         graph_data, lens_labels_symbols = parse_to_graph(
             os.path.join(datadir, fname))
-        data.append((GraphData(graph_data), lens_labels_symbols, fname))
+        data.append((graph_data, lens_labels_symbols, fname))
     return data
 
 
@@ -301,14 +301,14 @@ def enumerate_symbols(data):
         return map(truncate_skolem_single, symbols)
     symbol_set = set()
     for _, (_, _, funcs_rels), _ in data:
-        funcs, rels = funcs_rels
-        symbol_set.update(truncate_skolem(funcs + rels))
+        #funcs, rels = funcs_rels
+        symbol_set.update(truncate_skolem(funcs_rels))
     symbol_to_num = dict(
         (symbol, i) for i, symbol in enumerate(sorted(symbol_set)))
     res_data = []
-    for graph_data, (lens, labels, (funcs, rels)), fname in data:
+    for graph_data, (lens, labels, funcs_rels), fname in data:
         symbols = [symbol_to_num[symbol]
-            for symbol in truncate_skolem(funcs + rels)]
+            for symbol in truncate_skolem(funcs_rels)]
         res_data.append((graph_data, (lens, labels, symbols), fname))
     return symbol_to_num, res_data
 
