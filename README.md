@@ -1,6 +1,6 @@
 # Installation
 
-Basic:
+## Basic:
 ```
 ./install.sh # creates a virtual environment atpboost_venv
 source atpboost_venv/bin/activate
@@ -10,24 +10,33 @@ Now these tests should run fine:
 ```
 ./tests/knn.sh
 ./tests/xgb.sh
+./tests/lgb.sh
 ./tests/multi1.sh
 ```
 
-With GNN and RNN support:
-- CUDA 10.2 is required
-
+## With RNN support:
+- CUDA 10.2 is required first
 ```
-./install_nn.sh # creates a virtual environment atpboost_venv
+./install_rnn.sh # creates a virtual environment atpboost_venv
 source atpboost_venv/bin/activate
 ```
 
-Now also these tests should run fine:
+Now this test should run fine (along the tests for basic installation):
 ```
 ./tests/rnn.sh
-./tests/gnn.sh
-./tests/multi2.sh
 ```
 
+## With GNN support:
+- CUDA 10.2 is required first
+```
+./install_gnn.sh # creates a virtual environment atpboost_venv
+source atpboost_venv/bin/activate
+```
+
+Now this test should run fine (and tests for basic installation):
+```
+./tests/gnn.sh
+```
 
 # Running the ATPboost
 

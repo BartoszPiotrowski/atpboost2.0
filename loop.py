@@ -28,14 +28,15 @@ def loop(args):
         args.logger.print(f'### Loop iteration no. {i + 1} ###', newline=True)
         models = train(train_deps, train_neg_deps, args)
         preds = predict(models, conjs)
-        conjs_proofs = prove(preds, args)
-        conjs_deps = extract_deps(conjs_proofs)
-        train_deps = merge_deps(train_deps, *conjs_deps)
-        if args.mining:
+        if args.mining and i + 1 < args.iterations:
             pos_deps, neg_deps = mining(models, train_deps, args)
             train_deps = merge_deps(train_deps, pos_deps)
             train_neg_deps = neg_deps
-        args.logger.print(stats(train_deps, conjs, conjs_deps))
+        if not args.no_proving:
+            conjs_proofs = prove(preds, args)
+            conjs_deps = extract_deps(conjs_proofs)
+            train_deps = merge_deps(train_deps, *conjs_deps)
+            args.logger.print(stats(train_deps, conjs, conjs_deps))
 
 
 if __name__=='__main__':

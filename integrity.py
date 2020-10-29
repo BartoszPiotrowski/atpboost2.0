@@ -1,6 +1,6 @@
 from utils import read_lines, read_features, read_stms
 
-def check(args):
+def check_data(args):
     args.logger.print(f'Checking data integrity...')
     if args.features:
         features_set = set(read_features(args.features))
