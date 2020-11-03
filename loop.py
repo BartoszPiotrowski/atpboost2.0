@@ -1,7 +1,6 @@
-from train import train
-from predict import predict
 from prove import prove, prove_init
 from mining import mining
+from model_classes import model_class
 from deps import merge_deps, extract_deps
 from shutil import copyfile
 from stats import stats, stats_init
@@ -24,39 +23,22 @@ def loop(args):
         train_deps = merge_deps(train_deps, *conjs_deps)
     args.logger.print(stats_init(train_deps, conjs))
     train_neg_deps = args.train_neg_deps
+    models_types = args.ml_models.split(',')
+    models_dir = args.data_dir + '/models'
+    models = [model_class[t](save_dir=models_dir, **vars(args)) \
+                  for t in models_types]
     for i in range(args.iterations):
         args.logger.print(f'### Loop iteration no. {i + 1} ###', newline=True)
-        models = train(train_deps, train_neg_deps, args)
-        preds = predict(models, conjs)
-        if args.mining and i + 1 < args.iterations:
-            pos_deps, neg_deps = mining(models, train_deps, args)
-            train_deps = merge_deps(train_deps, pos_deps)
-            train_neg_deps = neg_deps
+        #train(models, train_deps, train_neg_deps)
+        #preds = predict(models, conjs)
+        [model.train(train_deps, train_neg_deps) for model in models]
+        preds = [model.predict(conjs) for model in models]
         if not args.no_proving:
             conjs_proofs = prove(preds, args)
             conjs_deps = extract_deps(conjs_proofs)
             train_deps = merge_deps(train_deps, *conjs_deps)
             args.logger.print(stats(train_deps, conjs, conjs_deps))
-
-
-if __name__=='__main__':
-    # test
-    class args: pass
-    args.conjectures = 'data/example/conjectures'
-    args.statements = 'data/example/statements'
-    args.features = 'data/example/features'
-    args.chronology = 'data/example/chronology'
-    args.train_deps = 'data/example/train_deps'
-    args.xgb_knn_prefiltering = 100
-    args.xgb_rounds = 300
-    args.xgb_eta = 0.1
-    #args.train_neg_deps = 'data/example/train_neg_deps'
-    args.ml_models = 'xgboost'
-    args.logfile = 'loop.log'
-    args.data_dir = 'data/example/atpboost_data'
-    args.mining = 0.1
-    args.iterations = 3
-    args.n_jobs = 4
-    args.proving_script = 'prove.sh'
-    loop(args)
-
+        if args.mining and i + 1 < args.iterations:
+            pos_deps, neg_deps = mining(models, train_deps, args)
+            train_deps = merge_deps(train_deps, pos_deps)
+            train_neg_deps = neg_deps
