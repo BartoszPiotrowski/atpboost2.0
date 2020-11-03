@@ -464,6 +464,7 @@ class RNN(Model):
                 -model {self.model_path}_step_{str(self.train_steps)}.pt \
                 -src {source} \
                 -beam_size {str(self.n_best)} -n_best {str(self.n_best)} \
+                -batch_size 10 \
                 -replace_unk -verbose \
                 -gpu 0 \
                 -output {self.predictions_path}
