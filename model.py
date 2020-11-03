@@ -1,4 +1,5 @@
 import os
+from shutil import copyfile
 from importlib import import_module
 from prepare_train_array import deps_to_train_array, pairs_to_array
 from utils import read_lines, write_lines, read_features, read_deps, read_stms
@@ -415,6 +416,7 @@ class RNN(Model):
         self.stms = kwargs['statements']
         self.save_dir = os.path.join(self.save_dir, 'rnn')
         self.model_path = os.path.join(self.save_dir, 'model')
+        self.trained_model_path = kwargs['rnn_trained_model']
         self.train_steps = kwargs['rnn_train_steps']
         self.learning_rate = kwargs['rnn_learning_rate']
         self.n_best = kwargs['rnn_n_best']
@@ -427,6 +429,15 @@ class RNN(Model):
             self.train_deps, self.stms, self.save_dir, self.subproofs)
 
     def train(self, train_deps, train_neg_deps=None):
+        if self.trained_model_path:
+            self.logger.print(f'Training skipped -- using a supplied trained '
+                              f'model from {self.trained_model_path}')
+            mkdir_if_not_exists(self.save_dir)
+            copyfile(self.trained_model_path,
+                     f'{self.model_path}_step_{str(self.train_steps)}.pt')
+            self.trained_model_path = None
+            return self.model_path
+
         self.train_deps = train_deps
         self.train_neg_deps = train_neg_deps
         train_data = self.prepare()

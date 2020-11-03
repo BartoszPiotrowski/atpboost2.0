@@ -127,6 +127,10 @@ if __name__ == '__main__':
         '--rnn_subproofs',
         default=None,
         type=str)
+    parser.add_argument(
+        '--rnn_trained_model',
+        default=None,
+        type=str)
     args = parser.parse_args()
 
 args.logger = Logger(args.logfile)
