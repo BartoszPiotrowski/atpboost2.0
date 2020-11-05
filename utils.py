@@ -459,6 +459,41 @@ def statements_dict(proof_file):
     return statements_dict
 
 
+def root_name(tree):
+    return list(tree)[0]
+
+def subtrees_of_root(tree):
+    return tree[list(tree)[0]]
+
+def height(tree):
+    subtrees = subtrees_of_root(tree)
+    if len(subtrees) == 0:
+        return 0
+    else:
+        return max([1 + height(subtree) for subtree in subtrees])
+
+def leaves(tree):
+    leaves = set()
+    def add_leaves_to_list(tree0):
+        if not subtrees_of_root(tree0):
+            leaves.add(root_name(tree0))
+        else:
+            for subtree in subtrees_of_root(tree0):
+                add_leaves_to_list(subtree)
+    add_leaves_to_list(tree)
+    return list(leaves)
+
+def root_leaves_heigh_of_all_subtrees(tree):
+    root_leaves_heigh = []
+    def rlh(tree0):
+        h = height(tree0)
+        if h > 0:
+            root_leaves_heigh.append((root_name(tree0), leaves(tree0), h))
+            for subtree in subtrees_of_root(tree0):
+                rlh(subtree)
+    rlh(tree)
+    return root_leaves_heigh
+
 
 if __name__=='__main__':
     print(grep_first('data/example/conjectures', '^t.8_tex.*'))

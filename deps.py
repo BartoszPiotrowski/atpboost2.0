@@ -4,7 +4,8 @@ import os
 from joblib import Parallel, delayed
 from utils import read, read_lines, write_lines, write_line, remove_supersets
 from utils import remove_supersets, mkdir_if_not_exists, random_name
-from utils import parse_tptp_proof, statements_dict
+from utils import parse_tptp_proof, statements_dict, build_compact_tree
+from utils import root_leaves_heigh_of_all_subtrees
 
 
 def clean_deps(deps):
@@ -48,16 +49,15 @@ def extract_deps(proofs, outdir=None):
 def extract_subdeps(proofs, outdir=None):
     output_files = []
     for p in proofs:
-        conjecture_premises = extract_deps_1(p)
-        conjecture, premises = conjecture_premises
-        if conjecture and premises:
+        subdeps_lines = extract_subdeps_1(p)
+        if subdeps_lines:
             if outdir:
                 mkdir_if_not_exists(outdir)
                 output_file = os.path.join(outdir, random_name()) + '.subdeps'
             else:
                 output_file = p + '.subdeps'
             output_files.append(output_file)
-            write_line(f"{conjecture}:{' '.join(premises)}", output_file)
+            write_lines(subdeps_lines, output_file)
     return output_files
 
 def extract_subdeps_1(file_with_proof, mode='root_and_axioms'):

@@ -18,12 +18,12 @@ def mining(models, train_deps, args):
         return None, None, None
     deps = extract_deps(proofs)
     deps = merge_deps(*deps, output_file=join(args.data_dir, 'mining_deps'))
+    subdeps_path = None
     if args.extract_subdeps:
         subdeps = extract_subdeps(proofs)
-        subdeps_path = merge_deps(*subdeps,
+        if subdeps:
+            subdeps_path = merge_deps(*subdeps,
                              output_file=join(args.data_dir, 'mining_subdeps'))
-    else:
-        subdeps_path = None
     pos_deps, neg_deps = _mining(preds, deps)
     pos_deps_path = join(args.data_dir, 'mined_pos_deps')
     neg_deps_path = join(args.data_dir, 'mined_neg_deps')
