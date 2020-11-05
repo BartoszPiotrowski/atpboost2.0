@@ -13,6 +13,7 @@ def prepare_training_data(deps, stms, save_dir, subproofs=None,
             target_lines.append(' '.join(ds))
     if subproofs:
         for l in read_lines(subproofs):
+            assert '#' in l, (subproofs, l)
             source_lines.append(l.split('#')[0])
             target_lines.append(l.split('#')[1])
     source_file = os.path.join(save_dir, 'train.src')
