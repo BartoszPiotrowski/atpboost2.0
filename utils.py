@@ -36,7 +36,7 @@ def empty_file(filename):
     open(filename, 'w').close()
     return filename
 
-def copy_file_or_empty(source, target):
+def copy_file(source, target):
     if source:
         copyfile(source, target)
     else:
