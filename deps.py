@@ -23,9 +23,9 @@ def merge_deps(file_0, *files, output_file=None):
     if not output_file:
         output_file = file_0
     deps = set()
-    for f in [file_0] + list(files):
-        if f:
-            deps.update(read_lines(f))
+    for file in [file_0] + list(files):
+        if file:
+            deps.update(read_lines(file))
     write_lines(deps, output_file)
     return output_file
 
