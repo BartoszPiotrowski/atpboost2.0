@@ -21,8 +21,7 @@ if __name__ == '__main__':
         default=None)
     parser.add_argument(
         '--extract_subdeps',
-        type=bool,
-        default=False)
+        action='store_true')
     parser.add_argument(
         '--train_neg_deps',
         type=str,

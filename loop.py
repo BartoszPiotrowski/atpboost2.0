@@ -38,6 +38,7 @@ def loop(args):
             train_deps = merge_deps(train_deps, *conjs_deps)
             args.logger.print(stats(train_deps, conjs, conjs_deps))
         if args.mining and i + 1 < args.iterations:
-            pos_deps, neg_deps = mining(models, train_deps, args)
+            pos_deps, neg_deps, subdeps = mining(models, train_deps, args)
             train_deps = merge_deps(train_deps, pos_deps)
+            train_subdeps = merge_deps(train_deps, pos_deps, subdeps)
             train_neg_deps = neg_deps
