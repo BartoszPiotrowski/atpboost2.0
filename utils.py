@@ -36,6 +36,13 @@ def empty_file(filename):
     open(filename, 'w').close()
     return filename
 
+def copy_file_or_empty(source, target):
+    if source:
+        copyfile(source, target)
+    else:
+        empty_file(target)
+    return target
+
 # TODO isn't the above the same?
 def write_empty(filename):
     with open(filename, encoding='utf-8', mode='wt') as f:
