@@ -4,6 +4,7 @@ import os
 from joblib import Parallel, delayed
 from utils import read, read_lines, write_lines, write_line, remove_supersets
 from utils import remove_supersets, mkdir_if_not_exists, random_name
+from utils import parse_tptp_proof, statements_dict
 
 
 def clean_deps(deps):
@@ -43,6 +44,47 @@ def extract_deps(proofs, outdir=None):
             output_files.append(output_file)
             write_line(f"{conjecture}:{' '.join(premises)}", output_file)
     return output_files
+
+def extract_subdeps(proofs, outdir=None):
+    output_files = []
+    for p in proofs:
+        conjecture_premises = extract_deps_1(p)
+        conjecture, premises = conjecture_premises
+        if conjecture and premises:
+            if outdir:
+                mkdir_if_not_exists(outdir)
+                output_file = os.path.join(outdir, random_name()) + '.deps'
+            else:
+                output_file = p + '.deps'
+            output_files.append(output_file)
+            write_line(f"{conjecture}:{' '.join(premises)}", output_file)
+    return output_files
+
+def extract_subdeps_1(file_with_proof, mode='root_and_axioms'):
+    statements = statements_dict(file_with_proof)
+    deps, axioms, conjectures = parse_tptp_proof(file_with_proof)
+    assert len(conjectures) == 1
+    conjecture = conjectures[0]
+    tree = build_compact_tree('FALSE', deps)
+    root_leaves_heigh_s = root_leaves_heigh_of_all_subtrees(tree)
+    lines = []
+    if mode == 'root_and_leaves':
+        for rlh in root_leaves_heigh_s:
+            root_st = statements[rlh[0]]
+            # intersection with axioms because of, e.g. introduction(definition)
+            # in the proofs -- leave which is not an axiom
+            leaves = set(rlh[1]).intersection(set(axioms))
+            leaves = sorted(leaves)
+            if not root_st == '$false':
+                lines.append(f'{root_st}#{" ".join(leaves)}')
+    if mode == 'root_and_axioms':
+        for rlh in root_leaves_heigh_s:
+            if not conjecture in rlh[1]:
+                root_st = statements[rlh[0]]
+                leaves = set(rlh[1]).intersection( set(axioms) | {conjecture} )
+                leaves = sorted(leaves)
+                lines.append(f'{root_st}#{" ".join(leaves)}')
+    return lines
 
 
 def extract_deps_1(file_with_proof):

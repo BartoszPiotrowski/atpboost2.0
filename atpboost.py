@@ -16,6 +16,14 @@ if __name__ == '__main__':
         type=str,
         default=None)
     parser.add_argument(
+        '--train_subdeps',
+        type=str,
+        default=None)
+    parser.add_argument(
+        '--extract_subdeps',
+        type=bool,
+        default=False)
+    parser.add_argument(
         '--train_neg_deps',
         type=str,
         default=None)
@@ -124,16 +132,11 @@ if __name__ == '__main__':
         default=0.1,
         type=float)
     parser.add_argument(
-        '--rnn_subproofs',
-        default=None,
-        type=str)
-    parser.add_argument(
         '--rnn_trained_model',
         default=None,
         type=str)
     args = parser.parse_args()
 
-args.logger = Logger(args.logfile)
 
 if args.check_data:
     check_data(args)

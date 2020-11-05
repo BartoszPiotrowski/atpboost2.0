@@ -2,7 +2,8 @@ import os
 from utils import read_stms, write_lines, read_deps, read_lines
 
 
-def prepare_training_data(deps, stms, save_dir, subproofs=None):
+def prepare_training_data(deps, stms, save_dir, subproofs=None,
+                          extract_subproofs=False):
     deps = read_deps(deps)
     stms = read_stms(stms, tokens=True, short=True)
     source_lines, target_lines = [], []

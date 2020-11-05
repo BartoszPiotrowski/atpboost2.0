@@ -2,9 +2,8 @@ from os.path import join
 from random import sample
 from prove import prove
 from deps import merge_deps, extract_deps
-from utils import write_lines, merge_predictions, unify_predictions
+from utils import merge_predictions, unify_predictions
 from utils import read_deps, save_deps
-from utils import read_lines
 
 
 def mining(models, train_deps, args):

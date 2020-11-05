@@ -13,15 +13,16 @@ class Model:
         self.n_jobs = kwargs['n_jobs']
         self.logger = kwargs['logger']
         self.save_scores = kwargs['save_prediction_scores']
-        self.save_dir = os.path.join(kwargs['save_dir'], self.name)
+        self.save_dir = os.path.join(kwargs['data_dir'], 'models', self.name)
         self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.available_premises = AvailablePremises(**kwargs)
         mkdir_if_not_exists(self.save_dir)
 
-    def train(self, train_deps, train_neg_deps=None):
+    def train(self, train_deps, train_neg_deps=None, train_subdeps=None):
         # some models do not train (knn)
         self.train_deps = train_deps
         self.train_neg_deps = train_neg_deps
+        self.train_subdeps = train_subdeps
 
     def save(self):
         pass
@@ -194,9 +195,10 @@ class XGBoost(TreeModel):
         }
         return deps_to_train_array(**kwargs)
 
-    def train(self, train_deps, train_neg_deps=None):
+    def train(self, train_deps, train_neg_deps=None, train_subdeps=None):
         self.train_deps = train_deps
         self.train_neg_deps = train_neg_deps
+        self.train_subdeps = train_subdeps
         self.logger.print('Preparing training data...')
         labels, array = self.prepare()
         dtrain = self.xgb.DMatrix(array, label=labels)
@@ -286,9 +288,10 @@ class LightGBM(TreeModel):
         self.train_params['n_jobs'] = self.n_jobs
         self.train_params['verbose'] = -1
 
-    def train(self, train_deps, train_neg_deps=None):
+    def train(self, train_deps, train_neg_deps=None, train_subdeps=None):
         self.train_deps = train_deps
         self.train_neg_deps = train_neg_deps
+        self.train_subdeps = train_subdeps
         self.logger.print('Preparing training data...')
         labels, array = self.prepare()
         dtrain = self.lgb.Dataset(array, label=labels)
@@ -393,10 +396,11 @@ class GNN(Model):
         self.logger.print(f'Predictions saved to {self.predictions_path}')
         return self.predictions_path
 
-    def train(self, train_deps, train_neg_deps=None):
+    def train(self, train_deps, train_neg_deps=None, train_subdeps=None):
         self.logger.print('Preparing training data...')
         self.train_deps = train_deps
         self.train_neg_deps = train_neg_deps
+        self.train_subdeps = train_subdeps
         training_dir = self.prepare_training_dir()
         self.logger.print('Training data prepared')
         rmdir_mkdir(self.model_dir)
@@ -420,15 +424,15 @@ class RNN(Model):
         self.train_steps = kwargs['rnn_train_steps']
         self.learning_rate = kwargs['rnn_learning_rate']
         self.n_best = kwargs['rnn_n_best']
-        self.subproofs = kwargs['rnn_subproofs']
         os.environ['MKL_THREADING_LAYER'] = 'GNU'
 
     def prepare(self):
         mkdir_if_not_exists(self.save_dir)
         return self.rnn_prep.prepare_training_data(
-            self.train_deps, self.stms, self.save_dir, self.subproofs)
+            self.train_deps, self.stms, self.save_dir,
+            self.train_subdeps)
 
-    def train(self, train_deps, train_neg_deps=None):
+    def train(self, train_deps, train_neg_deps=None, train_subdeps=None):
         if self.trained_model_path:
             self.logger.print(f'Training skipped -- using a supplied trained '
                               f'model from {self.trained_model_path}')
@@ -440,6 +444,7 @@ class RNN(Model):
 
         self.train_deps = train_deps
         self.train_neg_deps = train_neg_deps
+        self.train_subdeps = train_subdeps
         train_data = self.prepare()
         os.popen(
             f'''

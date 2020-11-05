@@ -2,6 +2,7 @@
 - checking and initializing parameters
 - assert that for every solution there is a problem defined
 - adapt enigmatic featurizer
+- different modes of mining
 - adapt parser from Mirek
 - check args before loop
 - n_jobs -1 not understood by xgb
