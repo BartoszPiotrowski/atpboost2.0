@@ -112,11 +112,13 @@ def partition(lst, n):
 def mkdir_if_not_exists(dirpath):
     if not os.path.exists(dirpath):
         os.makedirs(dirpath)
+    return dirpath
 
 
 def rmdir_mkdir(dirpath):
     rmtree(dirpath, ignore_errors=True)
     os.makedirs(dirpath)
+    return dirpath
 
 
 def date_time():
