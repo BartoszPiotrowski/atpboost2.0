@@ -53,9 +53,9 @@ def extract_subdeps(proofs, outdir=None):
         if conjecture and premises:
             if outdir:
                 mkdir_if_not_exists(outdir)
-                output_file = os.path.join(outdir, random_name()) + '.deps'
+                output_file = os.path.join(outdir, random_name()) + '.subdeps'
             else:
-                output_file = p + '.deps'
+                output_file = p + '.subdeps'
             output_files.append(output_file)
             write_line(f"{conjecture}:{' '.join(premises)}", output_file)
     return output_files

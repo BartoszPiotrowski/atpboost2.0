@@ -1,7 +1,7 @@
 from os.path import join
 from random import sample
 from prove import prove
-from deps import merge_deps, extract_deps
+from deps import merge_deps, extract_deps, extract_subdeps
 from utils import merge_predictions, unify_predictions
 from utils import read_deps, save_deps
 
@@ -15,13 +15,15 @@ def mining(models, train_deps, args):
     preds = [model.predict(mining_thms) for model in models]
     proofs = prove(preds, args)
     if not proofs:
-        return None, None
+        return None, None, None
     deps = extract_deps(proofs)
     deps = merge_deps(*deps, output_file=join(args.data_dir, 'mining_deps'))
     if args.extract_subdeps:
         subdeps = extract_subdeps(proofs)
         subdeps_path = merge_deps(*subdeps,
                              output_file=join(args.data_dir, 'mining_subdeps'))
+    else:
+        subdeps_path = None
     pos_deps, neg_deps = _mining(preds, deps)
     pos_deps_path = join(args.data_dir, 'mined_pos_deps')
     neg_deps_path = join(args.data_dir, 'mined_neg_deps')
@@ -37,5 +39,3 @@ def _mining(preds, deps):
     mining_thms = set(pos_deps) & set(preds)
     neg_deps = {thm: preds[thm] - pos_deps[thm] for thm in mining_thms}
     return pos_deps, neg_deps
-
-

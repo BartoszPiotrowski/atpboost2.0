@@ -14,7 +14,7 @@ def loop(args):
     conjs = args.conjectures
     train_deps = copy_file(args.train_deps, data_dir + '/train_deps')
     train_subdeps = copy_file(args.train_subdeps, data_dir + '/train_subdeps')
-    args.logger.print(stats_init(train_deps, conjs))
+    args.logger.print(stats_init(train_deps, train_subdeps, conjs))
     if not args.train_deps:
         # if no training deps provided, try to prove without ML advice
         conjs_proofs = prove_init(conjs, args)
@@ -36,9 +36,9 @@ def loop(args):
                 conjs_subdeps = extract_subdeps(conjs_proofs)
                 train_subdeps = merge_deps(train_subdeps, *conjs_subdeps)
             train_deps = merge_deps(train_deps, *conjs_deps)
-            args.logger.print(stats(train_deps, conjs, conjs_deps))
+            args.logger.print(stats(train_deps, train_subdeps, conjs, conjs_deps))
         if args.mining and i + 1 < args.iterations:
             pos_deps, neg_deps, subdeps = mining(models, train_deps, args)
             train_deps = merge_deps(train_deps, pos_deps)
-            train_subdeps = merge_deps(train_deps, pos_deps, subdeps)
+            train_subdeps = merge_deps(train_subdeps, subdeps)
             train_neg_deps = neg_deps
