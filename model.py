@@ -68,8 +68,10 @@ class KNN(Model):
         deps_u = read_deps(self.train_deps, unions=True)
         scored_prems = {}
         for conj in conjs:
-            scored_prems[conj] = self.predict_1(conj, self.available_premises(conj),
-                 deps, deps_u, features, features_numbers, self.neighbours)
+            available = self.available_premises(conj)
+            if available:
+                scored_prems[conj] = self.predict_1(conj, available,
+                    deps, deps_u, features, features_numbers, self.neighbours)
         self.predictions_path = self.make_predictions(scored_prems)
         self.logger.print(f'Predictions saved to {self.predictions_path}')
         return self.predictions_path
