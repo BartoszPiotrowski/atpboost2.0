@@ -103,7 +103,8 @@ class KNN(Model):
         sorted_prems = sorted(prems_scores,
                                key=prems_scores.__getitem__, reverse=True)
         sorted_prems = [p for p in sorted_prems if p in available_prems]
-        assert not conj in sorted_prems
+        assert not conj in sorted_prems, conj
+        assert sorted_prems, conj
         maximum = prems_scores[sorted_prems[0]]
         if maximum == 0: maximum = 1 # sometimes maximum = 0
         prems_scores_norm = [(p, prems_scores[p]/maximum) for p in sorted_prems]
