@@ -27,7 +27,8 @@ def merge_deps(file_0, *files, output_file=None):
     for file in [file_0] + list(files):
         if file:
             deps.update(read_lines(file))
-    write_lines(deps, output_file)
+    if deps:
+        write_lines(deps, output_file)
     return output_file
 
 
