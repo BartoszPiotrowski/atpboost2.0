@@ -18,6 +18,7 @@ def loop(args):
     if not args.train_deps:
         # if no training deps provided, try to prove without ML advice
         conjs_proofs = prove_init(conjs, args)
+        args.logger.print('Extracting dependencies from new proofs...')
         conjs_deps = extract_deps(conjs_proofs)
         train_deps = merge_deps(train_deps, *conjs_deps)
     train_neg_deps = args.train_neg_deps
@@ -31,8 +32,10 @@ def loop(args):
             preds.append(model.predict(conjs))
         if not args.no_proving:
             conjs_proofs = prove(preds, args)
+            args.logger.print('Extracting dependencies from new proofs...')
             conjs_deps = extract_deps(conjs_proofs)
             if args.extract_subdeps:
+                args.logger.print('Extracting subdependencies from new proofs...')
                 conjs_subdeps = extract_subdeps(conjs_proofs)
                 train_subdeps = merge_deps(train_subdeps, *conjs_subdeps)
             train_deps = merge_deps(train_deps, *conjs_deps)
