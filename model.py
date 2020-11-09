@@ -484,3 +484,63 @@ class RNN(Model):
                 if ds:
                     append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
         return self.predictions_path
+
+
+
+class Transformer(RNN):
+    def __init__(self, **kwargs):
+        self.name = 'transformer'
+        super(Transformer, self).__init__(**kwargs)
+        self.rnn_prep= import_module('rnn.prepare_data')
+        self.stms = kwargs['statements']
+        self.save_dir = os.path.join(self.save_dir, self.name)
+        self.model_path = os.path.join(self.save_dir, 'model')
+        os.environ['MKL_THREADING_LAYER'] = 'GNU'
+
+    def train(self, train_deps, train_neg_deps=None, train_subdeps=None):
+        self.train_deps = train_deps
+        self.train_neg_deps = train_neg_deps
+        self.train_subdeps = train_subdeps
+        train_data = self.prepare()
+        os.popen(
+            f'''
+            onmt_train \
+                -data {train_data} \
+                -train_steps 200000 \
+                -learning_rate {self.learning_rate} \
+                -world_size 1 -gpu_ranks 0 \
+                -save_model {self.model_path}
+                -queue_size 10000 \
+                -bucket_size 32768 \
+                -batch_type "tokens" \
+                -batch_size 4096 \
+                -valid_batch_size 8 \
+                -max_generator_batches 2 \
+                -accum_count [4] \
+                -accum_steps [0] \
+                -model_dtype "fp32" \
+                -optim "adam" \
+                -learning_rate 2 \
+                -warmup_steps 8000 \
+                -decay_method "noam" \
+                -adam_beta2 0.998 \
+                -max_grad_norm 0 \
+                -label_smoothing 0.1 \
+                -param_init 0 \
+                -param_init_glorot true \
+                -normalization "tokens" \
+                -encoder_type transformer \
+                -decoder_type transformer \
+                -position_encoding true \
+                -enc_layers 6 \
+                -dec_layers 6 \
+                -heads 8 \
+                -rnn_size 512 \
+                -word_vec_size 512 \
+                -transformer_ff 2048 \
+                -dropout_steps [0] \
+                -dropout [0.1] \
+                -attention_dropout [0.1] \
+            '''
+        ).read()
+        return self.model_path
