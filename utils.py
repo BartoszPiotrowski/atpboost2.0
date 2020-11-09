@@ -3,11 +3,13 @@ import re
 import pickle
 import gzip
 import uuid
+import signal
 from time import strftime
 from glob import glob
 from math import log
 from sys import getsizeof
 from shutil import copyfile, rmtree
+from contextlib import contextmanager
 
 
 def read(filename):
@@ -495,11 +497,16 @@ def root_leaves_heigh_of_all_subtrees(tree):
     return root_leaves_heigh
 
 
-if __name__=='__main__':
-    print(grep_first('data/example/conjectures', '^t.8_tex.*'))
-    ap = AvailablePremises(chronology='data/example/chronology')
-    print(ap('t12_zfmisc_1'))
-    ap = AvailablePremises(available_premises='tests/preprocess/1.data_prep/available_premises')
-    print(ap('thm_2Ecardinal_2ECOUNTABLE'))
+class TimeoutException(Exception): pass
 
+@contextmanager
+def time_limit(seconds):
+    def signal_handler(signum, frame):
+        raise TimeoutException("Timed out!")
+    signal.signal(signal.SIGALRM, signal_handler)
+    signal.alarm(seconds)
+    try:
+        yield
+    finally:
+        signal.alarm(0)
 

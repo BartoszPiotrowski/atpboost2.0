@@ -49,7 +49,11 @@ def extract_deps(proofs, outdir=None):
 def extract_subdeps(proofs, outdir=None):
     output_files = []
     for p in proofs:
-        subdeps_lines = extract_subdeps_1(p)
+        try:
+            with time_limit(5):
+                subdeps_lines = extract_subdeps_1(p)
+        except:
+            subdeps_lines = None
         if subdeps_lines:
             if outdir:
                 mkdir_if_not_exists(outdir)
