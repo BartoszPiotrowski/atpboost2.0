@@ -60,7 +60,8 @@ class KNN(Model):
 
     def predict(self, conjs):
         conjs = read_lines(conjs) if type(conjs) == str else conjs
-        self.logger.print(f'Making predictions for {len(conjs)} conjectures...')
+        self.logger.print(f'Making predictions for {len(conjs)} conjectures '
+                          f'from {self.name} model...')
         features = read_features(self.features)
         features_numbers = dict_features_numbers(features)
         deps = read_deps(self.train_deps)
@@ -150,7 +151,8 @@ class TreeModel(Model):
         if max_num_prems == None:
             max_num_prems = self.knn_prefiltering
         conjs = read_lines(conjs) if type(conjs) == str else conjs
-        self.logger.print(f'Making predictions for {len(conjs)} conjectures...')
+        self.logger.print(f'Making predictions for {len(conjs)} conjectures '
+                          f'from {self.name} model...')
         features = read_features(self.features)
         features_numbers = dict_features_numbers(features) # for knn prefilering
         deps = read_deps(self.train_deps, unions=True) # for knn prefilering
@@ -164,8 +166,12 @@ class TreeModel(Model):
                 candidate_prems = self.knn_prefilter(conj, available_prems,
                                                      deps, features,
                                                      features_numbers)
-            scored_prems[conj] = self.score_prems(conj, candidate_prems,
+            if len(candidate_prems):
+                scored_prems[conj] = self.score_prems(conj, candidate_prems,
                                                   model, features)
+            else:
+                logger.print(
+                    f'WARNING: conjecture {conj} had no candidate premises.')
         self.predictions_path = self.make_predictions(scored_prems)
         self.logger.print(f'Predictions saved to {self.predictions_path}')
         return self.predictions_path
@@ -225,34 +231,6 @@ class XGBoost(TreeModel):
         message += padding
         message += f"objective: {self.train_params['objective']}"
         return message
-
-    def predict(self, conjs, max_num_prems=None):
-        if max_num_prems == None:
-            max_num_prems = self.knn_prefiltering
-        conjs = read_lines(conjs) if type(conjs) == str else conjs
-        self.logger.print(f'Making predictions for {len(conjs)} conjectures...')
-        features = read_features(self.features)
-        features_numbers = dict_features_numbers(features) # for knn prefilering
-        deps = read_deps(self.train_deps, unions=True) # for knn prefilering
-        model = self.load()
-        scored_prems = {}
-        for conj in conjs:
-            available_prems = self.available_premises(conj)
-            if len(available_prems) < max_num_prems:
-                candidate_prems = available_prems
-            else:
-                candidate_prems = self.knn_prefilter(conj, available_prems,
-                                                     deps, features,
-                                                     features_numbers)
-            if len(candidate_prems):
-                scored_prems[conj] = self.score_prems(conj, candidate_prems,
-                                                  model, features)
-            else:
-                logger.print(
-                    f'WARNING: conjecture {conj} had no candidate premsises.')
-        self.predictions_path = self.make_predictions(scored_prems)
-        self.logger.print(f'Predictions saved to {self.predictions_path}')
-        return self.predictions_path
 
     def score_prems(self, conj, premises, xgb_model, features):
         pairs = [(conj, p) for p in premises]
