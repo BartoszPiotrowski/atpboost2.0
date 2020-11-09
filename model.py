@@ -444,7 +444,8 @@ class RNN(Model):
     def predict(self, conjs):
         conjs = read_lines(conjs) if type(conjs) == str else conjs
         stms = read_stms(self.stms, tokens=True, short=True)
-        conjs_stms = [stms[c] for c in conjs]
+        #conjs_stms = [stms[c] for c in conjs]
+        conjs_stms = [stms[c][:1000] for c in conjs] # truncated source
         source = write_lines(conjs_stms, os.path.join(self.save_dir, 'test.src'))
         os.popen(
             f'''

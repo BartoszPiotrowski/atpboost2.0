@@ -9,7 +9,8 @@ def prepare_training_data(deps, stms, save_dir, subproofs=None,
     source_lines, target_lines = [], []
     for conj in deps:
         for ds in deps[conj]:
-            source_lines.append(stms[conj])
+            #source_lines.append(stms[conj])
+            source_lines.append(stms[conj][:1000]) # truncate
             target_lines.append(' '.join(ds))
     if subproofs:
         for l in read_lines(subproofs):
