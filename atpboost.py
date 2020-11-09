@@ -145,6 +145,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
 
+args.logger = Logger(args.logfile)
+
 if args.check_data:
     check_data(args)
 

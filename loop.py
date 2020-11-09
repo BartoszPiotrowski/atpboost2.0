@@ -8,7 +8,6 @@ from utils import mkdir_if_not_exists, empty_file, copy_file
 
 
 def loop(args):
-    args.logger = Logger(args.logfile)
     data_dir = mkdir_if_not_exists(args.data_dir)
     args.logger.print(f'Directory for data produced during the run: {data_dir}')
     conjs = args.conjectures
