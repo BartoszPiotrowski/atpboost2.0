@@ -111,6 +111,14 @@ if __name__ == '__main__':
         default=1000,
         type=int)
     parser.add_argument(
+        '--lgb_depth',
+        default=10,
+        type=int)
+    parser.add_argument(
+        '--lgb_leaves',
+        default=1000,
+        type=int)
+    parser.add_argument(
         '--lgb_eta',
         default=0.1,
         type=float)

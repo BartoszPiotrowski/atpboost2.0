@@ -262,8 +262,8 @@ class LightGBM(TreeModel):
         self.train_params_rounds = kwargs['lgb_rounds']
         self.train_params['eta'] = kwargs['lgb_eta']
         self.train_params['boosting'] = 'gbdt'
-        self.train_params['max_depth'] = 10
-        self.train_params['num_leaves'] = 1000
+        self.train_params['max_depth'] = kwargs['lgb_depth']
+        self.train_params['num_leaves'] = kwargs['lgb_leaves']
         #self.train_params['min_data_in_leaf'] = 10
         self.train_params['objective'] = 'binary'
         self.train_params['n_jobs'] = self.n_jobs
@@ -294,6 +294,8 @@ class LightGBM(TreeModel):
         message += f"eta: {self.train_params['eta']}\n"
         message += padding
         message += f"max_depth: {self.train_params['max_depth']}\n"
+        message += padding
+        message += f"num_leaves: {self.train_params['num_leaves']}\n"
         message += padding
         message += f"boosting: {self.train_params['boosting']}\n"
         message += padding
