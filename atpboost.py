@@ -59,7 +59,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--proving_script',
         type=str,
-        default= os.path.join(sys.path[0], 'prove.sh'))
+        default= os.path.abspath(os.path.join(sys.path[0], 'prove.sh')))
     parser.add_argument(
         '--ml_models',
         default='xgboost,knn',
