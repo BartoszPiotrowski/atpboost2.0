@@ -107,6 +107,10 @@ if __name__ == '__main__':
         default=10000,
         type=int)
     parser.add_argument(
+        '--xgb_trained_model',
+        default=None,
+        type=str)
+    parser.add_argument(
         '--lgb_rounds',
         default=1000,
         type=int)

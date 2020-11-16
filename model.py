@@ -186,6 +186,7 @@ class XGBoost(TreeModel):
         super(XGBoost, self).__init__(**kwargs)
         self.xgb = import_module('xgboost')
         self.knn_prefiltering = kwargs['xgb_knn_prefiltering']
+        self.trained_model_path = kwargs['xgb_trained_model']
         self.train_params_rounds = kwargs['xgb_rounds']
         self.train_params['max_depth'] = 10
         self.train_params['eta'] = kwargs['xgb_eta']
@@ -194,6 +195,8 @@ class XGBoost(TreeModel):
         self.train_params['n_jobs'] = self.n_jobs
 
     def prepare(self):
+        if self.trained_model_path:
+            return None
         kwargs = {
             'train_deps': self.train_deps,
             'train_neg_deps': self.train_neg_deps,
@@ -205,6 +208,14 @@ class XGBoost(TreeModel):
         return deps_to_train_array(**kwargs)
 
     def train(self, train_deps, train_neg_deps=None, train_subdeps=None):
+        if self.trained_model_path:
+            self.train_deps = train_deps
+            mkdir_if_not_exists(self.save_dir)
+            copyfile(self.trained_model_path, self.model_path)
+            self.logger.print(f'Training skipped -- using a supplied trained '
+                              f'model from {self.trained_model_path}')
+            self.trained_model_path = None
+            return None
         self.train_deps = train_deps
         self.train_neg_deps = train_neg_deps
         self.train_subdeps = train_subdeps
