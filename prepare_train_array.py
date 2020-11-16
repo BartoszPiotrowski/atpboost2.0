@@ -9,6 +9,7 @@ from deps import clean_deps, unify_deps
 from tqdm import tqdm
 
 
+
 def deps_to_train_array(train_deps=None, train_neg_deps=None, n_jobs=1, **kwargs):
     thms = list(set(read_deps(train_deps)))
     split = partition(thms, max(1, len(thms) // 100))
@@ -94,7 +95,7 @@ def merge_saved_arrays(labels_arrays):
     save_path_labels = os.path.join(save_dir, 'cumulated_labels.pickle')
     save_path_array = os.path.join(save_dir, 'cumulated_array.pickle')
     cumul_labels = []
-    for l_a in labels_arrays:
+    for l_a in tqdm(labels_arrays):
         labels_path, array_path = l_a
         labels = load_obj(labels_path)
         array = load_obj(array_path)
