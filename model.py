@@ -1,6 +1,7 @@
 import os
 from shutil import copyfile
 from importlib import import_module
+from tqdm import tqdm
 from prepare_train_array import deps_to_train_array, pairs_to_array
 from utils import read_lines, write_lines, read_features, read_deps, read_stms
 from utils import mkdir_if_not_exists, rmdir_mkdir, write_empty, append_line
@@ -161,7 +162,7 @@ class TreeModel(Model):
         deps = read_deps(self.train_deps, unions=True) # for knn prefilering
         model = self.load()
         scored_prems = {}
-        for conj in conjs:
+        for conj in tqdm(conjs):
             available_prems = self.available_premises(conj)
             if len(available_prems) < max_num_prems:
                 candidate_prems = available_prems
