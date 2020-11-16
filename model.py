@@ -173,7 +173,7 @@ class TreeModel(Model):
                 scored_prems[conj] = self.score_prems(conj, candidate_prems,
                                                   model, features)
             else:
-                logger.print(
+                self.logger.print(
                     f'WARNING: conjecture {conj} had no candidate premises.')
         self.predictions_path = self.make_predictions(scored_prems)
         self.logger.print(f'Predictions saved to {self.predictions_path}')
