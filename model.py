@@ -1,4 +1,5 @@
 import os
+from glob import glob
 from shutil import copyfile
 from importlib import import_module
 from tqdm import tqdm
@@ -6,6 +7,7 @@ from prepare_train_array import deps_to_train_array, pairs_to_array
 from utils import read_lines, write_lines, read_features, read_deps, read_stms
 from utils import mkdir_if_not_exists, rmdir_mkdir, write_empty, append_line
 from utils import dict_features_numbers, similarity, AvailablePremises
+from utils import preds_quality
 
 
 class Model:
@@ -413,6 +415,7 @@ class RNN(Model):
         super(RNN, self).__init__(**kwargs)
         self.rnn_prep= import_module('rnn.prepare_data')
         self.stms = kwargs['statements']
+        self.valid_deps = kwargs['valid_deps']
         self.save_dir = os.path.join(self.save_dir, 'rnn')
         self.model_path = os.path.join(self.save_dir, 'model')
         self.trained_model_path = kwargs['rnn_trained_model']
@@ -431,9 +434,7 @@ class RNN(Model):
         if self.trained_model_path:
             self.logger.print(f'Training skipped -- using a supplied trained '
                               f'model from {self.trained_model_path}')
-            mkdir_if_not_exists(self.save_dir)
-            copyfile(self.trained_model_path,
-                     f'{self.model_path}_step_{str(self.train_steps)}.pt')
+            self.best_model_path = self.trained_model_path
             self.trained_model_path = None
             return self.model_path
 
@@ -447,33 +448,58 @@ class RNN(Model):
                 -data {train_data} \
                 -train_steps {self.train_steps} \
                 -learning_rate {self.learning_rate} \
+                -save_checkpoint_steps 10000 \
                 -world_size 1 -gpu_ranks 0 \
                 -save_model {self.model_path}
             '''
         ).read()
-        return self.model_path
+        if self.valid_deps:
+            print('VALIDATION')
+            valid_thms = set(read_deps(self.valid_deps))
+            models_to_valid = glob(self.model_path + '*')
+            performance = {}
+            for model in models_to_valid:
+                print(model)
+                preds = self.predict(valid_thms, model_to_valid=model)
+                performance[model] = preds_quality(preds, self.valid_deps)
+            self.best_model_path = \
+                max(performance, key=lambda x: performance.__getitem__(x))
+            print(performance)
+            print(self.best_model_path)
+        else:
+            self.best_model_path = \
+                    f"{self.model_path}_step_{str(self.train_steps)}.pt"
+        return self.best_model_path
 
-    def predict(self, conjs):
+    def predict(self, conjs, model_to_valid=None):
+        if model_to_valid:
+            model_path = model_to_valid
+            predictions_path = model_to_valid + '_validation_predictions'
+            source_path = os.path.join(self.save_dir, 'valid.src')
+        else:
+            model_path = self.best_model_path
+            predictions_path = self.predictions_path
+            source_path = os.path.join(self.save_dir, 'test.src')
         conjs = read_lines(conjs) if type(conjs) == str else conjs
         stms = read_stms(self.stms, tokens=True, short=True)
         #conjs_stms = [stms[c] for c in conjs]
         conjs_stms = [stms[c][:1000] for c in conjs] # truncated source
-        source = write_lines(conjs_stms, os.path.join(self.save_dir, 'test.src'))
+        source = write_lines(conjs_stms, source_path)
         os.popen(
             f'''
             onmt_translate \
-                -model {self.model_path}_step_{str(self.train_steps)}.pt \
-                -src {source} \
+                -model {model_path} \
+                -src {source_path} \
                 -beam_size {str(self.n_best)} -n_best {str(self.n_best)} \
                 -batch_size 10 \
                 -replace_unk -verbose \
                 -gpu 0 \
-                -output {self.predictions_path}
+                -output {predictions_path}
             '''
         ).read()
-        preds_raw = read_lines(self.predictions_path)
+        preds_raw = read_lines(predictions_path)
         assert len(preds_raw) and len(preds_raw) % len(conjs) == 0
-        write_empty(self.predictions_path)
+        write_empty(predictions_path)
         # we'll filter out non-available premises and empty sequences
         # when we produced n translations per theorem:
         n = int(len(preds_raw) / len(conjs))
@@ -489,13 +515,13 @@ class RNN(Model):
             ds = [d for d in ds if d in available_prems]
             if ds:
                 deps_unions[c].update(ds)
-                append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
+                append_line(f"{c}:{' '.join(ds)}", predictions_path)
         if n > 1:
             for c in deps_unions:
                 ds = deps_unions[c]
                 if ds:
-                    append_line(f"{c}:{' '.join(ds)}", self.predictions_path)
-        return self.predictions_path
+                    append_line(f"{c}:{' '.join(ds)}", predictions_path)
+        return predictions_path
 
 
 
