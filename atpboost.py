@@ -27,6 +27,10 @@ if __name__ == '__main__':
         type=str,
         default=None)
     parser.add_argument(
+        '--valid_deps',
+        type=str,
+        default=None)
+    parser.add_argument(
         '--data_dir',
         type=str,
         default='atpboost_data')
