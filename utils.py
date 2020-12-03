@@ -510,3 +510,19 @@ def time_limit(seconds):
     finally:
         signal.alarm(0)
 
+
+def preds_quality(preds, deps):
+    deps = read_deps(deps, unions=True)
+    preds = read_deps(preds, unions=True)
+    thms = set(deps) & set(preds)
+    goodness = []
+    for t in thms:
+        p = set(preds[t])
+        d = set(deps[t])
+        overlap  = len(p & d) / len(p | d)
+        coverage = len(p & d) / len(d)
+        assert overlap <= coverage
+        good = overlap * 0.3 + coverage * 0.7
+        goodness.append(good)
+    return sum(goodness) / len(goodness)
+
