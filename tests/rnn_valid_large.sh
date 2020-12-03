@@ -10,7 +10,7 @@ source atpboost_venv/bin/activate
 	--features data/example/features_binary \
 	--chronology data/example/chronology \
 	--ml_models rnn \
-	--rnn_train_steps 100 \
+	--rnn_train_steps 10000 \
 	--data_dir ${0%.*}.data \
 	--logfile ${0%.*}.log
 
