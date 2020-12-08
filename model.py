@@ -459,12 +459,13 @@ class RNN(Model):
             models_to_valid = glob(self.model_path + '*')
             performance = {}
             for model in models_to_valid:
+                self.logger.print(f"Validating model {model}...")
                 preds = self.predict(valid_thms, model_to_valid=model)
                 performance[model] = preds_quality(preds, self.valid_deps)
+                self.logger.print(f"Performance {performance[model]}")
             self.best_model_path = \
                 max(performance, key=lambda x: performance.__getitem__(x))
             self.logger.print(f"Best model path: {self.best_model_path}")
-            self.logger.print(f"Best model performance: {max(performance)}")
         else:
             self.best_model_path = \
                     f"{self.model_path}_step_{str(self.train_steps)}.pt"
@@ -528,11 +529,6 @@ class Transformer(RNN):
     def __init__(self, **kwargs):
         self.name = 'transformer'
         super(Transformer, self).__init__(**kwargs)
-        self.rnn_prep= import_module('rnn.prepare_data')
-        self.stms = kwargs['statements']
-        self.save_dir = os.path.join(self.save_dir, self.name)
-        self.model_path = os.path.join(self.save_dir, 'model')
-        os.environ['MKL_THREADING_LAYER'] = 'GNU'
 
     def train(self, train_deps, train_neg_deps=None, train_subdeps=None):
         self.train_deps = train_deps
@@ -543,7 +539,7 @@ class Transformer(RNN):
             f'''
             onmt_train \
                 -data {train_data} \
-                -train_steps 200000 \
+                -train_steps {self.train_steps} \
                 -learning_rate {self.learning_rate} \
                 -world_size 1 -gpu_ranks 0 \
                 -save_model {self.model_path}
@@ -580,4 +576,20 @@ class Transformer(RNN):
                 -attention_dropout [0.1] \
             '''
         ).read()
-        return self.model_path
+        if self.valid_deps:
+            self.logger.print("Choosing model by validation performance...")
+            valid_thms = set(read_deps(self.valid_deps))
+            models_to_valid = glob(self.model_path + '*')
+            performance = {}
+            for model in models_to_valid:
+                self.logger.print(f"Validating model {model}...")
+                preds = self.predict(valid_thms, model_to_valid=model)
+                performance[model] = preds_quality(preds, self.valid_deps)
+                self.logger.print(f"Performance {performance[model]}")
+            self.best_model_path = \
+                max(performance, key=lambda x: performance.__getitem__(x))
+            self.logger.print(f"Best model path: {self.best_model_path}")
+        else:
+            self.best_model_path = \
+                    f"{self.model_path}_step_{str(self.train_steps)}.pt"
+        return self.best_model_path
