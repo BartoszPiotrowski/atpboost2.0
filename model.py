@@ -416,6 +416,7 @@ class RNN(Model):
         self.rnn_prep= import_module('rnn.prepare_data')
         self.stms = kwargs['statements']
         self.valid_deps = kwargs['valid_deps']
+        self.train_deps_subset = kwargs['train_deps_subset']
         self.save_dir = os.path.join(self.save_dir, 'rnn')
         self.model_path = os.path.join(self.save_dir, 'model')
         self.trained_model_path = kwargs['rnn_trained_model']
@@ -429,6 +430,27 @@ class RNN(Model):
         return self.rnn_prep.prepare_training_data(
             self.train_deps, self.stms, self.save_dir,
             self.train_subdeps)
+
+    def validate(self):
+        self.logger.print("Choosing model by validation performance...")
+        valid_thms = set(read_deps(self.valid_deps))
+        models_to_valid = glob(self.model_path + '*.pt')
+        performance = {}
+        for model in models_to_valid:
+            self.logger.print(f"Validating model {model}...")
+            preds = self.predict(valid_thms, model_to_valid=model)
+            performance[model] = preds_quality(preds, self.valid_deps)
+            self.logger.print(f"Performance on validation {performance[model]}")
+            if self.train_deps_subset:
+                train_subset_thms = set(read_deps(self.train_deps_subset))
+                preds = self.predict(train_subset_thms, model_to_valid=model)
+                performance_train = preds_quality(preds, self.train_deps_subset)
+                self.logger.print(
+                    f"Performance on subset of train set: {performance_train}")
+        self.best_model_path = \
+            max(performance, key=lambda x: performance.__getitem__(x))
+        self.logger.print(f"Best model path: {self.best_model_path}")
+        return self.best_model_path
 
     def train(self, train_deps, train_neg_deps=None, train_subdeps=None):
         if self.trained_model_path:
@@ -454,21 +476,10 @@ class RNN(Model):
             '''
         ).read()
         if self.valid_deps:
-            self.logger.print("Choosing model by validation performance...")
-            valid_thms = set(read_deps(self.valid_deps))
-            models_to_valid = glob(self.model_path + '*')
-            performance = {}
-            for model in models_to_valid:
-                self.logger.print(f"Validating model {model}...")
-                preds = self.predict(valid_thms, model_to_valid=model)
-                performance[model] = preds_quality(preds, self.valid_deps)
-                self.logger.print(f"Performance {performance[model]}")
-            self.best_model_path = \
-                max(performance, key=lambda x: performance.__getitem__(x))
-            self.logger.print(f"Best model path: {self.best_model_path}")
+            self.best_model_path = self.validate()
         else:
             self.best_model_path = \
-                    f"{self.model_path}_step_{str(self.train_steps)}.pt"
+                f"{self.model_path}_step_{str(self.train_steps)}.pt"
         return self.best_model_path
 
     def predict(self, conjs, model_to_valid=None):
@@ -577,18 +588,7 @@ class Transformer(RNN):
             '''
         ).read()
         if self.valid_deps:
-            self.logger.print("Choosing model by validation performance...")
-            valid_thms = set(read_deps(self.valid_deps))
-            models_to_valid = glob(self.model_path + '*')
-            performance = {}
-            for model in models_to_valid:
-                self.logger.print(f"Validating model {model}...")
-                preds = self.predict(valid_thms, model_to_valid=model)
-                performance[model] = preds_quality(preds, self.valid_deps)
-                self.logger.print(f"Performance {performance[model]}")
-            self.best_model_path = \
-                max(performance, key=lambda x: performance.__getitem__(x))
-            self.logger.print(f"Best model path: {self.best_model_path}")
+            self.best_model_path = self.validate()
         else:
             self.best_model_path = \
                     f"{self.model_path}_step_{str(self.train_steps)}.pt"
