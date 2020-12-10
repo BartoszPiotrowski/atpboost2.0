@@ -111,10 +111,6 @@ if __name__ == '__main__':
         default=0.1,
         type=float)
     parser.add_argument(
-        '--xgb_knn_prefiltering',
-        default=10000,
-        type=int)
-    parser.add_argument(
         '--xgb_trained_model',
         default=None,
         type=str)
@@ -135,8 +131,8 @@ if __name__ == '__main__':
         default=0.1,
         type=float)
     parser.add_argument(
-        '--lgb_knn_prefiltering',
-        default=10000,
+        '--knn_prefiltering',
+        default=1000,
         type=int)
     parser.add_argument(
         '--rnn_train_steps',

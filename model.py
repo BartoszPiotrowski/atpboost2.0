@@ -134,7 +134,8 @@ class TreeModel(Model):
         return deps_to_train_array(**kwargs)
 
     def knn_prefilter(self, conj, available_prems, deps, features,
-                      features_numbers, N_thms=1024):
+                      features_numbers):
+        max_num_prems=self.knn_prefiltering
         candidate_prems = set()
         available_thms = {t for t in deps if deps[t] <= available_prems}
         simils = {thm: similarity((conj, features[conj]),
@@ -143,10 +144,10 @@ class TreeModel(Model):
                             for thm in available_thms}
                                         # TODO is len(available_thms) ok here?
         simils_sorted = sorted(simils.values(), reverse=True)
-        N_thresh = simils_sorted[min(N_thms, len(simils) - 1)]
-        N_nearest_thms = {t for t in simils if simils[t] >= N_thresh}
-        for thm in N_nearest_thms:
+        for thm in simils:
             candidate_prems.update(deps[thm])
+            if len(candidate_prems) >= max_num_prems:
+                break
         assert candidate_prems <= available_prems
         return candidate_prems
 
@@ -169,9 +170,13 @@ class TreeModel(Model):
             if len(available_prems) < max_num_prems:
                 candidate_prems = available_prems
             else:
+                #self.logger.print(f'Prefiltering with knn...')
                 candidate_prems = self.knn_prefilter(conj, available_prems,
                                                      deps, features,
                                                      features_numbers)
+                #self.logger.print(f'Number of candidate premises reduced '
+                #                  f'from {len(available_prems)} '
+                #                  f'to {len(candidate_prems)}')
             if len(candidate_prems):
                 scored_prems[conj] = self.score_prems(conj, candidate_prems,
                                                   model, features)
@@ -188,7 +193,7 @@ class XGBoost(TreeModel):
         self.name = 'xgboost'
         super(XGBoost, self).__init__(**kwargs)
         self.xgb = import_module('xgboost')
-        self.knn_prefiltering = kwargs['xgb_knn_prefiltering']
+        self.knn_prefiltering = kwargs['knn_prefiltering']
         self.trained_model_path = kwargs['xgb_trained_model']
         self.train_params_rounds = kwargs['xgb_rounds']
         self.train_params['max_depth'] = 10
@@ -272,7 +277,7 @@ class LightGBM(TreeModel):
         self.name = 'lightgbm'
         super(LightGBM, self).__init__(**kwargs)
         self.lgb = import_module('lightgbm')
-        self.knn_prefiltering = kwargs['lgb_knn_prefiltering']
+        self.knn_prefiltering = kwargs['knn_prefiltering']
         self.train_params_rounds = kwargs['lgb_rounds']
         self.train_params['eta'] = kwargs['lgb_eta']
         self.train_params['boosting'] = 'gbdt'
