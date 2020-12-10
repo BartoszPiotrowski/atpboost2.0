@@ -132,7 +132,7 @@ if __name__ == '__main__':
         type=float)
     parser.add_argument(
         '--knn_prefiltering',
-        default=1000,
+        default=2000,
         type=int)
     parser.add_argument(
         '--rnn_train_steps',
