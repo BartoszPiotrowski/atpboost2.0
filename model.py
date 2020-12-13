@@ -121,13 +121,17 @@ class TreeModel(Model):
         super(TreeModel, self).__init__(**kwargs)
         self.model_path = os.path.join(self.save_dir, 'model')
         self.features = kwargs['features']
+        self.ratio_neg_pos = kwargs['ratio_neg_pos']
 
     def prepare(self):
+        if self.trained_model_path:
+            return None
         kwargs = {
             'train_deps': self.train_deps,
             'train_neg_deps': self.train_neg_deps,
             'features': self.features,
             'available_premises': self.available_premises,
+            'ratio_neg_pos': self.ratio_neg_pos,
             'save_dir': self.save_dir,
             'n_jobs': self.n_jobs,
         }
@@ -202,18 +206,6 @@ class XGBoost(TreeModel):
         self.train_params['objective'] = 'binary:logistic'
         self.train_params['n_jobs'] = self.n_jobs
 
-    def prepare(self):
-        if self.trained_model_path:
-            return None
-        kwargs = {
-            'train_deps': self.train_deps,
-            'train_neg_deps': self.train_neg_deps,
-            'features': self.features,
-            'available_premises': self.available_premises,
-            'save_dir': self.save_dir,
-            'n_jobs': self.n_jobs,
-        }
-        return deps_to_train_array(**kwargs)
 
     def train(self, train_deps, train_neg_deps=None, train_subdeps=None):
         if self.trained_model_path:

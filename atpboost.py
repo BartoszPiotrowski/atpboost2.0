@@ -135,6 +135,10 @@ if __name__ == '__main__':
         default=2000,
         type=int)
     parser.add_argument(
+        '--ratio_neg_pos',
+        default=16,
+        type=int)
+    parser.add_argument(
         '--rnn_train_steps',
         default=100000,
         type=int)
