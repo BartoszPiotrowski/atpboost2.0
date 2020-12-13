@@ -50,7 +50,6 @@ def deps_to_train_array_1_job(i_thms=None, deps=None, deps_neg=None,
 
 def thm_to_labels_and_pairs(thm, pos_premises, available_premises, neg_premises,
                             ratio_neg_pos=16, **kwargs):
-    print(ratio_neg_pos)
     not_pos_premises = set(available_premises) - pos_premises
     assert not pos_premises & not_pos_premises
     if len(not_pos_premises) == 0:
