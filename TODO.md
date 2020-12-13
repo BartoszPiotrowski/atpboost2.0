@@ -1,4 +1,5 @@
 - augmentation trick for rnn
+    - eliminate lemmas with 'esk'
 - checking and initializing parameters
 - assert that for every solution there is a problem defined
 - adapt enigmatic featurizer
