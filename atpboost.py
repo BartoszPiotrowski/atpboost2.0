@@ -132,7 +132,7 @@ if __name__ == '__main__':
         type=float)
     parser.add_argument(
         '--knn_prefiltering',
-        default=2000,
+        default=5000,
         type=int)
     parser.add_argument(
         '--ratio_neg_pos',
