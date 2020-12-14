@@ -526,3 +526,19 @@ def preds_quality(preds, deps):
         goodness.append(good)
     return sum(goodness) / len(goodness)
 
+
+def scored_preds_quality(preds, deps):
+    deps = read_deps(deps)
+    preds = read_deps(preds)
+    thms = set(deps) & set(preds)
+    goodness = []
+    for t in thms:
+        for d in deps[t]:
+            for p in preds[t]:
+                p = set(p)
+                d = set(d)
+                overlap  = len(p & d) / len(p | d)
+                coverage = len(p & d) / len(d)
+                good = overlap * 0.3 + coverage * 0.7
+                goodness.append(good)
+    return sum(goodness) / len(goodness)
