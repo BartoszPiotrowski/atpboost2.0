@@ -10,6 +10,7 @@ from math import log
 from sys import getsizeof
 from shutil import copyfile, rmtree
 from contextlib import contextmanager
+from itertools import product
 
 
 def read(filename):
@@ -542,3 +543,17 @@ def scored_preds_quality(preds, deps):
                 good = overlap * 0.3 + coverage * 0.7
                 goodness.append(good)
     return sum(goodness) / len(goodness)
+
+def grid_from_params(params_string):
+    params_list = params_string.split(';')
+    params_list = [p.split(':') for p in params_list]
+    params = dict([(p[0], p[1].split(',')) for p in params_list])
+    names = list(params)
+    values = [params[n] for n in names]
+    prod = product(*values)
+    def numer(x):
+        try:
+            return int(x)
+        except:
+            return float(x)
+    return [dict(zip(names, [numer(x) for x in p])) for p in prod]

@@ -1,13 +1,13 @@
 import os
 from glob import glob
-from shutil import copyfile
+from shutil import copyfile, move
 from importlib import import_module
 from tqdm import tqdm
 from prepare_train_array import deps_to_train_array, pairs_to_array
 from utils import read_lines, write_lines, read_features, read_deps, read_stms
 from utils import mkdir_if_not_exists, rmdir_mkdir, write_empty, append_line
 from utils import dict_features_numbers, similarity, AvailablePremises
-from utils import preds_quality
+from utils import preds_quality, scored_preds_quality, grid_from_params
 
 
 class Model:
@@ -19,6 +19,8 @@ class Model:
         self.save_dir = os.path.join(kwargs['data_dir'], 'models', self.name)
         self.predictions_path = os.path.join(self.save_dir, 'predictions')
         self.available_premises = AvailablePremises(**kwargs)
+        self.valid_deps = kwargs['valid_deps']
+        self.train_deps_subset = kwargs['train_deps_subset']
         mkdir_if_not_exists(self.save_dir)
 
     def train(self, train_deps, train_neg_deps=None, train_subdeps=None):
@@ -158,16 +160,20 @@ class TreeModel(Model):
     def score_prems(self):
         raise NotImplemented
 
-    def predict(self, conjs, max_num_prems=None):
+    def predict(self, conjs, max_num_prems=None, model_to_valid=None):
         if max_num_prems == None:
             max_num_prems = self.knn_prefiltering
         conjs = read_lines(conjs) if type(conjs) == str else conjs
-        self.logger.print(f'Making predictions for {len(conjs)} conjectures '
-                          f'from {self.name} model...')
         features = read_features(self.features)
         features_numbers = dict_features_numbers(features) # for knn prefilering
         deps = read_deps(self.train_deps, unions=True) # for knn prefilering
-        model = self.load()
+        if model_to_valid:
+            model = self.load(model_to_valid)
+        else:
+            self.logger.print(f'Making predictions for {len(conjs)} conjectures '
+                              f'from {self.name} model...')
+            self.logger.print(f'Loading model from {self.model_path}')
+            model = self.load()
         scored_prems = {}
         for conj in tqdm(conjs):
             available_prems = self.available_premises(conj)
@@ -188,8 +194,35 @@ class TreeModel(Model):
                 self.logger.print(
                     f'WARNING: conjecture {conj} had no candidate premises.')
         self.predictions_path = self.make_predictions(scored_prems)
-        self.logger.print(f'Predictions saved to {self.predictions_path}')
-        return self.predictions_path
+        if not model_to_valid:
+            self.logger.print(f'Predictions saved to {self.predictions_path}')
+            return self.predictions_path
+        else:
+            valid_preds = model_to_valid + '_validation_predictions'
+            os.rename(self.predictions_path, valid_preds)
+            return valid_preds
+
+    def validate(self):
+        self.logger.print("Choosing model by validation performance...")
+        valid_thms = set(read_deps(self.valid_deps))
+        models_to_valid = glob(self.model_path + '*')
+        performance = {}
+        for model in models_to_valid:
+            self.logger.print(f"Validating model {model}...")
+            preds = self.predict(valid_thms, model_to_valid=model)
+            performance[model] = scored_preds_quality(preds, self.valid_deps)
+            self.logger.print(f"Performance on validation {performance[model]}")
+            if self.train_deps_subset:
+                train_subset_thms = set(read_deps(self.train_deps_subset))
+                preds = self.predict(train_subset_thms, model_to_valid=model)
+                performance_train = scored_preds_quality(
+                    preds, self.train_deps_subset)
+                self.logger.print(
+                    f"Performance on subset of train set: {performance_train}")
+        self.best_model_path = \
+            max(performance, key=lambda x: performance.__getitem__(x))
+        self.logger.print(f"Best model path: {self.best_model_path}")
+        return self.best_model_path
 
 
 class XGBoost(TreeModel):
@@ -205,6 +238,7 @@ class XGBoost(TreeModel):
         self.train_params['booster'] = 'gbtree'
         self.train_params['objective'] = 'binary:logistic'
         self.train_params['n_jobs'] = self.n_jobs
+        self.params_grid = kwargs['xgb_params_grid']
 
 
     def train(self, train_deps, train_neg_deps=None, train_subdeps=None):
@@ -223,14 +257,37 @@ class XGBoost(TreeModel):
         labels, array = self.prepare()
         dtrain = self.xgb.DMatrix(array, label=labels)
         self.logger.print('Training data prepared')
-        self.logger.print(self.show_config())
-        self.logger.print('Training XGBoost model...')
-        model = self.xgb.train(self.train_params, dtrain,
-                          num_boost_round=self.train_params_rounds,
-                          evals=[(dtrain, 'train')], verbose_eval=100)
-        self.logger.print('Training XGBoost model done')
-        self.save(model)
-        self.logger.print(f'Model saved to {self.model_path}')
+        if not self.params_grid:
+            self.logger.print(self.show_config())
+            self.logger.print('Training XGBoost model...')
+            model = self.xgb.train(self.train_params, dtrain,
+                              num_boost_round=self.train_params_rounds,
+                              evals=[(dtrain, 'train')], verbose_eval=100)
+            self.logger.print('Training XGBoost model done')
+            self.save(model)
+            self.logger.print(f'Model saved to {self.model_path}')
+        else:
+            assert self.valid_deps
+            grid = grid_from_params(self.params_grid)
+            for ps in grid:
+                to_append = '_' + '_'.join([n + str(ps[n]) for n in ps])
+                model_path = self.model_path + to_append
+                for n in ps:
+                    self.train_params[n] = ps[n]
+                self.logger.print(self.show_config())
+                self.logger.print('Training XGBoost model...')
+                model = self.xgb.train(self.train_params, dtrain,
+                                  num_boost_round=self.train_params_rounds,
+                                  evals=[(dtrain, 'train')], verbose_eval=100)
+                self.logger.print('Training XGBoost model done')
+                self.save(model, model_path)
+                self.logger.print(f'Model saved to {model_path}')
+            best_model_path = self.validate()
+            copyfile(best_model_path, self.model_path)
+            tmp = mkdir_if_not_exists(
+                os.path.join(self.save_dir, 'validation_tmp'))
+            [move(f, tmp) for f in glob(self.model_path + '_*')]
+
 
     def show_config(self, padding=' ' * 25):
         message = 'Parameters of the XGBoost model:\n'
@@ -254,13 +311,18 @@ class XGBoost(TreeModel):
         premises_scores = list(zip(premises, scores))
         return premises_scores
 
-    def save(self, model):
-        model.save_model(self.model_path)
-        return self.model_path
+    def save(self, model, path=None):
+        if path == None:
+            path = self.model_path
+        model.save_model(path)
+        return path
 
-    def load(self):
+    def load(self, path=None):
         model = self.xgb.Booster()
-        model.load_model(self.model_path)
+        if path:
+            model.load_model(path)
+        else:
+            model.load_model(self.model_path)
         return model
 
 

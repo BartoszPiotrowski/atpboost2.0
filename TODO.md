@@ -1,6 +1,10 @@
+- ./tests/xgb_valid.sh gives error on after the second iteration of the loop
+- grid search option
+- metric eval of tree models
 - augmentation trick for rnn
     - eliminate lemmas with 'esk'
 - checking and initializing parameters
+- clean tmp data
 - assert that for every solution there is a problem defined
 - adapt enigmatic featurizer
 - different modes of mining

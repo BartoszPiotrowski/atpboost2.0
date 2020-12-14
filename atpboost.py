@@ -107,6 +107,10 @@ if __name__ == '__main__':
         default=1000,
         type=int)
     parser.add_argument(
+        '--xgb_params_grid',
+        default=None,
+        type=str)
+    parser.add_argument(
         '--xgb_eta',
         default=0.1,
         type=float)
