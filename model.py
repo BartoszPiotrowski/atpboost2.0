@@ -132,9 +132,9 @@ class TreeModel(Model):
         if self.trained_model_path:
             return None
         if self.prepared_train_array and self.prepared_train_labels:
-            self.logger.print(f'Loading training array from {self.prepared_train_array}')
             self.logger.print(f'Loading training labels from {self.prepared_train_labels}')
             labels = load_obj(self.prepared_train_labels)
+            self.logger.print(f'Loading training array from {self.prepared_train_array}')
             array = load_obj(self.prepared_train_array)
             assert len(labels) == array.shape[0]
             self.prepared_train_array = None
