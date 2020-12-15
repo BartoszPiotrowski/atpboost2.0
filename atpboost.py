@@ -76,6 +76,14 @@ if __name__ == '__main__':
         '--save_prediction_scores',
         action='store_true')
     parser.add_argument(
+        '--prepared_train_array',
+        default=None,
+        type=str)
+    parser.add_argument(
+        '--prepared_train_labels',
+        default=None,
+        type=str)
+    parser.add_argument(
         '--check_data',
         action='store_true')
     parser.add_argument(

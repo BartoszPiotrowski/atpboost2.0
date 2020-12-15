@@ -104,9 +104,13 @@ def merge_saved_arrays(labels_arrays):
                 if 'cumul_array' in dir() else array
         save_obj(cumul_labels, save_path_labels + '.part')
         save_obj(cumul_array, save_path_array + '.part')
+        os.remove(labels_path)
+        os.remove(array_path)
     save_obj(cumul_labels, save_path_labels)
     save_obj(cumul_array, save_path_array)
     assert len(cumul_labels) == cumul_array.shape[0]
+    os.remove(save_path_labels + '.part')
+    os.remove(save_path_array + '.part')
     return cumul_labels, cumul_array
 
 

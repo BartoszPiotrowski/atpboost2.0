@@ -8,6 +8,7 @@ from utils import read_lines, write_lines, read_features, read_deps, read_stms
 from utils import mkdir_if_not_exists, rmdir_mkdir, write_empty, append_line
 from utils import dict_features_numbers, similarity, AvailablePremises
 from utils import preds_quality, scored_preds_quality, grid_from_params
+from utils import load_obj
 
 
 class Model:
@@ -124,10 +125,21 @@ class TreeModel(Model):
         self.model_path = os.path.join(self.save_dir, 'model')
         self.features = kwargs['features']
         self.ratio_neg_pos = kwargs['ratio_neg_pos']
+        self.prepared_train_array = kwargs['prepared_train_array']
+        self.prepared_train_labels = kwargs['prepared_train_labels']
 
     def prepare(self):
         if self.trained_model_path:
             return None
+        if self.prepared_train_array and self.prepared_train_labels:
+            self.logger.print(f'Loading training array from {self.prepared_train_array}')
+            self.logger.print(f'Loading training labels from {self.prepared_train_labels}')
+            labels = load_obj(self.prepared_train_labels)
+            array = load_obj(self.prepared_train_array)
+            assert len(labels) == array.shape[0]
+            self.prepared_train_array = None
+            self.prepared_train_labels = None
+            return labels, array
         kwargs = {
             'train_deps': self.train_deps,
             'train_neg_deps': self.train_neg_deps,
