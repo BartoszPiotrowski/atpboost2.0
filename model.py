@@ -127,6 +127,7 @@ class TreeModel(Model):
         self.ratio_neg_pos = kwargs['ratio_neg_pos']
         self.prepared_train_array = kwargs['prepared_train_array']
         self.prepared_train_labels = kwargs['prepared_train_labels']
+        self.trained_model_path = None
 
     def prepare(self):
         if self.trained_model_path:
