@@ -237,6 +237,12 @@ class TreeModel(Model):
         self.logger.print(f"Best model path: {self.best_model_path}")
         return self.best_model_path
 
+    def save(self, model, path=None):
+        if path == None:
+            path = self.model_path
+        model.save_model(path)
+        return path
+
 
 class XGBoost(TreeModel):
     def __init__(self, **kwargs):
@@ -324,11 +330,6 @@ class XGBoost(TreeModel):
         premises_scores = list(zip(premises, scores))
         return premises_scores
 
-    def save(self, model, path=None):
-        if path == None:
-            path = self.model_path
-        model.save_model(path)
-        return path
 
     def load(self, path=None):
         model = self.xgb.Booster()
@@ -354,6 +355,7 @@ class LightGBM(TreeModel):
         self.train_params['objective'] = 'binary'
         self.train_params['n_jobs'] = self.n_jobs
         self.train_params['verbose'] = -1
+        self.params_grid = kwargs['lgb_params_grid']
 
     def train(self, train_deps, train_neg_deps=None, train_subdeps=None):
         self.train_deps = train_deps
@@ -363,14 +365,36 @@ class LightGBM(TreeModel):
         labels, array = self.prepare()
         dtrain = self.lgb.Dataset(array, label=labels)
         self.logger.print('Training data prepared')
-        self.logger.print(self.show_config())
-        self.logger.print('Training LightGBM model...')
-        model = self.lgb.train(self.train_params, dtrain,
-                          num_boost_round=self.train_params_rounds,
-                          valid_sets=[dtrain], verbose_eval=100)
-        self.logger.print('Training LightGBM model done')
-        self.save(model)
-        self.logger.print(f'Model saved to {self.model_path}')
+        if not self.params_grid:
+            self.logger.print(self.show_config())
+            self.logger.print('Training LightGBM model...')
+            model = self.lgb.train(self.train_params, dtrain,
+                              num_boost_round=self.train_params_rounds,
+                              valid_sets=[dtrain], verbose_eval=100)
+            self.logger.print('Training LightGBM model done')
+            self.save(model)
+            self.logger.print(f'Model saved to {self.model_path}')
+        else:
+            assert self.valid_deps
+            grid = grid_from_params(self.params_grid)
+            for ps in grid:
+                to_append = '_' + '_'.join([n + str(ps[n]) for n in ps])
+                model_path = self.model_path + to_append
+                for n in ps:
+                    self.train_params[n] = ps[n]
+                self.logger.print(self.show_config())
+                self.logger.print('Training LightGBM model...')
+                model = self.lgb.train(self.train_params, dtrain,
+                              num_boost_round=self.train_params_rounds,
+                              valid_sets=[dtrain], verbose_eval=100)
+                self.logger.print('Training LightGBM model done')
+                self.save(model, model_path)
+                self.logger.print(f'Model saved to {model_path}')
+            best_model_path = self.validate()
+            copyfile(best_model_path, self.model_path)
+            tmp = mkdir_if_not_exists(
+                os.path.join(self.save_dir, 'validation_tmp'))
+            [move(f, tmp) for f in glob(self.model_path + '_*')]
 
     def show_config(self, padding=' ' * 25):
         message = 'Parameters of the LightGBM model:\n'
@@ -395,12 +419,11 @@ class LightGBM(TreeModel):
         premises_scores = list(zip(premises, scores))
         return premises_scores
 
-    def save(self, model):
-        model.save_model(self.model_path)
-        return self.model_path
-
-    def load(self):
-        model = self.lgb.Booster(model_file=self.model_path)
+    def load(self, path=None):
+        if path:
+            model = self.lgb.Booster(model_file=path)
+        else:
+            model = self.lgb.Booster(model_file=self.model_path)
         return model
 
 

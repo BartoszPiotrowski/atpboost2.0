@@ -143,6 +143,10 @@ if __name__ == '__main__':
         default=0.1,
         type=float)
     parser.add_argument(
+        '--lgb_params_grid',
+        default=None,
+        type=str)
+    parser.add_argument(
         '--knn_prefiltering',
         default=5000,
         type=int)
