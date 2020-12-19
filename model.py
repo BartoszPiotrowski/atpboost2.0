@@ -657,6 +657,7 @@ class Transformer(RNN):
                 -dropout_steps [0] \
                 -dropout [0.1] \
                 -attention_dropout [0.1] \
+                -save_checkpoint_steps 50000 \
             '''
         ).read()
         if self.valid_deps:
