@@ -252,7 +252,7 @@ class XGBoost(TreeModel):
         self.knn_prefiltering = kwargs['knn_prefiltering']
         self.trained_model_path = kwargs['xgb_trained_model']
         self.train_params_rounds = kwargs['xgb_rounds']
-        self.train_params['max_depth'] = 10
+        self.train_params['max_depth'] = kwargs['xgb_depth']
         self.train_params['eta'] = kwargs['xgb_eta']
         self.train_params['booster'] = 'gbtree'
         self.train_params['objective'] = 'binary:logistic'
