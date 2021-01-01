@@ -51,7 +51,7 @@ def extract_subdeps(proofs, outdir=None):
     output_files = []
     for p in proofs:
         try:
-            with time_limit(50):
+            with time_limit(20):
                 subdeps_lines = extract_subdeps_1(p)
         except:
             subdeps_lines = None
