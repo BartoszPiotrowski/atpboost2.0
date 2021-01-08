@@ -1,7 +1,7 @@
 rm -rf ${0%.*}.data
 source atpboost_venv/bin/activate
 ./atpboost.py \
-	--iterations 2 \
+	--iterations 1 \
     --no_proving \
 	--conjectures data/example/conjectures \
 	--train_deps data/example/train_deps \

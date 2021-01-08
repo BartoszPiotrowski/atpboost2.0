@@ -9,7 +9,9 @@ source atpboost_venv/bin/activate
 	--ml_models lightgbm \
 	--lgb_eta 0.1 \
 	--lgb_rounds 100 \
-	--lgb_knn_prefiltering 10 \
+	--lgb_depth 20 \
+	--lgb_leaves 2000 \
+	--knn_prefiltering 10 \
 	--mining 0.1 \
 	--data_dir ${0%.*}.data \
 	--logfile ${0%.*}.log

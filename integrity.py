@@ -29,7 +29,7 @@ def check_availability(item_set, *data, file=None):
             for l in data_i:
                 items_i = set(l.replace(':', ' ').split(' '))
                 assert items_i < item_set, \
-                        f"Missing items in {file}: {items_i - item_set}"
+                    f"Missing items in {file}: {items_i - item_set}; line: {l}"
 
 def check_chronology(chronology, deps):
     chronology = read_lines(chronology)
