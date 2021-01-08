@@ -565,6 +565,8 @@ class RNN(Model):
                 -data {train_data} \
                 -train_steps {self.train_steps} \
                 -learning_rate {self.learning_rate} \
+                -src_vocab_size 100000 \
+                -tgt_vocab_size 100000 \
                 -save_checkpoint_steps 10000 \
                 -world_size 1 -gpu_ranks 0 \
                 -save_model {self.model_path}
