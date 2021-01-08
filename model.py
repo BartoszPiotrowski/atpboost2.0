@@ -676,7 +676,7 @@ class Transformer(RNN):
                 -enc_layers 6 \
                 -dec_layers 6 \
                 -heads 9 \
-                -rnn_size 1024 \
+                -rnn_size 512 \
                 -word_vec_size 1024 \
                 -transformer_ff 2048 \
                 -dropout_steps [0] \
