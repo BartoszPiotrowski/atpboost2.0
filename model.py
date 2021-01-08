@@ -649,6 +649,8 @@ class Transformer(RNN):
                 -learning_rate {self.learning_rate} \
                 -world_size 1 -gpu_ranks 0 \
                 -save_model {self.model_path}
+                -tgt_vocab_size 100000 \
+                -src_vocab_size 100000 \
                 -queue_size 10000 \
                 -bucket_size 32768 \
                 -batch_type "tokens" \
