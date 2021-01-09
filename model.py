@@ -565,8 +565,6 @@ class RNN(Model):
                 -data {train_data} \
                 -train_steps {self.train_steps} \
                 -learning_rate {self.learning_rate} \
-                -src_vocab_size 100000 \
-                -tgt_vocab_size 100000 \
                 -save_checkpoint_steps 10000 \
                 -world_size 1 -gpu_ranks 0 \
                 -save_model {self.model_path}
@@ -623,7 +621,8 @@ class RNN(Model):
             ds = [d for d in ds if d in available_prems]
             if ds:
                 deps_unions[c].update(ds)
-                append_line(f"{c}:{' '.join(ds)}", predictions_path)
+                if i % n == 0: # append only first predicted sequence
+                    append_line(f"{c}:{' '.join(ds)}", predictions_path)
         if n > 1:
             for c in deps_unions:
                 ds = deps_unions[c]
@@ -651,8 +650,6 @@ class Transformer(RNN):
                 -learning_rate {self.learning_rate} \
                 -world_size 1 -gpu_ranks 0 \
                 -save_model {self.model_path}
-                -tgt_vocab_size 100000 \
-                -src_vocab_size 100000 \
                 -queue_size 10000 \
                 -bucket_size 32768 \
                 -batch_type "tokens" \

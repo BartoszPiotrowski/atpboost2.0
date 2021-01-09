@@ -4,14 +4,14 @@ from utils import read_stms, write_lines, read_deps, read_lines
 
 def prepare_training_data(deps, stms, save_dir, subproofs=None,
                           extract_subproofs=False):
-    deps = read_deps(deps)
+    deps = read_lines(deps) # order of premises matters
     stms = read_stms(stms, tokens=True, short=True)
     source_lines, target_lines = [], []
-    for conj in deps:
-        for ds in deps[conj]:
-            #source_lines.append(stms[conj])
-            source_lines.append(stms[conj][:1000]) # truncate
-            target_lines.append(' '.join(ds))
+    for l in deps:
+        conj, ds = l.split(':')
+        #source_lines.append(stms[conj])
+        source_lines.append(stms[conj][:1000]) # truncate
+        target_lines.append(ds)
     if subproofs:
         for l in read_lines(subproofs):
             assert '#' in l, (subproofs, l)
@@ -25,6 +25,8 @@ def prepare_training_data(deps, stms, save_dir, subproofs=None,
         onmt_preprocess \
             -train_src {save_dir}/train.src \
             -train_tgt {save_dir}/train.tgt \
+            -src_vocab_size 100000 \
+            -tgt_vocab_size 100000 \
             -overwrite -tgt_seq_length 1000 -src_seq_length 1000 \
             -save_data {save_dir}/onmt
              ''').read()
