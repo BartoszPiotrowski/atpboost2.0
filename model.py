@@ -94,20 +94,27 @@ class KNN(Model):
                                   (thm,  features[thm]),
                                   features_numbers, len(available_thms))
                             for thm in available_thms} # TODO len(av_thms) ??
-        simils_sorted = sorted(simils.values(), reverse=True)
-        N_thresh = simils_sorted[min(n_neighbours, len(simils) - 1)]
-        N_nearest_thms = {t for t in simils if simils[t] >= N_thresh}
+        #simils_sorted = sorted(simils.values(), reverse=True)
+        simils_sorted = sorted(simils, key=lambda x: simils[x], reverse=True)
+        #N_thresh = simils_sorted[min(n_neighbours, len(simils) - 1)]
+        #N_nearest_thms = {t for t in simils if simils[t] >= N_thresh}
         prems_scores = {}
-        for thm in N_nearest_thms:
+        for thm in simils_sorted:
             prems_scores_one = {}
             for prf in deps[thm]:
                 for prm in prf:
-                    try: prems_scores_one[prm] += 1
+                    try: prems_scores_one[prm] += 0.001
                     except: prems_scores_one[prm] = 1
             for prm in prems_scores_one:
-                scr = simils[thm] * prems_scores_one[prm] ** .3
+                #scr = simils[thm] * prems_scores_one[prm] ** .3
+                scr = simils[thm] ** 2 * prems_scores_one[prm] ** .1
                 try: prems_scores[prm] = prems_scores[prm] + scr
                 except: prems_scores[prm] = scr
+
+            if simils_sorted.index(thm) >= n_neighbours \
+                  and len(prems_scores) >= 512:
+                break
+
         sorted_prems = sorted(prems_scores,
                                key=prems_scores.__getitem__, reverse=True)
         sorted_prems = [p for p in sorted_prems if p in available_prems]
@@ -162,8 +169,9 @@ class TreeModel(Model):
                                   features_numbers, len(available_thms))
                             for thm in available_thms}
                                         # TODO is len(available_thms) ok here?
-        simils_sorted = sorted(simils.values(), reverse=True)
-        for thm in simils:
+        simils_sorted = sorted(simils,
+                               key=lambda x: simils[x], reverse=True)
+        for thm in simils_sorted:
             candidate_prems.update(deps[thm])
             if len(candidate_prems) >= max_num_prems:
                 break
