@@ -73,7 +73,7 @@ class KNN(Model):
         deps = read_deps(self.train_deps)
         deps_u = read_deps(self.train_deps, unions=True)
         scored_prems = {}
-        for conj in conjs:
+        for conj in tqdm(conjs):
             available = self.available_premises(conj)
             if available:
                 scored_prems[conj] = self.predict_1(conj, available,
@@ -89,11 +89,12 @@ class KNN(Model):
         #available_thms = {t for t in deps_u if deps_u[t] <= available_prems}
         # TODO above does not work for data/example_2
         # TODO investigate if its fine also when using chronology
-        available_thms = {t for t in deps_u}
         simils = {thm: similarity((conj, features[conj]),
                                   (thm,  features[thm]),
-                                  features_numbers, len(available_thms))
-                            for thm in available_thms} # TODO len(av_thms) ??
+                                  features_numbers, len(deps))
+                            for thm in deps}
+                            # len(deps) --- len(available_thms)
+                            #for thm in available_thms} # TODO len(av_thms) ??
         #simils_sorted = sorted(simils.values(), reverse=True)
         simils_sorted = sorted(simils, key=lambda x: simils[x], reverse=True)
         #N_thresh = simils_sorted[min(n_neighbours, len(simils) - 1)]
@@ -103,8 +104,9 @@ class KNN(Model):
             prems_scores_one = {}
             for prf in deps[thm]:
                 for prm in prf:
-                    try: prems_scores_one[prm] += 0.001
-                    except: prems_scores_one[prm] = 1
+                    if prm in available_prems:
+                        try: prems_scores_one[prm] += 0.001
+                        except: prems_scores_one[prm] = 1
             for prm in prems_scores_one:
                 #scr = simils[thm] * prems_scores_one[prm] ** .3
                 scr = simils[thm] ** 2 * prems_scores_one[prm] ** .1
@@ -163,16 +165,17 @@ class TreeModel(Model):
                       features_numbers):
         max_num_prems=self.knn_prefiltering
         candidate_prems = set()
-        available_thms = {t for t in deps if deps[t] <= available_prems}
+        #available_thms = {t for t in deps if deps[t] <= available_prems}
         simils = {thm: similarity((conj, features[conj]),
                                   (thm,  features[thm]),
-                                  features_numbers, len(available_thms))
-                            for thm in available_thms}
+                                  features_numbers, len(deps))
+                            for thm in deps}
+                            #for thm in available_thms}
                                         # TODO is len(available_thms) ok here?
-        simils_sorted = sorted(simils,
-                               key=lambda x: simils[x], reverse=True)
+        simils_sorted = sorted(simils, key=lambda x: simils[x], reverse=True)
         for thm in simils_sorted:
-            candidate_prems.update(deps[thm])
+            avail_candids = deps[thm] & available_prems
+            candidate_prems.update(avail_candids)
             if len(candidate_prems) >= max_num_prems:
                 break
         assert candidate_prems <= available_prems
