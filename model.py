@@ -3,6 +3,7 @@ from glob import glob
 from shutil import copyfile, move
 from importlib import import_module
 from tqdm import tqdm
+from joblib import Parallel, delayed
 from prepare_train_array import deps_to_train_array, pairs_to_array
 from utils import read_lines, write_lines, read_features, read_deps, read_stms
 from utils import mkdir_if_not_exists, rmdir_mkdir, write_empty, append_line
@@ -72,12 +73,19 @@ class KNN(Model):
         features_numbers = dict_features_numbers(features)
         deps = read_deps(self.train_deps)
         deps_u = read_deps(self.train_deps, unions=True)
-        scored_prems = {}
-        for conj in tqdm(conjs):
-            available = self.available_premises(conj)
-            if available:
-                scored_prems[conj] = self.predict_1(conj, available,
-                    deps, deps_u, features, features_numbers, self.neighbours)
+        with Parallel(n_jobs=self.n_jobs) as parallel:
+            conjs_scored_prems = parallel(delayed(self.predict_1)(conj,
+                              self.available_premises(conj),
+                              deps, deps_u, features,
+                              features_numbers, self.neighbours) \
+                                         for conj in tqdm(conjs))
+        scored_prems = dict(conjs_scored_prems)
+        #scored_prems = {}
+        #for conj in tqdm(conjs):
+        #    available = self.available_premises(conj)
+        #    if available:
+        #        scored_prems[conj] = predict_1_d(conj, available,
+        #            deps, deps_u, features, features_numbers, self.neighbours)
         self.predictions_path = self.make_predictions(scored_prems)
         self.logger.print(f'Predictions saved to {self.predictions_path}')
         return self.predictions_path
@@ -125,7 +133,7 @@ class KNN(Model):
         maximum = prems_scores[sorted_prems[0]]
         if maximum == 0: maximum = 1 # sometimes maximum = 0
         prems_scores_norm = [(p, prems_scores[p]/maximum) for p in sorted_prems]
-        return prems_scores_norm
+        return (conj, prems_scores_norm)
 
 
 class TreeModel(Model):
