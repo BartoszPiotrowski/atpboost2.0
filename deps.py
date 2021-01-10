@@ -1,7 +1,6 @@
 #!/bin/env python3
 
 import os
-from joblib import Parallel, delayed
 from utils import read, read_lines, write_lines, write_line, remove_supersets
 from utils import remove_supersets, mkdir_if_not_exists, random_name
 from utils import parse_tptp_proof, statements_dict, build_compact_tree
