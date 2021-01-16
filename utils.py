@@ -304,20 +304,25 @@ def dict_features_numbers(features):
     return {f: len(dft[f]) for f in dft}
 
 
-def similarity(thm1, thm2, dict_features_numbers, n_of_theorems, power=2):
+#def similarity(thm1, thm2, dict_features_numbers, n_of_theorems, power=2):
+#    ftrs1 = set(thm1[1])
+#    ftrs2 = set(thm2[1])
+#    ftrsI = ftrs1 & ftrs2
+#    # we need to add unseen features to our dict with numbers
+#    for f in (ftrs1 | ftrs2):
+#        if f not in dict_features_numbers:
+#            dict_features_numbers[f] = 1
+#    def trans(l, n): return log(l / n) ** power
+#    s1 = sum([trans(n_of_theorems, dict_features_numbers[f]) for f in ftrs1])
+#    s2 = sum([trans(n_of_theorems, dict_features_numbers[f]) for f in ftrs2])
+#    sI = sum([trans(n_of_theorems, dict_features_numbers[f]) for f in ftrsI])
+#    return (sI / (s1 + s2 - sI)) ** (1 / power)  # Jaccard index
+
+# TODO UNCHANGE
+def similarity(thm1, thm2):
     ftrs1 = set(thm1[1])
     ftrs2 = set(thm2[1])
-    ftrsI = ftrs1 & ftrs2
-    # we need to add unseen features to our dict with numbers
-    for f in (ftrs1 | ftrs2):
-        if f not in dict_features_numbers:
-            dict_features_numbers[f] = 1
-
-    def trans(l, n): return log(l / n) ** power
-    s1 = sum([trans(n_of_theorems, dict_features_numbers[f]) for f in ftrs1])
-    s2 = sum([trans(n_of_theorems, dict_features_numbers[f]) for f in ftrs2])
-    sI = sum([trans(n_of_theorems, dict_features_numbers[f]) for f in ftrsI])
-    return (sI / (s1 + s2 - sI)) ** (1 / power)  # Jaccard index
+    return len(ftrs1 & ftrs2) / len(ftrs1 | ftrs2)
 
 
 def merge_predictions(predictions_paths):
@@ -373,7 +378,10 @@ def grep_first(file, pattern):
 
 
 class AvailablePremises:
-    def __init__(self, chronology=None, available_premises=None, **_):
+    def __init__(self, chronology=None, available_premises=None,
+                 knn_hard_negs=False, knn_prefiltering=None,
+
+                 **_):
         self.available_premises_file = available_premises
         self.chronology_list = read_lines(chronology) if chronology else None
         # TODO if the chronology list large -- read the file after call

@@ -97,9 +97,12 @@ class KNN(Model):
         #available_thms = {t for t in deps_u if deps_u[t] <= available_prems}
         # TODO above does not work for data/example_2
         # TODO investigate if its fine also when using chronology
+        # TODO UNCHANGE
+        #simils = {thm: similarity((conj, features[conj]),
+        #                          (thm,  features[thm]),
+        #                          features_numbers, len(deps))
         simils = {thm: similarity((conj, features[conj]),
-                                  (thm,  features[thm]),
-                                  features_numbers, len(deps))
+                                  (thm,  features[thm]))
                             for thm in deps}
                             # len(deps) --- len(available_thms)
                             #for thm in available_thms} # TODO len(av_thms) ??
@@ -174,9 +177,12 @@ class TreeModel(Model):
         max_num_prems=self.knn_prefiltering
         candidate_prems = set()
         #available_thms = {t for t in deps if deps[t] <= available_prems}
+        #simils = {thm: similarity((conj, features[conj]),
+        #                          (thm,  features[thm]),
+        #                          features_numbers, len(deps))
+        # TODO UNCHANGE
         simils = {thm: similarity((conj, features[conj]),
-                                  (thm,  features[thm]),
-                                  features_numbers, len(deps))
+                                  (thm,  features[thm]))
                             for thm in deps}
                             #for thm in available_thms}
                                         # TODO is len(available_thms) ok here?
